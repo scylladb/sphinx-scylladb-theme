@@ -1,0 +1,37 @@
+<!doctype html>
+
+{% assign subsection = page.subsection  %}
+{% for t in page.tags %}
+		{% if t == "kb" %}
+			{% assign subsection = 'kb' %}
+		{% endif %}
+{% endfor %}
+
+<html class="no-js" lang="en">
+  {% include head.html %}
+  <body>
+    <header id="header" class="animated">
+      <div class="topbar_continer contain-to-grid">
+	  {% include top-nav.html %}
+      </div>
+      <div class="row inner_bg_2">
+        {% include logo.html %}
+      </div>
+
+    </header>
+    <section id="content">
+    <div class="row">
+	  <div class="side-nav large-3 columns show-for-large-up">
+	    {% include subpage-list.html param="technology" %}
+      </div>
+        <div class="large-9 columns">
+          <h1>{{ page.title}}</h1>
+		  {{ content }}
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
+    {% include bodyscripts.html %}
+  </body>
+</html>

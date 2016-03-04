@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {% include head.html %}
+  <body>
+    <header id="header" class="animated">
+      <div class="topbar_continer contain-to-grid">
+	  {% include top-nav.html %}
+      </div>
+      <div class="row inner_bg_3">
+       {% include logo.html %}
+	  </div>
+
+    </header>
+    <section id="content">
+
+      <div class="row">
+        <div class="medium-8 columns medium-centered">
+          <article class="full_post">
+            <h1><a href="{{site.baseurl}}{{page.url}}">{{ page.title }}</a></h1>
+            <div class="post_meta">
+              <div class="row">
+                <div class="medium-6 columns">
+                  <a href="https://twitter.com/ScyllaDB"><span class="icon-twitter"></span></a>
+                  <a href="https://github.com/ScyllaDB"><span class="icon-github2"></span></a>
+				  <a href="https://www.linkedin.com/company/scylladb"><span class="icon-linkedin2"></span></a>
+                </div>
+                <div class="medium-6 columns"><p class="post_meta_text">{% if post.author %}By {{page.author}}{% endif %}  On: {{page.date|date:"%b %d, %Y"}}</p></div>
+              </div>
+            </div>
+		{{ content }}
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %} 
+    {% include bodyscripts.html %}
+  </body>
+</html>

@@ -1,0 +1,40 @@
+      <!-- doc-side-nav.html -->
+          <ul class="side-nav">
+              <li><a {% if page.url == '/doc/' %} class="current"{% endif %} href="{{ site.baseurl }}/doc/">Documentation</a>
+              <li><a {% if page.subsection == 'getting-started' %} class="current"{% endif %} href="{{ site.baseurl }}/doc/getting-started/">Getting started</a>
+				{% if == 'getting-started' %}
+                <ul class="">
+				  <li><a href="{{ site.baseurl }}/doc/getting-started-amazon">Amazon EC2</a></li>
+				  <li><a href="{{ site.baseurl }}/doc/getting-started-rpm">Fedora/RHEL/CentOS</a></li>
+				  <li><a href="{{ site.baseurl }}/doc/getting-started-ubuntu">Ubuntu</a></li>
+				</ul>
+				{% endif %}
+
+              </li>
+
+              <li><a {% if subsection == 'admin' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/admin/">Administration guide</a>
+			  	{% if subsection == 'admin' %}
+				<!-- admin guide subsection -->
+                <ul class="">
+                  <li><a href="{{ site.baseurl }}/doc/admin/#overview">Overview</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#system-requirements">System requirements</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#download-and-install">Download and Install</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#migrating-data-from-cassandra-to-scylla">Migrating data from Cassandra to Scylla</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#system-configuration">System Configuration</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#scylla-configuration">Scylla Configuration</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#basic-operations">Basic Operations</a></li>
+				  <li><a href="{{ site.baseurl }}/doc/admin/#monitoring">Monitoring</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#logging">Logging</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#un-contents">Un-contents</a></li>
+                  <li><a href="{{ site.baseurl }}/doc/admin/#help-with-scylla">Help with Scylla</a></li>
+                </ul>
+				{% endif %}
+              </li>
+			  <li><a {% if subsection == 'faq' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/faq/">FAQ</a></li>
+			  <li><a {% if subsection == 'sysconfig' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/system-configuration/">System Configuration Guide</a></li>
+              <li><a {% if subsection == 'kb' %}class="current"{% endif %} href="{{ site.baseurl }}/kb/">Knowledge base</a></li>
+			  {% if subsection == 'kb-all' %}
+			  <li>{% include kb-menu.html param="" %}</li>
+			  {% endif %}
+          </ul>
+		<!-- end doc-side-nav.html -->
