@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {% include head.html %}
+  <body>
+    <header id="header" class="animated">
+      <div class="topbar_continer contain-to-grid">
+	  {% include top-nav.html %}
+      </div>
+      <div class="row {% if page.flair %}{{ page.flair }}{% else %}inner_bg{% endif %}">
+       {% include logo.html %}
+	  </div>
+
+    </header>
+    <section id="content">
+
+      <div class="row">
+        <div class="medium-8 columns medium-centered">
+		{{ content }}
+        </div>
+      </div>
+
+
+    </section>
+
+    {% include footer.html %} 
+    {% include bodyscripts.html %}
+  </body>
+</html>

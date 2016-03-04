@@ -1,0 +1,13 @@
+<!-- subpage-list.html {{ include.param }} -->
+{% for p in site.pages %}
+	{% if p.section == include.param %}
+		{% for t in p.tags %}
+			{% if t == "sub" %}
+        			<li><a {% if p.url == page.url %}class="current"{% endif %} href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+				<span class="menu-detail">{{ p.excerpt }}</span>
+				</li>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+<!-- end subpage-list.html -->
