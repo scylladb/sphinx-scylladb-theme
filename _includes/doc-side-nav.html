@@ -30,7 +30,17 @@
                 </ul>
 				{% endif %}
               </li>
+
+			  <li><a {% if subsection == 'tls' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/tls-ssl/">TLS/SSL guide</a></li>
+
+			  <li><a {% if subsection == 'compatibility' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/cassandra-compatibility/">Cassandra
+			  compatibility</a></li>
+
+			  <li><a {% if subsection == 'nodetool' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/nodetool/">Nodetool
+			  	reference</a></li>
+
 			  <li><a {% if subsection == 'faq' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/faq/">FAQ</a></li>
+
 			  <li><a {% if subsection == 'sysconfig' %}class="current"{% endif %} href="{{ site.baseurl }}/doc/system-configuration/">System Configuration Guide</a></li>
               <li><a {% if subsection == 'kb' %}class="current"{% endif %} href="{{ site.baseurl }}/kb/">Knowledge base</a></li>
 			  {% if subsection == 'kb-all' %}
