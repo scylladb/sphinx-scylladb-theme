@@ -1,16 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script>
-		if (window.location.pathname == '/doc/') {
-			window.location.pathname = '/';
-		} else {
-			window.location.host = 'www.scylladb.com';
-		}
-	</script>
-  </head>
+---
+permalink: /doc/
+title: Documentation
+section: doc
+---
+<!doctype html>
+<html class="no-js" lang="en">
+  {% include head.html %}
   <body>
-    <h1><a href="/">Home</a></h1>
+    <header id="header" class="animated">
+      <div class="topbar_continer contain-to-grid">
+	  {% include top-nav.html %}
+      </div>
+      <div class="row inner_bg_3">
+	  {% include logo.html %}
+      </div>
+
+    </header>
+    <section id="content">
+      <div class="row">
+
+        <div class="large-9 large-push-3 columns">
+          <h1>Documentation</h1>
+
+          <div class="panel callout radius animated">
+            <div class="row">
+              <div class="medium-3 columns">
+                <h5 id="getting-started">Getting started with Scylla</h5>
+              </div>
+              <div class="medium-9 columns">
+                <p>Instructions for getting started are available for:</p>
+
+				<ul>
+				<li><a href="{{site.baseurl}}/doc/getting-started-amazon/">Amazon EC2</a></li>
+				<li><a href="{{site.baseurl}}/doc/getting-started-rpm/">Red Hat Enterprise, CentOS, or Fedora</a></li>
+				<li><a href="{{site.baseurl}}/doc/getting-started-ubuntu/">Ubuntu</a></li>
+				</ul>
+
+				<p>More info: <a href="/doc/faq/">Frequently Asked Questions</a></p>
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a href="{{ site.baseurl }}/doc/admin/" class="panel_link" >
+          <div class="panel callout radius animated">
+            <div class="row">
+              <div class="medium-3 columns">
+                <h5>Administration Guide</h5>
+              </div>
+              <div class="medium-9 columns">
+			    <p>The Scylla administration guide is a reference to setup and operations tasks, including migration,
+				configuration, and management.
+				</p>
+			  <p><a href="{{ site.baseurl }}/doc/admin/">Scylla administration guide</a></p>	
+              </div>
+            </div>
+          </div>
+		  </a>
+
+
+          <div class="panel callout radius animated">
+            <div class="row">
+              <div class="medium-3 columns">
+                <h5>Reference documentation</h5>
+              </div>
+              <div class="medium-9 columns">
+
+				<p><b><a href="{{ site.baseurl }}/doc/tls-ssl/">Scylla TLS/SSL guide:</a></b> Configuring
+				Scylla (versions 1.1 and above) for encrypted node-to-node and client-to-node connections.</p>
+
+				<p><b><a href="{{ site.baseurl }}/doc/nodetool/">Nodetool reference:</a></b> Reference on commands
+				for managing Scylla using the command-line <code>nodetool</code> utility.</p>
+
+ 				<p><b><a href="{{ site.baseurl }}/doc/system-configuration/">System Configuration Guide:</a></b>
+ 				Scylla is a high-performance program and benefits greatly from configuration in the underlying OS platform. 
+				This guide is a reference that covers the settings applied by the system configuration tools and scripts
+				bundled with Scylla.</p>
+
+			    <p><b><a href="{{ site.baseurl }}/doc/cassandra-compatibility/">Cassandra compatibility:</a></b>
+				Scylla is compatible with <a href="http://cassandra.apache.org/">Apache Cassandra</a>, version
+				2.1.8, and can be used with current Cassandra drivers. See this reference document for details.</p>
+
+	      </div>
+	    </div>
+	  </div><!-- reference panel -->
+
+          <a href="{{ site.baseurl }}/kb/" class="panel_link" >
+            <div class="panel callout radius animated">
+              <div class="row">
+                <div class="medium-3 columns">
+                  <h5>Scylla knowledge base</h5>
+                </div>
+                <div class="medium-9 columns">
+                  <p>The Scylla knowledge base is a rapidly growing repository of info on NoSQL internals, development details, and thoughts on
+				  big-picture IT planning.</p>
+                  <ul>
+                    <li><strong>Hardware selection:</strong> Choose cost-effective servers, physical or virtual.</li>
+                    <li><strong>Data modeling:</strong> Design the right data model for your application.</li>
+                    <li><strong>System administration:</strong> Get details on every level from network interfaces to NTP.</li>
+                  </ul>
+				  <p><a href="{{ site.baseurl }}/kb/">Scylla knowledge base</a></p>	
+                </div>
+              </div>
+            </div>
+          </a>
+
+		</div>
+
+        <div class="large-3 large-pull-9 columns">
+		{% include doc-side-nav.html %}
+        </div>
+
+      </div>
+    </section>
+
+    {% include footer.html %}
+    {% include bodyscripts.html %}
   </body>
 </html>
