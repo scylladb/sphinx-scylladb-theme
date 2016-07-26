@@ -425,3 +425,9 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #
 # epub_use_index = True
+
+# Add Markdown support
+# http://blog.readthedocs.com/adding-markdown-support/
+from recommonmark.parser import CommonMarkParser
+source_parsers = {'.md': CommonMarkParser}
+source_suffix = ['.rst', '.md']
