@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Scylla Documentation'
+project = u'Scylla'
 copyright = u'2016, Scylla Project Contributors'
 author = u'Scylla Project Contributors'
 
