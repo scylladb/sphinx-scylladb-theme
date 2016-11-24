@@ -1,0 +1,601 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head><!-- begin head.html -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Documentation</title>
+    <meta name="description" content="Scylla is a Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
+">
+    <link rel="icon" href="/_static/img/favicon.ico" type="image/x-icon"/>
+    <link rel="canonical" href="http://www.scylladb.com/doc/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+    <link rel="author" href="mailto:info@scylladb.com">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/_static/js/vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/_static/js/vendor/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/_static/js/vendor/highlight/styles/default.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="/_static/css/foundation.css" />
+    <link rel="stylesheet" href="/_static/css/site.css" />
+    <script type="text/javascript">
+        (function() {
+            var didInit = false;
+            function initMunchkin() {
+                if(didInit === false) {
+                    didInit = true;
+                    Munchkin.init('791-QBF-350');
+                }
+            }
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//munchkin.marketo.net/munchkin.js';
+            s.onreadystatechange = function() {
+                if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                    initMunchkin();
+                }
+            };
+            s.onload = initMunchkin;
+            document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+    </script>
+    <script src="/_static/js/vendor/modernizr.js"></script>
+    <!-- headerscripts.html -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T8P2JP');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- end headerscripts.html -->
+
+
+    <!-- end head.html -->
+</head>
+<body>
+<header id="header" class="animated">
+    <div class="topbar_continer contain-to-grid">
+        <!-- top-nav.html section=doc -->
+        <nav class="top-bar" id="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                </li>
+                <li class="toggle-topbar"><a href="."><span class="icon-manu"></span></a></li>
+            </ul>
+
+            <section class="top-bar-section clearfix">
+                <ul class="right">
+                    <li class="has-dropdown">
+                        <a  href="/technology/architecture/">Technology</a>
+                        <ul class="dropdown">
+                            <!-- technology-nav.html -->
+
+                            <li><a href="/technology/ycsb-cassandra-scylla/">YCSB cluster benchmark</a><!-- 1-->
+                                <span class="menu-detail">Testing with the industry-standard YCSB benchmark reveals Scylla latency and performance advantages.</span>
+                            </li>
+
+                            <li><a href="/technology/cassandra-vs-scylla-benchmark-2/">Scylla vs. Cassandra benchmark (1-node)</a><!-- -->
+                                <span class="menu-detail">benchmarking Scylla and Cassandra on a single server</span>
+                            </li>
+
+                            <li><a href="/technology/cassandra-vs-scylla-benchmark-cluster-1/">Scylla vs. Cassandra benchmark (cluster)</a><!-- -->
+                                <span class="menu-detail">benchmarking Scylla and Cassandra cluster</span>
+                            </li>
+
+                            <li><a href="/technology/architecture/">Architecture</a><!-- -->
+                                <span class="menu-detail">Scylla is a new approach to NoSQL data store design, optimized for modern hardware.</span>
+                            </li>
+
+                            <li><a  href="/technology/memory/">Memory management</a><!-- -->
+                                <span class="menu-detail">How Scylla memory management is optimized for modern multicore hardware.</span>
+                            </li>
+
+                            <li><a  href="/technology/network/">Networking</a><!-- -->
+                                <span class="menu-detail">Scylla uses direct access to network devices for higher performance than can be achieved with the kernel network stack.</span>
+                            </li>
+
+                            <li><a  href="/technology/status/">Scylla Status</a><!-- -->
+                                <span class="menu-detail">Scylla current status and plans for the future</span>
+                            </li>
+
+                            <li><a href="/technology/testing/">Scylla Testing</a>
+                                <span class="menu-detail">How Scylla is tested</span>
+                            </li>
+                            <!-- end technology-nav.html -->
+
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a  >Services</a>
+                        <ul class="dropdown">
+                            <li><a href="/services/training/">Training</a></li>
+                            <li><a class="current" href="/services/support/">Support</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="has-dropdown">
+                        <a class="current" href="/doc/">Documentation</a>
+                        <ul class="dropdown">
+                            <li><a  href="/doc/getting-started/">Getting Started</a></li>
+                            <li><a class="current" href="/doc/admin/">Administration Guide</a></li>
+                            <li><a  href="/doc/faq/">FAQ</a></li>
+                            <li><a  href="/doc/system-configuration/">System Configuration Guide</a></li>
+                            <li><a  href="/kb/">Knowledge base</a></li>
+                        </ul>
+                    </li>
+                    <li><a  href="/partners/">Partners</a>
+                    </li>
+                    <li class="has-dropdown"><a  href="/community/">Community</a>
+                        <ul class="dropdown">
+                            <li><a href="/community/">GitHub and social</a></li>
+                            <li><a href="/opensource/">Open source</a></li>
+                            <li><a href="/community/newsletter-registration/">Newsletter</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a  href="/company/">Company</a>
+                        <ul class="dropdown">
+                            <li><a href="/company/">About</a></li>
+                            <!-- subpage-list.html company -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <li><a  href="/company/careers/">Careers</a>
+                                <span class="menu-detail">Work with us.</span>
+                            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- end subpage-list.html -->
+
+                        </ul>
+                    </li>
+                    <li><a  href="/blog/">Blog</a></li>
+                    <li class="show-for-large-up">
+                        <a href="#" class="search_icon" ><span class="icon-search"></span></a>
+                        <div class="row collapse search_continer hide">
+                            <form method="get" action="http://www.google.com/search">
+                                <div class="large-10 small-10 column">
+                                    <input type="hidden" name="sitesearch" value="scylladb.com" />
+                                    <input type="text" class="input_search" name="q" placeholder="Search" />
+                                </div>
+                                <div class="large-2 small-2 column">
+                                    <button class="button expand search_go" type="submit"><span class="icon-search"></span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li ><a href="/doc/getting-started/" class="download animated" >Get Started</a></li>
+                </ul>
+            </section>
+        </nav>
+        <!-- end top-nav.html -->
+
+    </div>
+    <div class="row inner_bg_3">
+        <!-- logo.html -->
+        <div class="small-10 columns">
+            <div class="logo">
+                <a href="/"><img src="/_static/img/logo.svg" alt=""></a>
+            </div>
+        </div>
+        <!-- end logo.html -->
+
+    </div>
+
+</header>
+<section id="content">
+    <div class="row">
+
+        <div class="large-9 large-push-3 columns">
+            {% block body %} {% endblock %}
+        </div>
+
+        <div class="large-3 large-pull-9 columns">
+            {%- if sidebars != None %}
+            {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+            {%- endfor %}
+            {%- endif %}
+        </div>
+
+    </div>
+</section>
+
+<!-- newsleter modal -->
+
+<div id="newsletter_signup" class="reveal-modal tiny radius dark_modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <a class="close-reveal-modal" aria-label="Close">×</a>
+    <h2 id="modalTitle">Sign up for the Scylla newsletter</h2>
+    <div id="mc_embed_signup">
+        <form action="//cloudius-systems.us10.list-manage.com/subscribe/post?u=df8bb543c68230d5f7b4dcf78&amp;id=9a4589f144" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+
+                <div class="mc-field-group">
+                    <div class="row collapse">
+                        <div class="small-3 columns"><label for="mce-EMAIL">Email</label></div>
+                        <div class="small-9 columns"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"></div>
+                    </div>
+                </div>
+                <div class="mc-field-group">
+                    <div class="row collapse">
+                        <div class="small-3 columns"><label for="mce-FNAME">First Name </label></div>
+                        <div class="small-9 columns"><input type="text" value="" name="FNAME" class="" id="mce-FNAME"></div>
+                    </div>
+                </div>
+                <div class="mc-field-group">
+                    <div class="row collapse">
+                        <div class="small-3 columns"><label for="mce-LNAME">Last Name </label></div>
+                        <div class="small-9 columns"><input type="text" value="" name="LNAME" class="" id="mce-LNAME"></div>
+                    </div>
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_df8bb543c68230d5f7b4dcf78_9a4589f144" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" class="button" value="Sign up" name="subscribe" id="mc-embedded-subscribe"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- end newsleter modal -->
+
+
+
+<!-- footer.html -->
+<footer id="footer">
+    <div class="row">
+        <div class="large-3 columns show-for-large-up">
+            <ul class="footer_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/technology/">Technology</a></li>
+                <li><a href="/support/">Support</a></li>
+                <li><a href="/doc/getting-started/">Get Started</a></li>
+                <li><a href="/download/">Downloads</a></li>
+            </ul>
+        </div>
+
+        <div class="large-3 columns show-for-large-up">
+            <ul class="footer_links ">
+                <li><a href="/doc/">Documentation</a></li>
+                <li><a href="/kb/">Knowledge base</a></li>
+                <li><a href="/partners/">Partners</a></li>
+                <li><a href="/company/">Company</a></li>
+                <li><a href="/company/careers/">Careers</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="/tos/">Terms of Service</a></li>
+                <li><a onClick="resetForm(); return false;">&nbsp; &nbsp;</a></li>
+            </ul>
+        </div>
+
+        <div class="large-3 columns show-for-large-up">
+            <ul class="footer_links">
+                <li><a href="/opensource/">Open Source</a></li>
+                <li><a href="/opensource/server-license/">Server License</a></li>
+                <li><a href="/opensource/documentation-license/">Documentation License</a></li>
+                <li><a href="/opensource/cla/">Contributor Agreement</a></li>
+                <li><a onClick="showForm(); return false;">&nbsp; &nbsp;</a></li>
+            </ul>
+        </div>
+
+        <div class="large-3 columns show-for-large-up">
+            <img src="/_static/img/mascot_1.png" id="footer_mascot" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="social_footer">
+                <a class="item"  href="https://github.com/ScyllaDB">
+                    <span class="icon-github2"></span>
+                </a>
+                <a class="item" href="https://twitter.com/ScyllaDB">
+                    <span class="icon-twitter"></span>
+
+                </a>
+                <a class="item" href="https://www.linkedin.com/company/scylladb" >
+                    <span class="icon-linkedin2"></span>
+                </a>
+                <a class="item" href="https://www.facebook.com/scylladb/">
+                    <span class="icon-facebook"></span>
+                </a>
+                <a href="#" class="nl" data-reveal-id="newsletter_signup"><span class="icon-envelope-o"></span> Sign up for our newsletter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer.html -->
+
+<!-- bodyscripts.html -->
+<script src="/_static/js/vendor/jquery.js"></script>
+<script src="/_static/js/app.js"></script>
+<script src="/_static/js/registration-form.js"></script>
+<script src="/_static/js/foundation/foundation.js"></script>
+<script src="/_static/js/foundation/foundation.abide.js"></script>
+<script src="/_static/js/foundation/foundation.reveal.js"></script>
+<script src="/_static/js/foundation/foundation.topbar.js"></script>
+<script src="/_static/js/foundation/foundation.equalizer.js"></script>
+<script src="/_static/js/foundation/foundation.tab.js"></script>
+<script type="text/javascript" src="/_static/js/vendor/slick/slick.min.js"></script>
+<script src="/_static/js/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    $(document).foundation();
+</script>
+<!-- trackingscripts.html -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- end trackingscripts.html -->
+
+<!-- end bodyscripts.html -->
+
+</body>
+</html>
+
