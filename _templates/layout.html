@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="//www.scylladb.com/css/foundation.css" />
     <link rel="stylesheet" href="//www.scylladb.com/css/site.css" />
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/doc.css', 1) }}" type="text/css" />
     <script type="text/javascript">
         (function() {
             var didInit = false;
@@ -453,7 +455,7 @@
             {% block body %} {% endblock %}
         </div>
 
-        <div class="large-3 large-pull-9 columns">
+        <div id="sidebar" class="large-3 large-pull-9 columns">
             {%- if sidebars != None %}
             {%- for sidebartemplate in sidebars %}
             {%- include sidebartemplate %}
