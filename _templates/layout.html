@@ -93,44 +93,6 @@
 <!-- footer.html -->
 <footer id="footer">
     <div class="row">
-        <div class="large-3 columns show-for-large-up">
-            <ul class="footer_links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/technology/">Technology</a></li>
-                <li><a href="/support/">Support</a></li>
-                <li><a href="/doc/getting-started/">Get Started</a></li>
-                <li><a href="/download/">Downloads</a></li>
-            </ul>
-        </div>
-
-        <div class="large-3 columns show-for-large-up">
-            <ul class="footer_links ">
-                <li><a href="/doc/">Documentation</a></li>
-                <li><a href="/kb/">Knowledge base</a></li>
-                <li><a href="/partners/">Partners</a></li>
-                <li><a href="/company/">Company</a></li>
-                <li><a href="/company/careers/">Careers</a></li>
-                <li><a href="/privacy/">Privacy</a></li>
-                <li><a href="/tos/">Terms of Service</a></li>
-                <li><a onClick="resetForm(); return false;">&nbsp; &nbsp;</a></li>
-            </ul>
-        </div>
-
-        <div class="large-3 columns show-for-large-up">
-            <ul class="footer_links">
-                <li><a href="/opensource/">Open Source</a></li>
-                <li><a href="/opensource/server-license/">Server License</a></li>
-                <li><a href="/opensource/documentation-license/">Documentation License</a></li>
-                <li><a href="/opensource/cla/">Contributor Agreement</a></li>
-                <li><a onClick="showForm(); return false;">&nbsp; &nbsp;</a></li>
-            </ul>
-        </div>
-
-        <div class="large-3 columns show-for-large-up">
-            <img src="{{ pathto('_static/img/mascot_2.png', 1) }}" id="footer_mascot" alt="">
-        </div>
-    </div>
-    <div class="row">
         <div class="large-12 columns">
             <div class="social_footer">
                 <a class="item"  href="https://github.com/ScyllaDB">
@@ -146,8 +108,21 @@
                 <a class="item" href="https://www.facebook.com/scylladb/">
                     <span class="icon-facebook"></span>
                 </a>
-                <a href="#" class="nl" data-reveal-id="newsletter_signup"><span class="icon-envelope-o"></span> Sign up for our newsletter</a>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            {%- if show_copyright %}
+            {%- if hasdoc('copyright') %}
+            {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+            {%- else %}
+            {% trans copyright=copyright|e %}&#169; {{ copyright }}.{% endtrans %} |
+            {%- endif %}
+            {%- endif %}
+            {%- if last_updated %}
+            {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+            {%- endif %}
         </div>
     </div>
 </footer>
