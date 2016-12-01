@@ -278,23 +278,8 @@ table thead tr th, table thead tr td {
 footer {
     padding: 3rem 0;
     background-color: #3a2d55;
-}
-
-footer .footer_links a {
     color: #DCD8E3;
-}
-
-#footer_mascot {
-    position: absolute;
-    top: -4.5rem;
-}
-
-.footer_links {
-    list-style-image: none;
-    list-style-type: none;
-    font-size: 0.9375rem;
-    font-weight: 300;
-    margin-left: 0;
+    text-align: center;
 }
 
 .social_footer {
@@ -315,11 +300,6 @@ footer .footer_links a {
     border-left: 1px solid #9FA3AC;
     margin-left: 0.5rem;
     font-weight: 300;
-}
-
-.icon-envelope-o {
-    font-size: 1.25rem;
-    margin-right: 0.5rem;
 }
 
 .highlight pre {
