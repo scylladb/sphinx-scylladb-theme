@@ -33,6 +33,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
+#    'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -53,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Scylla'
-copyright = u'2016, Scylla Project Contributors'
+copyright = u'2016, ScyllaDB. All rights reserved.'
 author = u'Scylla Project Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -84,7 +85,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'lib']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -169,7 +170,7 @@ html_static_path = ['_static']
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.
 #
-# html_last_updated_fmt = None
+html_last_updated_fmt = '%d %B %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -178,7 +179,7 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 #
-# html_sidebars = {}
+html_sidebars = {'**': ['side-nav.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -430,4 +431,4 @@ epub_exclude_files = ['search.html']
 # http://blog.readthedocs.com/adding-markdown-support/
 from recommonmark.parser import CommonMarkParser
 source_parsers = {'.md': CommonMarkParser}
-source_suffix = ['.rst', '.md']
+#source_suffix = ['.rst', '.md']
