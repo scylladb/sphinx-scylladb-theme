@@ -171,9 +171,13 @@ ul {
     padding: 5rem 0;
 }
 
-.contents.local ul {
+#content .contents.local ul {
     margin-bottom: 2rem;
     margin-left: 2rem;
+}
+
+#content .contents.local ul ul {
+    margin-bottom: 0;
 }
 
 #content h1 {
@@ -229,6 +233,11 @@ ul {
 #content .panel p {
     color: #525055;
     margin-bottom: 1rem;
+}
+
+#content ul, ol, dl {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
 }
 
 .content ul,
