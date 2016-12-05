@@ -171,12 +171,12 @@ ul {
     padding: 5rem 0;
 }
 
-.contents.local ul {
+#content .contents.local ul {
     margin-bottom: 2rem;
     margin-left: 2rem;
 }
 
-.contents.local ul ul {
+#content .contents.local ul ul {
     margin-bottom: 0;
 }
 
