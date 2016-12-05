@@ -231,6 +231,11 @@ ul {
     margin-bottom: 1rem;
 }
 
+#content ul, ol, dl {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
 .content ul,
 .content ol,
 .content dl {
