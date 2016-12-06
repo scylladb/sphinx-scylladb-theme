@@ -85,6 +85,14 @@
     content: "\e606";
 }
 
+.icon-yes {
+    color: #57CC8C;
+}
+
+.icon-no {
+    color: #F6374E;
+}
+
 /*-------- Mobile styles ----------*/
 
 @media only screen and (max-width: 40em) {
@@ -321,6 +329,7 @@ footer {
     line-height: 1.15;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     font-weight: normal;
+    overflow: auto;
 }
 
 a.headerlink {
