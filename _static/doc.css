@@ -321,6 +321,7 @@ footer {
     line-height: 1.15;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     font-weight: normal;
+    overflow: auto;
 }
 
 a.headerlink {
