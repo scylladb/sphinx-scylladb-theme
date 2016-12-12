@@ -189,9 +189,9 @@ ul {
 }
 
 #content h1 {
-    font-size: 2.15rem;
+    font-size: 2rem;
     color: #6673D1;
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: 300;
     margin: 0 0 2rem 0;
 }
@@ -245,7 +245,7 @@ ul {
 
 #content ul, ol, dl {
     margin-bottom: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .content ul,
@@ -258,7 +258,7 @@ ul {
 #content code {
     display: inline-block;
     color: #4C5253;
-    padding: 0.3rem 0.3rem 0.05rem 0.3rem;
+    padding: 0rem 0.3rem 0rem 0.3rem;
     background: #ECECEC;
     margin-right: 0.5rem;
 }
@@ -320,8 +320,8 @@ footer {
 }
 
 .highlight pre {
-    color: #888;
-    padding: 1.5rem 1.5rem;
+    color: #444;
+    padding: 1rem 1rem;
     border-left: 2px solid #6673D6;
     background: #ECECEC;
     margin-bottom: 2rem;
@@ -347,4 +347,18 @@ caption:hover > a.headerlink,
 p.caption:hover > a.headerlink,
 div.code-block-caption:hover > a.headerlink {
     visibility: visible;
+}
+
+.logo {
+    margin: 2rem 0;
+}
+
+.side-nav > ul {
+    margin-left: 0 ;
+    margin-top: 4rem; 
+}
+
+.side-nav > ul > li > ul {
+    margin-left: 1rem !important ;
+    margin-bottom: 1.5rem !important; 
 }
