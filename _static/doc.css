@@ -1,6 +1,7 @@
 /*@import "js/vendor/highlight/styles/default.css";*/
 @import "css/foundation.css";
 /*@import "css/site.css";*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 @font-face {
     font-family: 'scylla';
@@ -350,7 +351,7 @@ div.code-block-caption:hover > a.headerlink {
 }
 
 .logo {
-    margin: 2rem 0;
+    margin: 0rem 0 2rem 0;
 }
 
 .side-nav > ul {
@@ -362,3 +363,27 @@ div.code-block-caption:hover > a.headerlink {
     margin-left: 1rem !important ;
     margin-bottom: 1.5rem !important; 
 }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+padding: 0.7rem !important;
+}
+
+.current {
+border: 0px solid transparent !important
+}
+.top-bar-section ul {
+    list-style: none !important;
+}
+
+.top-bar-section ul li {
+    background: transparent !important;
+}
+
+.top-bar-section li a {
+    background: transparent !important;
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 15px !important;
+}
+
+
