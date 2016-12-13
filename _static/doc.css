@@ -1,6 +1,7 @@
 /*@import "js/vendor/highlight/styles/default.css";*/
 @import "css/foundation.css";
 /*@import "css/site.css";*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 @font-face {
     font-family: 'scylla';
@@ -350,7 +351,7 @@ div.code-block-caption:hover > a.headerlink {
 }
 
 .logo {
-    margin: 2rem 0;
+    margin: -2rem 0 2rem 0;
 }
 
 .side-nav > ul {
@@ -362,3 +363,86 @@ div.code-block-caption:hover > a.headerlink {
     margin-left: 1rem !important ;
     margin-bottom: 1.5rem !important; 
 }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+padding: 0.7rem !important;
+}
+
+.current {
+border: 0px solid transparent !important
+}
+.top-bar-section ul {
+    list-style: none !important;
+}
+
+.top-bar-section ul li {
+    background: transparent !important;
+}
+
+.top-bar-section li a {
+    background: transparent !important;
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 15px !important;
+}
+
+.search.columns {
+     margin-top: 1em;
+ }
+ 
+ header .input_search {
+     background: transparent;
+     border: 0px solid transparent;
+     border-bottom: 1px solid #DDE0E7;
+     color: #DDE0E7;
+     padding: 0rem;
+     height: 31px;
+     top: 5px;
+     margin-bottom: 0;
+     font-size: 15px !important;
+     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+ 
+ header .input_search:focus {
+     background: transparent;
+     border-bottom: 1px solid #DDE0E7;
+ }
+ 
+ .search_go {
+     background: transparent;
+     border-bottom: 1px solid #DDE0E7;
+     height: 31px !important;
+ }
+ 
+ .search_go:hover {
+     background: transparent;
+     border-bottom: 1px solid #DDE0E7;
+ }
+ 
+ .icon-search {
+     margin-right: 0.5rem;
+     color: #DDE0E7;
+ }
+ 
+ .search_continer {
+     margin-top: -3px;
+ }
+ 
+ .search_continer div {
+     padding: 0;
+ }
+ 
+ .search button {
+     margin-bottom: 0;
+     padding: 0;
+ }
+
+ .search_go {
+    padding: 0!important;
+ }
+
+ li.search_continer {
+    margin-top: 1rem;
+    margin-left: 1rem;
+ }
+
