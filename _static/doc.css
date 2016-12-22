@@ -446,3 +446,83 @@ border: 0px solid transparent !important
     margin-left: 1rem;
  }
 
+.height {
+    height: 100% !important;
+}
+
+img.vertigo {
+    animation-name: infinite-spinning;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    margin: 2rem auto;
+}
+
+.vertigo_inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+@keyframes infinite-spinning {
+    from {
+        transform: rotate(0deg);
+
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.vertigo_continer {
+    position: relative;
+    overflow: visible;
+}
+
+.bg_404 {
+    background: #3A2E56 !important;
+    overflow: hidden;
+}
+
+.ttl_404 {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.ttl_404 h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 7rem;
+    color: #fff;
+    margin-bottom: 0rem !important;
+    line-height: 1;
+}
+
+.ttl_404 p {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.button {
+    padding: 0.6rem 2rem 0.8rem 2rem;
+    color: #0A475C;
+    font-weight: 500 !important;
+    background-color: #52BADE;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    letter-spacing: 0.01rem;
+}
+.button:hover {
+    background-color: #69C0DE;
+    color: #14607B;
+}
+
