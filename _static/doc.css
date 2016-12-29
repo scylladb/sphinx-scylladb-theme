@@ -401,6 +401,8 @@ border: 0px solid transparent !important
      margin-bottom: 0;
      font-size: 15px !important;
      font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+     float: left;
+     width: 80%;
  }
  
  header .input_search:focus {
@@ -408,10 +410,12 @@ border: 0px solid transparent !important
      border-bottom: 1px solid #DDE0E7;
  }
  
- .search_go {
+ .button.search_go {
      background: transparent;
      border-bottom: 1px solid #DDE0E7;
      height: 31px !important;
+     float: left;
+     width: 20%;
  }
  
  .search_go:hover {
