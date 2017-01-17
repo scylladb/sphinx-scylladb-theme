@@ -1,5 +1,5 @@
 /*@import "js/vendor/highlight/styles/default.css";*/
-@import "css/foundation.css";
+/*@import "css/foundation.css";*/
 /*@import "css/site.css";*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
@@ -115,9 +115,91 @@
     #content {
         padding: 2.5rem 0.5rem !important;
     }
+
+    .top-bar-section li:not(.has-form) a:not(.button) {
+        padding: 0.7rem !important;
+    }
+
+    .top-bar.expanded {
+        background-color: #1A152B;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        -webkit-box-shadow: 0px 10px 74px 0px rgba(0,0,0,0.45);
+        -moz-box-shadow: 0px 10px 74px 0px rgba(0,0,0,0.45);
+        box-shadow: 0px 10px 74px 0px rgba(0,0,0,0.45);
+    }
 }
 
-/* ----- reset -------*/
+@media only screen and (min-width: 64.063em) {
+    .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+        color: #565C5E !important;
+        font-weight: 300 !important;
+        white-space: normal;
+        line-height: 1.5;
+        padding: 0.3rem 0;
+    }
+
+    .top-bar-section li:not(.has-form) a:not(.download):hover {
+        color: #52BADE !important;
+    }
+
+    .top-bar-section .dropdown li:not(.has-form):not(.active):hover{
+        background-color: #52BADE !important;
+    }
+
+    .top-bar-section .dropdown > li:not(.has-form):not(.active):hover a:hover{
+        color: #fff !important;
+    }
+
+    .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a{
+        color: #14607B !important;
+    }
+
+    .top-bar-section .has-dropdown {
+        display: block;
+        z-index: 100;
+        height: 40px
+    }
+
+    .top-bar-section .has-dropdown > a  {
+        padding-right: 0 !important;
+        display: block;
+    }
+
+    .dropdown li a {
+        color: #DCD8E3 !important;
+    }
+
+    .topbar_continer {
+        padding: 2rem 0 0 0 !important;
+    }
+
+    .top-bar-section .has-dropdown > a:after {
+        border-top-style: none;
+    }
+
+    .top-bar-section ul li {
+        background: transparent !important;
+    }
+
+    .top-bar-section ul li:hover:not(.has-form) > a {
+        background: transparent;
+        font-weight: 300;
+        color: #DCD8E3;
+    }
+
+    .active {
+        background-color: #4BBCD7 !important;
+    }
+
+    .top-bar-section li:not(.has-form) a:not(.button) {
+        line-height: 2rem;
+    }
+}
+
+    /* ----- reset -------*/
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -363,26 +445,112 @@ div.code-block-caption:hover > a.headerlink {
     margin-bottom: 1.5rem !important; 
 }
 
-.top-bar-section li:not(.has-form) a:not(.button) {
-padding: 0.7rem !important;
+.contain-to-grid {
+    background: transparent;
+}
+.top-bar-section ul > li {
+    background-color: transparent;
+    padding: 0 0.8rem;
 }
 
-.current {
-border: 0px solid transparent !important
-}
-.top-bar-section ul {
-    list-style: none !important;
+.not-click, .not-click a  {
+    cursor: default !important;
 }
 
-.top-bar-section ul li {
-    background: transparent !important;
+.top-bar {
+    background: transparent;
 }
 
-.top-bar-section li a {
-    background: transparent !important;
-    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+.top-bar-section ul li a,
+.dropdown > li > a {
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300 !important;
-    font-size: 15px !important;
+    font-size: 0.9375rem;
+    color: #DDE0E7 !important;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background-color: transparent;
+    -webkit-transition: all 0.25 ;
+    -moz-transition: all 0.25 ;
+    -ms-transition: all 0.25 ;
+    -o-transition: all 0.25 ;
+    transition: all 0.25 ;
+    padding: 0;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+    background-color: transparent;
+    color: #52BADE
+}
+
+
+
+.top-bar .toggle-topbar a,
+.top-bar.expanded .toggle-topbar a  {
+    padding: 0 !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+
+}
+
+.top-bar .toggle-topbar {
+    right: 3px;
+    top: 3px;
+    border: 0px solid transparent !important;
+}
+
+
+
+.top-bar.expanded .title-area {
+    background: transparent;
+}
+
+
+
+
+.top-bar a.current {
+    border-bottom: 2px solid #52BADE;
+}
+
+.top-bar.expanded .button:hover {
+    background-color: transparent !important;
+    border-color: transparent!important;
+    color: #4BBCD7 !important;
+}
+
+
+.top-bar.expanded li {
+    border-bottom: 1px solid #322C45;
+}
+
+.top-bar.expanded li {
+    color: #565C5E;
+}
+
+.top-bar.expanded li a {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+
+.toggle-topbar a {
+    border-top: 0px solid transparent !important;
+}
+
+.toggle-topbar {
+    border: 0px solid transparent;
+}
+
+.top-bar-section .has-form {
+    background: transparent;
+}
+
+.top-bar-section .has-dropdown > a {
+    padding: 0;
 }
 
 .search.columns {
@@ -396,7 +564,6 @@ border: 0px solid transparent !important
      color: #DDE0E7;
      padding: 0rem;
      height: 31px;
-     top: 5px;
      margin-bottom: 0;
      font-size: 15px !important;
      font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -421,7 +588,11 @@ border: 0px solid transparent !important
      background: transparent;
      border-bottom: 1px solid #DDE0E7;
  }
- 
+
+header .input_search, .button.search_go {
+    top: 5px;
+}
+
  .icon-search {
      margin-right: 0.5rem;
      color: #DDE0E7;
@@ -444,12 +615,12 @@ border: 0px solid transparent !important
  .search_go {
     padding: 0!important;
  }
-
+/*
  li.search_continer {
     margin-top: 1rem;
     margin-left: 1rem;
  }
-
+*/
 .height {
     height: 100% !important;
 }
