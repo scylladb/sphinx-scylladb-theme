@@ -341,9 +341,9 @@ ul {
 #content code {
     display: inline-block;
     color: #4C5253;
-    padding: 0rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.2rem 0rem 0.2rem;
     background: #ECECEC;
-    margin-right: 0.5rem;
+    margin-right: 0.1rem;
 }
 
 #content table {
