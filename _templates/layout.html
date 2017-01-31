@@ -3,17 +3,18 @@
 <head><!-- begin head.html -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>Documentation</title>
-    <meta name="description" content="Scylla is a Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
-">
+    <meta name="description" content="Scylla is a Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server." />
+
     <link rel="icon" href="//www.scylladb.com/img/favicon.ico" type="image/x-icon"/>
-    <link rel="canonical" href="http://doc.scylladb.com/">
+    <link rel="canonical" href="http://docs.scylladb.com/">
 
     <link rel="author" href="mailto:info@scylladb.com">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/doc.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 
@@ -22,37 +23,45 @@
 </head>
 <body>
 <header id="header" class="animated">
+    <div class="topbar_continer contain-to-grid">
+        <nav class="top-bar" id="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                </li>
+                <li class="toggle-topbar"><a href="#"><span class="icon-manu"></span></a></li>
+            </ul>
+            <section class="top-bar-section clearfix">
+                <ul class="right">
+                    <li>
+                        <a href="http://www.scylladb.com">ScyllaDB</a>
+                    </li>
+                    <li >
+                        <a href="/">Doc Home</a>
+                    </li>
+                    <li >
+                        <a href="/getting-started/">Getting started</a>
+                    </li>
+                    <li >
+                        <a href="/upgrade/">Upgrading</a>
+                    </li>
+                    <li >
+                        <a href="/admin/">Administration</a>
+                    </li>
+                    <li class="search_continer show-for-large-up">
+                        <div class="row collapse search_continer">
+                            <form method="get" action="http://www.google.com/search">
+                                <input type="hidden" name="sitesearch" value="docs.scylladb.com" />
+                                <input type="text" class="input_search" name="q" placeholder="Search" />
+                                <button class="button search_go" type="submit"><span class="icon-search" /></button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
     <div class="row inner_bg_3">
-        <div class="small-12 columns">
-        <section class="top-bar-section clearfix show-for-medium-up">
-          <ul class="right">
-            <li >
-              <a href="/">Doc Home</a>
-            </li>
-            <li >
-              <a href="/getting-started/">Getting started</a>
-            </li>
-            <li >
-              <a href="/upgrade/">Upgrading</a>
-            </li>
-            <li >
-              <a href="/admin/">Administration</a>
-            </li>
-            <li class="search_continer">
-             <div class="row collapse search_continer">
-              <form method="get" action="http://www.google.com/search">
-                  <div class="large-10 small-10 column">
-                      <input type="hidden" name="sitesearch" value="docs.scylladb.com" />
-                      <input type="text" class="input_search" name="q" placeholder="Search" />
-                  </div>
-                  <div class="large-2 small-2 column">
-                      <button class="button expand search_go" type="submit"><span class="icon-search"><span></button>
-                  </div>
-              </form>
-              </div>
-            </li>
-          </ul>
-        </section>
+        <div class="small-10 columns">
             <div class="logo">
                 <a href="/"><img src="{{ pathto('_static/img/logo.svg', 1) }}" alt=""></a>
             </div>
@@ -160,6 +169,8 @@
 <!-- bodyscripts.html -->
 <script src="{{ pathto('_static/js/vendor/jquery.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.js', 1) }}"></script>
+<script src="{{ pathto('_static/js/foundation/foundation.topbar.js', 1) }}"></script>
+<script src="{{ pathto('_static/app.js', 1) }}"></script>
 <script>
     $(document).foundation();
 </script>
