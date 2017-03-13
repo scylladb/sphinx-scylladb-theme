@@ -128,7 +128,7 @@
         z-index: 100;
         -webkit-box-shadow: 0px 10px 74px 0px rgba(0,0,0,0.45);
         -moz-box-shadow: 0px 10px 74px 0px rgba(0,0,0,0.45);
-        box-shadow: 0px 10px 74px 0px rgba(0,0,0,0.45);
+        box-shadow: 0px 10px 74px 0px 。rgba(0,0,0,0.45);
     }
 }
 
@@ -432,7 +432,7 @@ div.code-block-caption:hover > a.headerlink {
     visibility: visible;
 }
 
-.logo {
+.logo a img {
     margin: -2rem 0 2rem 0;
 }
 
