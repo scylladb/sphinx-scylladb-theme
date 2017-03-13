@@ -432,7 +432,7 @@ div.code-block-caption:hover > a.headerlink {
     visibility: visible;
 }
 
-.logo {
+.logo a img {
     margin: -2rem 0 2rem 0;
 }
 
