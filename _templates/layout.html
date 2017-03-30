@@ -160,9 +160,9 @@
         <div class="large-12 columns">
             {%- if show_copyright %}
             {%- if hasdoc('copyright') %}
-            {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+            {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}{% endtrans %}
             {%- else %}
-            {% trans copyright=copyright|e %}&#169; {{ copyright }}.{% endtrans %} |
+            {% trans copyright=copyright|e %}&#169; {{ copyright }}{% endtrans %} |
             {%- endif %}
             {%- endif %}
             {%- if last_updated %}
