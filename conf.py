@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Scylla Documentation documentation build configuration file, created by
+# This is a Scylla Documentation build configuration file, created by
 # sphinx-quickstart on Tue Jul 26 13:41:02 2016.
 #
 # This file is execfile()d with the current directory set to its
