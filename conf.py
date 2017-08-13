@@ -16,9 +16,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
 
@@ -432,3 +432,9 @@ epub_exclude_files = ['search.html']
 from recommonmark.parser import CommonMarkParser
 source_parsers = {'.md': CommonMarkParser}
 #source_suffix = ['.rst', '.md']
+
+# Add CQL support
+def setup(sphinx):
+    sys.path.insert(0, os.path.abspath('./_utils'))
+    from cql import CQLLexer
+    sphinx.add_lexer("cql", CQLLexer())
