@@ -776,3 +776,6 @@ img.vertigo {
     color: #14607B;
 }
 
+.panel.callout.radius.animated {
+    width: 1200px;
+}
