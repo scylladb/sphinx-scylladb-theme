@@ -779,3 +779,8 @@ img.vertigo {
 .panel.callout.radius.animated.asciinema {
     width: 1200px;
 }
+
+.code.console.highlight-default {
+    width: 70em;
+}
+
