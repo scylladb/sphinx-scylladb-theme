@@ -20,6 +20,21 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 
+from docutils import nodes 
+from docutils.transforms import Transform 
+from sphinx.util import logging 
+
+logger = logging.getLogger(__name__) 
+
+class MySiteDetector(Transform): 
+    default_priority = 500
+
+    def apply(self):
+        absolute_path = 'http://docs.scylladb.com/'
+        for node in self.document.traverse(nodes.reference):
+            if 'refuri' in node and node['refuri'].startswith(absolute_path):
+                logger.warning('found absolote path reference at: %r', node, location=node) 
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -438,3 +453,4 @@ def setup(sphinx):
     sys.path.insert(0, os.path.abspath('./_utils'))
     from cql import CQLLexer
     sphinx.add_lexer("cql", CQLLexer())
+    sphinx.add_transform(MySiteDetector) 
