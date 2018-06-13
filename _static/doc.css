@@ -403,6 +403,7 @@ ul {
 #content ul, ol, dl {
     margin-bottom: 2rem;
     margin-left: 1rem;
+    font-size:0.9375rem;
 }
 
 .content ul,
