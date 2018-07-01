@@ -785,3 +785,55 @@ img.vertigo {
     width: 70em;
 }
 
+/*Admonition styles*/
+
+.admonition {
+    color: #444;
+    padding: 1rem 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    font-weight: normal;
+    overflow: auto;
+}
+
+.admonition-title {
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.tip {
+    border-left: 2px solid #55b115;
+    background: #e9fddc;
+}
+
+.tip .admonition-title {
+	color:#55b115;
+}
+
+.note {
+    border-left: 2px solid #47b9db;
+    background: #d1edf6;
+}
+
+.note .first.admonition-title {
+	color:#47b9db;	
+}
+
+.caution {
+    border-left: 2px solid #ffba00;
+    background: #fff8e5;
+}
+
+.caution .first.admonition-title {
+	color:#ffba00;	
+}
+
+.warning {
+    border-left: 2px solid #dc3b36;
+    background: #fde8e5;
+}
+
+.warning .first.admonition-title {
+	color:#dc3b36;	
+}
