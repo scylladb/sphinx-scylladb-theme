@@ -18,11 +18,13 @@
 #
 import os
 import sys
+import yaml
 sys.path.insert(0, os.path.abspath('.'))
 
 from docutils import nodes 
 from docutils.transforms import Transform 
-from sphinx.util import logging 
+from sphinx.util import logging
+
 
 logger = logging.getLogger(__name__) 
 
@@ -33,7 +35,29 @@ class MySiteDetector(Transform):
         absolute_path = 'http://docs.scylladb.com/'
         for node in self.document.traverse(nodes.reference):
             if 'refuri' in node and node['refuri'].startswith(absolute_path):
-                logger.warning('found absolote path reference at: %r', node, location=node) 
+                logger.warning('found absolote path reference at: %r', node, location=node)
+
+# Generate a redirection HTML file
+def write_html_redirect(redirect_to):
+    html = "<html><head><meta http-equiv=\"refresh\" content=\"0; url=" + redirect_to + "\"></head></html>"
+    return html
+
+# Read a YAML dictionary of redirections and generate an HTML file for each
+redirects_file = "_utils/redirections.yaml"
+
+def create_redirects(app, docname):
+    if not os.path.exists(redirects_file):
+        return
+    if not app.builder.name == 'dirhtml':
+        return
+    with open(redirects_file, 'r') as yaml_file:
+        for from_path, redirect_to in yaml.load(yaml_file).iteritems():
+            print "generate a redirection HTML file from: " + from_path + " to: " + redirect_to
+            target_path = app.outdir + '/' + from_path
+            if not os.path.exists(target_path):
+                os.makedirs(target_path)
+            with open(os.path.join(target_path + '/index.html'), 'w') as t_file:
+                t_file.write(write_html_redirect(redirect_to))
 
 # -- General configuration ------------------------------------------------
 
@@ -453,4 +477,9 @@ def setup(sphinx):
     sys.path.insert(0, os.path.abspath('./_utils'))
     from cql import CQLLexer
     sphinx.add_lexer("cql", CQLLexer())
-    sphinx.add_transform(MySiteDetector) 
+    sphinx.add_transform(MySiteDetector)
+
+    sphinx.connect('build-finished', create_redirects)
+
+
+    
