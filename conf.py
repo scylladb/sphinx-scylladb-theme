@@ -52,7 +52,6 @@ def create_redirects(app, docname):
         return
     with open(redirects_file, 'r') as yaml_file:
         for from_path, redirect_to in yaml.load(yaml_file).iteritems():
-            print "generate a redirection HTML file from: " + from_path + " to: " + redirect_to
             target_path = app.outdir + '/' + from_path
             if not os.path.exists(target_path):
                 os.makedirs(target_path)
