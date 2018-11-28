@@ -837,3 +837,18 @@ img.vertigo {
 .warning .first.admonition-title {
 	color:#dc3b36;	
 }
+
+.algolia-autocomplete {
+    display: inline !important;
+}
+
+/* Main dropdown wrapper */
+body .algolia-autocomplete .ds-dropdown-menu {
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 40px;
+}
+
+/* Disable the search button */
+.search_continer button.search_go {
+    pointer-events: none;
+}
