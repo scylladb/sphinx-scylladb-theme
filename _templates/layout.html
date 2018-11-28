@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/doc.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    
     <script src="{{ pathto('_static/js/vendor/modernizr.js', 1) }}"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -33,6 +34,7 @@
     <!-- Marketo -->
     <script type="text/javascript"> (function() { var didInit = false; function initMunchkin() { if(didInit === false) { didInit = true; Munchkin.init('791-QBF-350'); } } var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//munchkin.marketo.net/munchkin.js'; s.onreadystatechange = function() { if (this.readyState == 'complete' || this.readyState == 'loaded') { initMunchkin(); } }; s.onload = initMunchkin; document.getElementsByTagName('head')[0].appendChild(s); })(); </script>
     <!-- End Marketo -->
+
 <!-- end head.html -->
 </head>
 <body>
@@ -67,11 +69,8 @@
                 </li>
                 <li class="search_continer show-for-large-up">
                     <div class="row collapse search_continer">
-                        <form method="get" action="https://www.google.com/search">
-                            <input type="hidden" name="sitesearch" value="docs.scylladb.com" />
-                            <input type="text" class="input_search" name="q" placeholder="Search" />
-                            <button class="button search_go" type="submit"><span class="icon-search" /></button>
-                        </form>
+                          <input type="text" id="site_search" class="input_search" name="q" placeholder="Search" />
+                          <button class="button search_go" type="submit"><span class="icon-search" /></button>
                     </div>
                 </li>
             </ul>
@@ -185,6 +184,7 @@
 <!-- end footer.html -->
 
 <!-- bodyscripts.html -->
+<!-- at the end of the BODY --> 
 <script src="{{ pathto('_static/js/vendor/jquery.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.topbar.js', 1) }}"></script>
@@ -195,7 +195,17 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
+<script type="text/javascript"> docsearch({ 
+apiKey: '240ad97da23ae0210c9a47a0be288fdb', 
+indexName: 'scylladb', 
+inputSelector: '#site_search', 
+debug: false // Set debug to true if you want to inspect the dropdown 
+}); 
+</script>
+
   <!-- end bodyscripts.html -->
 </body>
 </html>
