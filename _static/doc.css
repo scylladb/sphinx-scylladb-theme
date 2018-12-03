@@ -852,3 +852,9 @@ body .algolia-autocomplete .ds-dropdown-menu {
 .search_continer button.search_go {
     pointer-events: none;
 }
+
+
+div.logo a {
+    position: relative;
+    z-index: 9999;
+}
