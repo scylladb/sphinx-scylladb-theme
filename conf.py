@@ -71,6 +71,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
+    'sphinx.ext.extlinks'
 #    'sphinx.ext.autosectionlabel'
 ]
 
@@ -480,5 +481,8 @@ def setup(sphinx):
 
     sphinx.connect('build-finished', create_redirects)
 
+extlinks = {
+    'manager': ('/operating-scylla/manager/%s/',''),
+    'manager_lst': ('/operating-scylla/manager/1.3/%s/','')
+}
 
-    
