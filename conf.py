@@ -483,6 +483,6 @@ def setup(sphinx):
 
 extlinks = {
     'manager': ('/operating-scylla/manager/%s/',''),
-    'manager_lst': ('/operating-scylla/manager/1.3/%s/','')
+    'manager_lst': ('/operating-scylla/manager/1.4/%s/','')
 }
 
