@@ -51,7 +51,7 @@ def create_redirects(app, docname):
     if not app.builder.name == 'dirhtml':
         return
     with open(redirects_file, 'r') as yaml_file:
-        for from_path, redirect_to in yaml.load(yaml_file).iteritems():
+        for from_path, redirect_to in yaml.full_load(yaml_file).items():
             target_path = app.outdir + '/' + from_path
             if not os.path.exists(target_path):
                 os.makedirs(target_path)
