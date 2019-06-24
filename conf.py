@@ -485,13 +485,13 @@ extlinks = {
     'manager': ('/operating-scylla/manager/%s/',''),
     'manager_lst': ('/operating-scylla/manager/1.4/%s/',''),
     'monitor': ('/operating-scylla/monitoring/%s/',''),
-    'monitor_lst': ('/operating-scylla/monitoring/2.3/%s/','')
+    'monitor_lst': ('/operating-scylla/monitoring/2.4/%s/','')
 }
 
 #Adds version variables for monitoring and manager versions when used in inline text
 
 rst_epilog = """
-.. |mon_version| replace:: 2.3
+.. |mon_version| replace:: 2.4
 .. |man_version| replace:: 1.4
 """ 
 
