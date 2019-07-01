@@ -19,6 +19,7 @@
 import os
 import sys
 import yaml
+import re
 sys.path.insert(0, os.path.abspath('.'))
 
 from docutils import nodes 
@@ -32,10 +33,10 @@ class MySiteDetector(Transform):
     default_priority = 500
 
     def apply(self):
-        absolute_path = 'http://docs.scylladb.com/'
+        absolute_path = r'[http|https]://docs.scylladb.com/.*'
         for node in self.document.traverse(nodes.reference):
-            if 'refuri' in node and node['refuri'].startswith(absolute_path):
-                logger.warning('found absolote path reference at: %r', node, location=node)
+            if 'refuri' in node and re.search(absolute_path,node['refuri']):
+                    logger.warning('found absolote path reference at: %r', node, location=node)
 
 # Generate a redirection HTML file
 def write_html_redirect(redirect_to):
