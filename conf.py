@@ -492,7 +492,7 @@ extlinks = {
 #Adds version variables for monitoring and manager versions when used in inline text
 
 rst_epilog = """
-.. |mon_version| replace:: 2.4
+.. |mon_version| replace:: 3.0
 .. |man_version| replace:: 1.4
 """ 
 
