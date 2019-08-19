@@ -206,6 +206,9 @@ html_static_path = ['_static']
 #
 html_extra_path = ['404.html']
 
+# Add ExpertRec Search
+html_js_files = ['expertrec.js']
+
 # If not None, a 'Last updated on:' timestamp is inserted at every page
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.

@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/doc.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     
     <script src="{{ pathto('_static/js/vendor/modernizr.js', 1) }}"></script>
     <!-- Google Tag Manager -->
@@ -72,8 +71,7 @@
                 </li>
                 <li class="search_continer show-for-large-up">
                     <div class="row collapse search_continer">
-                          <input type="text" id="site_search" class="input_search" name="q" placeholder="Search" />
-                          <button class="button search_go" type="submit"><span class="icon-search" /></button>
+                        <ci-search></ci-search>
                     </div>
                 </li>
             </ul>
@@ -194,6 +192,7 @@
 <!-- bodyscripts.html -->
 <!-- at the end of the BODY --> 
 <script src="{{ pathto('_static/js/vendor/jquery.js', 1) }}"></script>
+<script src="{{ pathto('_static/expertrec.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.topbar.js', 1) }}"></script>
 <script src="{{ pathto('_static/app.js', 1) }}"></script>
@@ -204,15 +203,6 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
-<script type="text/javascript"> docsearch({ 
-apiKey: '240ad97da23ae0210c9a47a0be288fdb', 
-indexName: 'scylladb', 
-inputSelector: '#site_search', 
-debug: false // Set debug to true if you want to inspect the dropdown 
-}); 
-</script>
 
   <!-- end bodyscripts.html -->
 </body>
