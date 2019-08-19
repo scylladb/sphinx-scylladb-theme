@@ -632,43 +632,57 @@ div.code-block-caption:hover > a.headerlink {
 .search.columns {
      margin-top: 1em;
  }
+
+header .er-dummy-search-box #er-search-form {
+    display: block !important;
+    margin-top: -4px;
+}
  
- header .input_search {
-     background: transparent;
-     border: 0px solid transparent;
-     border-bottom: 1px solid #DDE0E7;
-     color: #DDE0E7;
-     padding: 0rem;
-     height: 31px;
+ header .er-dummy-search-box #er_search_input_dummy {
+     background: transparent !important;
+     /*border: 0px solid transparent;*/
+     border-bottom: 1px solid #DDE0E7 !important;
+     color: #DDE0E7 !important;
+     padding: 0rem !important;
+     height: 31px !important;
      margin-bottom: 0;
      font-size: 15px !important;
-     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
      float: left;
-     width: 80%;
+     width: 80% !important;
  }
  
- header .input_search:focus {
-     background: transparent;
-     border-bottom: 1px solid #DDE0E7;
+ header .er-dummy-search-box #er_search_input_dummy:focus {
+     background: transparent !important;
+     border-bottom: 1px solid #DDE0E7 !important;
  }
  
- .button.search_go {
-     background: transparent;
-     border-bottom: 1px solid #DDE0E7;
+ header .er-dummy-search-box #er_search_button_dummy {
+     display: inline-block !important;
+     float: left;
+     width: 20% !important;
+     background: transparent !important;
+     border-bottom: 1px solid #DDE0E7 !important;
      height: 31px !important;
-     float: left;
-     width: 20%;
+     font-size: 0.875rem !important;
+     outline: none !important;
+     color: #DDE0E7 !important;
+     text-align: center;
+     padding: 0 !important;
  }
- 
- .search_go:hover {
-     background: transparent;
-     border-bottom: 1px solid #DDE0E7;
+
+header .er-dummy-search-box #er_search_button_dummy:hover {
+     background: transparent !important;
+     border-bottom: 1px solid #DDE0E7 !important;
  }
 
 header .input_search, .button.search_go {
     top: 5px;
 }
 
+#er_clear_input:hover {
+    background: transparent !important;
+}
  .icon-search {
      margin-right: 0.5rem;
      color: #DDE0E7;
@@ -856,5 +870,5 @@ body .algolia-autocomplete .ds-dropdown-menu {
 
 div.logo a {
     position: relative;
-    z-index: 9999;
+    z-index: 999;
 }
