@@ -18,7 +18,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/doc.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/css/doc/main.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
     
     <script src="{{ pathto('_static/js/vendor/modernizr.js', 1) }}"></script>
@@ -36,61 +36,57 @@
 
 <!-- end head.html -->
 </head>
+
 <body>
-    <header id="header" class="animated">
-        <div class="topbar_continer contain-to-grid">
-            <nav class="top-bar" id="top-bar" data-topbar role="navigation">
-                <ul class="title-area">
-                    <li class="name">
-                    </li>
-                    <li class="toggle-topbar"><a href="#"><span class="icon-manu"></span></a></li>
-                </ul>
-                <section class="meta-bar-section clearfix">
-                  <ul class="right">
-                    <li>
-                      <a href="https://www.scylladb.com/">ScyllaDB Home</a>
-                  </li>
-              </ul>
-          </section>
-          <section class="top-bar-section clearfix">
-            <ul class="right">
-                <li>
-                    <a href="/getting-started/">Getting started</a>
-                </li>
-                <li >
-                    <a href="/operating-scylla/">Administrators</a>
-                </li>
-		<li >
-                    <a href="/using-scylla/">Developers</a>
-                </li>
-                <li >
-                    <a href="/scylla-cloud/">Scylla Cloud</a>
-                </li>
-                <li >
-                    <a href="https://university.scylladb.com/">Scylla University</a>
-                </li>
-                <li class="search_continer show-for-large-up">
-                    <div class="row collapse search_continer">
-                        <ci-search></ci-search>
+<header id="header" class="animated">
+    <div class="topbar_continer contain-to-grid clearfix">
+        <nav class="top-bar" id="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <div class="logo">
+                        <a href="/"><img src="{{ pathto('_static/img/logo-scylla.svg') }}" alt="" width="151"></a>
                     </div>
                 </li>
+                <li class="toggle-topbar"><a href="#"><span class="icon-manu"></span></a></li>
             </ul>
-        </section>
-    </nav>
-</div>
-<div class="row inner_bg_3">
-    <div class="small-10 columns">
-        <div class="logo">
-            <a href="/"><img src="{{ pathto('_static/img/logo-scylla.svg', 1) }}" alt="" width="151"></a>
-        </div>
+            <section class="top-bar-section clearfix">
+                <ul class="right">
+                    <li>
+                        <a href="/getting-started/">Getting started</a>
+                    </li>
+                    <li >
+                        <a href="/operating-scylla/">Administrators</a>
+                    </li>
+                    <li >
+                        <a href="/using-scylla/">Developers</a>
+                    </li>
+                    <li >
+                        <a href="/scylla-cloud/">Scylla Cloud</a>
+                    </li>
+                    <li >
+                        <a href="https://university.scylladb.com/">Scylla University</a>
+                    </li>
+                    <li>
+                        <a href="https://www.scylladb.com/">ScyllaDB Home</a>
+                    </li>
+                    <li class="search_continer show-for-medium-up">
+                        <ci-search></ci-search>
+                    </li>
+                </ul>
+            </section>
+        </nav>
     </div>
-</div>
 </header>
 <section id="content">
+    {%- if pagename == master_doc %}
+    <div class="content-full">
+        {{ body }}
+    </div>
+    {%- else %}
     <div class="row">
 
         <div class="large-9 large-push-3 columns">
-            {% block body %} {% endblock %}
+            {{ body }}
         </div>
 
         <div id="sidebar" class="large-3 large-pull-9 columns">
@@ -102,6 +98,7 @@
         </div>
 
     </div>
+    {%- endif %}
 </section>
 
 <!-- newsleter modal -->
@@ -148,42 +145,45 @@
 
 <!-- footer.html -->
 <footer id="footer">
-  <div class="row">
-    <a class="item"  href="https://github.com/scylladb/scylla-doc-issues/issues/new?title=Issue in page {{ title }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20http://docs.scylladb.com/{{pagename}}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix" target="_blank">
-      Report an issue on this page</span>
-    </a>
-  </div>  
-    <div class="row">
-        <div class="large-12 columns">
-            <div class="social_footer">
-                <a class="item"  href="https://github.com/ScyllaDB">
-                    <span class="icon-github2"></span>
-                </a>
-                <a class="item" href="https://twitter.com/ScyllaDB">
-                    <span class="icon-twitter"></span>
-
-                </a>
-                <a class="item" href="https://www.linkedin.com/company/scylladb" >
-                    <span class="icon-linkedin2"></span>
-                </a>
-                <a class="item" href="https://www.facebook.com/scylladb/">
-                    <span class="icon-facebook"></span>
-                </a>
-            </div>
+    <div class="footer-top">
+        <div class="footer-links">
+            <a class="logo" href="https://www.scylladb.com"><img src="{{ pathto('_static/img/logo-scylla-min.svg') }}" alt=""></a>
+            <a class="link" href="https://docs.scylladb.com">Docs</a>
+            <a class="link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
+            <a class="link" href="https://www.scylladb.com/company/">About Us</a>
+            <a class="link button" href="https://github.com/scylladb/scylla-doc-issues/issues/new?title=Issue in page {{ title }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20http://docs.scylladb.com/{{pagename}}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix" target="_blank">
+                Report an issue on this page</a>
+        </div>
+        <div class="footer-actions">
+            <a class="link-icon" href="https://github.com/ScyllaDB" target="_blank">
+                <span class="icon-github2"></span></a>
+            <a class="link-icon" href="https://twitter.com/ScyllaDB" target="_blank">
+                <span class="icon-twitter"></span></a>
+            <a class="link-icon" href="https://www.linkedin.com/company/scylladb"  target="_blank">
+                <span class="icon-linkedin2"></span></a>
+            <a class="link-icon" href="https://www.facebook.com/scylladb/" target="_blank">
+                <span class="icon-facebook"></span></a>
         </div>
     </div>
-    <div class="row">
-        <div class="large-12 columns">
+
+    <div class="footer-bottom">
+        <div class="footer-info">
             {%- if show_copyright %}
-            {%- if hasdoc('copyright') %}
-            {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}{% endtrans %}
-            {%- else %}
-            {% trans copyright=copyright|e %}&#169; {{ copyright }}{% endtrans %} |
-            {%- endif %}
+            <div class="footer-copyright">
+                {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}{% endtrans %}
+                {%- else %}
+                {% trans copyright=copyright|e %}&#169; {{ copyright }}{% endtrans %}
+                {%- endif %}
+            </div>
             {%- endif %}
             {%- if last_updated %}
-            {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+            <div class="footer-last-updated">
+                {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+            </div>
             {%- endif %}
+        </div>
+        <div class="footer-links">
         </div>
     </div>
 </footer>
