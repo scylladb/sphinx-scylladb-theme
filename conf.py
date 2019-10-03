@@ -21,6 +21,7 @@ import sys
 import yaml
 import re
 sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('./_ext'))
 
 from docutils import nodes 
 from docutils.transforms import Transform 
@@ -72,8 +73,10 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
-    'sphinx.ext.extlinks'
-#    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.extlinks',
+#    'sphinx.ext.autosectionlabel',
+
+    'topic-box',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -94,7 +97,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Scylla'
-copyright = u'2018, ScyllaDB. All rights reserved.'
+copyright = u'2019, ScyllaDB. All rights reserved.'
 author = u'Scylla Project Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -476,8 +479,9 @@ from recommonmark.parser import CommonMarkParser
 source_parsers = {'.md': CommonMarkParser}
 #source_suffix = ['.rst', '.md']
 
-# Add CQL support
+# Setup Sphinx
 def setup(sphinx):
+    # Add CQL support
     sys.path.insert(0, os.path.abspath('./_utils'))
     from cql import CQLLexer
     sphinx.add_lexer("cql", CQLLexer())
