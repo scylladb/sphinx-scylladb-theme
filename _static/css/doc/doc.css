@@ -173,6 +173,16 @@
     #footer .footer-top .footer-actions {
         flex: auto !important;
     }
+
+    #footer .footer-top {
+        flex-direction: column !important;
+    }
+    #footer .footer-top .logo {
+        margin: 0.2rem !important;
+    }
+    #footer .footer-links {
+        justify-content: center !important;
+    }
 }
 
 @media only screen and (min-width: 40.0625em) {
@@ -295,7 +305,11 @@ h1, h2, h3, h4, h5, h6 {
 
 body, html {
     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 div:focus {
@@ -344,6 +358,7 @@ ul {
 }
 
 .content-full {
+    min-height: 100%;
     background-color: #F6F8FF;
     padding: 4rem;
 }
@@ -357,17 +372,19 @@ ul {
 #footer .footer-bottom {
     width: 100%;
     display: flex;
+    align-items: center;
     font-size: 0.9rem;
+}
+#footer .footer-top .logo {
+    margin: 0 2rem 0 0.5rem;
+    height: 1.25rem;
+    width: 8.5rem;
 }
 #footer .footer-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: flex-start;
-}
-#footer .footer-links .logo {
-    margin: 0 2rem 0 0.5rem;
-    height: 1.25rem;
 }
 #footer .footer-links .logo img {
     height: 100%;
@@ -448,6 +465,9 @@ ul {
     justify-content: flex-end;
 }
 
+#content {
+    flex: auto;
+}
 #content .main-title {
     width: 40rem;
     max-width: 100%;
