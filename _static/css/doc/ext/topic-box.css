@@ -67,19 +67,20 @@
 
 .topic-box-readmore {
     position: absolute;
+    opacity: 0;
     right: 1rem;
     bottom: 0.5rem;
-    color: #939EAB;
+    color: #3E3F42;
     font-size: 0.9em;
     line-height: 1.5em;
     float: right;
     margin-left: 1.5em;
     margin-top: 0.1em;
-    transition: color 200ms;
+    transition: opacity 200ms;
 }
 .topic-box:hover .topic-box-readmore,
 .topic-box:focus .topic-box-readmore {
-    color: #3E3F42;
+    opacity: 1;
 }
 
 
@@ -88,6 +89,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .topics-grid .topic-box {
     flex: none;
@@ -101,10 +104,5 @@
 @media screen and (min-width: 1440px) {
     .topics-grid .topic-box {
         flex-basis: calc(33% - 2em);
-    }
-}
-@media screen and (min-width: 2048px) {
-    .topics-grid .topic-box {
-        flex-basis: calc(25% - 2em);
     }
 }
