@@ -501,6 +501,7 @@ extlinks = {
 rst_epilog = """
 .. |mon_version| replace:: 3.0
 .. |man_version| replace:: 1.4
+.. |mon_root| replace::  :doc:`Scylla Monitoring Stack </operating-scylla/monitoring/index>`
 """ 
 
 
