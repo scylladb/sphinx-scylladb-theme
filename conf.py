@@ -491,16 +491,14 @@ def setup(sphinx):
 
 extlinks = {
     'manager': ('/operating-scylla/manager/%s/',''),
-    'manager_lst': ('/operating-scylla/manager/1.4/%s/',''),
+    'manager_lst': ('/operating-scylla/manager/2.0/%s/',''),
     'monitor': ('/operating-scylla/monitoring/%s/',''),
-    'monitor_lst': ('/operating-scylla/monitoring/2.4/%s/','')
+    'monitor_lst': ('/operating-scylla/monitoring/3.1/%s/','')
 }
 
 #Adds version variables for monitoring and manager versions when used in inline text
 
 rst_epilog = """
-
-=======
 .. |mon_version| replace:: 3.1
 .. |man_version| replace:: 2.0
 .. |mon_root| replace::  :doc:`Scylla Monitoring Stack </operating-scylla/monitoring/index>`
