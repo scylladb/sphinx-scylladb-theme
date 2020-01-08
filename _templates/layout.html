@@ -1,5 +1,34 @@
+{#
+    layout.html
+    ~~~~~~~~~~~~~~~~~
+
+    Layout template for scylla docs.
+#}
+
+
 <!doctype html>
 <html class="no-js" lang="en">
+
+
+{%- macro script() %}
+    <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    {%- for js in script_files %}
+    {{ js_tag(js) }}
+    {%- endfor %}
+{%- endmacro %}
+
+{%- macro css() %}
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+    {%- for css in css_files %}
+      {%- if css|attr("filename") %}
+    {{ css_tag(css) }}
+      {%- else %}
+    <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+      {%- endif %}
+    {%- endfor %}
+{%- endmacro %}
+  
 <head><!-- begin head.html -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
@@ -15,6 +44,11 @@
     <link rel="canonical" href="https://docs.scylladb.com/">
 
     <link rel="author" href="mailto:info@scylladb.com">
+
+    {%- block css %}
+    {{- css() }}
+    {%- endblock %}
+    
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" type="text/css" />
@@ -22,7 +56,11 @@
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    
+
+    {%- block scripts %}
+    {{- script() }}
+    {%- endblock %}
+
     <script src="{{ pathto('_static/js/vendor/modernizr.js', 1) }}"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
