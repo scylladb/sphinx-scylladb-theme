@@ -76,7 +76,8 @@ extensions = [
     'sphinx.ext.extlinks',
 #    'sphinx.ext.autosectionlabel',
     'topic-box',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'panel-box'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
