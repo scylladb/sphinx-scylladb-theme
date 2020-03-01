@@ -1,0 +1,10 @@
+_build/
+*.swp
+*.pyc
+bin/
+include/
+lib/
+lib64
+pip-selfcheck.json
+.Python
+LICENSE

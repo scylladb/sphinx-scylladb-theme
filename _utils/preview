@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+from livereload import Server, shell
+server = Server()
+server.watch('_static/*.*', shell('make'))
+server.watch('**/*.rst', shell('make'))
+server.watch('*.md', shell('make'))
+server.serve(host='0.0.0.0', root='_build/dirhtml')
