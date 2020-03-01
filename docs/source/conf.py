@@ -20,8 +20,7 @@ import os
 import sys
 import yaml
 import re
-sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('./_ext'))
+sys.path.insert(0, os.path.abspath('../../sphinx_scylla_theme/extensions'))
 
 from docutils import nodes 
 from docutils.transforms import Transform 
@@ -64,7 +63,7 @@ def create_redirects(app, docname):
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-needs_sphinx = '1.6'
+needs_sphinx = '1.8'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -98,8 +97,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Scylla'
-copyright = u'2019, ScyllaDB. All rights reserved.'
+project = 'Scylla Documentation Theme and Extensions'
+copyright = u'2012, ScyllaDB. All rights reserved.'
 author = u'Scylla Project Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -169,7 +168,8 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'basic'
+html_theme = 'sphinx_scylla_theme'
+html_theme_path = ["../.."]
 
 html_style = ''
 
@@ -214,7 +214,7 @@ html_static_path = ['_static']
 html_extra_path = ['404.html']
 
 # Add ExpertRec Search
-html_js_files = ['expertrec.js']
+# html_js_files = ['expertrec.js']
 
 # If not None, a 'Last updated on:' timestamp is inserted at every page
 # bottom, using the given strftime format.
@@ -484,14 +484,14 @@ source_parsers = {'.md': CommonMarkParser}
 #source_suffix = ['.rst', '.md']
 
 # Setup Sphinx
-def setup(sphinx):
-    # Add CQL support
-    sys.path.insert(0, os.path.abspath('./_utils'))
-    from cql import CQLLexer
-    sphinx.add_lexer("cql", CQLLexer())
-    sphinx.add_transform(MySiteDetector)
+# def setup(sphinx):
+#     # Add CQL support
+#     sys.path.insert(0, os.path.abspath('./_utils'))
+#     from cql import CQLLexer
+#     sphinx.add_lexer("cql", CQLLexer())
+#     sphinx.add_transform(MySiteDetector)
 
-    sphinx.connect('build-finished', create_redirects)
+    # sphinx.connect('build-finished', create_redirects)
 
 extlinks = {
     'manager': ('/operating-scylla/manager/%s/',''),
