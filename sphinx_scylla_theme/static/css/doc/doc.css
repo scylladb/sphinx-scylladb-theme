@@ -1046,3 +1046,12 @@ div.logo a {
     position: relative;
     z-index: 999;
 }
+
+
+/* disable max width for the row element */
+
+.row {
+    max-width: none;
+    margin: 20 auto;
+    width: 100%;
+}
