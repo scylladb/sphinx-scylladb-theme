@@ -376,8 +376,8 @@ ul {
     font-size: 0.9rem;
 }
 #footer .footer-top .logo {
-    margin: 0 2rem 0 0.5rem;
-    height: 1.25rem;
+    margin: 0rem 1rem;
+    height: 2rem;
     width: 8.5rem;
 }
 #footer .footer-links {
@@ -1045,4 +1045,13 @@ body .algolia-autocomplete .ds-dropdown-menu {
 div.logo a {
     position: relative;
     z-index: 999;
+}
+
+
+/* disable max width for the row element */
+
+.row {
+    max-width: none;
+    margin: 20 auto;
+    width: 100%;
 }

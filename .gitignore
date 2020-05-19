@@ -160,7 +160,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-
+docs/source/.doctrees/
 # PyBuilder
 target/
 

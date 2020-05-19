@@ -1,6 +1,6 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
-from _utils import generate_template, generate_styles, generate_content
+from .utils import generate_template, generate_styles, generate_content
 
 class TopicBox(Directive):
     has_content = True
