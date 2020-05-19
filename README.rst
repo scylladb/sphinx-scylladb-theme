@@ -20,11 +20,12 @@ Installation
 To install the theme in a new Sphinx project, follow the next steps:
 
 1. Add the dependency to the new Sphinx documentation project.
-You can use either poetry, pip, or any other equivalent package manager.
+Open a console prompt and run the following command in the root documentation folder.
 
 .. code:: console
 
     poetry add sphinx-scylla-theme
+
 
 2. Add the following configuration in the documentation's ``conf.py`` file.
 
