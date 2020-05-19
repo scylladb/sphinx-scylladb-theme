@@ -58,18 +58,12 @@ To preview the theme locally, follow the next steps:
 
     git clone https://github.com/scylladb/sphinx-scylla-theme.git
 
-2. Install the project's dependencies with poetry.
+2. Run the following command to build the docs.
 
 .. code:: console
 
-    poetry install
-
-3. Run the following command to build the docs.
-
-.. code:: console
-
-    poetry run sphinx-autobuild -a -b html docs/source docs/_build/dirhtml
+    ./_utils/preview.sh 
 
 If everything goes well, the previous command should generate a ``docs/_build/dirhtml`` directory.
 
-4. Open http://127.0.0.1:8000/ with your preferred browser and preview the docs.
+3. Open http://127.0.0.1:8000/ with your preferred browser and preview the docs.
