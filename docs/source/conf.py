@@ -20,8 +20,6 @@ import os
 import sys
 import yaml
 import re
-sys.path.insert(0, os.path.abspath('../../sphinx_scylla_theme/extensions'))
-
 from docutils import nodes 
 from docutils.transforms import Transform 
 from sphinx.util import logging
@@ -74,14 +72,13 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
 #    'sphinx.ext.autosectionlabel',
-    'topic-box',
     'sphinx_tabs.tabs',
-    'panel-box',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'sphinx_scylla_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+# templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:

@@ -17,6 +17,8 @@ To build and preview the project locally, you will need to install the following
 Installation
 ------------
 
+To install the theme in a new Sphinx project, follow the next steps:
+
 1. Add the dependency to the new Sphinx documentation project.
 You can use either poetry, pip, or any other equivalent package manager.
 
@@ -45,6 +47,10 @@ You can use either poetry, pip, or any other equivalent package manager.
 Preview the theme locally
 -------------------------
 
+The ``docs`` folder contains a sample project with the Sphinx theme already installed.
+
+To preview the theme locally, follow the next steps:
+
 1. Open a new console prompt and clone the theme project.
 
 .. code:: console
@@ -57,12 +63,12 @@ Preview the theme locally
 
     poetry install
 
-3. To build the sample docs, run the following command.
+3. Run the following command to build the docs.
 
 .. code:: console
 
-    potery run sphinx-build -a -b html docs/source _build/dirhtml
+    poetry run sphinx-autobuild -a -b html docs/source docs/_build/dirhtml
 
-If everything goes well, the previous command should generate a ``_build/dirhtml`` directory.
+If everything goes well, the previous command should generate a ``docs/_build/dirhtml`` directory.
 
-4. Open the ``index.html`` that you will find inside ``_build/dirhtml`` with your preferred browser.
+4. Open http://127.0.0.1:8000/ with your preferred browser and preview the docs.
