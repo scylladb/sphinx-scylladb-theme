@@ -62,7 +62,7 @@ To preview the theme locally, follow the next steps:
 
 .. code:: console
 
-    ./_utils/preview.sh 
+    ./docs/_utils/preview.sh 
 
 If everything goes well, the previous command should generate a ``docs/_build/dirhtml`` directory.
 
