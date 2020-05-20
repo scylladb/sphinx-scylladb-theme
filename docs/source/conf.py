@@ -174,7 +174,12 @@ html_style = ''
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'header_links': [
+    ('Scylla Cloud', 'https://docs.scylladb.com/scylla-cloud/'),
+    ('Scylla University', 'https://university.scylladb.com/'),
+    ('ScyllaDB Home', 'https://www.scylladb.com/')]
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
