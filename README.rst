@@ -94,4 +94,4 @@ To upload a new version of the package to PyPi, follow the next steps:
 
     poetry publish
 
-After publishing the package, you should see the new release listed on [PyPi](https://pypi.org/project/sphinx-scylla-theme/#history).
+After publishing the package, you should see the new release listed on  `PyPI <https://pypi.org/project/sphinx-scylla-theme/#history>`_.
