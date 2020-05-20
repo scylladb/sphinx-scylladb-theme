@@ -37,7 +37,18 @@ Open a console prompt and run the following command in the root documentation fo
         'sphinx_scylla_theme'
     ]
 
-3. In the same ``conf.py`` file, comment out the static paths to use the assets already included in the theme.
+3. In the same ``conf.py`` file, overwrite the ``html_theme_options`` property to customize the navigation bar.
+
+.. code:: console
+
+    html_theme_options = {
+        'header_links': [
+        ('Scylla Cloud', 'https://docs.scylladb.com/scylla-cloud/'),
+        ('Scylla University', 'https://university.scylladb.com/'),
+        ('ScyllaDB Home', 'https://www.scylladb.com/')]
+    }
+
+4. Finally, comment out the static paths to use the assets already included in the theme.
 
 .. code:: console
 
