@@ -43,7 +43,7 @@ Open a console prompt and run the following command in the root documentation fo
 
     html_theme_options = {
         'header_links': [
-        ('Scylla Cloud', '/scylla-cloud/'),
+        ('Scylla Cloud', 'https://docs.scylladb.com/scylla-cloud/'),
         ('Scylla University', 'https://university.scylladb.com/'),
         ('ScyllaDB Home', 'https://www.scylladb.com/')]
     }
