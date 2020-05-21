@@ -8,4 +8,4 @@ def setup(app):
     panel_box.setup(app)
     topic_box.setup(app)
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
