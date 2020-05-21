@@ -91,11 +91,11 @@ To upload a new version of the package to PyPi, follow the next steps:
 .. code:: console
 
     [tool.poetry]
-    name = "sphinx-scylla-theme"
+    name = "sphinx-scylladb-theme"
     version = "0.1.1"
     ...
 
-2. After saving your changes, run the command to build the package in a command prompt. The current directory should be the ``sphinx-scylla-theme-project`` source code.
+2. After saving your changes, run the command to build the package in a command prompt. The current directory should be the ``sphinx-scylla-theme`` project source code.
 
 .. code:: console
 
@@ -107,4 +107,4 @@ To upload a new version of the package to PyPi, follow the next steps:
 
     poetry publish
 
-After publishing the package, you should see the new release listed on  `PyPI <https://pypi.org/project/sphinx-scylla-theme/#history>`_.
+After publishing the package, you should see the new release listed on  `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
