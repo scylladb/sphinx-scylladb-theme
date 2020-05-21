@@ -44,7 +44,7 @@ You can customize the navigation  bar and set the GitHub repository to report do
 
     html_theme_options = {
         'header_links': [
-        ('Scylla Cloud', '/scylla-cloud/'),
+        ('Scylla Cloud', 'https://docs.scylladb.com/scylla-cloud/'),
         ('Scylla University', 'https://university.scylladb.com/'),
         ('ScyllaDB Home', 'https://www.scylladb.com/')],
         'github_issues_repository': 'scylladb/scylla-doc-issues'
@@ -80,3 +80,31 @@ To preview the theme locally, follow the next steps:
 If everything goes well, the previous command should generate a ``docs/_build/dirhtml`` directory.
 
 3. Open http://127.0.0.1:8000/ with your preferred browser and preview the docs.
+
+Publish to PyPi
+---------------
+
+To upload a new version of the package to PyPi, follow the next steps:
+
+1. Open the file ``pyproject.toml`` with a text editor and increase the project's version number.
+
+.. code:: console
+
+    [tool.poetry]
+    name = "sphinx-scylla-theme"
+    version = "0.1.1"
+    ...
+
+2. After saving your changes, run the command to build the package in a command prompt. The current directory should be the ``sphinx-scylla-theme-project`` source code.
+
+.. code:: console
+
+    poetry build
+
+3. Publish the package to PyPi. The command prompt will ask you for the PyPi username and password.
+
+.. code:: console
+
+    poetry publish
+
+After publishing the package, you should see the new release listed on  `PyPI <https://pypi.org/project/sphinx-scylla-theme/#history>`_.
