@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "0.1.1"
-description = ""
-authors = ["Nick Volynkin <nick.volynkin@gmail.com>"]
+version = "0.1.2"
+description = "A Sphinx Theme for ScyllaDB projects documentation"
+authors = ["David García <dgarcia360@outlook.com>"]
 exclude = ["docs"]
+
 
 [tool.poetry.dependencies]
 python = "^3.7"
