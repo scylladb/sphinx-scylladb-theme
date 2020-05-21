@@ -1,4 +1,4 @@
-from sphinx_scylla_theme import __version__
+from sphinx_scylladb_theme import __version__
 
 
 def test_version():

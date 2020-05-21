@@ -74,7 +74,7 @@ extensions = [
 #    'sphinx.ext.autosectionlabel',
     'sphinx_tabs.tabs',
     'sphinx_copybutton',
-    'sphinx_scylla_theme'
+    'sphinx_scylladb_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -165,7 +165,7 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_scylla_theme'
+html_theme = 'sphinx_scylladb_theme'
 html_theme_path = ["../.."]
 
 html_style = ''
@@ -178,7 +178,8 @@ html_theme_options = {
     'header_links': [
     ('Scylla Cloud', 'https://docs.scylladb.com/scylla-cloud/'),
     ('Scylla University', 'https://university.scylladb.com/'),
-    ('ScyllaDB Home', 'https://www.scylladb.com/')]
+    ('ScyllaDB Home', 'https://www.scylladb.com/')],
+    'github_issues_repository': 'scylladb/sphinx-scylladb-theme'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
