@@ -7,7 +7,7 @@ The base Sphinx theme for ScyllaDB documentation projects.
 Requirements
 ------------
 
-The theme is available on `PyPI <https://pypi.org/project/sphinx-scylla-theme/>`_ and has been tested with Sphinx 1.8.0.
+The theme is available on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/>`_ and has been tested with Sphinx 1.8.0.
 To build and preview the project locally, you will need to install the following software:
 
 - `Git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
@@ -24,20 +24,21 @@ Open a console prompt and run the following command in the root documentation fo
 
 .. code:: console
 
-    poetry add sphinx-scylla-theme
+    poetry add sphinx-scylladb-theme
 
 
 2. Add the following configuration in the documentation's ``conf.py`` file.
 
 .. code:: console
 
-    html_theme = 'sphinx_scylla_theme'
+    html_theme = 'sphinx_scylladb_theme'
     extensions = [
         ...,
-        'sphinx_scylla_theme'
+        'sphinx_scylladb_theme'
     ]
 
-3. In the same ``conf.py`` file, overwrite the ``html_theme_options`` property to customize the navigation bar.
+3. In the same ``conf.py`` file, overwrite the ``html_theme_options`` property.
+You can customize the navigation  bar and set the GitHub repository to report documentation issues.
 
 .. code:: console
 
@@ -45,7 +46,8 @@ Open a console prompt and run the following command in the root documentation fo
         'header_links': [
         ('Scylla Cloud', '/scylla-cloud/'),
         ('Scylla University', 'https://university.scylladb.com/'),
-        ('ScyllaDB Home', 'https://www.scylladb.com/')]
+        ('ScyllaDB Home', 'https://www.scylladb.com/')],
+        'github_issues_repository': 'scylladb/scylla-doc-issues'
     }
 
 4. Finally, comment out the static paths to use the assets already included in the theme.
@@ -67,7 +69,7 @@ To preview the theme locally, follow the next steps:
 
 .. code:: console
 
-    git clone https://github.com/scylladb/sphinx-scylla-theme.git
+    git clone https://github.com/scylladb/sphinx-scylladb-theme.git
 
 2. Run the following command to build the docs.
 

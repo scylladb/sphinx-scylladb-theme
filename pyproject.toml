@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "sphinx-scylla-theme"
+name = "sphinx-scylladb-theme"
 version = "0.1.1"
 description = ""
 authors = ["Nick Volynkin <nick.volynkin@gmail.com>"]
