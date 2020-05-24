@@ -1,4 +1,4 @@
 #!/bin/sh -e
 
-poetry install
-poetry run sphinx-autobuild -a -b html docs/source docs/_build/dirhtml --ignore docs/source/.doctrees/*
+python3 -m poetry run python3 _utils/preview.py
+
