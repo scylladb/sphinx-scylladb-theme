@@ -80,7 +80,7 @@ To preview the theme locally, follow the next steps:
 
 If everything goes well, the previous command should generate a ``docs/_build/dirhtml`` directory.
 
-3. Open http://127.0.0.1:8000/ with your preferred browser and preview the docs.
+3. Open http://127.0.0.1:5500/ with your preferred browser and preview the docs.
 
 Publish to PyPi
 ---------------
