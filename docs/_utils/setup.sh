@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#! /bin/bash
 
 if pwd | egrep -q '\s'; then
 	echo "Working directory name contains one or more spaces."
@@ -6,4 +6,7 @@ if pwd | egrep -q '\s'; then
 fi
 
 which python3 || { echo "Failed to find python3." && exit 1; }
-python3 -m poetry install || { echo "Failed to find poetry: https://python-poetry.org/docs/#installation" && exit 1;}
+
+pip install --user poetry
+poetry --version || { echo "Failed to find or install poetry. Try installing it manually: https://python-poetry.org/docs/#installation" && exit 1; }
+poetry install
