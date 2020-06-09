@@ -1,13 +1,7 @@
-<div class="side-nav">
-    <h3>{{ _('Branches') }}</h3>
-    <ul>
-        {%- for item in versions.branches %}
-        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
-        {%- endfor %}
-    </ul>
-    <h3>{{ _('Versions') }}</h3>
-    <ul>
-        {%- for item in versions.tags %}
+<div class="side-nav versions-dropdown">
+    <button class="button">master</button>
+    <ul class="content">
+        {%- for item in versions %}
         <li><a href="{{ item.url }}">{{ item.name }}</a></li>
         {%- endfor %}
     </ul>
