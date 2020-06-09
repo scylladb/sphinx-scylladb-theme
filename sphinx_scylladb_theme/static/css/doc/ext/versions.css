@@ -18,7 +18,7 @@
     overflow: hidden;
     width: 100%;
     list-style-type: none;    
-    margin: 0;
+    margin: 0 !important;
     padding: 5px 10px;
     border-radius: 5px;
     background: #F4F3F5;
