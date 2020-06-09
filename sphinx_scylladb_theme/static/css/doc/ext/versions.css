@@ -23,6 +23,7 @@
     border-radius: 5px;
     background: #F4F3F5;
     border: 1px solid #DDE0E7;
+    z-index: 10;
 }
 
 .versions-dropdown:hover .content {
