@@ -105,23 +105,43 @@
     </div>
 </header>
 <section id="content">
-    {%- if pagename == master_doc %}
+    {%- if pagename == master_doc and not theme_show_sidebar_index %}
     <div class="content-full">
         {{ body }}
     </div>
     {%- else %}
     <div class="row">
 
-        <div class="large-6 large-push-3 columns">
-            {{ body }}
-        </div>
-
-        <div id="sidebar" class="large-3 large-pull-9 columns">
+        <div id="sidebar" class="large-3 columns">
             {%- if sidebars != None %}
             {%- for sidebartemplate in sidebars %}
             {%- include sidebartemplate %}
             {%- endfor %}
             {%- endif %}
+        </div>
+
+        <div class="large-6 columns">
+            {% if versions and current_version and latest_version and current_version != latest_version %}
+                <p>
+                    <strong>
+                    {% if current_version.is_released %}
+                    You're reading an old version of this documentation.
+                    If you want up-to-date information, please have a look at <a href="{{ vpathto(latest_version.name) }}">{{latest_version.name}}</a>.
+                    {% else %}
+                    You're reading the documentation for a development version.
+                    For the latest released version, please have a look at <a href="{{ vpathto(latest_version.name) }}">{{latest_version.name}}</a>.
+                    {% endif %}
+                    </strong>
+                </p>
+            {% endif %}
+
+            {{ body }}
+        </div>
+
+        <div class="large-3 columns">
+            {% if versions %}
+                {% include 'versioning.html' %}
+            {% endif %}
         </div>
 
     </div>

@@ -72,8 +72,6 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
 #    'sphinx.ext.autosectionlabel',
-    'sphinx_tabs.tabs',
-    'sphinx_copybutton',
     'sphinx_scylladb_theme'
 ]
 
