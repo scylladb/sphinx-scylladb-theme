@@ -111,16 +111,8 @@
     </div>
     {%- else %}
     <div class="row">
-
-        <div id="sidebar" class="large-3 columns">
-            {%- if sidebars != None %}
-            {%- for sidebartemplate in sidebars %}
-            {%- include sidebartemplate %}
-            {%- endfor %}
-            {%- endif %}
-        </div>
-
-        <div class="large-6 columns">
+	
+	<div class="large-6 large-push-3 columns">
             {% if versions and current_version and latest_version and current_version != latest_version %}
                 <p>
                     <strong>
@@ -136,6 +128,14 @@
             {% endif %}
 
             {{ body }}
+        </div>
+
+        <div id="sidebar" class="large-3 large-pull-6 columns">
+            {%- if sidebars != None %}
+            {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+            {%- endfor %}
+            {%- endif %}
         </div>
 
         <div class="large-3 columns">
