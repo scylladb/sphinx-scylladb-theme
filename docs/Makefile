@@ -27,8 +27,8 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: preview
-preview: dirhtml
-	./_utils/preview.sh
+preview: setup
+	poetry run sphinx-autobuild -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml --port 5500
 
 .PHONY: dirhtml
 dirhtml: setup
