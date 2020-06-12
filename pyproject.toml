@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "0.1.5"
+version = "0.1.6"
 description = "A Sphinx Theme for ScyllaDB projects documentation"
 authors = ["David García <dgarcia360@outlook.com>"]
 exclude = ["docs"]
-readme = "README.rst"
+readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
 python = "^3.7"
