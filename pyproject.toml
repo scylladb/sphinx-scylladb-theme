@@ -9,7 +9,6 @@ readme = "README.rst"
 [tool.poetry.dependencies]
 python = "^3.7"
 pyyaml = "^5.3"
-sphinx = "2.4.4"
 sphinx-tabs = "^1.1.13"
 sphinx-copybutton = "^0.2.8"
 Sphinx = "^2.4.4"
