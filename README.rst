@@ -7,7 +7,7 @@ The base Sphinx theme for ScyllaDB documentation projects.
 Requirements
 ------------
 
-The theme is available on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/>`_ and has been tested with Sphinx 1.8.0.
+The theme is available on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/>`_ and has been tested with Sphinx 2.4.4.
 To build and preview the project locally, you will need to install the following software:
 
 - `Git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
