@@ -25,10 +25,6 @@
         </div>
         <div class="topics-grid">
 
-..  raw:: html
-
-    <div class="topics-grid">
-
 ..  topic-box::
     :title: Getting started
     :link: getting-started/
