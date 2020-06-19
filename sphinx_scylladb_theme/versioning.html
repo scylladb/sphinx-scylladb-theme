@@ -1,8 +1,26 @@
 <div class="versions-dropdown">
-    <button class="button"><span class="version">{{current_version.name}} <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+    <button class="button"><span class="version">
+
+	{% if current_version.name == 'master' %}
+		latest
+	{% else %}
+		{{current_version.name | replace('-scylla', '')}}
+	{% endif %}
+	 <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
     <ul class="content">
-        {%- for item in versions|reverse %}
-        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+  	{%- for item in versions.branches %}
+  	<li><a href="{{ item.url }}">
+		{% if item.name == 'master' %}
+			latest
+		{% else %}
+			{{ item.name }}
+		{% endif %}
+	</a></li>
+  	{%- endfor %}
+
+        {%- for item in versions.tags|reverse %}
+        <li><a href="{{ item.url }}">{{item.name | replace('-scylla', '')}}</a></li>
         {%- endfor %}
     </ul>
 </div>
