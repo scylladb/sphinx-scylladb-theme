@@ -121,7 +121,12 @@
                     If you want up-to-date information, please have a look at <a href="{{ vpathto(latest_version.name) }}">{{latest_version.name}}</a>.
                     {% else %}
                     You're reading the documentation for a development version.
-                    For the latest released version, please have a look at <a href="{{ vpathto(latest_version.name) }}">{{latest_version.name}}</a>.
+                    For the latest released version, please have a look at <a href="{{ vpathto(latest_version.name) }}">
+		    	{% if latest_version.name == 'master' %}
+				latest
+		    	{% else %}
+				{{latest_version.name | replace('-scylla', '')}}
+		    	{% endif %}</a>.
                     {% endif %}
                     </strong>
                 </p>
