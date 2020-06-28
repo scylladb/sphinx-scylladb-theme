@@ -5,8 +5,8 @@ if pwd | egrep -q '\s'; then
 	exit 1
 fi
 
-which python3 || { echo "Failed to find python3." && exit 1; }
-
-pip install --user poetry
+which python3 || { echo "Failed to find python3. Try installing Python for your operative system: https://www.python.org/downloads/" && exit 1; }
+which pipx || python3 -m pip install --user pipx
+which poetry || pipx install poetry
 poetry --version || { echo "Failed to find or install poetry. Try installing it manually: https://python-poetry.org/docs/#installation" && exit 1; }
 poetry install
