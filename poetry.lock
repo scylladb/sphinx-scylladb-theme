@@ -363,6 +363,17 @@ sphinx = ">=1.8"
 
 [[package]]
 category = "main"
+description = "Add support for multiple versions to sphinx"
+name = "sphinx-multiversion"
+optional = false
+python-versions = "*"
+version = "0.2.3"
+
+[package.dependencies]
+sphinx = ">=2.1"
+
+[[package]]
+category = "main"
 description = "Tab views for Sphinx"
 name = "sphinx-tabs"
 optional = false
@@ -500,7 +511,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "4e77aba8f702c602ce559f388d96baf2c0d8b6d7b80668a1627514045fd86a18"
+content-hash = "bedda15562a42bcf55788e2ca9cb75e87d551ec035c932f6d6af0608fb5cbdbd"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -668,6 +679,10 @@ sphinx-autobuild = [
 sphinx-copybutton = [
     {file = "sphinx-copybutton-0.2.11.tar.gz", hash = "sha256:cf3bb6dc4b82217fe1a765d733aa478949ae8574670aa2c5e7c94de81326ad50"},
     {file = "sphinx_copybutton-0.2.11-py3-none-any.whl", hash = "sha256:7eff55f0d1f8aee42f9538b5659efe326d58fea04c11c986886bbdc0a233232d"},
+]
+sphinx-multiversion = [
+    {file = "sphinx-multiversion-0.2.3.tar.gz", hash = "sha256:e46565ac2f703f3b55652f33c159c8059865f5d13dae7f0e8403e5afc2996f5f"},
+    {file = "sphinx_multiversion-0.2.3-py3-none-any.whl", hash = "sha256:dc0f18449122e3e2a61245771bfdb7fa83df4f6adbf8eafea31f5b0cfccb5dbe"},
 ]
 sphinx-tabs = [
     {file = "sphinx-tabs-1.1.13.tar.gz", hash = "sha256:7ad881daa4d18799b254db4aa7feeb9d30256cbccf7d4f3de746d9fcc14e0196"},
