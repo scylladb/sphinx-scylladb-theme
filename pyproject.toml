@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "0.1.7"
+version = "0.1.8"
 description = "A Sphinx Theme for ScyllaDB projects documentation"
 authors = ["David García <dgarcia360@outlook.com>"]
 exclude = ["docs"]
@@ -12,6 +12,7 @@ pyyaml = "^5.3"
 sphinx-tabs = "^1.1.13"
 sphinx-copybutton = "^0.2.8"
 Sphinx = "^2.4.4"
+sphinx-multiversion = "0.2.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
