@@ -43,7 +43,7 @@ Edit the file ``conf.py`` to suit your project needs (e.g., install new extensio
 Adding the theme to an existing project
 ***************************************
 
-If you are installing the project into an existing Sphinx project, follow the next steps:
+If you are installing the theme as a dependency of an existing Sphinx project, follow the next steps:
 
 1\. Add the dependency to the new Sphinx documentation project.
 Open a console prompt and run the following command in the root documentation folder.
