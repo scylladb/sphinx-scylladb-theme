@@ -126,7 +126,7 @@ The dropdown is only shown if:
 * ``smv_tag_whitelist`` is not ``None`` or undefined, and
 * ``smv_tag_whitelist`` matches at least one version in GitHub releases.
 
-You can disable multiversion setting the property ``smv_tag_whitelist```under ``docs/source/conf.py`` to ``None``.
+You can disable multiversion setting the property ``smv_tag_whitelist`` under ``docs/source/conf.py`` to ``None``.
 
 To generate multiple versions of the documentation, you can run:
 
