@@ -111,7 +111,44 @@ The workflow runs automatically every time:
 - The master branch adds new commits.
 - The repository gets a new release tag.
 
-To enable GitHub Pages in your Sphinx Project, see `How to configure GitHub Pages <https://github.com/scylladb/python-driver/wiki/Documentation-notes#how-to-configure-github-pages>`_.
+To enable GitHub Pages in your Sphinx Project, follow the next steps:
+
+Enabling GitHub Pages
+=====================
+
+1\. Create a new ``gh-pages`` empty branch.
+
+.. code:: console
+
+    git checkout --orphan gh-pages
+    # Warning: Be careful, the next command deletes all files inside the folder.
+    git rm -rf .
+
+Then, commit and push.
+
+2\. Open the repository `Settings <https://github.com/scylladb/sphinx-scylladb-theme/settings>`_, and scroll down to the "GitHub Pages" section.
+
+3\. Select ``gh-pages`` branch.
+
+4\. Wait a couple of minutes, it might take a while until GitHub applies the changes. If everything goes well 🤞, you will see the docs published under https://scylladb.github.io/<repository-slug>/
+
+Disabling GitHub Pages
+======================
+
+If you want to disable the docs deployment temporarily, please see `Unpublishing a GitHub Pages Site <https://help.github.com/en/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site>`_.
+
+Setting up a custom domain
+==========================
+
+Follow the next steps to set up a custom domain:
+
+1\. Open the repository `Settings <https://github.com/scylladb/sphinx-scylladb-theme/settings>`_, and scroll down to the "GitHub Pages" section.
+
+2\. Add the desired sub-domain name. For instance, we will use  as an example ``python-driver.scylladb.com``.
+
+3\. In your domain DNS configuration, create a new CNAME record that points ``python-driver.scylladb.com`` to ``scylladb.github.io``.
+
+4\. Once the DNS changes propagate (<24 h), you should be able to access the docs from `python-driver.scylladb.com``.
 
 ********************
 Multiversion support
@@ -150,7 +187,7 @@ The property ``smv_tag_whitelist`` under ``docs/source/conf.py`` defines a regul
 
 If you only want to support a subset of versions, you can define a list of tags modifying the regular expression. For example,``smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b'`` would only build the documentation for the tags ``3.22.0-scylla``, ``3.21.0-scylla`` and ``master`` branch.
 
-The extension allows configuring extra parameters. To know more about them, refer to [sphinx-multiversion documentation](https://holzhaus.github.io/sphinx-multiversion/master/configuration.html).
+The extension allows configuring extra parameters. To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
 
 **************************
 Notes for theme developers
