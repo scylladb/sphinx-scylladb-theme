@@ -120,14 +120,24 @@ Multiversion support
 The theme supports the extension ``sphinx-multiversion@0.2.3``, which allows building self-hosted versioned documentation.
 
 By default, the sample doc project has multiversion enabled.
-You can disable multiversion setting the property ``smv_tag_whitelist```under ``docs/source/conf.py`` to ``None``.
+The dropdown is only shown if:
 
-To generate multiple versions of the documentation, run:
+* The sphinx project has installed the sphinx-multiversion extension, and
+* ``smv_tag_whitelist`` is not ``None`` or undefined, and
+* ``smv_tag_whitelist`` matches at least one version in GitHub releases.
+
+You can disable multiversion setting the property ``smv_tag_whitelist`` under ``docs/source/conf.py`` to ``None``.
+
+To generate multiple versions of the documentation, you can run:
 
 .. code:: console
 
     cd docs
     make multiversion
+
+*Note:* The command ``make multiversion`` is aimed to be used by GitHub Actions CI.
+While documenting new features, it is not advised to run ``make multiversion`` but ``make preview`` instead.
+Versions are retrieved from GitHub tagged releases, hence previous docs cannot be edited.
 
 Then, open ``docs/_build/dirhtml/<version>/index.html`` with your preferred browser.
 
@@ -136,7 +146,7 @@ Then, open ``docs/_build/dirhtml/<version>/index.html`` with your preferred brow
 Defining supported versions
 ===========================
 
-The property ``smv_tag_whitelist```under ``docs/source/conf.py`` defines a regular expression with the pattern for tags supported.
+The property ``smv_tag_whitelist`` under ``docs/source/conf.py`` defines a regular expression with the pattern for tags supported.
 
 If you only want to support a subset of versions, you can define a list of tags modifying the regular expression. For example,``smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b'`` would only build the documentation for the tags ``3.22.0-scylla``, ``3.21.0-scylla`` and ``master`` branch.
 
