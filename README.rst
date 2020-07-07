@@ -116,6 +116,8 @@ To enable GitHub Pages in your Sphinx Project, follow the next steps:
 Enabling GitHub Pages
 =====================
 
+To complete the process, you will need to be logged in as a GitHub user with Admin or Maintain repo permissions and access to the domain DNS configuration. If this is not the case, please ask the repo owner to `invite you as a collaborator <https://help.github.jp/enterprise/2.11/user/articles/inviting-collaborators-to-a-personal-repository/>`_. 
+
 1\. Create a new ``gh-pages`` empty branch.
 
 .. code:: console
