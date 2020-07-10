@@ -116,7 +116,8 @@ To enable GitHub Pages in your Sphinx Project, follow the next steps:
 Enabling GitHub Pages
 =====================
 
-To complete the process, you will need to be logged in as a GitHub user with Admin or Maintain repo permissions and access to the domain DNS configuration. If this is not the case, please ask the repo owner to `invite you as a collaborator <https://help.github.jp/enterprise/2.11/user/articles/inviting-collaborators-to-a-personal-repository/>`_. 
+To complete the process, you will need to be logged in as a GitHub user with Admin or Maintain repo permissions and access to the domain DNS configuration.
+If this is not the case, please ask the repo owner to `invite you as a collaborator <https://help.github.jp/enterprise/2.11/user/articles/inviting-collaborators-to-a-personal-repository/>`_. 
 
 1\. Create a new ``gh-pages`` empty branch.
 
@@ -125,8 +126,9 @@ To complete the process, you will need to be logged in as a GitHub user with Adm
     git checkout --orphan gh-pages
     # Warning: Be careful, the next command deletes all files inside the folder.
     git rm -rf .
+    touch .nojekyll
 
-Then, commit and push.
+Then, add ``.nojekyll`` file to the git index, commit your changes and push them.
 
 2\. Open the repository `Settings <https://github.com/scylladb/sphinx-scylladb-theme/settings>`_, and scroll down to the "GitHub Pages" section.
 
@@ -146,7 +148,7 @@ Follow the next steps to set up a custom domain:
 
 1\. Open the repository `Settings <https://github.com/scylladb/sphinx-scylladb-theme/settings>`_, and scroll down to the "GitHub Pages" section.
 
-2\. Add the desired sub-domain name. For instance, we will use  as an example ``python-driver.scylladb.com``.
+2\. Add the desired sub-domain name. For instance, we will use ``python-driver.scylladb.com``.
 
 3\. In your domain DNS configuration, create a new CNAME record that points ``python-driver.scylladb.com`` to ``scylladb.github.io``.
 
@@ -187,7 +189,7 @@ Defining supported versions
 
 The property ``smv_tag_whitelist`` under ``docs/source/conf.py`` defines a regular expression with the pattern for tags supported.
 
-If you only want to support a subset of versions, you can define a list of tags modifying the regular expression. For example,``smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b'`` would only build the documentation for the tags ``3.22.0-scylla``, ``3.21.0-scylla`` and ``master`` branch.
+If you only want to support a subset of versions, you can define a list of tags modifying the regular expression. For example, smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b' would only build the documentation for the tags ``3.22.0-scylla``, ``3.21.0-scylla`` and ``master`` branch.
 
 The extension allows configuring extra parameters. To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
 
