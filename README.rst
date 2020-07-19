@@ -119,7 +119,7 @@ Enabling GitHub Pages
 To complete the process, you will need to be logged in as a GitHub user with Admin or Maintain repo permissions and access to the domain DNS configuration.
 If this is not the case, please ask the repo owner to `invite you as a collaborator <https://help.github.jp/enterprise/2.11/user/articles/inviting-collaborators-to-a-personal-repository/>`_. 
 
-1\. Create a new ``gh-pages`` empty branch.
+1\. Create a new ``gh-pages`` empty branch. Run the commands in the root of the git repository.
 
 .. code:: console
 
@@ -127,14 +127,15 @@ If this is not the case, please ask the repo owner to `invite you as a collabora
     # Warning: Be careful, the next command deletes all files inside the folder.
     git rm -rf .
     touch .nojekyll
-
-Then, add ``.nojekyll`` file to the git index, commit your changes and push them.
-
+    git add .
+    git commit -m "Setup GitHub Pages"
+    git push origin gh-pages
+    
 2\. Open the repository `Settings <https://github.com/scylladb/sphinx-scylladb-theme/settings>`_, and scroll down to the "GitHub Pages" section.
 
 3\. Select ``gh-pages`` branch.
 
-4\. Wait a couple of minutes, it might take a while until GitHub applies the changes. If everything goes well 🤞, you will see the docs published under https://scylladb.github.io/<repository-slug>/
+4\. Wait a couple of minutes, it might take a while until GitHub applies the changes. If everything goes well 🤞, you will see the docs published under ``https://scylladb.github.io/<repository-slug>``
 
 Disabling GitHub Pages
 ======================
