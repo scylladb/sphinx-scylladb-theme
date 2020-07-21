@@ -30,7 +30,7 @@ Are you creating a Sphinx project from scratch? Follow the next steps to set up 
 .. code:: console
 
     project-name/
-    ├── .github/
+    ├── .github/workflows/pages.yml
     ├── docs/
     │   ├── _utils/
     │   ├── source/
