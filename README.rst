@@ -25,14 +25,18 @@ Are you creating a Sphinx project from scratch? Follow the next steps to set up 
 
 1\. Create a file named ``pyproject.toml`` under the project root folder. Edit the new file and add the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_. Change the title, version, and package description.
 
-2\. Copy the ``docs`` and ``.github`` directories to your new project root folder. The directory structure should look like:
+2\. Copy the ``docs`` and ``.github`` directories from this repository to the new project root folder. The directory structure should look like:
 
 .. code:: console
 
     project-name/
+    ├── pyproject.toml
     ├── .github/workflows/pages.yml
     ├── docs/
     │   ├── _utils/
+    │   |   ├── deploy.sh
+    │   |   ├── redirect.html
+    │   |   ├── setup.sh
     │   ├── source/
     │   ├── Makefile
 
