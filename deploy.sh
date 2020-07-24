@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# Checks if remote origin = original repo
-upstream_repo='scylladb/sphinx-scylladb-theme'
+# Checks if local url matches the original repository
+original_repo='scylladb/sphinx-scylladb-theme'
 origin_repo=$(git config --get remote.origin.url)
-if [[ $origin_repo != *$upstream_repo* ]]; then
+if [[ $origin_repo != *$original_repo* ]]; then
     echo "Error: You are tring to publish a new version of the theme"\
          "from your personal fork."\
-         "Clone the repository '${upstream_repo}' locally,"\
+         "Clone the repository '${original_repo}' locally,"\
          "then run 'deploy.sh' from the original project."
     exit 1
 fi
 
+# Checks if local contents differ from remote master branch
 if git checkout master &&
     git fetch origin master &&
     [ `git rev-list HEAD...origin/master --count` == 0 ] &&
