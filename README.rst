@@ -192,7 +192,7 @@ Then, open ``docs/_build/dirhtml/<version>/index.html`` with your preferred brow
 Defining supported versions
 ===========================
 
-The environment variable ``LATEST_VERSION`` under ``.github/workflows/pages.yml`` which branch or tag is considred the latest.
+The environment variable ``LATEST_VERSION`` under ``.github/workflows/pages.yml`` which branch or tag is considered the latest.
 This is used to redirect users to the latest version of the docs automatically once they open the main project URL.
 
 The property ``smv_tag_whitelist`` under ``docs/source/conf.py`` defines a regular expression with the pattern for tags supported.
