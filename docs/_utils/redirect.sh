@@ -12,4 +12,4 @@ cat <<- _EOF_
     <link rel="canonical" href="./${LATEST_VERSION}/index.html">
   </head>
 </html>
-_EOF
+_EOF_
