@@ -35,7 +35,7 @@ Are you creating a Sphinx project from scratch? Follow the next steps to set up 
     ├── docs/
     │   ├── _utils/
     │   |   ├── deploy.sh
-    │   |   ├── redirect.html
+    │   |   ├── redirect.sh
     │   |   ├── setup.sh
     │   ├── source/
     │   ├── Makefile
@@ -192,11 +192,14 @@ Then, open ``docs/_build/dirhtml/<version>/index.html`` with your preferred brow
 Defining supported versions
 ===========================
 
+The environment variable ``LATEST_VERSION`` under ``.github/workflows/pages.yml`` which branch or tag is considred the latest.
+This is used to redirect users to the latest version of the docs automatically once they open the main project URL.
+
 The property ``smv_tag_whitelist`` under ``docs/source/conf.py`` defines a regular expression with the pattern for tags supported.
+If you only want to support a subset of versions, modify the regular expression to accept a list of tags. For example, smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b' would only build the documentation for the tags ``3.22.0-scylla`` and ``3.21.0-scylla``.
 
-If you only want to support a subset of versions, you can define a list of tags modifying the regular expression. For example, smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b' would only build the documentation for the tags ``3.22.0-scylla``, ``3.21.0-scylla`` and ``master`` branch.
-
-The extension allows configuring extra parameters. To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
+The extension allows configuring extra parameters.
+To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
 
 **************************
 Notes for theme developers
