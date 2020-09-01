@@ -20,14 +20,16 @@ import os
 import sys
 import yaml
 import re
-from docutils import nodes 
-from docutils.transforms import Transform 
+from docutils import nodes
+from docutils.transforms import Transform
 from sphinx.util import logging
+import recommonmark
+from recommonmark.transform import AutoStructify
 
 
-logger = logging.getLogger(__name__) 
+logger = logging.getLogger(__name__)
 
-class MySiteDetector(Transform): 
+class MySiteDetector(Transform):
     default_priority = 500
 
     def apply(self):
@@ -73,17 +75,16 @@ extensions = [
     'sphinx.ext.extlinks',
 #    'sphinx.ext.autosectionlabel',
     'sphinx_scylladb_theme',
-    'sphinx_multiversion'
+    'sphinx_multiversion',
+    'recommonmark'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
 
-# The suffix(es) of source filenames.
-# You can specify multiple suffix as a list of string:
-#
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+# Add Markdown support
+source_suffix = ['.rst', '.md']
+autosectionlabel_prefix_document = True
 
 # The encoding of source files.
 #
@@ -480,14 +481,18 @@ epub_exclude_files = ['search.html']
 # epub_use_index = True
 
 # Setup Sphinx
-# def setup(sphinx):
-#     # Add CQL support
+def setup(sphinx):
+     # Add CQL support
 #     sys.path.insert(0, os.path.abspath('./_utils'))
 #     from cql import CQLLexer
 #     sphinx.add_lexer("cql", CQLLexer())
 #     sphinx.add_transform(MySiteDetector)
-
-    # sphinx.connect('build-finished', create_redirects)
+    sphinx.add_config_value('recommonmark_config', {
+        'enable_eval_rst': True,
+        'enable_auto_toc_tree': False,
+    }, True)
+    sphinx.add_transform(AutoStructify)
+    sphinx.connect('build-finished', create_redirects)
 
 extlinks = {
     'manager': ('/operating-scylla/manager/%s/',''),
@@ -498,7 +503,7 @@ extlinks = {
 
 #Adds version variables for monitoring and manager versions when used in inline text
 
-rst_epilog = """
+rst_prolog = """
 .. |mon_version| replace:: 3.1
 .. |man_version| replace:: 2.0
 .. |mon_root| replace::  :doc:`Scylla Monitoring Stack </operating-scylla/monitoring/index>`
