@@ -214,7 +214,7 @@ html_theme_options = {
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
 #
-html_extra_path = ['404.html']
+# html_extra_path = ['404.html']
 
 # Add ExpertRec Search
 # html_js_files = ['expertrec.js']
