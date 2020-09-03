@@ -23,30 +23,29 @@ Setting up a new Sphinx Project
 
 Are you creating a Sphinx project from scratch? Follow the next steps to set up the new documentation project.
 
-1\. Create a file named ``pyproject.toml`` under the project root folder. Edit the new file and add the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_. Change the title, version, and package description.
+#. Create a file named ``pyproject.toml`` under the project root folder. Edit the new file and add the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_. Change the title, version, and package description.
 
-2\. Copy the ``docs`` and ``.github`` directories from this repository to the new project root folder. The directory structure should look like:
+#. Copy the ``docs`` and ``.github`` directories from this repository to the new project root folder. The directory structure should look like:
 
-.. code:: console
+   .. code:: console
 
-    project-name/
-    ├── pyproject.toml
-    ├── .github/workflows/pages.yml
-    ├── docs/
-    │   ├── _utils/
-    │   |   ├── deploy.sh
-    │   |   ├── redirect.sh
-    │   |   ├── setup.sh
-    │   ├── source/
-    │   ├── Makefile
+      project-name/
+       ├── pyproject.toml
+       ├── .github/workflows/pages.yml
+       ├── docs/
+       │   ├── _utils/
+       │   |   ├── deploy.sh
+       │   |   ├── redirect.sh
+       │   |   ├── setup.sh
+       │   ├── source/
+       │   ├── Makefile
 
+   .. note::: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
 
-.. note::: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
-
-3\. The documentation project lives under ``docs/source``.
+#. The documentation project lives under ``docs/source``.
 Edit the file ``conf.py`` to suit your project needs (e.g., install new extensions, edit navigation links, ...).
 
-4\. If you don't already have a ``.gitignore`` file in the project, place one in the root directory and include ``/docs/_build`` and ``/source/.doctrees`` in it. If you already have a ``.gitignore`` file, add the two items to the file. 
+#. If you don't already have a ``.gitignore`` file in the project, place one in the root directory and include ``/docs/_build`` and ``/source/.doctrees`` in it. If you already have a ``.gitignore`` file, add the two items to the file. 
 
 ***************************************
 Adding the theme to an existing project
