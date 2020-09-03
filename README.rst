@@ -40,7 +40,7 @@ Are you creating a Sphinx project from scratch? Follow the next steps to set up 
        │   ├── source/
        │   ├── Makefile
 
-   .. note::: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
+   .. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
 
 #. The documentation project lives under ``docs/source``.
    Edit the file ``conf.py`` to suit your project needs (e.g., install new extensions, edit navigation links, ...).
