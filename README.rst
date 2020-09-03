@@ -40,12 +40,14 @@ Are you creating a Sphinx project from scratch? Follow the next steps to set up 
     │   ├── source/
     │   ├── Makefile
 
+---
+**Note** If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
+---
+
 3\. The documentation project lives under ``docs/source``.
 Edit the file ``conf.py`` to suit your project needs (e.g., install new extensions, edit navigation links, ...).
 
-4\. If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
-
-5\. If you don't already have a ``.gitignore`` file in the project, place one in the root directory and include ``/docs/_build`` and ``/source/.doctrees`` in it. If you already have a ``.gitignore`` file, add the two items to the file. 
+4\. If you don't already have a ``.gitignore`` file in the project, place one in the root directory and include ``/docs/_build`` and ``/source/.doctrees`` in it. If you already have a ``.gitignore`` file, add the two items to the file. 
 
 ***************************************
 Adding the theme to an existing project
