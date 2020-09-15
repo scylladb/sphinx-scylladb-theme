@@ -113,25 +113,6 @@
     <div class="row">
 	
 	<div class="large-6 large-push-3 columns">
-            {% if versions and current_version and latest_version and current_version != latest_version %}
-                <p>
-                    <strong>
-                    {% if current_version.is_released %}
-                    You're reading an old version of this documentation.
-                    If you want up-to-date information, please have a look at <a href="{{ vpathto(latest_version.name) }}">{{latest_version.name}}</a>.
-                    {% else %}
-                    You're reading the documentation for a development version.
-                    For the latest released version, please have a look at <a href="{{ vpathto(latest_version.name) }}">
-		    	{% if latest_version.name == 'master' %}
-				latest
-		    	{% else %}
-				{{latest_version.name | replace('-scylla', '')}}
-		    	{% endif %}</a>.
-                    {% endif %}
-                    </strong>
-                </p>
-            {% endif %}
-
             {{ body }}
         </div>
 
