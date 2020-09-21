@@ -398,6 +398,14 @@ sphinx = ">=2.1"
 
 [[package]]
 category = "main"
+description = "Sphinx extension to build a 404 page with absolute URLs"
+name = "sphinx-notfound-page"
+optional = false
+python-versions = "*"
+version = "0.5"
+
+[[package]]
+category = "main"
 description = "Tab views for Sphinx"
 name = "sphinx-tabs"
 optional = false
@@ -535,7 +543,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "e69d7dc9a4c986af771612018e5a9a2d9954a66c2765720689fe14d0c39ea657"
+content-hash = "c6437f91e94c33644a45e71d62e78f10cfda64c3977b087067c94d3b1133af00"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -715,6 +723,10 @@ sphinx-copybutton = [
 sphinx-multiversion = [
     {file = "sphinx-multiversion-0.2.3.tar.gz", hash = "sha256:e46565ac2f703f3b55652f33c159c8059865f5d13dae7f0e8403e5afc2996f5f"},
     {file = "sphinx_multiversion-0.2.3-py3-none-any.whl", hash = "sha256:dc0f18449122e3e2a61245771bfdb7fa83df4f6adbf8eafea31f5b0cfccb5dbe"},
+]
+sphinx-notfound-page = [
+    {file = "sphinx-notfound-page-0.5.tar.gz", hash = "sha256:0ff34a26140ede859dc9bcc216107a5e27dcd0076a1b1defaa31f61fb67b489c"},
+    {file = "sphinx_notfound_page-0.5-py3-none-any.whl", hash = "sha256:557ad998d7a2897a5da7ba9ed0762a8f535c4250c49325db7b105e69c386f690"},
 ]
 sphinx-tabs = [
     {file = "sphinx-tabs-1.1.13.tar.gz", hash = "sha256:7ad881daa4d18799b254db4aa7feeb9d30256cbccf7d4f3de746d9fcc14e0196"},

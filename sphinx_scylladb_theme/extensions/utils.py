@@ -6,3 +6,4 @@ def generate_styles(**styles):
 
 def generate_content(*lines, line_break='\n'):
     return line_break.join([line for line in lines])
+
