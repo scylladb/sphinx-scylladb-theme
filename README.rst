@@ -237,27 +237,12 @@ If everything goes well, the previous command should generate a ``docs/_build/di
 Publishing the theme to PyPi
 ============================
 
-To upload a new version of the theme to PyPi, follow the next steps:
-
-1\. Open the file ``pyproject.toml`` with a text editor and increase the project's version number.
+To upload a new version of the theme to PyPi, run:
 
 .. code:: console
 
-    [tool.poetry]
-    name = "sphinx-scylladb-theme"
-    version = "0.1.1"
-    ...
-
-2\. After saving your changes, run the command to build the package in a command prompt. The current directory should be the ``sphinx-scylla-theme`` project source code.
-
-.. code:: console
-
-    poetry build
-
-3\. Publish the package to PyPi. The command prompt will ask you for the PyPi username and password.
-
-.. code:: console
-
-    poetry publish
+    ./deploy.sh
+    
+The script increases automatically the package's version and will ask you for the PyPi username and password.
 
 After publishing the package, you should see the new release listed on  `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
