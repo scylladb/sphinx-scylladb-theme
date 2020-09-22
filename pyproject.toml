@@ -3,7 +3,7 @@ name = "sphinx-scylladb-theme"
 version = "0.1.10"
 description = "A Sphinx Theme for ScyllaDB projects documentation"
 authors = ["David García <dgarcia360@outlook.com>"]
-exclude = ["docs"]
+exclude = ["docs", "deploy.sh"]
 readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
@@ -12,7 +12,8 @@ pyyaml = "^5.3"
 sphinx-tabs = "^1.1.13"
 sphinx-copybutton = "^0.2.8"
 Sphinx = "^2.4.4"
-sphinx-multiversion = "0.2.3"
+sphinx-multiversion = "^0.2.3"
+sphinx-notfound-page = "^0.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
