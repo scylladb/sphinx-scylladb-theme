@@ -23,25 +23,30 @@ Setting up a new Sphinx Project
 
 Are you creating a Sphinx project from scratch? Follow the next steps to set up the new documentation project.
 
-1\. Create a file named ``pyproject.toml`` under the project root folder. Edit the new file and add the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_. Change the title, version, and package description.
+#. Create a file named ``pyproject.toml`` under the project root folder. Edit the new file and add the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_. Change the title, version, and package description.
 
-2\. Copy the ``docs`` and ``.github`` directories from this repository to the new project root folder. The directory structure should look like:
+#. Copy the ``docs`` and ``.github`` directories from this repository to the new project root folder. The directory structure should look like:
 
-.. code:: console
+   .. code:: console
 
-    project-name/
-    ├── pyproject.toml
-    ├── .github/workflows/pages.yml
-    ├── docs/
-    │   ├── _utils/
-    │   |   ├── deploy.sh
-    │   |   ├── redirect.sh
-    │   |   ├── setup.sh
-    │   ├── source/
-    │   ├── Makefile
+      project-name/
+       ├── pyproject.toml
+       ├── .github/workflows/pages.yml
+       ├── docs/
+       │   ├── _utils/
+       │   |   ├── deploy.sh
+       │   |   ├── redirect.sh
+       │   |   ├── setup.sh
+       │   ├── source/
+       │   ├── Makefile
 
-3\. The documentation project lives under ``docs/source``.
-Edit the file ``conf.py`` to suit your project needs (e.g., install new extensions, edit navigation links, ...).
+   **Note**: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
+
+#. The documentation project lives under ``docs/source``.
+   Edit the file ``conf.py`` to suit your project needs (e.g., install new extensions, edit navigation links, ...).
+
+#. If you don't already have a ``.gitignore`` file in the project, place one in the root directory and include ``/docs/_build`` and ``/source/.doctrees`` in it.
+   If you already have a ``.gitignore`` file, add the two items to the file. 
 
 ***************************************
 Adding the theme to an existing project
@@ -232,27 +237,12 @@ If everything goes well, the previous command should generate a ``docs/_build/di
 Publishing the theme to PyPi
 ============================
 
-To upload a new version of the theme to PyPi, follow the next steps:
-
-1\. Open the file ``pyproject.toml`` with a text editor and increase the project's version number.
+To upload a new version of the theme to PyPi, run:
 
 .. code:: console
 
-    [tool.poetry]
-    name = "sphinx-scylladb-theme"
-    version = "0.1.1"
-    ...
-
-2\. After saving your changes, run the command to build the package in a command prompt. The current directory should be the ``sphinx-scylla-theme`` project source code.
-
-.. code:: console
-
-    poetry build
-
-3\. Publish the package to PyPi. The command prompt will ask you for the PyPi username and password.
-
-.. code:: console
-
-    poetry publish
+    ./deploy.sh
+    
+The script increases automatically the package's version and will ask you for the PyPi username and password.
 
 After publishing the package, you should see the new release listed on  `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
