@@ -7,7 +7,10 @@ def force_link(src, dest):
         os.remove(dest)
     elif os.path.isdir(dest):
         shutil.rmtree(dest)
-    os.symlink(src, dest)
+    try:
+        shutil.copytree(src, dest)
+    except:
+        shutil.copy(src, dest)
 
 def add_404_page(app, docname):    
     is_dirhtml = app.builder.name == 'dirhtml'
