@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import yaml
-import re
-from docutils import nodes
-from docutils.transforms import Transform
 from sphinx.util import logging
 import recommonmark
 from recommonmark.transform import AutoStructify
