@@ -1,8 +1,7 @@
 from os import path
 import sphinx_copybutton
-from notfound import extension as not_found
 from sphinx_tabs import tabs
-from .extensions import panel_box, topic_box, redirects, substitutions
+from .extensions import panel_box, topic_box, redirects, not_found, substitutions
 
 def setup(app):
     """Setup theme and custom extensions."""
