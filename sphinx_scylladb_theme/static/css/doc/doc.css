@@ -569,7 +569,7 @@ ul {
 }
 
 #content .panel h5 {
-    /* Getting started with: */
+    /* Getting startedwith: */
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
     line-height: 1.750rem;
@@ -900,80 +900,53 @@ header .input_search, .button.search_go {
     height: 100% !important;
 }
 
-img.vertigo {
-    animation-name: infinite-spinning;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-    margin: 2rem auto;
-}
-
-.vertigo_inner {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-}
-
-@keyframes infinite-spinning {
-    from {
-        transform: rotate(0deg);
-
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.vertigo_continer {
-    position: relative;
-    overflow: visible;
-}
-
 .bg_404 {
-    background: #3A2E56 !important;
     overflow: hidden;
+    background-color: #F6F8FF;
 }
 
-.ttl_404 {
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+.vertigo {
+    margin: 40px auto;
+    display: block;
+    max-width: 300px;
 }
 
 .ttl_404 h1 {
     text-align: center;
     font-weight: 500;
     font-size: 7rem;
-    color: #fff;
-    margin-bottom: 0rem !important;
     line-height: 1;
+    margin-top: -15px;
+    margin-bottom: -15px;
 }
 
 .ttl_404 p {
-    color: #fff;
     text-align: center;
     width: 100%;
+    margin: 20px 0px;
 }
 
 .button {
-    padding: 0.6rem 2rem 0.8rem 2rem;
-    color: #0A475C;
+    font-size: inherit;
+    padding: 0.8rem 2rem;
+    color: #FFFFFF;
+    background-color: #42C4E6;
+    border-radius: 4px;
+    text-decoration: none;
     font-weight: 500 !important;
-    background-color: #52BADE;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
     letter-spacing: 0.01rem;
+    max-width: min-content;
+    margin:  0 auto;
+    display: block;
 }
 .button:hover {
-    background-color: #69C0DE;
-    color: #14607B;
+    color: #FFFFFF;
+    background-color: #1999BA;
 }
 
 .panel.callout.radius.animated.asciinema {
