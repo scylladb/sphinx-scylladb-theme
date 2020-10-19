@@ -14,17 +14,17 @@ It combines several things in one tool:
 
 To initialize a Python development environment for this project:
 
-#.  Make sure you have Python version 3.7 or later installed.
-#.  `Install Poetry <https://python-poetry.org/docs/>`_.
+#. Make sure you have Python version 3.7 or later installed.
+#. `Install Poetry <https://python-poetry.org/docs/>`_.
 
-#.   Initialize a virtual environment with:
+#. Initialize a virtual environment with:
 
-    ..  code-block:: bash
+   ..  code-block:: bash
 
-        poetry install
+       poetry install
 
-    This will create an environment outside of the project directory, somewhere under ``~/Library/Caches/pypoetry/virtualenvs/``.
-    You'll see the path in installation logs.
+   This will create an environment outside of the project directory, somewhere under ``~/Library/Caches/pypoetry/virtualenvs/``.
+   You'll see the path in installation logs.
 
 #.  Activate the virtual environment for current shell session:
 
