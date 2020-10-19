@@ -926,27 +926,38 @@ header .input_search, .button.search_go {
     margin: 20px 0px;
 }
 
-.button {
-    font-size: inherit;
+.ttl_404 .button {
     padding: 0.8rem 2rem;
     color: #FFFFFF;
     background-color: #42C4E6;
     border-radius: 4px;
     text-decoration: none;
+    max-width: min-content;
+    margin:  0 auto;
+    display: block;
+}
+
+.ttl_404 .button:hover {
+    color: #FFFFFF;
+    background-color: #1999BA;
+}
+
+.button {
+    padding: 0.6rem 2rem 0.8rem 2rem;
+    color: #0A475C;
     font-weight: 500 !important;
+    background-color: #52BADE;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
     letter-spacing: 0.01rem;
-    max-width: min-content;
-    margin:  0 auto;
-    display: block;
 }
+
 .button:hover {
-    color: #FFFFFF;
-    background-color: #1999BA;
+    background-color: #69C0DE;
+    color: #14607B;
 }
 
 .panel.callout.radius.animated.asciinema {
