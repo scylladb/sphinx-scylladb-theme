@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import yaml
-import re
-from docutils import nodes
-from docutils.transforms import Transform
 from sphinx.util import logging
 import recommonmark
 from recommonmark.transform import AutoStructify
@@ -130,6 +126,12 @@ html_sidebars = {'**': ['side-nav.html']}
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'ScyllaDocumentationdoc'
+
+# URL which points to the root of the HTML documentation. 
+html_baseurl = 'https://scylladb.github.io/sphinx-scylladb-theme'
+
+# Dictionary of values to pass into the template engine’s context for all pages
+html_context = {'html_baseurl': html_baseurl}
 
 # -- Options for not found extension -------------------------------------------
 
