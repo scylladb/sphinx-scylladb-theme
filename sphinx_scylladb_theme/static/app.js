@@ -10,17 +10,16 @@ $(document).ready(function() {
 
 // Opens external links in a new tab
 $(document).ready(function () {
-  $('a.reference').each(function() {
-    var href = $(this).attr('href');
-    var isExternal = new RegExp('^(?:[a-z]+:)?//', 'i');
-    $(this).removeClass('internal external');
-    
-    if (isExternal.test(href)) {
-        $(this).addClass('external');
-        $(this).attr('target', '_blank')
-    } else {
-        $(this).addClass('internal');
-    }
-  });  
+    const isExternal = new RegExp('^(?:[a-z]+:)?//', 'i');
+    $('a.reference').each(function() {
+        $(this).removeClass('internal external');
+
+        if (isExternal.test($(this).attr('href'))) {
+            $(this).addClass('external');
+            $(this).attr('target', '_blank')
+        } else {
+            $(this).addClass('internal');
+        }
+    });  
 });
 
