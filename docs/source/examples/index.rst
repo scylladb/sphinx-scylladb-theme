@@ -20,3 +20,4 @@ Link Format Examples
 * This is an example of an :ref:`Internal Link <link-format-examples>`.
 * This is an example of an :doc:`Internal Doc <../index>`.
 * This is an example of an :download:`download <index.rst>`.
+* This is an example of an `Internal Doc </contributing>`_ using the external link directive.

@@ -10,6 +10,17 @@ $(document).ready(function() {
 
 // Opens external links in a new tab
 $(document).ready(function () {
-  $('a.external').attr('target', '_blank');
+  $('a.reference').each(function() {
+    var href = $(this).attr('href');
+    var isExternal = new RegExp('^(?:[a-z]+:)?//', 'i');
+    $(this).removeClass('internal external');
+    
+    if (isExternal.test(href)) {
+        $(this).addClass('external');
+        $(this).attr('target', '_blank')
+    } else {
+        $(this).addClass('internal');
+    }
+  });  
 });
 
