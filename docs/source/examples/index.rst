@@ -1,14 +1,21 @@
+.. toctree::
+   :hidden:
+
+   example-topic
+
 Examples
 ========
 
 Code block with substitutions
 -----------------------------
 
-Code block with substitution:
+Using a code block with the ``:substitutions:`` directive and then a substitution such as ``|mon_version|``
+
+renders
 
 .. code-block:: bash
    :substitutions:
-   
+
    |mon_version|
 
 .. _link-format-examples:
