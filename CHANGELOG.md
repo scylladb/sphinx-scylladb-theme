@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Overwrites the Sphinx classification for external and internal links.
+- Description configurable per project.
 
 ## [0.1.13] - 20 Oct 2020
 
