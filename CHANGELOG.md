@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Overwrites the Sphinx classification for external and internal links.
-- Description configurable per project.
+- Overwrites the Sphinx classification for external and internal links (#72).
+- Description configurable per project (#71).
 
 ## [0.1.13] - 20 Oct 2020
 
