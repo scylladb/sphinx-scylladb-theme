@@ -43,5 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The 404 page is now loaded from the theme (#58, #59)
 - The redirection scripts are now part of the theme (#58)
 
+[0.1.15]: https://github.com/scylladb/sphinx-scylladb-theme/compare/tag/0.1.14...0.1.15
+[0.1.14]: https://github.com/scylladb/sphinx-scylladb-theme/compare/tag/0.1.13...0.1.14
 [0.1.13]: https://github.com/scylladb/sphinx-scylladb-theme/compare/tag/0.1.12...0.1.13
 [0.1.12]: https://github.com/scylladb/sphinx-scylladb-theme/releases/tag/0.1.12
