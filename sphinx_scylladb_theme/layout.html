@@ -78,6 +78,11 @@
 </head>
 
 <body>
+
+{% if not theme_hide_banner %}
+    {% include 'banner.html' %}
+{% endif %}
+
 <header id="header" class="animated">
     <div class="topbar_continer contain-to-grid clearfix">
         <nav class="top-bar" id="top-bar" data-topbar role="navigation">
@@ -241,6 +246,7 @@
 <!-- bodyscripts.html -->
 <!-- at the end of the BODY --> 
 <script src="{{ pathto('_static/js/vendor/jquery.js', 1) }}"></script>
+<script src="{{ pathto('_static/js/vendor/jquery.cookie.min.js', 1) }}"></script>
 <script src="{{ pathto('_static/expertrec.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.topbar.js', 1) }}"></script>
