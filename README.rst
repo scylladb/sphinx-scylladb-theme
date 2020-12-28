@@ -158,7 +158,7 @@ Follow the next steps to set up a custom domain:
 
 1\. Open the repository `Settings <https://github.com/scylladb/sphinx-scylladb-theme/settings>`_, and scroll down to the "GitHub Pages" section.
 
-2\. Add the desired sub-domain name. For instance, we will use ``python-driver.scylladb.com``.
+2\. Add the desired sub-domain name as *Custom domain*. For instance, we will use ``python-driver.scylladb.com``.
 
 3\. In your domain DNS configuration, create a new CNAME record that points ``python-driver.scylladb.com`` to ``scylladb.github.io``.
 
