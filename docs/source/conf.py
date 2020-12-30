@@ -5,7 +5,7 @@ from datetime import date
 from sphinx.util import logging
 import recommonmark
 from recommonmark.transform import AutoStructify
-from sphinx_scylladb_theme.extensions.utils import multiversion_regex_builder
+from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 logger = logging.getLogger(__name__)
 
