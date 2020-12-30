@@ -7,7 +7,6 @@ cp -r ./docs/_build/dirhtml/* gh-pages
 
 # Create gh-pages branch
 cd gh-pages
-touch .nojekyll
 git init
 git config --local user.email "action@scylladb.com"
 git config --local user.name "GitHub Action"

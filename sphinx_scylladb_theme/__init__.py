@@ -1,7 +1,7 @@
 from os import path, getenv
 import sphinx_copybutton
 from sphinx_tabs import tabs
-from .extensions import utils, panel_box, topic_box, redirects, not_found
+from .extensions import utils, panel_box, topic_box, redirects, not_found, gh_pages
 
 def setup(app):
     """Setup theme"""
@@ -16,3 +16,4 @@ def setup(app):
     redirects.setup(app)
     sphinx_copybutton.setup(app)
     tabs.setup(app)
+    gh_pages.setup(app)
