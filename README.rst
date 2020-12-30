@@ -162,6 +162,7 @@ Follow the next steps to set up a custom domain:
 
 3\. Once the DNS changes propagate (<24 h), you should be able to access the docs from ``python-driver.scylladb.com``.
 
+
 ********************
 Multiversion support
 ********************
