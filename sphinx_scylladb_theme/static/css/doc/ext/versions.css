@@ -34,3 +34,16 @@
     padding: 4px 10px;
     display: block;
 }
+
+.versions-dropdown.single-version .button {
+    cursor: initial;
+    outline: none;
+}
+
+.versions-dropdown.single-version .fa {
+    display: none;
+}
+
+.versions-dropdown.single-version:hover .content {
+    display: none;
+}
