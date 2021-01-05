@@ -224,6 +224,16 @@
     .top-bar-section ul > li {
         padding: 0 1rem;
     }
+    #footer .footer-copyright,
+    #footer .footer-last-updated{
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }
+
+    #footer .footer-copyright,
+    #footer .footer-last-updated,
+    #footer .footer-version {
+        padding: 0 0.75rem;
+    }
 }
 @media only screen and (min-width: 820px) {
 
@@ -470,12 +480,11 @@ ul {
     color: #999999;
 }
 #footer .footer-copyright,
-#footer .footer-last-updated {
-    padding: 0 0.75rem;
+#footer .footer-last-updated,
+#footer .footer-version {
+    padding: 0.2rem 0.75rem;
 }
-#footer .footer-copyright {
-    border-right: 1px solid rgba(0,0,0,0.1);
-}
+
 #footer .footer-bottom {
     padding-top: 1rem;
     border-top: 1px solid rgba(0,0,0,0.1);
