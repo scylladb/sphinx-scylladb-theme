@@ -142,7 +142,7 @@
         </div>
 
         <div class="large-3 columns">
-            {% if versions and (versions.tags or versions.branches|count>1) %}
+            {% if versions %}
                 {% include 'versioning.html' %}
             {% endif %}
         </div>
