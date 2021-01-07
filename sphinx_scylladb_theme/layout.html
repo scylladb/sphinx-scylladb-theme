@@ -35,7 +35,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
     {%- block title %}
-    {{ title }} | Scylla Docs
+    {{ title|striptags|e }} | Scylla Docs
     {%- endblock %}
     </title>
     <meta name="description" content="{{ theme_site_description }}"/>
@@ -201,7 +201,7 @@
             <a class="link" href="https://docs.scylladb.com">Docs</a>
             <a class="link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
             <a class="link" href="https://www.scylladb.com/company/">About Us</a>
-            <a class="link button" href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix" target="_blank">
+            <a class="link button" href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix" target="_blank">
                 Report an issue on this page</a>
         </div>
         <div class="footer-actions">
