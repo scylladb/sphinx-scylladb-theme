@@ -79,7 +79,7 @@
 
 <body>
 
-{% if not theme_hide_banner %}
+{% if not theme_hide_banner or theme_hide_banner|lower == 'false' %}
     {% include 'banner.html' %}
 {% endif %}
 
@@ -110,7 +110,7 @@
     </div>
 </header>
 <section id="content">
-    {%- if pagename == master_doc and not theme_show_sidebar_index %}
+    {%- if pagename == master_doc and (not theme_show_sidebar_index or theme_show_sidebar_index|lower == 'false') %}
     <div class="content-full">
         {{ body }}
     </div>
