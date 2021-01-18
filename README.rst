@@ -11,7 +11,7 @@ Usage
 
 Live examples of this theme can be seen on `docs.scylladb.com <https://docs.scylladb.com>`_.
 
-For more documentation, please see  `sphinx-themes.scylladb.com <https://sphinx-themes.scylladb.com>`_.
+For more documentation, please see  `sphinx-theme.scylladb.com <https://sphinx-theme.scylladb.com>`_.
 
 License
 =======
