@@ -11,6 +11,16 @@ def generate_content(*lines, line_break='\n'):
     return line_break.join([line for line in lines])
 
 def copy(src, dest):
+    """
+    Copies a file or a folder from src to dest.
+
+    :param src: The path of the file to copy.
+    :type src: str
+
+    :param dest: The destination path.
+    :type dest: str
+    """
+
     if os.path.isfile(dest) or os.path.islink(dest):
         os.remove(dest)
     elif os.path.isdir(dest):

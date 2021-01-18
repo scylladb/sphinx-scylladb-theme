@@ -14,11 +14,13 @@ logger = logging.getLogger(__name__)
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 needs_sphinx = '1.8'
+sys.path.insert(0, os.path.abspath('..'))
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
@@ -103,10 +105,13 @@ html_style = ''
 #
 html_theme_options = {
     'header_links': [
-    ('Scylla Cloud', 'https://docs.scylladb.com/scylla-cloud/'),
+    ('Scylla Theme', 'https://sphinx-theme.scylladb.com/'),
     ('Scylla University', 'https://university.scylladb.com/'),
     ('ScyllaDB Home', 'https://www.scylladb.com/')],
+    'site_description': 'Sphinx Theme for ScyllaDB projects.',
     'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
+    'show_sidebar_index': 'false',
+    'hide_banner': 'true',
 }
 
 extlinks = {

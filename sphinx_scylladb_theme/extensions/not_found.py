@@ -1,9 +1,21 @@
+"""
+Sphinx extension that adds sphinx-notfound-page support for sphinx-multiversion.
+"""
 import os
 from notfound import extension
 from .utils import copy
 
 
-def add_404_page(app, exception):    
+def create_not_found_page(app, exception):
+    """
+    Creates a 404.html in the root of the output directory.
+    
+    :param app: Sphinx Application
+    :type app: sphinx.application.Sphinx
+
+    :param exception: Sphinx Error
+    :type exception: sphinx.error.SphinxError
+    """
     is_dirhtml = app.builder.name == 'dirhtml'
     is_multiversion = os.getenv("SPHINX_MULTIVERSION_NAME") is not None
     out_dir = app.builder.outdir
@@ -18,7 +30,7 @@ def add_404_page(app, exception):
 
 def setup(app):
     extension.setup(app)
-    app.connect('build-finished', add_404_page)
+    app.connect('build-finished', create_not_found_page)
 
     return {
         'version': '0.1',
