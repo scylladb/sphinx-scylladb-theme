@@ -3,7 +3,7 @@ Extensions for Sphinx which allow substitutions in code blocks.
 
 Copyright 2014-2016 ClusterHQ Licensed under the Apache License, Version 2.0.
 
-Adapted from https://github.com/adamtheturtle/sphinx-substitution-extensions by David Garcia (@dgarcia360).
+Adapted from https://github.com/adamtheturtle/sphinx-substitution-extensions for ScyllaDB.
 """
 
 from typing import Dict, List, Tuple

@@ -1,5 +1,6 @@
-Contributing
-============
+==========
+Contribute
+==========
 
 Configuring a Python environment
 --------------------------------
@@ -32,7 +33,50 @@ To initialize a Python development environment for this project:
 
         poetry shell
 
-
     Alternatively, if you use PyCharm, you can configure the project to use this environment as the default Python interpreter.
     PyCharm doesn't detect Poetry (yet), so just use the "virtualenv" option and
     provide the full path to the environment.
+
+Previewing the theme locally
+----------------------------
+
+The ``docs`` folder contains a sample project with the Sphinx theme already installed.
+
+To preview the theme locally:
+
+#. Open a new console prompt and clone the project.
+
+    .. code:: console
+
+        git clone https://github.com/scylladb/sphinx-scylladb-theme.git
+
+#. Build the docs.
+
+    .. code:: console
+
+        cd docs
+        make preview
+
+#. The previous command should generate a ``docs/_build/dirhtml`` directory. To preview the docs, open http://127.0.0.1:5500/ with your preferred browser.
+
+
+Publishing the theme to PyPi
+----------------------------
+
+.. note:: You need a PyPi account and be a project maintainer to release new theme versions.
+
+All the documentation projects receives new patches when the theme is released on PyPi.
+The script automatically increases the package's version and will ask you for the PyPi username and password.
+
+.. code:: console
+
+    ./deploy.sh
+    
+The script automatically increases the package's version and will ask you for the PyPi username and password.
+
+After publishing the package, you should see the new release listed on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
+
+.. toctree::
+   :hidden:
+
+   api/sphinx_scylladb_theme

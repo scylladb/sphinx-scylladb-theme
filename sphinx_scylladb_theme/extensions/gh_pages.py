@@ -1,9 +1,19 @@
+"""
+Sphinx extension that adds GitHub Pages support for sphinx-multiversion.
+"""
+
 import os
 from .utils import copy
 
 def add_gh_pages_support(app, exception):   
     """
-    Copies CNAME and .nojekyll files into the root output dir.
+    Copies CNAME and .nojekyll files in the root of the output directory.
+    
+    :param app: Sphinx Application
+    :type app: sphinx.application.Sphinx
+
+    :param exception: Sphinx Error
+    :type exception: sphinx.error.SphinxError
     """ 
     is_multiversion = os.getenv("SPHINX_MULTIVERSION_NAME") is not None
     out_dir = app.builder.outdir
@@ -14,9 +24,6 @@ def add_gh_pages_support(app, exception):
         copy(out_dir + '/.nojekyll', head + '/.nojekyll')
 
 def setup(app):
-    """
-    Add GitHub pages support for multiversion.
-    """
     app.connect('build-finished', add_gh_pages_support)
 
     return {

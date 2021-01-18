@@ -1,3 +1,6 @@
+"""
+Sphinx directive that renders a group of links together in a panel box.
+"""
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 from .utils import generate_template, generate_styles, generate_content

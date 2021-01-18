@@ -4,11 +4,11 @@ def multiversion_regex_builder(versions):
     Every documentation project `conf.py` file uses this function
     to define the different documentation versions supported.
 
-    Args:
-        versions (:obj:`list` of :obj:`str`): A list of versions.
+    :param versions: A list of versions. Versions could be either branch names or tags.
+    :type versions: list of str
 
-    Returns:
-        str: The equivalent regular expression.
+    :return: The equivalent regular expression.
+    :rtype: str
     """
 
     if len(versions) == 0:

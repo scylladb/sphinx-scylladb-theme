@@ -1,3 +1,6 @@
+"""
+Sphinx directive for creating cards in a grid layout.
+"""
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 from .utils import generate_template, generate_styles, generate_content

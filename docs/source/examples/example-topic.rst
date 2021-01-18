@@ -1,6 +1,6 @@
-==================
+=============
 Example Topic
-==================
+=============
 
 .. contents::
    :depth: 2
@@ -13,8 +13,6 @@ Heading Hierarchy
 
 HEADINGS
 ========
-
-
 
 Use the following
 
@@ -33,7 +31,6 @@ Use the following
    ^^^^^
    H5
    ~~~~
-
 
 
 Lorem Ipsum: usage
@@ -150,6 +147,8 @@ Inline Glossary term definition. Links to the glossary page.
    :term:`term <Link in Glossary>`
    :term:`Size-tiered Compaction Strategy (STCS)<Size-tiered Compaction Strategy>`
 
+.. _link-format-examples:
+
 Links
 -----
 There are a few links you can use with different purposes.
@@ -244,3 +243,4 @@ Frequently used Includes
    .. include:: /rst_include/scylla-commands-start-index.rst
 
    .. include:: /rst_include/scylla-commands-restart-index.rst
+
