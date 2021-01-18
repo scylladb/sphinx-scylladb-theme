@@ -30,7 +30,7 @@
 
 .. topic-box::
   :title: Installation
-  :link: /installation
+  :link: installation
   :icon: fa fa-power-off
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -40,7 +40,7 @@
 
 .. topic-box::
   :title: Configuration
-  :link: /configuration
+  :link: configuration
   :icon: fa fa-cogs
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -50,7 +50,7 @@
 
 .. topic-box::
   :title: Commands
-  :link: /commands
+  :link: commands
   :icon: fa fa-terminal
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -60,7 +60,7 @@
 
 .. topic-box::
   :title: GitHub Pages
-  :link: /github-pages
+  :link: github-pages
   :icon: fa fa-github
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -70,7 +70,7 @@
 
 .. topic-box::
   :title: Demos and Examples
-  :link: /examples
+  :link: examples
   :icon: fa fa-clipboard
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -81,7 +81,7 @@
 
 .. topic-box::
   :title: Contribute
-  :link: /contribute
+  :link: contribute
   :icon: fa fa-users
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
