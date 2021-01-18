@@ -5,6 +5,8 @@ Commands
 Preview current branch
 ----------------------
 
+The preview command builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser. 
+
 To preview the docs:
 
 1. Build the docs.
@@ -25,7 +27,7 @@ For example:
 
 Preview multiversion 
 --------------------
-
+The multiversionpreview generates a local instance of the docs site with all specified versions available for navigation. You can view the rendering in a sandbox environment on your local browser. 
 To preview multiple versions:
 
 1. Build the docs.
@@ -37,7 +39,7 @@ To preview multiple versions:
 
 2. Open http://0.0.0.0:5500/ with your preferred browser.
 
-If you don't see docs for all listed versions, try to run ``git fetch --tags`` to download the latest tags from remote.
+If the version drop-down menu does not contain the all of the listed versions, try to run ``git fetch --tags`` to download the latest tags from remote.
 
 Build HTML for the current branch
 ---------------------------------
@@ -72,7 +74,7 @@ To generate multiple versions of the documentation:
 Clean all builds
 ----------------
 
-Remove all the documentation builds previously generated:
+The ``make preview`` operation creates content in the ``_build`` directory. When making changes to the docs, it is helpful to delete the contents of this directory before running ``make preview``.
 
 .. code:: console
 
