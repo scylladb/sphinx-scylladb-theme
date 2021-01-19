@@ -1,17 +1,50 @@
+"""
+Sphinx extension for generating JavaScript-driven redirects for moved pages.
+"""
+
 import os
 import yaml
 from urllib.parse import urlparse
 
-# Generates a redirection HTML file
-def write_html_redirect(redirect_to):
-    html = "<html><head><meta http-equiv=\"refresh\" content=\"0; url=" + redirect_to + "\"></head></html>"
+def build_redirect_body(path):
+    """
+    Builds the contents of the redirection file.
+
+    :param path: Path to redirect to.
+    :type path: str
+
+    :return: HTML body of the redirection.
+    :rtype: str
+    """
+    html = "<html><head><meta http-equiv=\"refresh\" content=\"0; url=" + path + "\"></head></html>"
     return html
 
-# Returns if a path is an external url
 def is_url(path):
+    """
+    Checks if a path is an external url or a relative path.
+
+    :param path: Path to evaluate.
+    :type path: str
+
+    :return: True if path is an external url.
+    :rtype: bool
+    """
     return bool(urlparse(path).netloc)
 
-def create_redirects(app, docname):
+def create_redirects(app, exception):
+    """
+    Creates redirections for all the paths listed in the ``redirects_file`` defined in ``conf.py``.
+    
+    The file should contain a dictionary of redirections formatted as:
+        
+    >>> old path: new path
+    
+    :param app: Sphinx Application
+    :type app: sphinx.application.Sphinx
+
+    :param exception: Sphinx Error
+    :type exception: sphinx.error.SphinxError
+    """
     redirects_file = app.config.redirects_file
     if not redirects_file:
         return
@@ -26,6 +59,7 @@ def create_redirects(app, docname):
             for from_path, redirect_to in full_load.items():
                 target_path = app.outdir + '/' + from_path
                 
+                # Handles sphinx-multiversion redirects
                 if os.getenv("SPHINX_MULTIVERSION_NAME") and not is_url(redirect_to):
                     redirect_to = app.config.html_baseurl + '/' + os.environ['SPHINX_MULTIVERSION_NAME'] + redirect_to
                 
@@ -33,10 +67,10 @@ def create_redirects(app, docname):
                     if not os.path.exists(target_path):
                         os.makedirs(target_path)
                     with open(os.path.join(target_path + '/index.html'), 'w') as t_file:
-                        t_file.write(write_html_redirect(redirect_to))
+                        t_file.write(build_redirect_body(redirect_to))
                 else:
                     with open(os.path.join(target_path + '.html'), 'w') as t_file:
-                        t_file.write(write_html_redirect(redirect_to))
+                        t_file.write(build_redirect_body(redirect_to))
 
 def setup(app):
     app.add_config_value('redirects_file', '', 'html')
