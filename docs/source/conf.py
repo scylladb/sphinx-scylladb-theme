@@ -3,8 +3,6 @@ import os
 import sys
 from datetime import date
 from sphinx.util import logging
-import recommonmark
-from recommonmark.transform import AutoStructify
 from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 logger = logging.getLogger(__name__)
@@ -26,14 +24,16 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
     'sphinx_scylladb_theme',
-    'sphinx_multiversion',
-    'recommonmark'
+    'sphinx_multiversion'
 ]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 autosectionlabel_prefix_document = True
 
 # The encoding of source files.
@@ -67,7 +67,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'lib', 'lib64','**/_common/*', 'README.md', '.git', '.github', '_utils', '_templates', 'rst_include']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -75,19 +75,9 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-# Setup Sphinx
-def setup(sphinx):
-    sphinx.add_config_value('recommonmark_config', {
-        'enable_eval_rst': True,
-        'enable_auto_toc_tree': False,
-    }, True)
-    sphinx.add_transform(AutoStructify)
-
 # Adds version variables for monitoring and manager versions when used in inline text
 rst_prolog = """
 .. |mon_version| replace:: 3.1
-.. |man_version| replace:: 2.0
-.. |mon_root| replace::  :doc:`Scylla Monitoring Stack </operating-scylla/monitoring/index>`
 """ 
 
 # -- Options for HTML output ----------------------------------------------
