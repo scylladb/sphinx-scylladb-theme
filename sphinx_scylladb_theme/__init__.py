@@ -7,11 +7,18 @@ from sphinx_scylladb_theme._version import version
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
 
+def update_config(app, config):
+    default = 'master'
+    if hasattr(config, 'smv_latest_version') and config.smv_latest_version:
+        default = config.smv_latest_version
+    config.smv_latest_version = getenv('LATEST_VERSION', default=default)
+
 def setup(app):
     """Setup theme"""
     app.add_html_theme('sphinx_scylladb_theme', path.abspath(path.dirname(__file__)))
     app.connect("html-page-context", update_context)
-    app.config.smv_latest_version = getenv('LATEST_VERSION', default='master')
+    app.connect('config-inited', update_config)
+
     """Setup custom extensions"""
     panel_box.setup(app)
     topic_box.setup(app)
