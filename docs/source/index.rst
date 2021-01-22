@@ -30,7 +30,7 @@
 
 .. topic-box::
   :title: Installation
-  :link: installation
+  :link: installation.html
   :icon: fa fa-power-off
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -40,7 +40,7 @@
 
 .. topic-box::
   :title: Configuration
-  :link: configuration
+  :link: configuration.html
   :icon: fa fa-cogs
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -50,7 +50,7 @@
 
 .. topic-box::
   :title: Commands
-  :link: commands
+  :link: commands.html
   :icon: fa fa-terminal
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
@@ -60,7 +60,7 @@
 
 .. topic-box::
   :title: GitHub Pages
-  :link: github-pages
+  :link: github-pages.html
   :icon: fa fa-github
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)
