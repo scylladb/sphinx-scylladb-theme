@@ -2,6 +2,8 @@
 Commands
 ========
 
+To run the next commands you will need to have installed Python 3.7 and PIP.
+
 Preview current branch
 ----------------------
 
