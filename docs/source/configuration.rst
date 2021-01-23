@@ -49,8 +49,6 @@ If you only want to support a subset of versions, modify the regular expression 
 The  variable ``smv_latest_version`` in ``conf.py`` defines which branch or tag is considered the latest.
 This is used to redirect users to the latest version of the docs automatically once they open the main project URL.
 
-
-
 The extension allows configuring extra parameters.
 To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
 
