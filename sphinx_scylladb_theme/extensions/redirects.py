@@ -31,6 +31,31 @@ def is_url(path):
     """
     return bool(urlparse(path).netloc)
 
+def create_redirect_to_latest_version(app, exception):
+    """
+    When multiversion is enabled, creates a redirect to the ``smv_latest_version`` 
+    defined in ``conf.py``.
+
+    :param app: Sphinx Application
+    :type app: sphinx.application.Sphinx
+
+    :param exception: Sphinx Error
+    :type exception: sphinx.error.SphinxError
+    """
+    
+    if os.getenv("SPHINX_MULTIVERSION_NAME"):
+
+        latest_dir = app.config.smv_latest_version
+        if hasattr(app.config, 'smv_rename_latest_version') and app.config.smv_rename_latest_version:
+            latest_dir = app.config.smv_rename_latest_version
+
+        out_dir = app.builder.outdir
+        head, tail = os.path.split(out_dir)
+
+
+        with open(os.path.join(head + '/index.html'), 'w') as t_file:
+            t_file.write(build_redirect_body(latest_dir)) 
+
 def create_redirects(app, exception):
     """
     Creates redirections for all the paths listed in the ``redirects_file`` defined in ``conf.py``.
@@ -75,9 +100,10 @@ def create_redirects(app, exception):
 def setup(app):
     app.add_config_value('redirects_file', '', 'html')
     app.connect('build-finished', create_redirects)
+    app.connect('build-finished', create_redirect_to_latest_version)
 
     return {
-        'version': '0.2',
+        'version': '0.3',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }

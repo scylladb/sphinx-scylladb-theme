@@ -36,7 +36,7 @@ For example:
 Multiversion Options
 --------------------
 
-The theme supports the extension `sphinx-multiversion <https://github.com/Holzhaus/sphinx-multiversion>`_ for building self-hosted versioned documentation.
+The theme supports the extension `sphinx-multiversion <https://github.com/dgarcia360/sphinx-multiversion>`_ for building self-hosted versioned documentation.
 
 .. tip:: Maintaining multiple versions is expensive. Consider building docs for a version only if this introduces relevant breaking changes reflected in the documentation.
 
@@ -46,7 +46,7 @@ Defining supported versions
 The properties ``smv_tag_whitelist`` and ``smv_branch_whitelist`` in ``docs/source/conf.py`` defines regular expressions with the pattern for tags/branches supported.
 If you only want to support a subset of versions, modify the regular expression to accept a list of tags. For example, ``smv_tag_whitelist = r'\b(3.22.0-scylla|3.21.0-scylla)\b'`` would only build the documentation for the tags ``3.22.0-scylla`` and ``3.21.0-scylla``.
 
-The environment variable ``LATEST_VERSION`` in ``.github/workflows/pages.yml`` defines which branch or tag is considered the latest.
+The  variable ``smv_latest_version`` in ``conf.py`` defines which branch or tag is considered the latest.
 This is used to redirect users to the latest version of the docs automatically once they open the main project URL.
 
 The extension allows configuring extra parameters.
