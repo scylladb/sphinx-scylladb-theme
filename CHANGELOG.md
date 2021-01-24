@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.21] - 24 Jan 2020
+
+### Added
+
+- ``smv_rename_latest_version`` setting in ``conf.py`` override the latest version output directory (#121).
+
+### Changed
+
+- Moved ``smv_latest_version`` from ``github/workflows/pages.yml`` to ``conf.py`` (#121).
+
+### Removed
+
+- ``_utils/redirects.sh`` file (#121).
+
+### Fixed
+
+- ``make multiversionpreview`` redirects automatically to the latest version (#121).
+ 
+
 ## [0.1.20] - 19 Jan 2020
 
 ### Added
@@ -89,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The 404 page is now loaded from the theme (#58, #59)
 - The redirection scripts are now part of the theme (#58)
 
+[0.1.21]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.20...0.1.21
 [0.1.20]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.19...0.1.20
 [0.1.19]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.18...0.1.19
 [0.1.18]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.16...0.1.18

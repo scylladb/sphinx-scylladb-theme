@@ -10,7 +10,7 @@ Template Options
 Template-level settings can be configured via your ``conf.py`` in ``html_theme_options``. 
 For example:
 
-.. code:: console
+.. code:: python
 
     html_theme_options = {
         'header_links': [
@@ -55,37 +55,38 @@ To know more about them, refer to `sphinx-multiversion documentation <https://ho
 Disabling multiversion support
 ==============================
 
-Set the properties ``smv_tag_whitelist`` and ``smv_branch_whitelist`` in ``conf.py`` to ``None``.
+1. Set the properties ``smv_tag_whitelist`` and ``smv_branch_whitelist`` in ``conf.py`` to ``None``.
 
-.. code:: console
+.. code:: python
 
     smv_tag_whitelist = None
     smv_branch_whitelist = None
 
 or:
 
-.. code:: console
+.. code:: python
 
     TAGS = []
     smv_tag_whitelist = multiversion_regex_builder(TAGS)
     BRANCHES = []
     smv_branch_whitelist = multiversion_regex_builder(BRANCHES)
 
+2. On ``.github/workflows/pages.yml``, change the command ``make multiversion`` for ``make dirhtml``.
+
 Defining a stable URL
 =====================
 
-We encourage every project to maintain a ``stable`` tag on git.
+We encourage every project to rename the latest version output directory to ``stable``.
 The purpose is to have default documentation links that do not change, which is beneficial for SEO purposes and referencing docs on other websites.
 
-Each project maintainer must update the stable tag reference when a new version of the software is released, and this is considered the latest stable version.
+You can override the latest version output directory via your ``conf.py`` with the setting ``smv_rename_latest_version``.
 
-To create/update the stable tag:
+Here's an example:
 
-.. code:: console
+.. code:: python
 
-    # Creates or updates the tag reference. You can change HEAD for a commit id.
-    git tag -f stable HEAD
-    # Publishes all local tags to the remote repository.
-    git push --tags
 
-Other projects have decided to build docs for the ``master`` branch. Since this branch is used normally to integrate changes, it might be possible that the docs are not aligned with the latest stable version.
+    smv_latest_version = 'x.y.z'        # Use the branch/tag name
+    smv_rename_latest_version = 'latest' # Use the commit hash
+
+.. note:: Other projects have decided to build docs for the ``master`` branch. Since this branch is used normally to integrate changes, it might be possible that the docs are not aligned with the latest stable version.
