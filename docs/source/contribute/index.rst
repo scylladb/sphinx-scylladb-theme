@@ -37,6 +37,29 @@ To initialize a Python development environment for this project:
     PyCharm doesn't detect Poetry (yet), so just use the "virtualenv" option and
     provide the full path to the environment.
 
+Building the frontend
+---------------------
+
+The frontend static files of this project are managed with `webpack <https://webpack.js.org/>`_.
+It combines several things in one tool:
+
+*   Installing third-party node modules.
+*   Combining JavaScript and CSS in a single file.
+*   Minifying CSS and JavaScript files.
+
+The original static files are located under the folder ``src``.
+
+To build the minimized static files for this project:
+
+#.  Make sure you have Node.js LTS installed.
+#.  Build the static files with:
+
+    ..  code-block:: bash
+
+        npm run build
+
+    This will create minified static files under the ``sphinx_scylladb_theme/static``.
+
 Previewing the theme locally
 ----------------------------
 
