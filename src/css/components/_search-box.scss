@@ -1,0 +1,36 @@
+#search-box {
+  input {
+    background-color: transparent;
+    color: $color-white;
+    border-bottom: 1px solid $color-white;
+    padding: 0 0 5px 0;
+    font-size: $font-base-small-size;
+
+    &::placeholder {
+      color: $color-white;
+      opacity: 1;
+    }
+  }
+
+  button {
+    display: none !important;
+  }
+}
+
+.er_search_suggestions {
+  @include floating;
+
+  .er-search-result-box {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-width: 1px !important;
+
+    &:hover {
+      background: $color-background-search-item-hover !important;
+    }
+  }
+
+  .er_more_result_btn {
+    cursor: pointer;
+  }
+}

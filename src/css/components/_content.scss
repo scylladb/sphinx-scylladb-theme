@@ -1,0 +1,53 @@
+#content {
+  padding: $spacing;
+
+  p {
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+
+    li::before {
+      font-family: $font-icons-family;
+      content: "\2022";
+      color: $color-typography-bullet;
+      font-weight: bold;
+      width: 1em;
+      margin-left: -1em;
+      float: left;
+      font-size: 20px;
+    }
+  }
+
+  img {
+    margin-bottom: $gap;
+  }
+
+  .reference:after {
+    font-family: $font-icons-family;
+    padding: 0 4px;
+    font-size: $font-base-smallest-size;
+  }
+
+  .reference.external:after {
+    content: "\f08e";
+  }
+
+  .reference.download:after {
+    content: "\f019";
+  }
+}
+
+#full-contents {
+  padding: $spacing;
+  text-align: center;
+}
+
+@media screen and #{breakpoint(medium)} {
+  #content,
+  #full-contents {
+    padding: $spacing-l;
+  }
+}

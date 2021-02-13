@@ -2,7 +2,7 @@
 Example Topic
 =============
 
-.. contents::
+.. contents:: On this page
    :depth: 2
    :local:
 

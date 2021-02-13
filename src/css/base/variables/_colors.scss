@@ -1,0 +1,51 @@
+/* Color names from https://chir.ag/projects/name-that-color */
+
+$color-white: #fff;
+$color-black: #000;
+$color-mine-shaft: #333;
+$color-ebony-clay: #23263b;
+$color-royal-blue: #3c4fe0;
+$color-san-marino: #4458a3;
+$color-piction-blue: #42c4e6;
+$color-cadet-blue: #b3bac5;
+$color-waikawa-gray: #5a5e9a;
+$color-east-bay: #484c7a;
+$color-lavender-gray: #b6b7d5;
+$color-zircon: #f6f8ff;
+$color-dusty-gray: #979797;
+$color-mimosa: #e9fddc;
+$color-mint-tulip: #d1edf6;
+$color-cinderella: #fde8e5;
+$color-early-dawn: #fff8e5;
+
+$color-typography-base: $color-ebony-clay;
+$color-typography-base-link: $color-royal-blue;
+$color-typography-breadcrumbs: $color-ebony-clay;
+$color-typography-button: $color-white;
+$color-typography-bullet: $color-cadet-blue;
+$color-typography-code: $color-east-bay;
+$color-typography-footer-link: $color-mine-shaft;
+$color-typography-footer-icon: $color-black;
+$color-typography-footer-copyright: $color-dusty-gray;
+$color-typography-header-link: $color-white;
+$color-typography-last-updated: $color-san-marino;
+$color-typography-toc-link: $color-waikawa-gray;
+$color-typography-menu-item: $color-waikawa-gray;
+
+$color-background-admonition-caution: $color-early-dawn;
+$color-background-admonition-note: $color-mint-tulip;
+$color-background-admonition-tip: $color-mimosa;
+$color-background-admonition-warning: $color-cinderella;
+$color-background-button: $color-piction-blue;
+$color-background-code: transparentize($color-cadet-blue, 0.9);
+$color-background-footer: $color-white;
+$color-background-header: $color-san-marino;
+$color-background-not-found: $color-zircon;
+$color-background-panel: transparentize($color-cadet-blue, 0.9);
+$color-background-search-item-hover: transparentize($color-cadet-blue, 0.9);
+$color-background-sidebar: $color-zircon;
+
+$color-border-blockquote: transparentize($color-lavender-gray, 0.9);
+$color-border-footer-top: transparentize($color-black, 0.9);
+$color-border-sidebar-ul: transparentize($color-lavender-gray, 0.6);
+$color-border-toc-local-li: transparentize($color-waikawa-gray, 0.9);

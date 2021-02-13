@@ -18,11 +18,11 @@ class PanelBox(Directive):
 
         html0 = generate_template('''
                 <div class="panel callout radius animated">
-                   <div class="row">
-                      <div class="medium-3 columns">
+                   <div class="grid-x">
+                      <div class="medium-3 cell">
                          <h5 id={id}>{title}</h5>
               </div>
-              <div class="medium-9 columns">
+              <div class="medium-9 cell">
             ''',
             class_name=class_name,
                                   title=self.options.get('title', ''),

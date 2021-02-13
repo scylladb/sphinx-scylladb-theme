@@ -1,0 +1,25 @@
+.breadcrumbs {
+  /* reset */
+  margin-bottom: 10px;
+  li,
+  a,
+  li:not(:last-child)::after {
+    margin: 0;
+    padding: 0;
+    font-family: $font-title-family;
+    color: $color-typography-breadcrumbs;
+    font-size: $font-base-smallest-size;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 1;
+  }
+
+  li {
+    &:before {
+      display: none;
+    }
+    &:not(:last-child)::after {
+      margin: 0 5px;
+    }
+  }
+}

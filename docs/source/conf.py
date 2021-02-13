@@ -102,16 +102,11 @@ html_style = ''
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
 html_theme_options = {
-    'header_links': [
-    ('Scylla Theme', 'https://sphinx-theme.scylladb.com/'),
-    ('Scylla University', 'https://university.scylladb.com/'),
-    ('ScyllaDB Home', 'https://www.scylladb.com/')],
     'site_description': 'Sphinx Theme for ScyllaDB projects.',
     'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
     'show_sidebar_index': 'false',
-    'hide_banner': 'false',
+    'hide_banner': 'true',
 }
 
 extlinks = {
@@ -125,10 +120,9 @@ extlinks = {
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.
 #
-html_last_updated_fmt = '%d %B %Y'
+html_last_updated_fmt = '%d %b %Y'
 
 # Custom sidebar templates, maps document names to template names.
-#
 html_sidebars = {'**': ['side-nav.html']}
 
 # Output file base name for HTML help builder.
@@ -171,6 +165,9 @@ smv_remote_whitelist = r"^origin$"
 smv_released_pattern = r'^tags/.*$'
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = '{ref.name}'
+
+# Options for sphinx-last-updated-by-git extension
+suppress_warnings = ['git.too_shallow']
 
 # -- Options for LaTeX page output ---------------------------------------
 
