@@ -1,0 +1,34 @@
+/*!
+   * Sizzle CSS Selector Engine v2.2.0-pre
+   * http://sizzlejs.com/
+   *
+   * Copyright 2008, 2014 jQuery Foundation, Inc. and other contributors
+   * Released under the MIT license
+   * http://jquery.org/license
+   *
+   * Date: 2014-12-16
+   */
+
+/*!
+ * Javascript Cookie v1.5.1
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2014 Klaus Hartl
+ * Released under the MIT license
+ */
+
+/*!
+ * jQuery JavaScript Library v2.1.4
+ * http://jquery.com/
+ *
+ * Includes Sizzle.js
+ * http://sizzlejs.com/
+ *
+ * Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ *
+ * Date: 2015-04-28T16:01Z
+ */
+
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */

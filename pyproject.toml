@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
 version = "0.1.21"
-description = "A Sphinx Theme for ScyllaDB projects documentation"
+description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = ["David García <dgarcia360@outlook.com>"]
-exclude = ["docs", "deploy.sh"]
+exclude = [".github", "config", "docs", ".postcss.config.js", ".prettierrc.json", "deploy.sh", "src", "package.json", "package-lock.json"]
 readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
