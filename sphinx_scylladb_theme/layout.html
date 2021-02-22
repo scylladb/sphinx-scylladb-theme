@@ -1,139 +1,163 @@
-{#
-    layout.html
-    ~~~~~~~~~~~~~~~~~
+{# layout.html #}
 
-    Layout template for scylla docs.
-#}
-
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
+  {%- macro script() %}
+  <script
+    type="text/javascript"
+    id="documentation_options"
+    data-url_root="{{ pathto('', 1) }}"
+    src="{{ pathto('_static/documentation_options.js', 1) }}"
+  ></script>
+  <script
+    type="text/javascript"
+    src="{{ pathto('_static/js/runtime.bundle.js', 1) }}"
+  ></script>
+  <script
+    type="text/javascript"
+    src="{{ pathto('_static/js/main.bundle.js', 1) }}"
+  ></script>
+  {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %} {%- endmacro %}
+  {%- macro css() %}
+  <link
+    rel="stylesheet"
+    href="{{ pathto('_static/css/main.css', 1) }}"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ pathto('_static/pygments.css', 1) }}"
+    type="text/css"
+  />
+  {%- for css in css_files %} {%- if css|attr("filename") %} {{ css_tag(css) }}
+  {%- else %}
+  <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+  {%- endif %} {%- endfor %} {%- endmacro %}
 
-{%- macro script() %}
-    <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
-    <script type="text/javascript" src="{{ pathto('_static/js/runtime.bundle.js', 1) }}"></script>
-    <script type="text/javascript" src="{{ pathto('_static/js/main.bundle.js', 1) }}"></script>
-    {%- for js in script_files %}
-    {{ js_tag(js) }}
-    {%- endfor %}
-{%- endmacro %}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      {%- block title %} {{ title|striptags|e }} | Scylla Docs {%- endblock %}
+    </title>
+    <meta name="description" content="{{ theme_site_description }}" />
+    <link
+      rel="icon"
+      href="{{ pathto('_static/img/favicon.ico', 1) }}"
+      type="image/x-icon"
+    />
+    <link rel="canonical" href="https://docs.scylladb.com/" />
+    <link rel="author" href="mailto:info@scylladb.com" />
 
-{%- macro css() %}
-    <link rel="stylesheet" href="{{ pathto('_static/css/main.css', 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    {%- for css in css_files %}
-      {%- if css|attr("filename") %}
-        {{ css_tag(css) }}
-      {%- else %}
-        <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
-      {%- endif %}
-    {%- endfor %}
-{%- endmacro %}
-  
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width initial-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>
-        {%- block title %}
-            {{ title|striptags|e }} | Scylla Docs
-        {%- endblock %}
-        </title>
-        <meta name="description" content="{{ theme_site_description }}"/>
-        <link rel="icon" href="{{ pathto('_static/img/favicon.ico', 1) }}" type="image/x-icon"/>
-        <link rel="canonical" href="https://docs.scylladb.com/">
-        <link rel="author" href="mailto:info@scylladb.com">
+    {%- block css %} {{- css() }} {%- endblock %} {%- block scripts %} {{-
+    script() }}
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T8P2JP");
+    </script>
+    <!-- End Google Tag Manager -->
 
-        {%- block css %}
-        {{- css() }}
-        {%- endblock %}
+    <!-- Marketo -->
+    <script type="text/javascript">
+      (function () {
+        var didInit = false;
+        function initMunchkin() {
+          if (didInit === false) {
+            didInit = true;
+            Munchkin.init("791-QBF-350");
+          }
+        }
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "//munchkin.marketo.net/munchkin.js";
+        s.onreadystatechange = function () {
+          if (this.readyState == "complete" || this.readyState == "loaded") {
+            initMunchkin();
+          }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+    <!-- End Marketo -->
 
-        {%- block scripts %}
-            {{- script() }}
-            <!-- Google Tag Manager -->
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-T8P2JP');</script>
-            <!-- End Google Tag Manager -->
-        
-            <!-- Marketo -->
-            <script type="text/javascript"> (function() { var didInit = false; function initMunchkin() { if(didInit === false) { didInit = true; Munchkin.init('791-QBF-350'); } } var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//munchkin.marketo.net/munchkin.js'; s.onreadystatechange = function() { if (this.readyState == 'complete' || this.readyState == 'loaded') { initMunchkin(); } }; s.onload = initMunchkin; document.getElementsByTagName('head')[0].appendChild(s); })(); </script>
-            <!-- End Marketo -->
+    <!-- Expertrec -->
+    <script>
+      var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
+      var ci_search = document.createElement("script");
+      ci_search.type = "text/javascript";
+      ci_search.async = true;
+      ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ci_search, s);
+    </script>
+    <!-- End Expertrec -->
+    {%- endblock %}
+  </head>
 
-            <!-- Expertrec -->
-            <script>
-                var id = 'e2077224-9ccf-11e9-a0c9-0242ac130002'
-                var ci_search = document.createElement('script')
-                ci_search.type = 'text/javascript'
-                ci_search.async = true
-                ci_search.src = 'https://cse.expertrec.com/api/js/ci_common.js?id=' + id
-                var s = document.getElementsByTagName('script')[0]
-                s.parentNode.insertBefore(ci_search, s)
-            </script>
-            <!-- End Expertrec -->
-        {%- endblock %}
-    </head>
+  <body>
+    {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
+    include 'banner.html' %} {% endif %} {% include 'header.html'%}
 
-    <body>
+    <section>
+      {% set hide_right_sidebar_index = pagename == master_doc and
+      theme_hide_right_sidebar_index|lower == 'true' %}
 
-        {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %}
-            {% include 'banner.html' %}
-        {% endif %}
-        
-        {% include 'header.html'%}           
-        
-        <section>
-            {%- if pagename == master_doc and (not theme_show_sidebar_index or theme_show_sidebar_index|lower == 'false') %}
-                <div>
-                    {{ body }}
-                </div>
-            {%- else %}
-            <div class="grid-x">                                  
-              
-                <div id="content" class="cell large-6 large-order-2">
+      <div class="grid-x">
+        <div
+          id="content"
+          class="cell large-order-2 {{'large-6' if not hide_right_sidebar_index else 'large-9'}} {{'hide-right-sidebar' if hide_right_sidebar_index}} "
+        >
+          {% if versions and current_version and latest_version and
+          current_version != latest_version %}
+          <div class="admonition caution">
+            <p class="admonition-title">Caution</p>
+            {% if current_version.name == theme_default_branch %} You are
+            reading an unstable version of this documentation. {% else %} You
+            are not reading the most current version of the documentation. {%
+            endif %} If you want up-to-date information, please have a look at
+            <a href="{{ vpathto(latest_version.name) }}">
+              {{latest_version.name}} </a
+            >.
+          </div>
+          {% endif %} {% if pagename != master_doc %}
+          <div class="grid-x">
+            <div class="cell large-6">{% include 'breadcrumbs.html'%}</div>
+            <div class="cell large-6">{% include 'last-updated.html' %}</div>
+          </div>
+          {% endif %} {{ body }}
+        </div>
 
-                    {% if versions and current_version and latest_version and current_version != latest_version %}
-                    <div class="admonition caution">
-                        <p class="admonition-title">Caution</p>
-                        {% if current_version.name == theme_default_branch %}
-                        You are reading an unstable version of this documentation.
-                        {% else %}
-                        You are not reading the most current version of the documentation.
-                        {% endif %}
-                        If you want up-to-date information, please have a look at 
-                        <a href="{{ vpathto(latest_version.name) }}">
-                                {{latest_version.name}}
-                        </a>.
-                    </div>
-                    {% endif %}
-                    <div class="grid-x">                                  
-                       <div class="cell large-6">
-                        {% include 'breadcrumbs.html'%}   
-                        </div>
-                        <div class="cell large-6">
-                            {% include 'last-updated.html' %}
-                        </div>
-                    </div>
-                    {{ body }}
-                </div>
+        <div id="sidebar-1" class="cell large-3 large-order-1">
+          {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%-
+          include sidebartemplate %} {%- endfor %} {%- endif %}
+        </div>
+        {% if hide_right_sidebar_index %}
+        <div id="sidebar-2" class="cell large-3 large-order-3"></div>
+        {%- endif %}
+      </div>
+    </section>
 
-                <div id="sidebar-1" class="cell large-3 large-order-1">
-                    {%- if sidebars != None %}
-                    {%- for sidebartemplate in sidebars %}
-                    {%- include sidebartemplate %}
-                    {%- endfor %}
-                    {%- endif %}
-                </div>
-                <div id="sidebar-2" class="cell large-3 large-order-3">
-                </div>
-            </div>
-            {%- endif %}
-        </section>
-        
-        {% include 'footer.html' %}
+    {% include 'footer.html' %}
 
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    </body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+  </body>
 </html>

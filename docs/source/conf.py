@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#
 needs_sphinx = '1.8'
 sys.path.insert(0, os.path.abspath('..'))
 
@@ -32,7 +31,6 @@ extensions = [
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
 source_suffix = ['.rst', '.md']
 autosectionlabel_prefix_document = True
 
@@ -94,7 +92,6 @@ rst_prolog = """
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
 html_theme = 'sphinx_scylladb_theme'
 html_theme_path = ["../.."]
 html_style = ''
@@ -105,16 +102,11 @@ html_style = ''
 html_theme_options = {
     'site_description': 'Sphinx Theme for ScyllaDB projects.',
     'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
-    'show_sidebar_index': 'false',
+    'hide_right_sidebar_index': 'true',
     'hide_banner': 'true',
 }
 
-extlinks = {
-    'manager': ('/operating-scylla/manager/%s/',''),
-    'manager_lst': ('/operating-scylla/manager/2.0/%s/',''),
-    'monitor': ('/operating-scylla/monitoring/%s/',''),
-    'monitor_lst': ('/operating-scylla/monitoring/3.1/%s/','')
-}
+extlinks = {}
 
 # If not None, a 'Last updated on:' timestamp is inserted at every page
 # bottom, using the given strftime format.
