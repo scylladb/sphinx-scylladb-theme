@@ -15,14 +15,14 @@ For example:
     html_theme_options = {
         'site_description': 'Sphinx Theme for ScyllaDB projects.',
         'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
-        'show_sidebar_index': 'false',
+        'hide_right_sidebar_index': 'true',
         'hide_banner': 'true',
         'default_branch': 'master'
     }
 
 * ``site_description``: Short summary describing the site. Metadescriptions are mainly used by search engines.
 * ``github_issues_repository``: Repository organization name and project slug, separated by a slash (/). Used by the "Report an Issue on this Page" button.
-* ``show_sidebar_index``: Set to ``true`` to display the left sidebar in the index page.
+* ``hide_right_sidebar_index``: Set to ``true`` to hide the right sidebar on the index page.
 * ``hide_banner``: Set to ``true`` to show the ScyllaDB Summit registration banner at the top of the page.
 * ``default_branch``: Name of the default branch where changes are integrated. Defaults to ``master``.
 

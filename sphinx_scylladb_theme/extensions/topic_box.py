@@ -11,8 +11,7 @@ class TopicBox(Directive):
         'title': directives.unchanged_required,
         'link': directives.path,
         'icon': directives.path,
-        'icon_color': directives.unchanged,
-        'icon_bg': directives.unchanged,
+        'image': directives.path,
         'last_updated': directives.unchanged_required,
         'class': directives.unchanged,
     }
@@ -22,6 +21,7 @@ class TopicBox(Directive):
 
         link = self.options.get('link')
         html_tag_open = generate_template('''
+            <div class="cell small-6 large-3">
             <a class="{class_name}" href="{link}">
             ''' if link else '''
             <div class="{class_name}">
@@ -29,21 +29,26 @@ class TopicBox(Directive):
             class_name=class_name,
             link=link,
         )
-        html_tag_close = '</a>' if link else '</div>'
+        html_tag_close = '</a></div>' if link else '</div></div>'
         
         icon = self.options.get('icon')
+        image = self.options.get('image')
+
         html_icon = generate_template('''
-            <div class="{class_name}-icon" style="{style_icon}">
+            <div class="{class_name}-icon"">
                 <i class="{icon}"></i>
             </div>
             ''',
             class_name=class_name,
             icon=icon,
-            style_icon=generate_styles(**{
-                'color': self.options.get('icon_color'),
-                'background-color': self.options.get('icon_bg'),
-            }),
-        ) if icon else ''
+        ) if icon else generate_template('''
+            <div class="{class_name}-icon"">
+                <img src="/_static/{image}"/>
+            </div>
+            ''',
+            class_name=class_name,
+            image=image,
+        ) if image else ''
 
         last_updated = self.options.get('last_updated')
         html_last_updated = generate_template('''
@@ -58,7 +63,7 @@ class TopicBox(Directive):
                 <div class="{class_name}-head">
                     {html_icon}
                     <div class="{class_name}-head-content">
-                        <div class="{class_name}-title">{title}</div>
+                        <h3 class="{class_name}-title">{title}</h3>
                         {html_last_updated}
                     </div>
                 </div>
@@ -71,7 +76,6 @@ class TopicBox(Directive):
             title=self.options.get('title', ''),
         )
         html1 = generate_template('''
-                    <div class="{class_name}-readmore">Read more <i class="fa fa-arrow-right"></i></div>
                 </div>
             {html_tag_close}
             ''',

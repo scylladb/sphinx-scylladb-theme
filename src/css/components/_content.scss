@@ -1,6 +1,10 @@
 #content {
   padding: $spacing;
 
+  &.hide-right-sidebar {
+    padding: 0;
+  }
+
   p {
     line-height: 28px;
     margin-bottom: 20px;
@@ -40,14 +44,36 @@
   }
 }
 
-#full-contents {
-  padding: $spacing;
+.welcome {
   text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+  padding: $spacing;
+
+  .welcome-title {
+    margin-bottom: 10px;
+  }
+
+  .welcome-text {
+    font-size: 18px;
+
+    a {
+      color: $color-typography-topic-grid-heading;
+      border-bottom: 1px $color-typography-topic-grid-heading dotted;
+    }
+  }
 }
 
 @media screen and #{breakpoint(medium)} {
-  #content,
-  #full-contents {
+  #content {
     padding: $spacing-l;
+
+    &.hide-right-sidebar {
+      padding: 0;
+    }
+  }
+
+  .welcome {
+    text-align: left;
+    padding: 60px $spacing-l;
   }
 }
