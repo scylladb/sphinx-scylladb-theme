@@ -21,8 +21,8 @@
 
   <div class="topics-grid">
 
-  <h2 class="topics-grid-title">Sections</h2>
-  <p class="topics-grid-text">To being choose a section from the list below</p>
+  <h2 class="topics-grid-title">Topics</h2>
+  <p class="topics-grid-text">To being choose a topic from the list below</p>
 
   <div class="grid-x">
 

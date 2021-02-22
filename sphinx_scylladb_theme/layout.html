@@ -140,11 +140,13 @@
         </div>
 
         <div id="sidebar-1" class="cell large-3 large-order-1">
-          {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%-
+          {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%
           include sidebartemplate %} {%- endfor %} {%- endif %}
         </div>
-        {% if hide_right_sidebar_index %}
-        <div id="sidebar-2" class="cell large-3 large-order-3"></div>
+        {% if not hide_right_sidebar_index %}
+        <div id="sidebar-2" class="cell large-3 large-order-3 show-for-large">
+          {% include 'secondary-side-nav.html' %}
+        </div>
         {%- endif %}
       </div>
     </section>

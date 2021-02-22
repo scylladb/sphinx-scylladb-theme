@@ -1,0 +1,46 @@
+.side-nav {
+  padding: $spacing;
+  font-family: $font-title-family;
+  font-size: $font-base-small-size;
+}
+
+#sidebar-1 {
+  background-color: $color-background-sidebar;
+
+  a {
+    color: $color-typography-base;
+  }
+
+  li {
+    list-style: none;
+    padding: 12px 0;
+    &.current {
+      a {
+        color: $color-typography-base-link;
+        &.current {
+          font-weight: 600;
+        }
+      }
+    }
+
+    ul {
+      border-left: 2px solid $color-border-sidebar-ul;
+      margin-top: 20px;
+      li {
+        padding: 4px 0 4px 20px;
+      }
+    }
+  }
+}
+
+#sidebar-2 {
+  a {
+    color: $color-typography-toc-link;
+  }
+}
+
+@media screen and #{breakpoint(medium)} {
+  .side-nav {
+    padding: $spacing-l;
+  }
+}
