@@ -2,17 +2,7 @@
 
 .. raw:: html
 
-  <div class="full-contents">
-
-.. raw:: html
-
-  <div class="main-title">
-    <img class="main-title-logo" src="_static/img/scylla-writer.svg" />
-    <div class="main-title-header">
-      <h1>Sphinx ScyllaDB Theme</h1>
-      <h3>Sphinx Theme for ScyllaDB documentation projects.</h3>
-    </div>
-  </div>
+  <div id="full-content">
 
 .. toctree::
    :hidden:

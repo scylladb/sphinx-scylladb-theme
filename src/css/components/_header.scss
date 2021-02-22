@@ -1,0 +1,97 @@
+#header {
+  background-color: $color-background-header;
+
+  .top-bar-title {
+    position: relative;
+
+    span {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .menu-icon {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .top-bar {
+    padding: 8px $spacing;
+    background-color: transparent;
+
+    .menu {
+      background-color: transparent;
+    }
+
+    .dropdown.menu {
+      & > li {
+        width: 100%;
+
+        & > a {
+          font-family: $font-title-family;
+          color: $color-typography-header-link;
+          font-weight: normal;
+          font-size: $font-base-small-size;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          padding-right: 30px;
+        }
+
+        &.is-dropdown-submenu-parent > a::after {
+          border-color: $color-white transparent transparent;
+          border: 0;
+          font-family: $font-icons-family;
+          content: "\f054";
+          color: $color-white;
+          margin-top: -10px;
+        }
+      }
+    }
+
+    .vertical.menu {
+      @include floating;
+      width: 100%;
+      position: initial;
+      margin: 10px 0;
+
+      & > li {
+        padding: 15px;
+
+        & > a {
+          color: $color-typography-base;
+          padding: 0;
+
+          &:hover {
+            color: $color-typography-base;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and #{breakpoint(medium)} {
+  #header {
+    .top-bar {
+      padding: 8px $spacing-l;
+      .dropdown.menu > li {
+        width: initial;
+
+        &.is-dropdown-submenu-parent > a::after {
+          content: "";
+          border: inset 6px;
+          border-color: $color-white transparent transparent;
+          border-bottom-width: 0;
+          border-top-style: solid;
+          margin-top: -3px;
+        }
+      }
+      .vertical.menu {
+        margin: 0;
+        position: absolute;
+      }
+    }
+  }
+}

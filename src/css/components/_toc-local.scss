@@ -1,0 +1,42 @@
+.contents.local {
+  .topic-title {
+    text-transform: uppercase;
+    font-family: $font-title-family;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #9698c3;
+  }
+  & > ul {
+    margin-bottom: 30px;
+    margin-left: 0;
+
+    & > li {
+      padding: 10px 0;
+      border-bottom: 1px solid $color-border-toc-local-li;
+
+      &:before {
+        font-family: $font-icons-family;
+        content: "\f105" !important;
+        margin: 0 !important;
+      }
+
+      ul {
+        display: none;
+      }
+
+      p {
+        margin: 0 !important;
+      }
+
+      a {
+        font-family: $font-title-family;
+        font-size: $font-base-small-size;
+        color: $color-typography-toc-link;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

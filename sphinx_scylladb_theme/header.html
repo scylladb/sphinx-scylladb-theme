@@ -1,0 +1,63 @@
+<header id="header">
+    <div class="top-bar grid-x stacked-for-small">
+        <div class="top-bar-title cell medium-3">
+            <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle></button>
+            </span>
+            <a href="https://docs.scylladb.com/">
+                <img src="{{ pathto('_static/img/logo-scylla-docs.svg', 1) }}" alt="Scylla Documentation Logo" />
+            </a>
+        </div>
+        <div id="responsive-menu" class="cell medium-9 large-6">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li>
+                        <a href="#">Server</a>
+                        <ul class="menu vertical">
+                          <li><a href="#">Scylla Open Source</a></li>
+                          <li><a href="#">Scylla Enterprise</a></li>
+                          <li><a href="#">Scylla Alternator - OSS</a></li>
+                          <li><a href="#">Scylla Alternator - ENT</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Cloud</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Scylla Cloud</a></li>
+                            <li><a href="#">Scylla Cloud Docs</a></li>
+                          </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tools</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Scylla Manager</a></li>
+                            <li><a href="#">Scylla Monitor</a></li>
+                            <li><a href="#">Scylla Operator</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Drivers</a>
+                        <ul class="menu vertical">
+                          <li><a href="#">Scylla GO Driver</a></li>
+                          <li><a href="#">Scylla GOSQLx Driver</a></li>
+                          <li><a href="#">Scylla Python Driver</a></li>
+                          <li><a href="">Scylla Java Driver</a></li>
+                        </ul>
+                    </li>
+                    {% for link in theme_header_links %}
+                    <li>
+                        <a href="{{link[1]}}">{{link[0]}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="top-bar-right cell large-3 show-for-large">
+            <ul class="menu">
+                <li id="search-box">
+                    <ci-search></ci-search>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

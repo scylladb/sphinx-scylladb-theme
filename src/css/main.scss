@@ -1,11 +1,4 @@
-@import '~foundation-sites/scss/foundation.scss';
+@import "~foundation-sites/assets/foundation";
 
-/* Theme */
-@import 'fonts';
-@import 'theme';
-
-/* Extensions */
-@import 'ext/topic-box';
-@import 'ext/sphinx-tab-box';
-@import 'ext/banner';
-@import 'ext/versions';
+@import "base/index";
+@import "components/index";

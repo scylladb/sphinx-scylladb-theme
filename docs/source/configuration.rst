@@ -13,10 +13,6 @@ For example:
 .. code:: python
 
     html_theme_options = {
-        'header_links': [
-        ('Scylla Theme', 'https://sphinx-theme.scylladb.com/'),
-        ('Scylla University', 'https://university.scylladb.com/'),
-        ('ScyllaDB Home', 'https://www.scylladb.com/')],
         'site_description': 'Sphinx Theme for ScyllaDB projects.',
         'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
         'show_sidebar_index': 'false',
@@ -24,7 +20,6 @@ For example:
         'default_branch': 'master'
     }
 
-* ``header_links``: Links displayed in the top navbar.
 * ``site_description``: Short summary describing the site. Metadescriptions are mainly used by search engines.
 * ``github_issues_repository``: Repository organization name and project slug, separated by a slash (/). Used by the "Report an Issue on this Page" button.
 * ``show_sidebar_index``: Set to ``true`` to display the left sidebar in the index page.

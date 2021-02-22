@@ -1,0 +1,30 @@
+/*Admonition styles*/
+
+.admonition {
+  padding: 16px;
+  margin-bottom: $gap;
+  line-height: 26px;
+  overflow: auto;
+  border-radius: $round;
+
+  &.tip {
+    background: $color-background-admonition-tip;
+  }
+
+  &.note {
+    background: $color-background-admonition-note;
+  }
+
+  &.caution {
+    background: $color-background-admonition-caution;
+  }
+
+  &.warning {
+    background: $color-background-admonition-warning;
+  }
+
+  .admonition-title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

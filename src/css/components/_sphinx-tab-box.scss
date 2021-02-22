@@ -1,0 +1,27 @@
+.sphinx-tabs {
+  margin-bottom: $gap !important;
+
+  .top.attached {
+    border: 0 !important;
+
+    a.item {
+      color: $color-typography-menu-item !important;
+      border: 0 !important;
+      &.active {
+        border-radius: $round $round 0 0 !important;
+        margin-bottom: 0 !important;
+        background-color: $color-background-code;
+      }
+    }
+
+    p {
+      margin: 0 !important;
+    }
+  }
+
+  .bottom.attached {
+    border-radius: 0 0 $round $round !important;
+    border: 0 !important;
+    background-color: $color-background-code;
+  }
+}

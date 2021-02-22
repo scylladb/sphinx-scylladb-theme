@@ -1,9 +1,9 @@
 from os import path, getenv
 import sphinx_copybutton
+import sphinx_last_updated_by_git
 from sphinx_tabs import tabs
 from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
 from sphinx_scylladb_theme._version import version
-
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
 
@@ -27,6 +27,7 @@ def setup(app):
     not_found.setup(app)
     redirects.setup(app)
     sphinx_copybutton.setup(app)
+    sphinx_last_updated_by_git.setup(app)
     tabs.setup(app)
     gh_pages.setup(app)
     return {"version": version, "parallel_read_safe": True}
