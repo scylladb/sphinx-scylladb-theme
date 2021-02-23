@@ -86,8 +86,8 @@
     .footer-bottom {
       .footer-info {
         div {
-          margin: 0px;
-          padding: 0px 10px;
+          margin: 0;
+          padding: 0 10px;
           border-left: 1px solid $color-typography-footer-copyright;
           &:first-child {
             border-left: none;
