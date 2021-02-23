@@ -1,43 +1,60 @@
 <footer id="footer">
-    <div class="footer-top">
-        <a class="logo" href="https://www.scylladb.com"><img src="{{ pathto('_static/img/logo-scylla-horizontal-RGB.svg', 1) }}" alt=""></a>
-        <div class="footer-links">
-            <a class="link" href="https://docs.scylladb.com">Docs</a>
-            <a class="link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
-            <a class="link" href="https://www.scylladb.com/company/">About Us</a>
-            <a class="link button" href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix" target="_blank">
-                Report an issue on this page</a>
-        </div>
-        <div class="footer-actions">
-            <a class="link-icon" href="https://stackoverflow.com/questions/tagged/scylla" target="_blank">
-                <i class="fab fa-stack-overflow"></i>
-            </a>
-            <a class="link-icon" href="http://slack.scylladb.com/" target="_blank">
-                <i class="fab fa-slack"></i>
-            </a>
-        </div>
+  <div class="footer-top">
+    <a class="logo" href="https://www.scylladb.com"
+      ><img
+        src="{{ pathto('_static/img/logo-scylla-horizontal-RGB.svg', 1) }}"
+        alt=""
+    /></a>
+    <div class="footer-links">
+      <a class="link" href="https://docs.scylladb.com">Docs</a>
+      <a class="link" href="https://www.scylladb.com/company/contact-us/"
+        >Contact Us</a
+      >
+      <a class="link" href="https://www.scylladb.com/company/">About Us</a>
+      <a
+        class="link button"
+        href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix"
+        target="_blank"
+      >
+        Report an issue on this page</a
+      >
     </div>
+    <div class="footer-actions">
+      <a
+        class="link-icon"
+        href="https://stackoverflow.com/questions/tagged/scylla"
+        target="_blank"
+      >
+        <i class="fab fa-stack-overflow"></i>
+      </a>
+      <a class="link-icon" href="http://slack.scylladb.com/" target="_blank">
+        <i class="fab fa-slack"></i>
+      </a>
+    </div>
+  </div>
 
-    <div class="footer-bottom">
-        <div class="footer-info">
-            {%- if show_copyright %}
-            <div class="footer-copyright">
-                {%- if hasdoc('copyright') %}
-                {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}{% endtrans %}
-                {%- else %}
-                {% trans copyright=copyright|e %}&#169; {{ copyright }}{% endtrans %}
-                {%- endif %}
-            </div>
-            {%- endif %}
-            {%- if last_updated %}
-            <div class="footer-last-updated">
-                {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-            </div>
-            {%- endif %}
-            <div class="footer-version">
-                Powered by <a href="http://sphinx-doc.org/">Sphinx {{ sphinx_version }}</a>
-                &amp; <a href="https://pypi.org/project/sphinx-scylladb-theme">ScyllaDB Theme {{ scylladb_theme_version }}</a>
-            </div>
-        </div>
+  <div class="footer-bottom">
+    <div class="footer-info">
+      {%- if show_copyright %}
+      <div class="footer-copyright">
+        {%- if hasdoc('copyright') %} {% trans path=pathto('copyright'),
+        copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{
+        copyright }}{% endtrans %} {%- else %} {% trans copyright=copyright|e
+        %}&#169; {{ copyright }}{% endtrans %} {%- endif %}
+      </div>
+      {%- endif %} {%- if last_updated %}
+      <div class="footer-last-updated">
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated
+        }}.{% endtrans %}
+      </div>
+      {%- endif %}
+      <div class="footer-version">
+        Powered by
+        <a href="http://sphinx-doc.org/">Sphinx {{ sphinx_version }}</a> &amp;
+        <a href="https://pypi.org/project/sphinx-scylladb-theme"
+          >ScyllaDB Theme {{ scylladb_theme_version }}</a
+        >
+      </div>
     </div>
+  </div>
 </footer>

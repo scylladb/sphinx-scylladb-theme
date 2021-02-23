@@ -6,11 +6,12 @@
     letter-spacing: 1.5px;
     color: $color-typography-on-this-page;
   }
-  & > ul {
+
+  > ul {
     margin-bottom: 30px;
     margin-left: 0;
 
-    & > li {
+    > li {
       padding: 10px 0;
       border-bottom: 1px solid $color-border-toc-local-li;
 
