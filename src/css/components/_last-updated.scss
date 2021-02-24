@@ -7,7 +7,7 @@
   text-transform: uppercase;
 }
 
-@media screen and #{breakpoint(large)} {
+@media screen and (min-width: $large) {
   .last-updated {
     float: right;
     margin: 0;

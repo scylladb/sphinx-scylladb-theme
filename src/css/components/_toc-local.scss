@@ -17,6 +17,7 @@
 
       &:before {
         font-family: $font-icons-family;
+        font-display: swap;
         content: "\f105" !important;
         margin: 0 !important;
       }

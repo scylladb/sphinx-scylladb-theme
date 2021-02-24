@@ -56,7 +56,7 @@
   }
 }
 
-@media screen and #{breakpoint(medium)} {
+@media screen and (min-width: $medium) {
   .topics-grid {
     padding: $spacing-l;
   }

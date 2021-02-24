@@ -39,9 +39,10 @@
         }
 
         &.is-dropdown-submenu-parent > a::after {
+          font-family: $font-icons-family;
+          font-display: swap;
           border-color: $color-white transparent transparent;
           border: 0;
-          font-family: $font-icons-family;
           content: "\f054";
           color: $color-white;
           margin-top: -10px;
@@ -126,7 +127,7 @@
   }
 }
 
-@media screen and #{breakpoint(medium)} {
+@media screen and (min-width: $medium) {
   #header {
     .top-bar {
       padding: 8px $spacing-l;
@@ -163,7 +164,7 @@
   }
 }
 
-@media screen and #{breakpoint(large)} {
+@media screen and (min-width: $large) {
   #header {
     .top-bar {
       .large-menu {
