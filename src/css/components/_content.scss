@@ -15,6 +15,7 @@
 
     li::before {
       font-family: $font-icons-family;
+      font-display: swap;
       content: "\2022";
       color: $color-typography-bullet;
       font-weight: bold;
@@ -31,6 +32,7 @@
 
   .reference:after {
     font-family: $font-icons-family;
+    font-display: swap;
     padding: 0 4px;
     font-size: $font-base-smallest-size;
   }
@@ -63,7 +65,7 @@
   }
 }
 
-@media screen and #{breakpoint(medium)} {
+@media screen and (min-width: $medium) {
   #content {
     padding: $spacing-l;
 

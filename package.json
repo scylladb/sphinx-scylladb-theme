@@ -15,7 +15,6 @@
     "@babel/preset-env": "^7.12.1",
     "@fontsource/poppins": "^4.2.1",
     "@fontsource/roboto": "^4.1.0",
-    "@fortawesome/fontawesome-free": "^5.15.2",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.2.1",

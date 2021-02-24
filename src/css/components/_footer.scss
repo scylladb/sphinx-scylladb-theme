@@ -59,7 +59,7 @@
   }
 }
 
-@media screen and #{breakpoint(large)} {
+@media screen and (min-width: $large) {
   #footer {
     padding: 30px $spacing-l;
 
