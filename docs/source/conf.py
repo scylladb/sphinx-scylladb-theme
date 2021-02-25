@@ -3,9 +3,9 @@ import os
 import sys
 from datetime import date
 from sphinx.util import logging
-from sphinx_scylladb_theme.utils import multiversion_regex_builder
-import recommonmark	
+import recommonmark
 from recommonmark.transform import AutoStructify
+from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 logger = logging.getLogger(__name__)
 
@@ -73,7 +73,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-# Setup Sphinx	
+# Setup Sphinx
 def setup(sphinx):
     sphinx.add_config_value('recommonmark_config', {
         'enable_eval_rst': True,
