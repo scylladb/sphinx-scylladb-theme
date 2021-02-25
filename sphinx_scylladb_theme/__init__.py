@@ -1,9 +1,7 @@
 from os import path, getenv
 import sphinx_copybutton
 from sphinx_tabs import tabs
-from recommonmark.transform import AutoStructify
 from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
-from sphinx_scylladb_theme.parsers.markdown import CustomCommonMarkParser
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
 
@@ -20,7 +18,7 @@ def setup(app):
     """Setup theme"""
     app.add_html_theme('sphinx_scylladb_theme', path.abspath(path.dirname(__file__)))
     app.connect("html-page-context", update_context)
-        app.connect('config-inited', update_config)
+    app.connect('config-inited', update_config)
 
     """Setup lexers"""
     app.add_lexer("cql", CQLLexer())
