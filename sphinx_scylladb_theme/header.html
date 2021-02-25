@@ -1,0 +1,255 @@
+<header id="header">
+  <div class="top-bar grid-x stacked-for-small">
+    <div class="top-bar-title cell medium-3">
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+      </span>
+      <a href="https://docs.scylladb.com/">
+        <img
+          src="{{ pathto('_static/img/logo-scylla-docs.svg', 1) }}"
+          alt="Scylla Documentation Logo"
+        />
+      </a>
+    </div>
+    <div id="responsive-menu" class="cell medium-9 large-6">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#">Server</a>
+            <ul class="menu vertical floating-menu">
+              <li><a href="#">Scylla Open Source</a></li>
+              <li><a href="#">Scylla Enterprise</a></li>
+              <li><a href="#">Scylla Alternator - OSS</a></li>
+              <li><a href="#">Scylla Alternator - ENT</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Cloud</a>
+            <ul class="menu vertical floating-menu">
+              <li><a href="#">Scylla Cloud</a></li>
+              <li><a href="#">Scylla Cloud Docs</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Tools</a>
+            <ul class="menu vertical floating-menu">
+              <li><a href="#">Scylla Manager</a></li>
+              <li><a href="#">Scylla Monitor</a></li>
+              <li><a href="#">Scylla Operator</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Drivers</a>
+            <ul class="menu vertical floating-menu large-menu">
+              <div class="grid-x">
+                <div class="cell large-4">
+                  <div class="drivers">
+                    <img
+                      src="{{ pathto('_static/img/mascots/scylla-drivers-1.svg', 1) }}"
+                      alt="Scylla Drivers Logo"
+                    />
+                    <h3 class="drivers-title">Scylla Drivers</h3>
+                    <p class="drivers-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Id dui ac id neque ultrices. Fermentum nibh turpis.
+                    </p>
+                  </div>
+                </div>
+                <div class="cell large-3">
+                  <div class="scylla-drivers">
+                    <h4 class="scylla-drivers-title">Scylla Drivers</h4>
+                    <ul class="menu vertical">
+                      <li>
+                        <a
+                          href="https://docs.scylladb.com/using-scylla/scylla-go-driver/"
+                        >
+                          <img
+                            class="driver-icon"
+                            src="{{ pathto('_static/img/drivers/go.png', 1) }}"
+                            alt="Scylla GO Driver Logo"
+                          />
+                          <span class="driver-caption"
+                            >Scylla GO Driver</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://docs.scylladb.com/using-scylla/scylla-gocqlx-driver/"
+                        >
+                          <img
+                            class="driver-icon"
+                            src="{{ pathto('_static/img/drivers/gosql.png', 1) }}"
+                            alt="Scylla GOSQLx Driver Logo"
+                          />
+                          <span class="driver-caption"
+                            >Scylla GOSQLx Driver</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://python-driver.docs.scylladb.com/">
+                          <img
+                            class="driver-icon"
+                            src="{{ pathto('_static/img/drivers/python.png', 1) }}"
+                            alt="Scylla Python Driver Logo"
+                          />
+
+                          <span class="driver-caption"
+                            >Scylla Python Driver</span
+                          ></a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://java-driver.docs.scylladb.com/">
+                          <img
+                            class="driver-icon"
+                            src="{{ pathto('_static/img/drivers/java.png', 1) }}"
+                            alt="Scylla Java Driver Logo"
+                          />
+                          <span class="driver-caption"
+                            >Scylla Java Driver</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cell large-5">
+                  <div class="third-party-drivers">
+                    <h4 class="third-party-drivers-title">
+                      Third-Party Drivers
+                    </h4>
+                    <div class="grid-x">
+                      <div class="cell large-6">
+                        <ul class="menu vertical">
+                          <li>
+                            <a
+                              href="https://github.com/datastax/ruby-driver/"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/ruby.png', 1) }}"
+                                alt="Ruby Driver Logo"
+                              />
+                              <span class="driver-caption">Ruby Driver</span></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://github.com/datastax/cpp-driver/"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/cplusplus.png', 1) }}"
+                                alt="C++ Driver Logo"
+                              />
+                              <span class="driver-caption">C++ Driver</span></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://github.com/datastax/python-driver/"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/python.png', 1) }}"
+                                alt="Python Driver Logo"
+                              />
+                              <span class="driver-caption"
+                                >Python Driver</span
+                              ></a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/java.png', 1) }}"
+                                target="_blank"
+                                alt="Java Driver Logo"
+                              />
+                              <span class="driver-caption">Java Driver</span></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="cell large-6">
+                        <ul class="menu vertical">
+                          <li>
+                            <a
+                              href="https://github.com/datastax/nodejs-driver/"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/node.png', 1) }}"
+                                alt="Node Driver Logo"
+                              />
+                              <span class="driver-caption"
+                                >Node.js Driver</span
+                              ></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://github.com/AlexPikalov/cdrs"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/rust.png', 1) }}"
+                                alt="Rust Driver Logo"
+                              />
+                              <span class="driver-caption">Rust Driver</span></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://github.com/datastax/csharp-driver/"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/csharp.png', 1) }}"
+                                alt="C# Driver Logo"
+                              />
+                              <span class="driver-caption">C# Driver</span></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://github.com/datastax/php-driver/"
+                              target="_blank"
+                            >
+                              <img
+                                class="driver-icon"
+                                src="{{ pathto('_static/img/drivers/php.png', 1) }}"
+                                alt="PHP Driver Logo"
+                              />
+                              <span class="driver-caption">PHP Driver</span></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="top-bar-right cell large-3 show-for-large">
+      <ul class="menu">
+        <li id="search-box">
+          <ci-search></ci-search>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

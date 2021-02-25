@@ -1,0 +1,15 @@
+.button {
+  border-radius: 4px;
+  padding: 12px;
+  font-size: $font-base-small-size;
+  color: $color-typography-button;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: $color-background-button;
+  letter-spacing: 0.638235px;
+}
+
+.button:hover {
+  background-color: darken($color-background-button, 10%);
+  font-weight: 700;
+}

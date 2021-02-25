@@ -1,19 +1,12 @@
 .. title:: Sphinx ScyllaDB Theme
 
 .. raw:: html
-
-  <div class="full-contents">
-
-.. raw:: html
-
-  <div class="main-title">
-    <img class="main-title-logo" src="_static/img/scylla-writer.svg" />
-    <div class="main-title-header">
-      <h1>Sphinx ScyllaDB Theme</h1>
-      <h3>Sphinx Theme for ScyllaDB documentation projects.</h3>
+  
+    <div class="welcome">
+      <h1 class="welcome-title">Sphinx ScyllaDB Theme</h1>
+      <p class="welcome-text"> Do you to add the theme to your project? <a href="">Start Here</a></p>
     </div>
-  </div>
-
+    
 .. toctree::
    :hidden:
 
@@ -28,12 +21,15 @@
 
   <div class="topics-grid">
 
+  <h2 class="topics-grid-title">Topics</h2>
+  <p class="topics-grid-text">To being choose a topic from the list below</p>
+
+  <div class="grid-x">
+
 .. topic-box::
   :title: Installation
   :link: installation
   :icon: fa fa-power-off
-  :icon_color: rgba(95,113,180,1)
-  :icon_bg: rgba(95,113,180,0.1)
   :class: my-box
 
   Contains information on how to install the theme and extensions in a new project.
@@ -42,8 +38,6 @@
   :title: Configuration
   :link: configuration
   :icon: fa fa-cogs
-  :icon_color: rgba(95,113,180,1)
-  :icon_bg: rgba(95,113,180,0.1)
   :class: my-box
 
   Contains information on configuring Sphinx projects with this theme.
@@ -52,8 +46,6 @@
   :title: Commands
   :link: commands
   :icon: fa fa-terminal
-  :icon_color: rgba(95,113,180,1)
-  :icon_bg: rgba(95,113,180,0.1)
   :class: my-box
 
   Contains information about all the available commands to build and preview the docs.
@@ -62,8 +54,6 @@
   :title: GitHub Pages
   :link: github-pages
   :icon: fa fa-github
-  :icon_color: rgba(95,113,180,1)
-  :icon_bg: rgba(95,113,180,0.1)
   :class: my-box
 
   Contains guides for publishing documentation sites using GitHub Actions & Pages.
@@ -72,8 +62,6 @@
   :title: Demos and Examples
   :link: examples
   :icon: fa fa-clipboard
-  :icon_color: rgba(95,113,180,1)
-  :icon_bg: rgba(95,113,180,0.1)
   :class: my-box
 
   Contains examples of all kinds of syntax one can use in ScyllaDB docs.
@@ -83,8 +71,6 @@
   :title: Contribute
   :link: contribute
   :icon: fa fa-users
-  :icon_color: rgba(95,113,180,1)
-  :icon_bg: rgba(95,113,180,0.1)
   :class: my-box
 
   Contains information on how to set up a developer environment,
@@ -93,7 +79,4 @@
 .. raw:: html
 
   </div>
-
-.. raw:: html
-
   </div>

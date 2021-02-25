@@ -1,34 +1,35 @@
-{#
-  404.html
-  ~~~~~~~~~~~~~~~~~
+{# 404.html ~~~~~~~~~~~~~~~~~ Template for scylla docs 404 apge. #}
 
-  Template for scylla docs 404 apge.
-#}
-
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js height" lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>ScyllaDB</title>
-    <meta name="description" content="{{ theme_site_description }}"/>
-    <link rel="icon" href="//www.scylladb.com/img/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="{{ html_baseurl }}/_static/css/doc/main.css" type="text/css" />
+    <meta name="description" content="{{ theme_site_description }}" />
+    <link
+      rel="icon"
+      href="//www.scylladb.com/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ html_baseurl }}/_static/css/doc/main.css"
+      type="text/css"
+    />
   </head>
-  <body class="height bg_404">
-    <div class="height">
-        <div class="vertigo_continer height">
-          <div class="vertigo_inner">
-            <img class="vertigo" src="{{ html_baseurl }}/_static/img/vertigo.jpg" alt="" >
-            <div class="ttl_404">
-              <h1>404</h1>
-              <p>The Scylla monster ate your page!</p>  
-              <p><a href="{{ html_baseurl }}" class="button round">Home</a></p>  
-            </div>
-          </div>
-        </div>
+  <body id="not-found">
+    <img
+      class="not-found-icon"
+      src="{{ html_baseurl }}/_static/img/vertigo.jpg"
+      alt=""
+    />
+    <div class="not-found-text">
+      <h1>404</h1>
+      <p>The Scylla monster ate your page!</p>
+      <p><a href="{{ html_baseurl }}" class="button">Home</a></p>
     </div>
   </body>
 </html>

@@ -1,0 +1,62 @@
+#versions-dropdown {
+  position: relative;
+  margin-bottom: 30px;
+
+  .versions-button {
+    width: 100%;
+    background: $color-white;
+    border: 0;
+    border-radius: $round;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .versions-button {
+    padding: 15px;
+
+    i {
+      float: right;
+    }
+  }
+
+  .versions-content {
+    display: none;
+    @include floating;
+    position: absolute;
+    list-style-type: none;
+    margin: 5px 0 0 0;
+    z-index: 10;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+
+    li {
+      display: block;
+      padding: 15px;
+    }
+
+    li:hover a {
+      font-weight: 600;
+    }
+  }
+
+  &:hover .versions-content {
+    display: block;
+  }
+
+  &.single-version {
+    &:hover {
+      .versions-content {
+        display: none;
+      }
+    }
+    .versions-button {
+      cursor: initial;
+      outline: none;
+    }
+
+    i {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.secondary-sidenav {
+  padding: $spacing;
+
+  .topic-title {
+    text-transform: uppercase;
+    font-family: $font-title-family;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: $color-typography-on-this-page;
+  }
+
+  > ul {
+    list-style: none;
+    margin: 0;
+
+    > li {
+      > a {
+        display: none;
+      }
+
+      > ul {
+        margin: 0;
+
+        li {
+          display: none;
+        }
+
+        > li {
+          display: block;
+          padding: 10px 0;
+          border-bottom: 1px solid $color-border-toc-local-li;
+
+          &:before {
+            font-family: $font-icons-family;
+            font-display: swap;
+            color: $color-typography-bullet;
+            font-weight: bold;
+            float: left;
+            font-size: 20px;
+            width: 1em;
+            content: "\f105";
+            margin: 0;
+          }
+
+          a {
+            font-family: $font-title-family;
+            font-size: $font-base-small-size;
+            color: $color-typography-toc-link;
+
+            &:hover {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .secondary-sidenav {
+    padding: $spacing-l;
+  }
+}
