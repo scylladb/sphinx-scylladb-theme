@@ -2,8 +2,11 @@ from os import path, getenv
 import sphinx_copybutton
 import sphinx_last_updated_by_git
 from sphinx_tabs import tabs
-from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
 from sphinx_scylladb_theme._version import version
+from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
+from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
+
+
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
 
@@ -19,6 +22,10 @@ def setup(app):
     app.connect("html-page-context", update_context)
     app.connect('config-inited', update_config)
 
+    """Setup lexers"""
+    app.add_lexer("cql", CQLLexer())
+    app.add_lexer("ditaa", DitaaLexer())
+
     """Setup custom extensions"""
     panel_box.setup(app)
     topic_box.setup(app)
@@ -30,4 +37,5 @@ def setup(app):
     sphinx_last_updated_by_git.setup(app)
     tabs.setup(app)
     gh_pages.setup(app)
+
     return {"version": version, "parallel_read_safe": True}
