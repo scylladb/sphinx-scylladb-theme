@@ -10,19 +10,17 @@ from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
 
+def update_config(app, config):
+    default = 'master'
+    if hasattr(config, 'smv_latest_version') and config.smv_latest_version:
+        default = config.smv_latest_version
+    config.smv_latest_version = getenv('LATEST_VERSION', default=default)
+
 def setup(app):
     """Setup theme"""
     app.add_html_theme('sphinx_scylladb_theme', path.abspath(path.dirname(__file__)))
     app.connect("html-page-context", update_context)
-    app.config.smv_latest_version = getenv('LATEST_VERSION', default='master')
-    
-    """Setup Markdown"""
-    app.add_source_parser(CustomCommonMarkParser)
-    app.add_config_value('recommonmark_config', {
-        'enable_eval_rst': True,
-        'enable_auto_toc_tree': False,
-    }, True)
-    app.add_transform(AutoStructify)
+        app.connect('config-inited', update_config)
 
     """Setup lexers"""
     app.add_lexer("cql", CQLLexer())
