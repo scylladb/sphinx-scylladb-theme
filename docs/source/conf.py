@@ -76,11 +76,11 @@ pygments_style = 'sphinx'
 todo_include_todos = True
 
 # Setup Sphinx	
-def setup(sphinx):	
-    sphinx.add_config_value('recommonmark_config', {	
-        'enable_eval_rst': True,	
-        'enable_auto_toc_tree': False,	
-    }, True)	
+def setup(sphinx):
+    sphinx.add_config_value('recommonmark_config', {
+        'enable_eval_rst': True,
+        'enable_auto_toc_tree': False,
+    }, True)
     sphinx.add_transform(AutoStructify)
 
 # Adds version variables for monitoring and manager versions when used in inline text

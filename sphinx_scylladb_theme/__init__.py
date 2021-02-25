@@ -1,9 +1,9 @@
 from os import path, getenv
 import sphinx_copybutton
 from sphinx_tabs import tabs
-from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
+from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
 
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
