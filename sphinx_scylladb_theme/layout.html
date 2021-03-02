@@ -21,7 +21,10 @@
   {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %} {%- endmacro %}
   {%- macro css() %}
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
   <link
     rel="stylesheet"
     href="{{ pathto('_static/css/main.css', 1) }}"
@@ -141,14 +144,14 @@
             <div class="cell large-6">{% include 'breadcrumbs.html'%}</div>
             <div class="cell large-6">{% include 'last-updated.html' %}</div>
           </div>
-          {% endif %} {{ body }}
+          {% endif %} {{ body }} {% if not pagename == master_doc %} {% include
+          'content-navigation.html'%} {% endif %}
         </div>
         <div id="sidebar-1" class="cell large-3 large-order-1">
           {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%
           include sidebartemplate %} {%- endfor %} {%- endif %}
         </div>
         {% if not hide_right_sidebar_index %}
-
         <div id="sidebar-2" class="cell large-3 large-order-3 show-for-large">
           {% include 'secondary-side-nav.html' %}
         </div>
