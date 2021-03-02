@@ -1,0 +1,23 @@
+<div id="content-navigation">
+  {%- if prev and "no title" not in prev.title %}
+  <div class="content-navigation-block prev">
+    <a href="{{ prev.link|e }}">
+      <button class="button button-prev">
+        <i class="fa fa-angle-left"></i>
+      </button>
+    </a>
+    <div class="content-navigation-title">PREVIOUS <br />{{ prev.title }}</div>
+  </div>
+  {%- endif %} {%- if next and "no title" not in next.title %}
+  <div class="content-navigation-block next">
+    <div class="content-navigation-title">
+      <span class="highlight-next">NEXT</span> <br />{{ next.title }}
+    </div>
+    <a href="{{ next.link|e }}">
+      <button class="button button-next">
+        <i class="fa fa-angle-right"></i>
+      </button>
+    </a>
+  </div>
+  {%- endif %}
+</div>
