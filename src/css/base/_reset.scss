@@ -103,7 +103,7 @@ code {
 }
 
 .highlight {
-  background: transparent;
+  background: transparent !important;
   pre {
     color: $color-typography-base;
     padding: 16px;
