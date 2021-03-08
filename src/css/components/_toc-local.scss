@@ -1,12 +1,4 @@
 .contents.local {
-  .topic-title {
-    text-transform: uppercase;
-    font-family: $font-title-family;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: $color-typography-on-this-page;
-  }
-
   > ul {
     margin-bottom: 30px;
     margin-left: 0;
@@ -18,8 +10,8 @@
       &:before {
         font-family: $font-icons-family;
         font-display: swap;
-        content: "\f105" !important;
-        margin: 0 !important;
+        content: "\f105";
+        margin: 0;
       }
 
       ul {
@@ -27,7 +19,7 @@
       }
 
       p {
-        margin: 0 !important;
+        margin: 0;
       }
 
       a {
@@ -41,4 +33,12 @@
       }
     }
   }
+}
+
+.topic-title {
+  text-transform: uppercase;
+  font-family: $font-title-family;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: $color-typography-on-this-page;
 }

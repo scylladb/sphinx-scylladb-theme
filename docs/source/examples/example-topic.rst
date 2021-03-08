@@ -8,6 +8,68 @@ Example Topic
 
 .. This template should be used for all new topics, no matter which Scylla Project they belong to. To use the template, copy it to your project, changing the name.
 
+Admonitions
+-----------
+
+using
+
+.. code-block:: none
+
+   .. note:: text follows here
+
+   .. caution:: look out
+
+   .. warning:: take care
+
+   .. tip:: here's a tip
+
+results in
+
+.. note:: text follows here
+
+.. caution:: look out
+
+.. warning:: take care
+
+.. tip:: here's a tip
+
+Code block
+----------
+
+Use the following syntax:
+
+.. code-block:: none
+
+   ..code-block:: python
+
+      print('hello world')
+
+Showing line numbers:
+
+.. code-block:: none
+   :linenos:
+   
+   ..code-block:: python
+      :linenos:
+      print('hello world')
+
+Glossary and Abbreviations
+--------------------------
+
+Inline abbreviation. The word in parenthesis is shown when you hover over the abbreviation.
+
+.. code-block:: none
+
+   :abbr:`LIFO (last-in, first-out)`.
+   :abbr:`Overwrite (Same data cells overwritten many times)`
+
+Inline Glossary term definition. Links to the glossary page.
+
+.. code-block:: none
+
+   :term:`term <Link in Glossary>`
+   :term:`Size-tiered Compaction Strategy (STCS)<Size-tiered Compaction Strategy>`
+
 Heading Hierarchy
 -----------------
 
@@ -31,7 +93,6 @@ Use the following
    ^^^^^
    H5
    ~~~~
-
 
 Lorem Ipsum: usage
 ------------------
@@ -66,10 +127,31 @@ Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla conse
 Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
 Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
 
+Images
+------
+
+Use the following syntax:
+
+.. code-block:: none
+
+   .. image:: ../static/img/vertigo.jpg
+      :width: 200pt
+
+.. _link-format-examples:
+
+Links
+-----
+There are a few links you can use with different purposes.
+
+* This is an example of an `External Link <https://docs.scylladb.com/some-doc>`_. It links to another site and has a arrow pointing out icon. It opens in a new tab.
+* This is an example of an :ref:`Internal Link <link-format-examples>`. This is an internal cross reference. It requires a bookmark.
+* This is an example of an :doc:`Internal Doc <../index>`. This is an internal doc cross reference. it looks for a file. A full path is required.
+* This is an example of an :download:`download <index.rst>`. This opens a download window. It is for downloading software.
 
 Panel Box
 ---------
-used on the index pages
+
+Used on the index pages:
 
 .. code-block:: none
 
@@ -78,9 +160,24 @@ used on the index pages
       :id: "getting-started"
       :class: my-panel
 
-Creating Tabs
---------------
-Adding
+Tables
+------
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 1
+
+   * - header name
+     - header name
+     - header name
+   * - body text
+     - body text
+     - body text
+
+Tabs
+----
+
+Adding:
 
 .. code-block:: none
 
@@ -130,63 +227,10 @@ Results in
 
       (without stopping *some-scylla* container)
 
-Glossary and Abbreviations
---------------------------
-
-Inline abbreviation. The word in parenthesis is shown when you hover over the abbreviation.
-
-.. code-block:: none
-
-   :abbr:`LIFO (last-in, first-out)`.
-   :abbr:`Overwrite (Same data cells overwritten many times)`
-
-Inline Glossary term definition. Links to the glossary page.
-
-.. code-block:: none
-
-   :term:`term <Link in Glossary>`
-   :term:`Size-tiered Compaction Strategy (STCS)<Size-tiered Compaction Strategy>`
-
-.. _link-format-examples:
-
-Links
------
-There are a few links you can use with different purposes.
-
-* This is an example of an `External Link <https://docs.scylladb.com/some-doc>`_. It links to another site and has a arrow pointing out icon. It opens in a new tab.
-* This is an example of an :ref:`Internal Link <link-format-examples>`. This is an internal cross reference. It requires a bookmark.
-* This is an example of an :doc:`Internal Doc <../index>`. This is an internal doc cross reference. it looks for a file. A full path is required.
-* This is an example of an :download:`download <index.rst>`. This opens a download window. It is for downloading software.
-
-
-Images
-------
-
-use the following syntax:
-
-.. code-block:: none
-
-   .. image:: ../static/img/vertigto.jpg
-      :width: 200pt
-
-
-Tables
-------
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 1
-
-   * - header name
-     - header name
-     - header name
-   * - body text
-     - body text
-     - body text
 
 Versioning in Scylla
 --------------------
-version add directives should be used when introducing or deprecating a feature
+Version add directives should be used when introducing or deprecating a feature
 inline directive
 
 
@@ -207,37 +251,11 @@ When using, these directives a blank line must follows
 .. deprecated:: 2.0 Scylla Open Source
 
 
-Admonitions
------------
-
-using
-
-.. code-block:: none
-
-   .. note:: text follows here
-
-   .. caution:: look out
-
-   .. warning:: take care
-
-   .. tip:: here's a tip
-
-results in
-
-.. note:: text follows here
-
-.. caution:: look out
-
-.. warning:: take care
-
-.. tip:: here's a tip
-
-
 Frequently used Includes
 ------------------------
 
 .. code-block:: none
-
+   
    .. include:: /rst_include/scylla-commands-stop-index.rst
 
    .. include:: /rst_include/scylla-commands-start-index.rst

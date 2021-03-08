@@ -2,10 +2,8 @@
   padding: $spacing;
   font-family: $font-title-family;
   font-size: $font-base-small-size;
-}
-
-#sidebar-1 {
   background-color: $color-background-sidebar;
+  height: 100%;
 
   a {
     color: $color-typography-base;
@@ -30,12 +28,6 @@
         padding: 4px 0 4px 20px;
       }
     }
-  }
-}
-
-#sidebar-2 {
-  a {
-    color: $color-typography-toc-link;
   }
 }
 

@@ -79,7 +79,7 @@ table {
   }
 
   p {
-    margin: 0 !important;
+    margin: 0;
   }
 
   thead th,
@@ -103,7 +103,7 @@ code {
 }
 
 .highlight {
-  background: transparent !important;
+  background: transparent;
   pre {
     color: $color-typography-base;
     padding: 16px;

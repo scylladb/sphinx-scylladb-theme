@@ -1,7 +1,7 @@
-#content {
+.content {
   padding: $spacing;
 
-  &.hide-right-sidebar {
+  &--right-sidebar-hidden {
     padding: 0;
   }
 
@@ -33,9 +33,9 @@
 
   .reference:after {
     font-family: $font-icons-family;
+    font-size: $font-base-smallest-size;
     font-display: swap;
     padding: 0 4px;
-    font-size: $font-base-smallest-size;
   }
 
   .reference.external:after {
@@ -52,11 +52,11 @@
   background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
   padding: 60px $spacing;
 
-  .welcome-title {
+  &__title {
     margin-bottom: 10px;
   }
 
-  .welcome-text {
+  &__text {
     font-size: 18px;
 
     a {
@@ -67,10 +67,10 @@
 }
 
 @media screen and (min-width: $medium) {
-  #content {
+  .content {
     padding: $spacing-l;
 
-    &.hide-right-sidebar {
+    &--right-sidebar-hidden {
       padding: 0;
     }
   }
