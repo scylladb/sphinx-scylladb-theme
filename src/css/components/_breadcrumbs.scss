@@ -1,9 +1,9 @@
 .breadcrumbs {
   /* Reset Foundation */
   margin-bottom: 10px;
-  &__item,
+  .bread__item,
   a,
-  &__item:not(.bread__item--last)::after {
+  .bread__item:not(.bread__item--last)::after {
     font-family: $font-title-family;
     color: $color-typography-breadcrumbs;
     font-size: $font-base-smallest-size;

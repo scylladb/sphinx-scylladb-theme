@@ -1,5 +1,6 @@
 .secondary-sidenav {
   padding: $spacing;
+  height: 100%;
 
   > ul {
     list-style: none;
@@ -39,7 +40,8 @@
             font-size: $font-base-small-size;
             color: $color-typography-toc-link;
 
-            &:hover {
+            &:hover,
+            &.current {
               font-weight: 600;
             }
           }
@@ -52,5 +54,16 @@
 @media screen and (min-width: $medium) {
   .secondary-sidenav {
     padding: $spacing-l;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .secondary-sidenav {
+    position: fixed;
+    top: $header-height;
+    width: inherit;
+    overflow-y: auto;
+    max-height: 100vh;
+    max-height: calc(100vh - $header-height);
   }
 }

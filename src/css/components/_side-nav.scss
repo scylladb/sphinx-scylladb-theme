@@ -1,9 +1,11 @@
 .side-nav {
+  width: inherit;
+  height: 100%;
+  background-color: $color-background-sidebar;
+
   padding: $spacing;
   font-family: $font-title-family;
   font-size: $font-base-small-size;
-  background-color: $color-background-sidebar;
-  height: 100%;
 
   a {
     color: $color-typography-base;
@@ -34,5 +36,14 @@
 @media screen and (min-width: $medium) {
   .side-nav {
     padding: $spacing-l;
+  }
+}
+@media screen and (min-width: $large) {
+  .side-nav {
+    position: fixed;
+    top: $header-height;
+    overflow-y: auto;
+    max-height: 100vh;
+    max-height: calc(100vh - $header-height);
   }
 }
