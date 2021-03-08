@@ -1,14 +1,6 @@
 .secondary-sidenav {
   padding: $spacing;
 
-  .topic-title {
-    text-transform: uppercase;
-    font-family: $font-title-family;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: $color-typography-on-this-page;
-  }
-
   > ul {
     list-style: none;
     margin: 0;

@@ -11,7 +11,7 @@
     <meta name="description" content="{{ theme_site_description }}" />
     <link
       rel="icon"
-      href="//www.scylladb.com/img/favicon.ico"
+      src="{{ html_baseurl }}/_static/img/favicon.ico"
       type="image/x-icon"
     />
     <link
@@ -20,13 +20,13 @@
       type="text/css"
     />
   </head>
-  <body id="not-found">
+  <body class="not-found">
     <img
-      class="not-found-icon"
+      class="not-found__icon"
       src="{{ html_baseurl }}/_static/img/vertigo.jpg"
       alt=""
     />
-    <div class="not-found-text">
+    <div class="not-found__text">
       <h1>404</h1>
       <p>The Scylla monster ate your page!</p>
       <p><a href="{{ html_baseurl }}" class="button">Home</a></p>

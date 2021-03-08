@@ -1,13 +1,13 @@
 .topics-grid {
   padding: $spacing;
 
-  .topics-grid-title {
+  &__title {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 600;
   }
 
-  .topics-grid-text {
+  &__text {
     font-size: 18px;
     color: $color-typography-topic-grid-heading;
     margin-bottom: 60px !important;
@@ -37,14 +37,14 @@
     display: block;
 
     img {
-      margin: 0 !important;
+      margin: 0;
       height: 115px;
     }
   }
 
   .topic-box-body {
     p {
-      margin: 0 !important;
+      margin: 0;
     }
   }
 

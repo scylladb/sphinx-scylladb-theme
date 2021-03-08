@@ -1,5 +1,3 @@
-/*Admonition styles*/
-
 .admonition {
   padding: 16px;
   margin-bottom: $gap;
@@ -23,7 +21,7 @@
     background: $color-background-admonition-warning;
   }
 
-  .admonition-title {
+  &-title {
     text-transform: uppercase;
     font-weight: bold;
   }

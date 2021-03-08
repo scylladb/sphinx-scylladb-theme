@@ -1,17 +1,14 @@
-#versions-dropdown {
+.versions-dropdown {
   position: relative;
   margin-bottom: 30px;
 
-  .versions-button {
+  &__button {
     width: 100%;
     background: $color-white;
     border: 0;
     border-radius: $round;
     cursor: pointer;
     text-align: left;
-  }
-
-  .versions-button {
     padding: 15px;
 
     i {
@@ -19,7 +16,7 @@
     }
   }
 
-  .versions-content {
+  &__content {
     display: none;
     @include floating;
     position: absolute;
@@ -40,23 +37,23 @@
     }
   }
 
-  &:hover .versions-content {
+  &:hover .versions-dropdown__content {
     display: block;
   }
 
-  &.single-version {
+  &--single {
     &:hover {
       .versions-content {
         display: none;
       }
     }
-    .versions-button {
+    .versions-dropdown__button {
       cursor: initial;
       outline: none;
-    }
 
-    i {
-      display: none;
+      i {
+        display: none;
+      }
     }
   }
 }

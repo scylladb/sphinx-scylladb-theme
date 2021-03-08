@@ -1,15 +1,15 @@
-#not-found {
+.not-found {
   height: 100%;
   overflow: hidden;
   background-color: #f6f8ff;
 
-  .not-found-icon {
+  &__icon {
     margin: 40px auto;
     display: block;
     max-width: 300px;
   }
 
-  .not-found-text {
+  &__text {
     text-align: center;
 
     h1 {
