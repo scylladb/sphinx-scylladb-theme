@@ -1,6 +1,8 @@
 .footer {
   background-color: $color-background-footer;
   padding: 30px $spacing;
+  z-index: 99;
+  position: relative;
 }
 
 .footer-top {
