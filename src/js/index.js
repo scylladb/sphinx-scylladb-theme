@@ -45,10 +45,29 @@ const onResizeBanner = () => {
   });
 };
 
+function onScrollHighlightSecondarySidebar() {
+  const sections = $(".content .section").find("h2").parent();
+  const headerHeight = 83;
+
+  $(window).scroll(function () {
+    const currentScroll = $(this).scrollTop();
+    sections.each(function () {
+      const sectionPosition = $(this).offset().top;
+      if (sectionPosition - headerHeight < currentScroll) {
+        const id = $(this).attr("id");
+
+        $(".secondary-sidenav a").removeClass("current");
+        $('.secondary-sidenav a[href="#' + id + '"]').addClass("current");
+      }
+    });
+  });
+}
+
 $(document).ready(function () {
   $(document).foundation();
   openExternalLinkNewTab();
   hideBanner();
   onResizeBanner();
   onCloseBanner();
+  onScrollHighlightSecondarySidebar();
 });

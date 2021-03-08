@@ -33,6 +33,9 @@
 /* Custom Components */
 .header {
   background-color: $color-background-header;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 
 .top-bar-logo {

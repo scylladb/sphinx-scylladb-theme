@@ -1,5 +1,6 @@
 .content {
   padding: $spacing;
+  margin-top: $header-height;
 
   &--right-sidebar-hidden {
     padding: 0;
@@ -44,6 +45,11 @@
 
   .reference.download:after {
     content: "\f019";
+  }
+
+  .section {
+    padding-top: $header-height;
+    margin-top: -$header-height;
   }
 }
 

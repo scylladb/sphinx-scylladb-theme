@@ -7,6 +7,7 @@
   "repository": "https://github.com/scylladb/sphinx-scylladb-theme",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
     "lint": "eslint . src config || true"
   },
   "devDependencies": {
