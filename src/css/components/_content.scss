@@ -75,6 +75,7 @@
 @media screen and (min-width: $medium) {
   .content {
     padding: $spacing-l;
+    min-height: calc(100vh - 276px);
 
     &--right-sidebar-hidden {
       padding: 0;
