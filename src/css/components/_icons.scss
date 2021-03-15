@@ -1,0 +1,45 @@
+.scylla-icon {
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 20px;
+    margin-right: 6px;
+    width: 20px;
+  }
+
+  &--about-us:before {
+    background-image: url("../img/icons/icon-about-us.svg");
+  }
+
+  &--cloud:before {
+    background-image: url("../img/icons/icon-cloud.svg");
+  }
+
+  &--enterprise:before {
+    background-image: url("../img/icons/icon-enterprise.svg");
+  }
+
+  &--manager:before {
+    background-image: url("../img/icons/icon-manager.svg");
+  }
+
+  &--monitoring:before {
+    background-image: url("../img/icons/icon-monitoring.svg");
+  }
+
+  &--operator:before {
+    background-image: url("../img/icons/icon-operator.svg");
+  }
+
+  &--overview:before {
+    background-image: url("../img/icons/icon-overview.svg");
+  }
+
+  &--resource-center:before {
+    background-image: url("../img/icons/icon-resource-center.svg");
+  }
+}

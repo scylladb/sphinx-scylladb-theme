@@ -6,7 +6,7 @@
   .bread__item:not(.bread__item--last)::after {
     font-family: $font-title-family;
     color: $color-typography-breadcrumbs;
-    font-size: $font-base-smallest-size;
+    font-size: $font-smallest-size;
     font-weight: 500;
     letter-spacing: 1.5px;
     line-height: 1;

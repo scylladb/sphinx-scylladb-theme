@@ -64,7 +64,7 @@
       font-family: $font-title-family;
       color: $color-typography-header-link !important;
       font-weight: normal;
-      font-size: $font-base-small-size;
+      font-size: $font-small-size;
       letter-spacing: 1px;
       text-transform: uppercase;
       padding-right: 30px !important;
@@ -79,9 +79,10 @@
   width: 100%;
   position: initial;
   margin: 10px 0;
+  min-width: 227px;
 
   &__item {
-    padding: 15px;
+    padding: 15px 10px;
 
     > a {
       color: $color-typography-base;
@@ -115,7 +116,7 @@
     margin-bottom: 20px;
   }
   &__description {
-    font-size: $font-base-small-size;
+    font-size: $font-small-size;
     color: $color-typography-menu-item;
   }
 }

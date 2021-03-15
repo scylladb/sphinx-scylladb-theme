@@ -71,7 +71,7 @@ img {
 
 table {
   @include floating;
-  font-size: $font-base-small-size;
+  font-size: $font-small-size;
   margin-bottom: $gap;
 
   thead {
@@ -90,7 +90,7 @@ table {
 
 code {
   border: none;
-  font-size: $font-base-small-size;
+  font-size: $font-small-size;
   background-color: $color-background-code;
   border-radius: $round;
   color: $color-typography-code;
@@ -112,7 +112,7 @@ code {
     line-height: 26px;
     border-radius: $round;
     overflow: auto;
-    font-size: $font-base-small-size;
+    font-size: $font-small-size;
   }
 }
 

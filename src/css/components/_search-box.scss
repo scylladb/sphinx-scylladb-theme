@@ -1,10 +1,39 @@
 #search-box {
+  display: flex;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin-left: 55px;
+  width: 100%;
+  height: 32px;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 20px;
+    min-width: 20px;
+    width: 20px;
+    background-image: url("../img/icons/icon-search.svg");
+  }
+
+  ci-search,
+  .er-dummy-search-box {
+    width: 100%;
+    overflow: hidden;
+  }
+
   input {
-    background-color: transparent;
+    font-family: $font-title-family;
+    font-size: $font-base-size;
     color: $color-white;
-    border-bottom: 1px solid $color-white;
-    padding: 0 0 5px 0;
-    font-size: $font-base-small-size;
+    background-color: transparent;
+    max-width: 100%;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 
     &::placeholder {
       color: $color-white;
@@ -19,6 +48,7 @@
 
 .er_search_suggestions {
   @include floating;
+  border: 0 !important;
 
   .er-search-result-box {
     padding-top: 10px !important;
