@@ -7,22 +7,43 @@
 
   &.tip {
     background: $color-background-admonition-tip;
+
+    .admonition-title:before {
+      content: "\f05a";
+    }
   }
 
   &.note {
     background: $color-background-admonition-note;
+
+    .admonition-title:before {
+      content: "\f040";
+    }
   }
 
   &.caution {
     background: $color-background-admonition-caution;
+
+    .admonition-title:before {
+      content: "\f0e7";
+    }
   }
 
   &.warning {
     background: $color-background-admonition-warning;
+    .admonition-title:before {
+      content: "\f071";
+    }
   }
 
   &-title {
     text-transform: uppercase;
     font-weight: bold;
+
+    &:before {
+      font-family: "FontAwesome";
+      font-display: swap;
+      padding-right: 6px;
+    }
   }
 }

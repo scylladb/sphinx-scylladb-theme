@@ -9,7 +9,7 @@
 
   &__text {
     font-size: 18px;
-    color: $color-typography-topic-grid-heading;
+    color: $color-typography-topic-grid-title;
     margin-bottom: 60px !important;
   }
 }
@@ -21,12 +21,12 @@
   max-width: 245px;
   margin: 0 auto;
   margin-bottom: 60px;
-  font-size: $font-base-small-size;
+  font-size: $font-small-size;
   color: $color-typography-base;
 
   .topic-box-title {
     font-weight: 600;
-    color: $color-typography-topic-grid-heading;
+    color: $color-typography-topic-grid-title;
     font-size: 18px;
     margin-bottom: 0;
   }

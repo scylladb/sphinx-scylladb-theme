@@ -2,9 +2,13 @@
   margin: 10px 0;
   font-family: $font-title-family;
   color: $color-typography-last-updated;
-  font-size: $font-base-smallest-size;
+  font-size: $font-smallest-size;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+
+  &__icon {
+    font-size: $font-small-size !important;
+  }
 }
 
 @media screen and (min-width: $large) {

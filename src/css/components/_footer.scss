@@ -23,7 +23,7 @@
     color: $color-typography-footer-link;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: $font-base-small-size;
+    font-size: $font-small-size;
     margin-right: 28px;
     letter-spacing: 2.4px;
   }
@@ -37,7 +37,6 @@
   &__link {
     color: $color-typography-footer-icon;
     padding: 0 10px;
-    font-size: 22px;
   }
 }
 

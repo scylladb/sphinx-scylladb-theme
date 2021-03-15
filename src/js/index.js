@@ -45,7 +45,7 @@ const onResizeBanner = () => {
   });
 };
 
-function onScrollHighlightSecondarySidebar() {
+const onScrollHighlightSecondarySidebar = () => {
   const sections = $(".content .section").find("h2").parent();
   const headerHeight = 83;
 
@@ -61,7 +61,7 @@ function onScrollHighlightSecondarySidebar() {
       }
     });
   });
-}
+};
 
 $(document).ready(function () {
   $(document).foundation();

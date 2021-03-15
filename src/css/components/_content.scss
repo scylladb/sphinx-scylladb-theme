@@ -34,7 +34,7 @@
 
   .reference:after {
     font-family: $font-icons-family;
-    font-size: $font-base-smallest-size;
+    font-size: $font-smallest-size;
     font-display: swap;
     padding: 0 4px;
   }
@@ -66,8 +66,8 @@
     font-size: 18px;
 
     a {
-      color: $color-typography-topic-grid-heading;
-      border-bottom: 1px $color-typography-topic-grid-heading dotted;
+      color: $color-typography-topic-grid-title;
+      border-bottom: 1px $color-typography-topic-grid-title dotted;
     }
   }
 }

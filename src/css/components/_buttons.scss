@@ -1,5 +1,5 @@
 .button {
-  font-size: $font-base-small-size;
+  font-size: $font-small-size;
   color: $color-typography-button;
   text-transform: uppercase;
   font-weight: 700;
@@ -17,7 +17,7 @@
   margin-left: 50px;
   padding: 20px 0 20px 0 !important;
   color: #5a5e9a;
-  font-size: $font-base-small-size;
+  font-size: $font-small-size;
 
   &__img {
     margin-top: -30px;
