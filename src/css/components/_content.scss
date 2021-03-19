@@ -26,6 +26,13 @@
       float: left;
       font-size: 20px;
     }
+
+    ul {
+      list-style: circle;
+      li::before {
+        content: "";
+      }
+    }
   }
 
   img {

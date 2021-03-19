@@ -82,6 +82,14 @@ To preview the theme locally:
 
 #. The previous command should generate a ``docs/_build/dirhtml`` directory. To preview the docs, open http://127.0.0.1:5500/ with your preferred browser.
 
+Running the tests
+-----------------
+
+Run:
+
+.. code:: console
+
+    poetry run pytest tests/
 
 Publishing the theme to PyPi
 ----------------------------
