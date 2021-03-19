@@ -1,45 +1,183 @@
 .scylla-icon {
-  &:before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -3px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 20px;
-    margin-right: 6px;
-    width: 20px;
+  margin-top: -3px;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 20px;
+  width: 20px;
+
+  &--about-team {
+    background-image: url("../img/icons/icon-about-team.svg");
   }
 
-  &--about-us:before {
+  &--about-us {
     background-image: url("../img/icons/icon-about-us.svg");
   }
 
-  &--cloud:before {
-    background-image: url("../img/icons/icon-cloud.svg");
+  &--architecture {
+    background-image: url("../img/icons/icon-architecture.svg");
   }
 
-  &--enterprise:before {
+  &--benchmarks {
+    background-image: url("../img/icons/icon-benchmarks.svg");
+  }
+
+  &--blog {
+    background-image: url("../img/icons/icon-blog.svg");
+  }
+
+  &--careers {
+    background-image: url("../img/icons/icon-careers.svg");
+  }
+
+  &--circe {
+    background-image: url("../img/icons/icon-circe.svg");
+  }
+  &--cloud {
+    background-image: url("../img/icons/icon-cloud.svg");
+  }
+  &--comparison {
+    background-image: url("../img/icons/icon-comparison.svg");
+  }
+  &--contact-us {
+    background-image: url("../img/icons/icon-contact-us.svg");
+  }
+  &--developers-blog {
+    background-image: url("../img/icons/icon-developers-blog.svg");
+  }
+  &--docs {
+    background-image: url("../img/icons/icon-docs.svg");
+  }
+
+  &--enterprise {
     background-image: url("../img/icons/icon-enterprise.svg");
   }
 
-  &--manager:before {
+  &--events {
+    background-image: url("../img/icons/icon-events.svg");
+  }
+
+  &--infoworld {
+    background-image: url("../img/icons/icon-infoworld.svg");
+  }
+
+  &--integrations {
+    background-image: url("../img/icons/icon-integrations.svg");
+  }
+
+  &--live-test {
+    background-image: url("../img/icons/icon-live-test.svg");
+  }
+
+  &--manager {
     background-image: url("../img/icons/icon-manager.svg");
   }
 
-  &--monitoring:before {
+  &--memory-management {
+    background-image: url("../img/icons/icon-memory-management.svg");
+  }
+
+  &--monitoring {
     background-image: url("../img/icons/icon-monitoring.svg");
   }
 
-  &--operator:before {
+  &--networking {
+    background-image: url("../img/icons/icon-networking.svg");
+  }
+
+  &--news {
+    background-image: url("../img/icons/icon-news.svg");
+  }
+
+  &--newsletter {
+    background-image: url("../img/icons/icon-newsletter.svg");
+  }
+
+  &--nsql-guides {
+    background-image: url("../img/icons/icon-nsql-guides.svg");
+  }
+
+  &--open-source {
+    background-image: url("../img/icons/icon-open-source.svg");
+  }
+
+  &--operator {
     background-image: url("../img/icons/icon-operator.svg");
   }
 
-  &--overview:before {
+  &--overview {
     background-image: url("../img/icons/icon-overview.svg");
   }
 
-  &--resource-center:before {
+  &--partners {
+    background-image: url("../img/icons/icon-partners.svg");
+  }
+
+  &--pricing {
+    background-image: url("../img/icons/icon-pricing.svg");
+  }
+
+  &--release-note {
+    background-image: url("../img/icons/icon-release-notes.svg");
+  }
+
+  &--resource-center {
     background-image: url("../img/icons/icon-resource-center.svg");
+  }
+
+  &--roadmap {
+    background-image: url("../img/icons/icon-roadmap.svg");
+  }
+
+  &--search {
+    background-image: url("../img/icons/icon-search.svg");
+  }
+  &--slack {
+    background-image: url("../img/icons/icon-slack.svg");
+  }
+
+  &--stack-overflow {
+    background-image: url("../img/icons/icon-stack-overflow.svg");
+  }
+
+  &--summit {
+    background-image: url("../img/icons/icon-summit.svg");
+  }
+
+  &--support {
+    background-image: url("../img/icons/icon-support.svg");
+  }
+
+  &--tech-talks {
+    background-image: url("../img/icons/icon-tech-talks.svg");
+  }
+
+  &--testing {
+    background-image: url("../img/icons/icon-testing.svg");
+  }
+
+  &--training {
+    background-image: url("../img/icons/icon-training.svg");
+  }
+
+  &--university {
+    background-image: url("../img/icons/icon-university.svg");
+  }
+
+  &--users-blog {
+    background-image: url("../img/icons/icon-users-blog.svg");
+  }
+
+  &--webinars {
+    background-image: url("../img/icons/icon-webinars.svg");
+  }
+
+  &--whitepapers {
+    background-image: url("../img/icons/icon-whitepapers.svg");
+  }
+
+  &--workshop {
+    background-image: url("../img/icons/icon-workshop.svg");
   }
 }

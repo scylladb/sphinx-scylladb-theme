@@ -88,6 +88,10 @@
       color: $color-typography-base;
       padding: 0;
 
+      i {
+        margin-right: 6px;
+      }
+
       &:hover {
         color: $color-typography-base;
         font-weight: 500;

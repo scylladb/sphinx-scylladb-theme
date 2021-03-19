@@ -10,12 +10,12 @@
 .. toctree::
    :hidden:
 
-   installation
-   configuration
-   commands
-   github-pages
-   examples/index
-   contribute/index
+   _icon[fa,fa-power-off] Installation <installation>
+   _icon[fa,fa-cogs] Configuration <configuration>
+   _icon[fa,fa-terminal] Commands <commands>
+   _icon[fa,fa-github] GitHub Pages <github-pages>
+   _icon[fa,fa-clipboard] Examples <examples/index>
+   _icon[fa,fa-users] Contribute <contribute/index>
 
 .. raw:: html
 
