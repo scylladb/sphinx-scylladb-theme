@@ -1,7 +1,10 @@
 from os import path, getenv
+
 import sphinx_copybutton
 import sphinx_last_updated_by_git
 from sphinx_tabs import tabs
+from navigation_icons import extension as navigation_icons
+
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
 from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
@@ -27,15 +30,16 @@ def setup(app):
     app.add_lexer("ditaa", DitaaLexer())
 
     """Setup custom extensions"""
-    panel_box.setup(app)
-    topic_box.setup(app)
-    from .extensions import substitutions
-    substitutions.setup(app)
+    gh_pages.setup(app)
+    navigation_icons.setup(app)
     not_found.setup(app)
+    panel_box.setup(app)
     redirects.setup(app)
     sphinx_copybutton.setup(app)
     sphinx_last_updated_by_git.setup(app)
+    from .extensions import substitutions
+    substitutions.setup(app)
     tabs.setup(app)
-    gh_pages.setup(app)
+    topic_box.setup(app)
 
     return {"version": version, "parallel_read_safe": True}
