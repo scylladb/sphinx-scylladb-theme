@@ -69,6 +69,10 @@ img {
   max-width: 100%;
 }
 
+button:focus {
+  outline: 0;
+}
+
 table {
   @include floating;
   font-size: $font-small-size;
@@ -79,7 +83,7 @@ table {
   }
 
   p {
-    margin: 0;
+    margin: 0 !important;
   }
 
   thead th,
@@ -113,6 +117,44 @@ code {
     border-radius: $round;
     overflow: auto;
     font-size: $font-small-size;
+  }
+
+  a.copybtn {
+    top: 1em;
+    right: 1em;
+  }
+}
+
+.highlighttable {
+  border-radius: $round;
+  box-shadow: none;
+  background-color: $color-background-code;
+
+  tbody {
+    border: 0;
+    background-color: transparent;
+  }
+
+  .linenos {
+    background-color: $color-background-code;
+    color: $color-typography-code-line-number;
+    width: 60px;
+
+    span {
+      line-height: 26px;
+    }
+  }
+
+  .highlight {
+    pre {
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+    }
+    a.copybtn {
+      top: 0.2em;
+      right: 0.2em;
+    }
   }
 }
 
