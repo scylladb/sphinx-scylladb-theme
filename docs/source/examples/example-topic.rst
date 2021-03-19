@@ -98,10 +98,14 @@ Lorem Ipsum: usage
 ------------------
 Lorem ipsum is:
 
-* a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
-* Also called placeholder (or filler) text.
+* A pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
+   
+  * Also called placeholder (or filler) text.
+   
 * A convenient tool for mock-ups.
+
 * Helps to outline the visual elements of a document or presentation, eg typography, font, or layout.
+
 * Latin text by the classical author and philosopher Cicero.
 
 #. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical;
@@ -261,4 +265,3 @@ Frequently used Includes
    .. include:: /rst_include/scylla-commands-start-index.rst
 
    .. include:: /rst_include/scylla-commands-restart-index.rst
-
