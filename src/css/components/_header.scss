@@ -60,6 +60,7 @@
 .dropdown-menu {
   &__item {
     width: 100%;
+
     > a {
       font-family: $font-title-family;
       color: $color-typography-header-link !important;
@@ -68,6 +69,8 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       padding-right: 30px !important;
+      padding-left: 0px !important;
+      margin-right: 30px;
     }
   }
 }

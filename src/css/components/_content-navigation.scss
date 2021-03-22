@@ -26,12 +26,15 @@
     @include floating;
     background-color: $color-white;
     color: $color-typography-content-navigation-button;
-    font-size: 30px;
+    vertical-align: top;
     font-weight: bold;
-    padding: 20px;
+    padding: 13px 16.5px;
     cursor: pointer;
     i {
-      width: 30px;
+      height: 16px;
+      width: 10px;
+      min-height: 16px;
+      margin: 0;
     }
   }
 

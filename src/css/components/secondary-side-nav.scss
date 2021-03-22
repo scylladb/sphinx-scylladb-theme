@@ -1,6 +1,7 @@
 .secondary-sidenav {
   padding: $spacing;
   height: 100%;
+  overflow-wrap: break-word;
 
   > ul {
     list-style: none;
@@ -51,12 +52,6 @@
   }
 }
 
-@media screen and (min-width: $medium) {
-  .secondary-sidenav {
-    padding: $spacing-l;
-  }
-}
-
 @media screen and (min-width: $large) {
   .secondary-sidenav {
     position: fixed;
@@ -65,5 +60,11 @@
     overflow-y: auto;
     max-height: 100vh;
     max-height: calc(100vh - $header-height);
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .secondary-sidenav {
+    padding: $spacing-l;
   }
 }

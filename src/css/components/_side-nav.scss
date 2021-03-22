@@ -2,10 +2,10 @@
   width: inherit;
   height: 100%;
   background-color: $color-background-sidebar;
-
   padding: $spacing;
   font-family: $font-title-family;
   font-size: $font-small-size;
+  overflow-wrap: break-word;
 
   i {
     font-size: 16px;
@@ -42,11 +42,6 @@
   }
 }
 
-@media screen and (min-width: $medium) {
-  .side-nav {
-    padding: $spacing-l;
-  }
-}
 @media screen and (min-width: $large) {
   .side-nav {
     position: fixed;
@@ -54,5 +49,11 @@
     overflow-y: auto;
     max-height: 100vh;
     max-height: calc(100vh - $header-height);
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .side-nav {
+    padding: $spacing-l;
   }
 }

@@ -31,6 +31,14 @@
     background-image: url("../img/icons/icon-careers.svg");
   }
 
+  &--chevron-left {
+    background-image: url("../img/icons/icon-chevron-left.svg");
+  }
+
+  &--chevron-right {
+    background-image: url("../img/icons/icon-chevron-right.svg");
+  }
+
   &--circe {
     background-image: url("../img/icons/icon-circe.svg");
   }
@@ -50,6 +58,7 @@
   &--developers-blog {
     background-image: url("../img/icons/icon-developers-blog.svg");
   }
+
   &--docs {
     background-image: url("../img/icons/icon-docs.svg");
   }
