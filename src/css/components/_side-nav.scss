@@ -9,7 +9,7 @@
 
   i {
     font-size: 16px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   a {
@@ -52,8 +52,12 @@
   }
 }
 
-@media screen and (min-width: $xlarge) {
+@media screen and (min-width: $xxlarge) {
   .side-nav {
     padding: $spacing-l;
+
+    i {
+      margin-right: 20px;
+    }
   }
 }
