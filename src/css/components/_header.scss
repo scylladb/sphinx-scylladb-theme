@@ -33,7 +33,7 @@
 /* Custom Components */
 .header {
   background-color: $color-background-header;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 99;
 }
@@ -176,6 +176,10 @@
 }
 
 @media screen and (min-width: $large) {
+  .header {
+    position: fixed;
+  }
+
   .floating-menu--large {
     width: 1000px;
     left: -500px !important;
