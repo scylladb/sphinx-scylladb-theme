@@ -4,7 +4,7 @@
   
     <div class="welcome">
       <h1 class="welcome__title">Sphinx ScyllaDB Theme</h1>
-      <p class="welcome__text"> Do you to add the theme to your project? <a href="">Start Here</a></p>
+      <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
     </div>
     
 .. toctree::
@@ -22,7 +22,7 @@
   <div class="topics-grid">
 
   <h2 class="topics-grid__title">Topics</h2>
-  <p class="topics-grid__text">To being choose a topic from the list below</p>
+  <p class="topics-grid__text">To get started, choose a topic from the list</p>
 
   <div class="grid-x">
 
@@ -64,8 +64,7 @@
   :icon: fa fa-clipboard
   :class: my-box
 
-  Contains examples of all kinds of syntax one can use in ScyllaDB docs.
-  Serves as a showcase, playground and test cases for the theme.
+  Contains example pages and components one can use in ScyllaDB docs.
 
 .. topic-box::
   :title: Contribute

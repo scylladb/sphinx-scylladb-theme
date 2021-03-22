@@ -66,7 +66,7 @@ or:
     BRANCHES = []
     smv_branch_whitelist = multiversion_regex_builder(BRANCHES)
 
-2. On ``.github/workflows/pages.yml``, change the command ``make multiversion`` for ``make dirhtml``.
+2. On ``.github/workflows/pages.yaml``, change the command ``make multiversion`` for ``make dirhtml``.
 
 Defining a stable URL
 =====================
@@ -84,4 +84,4 @@ Here's an example:
     smv_latest_version = 'x.y.z'        # Use the branch/tag name
     smv_rename_latest_version = 'latest' # Use the commit hash
 
-.. note:: Other projects have decided to build docs for the ``master`` branch. Since this branch is used normally to integrate changes, it might be possible that the docs are not aligned with the latest stable version.
+.. note:: Other projects have decided to build docs for the ``master`` branch. Since this branch is used commonly to integrate changes, it might be possible that the docs are not aligned with the latest stable version.

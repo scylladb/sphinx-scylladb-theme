@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Moved ``smv_latest_version`` from ``github/workflows/pages.yml`` to ``conf.py`` (#121).
+- Moved ``smv_latest_version`` from ``github/workflows/pages.yaml`` to ``conf.py`` (#121).
 
 ### Removed
 

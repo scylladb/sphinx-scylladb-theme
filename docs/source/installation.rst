@@ -9,7 +9,7 @@ to the project root directory where you want to setup docs. The directory struct
 
    project-name/
       ├── pyproject.toml
-      ├── .github/workflows/pages.yml
+      ├── .github/workflows/pages.yaml
       ├── docs/
       │   ├── _utils/
       │   |   ├── deploy.sh
