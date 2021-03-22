@@ -11,6 +11,8 @@ class TopicBox(Directive):
         'title': directives.unchanged_required,
         'link': directives.path,
         'icon': directives.path,
+        'icon_color': directives.path,
+        'icon_bg': directives.path,
         'image': directives.path,
         'last_updated': directives.unchanged_required,
         'class': directives.unchanged,
@@ -32,15 +34,19 @@ class TopicBox(Directive):
         html_tag_close = '</a></div>' if link else '</div></div>'
         
         icon = self.options.get('icon')
+        icon_color = self.options.get('icon_color', '#23263b')
+        icon_bg = self.options.get('icon_bg', 'transparent')
         image = self.options.get('image')
 
         html_icon = generate_template('''
-            <div class="{class_name}-icon"">
-                <i class="{icon}"></i>
+            <div class="{class_name}-icon" style="background-color: {icon_bg}">
+                <i class="{icon}" style="color:{icon_color}"></i>
             </div>
             ''',
             class_name=class_name,
             icon=icon,
+            icon_color= icon_color,
+            icon_bg = icon_bg,
         ) if icon else generate_template('''
             <div class="{class_name}-icon"">
                 <img src="/_static/{image}"/>
