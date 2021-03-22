@@ -156,9 +156,6 @@ smv_released_pattern = r'^tags/.*$'
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = '{ref.name}'
 
-# Options for sphinx-last-updated-by-git extension
-suppress_warnings = ['git.too_shallow']
-
 # -- Options for LaTeX page output ---------------------------------------
 
 # Grouping the document tree into LaTeX files. List of tuples

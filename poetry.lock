@@ -400,17 +400,6 @@ sphinx = ">=1.8"
 code_style = ["flake8 (>=3.7.0,<3.8.0)", "black", "pre-commit (==1.17.0)"]
 
 [[package]]
-name = "sphinx-last-updated-by-git"
-version = "0.3.0"
-description = "Get the \"last updated\" time for each Sphinx page from Git"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-sphinx = ">=1.8"
-
-[[package]]
 name = "sphinx-multiversion-scylla"
 version = "0.2.10"
 description = "Add support for multiple versions to sphinx"
@@ -591,7 +580,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "88ecda3598c167ea8b73b6fa7a299ffdf30585e3653a268d3f169a8f23c53bc7"
+content-hash = "cd75760a36f7f247e2488dc0a82e859547313ffce6971f92acef8fa57b9c9d2c"
 
 [metadata.files]
 alabaster = [
@@ -785,10 +774,6 @@ sphinx-autobuild = [
 sphinx-copybutton = [
     {file = "sphinx-copybutton-0.2.12.tar.gz", hash = "sha256:9492883786984b6179c92c07ab0410237b26efa826adfa792acfd17b91a63e5c"},
     {file = "sphinx_copybutton-0.2.12-py3-none-any.whl", hash = "sha256:517870030a931f313695705edbe14a8c30660829716100d3d24b379cf9257060"},
-]
-sphinx-last-updated-by-git = [
-    {file = "sphinx-last-updated-by-git-0.3.0.tar.gz", hash = "sha256:425dbac8eb0cb78f6b14ab9b42345800547a8863d6c7b00c970e9509e2174336"},
-    {file = "sphinx_last_updated_by_git-0.3.0-py3-none-any.whl", hash = "sha256:b5c188e1f6e04452333f7b68f6902ee698ad68b23f357ee023c2d028d4a5e001"},
 ]
 sphinx-multiversion-scylla = [
     {file = "sphinx-multiversion-scylla-0.2.10.tar.gz", hash = "sha256:b54d664ecedcf45b98d6be1e939eac596719daa514e4a35f58d8e6330fb05d22"},
