@@ -2,7 +2,7 @@ GitHub Pages
 ============
 
 The theme uses GitHub Pages and GitHub Actions to make the documentation publicly available.
-The file `.github/pages.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/.github/workflows/pages.yml>`_ in your project defines how docs are published using GitHub Pages.
+The file `.github/pages.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/.github/workflows/pages.yaml>`_ in your project defines how docs are published using GitHub Pages.
 
 Most projects build and deploy a new site every time the default branch (master) receives an update.
 When :ref:`multiversion <multiversion>` is enabled, GitHub Pages builds docs for all versions listed in the file ``conf.py``.
