@@ -241,6 +241,5 @@ Resources
 
 The following resources can be used to help you create content for Scylla:
 
-For information about the `Scylla Sphinx Theme <https://sphinx-theme.scylladb.com/>`_ and more
 How to contribute to `Scylla code <https://scylla.docs.scylladb.com/master/contribute/index.html>`_
 
