@@ -70,7 +70,6 @@
       text-transform: uppercase;
       padding-right: 30px !important;
       padding-left: 0px !important;
-      margin-right: 30px;
     }
   }
 }
@@ -155,6 +154,9 @@
 
   .dropdown-menu__item {
     width: initial;
+    > a {
+      margin-right: 30px;
+    }
   }
   .floating-menu {
     margin: 0;
