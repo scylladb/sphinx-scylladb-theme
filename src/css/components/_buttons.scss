@@ -3,13 +3,11 @@
   color: $color-typography-button;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.638235px;
   border-radius: 4px;
   padding: 12px;
   background-color: $color-background-button;
   &:hover {
     background-color: darken($color-background-button, 10%);
-    font-weight: 700;
   }
 }
 
