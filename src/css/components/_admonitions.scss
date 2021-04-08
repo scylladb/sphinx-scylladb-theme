@@ -1,38 +1,66 @@
 .admonition {
-  padding: 16px;
+  padding: 20px;
   margin-bottom: $gap;
-  line-height: 26px;
+  line-height: 20px;
   overflow: auto;
-  border-radius: $round;
+  border-radius: 4px;
+  font-weight: 500;
+
+  a {
+    text-decoration: underline;
+  }
+
+  code {
+    background: $color-white;
+  }
 
   &.tip {
     background: $color-background-admonition-tip;
+    color: $color-typography-admonition-tip;
+
+    a {
+      color: $color-typography-admonition-tip;
+    }
 
     .admonition-title:before {
-      content: "\f05a";
+      @extend .scylla-icon--tip;
     }
   }
 
   &.note {
     background: $color-background-admonition-note;
+    color: $color-typography-admonition-note;
 
+    a {
+      color: $color-typography-admonition-note;
+    }
     .admonition-title:before {
-      content: "\f040";
+      @extend .scylla-icon--exclamation;
     }
   }
 
   &.caution {
     background: $color-background-admonition-caution;
+    color: $color-typography-admonition-caution;
 
+    a {
+      color: $color-typography-admonition-caution;
+    }
     .admonition-title:before {
-      content: "\f0e7";
+      @extend .scylla-icon--warning;
     }
   }
 
   &.warning {
     background: $color-background-admonition-warning;
+    color: $color-typography-admonition-warning;
+
+    a {
+      color: $color-typography-admonition-warning;
+    }
+
     .admonition-title:before {
-      content: "\f071";
+      @extend .scylla-icon--exclamation;
     }
   }
 
@@ -41,9 +69,9 @@
     font-weight: bold;
 
     &:before {
-      font-family: "FontAwesome";
-      font-display: swap;
-      padding-right: 6px;
+      content: "";
+      @extend .scylla-icon;
+      margin-right: 12px;
     }
   }
 }
