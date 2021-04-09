@@ -72,6 +72,8 @@
       content: "";
       @extend .scylla-icon;
       margin-right: 12px;
+      min-height: 24px;
+      width: 24px;
     }
   }
 }
