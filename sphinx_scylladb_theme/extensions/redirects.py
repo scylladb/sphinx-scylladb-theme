@@ -53,7 +53,7 @@ def create_redirect_to_latest_version(app, exception):
         head, tail = os.path.split(out_dir)
 
 
-        with open(os.path.join(head + '/index.html'), 'w') as t_file:
+        with open(os.path.join(head + '/index.html'), 'w+') as t_file:
             t_file.write(build_redirect_body(latest_dir)) 
 
 def create_redirects(app, exception):
@@ -91,10 +91,10 @@ def create_redirects(app, exception):
                 if app.builder.name == 'dirhtml':
                     if not os.path.exists(target_path):
                         os.makedirs(target_path)
-                    with open(os.path.join(target_path + '/index.html'), 'w') as t_file:
+                    with open(os.path.join(target_path + '/index.html'), 'w+') as t_file:
                         t_file.write(build_redirect_body(redirect_to))
                 else:
-                    with open(os.path.join(target_path + '.html'), 'w') as t_file:
+                    with open(os.path.join(target_path + '.html'), 'w+') as t_file:
                         t_file.write(build_redirect_body(redirect_to))
 
 def setup(app):
