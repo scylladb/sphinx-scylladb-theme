@@ -111,7 +111,6 @@ html_theme_options = {
     'site_description': 'Sphinx Theme for ScyllaDB projects.',
     'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
     'show_sidebar_index': 'false',
-    'hide_banner': 'true',
 }
 
 extlinks = {
