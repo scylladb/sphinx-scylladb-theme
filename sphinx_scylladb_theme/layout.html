@@ -129,7 +129,11 @@
             {% endif %}
             If you want up-to-date information, please have a look at 
             <a href="{{ vpathto(latest_version.name) }}">
-                    {{latest_version.name}}
+                {% if latest_version in versions.branches %}
+                    {{ latest_version.name | replace(theme_branch_substring_removed, '') }}
+                {% else %}
+                    {{ latest_version.name | replace(theme_tag_substring_removed, '') }}
+                {% endif %}        
             </a>.
         </div>
         {% endif %}
