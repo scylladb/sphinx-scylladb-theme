@@ -77,18 +77,31 @@ table {
   @include floating;
   font-size: $font-small-size;
   margin-bottom: $gap;
-
-  thead {
-    border: 0;
-  }
+  color: $color-typography-table-body;
 
   p {
     margin: 0 !important;
   }
 
+  thead {
+    background: transparent;
+    color: $color-typography-table-header;
+    font-family: $font-title-family;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: $font-smallest-size;
+    letter-spacing: 1.5px;
+    border: 0;
+  }
+
   thead th,
   td {
     padding: 20px;
+  }
+
+  tbody tr {
+    border-top: 1px solid rgba(90, 94, 154, 0.1);
+    background-color: transparent !important;
   }
 }
 

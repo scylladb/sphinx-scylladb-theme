@@ -21,6 +21,9 @@
 
     &:not(.bread__item--last)::after {
       margin: 0 5px;
+      position: relative;
+      opacity: 1;
+      content: "/";
     }
   }
 }

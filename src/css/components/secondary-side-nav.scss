@@ -59,7 +59,8 @@
     width: inherit;
     overflow-y: auto;
     max-height: 100vh;
-    max-height: calc(100vh - $header-height);
+    padding-bottom: $footer-height;
+    max-height: calc(100vh - 83px);
   }
 }
 

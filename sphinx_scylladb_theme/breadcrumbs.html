@@ -1,7 +1,7 @@
-<ul class="breadcrumbs">
-  <li class="bread__item"><a href="{{ pathto(master_doc) }}" class="icon icon-home">Home</a></li>
+<div class="breadcrumbs">
+  <span class="bread__item"><a href="{{ pathto(master_doc) }}" class="icon icon-home">Home</a></span>
   {% for doc in parents %}
-  <li class="bread__item"><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+  <span class="bread__item"><a href="{{ doc.spannk|e }}">{{ doc.title }}</a></span>
   {% endfor %}
-  <li class="bread__item bread__item--last">{{ title }}</li>
-</ul>
+  <span class="bread__item bread__item--last">{{ title }}</span>
+</div>
