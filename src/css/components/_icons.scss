@@ -6,6 +6,11 @@
   background-size: contain;
   min-height: 20px;
   width: 20px;
+  filter: brightness(0);
+
+  &--apps {
+    background-image: url("../img/icons/icon-apps.svg");
+  }
 
   &--about-team {
     background-image: url("../img/icons/icon-about-team.svg");
@@ -43,8 +48,16 @@
     background-image: url("../img/icons/icon-circe.svg");
   }
 
+  &--clock {
+    background-image: url("../img/icons/icon-clock.svg");
+  }
+
   &--cloud {
     background-image: url("../img/icons/icon-cloud.svg");
+  }
+
+  &--cloud-docs {
+    background-image: url("../img/icons/icon-cloud-docs.svg");
   }
 
   &--comparison {
@@ -75,6 +88,18 @@
     background-image: url("../img/icons/icon-exclamation.svg");
   }
 
+  &--home {
+    background-image: url("../img/icons/icon-home.svg");
+  }
+
+  &--getting-started {
+    background-image: url("../img/icons/icon-getting-started.svg");
+  }
+
+  &--glossary {
+    background-image: url("../img/icons/icon-glossary.svg");
+  }
+
   &--infoworld {
     background-image: url("../img/icons/icon-infoworld.svg");
   }
@@ -83,12 +108,20 @@
     background-image: url("../img/icons/icon-integrations.svg");
   }
 
+  &--knowledge-base {
+    background-image: url("../img/icons/icon-knowledge-base.svg");
+  }
+
   &--live-test {
     background-image: url("../img/icons/icon-live-test.svg");
   }
 
   &--manager {
     background-image: url("../img/icons/icon-manager.svg");
+  }
+
+  &--memory-management {
+    background-image: url("../img/icons/icon-memory-management.svg");
   }
 
   &--memory-management {

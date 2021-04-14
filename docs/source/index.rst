@@ -6,16 +6,16 @@
       <h1 class="welcome__title">Sphinx ScyllaDB Theme</h1>
       <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
     </div>
-    
+
 .. toctree::
    :hidden:
 
-   _icon[fa,fa-power-off] Installation <installation>
-   _icon[fa,fa-cogs] Configuration <configuration>
-   _icon[fa,fa-terminal] Commands <commands>
+   _icon[scylla-icon, scylla-icon--getting-started] Installation <installation>
+   _icon[scylla-icon, scylla-icon--integrations] Configuration <configuration>
+   _icon[scylla-icon, scylla-icon--apps] Commands <commands>
    _icon[fa,fa-github] GitHub Pages <github-pages>
-   _icon[fa,fa-clipboard] Examples <examples/index>
-   _icon[fa,fa-users] Contribute <contribute/index>
+   _icon[scylla-icon, scylla-icon--tech-talks] Examples <examples/index>
+   _icon[scylla-icon, scylla-icon--about-team] Contribute <contribute/index>
 
 .. raw:: html
 
@@ -29,7 +29,7 @@
 .. topic-box::
   :title: Installation
   :link: installation
-  :icon: fa fa-power-off
+  :icon: scylla-icon scylla-icon--getting-started
   :class: my-box
 
   Contains information on how to install the theme and extensions in a new project.
@@ -37,7 +37,7 @@
 .. topic-box::
   :title: Configuration
   :link: configuration
-  :icon: fa fa-cogs
+  :icon: scylla-icon scylla-icon--integrations
   :class: my-box
 
   Contains information on configuring Sphinx projects with this theme.
@@ -45,7 +45,7 @@
 .. topic-box::
   :title: Commands
   :link: commands
-  :icon: fa fa-terminal
+  :icon: scylla-icon scylla-icon--apps
   :class: my-box
 
   Contains information about all the available commands to build and preview the docs.
@@ -61,7 +61,7 @@
 .. topic-box::
   :title: Demos and Examples
   :link: examples
-  :icon: fa fa-clipboard
+  :icon: scylla-icon scylla-icon--tech-talks
   :class: my-box
 
   Contains example pages and components one can use in ScyllaDB docs.
@@ -69,7 +69,7 @@
 .. topic-box::
   :title: Contribute
   :link: contribute
-  :icon: fa fa-users
+  :icon: scylla-icon scylla-icon--about-team
   :class: my-box
 
   Contains information on how to set up a developer environment,
