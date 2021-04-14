@@ -89,13 +89,13 @@ def create_redirects(app, exception):
                     redirect_to = app.config.html_baseurl + '/' + os.environ['SPHINX_MULTIVERSION_NAME'] + redirect_to
                 
                 if app.builder.name == 'dirhtml':
-                    if not os.path.exists(target_path):
-                        os.makedirs(target_path)
-                    with open(os.path.join(target_path + '/index.html'), 'w+') as t_file:
-                        t_file.write(build_redirect_body(redirect_to))
+                    target_path = target_path + '/index.html'
                 else:
-                    with open(os.path.join(target_path + '.html'), 'w+') as t_file:
-                        t_file.write(build_redirect_body(redirect_to))
+                    target_path = target_path + '.html'
+
+                os.makedirs(os.path.dirname(target_path), exist_ok=True)
+                with open(os.path.join(target_path), 'w+') as t_file:
+                    t_file.write(build_redirect_body(redirect_to))
 
 def setup(app):
     app.add_config_value('redirects_file', '', 'html')
