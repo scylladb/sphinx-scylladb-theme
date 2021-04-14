@@ -52,7 +52,7 @@
     top: $header-height;
     overflow-y: auto;
     max-height: 100vh;
-    padding-bottom: $footer-height;
+    padding-bottom: $footer-height !important;
     max-height: calc(100vh - 83px);
   }
 }
