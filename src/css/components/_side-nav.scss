@@ -10,6 +10,8 @@
   i {
     font-size: 16px;
     margin-right: 10px;
+    min-height: 16px;
+    width: 16px;
   }
 
   a {
@@ -18,6 +20,10 @@
 
   ul {
     margin: 0;
+  }
+
+  .toctree-l1 > ul {
+    margin-left: 30px;
   }
 
   li {
