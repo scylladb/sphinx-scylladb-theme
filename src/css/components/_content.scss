@@ -95,3 +95,10 @@
     padding: 60px $spacing-l;
   }
 }
+
+@media screen and (min-width: $large) {
+  .content section {
+    // header + offset
+    scroll-margin-top: calc(83px);
+  }
+}

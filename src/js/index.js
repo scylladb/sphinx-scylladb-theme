@@ -27,7 +27,6 @@ const hideBanner = () => {
 
 const onCloseBanner = () => {
   $(".custom-promo-banner__close").on("click", function () {
-    console.log("click");
     Cookies.set("hide-enterprise-banner", "1");
     $("body").css("padding-top", 0);
     $(".custom-promo-banner-wrap").hide();
@@ -46,14 +45,16 @@ const onResizeBanner = () => {
 };
 
 const onScrollHighlightSecondarySidebar = () => {
-  const sections = $(".content .section").find("h2").parent();
+  const sections = $(".content").find("h2").parent();
+  console.log(sections);
   const headerHeight = 83;
+  const offset = 20;
 
   $(window).scroll(function () {
     const currentScroll = $(this).scrollTop();
     sections.each(function () {
       const sectionPosition = $(this).offset().top;
-      if (sectionPosition - headerHeight < currentScroll) {
+      if (sectionPosition - headerHeight - offset < currentScroll) {
         const id = $(this).attr("id");
 
         $(".secondary-sidenav a").removeClass("current");
