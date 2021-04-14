@@ -5,11 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.21] - 24 Jan 2020
+## [0.1.22] - 14 Apr 2021
 
 ### Added
 
-- ``smv_rename_latest_version`` setting in ``conf.py`` override the latest version output directory (#121).
+- Top-bar for Scylla University live (#152)
+- Contribution guidelines (#146)
+- ``*-substring_removed`` settings in ``conf`` overrides part of the version name in the multiversion dropdown. (#110)
+
+### Fixed
+
+- Create intermediate directories for redirections (#153)
+
+## [0.1.21] - 24 Jan 2021
+
+### Added
+
+- ``smv_rename_latest_version`` setting in ``conf.py`` overrides the latest version output directory (#121).
 
 ### Changed
 
@@ -24,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ``make multiversionpreview`` redirects automatically to the latest version (#121).
  
 
-## [0.1.20] - 19 Jan 2020
+## [0.1.20] - 19 Jan 2021
 
 ### Added
 - Unstable version warning (#111).
@@ -34,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disable Scylla Summit banner (#106).
 - Documentation moved to docs folder (#108).
 
-## [0.1.19] - 07 Jan 2020
+## [0.1.19] - 07 Jan 2021
 
 ### Added
 
@@ -108,6 +120,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The 404 page is now loaded from the theme (#58, #59)
 - The redirection scripts are now part of the theme (#58)
 
+[0.1.22]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.21...0.1.22
 [0.1.21]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.20...0.1.21
 [0.1.20]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.19...0.1.20
 [0.1.19]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.18...0.1.19

@@ -21,17 +21,29 @@
   {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %} {%- endmacro %}
   {%- macro css() %}
   <!-- connect to domain of font files -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- optionally increase loading priority -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+  />
 
   <!-- async CSS -->
-  <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+  <link
+    rel="stylesheet"
+    media="print"
+    onload="this.onload=null;this.removeAttribute('media');"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+  />
 
   <!-- no-JS fallback -->
   <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    />
   </noscript>
   <link
     rel="stylesheet"
@@ -142,7 +154,10 @@
             endif %} If you want up-to-date information, please have a look at
 
             <a href="{{ vpathto(latest_version.name) }}">
-              {{latest_version.name}} </a
+              {% if latest_version in versions.branches %} {{
+              latest_version.name | replace(theme_branch_substring_removed, '')
+              }} {% else %} {{ latest_version.name |
+              replace(theme_tag_substring_removed, '') }} {% endif %} </a
             >.
           </div>
           {% endif %} {% if pagename != master_doc %}

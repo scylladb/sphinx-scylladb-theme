@@ -17,7 +17,9 @@ For example:
         'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
         'hide_right_sidebar_index': 'true',
         'hide_banner': 'true',
-        'default_branch': 'master'
+        'default_branch': 'master',
+        'branch_substring_removed': 'branch-',
+        'tag_substring_removed': '-scylla'
     }
 
 * ``site_description``: Short summary describing the site. Metadescriptions are mainly used by search engines.
@@ -25,6 +27,8 @@ For example:
 * ``hide_right_sidebar_index``: Set to ``true`` to hide the right sidebar on the index page.
 * ``hide_banner``: Set to ``true`` to show the ScyllaDB Summit registration banner at the top of the page.
 * ``default_branch``: Name of the default branch where changes are integrated. Defaults to ``master``.
+* ``branch_substring_removed``: Part of the branch name to skip. When the project does not set this option, the theme removes the prefix ``branch-`` for all releases listed in the multiversion dropdown.
+* ``tag_substring_removed``: Part of the tag name to skip. When the project does not set this option, the theme removes the suffix ``-scylla`` for all releases listed in the multiversion dropdown.
 
 .. _multiversion:
 

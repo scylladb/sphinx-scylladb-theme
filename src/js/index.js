@@ -26,7 +26,7 @@ const hideBanner = () => {
 };
 
 const onCloseBanner = () => {
-  $(".custom-promo-banner--close").on("click", function () {
+  $(".custom-promo-banner__close").on("click", function () {
     console.log("click");
     Cookies.set("hide-enterprise-banner", "1");
     $("body").css("padding-top", 0);
