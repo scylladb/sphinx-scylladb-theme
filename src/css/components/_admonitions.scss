@@ -72,7 +72,7 @@
     &:before {
       content: "";
       @extend .scylla-icon;
-      filter: brightness(100);
+      filter: brightness(100) !important;
       margin-right: 12px;
       min-height: 24px !important;
       width: 24px !important;
