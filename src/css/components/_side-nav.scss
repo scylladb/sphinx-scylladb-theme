@@ -58,8 +58,12 @@
     top: $header-height;
     overflow-y: auto;
     max-height: 100vh;
-    padding-bottom: $footer-height !important;
+    padding-bottom: 0 !important;
     max-height: calc(100vh - 83px);
+
+    > ul {
+      padding-bottom: $footer-height;
+    }
   }
 }
 

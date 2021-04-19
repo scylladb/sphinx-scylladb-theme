@@ -145,6 +145,10 @@ code {
   tbody {
     border: 0;
     background-color: transparent;
+
+    tr {
+      border-top: none;
+    }
   }
 
   .linenos {
