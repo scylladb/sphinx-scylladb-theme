@@ -25,6 +25,7 @@
 
     .admonition-title:before {
       @extend .scylla-icon--tip;
+      filter: brightness(100);
     }
   }
 
@@ -37,6 +38,7 @@
     }
     .admonition-title:before {
       @extend .scylla-icon--exclamation;
+      filter: brightness(100);
     }
   }
 
@@ -62,6 +64,7 @@
 
     .admonition-title:before {
       @extend .scylla-icon--exclamation;
+      filter: brightness(100);
     }
   }
 
@@ -72,7 +75,6 @@
     &:before {
       content: "";
       @extend .scylla-icon;
-      filter: brightness(100) !important;
       margin-right: 12px;
       min-height: 24px !important;
       width: 24px !important;
