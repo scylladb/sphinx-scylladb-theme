@@ -3,6 +3,8 @@
 }
 
 .navigation {
+  max-width: 50%;
+  display: flex;
   &--prev {
     float: left;
 
@@ -46,6 +48,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     line-height: 24px;
+    word-wrap: break-word;
   }
 }
 
