@@ -113,7 +113,7 @@ code {
   color: $color-typography-code;
 
   &.download {
-    color: inherit;
+    color: $color-typography-code;
     background: none;
   }
 }

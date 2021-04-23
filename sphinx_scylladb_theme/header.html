@@ -22,7 +22,13 @@
           <ul class="floating-menu menu vertical">
             <li class="floating-menu__item">
               <a href="https://docs.scylladb.com"
-                ><i class="scylla-icon scylla-icon--about-us"></i>Scylla Docs</a
+                ><i class="scylla-icon scylla-icon--about-us"></i>Scylla Open Source</a
+              >
+            </li>
+            <li class="floating-menu__item">
+              <a href="https://docs.scylladb.com"
+                ><i class="scylla-icon scylla-icon--enterprise"></i>Scylla
+                Enterprise</a
               >
             </li>
             <li class="floating-menu__item">
@@ -55,7 +61,7 @@
           <a href="#">Tools</a>
           <ul class="floating-menu menu vertical">
             <li class="floating-menu__item">
-              <a href="https://scylladb.github.io/scylla-manager/">
+              <a href="https://manager.docs.scylladb.com/">
                 <i class="scylla-icon scylla-icon--manager"></i>Scylla
                 Manager</a
               >
@@ -63,286 +69,49 @@
             <li class="floating-menu__item">
               <a href="https://monitoring.docs.scylladb.com/">
                 <i class="scylla-icon scylla-icon--monitoring"></i>Scylla
-                Monitor</a
+                Monitoring Stack</a
               >
             </li>
             <li class="floating-menu__item">
               <a href="https://operator.docs.scylladb.com/">
-                <i class="scylla-icon scylla-icon--operator"></i>Scylla
-                Operator</a
-              >
+                <i class="scylla-icon scylla-icon--operator"></i>Scylla Operator
+              </a>
             </li>
           </ul>
         </li>
         <li class="dropdown-menu__item">
           <a href="#">Drivers</a>
-          <ul class="floating-menu menu vertical floating-menu--large">
-            <li class="floating-menu__item grid-x">
-              <div class="cell large-4">
-                <div class="drivers-column">
-                  <img
-                    class="drivers-column__img"
-                    loading="lazy"
-                    src="{{ pathto('_static/img/mascots/scylla-drivers.svg', 1) }}"
-                    alt="Scylla Drivers Logo"
-                  />
-                  <h3 class="drivers-column__title">Scylla Drivers</h3>
-                  <p class="drivers-column__description">
-                    Shard-aware drivers for superior performance.
-                  </p>
-                </div>
-              </div>
-              <div class="cell large-3">
-                <div class="scylla-drivers-column">
-                  <h4 class="scylla-drivers-column__title">Scylla Drivers</h4>
-                  <ul class="drivers-menu menu vertical">
-                    <li class="drivers-menu__item">
-                      <a
-                        class="button-driver"
-                        href="https://docs.scylladb.com/using-scylla/scylla-go-driver/"
-                      >
-                        <img
-                          class="button-driver__img"
-                          loading="lazy"
-                          src="{{ pathto('_static/img/drivers/go.png', 1) }}"
-                          alt="Scylla GO Driver Logo"
-                        />
-                        <span class="button-driver__title"
-                          >Scylla GO Driver</span
-                        ></a
-                      >
-                    </li>
-                    <li class="drivers-menu__item">
-                      <a
-                        class="button-driver"
-                        href="https://docs.scylladb.com/using-scylla/scylla-gocqlx-driver/"
-                      >
-                        <img
-                          class="button-driver__img"
-                          loading="lazy"
-                          src="{{ pathto('_static/img/drivers/gosql.png', 1) }}"
-                          alt="Scylla GOSQLx Driver Logo"
-                        />
-                        <span class="button-driver__title"
-                          >Scylla GOSQLx Driver</span
-                        >
-                      </a>
-                    </li>
-                    <li class="drivers-menu__item">
-                      <a
-                        class="button-driver"
-                        href="https://python-driver.docs.scylladb.com/"
-                      >
-                        <img
-                          class="button-driver__img"
-                          loading="lazy"
-                          src="{{ pathto('_static/img/drivers/python.png', 1) }}"
-                          alt="Scylla Python Driver Logo"
-                        />
-
-                        <span class="button-driver__title"
-                          >Scylla Python Driver</span
-                        ></a
-                      >
-                    </li>
-                    <li class="drivers-menu__item">
-                      <a
-                        class="button-driver"
-                        href="https://java-driver.docs.scylladb.com/"
-                      >
-                        <img
-                          class="button-driver__img"
-                          loading="lazy"
-                          src="{{ pathto('_static/img/drivers/java.png', 1) }}"
-                          alt="Scylla Java Driver Logo"
-                        />
-                        <span class="button-driver__title"
-                          >Scylla Java Driver</span
-                        ></a
-                      >
-                    </li>
-                    <li class="drivers-menu__item">
-                      <a
-                        class="button-driver"
-                        href="https://cpp-driver.docs.scylladb.com"
-                      >
-                        <img
-                          class="button-driver__img"
-                          loading="lazy"
-                          src="{{ pathto('_static/img/drivers/cplusplus.png', 1) }}"
-                          alt="Scylla C++ Driver Logo"
-                        />
-                        <span class="button-driver__title"
-                          >Scylla C++ Driver</span
-                        ></a
-                      >
-                    </li>
-                    <li class="drivers-menu__item">
-                      <a class="button-driver" href="#">
-                        <img
-                          class="button-driver__img"
-                          loading="lazy"
-                          src="{{ pathto('_static/img/drivers/rust.png', 1) }}"
-                          alt="Scylla Rust Driver Logo"
-                        />
-                        <span class="button-driver__title"
-                          >Scylla Rust Driver</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="cell large-5">
-                <div class="third-party-drivers-column">
-                  <h4 class="third-party-drivers-column__title">
-                    Third-Party Drivers
-                  </h4>
-                  <div class="grid-x">
-                    <div class="cell large-6">
-                      <ul class="drivers-menu menu vertical">
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/datastax/ruby-driver/"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/ruby.png', 1) }}"
-                              alt="Ruby Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >Ruby Driver</span
-                            ></a
-                          >
-                        </li>
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/datastax/cpp-driver/"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/cplusplus.png', 1) }}"
-                              alt="C++ Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >C++ Driver</span
-                            ></a
-                          >
-                        </li>
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/datastax/python-driver/"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/python.png', 1) }}"
-                              alt="Python Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >Python Driver</span
-                            ></a
-                          >
-                        </li>
-                        <li class="drivers-menu__item">
-                          <a class="button-driver" href="#">
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/java.png', 1) }}"
-                              target="_blank"
-                              alt="Java Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >Java Driver</span
-                            ></a
-                          >
-                        </li>
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/datastax/nodejs-driver/"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/node.png', 1) }}"
-                              alt="Node Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >Node.js Driver</span
-                            ></a
-                          >
-                        </li>
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/AlexPikalov/cdrs"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/rust.png', 1) }}"
-                              alt="Rust Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >Rust Driver</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="cell large-6">
-                      <ul class="drivers-menu menu vertical">
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/datastax/csharp-driver/"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/csharp.png', 1) }}"
-                              alt="C# Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >C# Driver</span
-                            ></a
-                          >
-                        </li>
-                        <li class="drivers-menu__item">
-                          <a
-                            class="button-driver"
-                            href="https://github.com/datastax/php-driver/"
-                            target="_blank"
-                          >
-                            <img
-                              class="button-driver__img"
-                              loading="lazy"
-                              src="{{ pathto('_static/img/drivers/php.png', 1) }}"
-                              alt="PHP Driver Logo"
-                            />
-                            <span class="button-driver__title"
-                              >PHP Driver</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <ul class="floating-menu menu vertical">
+            <li class="floating-menu__item">
+              <a
+                href="https://docs.scylladb.com/using-scylla/drivers/cql-drivers/"
+              >
+                <i class="scylla-icon scylla-icon--nsql-guides"></i>CQL Drivers
+              </a>
+            </li>
+            <li class="floating-menu__item">
+              <a
+                href="https://docs.scylladb.com/using-scylla/drivers/dynamo-drivers/"
+              >
+                <i class="scylla-icon scylla-icon--overview"></i>DynamoDB
+                Drivers
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown-menu__item">
+          <a href="#">About</a>
+          <ul class="floating-menu menu vertical">
+            <li class="floating-menu__item">
+              <a href="https://www.scylladb.com/">
+                <i class="scylla-icon scylla-icon--about-us"></i>About ScyllaDB
+              </a>
+            </li>
+            <li class="floating-menu__item">
+              <a href="https://university.scylladb.com/">
+                <i class="scylla-icon scylla-icon--university"></i>Scylla
+                University
+              </a>
             </li>
           </ul>
         </li>
