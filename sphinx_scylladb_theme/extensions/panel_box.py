@@ -15,25 +15,20 @@ class PanelBox(Directive):
 
     def run(self):
         class_name = 'panel-box'
+        container_class_name = self.options.get('class', '')
 
         html0 = generate_template('''
-                <div class="panel callout radius animated">
-                   <div class="grid-x">
-                      <div class="medium-3 cell">
-                         <h5 id={id}>{title}</h5>
-              </div>
-              <div class="medium-9 cell">
+        <div class="{container_class_name}">
+                <div class="{class_name}">
+                <h5 id={id}>{title}</h5>
             ''',
+            container_class_name = container_class_name,
             class_name=class_name,
-                                  title=self.options.get('title', ''),
+            title=self.options.get('title', ''),
             id=self.options.get('id', '')
         )
 
-        html1 = generate_template('''
-        </div></div></div>
-            ''',
-        class_name=class_name
-        )
+        html1 = '</div></div>'
 
         description_node = nodes.container()
         self.state.nested_parse(self.content, 0, description_node)

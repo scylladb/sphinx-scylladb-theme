@@ -20,14 +20,17 @@ class TopicBox(Directive):
 
     def run(self):
         class_name = 'topic-box'
+        container_class_name = self.options.get('class', 'small-6 large-3').replace(',', ' ')
 
         link = self.options.get('link')
         html_tag_open = generate_template('''
-            <div class="cell small-6 large-3">
+            <div class="cell {container_class_name}">
             <a class="{class_name}" href="{link}">
             ''' if link else '''
+            <div class="{container_class_name}">
             <div class="{class_name}">
             ''',
+            container_class_name=container_class_name,
             class_name=class_name,
             link=link,
         )
@@ -39,7 +42,7 @@ class TopicBox(Directive):
         image = self.options.get('image')
 
         html_icon = generate_template('''
-            <div class="{class_name}-icon" style="background-color: {icon_bg}">
+            <div class="{class_name}__icon" style="background-color: {icon_bg}">
                 <i class="{icon}" style="color:{icon_color}"></i>
             </div>
             ''',
@@ -48,7 +51,7 @@ class TopicBox(Directive):
             icon_color= icon_color,
             icon_bg = icon_bg,
         ) if icon else generate_template('''
-            <div class="{class_name}-icon"">
+            <div class="{class_name}__icon"">
                 <img src="/_static/{image}"/>
             </div>
             ''',
@@ -58,7 +61,7 @@ class TopicBox(Directive):
 
         last_updated = self.options.get('last_updated')
         html_last_updated = generate_template('''
-            <div class="{class_name}-subtitle">Last updated: {last_updated}</div>
+            <div class="{class_name}__subtitle">Last updated: {last_updated}</div>
             ''',
             class_name=class_name,
             last_updated=last_updated,
@@ -66,14 +69,14 @@ class TopicBox(Directive):
 
         html0 = generate_template('''
             {html_tag_open}
-                <div class="{class_name}-head">
+                <div class="{class_name}__head">
                     {html_icon}
                     <div class="{class_name}-head-content">
-                        <h3 class="{class_name}-title">{title}</h3>
+                        <h3 class="{class_name}__title">{title}</h3>
                         {html_last_updated}
                     </div>
                 </div>
-                <div class="{class_name}-body">
+                <div class="{class_name}__body">
             ''',
             class_name=class_name,
             html_tag_open=html_tag_open,
