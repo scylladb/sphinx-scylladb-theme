@@ -1,4 +1,8 @@
-<div class="side-nav">
-  {% if versions %} {% include 'versions.html' %} {% endif %} 
-  {{ icons_navigation_tree }}
+<div id="side-nav" class="side-nav" data-closable data-toggler=".show">
+  {% if versions %} {% include 'versions.html' %} {% endif %} {{
+  icons_navigation_tree }}
 </div>
+
+<span class="side-nav-toggle" data-toggle="side-nav">
+  <button class="menu-icon" type="button"></button>
+</span>
