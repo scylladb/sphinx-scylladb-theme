@@ -28,7 +28,7 @@
   }
 
   .toctree-l1 > ul {
-    margin-left: 3em;
+    margin-left: 2em;
   }
 
   li {
@@ -65,8 +65,36 @@
   width: 60px;
   height: 34px;
   background: $color-background-sidebar-button;
+  border: 1px solid $color-border-sidebar-button;
   border-radius: 4px;
   z-index: 150;
+  text-align: center;
+
+  &__button {
+    font-size: 30px;
+    color: $color-typography-sidebar-button;
+    &--closed {
+      background: $color-typography-sidebar-button;
+      -webkit-box-shadow: 0 7px 0 $color-typography-sidebar-button,
+        0 14px 0 $color-typography-sidebar-button;
+      box-shadow: 0 7px 0 $color-typography-sidebar-button,
+        0 14px 0 $color-typography-sidebar-button;
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 0 auto;
+      margin-top: 8px;
+    }
+  }
+
+  &[aria-expanded="true"] .side-nav-toggle__button--closed {
+    display: none;
+  }
+
+  &[aria-expanded="false"] .side-nav-toggle__button--open {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $large) {
@@ -92,6 +120,10 @@
 @media screen and (min-width: $xxlarge) {
   .side-nav {
     padding: $spacing-l;
+
+    .toctree-l1 > ul {
+      margin-left: 3em;
+    }
 
     i {
       margin-right: 20px;
