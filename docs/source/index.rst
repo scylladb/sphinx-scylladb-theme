@@ -30,7 +30,6 @@
   :title: Installation
   :link: installation
   :icon: scylla-icon scylla-icon--getting-started
-  :class: my-box
 
   Contains information on how to install the theme and extensions in a new project.
 
@@ -38,7 +37,6 @@
   :title: Configuration
   :link: configuration
   :icon: scylla-icon scylla-icon--integrations
-  :class: my-box
 
   Contains information on configuring Sphinx projects with this theme.
 
@@ -46,7 +44,6 @@
   :title: Commands
   :link: commands
   :icon: scylla-icon scylla-icon--apps
-  :class: my-box
 
   Contains information about all the available commands to build and preview the docs.
 
@@ -54,7 +51,6 @@
   :title: GitHub Pages
   :link: github-pages
   :icon: fa fa-github
-  :class: my-box
 
   Contains guides for publishing documentation sites using GitHub Actions & Pages.
 
@@ -62,7 +58,6 @@
   :title: Demos and Examples
   :link: examples
   :icon: scylla-icon scylla-icon--tech-talks
-  :class: my-box
 
   Contains example pages and components one can use in ScyllaDB docs.
 
@@ -70,7 +65,6 @@
   :title: Contribute
   :link: contribute
   :icon: scylla-icon scylla-icon--about-team
-  :class: my-box
 
   Contains information on how to set up a developer environment,
   update the theme and static assets, and publish a Python package.
