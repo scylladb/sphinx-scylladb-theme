@@ -32,6 +32,10 @@
     color: $color-typography-topic-grid-title;
     font-size: 18px;
     line-height: 32px;
+
+    .container p:last-child {
+      margin: 0;
+    }
   }
 }
 
