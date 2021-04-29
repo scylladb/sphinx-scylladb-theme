@@ -14,7 +14,7 @@ class PanelBox(Directive):
     }
 
     def run(self):
-        class_name = 'panel-box'
+        class_name = 'panel'
         container_class_name = self.options.get('class', '')
 
         html0 = generate_template('''

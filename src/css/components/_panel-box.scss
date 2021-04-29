@@ -14,7 +14,7 @@
   }
 }
 
-.panel-box {
+.panel {
   background-color: $color-background-panel;
   border: 0;
   padding: 16px;
@@ -22,7 +22,7 @@
   border-radius: 4px;
 }
 
-.panel-grid .panel-box {
+.panel-grid .panel {
   background-color: transparent;
   margin: 0;
   padding: 16px 0;
@@ -43,7 +43,7 @@
 
 @media screen and (min-width: $large) {
   .panel-grid {
-    .panel-box {
+    .panel {
       margin-bottom: 0;
     }
   }
