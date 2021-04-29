@@ -18,9 +18,9 @@ class PanelBox(Directive):
         container_class_name = self.options.get('class', '')
 
         html0 = generate_template('''
-        <div class="{container_class_name}">
+        <div class="cell {container_class_name}">
                 <div class="{class_name}">
-                <h5 id={id}>{title}</h5>
+                <h5 id={id} class="{class_name}__title">{title}</h5>
             ''',
             container_class_name = container_class_name,
             class_name=class_name,

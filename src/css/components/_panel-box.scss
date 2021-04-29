@@ -1,7 +1,50 @@
+.panel-grid {
+  padding: $spacing;
+
+  &__title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $color-typography-topic-grid-title;
+    margin-bottom: 30px !important;
+  }
+}
+
 .panel-box {
   background-color: $color-background-panel;
   border: 0;
   padding: 16px;
   margin-bottom: 30px;
   border-radius: 4px;
+}
+
+.panel-grid .panel-box {
+  background-color: transparent;
+  margin: 0;
+  padding: 16px 0;
+
+  &__title {
+    font-weight: 600;
+    color: $color-typography-topic-grid-title;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .panel-grid {
+    padding: $spacing-l;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .panel-grid {
+    .panel-box {
+      margin-bottom: 0;
+    }
+  }
 }
