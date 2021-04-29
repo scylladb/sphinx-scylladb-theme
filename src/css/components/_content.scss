@@ -1,6 +1,7 @@
 .content {
   padding: $spacing;
   margin-top: $header-height;
+  overflow-wrap: break-word;
 
   &--right-sidebar-hidden {
     padding: 0;

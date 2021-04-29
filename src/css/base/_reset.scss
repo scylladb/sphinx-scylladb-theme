@@ -74,6 +74,10 @@ button:focus {
 }
 
 table {
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+
   @include floating;
   font-size: $font-small-size;
   margin-bottom: $gap;
