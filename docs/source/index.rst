@@ -24,7 +24,8 @@
   <h2 class="topics-grid__title">Topics</h2>
   <p class="topics-grid__text">To get started, choose a topic from the list</p>
 
-  <div class="grid-x">
+  <div class="grid-container full">
+  <div class="grid-x grid-margin-x">
 
 .. topic-box::
   :title: Installation
@@ -71,5 +72,6 @@
 
 .. raw:: html
 
+  </div>
   </div>
   </div>
