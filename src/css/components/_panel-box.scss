@@ -32,16 +32,17 @@
     color: $color-typography-topic-grid-title;
     font-size: 18px;
     line-height: 32px;
+  }
 
-    .container p:last-child {
-      margin: 0;
-    }
+  .container p:last-child {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: $medium) {
   .panel-grid {
     padding: $spacing-l;
+    padding-bottom: 0;
   }
 }
 

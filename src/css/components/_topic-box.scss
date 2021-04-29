@@ -65,5 +65,6 @@
 @media screen and (min-width: $medium) {
   .topics-grid {
     padding: $spacing-l;
+    padding-bottom: 0;
   }
 }
