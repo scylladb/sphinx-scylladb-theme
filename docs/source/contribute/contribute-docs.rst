@@ -100,9 +100,9 @@ Write content
 When writing content for Scylla, we use an informal topic-based writing approach.
 There are three kinds of topics:
 
-* Informational &mdash; Gives an overview of the subject
-* Procedural &mdash; Gives instructions on how to use the subject
-* Referential &mdash; Gives additional information about the particular topic
+* Informational --- Gives an overview of the subject
+* Procedural --- Gives instructions on how to use the subject
+* Referential --- Gives additional information about the particular topic
 * All content must be written in US English. Use as few words as possible and try to keep the reading level to under grade 8. You can use word counters and readability tests to keep the reading level down.
 
 Write procedures
