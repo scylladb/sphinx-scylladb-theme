@@ -2,9 +2,24 @@
 Sphinx ScyllaDB Theme
 =====================
 
-Sphinx theme and custom extensions for ScyllaDB documentation projects.
+Sphinx theme for ScyllaDB documentation projects.
 
-The theme is available on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/>`_ and has been tested with Python 3.7, Sphinx 2.4.4 and Fedora 32.
+The theme is available as a `PyPI <https://pypi.org/project/sphinx-scylladb-theme/>`_ package, and has been tested with Python 3.7, Sphinx 2.4.4 and Fedora 32.
+
+Features
+--------
+
+**Shared Design**
+
+All ScyllaDB documentation sites share a common look and feel.
+
+**Multiversion Support**
+
+Build docs for different versions of your project.
+
+**GitHub Pages Support**:
+
+Publish the documentation to GitHub Pages automatically every time the theme receives new content.
 
 Usage
 =====
