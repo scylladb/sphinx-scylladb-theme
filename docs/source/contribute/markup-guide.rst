@@ -8,7 +8,9 @@ Markup Guide for Docs Contributors
 This guide covers the markup convention used for Scylla Docs. Our official documentation is written in RestructuredText.
 We will also accept content written in Markdown.
 
-This guide covers the RestructuredText elements. If you are not familiar with RestructuredText, refer to this article.
+This guide covers the RestructuredText elements.
+If you are not familiar with RestructuredText, refer to `this cheat sheet <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html>`_.
+Keep in mind, that in this cheat sheet there may be directives or elements of the markup we're not using.
 
 In general, there are  main components to the markup of any document.
 
@@ -260,18 +262,15 @@ Directives
 At Scylla, we use the following directives. Some directives are custom built for Scylla.
 
 * Admonitions_
-* `Code Blocks <Blocks>`_
+* `Code Blocks </contribute/markup-guide/#codeblocks>`_
 * Images_
 * Includes_
-* `Tabbed Content <Content>`_
+* `Tabbed Content </contribute/markup-guide/#tabbedcontent>`_
 * Metadata_
 * Versions_
-* `Panel Box <Box>`_
+* `Panel Box </contribute/markup-guide/#panelbox>`_
 * Mini-TOC_
-* Glossary_
-
-
-
+* `Glossary and Abbreviations </contribute/markup-guide/#abbreviations>`_
 
 Admonitions
 ===========
@@ -335,6 +334,7 @@ Renders as:
 
 .. tip:: here's a tip
 
+.. _codeblocks:
 
 Code Blocks
 ===========
@@ -474,6 +474,8 @@ Gets the conf.py file from the parent directory and displays the first 10 lines.
 .. literalinclude:: ../conf.py
       :lines: 1-10
 
+.. _tabbedcontent:
+
 Tabbed Content
 ==============
 
@@ -564,7 +566,7 @@ This is an inline directive which should be used when introducing or deprecating
 
 .. code-block:: rst
 
-   .. deprecared:: version
+   .. deprecated:: version
 
 When using, these directives a blank line must follow. Until we have separated the content, please use the product name with the version number.
 
@@ -577,10 +579,59 @@ When using, these directives a blank line must follow. Until we have separated t
 Mini-TOC
 ========
 
-Glossary
-========
+Every topic which has more than one heading in it needs to have a mini-toc.
+The Contents directive creates a mini-TOC using the headings you have in the document.
+You can set the level of headings to include in the TOC. The recommended depth is 2 for H1 and H2.
+
+
+.. code-block:: rst
+
+   .. contents::
+   :depth: 2
+   :local:
+
+.. _abbreviations:
+
+Glossary and Abbreviations
+==========================
+
+Using the glossary.rst page you can create a glossary. The terms can be entered in any order and it will create an alphabetical list.
+Terms need to be written with a hanging indent from the definition. Consult the Glossary Template for details.
+
+To cite a term in a document that is not the glossary use the following convention:
+
+.. code-block:: rst
+
+   :term:`term <term as written in Glossary>`
+
+For example:
+
+.. code-block:: rst
+
+   :term:`Size-tiered Compaction Strategy (STCS)<Size-tiered Compaction Strategy>`
+
+Abbreviations and acronyms are defined in-line. The initial letters or abbreviation is first followed by the longer form.
+For example:
+
+.. code-block:: rst
+
+   :abbr:`LIFO (last-in, first-out)`.
+
+.. code-block:: rst
+
+   :abbr:`Overwrite (Same data cells overwritten many times)`
+
 
 TOC
 ---
 
-The 'Table of Contents'
+The :abbr:`TOC (Table of Contents)` is automatically generated in sphinx when you build the site.
+
+Each index.rst needs to have a toctree directive in order to build the left side nav menu.
+
+See the template for more details.
+
+.. code-block:: rst
+
+   .. toctree::
+    :maxdepth: 2
