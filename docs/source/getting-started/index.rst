@@ -28,7 +28,7 @@ Documentation
   #. `Configure the theme <../configuration/template>`_
   #. `List new versions  <../configuration/multiversion>`_
   #. `Publish to GitHub Pages  <../github-pages>`_
-  #. `Commands to build docs  <../configuration/multiversion>`_
+  #. `Commands to build docs  <../commands>`_
 
 .. panel-box::
   :title: For Docs Contributors
@@ -36,6 +36,7 @@ Documentation
   :class: my-panel
 
   `Scylla Docs Contributor’s Handbook <../contribute/contribute-docs>`_
+  `Markup Guide for Docs Contributors <../contribute/markup-guide>`_
 
 
 .. panel-box::
