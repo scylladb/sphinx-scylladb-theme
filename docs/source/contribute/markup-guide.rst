@@ -262,15 +262,16 @@ Directives
 At Scylla, we use the following directives. Some directives are custom built for Scylla.
 
 * Admonitions_
-* `Code Blocks </contribute/markup-guide/#codeblocks>`_
+* :ref:`Code Blocks <codeblocks>`
 * Images_
 * Includes_
-* `Tabbed Content </contribute/markup-guide/#tabbedcontent>`_
+* :ref:`Tabbed Content <tabbedcontent>`
 * Metadata_
 * Versions_
-* `Panel Box </contribute/markup-guide/#panelbox>`_
-* Mini-TOC_
-* `Glossary and Abbreviations </contribute/markup-guide/#abbreviations>`_
+* :ref:`Glossary and Abbreviations <abbreviations>`
+* :ref:`TOC and Mini-TOC <toc-mini>`
+* :ref:`Panel Box and Topic Box <panelbox>`
+
 
 Admonitions
 ===========
@@ -576,20 +577,6 @@ When using, these directives a blank line must follow. Until we have separated t
 
 .. deprecated:: 2.0 Scylla Open Source
 
-Mini-TOC
-========
-
-Every topic which has more than one heading in it needs to have a mini-toc.
-The Contents directive creates a mini-TOC using the headings you have in the document.
-You can set the level of headings to include in the TOC. The recommended depth is 2 for H1 and H2.
-
-
-.. code-block:: rst
-
-   .. contents::
-   :depth: 2
-   :local:
-
 .. _abbreviations:
 
 Glossary and Abbreviations
@@ -621,9 +608,14 @@ For example:
 
    :abbr:`Overwrite (Same data cells overwritten many times)`
 
+.. _toc-mini:
+
+TOC and Mini-TOC
+================
+These directives create TOCs automatically
 
 TOC
----
+...
 
 The :abbr:`TOC (Table of Contents)` is automatically generated in sphinx when you build the site.
 
@@ -635,3 +627,50 @@ See the template for more details.
 
    .. toctree::
     :maxdepth: 2
+
+Mini-TOC
+........
+
+Every topic which has more than one heading in it needs to have a mini-toc.
+The Contents directive creates a mini-TOC using the headings you have in the document.
+You can set the level of headings to include in the TOC. The recommended depth is 2 for H1 and H2.
+
+
+.. code-block:: rst
+
+   .. contents::
+   :depth: 2
+   :local:
+
+.. _panelbox:
+
+Panel Box and Topic Box
+=======================
+
+Panel Box
+.........
+
+This is a custom directive which creates boxes on the index screens. Do not use the panel-box on the root index.rst.
+
+.. code-block:: rst
+
+  .. panel-box::
+    :title: Admin
+    :id: "getting-started"
+    :class: my-panel
+
+Topic Box
+.........
+
+This is a custom directive which creates graphical boxes on root index screens. Do not use the topic-box on the subordinate index.rst files.
+
+
+.. code-block:: rst
+
+  .. topic-box::
+    :title: Getting Started
+    :link: /getting-started/
+    :icon: fa fa-power-off
+    :icon_color: rgba(95,113,180,1)
+    :icon_bg: rgba(95,113,180,0.1)
+    :class: my-box
