@@ -17,8 +17,8 @@
 .. toctree::
    :hidden:
 
-   installation
-   configuration
+   getting-started/index
+   configuration/index
    commands
    github-pages
    examples/index
@@ -30,7 +30,7 @@
 
 .. topic-box::
   :title: Installation
-  :link: installation
+  :link: getting-started
   :icon: fa fa-power-off
   :icon_color: rgba(95,113,180,1)
   :icon_bg: rgba(95,113,180,0.1)

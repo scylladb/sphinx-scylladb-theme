@@ -87,6 +87,7 @@ def setup(sphinx):
 rst_prolog = """
 .. |mon_version| replace:: 3.1
 .. |man_version| replace:: 2.0
+.. |rst| replace:: RestructuredText
 .. |mon_root| replace::  :doc:`Scylla Monitoring Stack </operating-scylla/monitoring/index>`
 """ 
 
@@ -155,14 +156,14 @@ redirects_file = "_utils/redirections.yaml"
 # -- Options for multiversion extension ----------------------------------
 
 # Whitelist pattern for tags (set to None to ignore all tags)
-TAGS = ['0.1.23']
+TAGS = []
 smv_tag_whitelist = multiversion_regex_builder(TAGS)
 # Whitelist pattern for branches (set to None to ignore all branches)
 BRANCHES = ['master']
 smv_branch_whitelist = multiversion_regex_builder(BRANCHES)
 # Defines which version is considered to be the latest stable version.
 # Must be listed in smv_tag_whitelist or smv_branch_whitelist.
-smv_latest_version = '0.1.23'
+smv_latest_version = 'master'
 smv_rename_latest_version = 'stable'
 # Whitelist pattern for remotes (set to None to use local branches only)
 smv_remote_whitelist = r"^origin$"
