@@ -35,6 +35,10 @@
     }
   }
 
+  ol ol {
+    list-style: lower-latin;
+  }
+
   img {
     margin-bottom: $gap;
   }
