@@ -84,6 +84,8 @@ def setup(sphinx):
 # Adds version variables for monitoring and manager versions when used in inline text
 rst_prolog = """
 .. |mon_version| replace:: 3.1
+.. |man_version| replace:: 2.0
+.. |rst| replace:: RestructuredText
 """ 
 
 # -- Options for HTML output ----------------------------------------------

@@ -10,8 +10,8 @@
 .. toctree::
    :hidden:
 
-   _icon[scylla-icon, scylla-icon--getting-started] Installation <installation>
-   _icon[scylla-icon, scylla-icon--integrations] Configuration <configuration>
+   _icon[scylla-icon, scylla-icon--getting-started] Installation <getting-started/index>
+   _icon[scylla-icon, scylla-icon--integrations] Configuration <configuration/index>
    _icon[scylla-icon, scylla-icon--apps] Commands <commands>
    _icon[fa,fa-github] GitHub Pages <github-pages>
    _icon[scylla-icon, scylla-icon--tech-talks] Examples <examples/index>
@@ -29,7 +29,7 @@
 
 .. topic-box::
   :title: Installation
-  :link: installation
+  :link: getting-started
   :icon: scylla-icon scylla-icon--getting-started
 
   Contains information on how to install the theme and extensions in a new project.

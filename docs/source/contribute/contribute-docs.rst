@@ -100,9 +100,9 @@ Write content
 When writing content for Scylla, we use an informal topic-based writing approach.
 There are three kinds of topics:
 
-* Informational &mdash; Gives an overview of the subject
-* Procedural &mdash; Gives instructions on how to use the subject
-* Referential &mdash; Gives additional information about the particular topic
+* Informational --- Gives an overview of the subject
+* Procedural --- Gives instructions on how to use the subject
+* Referential --- Gives additional information about the particular topic
 * All content must be written in US English. Use as few words as possible and try to keep the reading level to under grade 8. You can use word counters and readability tests to keep the reading level down.
 
 Write procedures
@@ -145,7 +145,7 @@ If you want to use a cheat sheet for Markdown or RestructuredText, here are some
 Add new content to the TOC tree
 ===============================
 
-When adding new content to any repo you must add the topic to the toc tree. If you do not you will have an error when compiling.
+When adding new content to any repo you must add the topic to the `toc tree <https://www.sphinx-doc.org/en/1.4.8/markup/toctree.html>`_. If you do not you will have an error when compiling.
 
 **Procedure**
 
