@@ -21,6 +21,7 @@ For example:
         'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
         'show_sidebar_index': 'false',
         'hide_banner': 'true',
+        'hide_version_dropdown': ['master'],
         'default_branch': 'master',
         'branch_substring_removed': 'branch-',
         'tag_substring_removed': '-scylla'
