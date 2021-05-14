@@ -1,6 +1,8 @@
 <div id="side-nav" class="side-nav" data-closable data-toggler=".show">
-  {% if versions %} {% include 'versions.html' %} {% endif %} {{
-  icons_navigation_tree }}
+  <div class="side-nav-content">
+  {% if versions %} {% include 'versions.html' %} {% endif %} 
+  {{ icons_navigation_tree }}
+  </div>
 </div>
 
 <span class="side-nav-toggle" data-toggle="side-nav">

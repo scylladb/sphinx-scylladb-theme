@@ -5,12 +5,15 @@
   height: 100vh;
   width: 100%;
   display: none;
-  overflow-y: auto;
   background-color: $color-background-sidebar;
-  padding: $spacing;
+  overflow-y: auto;
+}
+
+.side-nav-content {
   font-family: $font-title-family;
   font-size: $font-small-size;
   overflow-wrap: break-word;
+  padding: $spacing;
 
   i {
     font-size: 16px;
@@ -27,13 +30,10 @@
     margin: 0;
   }
 
-  .toctree-l1 > ul {
-    margin-left: 2em;
-  }
-
   li {
     list-style: none;
-    padding: 12px 0;
+    padding: 0;
+    padding-bottom: 24px;
     &.current {
       a {
         color: $color-typography-base-link;
@@ -54,6 +54,10 @@
         padding: 4px 0 4px 20px;
       }
     }
+  }
+
+  .toctree-l1 > ul {
+    margin-left: 2em;
   }
 }
 
@@ -105,9 +109,10 @@
     height: 100%;
     top: $header-height;
     max-height: 100vh;
+    max-height: calc(100vh - 80px);
+  }
+  .side-nav-content {
     padding-bottom: 0 !important;
-    max-height: calc(100vh - 83px);
-
     > ul {
       padding-bottom: $footer-height;
     }
@@ -117,8 +122,8 @@
   }
 }
 
-@media screen and (min-width: $xxlarge) {
-  .side-nav {
+@media screen and (min-width: $xlarge) {
+  .side-nav-content {
     padding: $spacing-l;
 
     .toctree-l1 > ul {
@@ -128,5 +133,12 @@
     i {
       margin-right: 20px;
     }
+  }
+}
+
+@media screen and (min-width: $xxlarge) {
+  .side-nav-content {
+    width: $side-nav-width;
+    float: right;
   }
 }

@@ -5,7 +5,7 @@
 }
 
 .top-bar {
-  padding: 8px $spacing;
+  padding: 14.5px $spacing;
 }
 
 .dropdown .is-dropdown-submenu a {
@@ -33,14 +33,12 @@
 /* Custom Components */
 .header {
   background-color: $color-background-header;
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 99;
 }
 
-.top-bar-logo {
-  position: relative;
-  margin: 0.5rem 1rem 0.5rem 0;
+.header-logo {
   img {
     height: 51px;
   }
@@ -48,9 +46,8 @@
 
 .responsive-menu {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 20px;
+  top: 32px;
 
   .menu-icon {
     margin-bottom: 4px;
@@ -103,6 +100,10 @@
 }
 
 @media screen and (min-width: $medium) {
+  .top-bar-left {
+    padding-left: 20px;
+  }
+
   /* Reset*/
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
     content: "";
@@ -111,10 +112,6 @@
     border-bottom-width: 0;
     border-top-style: solid;
     margin-top: -3px;
-  }
-
-  .top-bar {
-    padding: 8px $spacing-l;
   }
 
   .dropdown-menu__item {
@@ -132,5 +129,36 @@
 @media screen and (min-width: $large) {
   .header {
     position: fixed;
+  }
+
+  .top-bar {
+    padding: 14.5px 0;
+  }
+
+  .top-bar-left {
+    padding-left: 0;
+  }
+
+  .header-logo,
+  .header-search-box {
+    padding: 0 $spacing;
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .header-logo,
+  .header-search-box {
+    padding: 0 $spacing-l;
+  }
+}
+
+@media screen and (min-width: $xxlarge) {
+  .header-logo {
+    width: $side-nav-width;
+    float: right;
+  }
+  .header-search-box {
+    width: $secondary-side-nav-width;
+    float: left;
   }
 }

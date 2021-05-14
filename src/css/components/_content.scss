@@ -1,6 +1,5 @@
 .content {
   padding: $spacing;
-  margin-top: $header-height;
   overflow-wrap: break-word;
 
   &--right-sidebar-hidden {
@@ -82,7 +81,6 @@
 
 @media screen and (min-width: $medium) {
   .content {
-    padding: $spacing-l;
     padding-bottom: 100px;
     min-height: calc(100vh - 276px);
 
@@ -98,8 +96,21 @@
 }
 
 @media screen and (min-width: $large) {
-  .content section {
-    // header + offset
-    scroll-margin-top: calc(83px);
+  .content {
+    margin-top: $header-height;
+    section {
+      // header + offset
+      scroll-margin-top: calc(80px);
+    }
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .content {
+    padding: $spacing-l;
+
+    &--right-sidebar-hidden {
+      padding: 0;
+    }
   }
 }

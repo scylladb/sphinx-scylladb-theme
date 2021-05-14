@@ -141,7 +141,7 @@
 
       <div class="grid-x">
         <div
-          class="content cell large-order-2 {{'large-7' if not hide_right_sidebar_index else 'large-9'}} {{'content--right-sidebar-hidden' if hide_right_sidebar_index}}"
+          class="content cell large-order-2 {{'large-6' if not hide_right_sidebar_index else 'large-9'}} {{'content--right-sidebar-hidden' if hide_right_sidebar_index}}"
         >
           {% if versions and current_version and latest_version and
           current_version != latest_version %}
@@ -174,7 +174,7 @@
           include sidebartemplate %} {%- endfor %} {%- endif %}
         </div>
         {% if not hide_right_sidebar_index %}
-        <div class="sidebar-right cell large-2 large-order-3 show-for-large">
+        <div class="sidebar-right cell large-3 large-order-3 show-for-large">
           {% include 'secondary-side-nav.html' %}
         </div>
         {%- endif %}

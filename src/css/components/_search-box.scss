@@ -1,7 +1,6 @@
 #search-box {
   display: flex;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  margin-left: 45px;
   width: 100%;
   height: 32px;
 
@@ -62,11 +61,5 @@
 
   .er_more_result_btn {
     cursor: pointer;
-  }
-}
-
-@media screen and (min-width: $xxlarge) {
-  #search-box {
-    margin-left: 65px;
   }
 }

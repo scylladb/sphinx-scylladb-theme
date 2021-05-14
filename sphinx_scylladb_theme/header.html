@@ -1,28 +1,31 @@
 <header class="header">
   <div class="top-bar grid-x stacked-for-small">
     <div class="top-bar-logo cell medium-3">
-      <span
-        class="responsive-menu"
-        data-responsive-toggle="responsive-menu"
-        data-hide-for="medium"
-      >
-        <button class="menu-icon" type="button" data-toggle></button>
-      </span>
-      <a class="top-bar-logo__img" href="https://docs.scylladb.com/">
-        <img
-          src="{{ pathto('_static/img/logo-scylla-docs.svg', 1) }}"
-          alt="Scylla Documentation Logo"
-        />
-      </a>
+      <div class="header-logo">
+        <span
+          class="responsive-menu"
+          data-responsive-toggle="responsive-menu"
+          data-hide-for="medium"
+        >
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+        <a class="header-logo__img" href="https://docs.scylladb.com/">
+          <img
+            src="{{ pathto('_static/img/logo-scylla-docs.svg', 1) }}"
+            alt="Scylla Documentation Logo"
+          />
+        </a>
+      </div>
     </div>
-    <div id="responsive-menu" class="top-bar-left cell large-7">
+    <div id="responsive-menu" class="top-bar-left cell large-6">
       <ul class="dropdown-menu dropdown menu" data-dropdown-menu>
         <li class="dropdown-menu__item">
           <a href="#">Server</a>
           <ul class="floating-menu menu vertical">
             <li class="floating-menu__item">
               <a href="https://docs.scylladb.com"
-                ><i class="scylla-icon scylla-icon--about-us"></i>Scylla Open Source</a
+                ><i class="scylla-icon scylla-icon--about-us"></i>Scylla Open
+                Source</a
               >
             </li>
             <li class="floating-menu__item">
@@ -117,12 +120,14 @@
         </li>
       </ul>
     </div>
-    <div class="top-bar-right cell large-2 show-for-large">
-      <ul class="menu">
-        <li id="search-box">
-          <ci-search></ci-search>
-        </li>
-      </ul>
+    <div class="top-bar-right cell large-3 show-for-large">
+      <div class="header-search-box">
+        <ul class="menu">
+          <li id="search-box">
+            <ci-search></ci-search>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>

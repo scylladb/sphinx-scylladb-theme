@@ -57,8 +57,8 @@ const onScrollHighlightSecondarySidebar = () => {
       if (sectionPosition - headerHeight - offset < currentScroll) {
         const id = $(this).attr("id");
 
-        $(".secondary-sidenav a").removeClass("current");
-        $('.secondary-sidenav a[href="#' + id + '"]').addClass("current");
+        $(".secondary-side-nav a").removeClass("current");
+        $('.secondary-side-nav a[href="#' + id + '"]').addClass("current");
       }
     });
   });

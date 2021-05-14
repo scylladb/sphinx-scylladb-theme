@@ -1,71 +1,85 @@
-.secondary-sidenav {
-  padding: $spacing;
+.secondary-side-nav {
   height: 100%;
+}
+
+.secondary-side-nav-content {
+  padding: $spacing;
   overflow-wrap: break-word;
 
-  > ul {
+  ul {
     list-style: none;
     margin: 0;
+  }
 
-    > li {
-      > a {
-        display: none;
+  li {
+    display: none;
+    padding: 10px 0;
+    border-bottom: 1px solid $color-border-toc-local-li;
+    &:before {
+      font-family: $font-icons-family;
+      font-display: swap;
+      color: $color-typography-bullet;
+      font-weight: bold;
+      float: left;
+      font-size: 20px;
+      width: 1em;
+      content: "\f105";
+      margin: 0;
+    }
+
+    a {
+      font-family: $font-title-family;
+      font-size: $font-small-size;
+      color: $color-typography-toc-link;
+
+      &:hover,
+      &.current {
+        font-weight: 600;
       }
+    }
+  }
+  // Show H2 level
+  > ul > li > ul > li {
+    display: block;
+  }
 
-      > ul {
-        margin: 0;
+  // Hide page title
+  > ul > li {
+    display: block;
+    &:before {
+      display: none;
+    }
+    border: 0;
 
-        li {
-          display: none;
-        }
-
-        > li {
-          display: block;
-          padding: 10px 0;
-          border-bottom: 1px solid $color-border-toc-local-li;
-
-          &:before {
-            font-family: $font-icons-family;
-            font-display: swap;
-            color: $color-typography-bullet;
-            font-weight: bold;
-            float: left;
-            font-size: 20px;
-            width: 1em;
-            content: "\f105";
-            margin: 0;
-          }
-
-          a {
-            font-family: $font-title-family;
-            font-size: $font-small-size;
-            color: $color-typography-toc-link;
-
-            &:hover,
-            &.current {
-              font-weight: 600;
-            }
-          }
-        }
-      }
+    > a {
+      display: none;
     }
   }
 }
 
 @media screen and (min-width: $large) {
-  .secondary-sidenav {
+  .secondary-side-nav {
     position: fixed;
     top: $header-height;
     width: inherit;
     overflow-y: auto;
     max-height: 100vh;
+    max-height: calc(100vh - 80px);
+  }
+  .secondary-side-nav-content {
     padding-bottom: $footer-height !important;
-    max-height: calc(100vh - 83px);
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .secondary-side-nav-content {
+    padding: $spacing-l;
   }
 }
 
 @media screen and (min-width: $xxlarge) {
-  .secondary-sidenav {
-    padding: $spacing-l;
+  .secondary-side-nav-content {
+    width: $secondary-side-nav-width;
+    float: left;
   }
 }
