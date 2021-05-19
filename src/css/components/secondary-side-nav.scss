@@ -19,10 +19,10 @@
     &:before {
       font-family: $font-icons-family;
       font-display: swap;
+      font-size: $font-base-size;
       color: $color-typography-bullet;
       font-weight: bold;
       float: left;
-      font-size: 20px;
       width: 1em;
       content: "\f105";
       margin: 0;

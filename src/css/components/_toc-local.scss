@@ -10,6 +10,7 @@
       &:before {
         font-family: $font-icons-family;
         font-display: swap;
+        font-size: $font-base-size;
         content: "\f105";
         margin: 0;
       }
