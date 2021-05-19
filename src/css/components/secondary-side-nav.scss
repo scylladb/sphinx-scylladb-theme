@@ -15,6 +15,7 @@
     display: none;
     padding: 10px 0;
     border-bottom: 1px solid $color-border-toc-local-li;
+    word-break: break-word;
     &:before {
       font-family: $font-icons-family;
       font-display: swap;
@@ -40,7 +41,7 @@
   }
   // Show H2 level
   > ul > li > ul > li {
-    display: block;
+    display: flex;
   }
 
   // Hide page title
