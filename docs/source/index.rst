@@ -10,7 +10,7 @@
 .. toctree::
    :hidden:
 
-   _icon[scylla-icon, scylla-icon--getting-started] Installation <getting-started/index>
+   _icon[scylla-icon, scylla-icon--getting-started] Getting Started <getting-started/index>
    _icon[scylla-icon, scylla-icon--integrations] Configuration <configuration/index>
    _icon[scylla-icon, scylla-icon--apps] Commands <commands>
    _icon[fa,fa-github] GitHub Pages <github-pages>

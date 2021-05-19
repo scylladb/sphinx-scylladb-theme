@@ -3,13 +3,32 @@ from os import path, getenv
 import sphinx_copybutton
 from sphinx_tabs import tabs
 from navigation_icons import extension as navigation_icons
+from navigation_icons.extension import IconsNavigationTree
+
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
-from sphinx_scylladb_theme.extensions import panel_box, topic_box, redirects, not_found, gh_pages
+from sphinx_scylladb_theme.extensions import gh_pages, navigation, not_found, panel_box, topic_box, redirects
 
+
+def compute_toc_tree(context):
+    if "toctree" in context:
+        toctree = context["toctree"]
+        toctree_html = toctree(
+            collapse=False,
+            titles_only=True,
+            maxdepth=-1,
+            includehidden=True,
+        )
+    else:
+        toctree_html = ""
+    
+    toctree_html = IconsNavigationTree(toctree_html).build_html()
+    toctree_html = navigation.get_navigation_tree(toctree_html)
+    return toctree_html
 
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
+    context["navigation_tree"] = compute_toc_tree(context)
 
 def update_config(app, config):
     default = 'master'

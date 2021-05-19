@@ -15,13 +15,6 @@
   overflow-wrap: break-word;
   padding: $spacing;
 
-  i {
-    font-size: 16px;
-    margin-right: 10px;
-    min-height: 16px;
-    width: 16px;
-  }
-
   a {
     color: $color-typography-base;
   }
@@ -31,33 +24,44 @@
   }
 
   li {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     padding-bottom: 24px;
+
+    > a {
+      flex: 1;
+    }
+
+    > label {
+      height: 0;
+      flex: 0;
+      float: right;
+    }
+
     &.current {
       a {
         color: $color-typography-base-link;
         &.current {
           font-weight: 600;
-          .scylla-icon {
-            filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
-              brightness(90%) contrast(95%);
-          }
         }
       }
     }
 
     ul {
+      width: 100%;
+      margin-left: 2em;
       border-left: 2px solid $color-border-sidebar-ul;
       margin-top: 20px;
       li {
         padding: 4px 0 4px 20px;
       }
-    }
-  }
 
-  .toctree-l1 > ul {
-    margin-left: 2em;
+      ul {
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -101,6 +105,61 @@
   }
 }
 
+/* Override custom navigation extension style */
+.side-nav-content {
+  .toctree-checkbox {
+    position: absolute;
+    right: $spacing;
+    display: none;
+
+    ~ ul {
+      display: none;
+    }
+
+    ~ label i {
+      transform: rotate(90deg);
+    }
+
+    &:checked {
+      ~ ul {
+        display: block;
+      }
+      ~ label i {
+        margin-top: -5px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+/* Override icons navigation extension style */
+.side-nav-content {
+  i {
+    font-size: 16px;
+    margin-right: 10px;
+    min-height: 16px;
+    width: 16px;
+  }
+
+  label,
+  label i {
+    padding: 0;
+    margin: 0;
+  }
+
+  label .scylla-icon {
+    min-height: 12px;
+    width: 12px;
+    filter: invert(61%) sepia(7%) saturate(564%) hue-rotate(192deg)
+      brightness(93%) contrast(85%);
+  }
+
+  li.current a.current .scylla-icon {
+    filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
+      brightness(90%) contrast(95%);
+  }
+}
+
 @media screen and (min-width: $large) {
   .side-nav {
     display: block;
@@ -133,6 +192,9 @@
     i {
       margin-right: 20px;
     }
+  }
+  .toctree-checkbox {
+    right: $spacing-l;
   }
 }
 
