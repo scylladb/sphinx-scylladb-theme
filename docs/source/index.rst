@@ -7,6 +7,23 @@
       <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
     </div>
 
+.. raw:: html
+
+   <div class="latest-news">
+   <h3 class="latest-news__title">What's new in the docs</h3>
+   <div class="latest-news__cards">
+
+.. postlist:: 5
+   :date: %B %d, %Y
+   :format: {date} {title}
+   :excerpts:
+   :expand: Read more ...
+
+.. raw:: html
+
+  </div>
+  </div>
+
 .. toctree::
    :hidden:
 

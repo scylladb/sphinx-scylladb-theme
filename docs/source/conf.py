@@ -24,6 +24,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
+    'ablog',
     'sphinx_scylladb_theme',
     'sphinx_multiversion',
     'recommonmark',
