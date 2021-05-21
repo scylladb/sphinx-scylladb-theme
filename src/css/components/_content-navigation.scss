@@ -1,21 +1,21 @@
 .content-navigation {
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation {
-  max-width: 50%;
   display: flex;
-  &--prev {
-    float: left;
+  max-width: 50%;
+  word-break: break-word;
 
+  &--prev {
     .navigation__title {
       margin-left: 15px;
     }
   }
 
   &--next {
-    float: right;
-
     .navigation__title {
       .colored {
         color: $color-typography-content-navigation-next;

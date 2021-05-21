@@ -10,20 +10,3 @@
     background-color: darken($color-background-button, 10%);
   }
 }
-
-.button-driver {
-  margin-left: 50px;
-  padding: 20px 0 20px 0 !important;
-  color: #5a5e9a;
-  font-size: $font-small-size;
-
-  &__img {
-    margin-top: -30px;
-    margin-left: -75px;
-    float: left;
-    width: 77px;
-  }
-  &__title {
-    margin-left: -10px;
-  }
-}
