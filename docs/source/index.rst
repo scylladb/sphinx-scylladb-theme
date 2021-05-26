@@ -10,7 +10,7 @@
 .. raw:: html
 
    <div class="latest-news">
-   <h3 class="latest-news__title">What's new in the docs</h3>
+   <h3 class="latest-news__title">What's new in the theme</h3>
    <div class="latest-news__cards">
 
 .. postlist:: 5
