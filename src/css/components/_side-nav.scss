@@ -11,7 +11,7 @@
 
 .side-nav-content {
   font-family: $font-title-family;
-  font-size: $font-small-size;
+  font-size: $font-base-size;
   overflow-wrap: break-word;
   padding: $spacing;
 
@@ -44,7 +44,7 @@
       a {
         color: $color-typography-base-link;
         &.current {
-          font-weight: 600;
+          font-weight: 700;
         }
       }
     }
@@ -140,7 +140,7 @@
 /* Override icons navigation extension style */
 .side-nav-content {
   i {
-    font-size: 16px;
+    font-size: $font-base-size;
     margin-right: 10px;
     min-height: 16px;
     width: 16px;
