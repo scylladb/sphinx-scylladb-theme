@@ -8,11 +8,7 @@
       border-bottom: 1px solid $color-border-toc-local-li;
 
       &:before {
-        font-family: $font-icons-family;
-        font-display: swap;
-        font-size: $font-base-size;
-        content: "\f105";
-        margin: 0;
+        content: "";
       }
 
       ul {
@@ -28,8 +24,19 @@
         font-size: $font-small-size;
         color: $color-typography-toc-link;
 
+        &:before {
+          content: "";
+          @extend .scylla-icon;
+          @extend .scylla-icon--chevron-right;
+          opacity: 0.5;
+          min-height: 12px !important;
+          height: 12px;
+          filter: invert(40%) sepia(11%) saturate(2157%) hue-rotate(198deg)
+            brightness(89%) contrast(87%) !important;
+        }
+
         &:hover {
-          font-weight: 600;
+          font-weight: 700;
         }
       }
     }

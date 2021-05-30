@@ -7,7 +7,7 @@ To run the next commands you will need to have installed Python 3.7 and PIP.
 Preview current branch
 ----------------------
 
-The preview command builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser. 
+The preview command builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser.
 
 To preview the docs:
 
@@ -27,9 +27,9 @@ For example:
 
     make preview SPHINXOPTS=-v
 
-Preview multiversion 
+Preview multiversion
 --------------------
-The multiversionpreview generates a local instance of the docs site with all specified versions available for navigation. You can view the rendering in a sandbox environment on your local browser. 
+The multiversionpreview generates a local instance of the docs site with all specified versions available for navigation. You can view the rendering in a sandbox environment on your local browser.
 To preview multiple versions:
 
 1. Build the docs.
@@ -89,7 +89,7 @@ Check for broken links
 Check for broken links on the documentation site.
 
 .. code:: console
-    
+
     cd docs
     make dirhtml
     make linkcheck

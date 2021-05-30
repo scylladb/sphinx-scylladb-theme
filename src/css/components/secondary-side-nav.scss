@@ -16,40 +16,42 @@
     padding: 10px 0;
     border-bottom: 1px solid $color-border-toc-local-li;
     word-break: break-word;
-    &:before {
-      font-family: $font-icons-family;
-      font-display: swap;
-      font-size: $font-base-size;
-      color: $color-typography-bullet;
-      font-weight: bold;
-      float: left;
-      width: 1em;
-      content: "\f105";
-      margin: 0;
-    }
 
     a {
       font-family: $font-title-family;
       font-size: $font-small-size;
       color: $color-typography-toc-link;
 
+      &:before {
+        content: "";
+        @extend .scylla-icon;
+        @extend .scylla-icon--chevron-right;
+        opacity: 0.5;
+        min-height: 12px !important;
+        height: 12px;
+        filter: invert(40%) sepia(11%) saturate(2157%) hue-rotate(198deg)
+          brightness(89%) contrast(87%) !important;
+      }
+
       &:hover,
       &.current {
         font-weight: 700;
+
+        &:before {
+          opacity: 1;
+        }
       }
     }
   }
   // Show H2 level
   > ul > li > ul > li {
     display: flex;
+    align-items: center;
   }
 
   // Hide page title
   > ul > li {
     display: block;
-    &:before {
-      display: none;
-    }
     border: 0;
 
     > a {

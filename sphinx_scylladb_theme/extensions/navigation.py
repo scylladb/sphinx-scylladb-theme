@@ -12,8 +12,11 @@ from bs4 import BeautifulSoup, Tag
 
 
 def _get_navigation_expand_image(soup: BeautifulSoup) -> Tag:
-    retval = soup.new_tag("i", attrs={"class": "scylla-icon scylla-icon--chevron-right"})
+    retval = soup.new_tag(
+        "i", attrs={"class": "scylla-icon scylla-icon--chevron-right"}
+    )
     return retval
+
 
 @functools.lru_cache(maxsize=None)
 def get_navigation_tree(toctree_html: str) -> str:

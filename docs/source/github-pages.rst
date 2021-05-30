@@ -37,4 +37,3 @@ Disabling GitHub Pages
 ----------------------
 
 To disable the docs deployment temporarily, see `Unpublishing a GitHub Pages Site <https://help.github.com/en/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site>`_.
-

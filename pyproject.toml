@@ -15,12 +15,13 @@ Sphinx = "^2.4.4"
 sphinx-multiversion-scylla = "^0.2.4"
 sphinx-notfound-page = "^0.5"
 recommonmark = "0.5.0"
-sphinx-navigation-icons = "^0.1"
+beautifulsoup4 = "^4.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 sphinx-autobuild = "^0.7.1"
 ablog = "^0.10.18"
+pre-commit = "^2.13.0"
 
 [build-system]
 requires = ["poetry>=0.12"]

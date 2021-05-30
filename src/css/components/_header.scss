@@ -86,9 +86,11 @@
     > a {
       color: $color-typography-base;
       padding: 0;
+      display: flex;
 
       i {
         margin-right: 6px;
+        flex-shrink: 0;
       }
 
       &:hover {

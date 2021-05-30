@@ -4,7 +4,7 @@ Getting Started
 
 This site is a guide for using ``sphinx-scylladb-theme`` in ScyllaDB documentation projects.
 
-The theme's source code is hosted on `GitHub <https://github.com/scylladb/sphinx-scylladb-theme>`_. 
+The theme's source code is hosted on `GitHub <https://github.com/scylladb/sphinx-scylladb-theme>`_.
 The repository also contains a `sample documentation project <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/docs>`_ using this theme.
 
 Theme Features
@@ -50,5 +50,5 @@ Documentation
    :maxdepth: 2
    :glob:
    :hidden:
-   
+
    installation

@@ -20,7 +20,7 @@ to the project root directory where you want to set up docs. The directory struc
       │   ├── source/
       │   ├── Makefile
 
-.. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory. 
+.. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to the ``docs/source`` directory.
 
 2. Create the file ``docs/pyproject.toml`` under the new ``docs`` folder. Copy the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_.
 
@@ -29,9 +29,7 @@ to the project root directory where you want to set up docs. The directory struc
 
 4. If you don't already have a ``.gitignore`` file in the project, place one in the root directory and include ``/docs/_build`` and ``/source/.doctrees`` in it.
    If you already have a ``.gitignore`` file, add both paths to the file.
-   
+
 5. Delete or adapt the sample documentation files under ``docs/source``.
 
 6. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
-
-

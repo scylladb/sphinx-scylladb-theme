@@ -4,7 +4,7 @@ Examples
 .. toctree::
    :maxdepth: 2
    :hidden:
-   
+
    admonitions
    code-blocks
    glossary
@@ -17,7 +17,7 @@ Examples
    tabs
    text
    versioning
-   
+
 .. panel-box::
   :title: Components
   :id: "components"

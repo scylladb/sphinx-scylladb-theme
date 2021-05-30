@@ -16,8 +16,8 @@ from sphinx.application import Sphinx
 
 _EXISTING_DIRS = directives._directives  # pylint: disable=protected-access
 _EXISTING_DIRECTIVES: Dict[str, Directive] = _EXISTING_DIRS
-_EXISTING_CODE_BLOCK_DIRECTIVE = _EXISTING_DIRECTIVES['code-block']
-_SUBSTITUTION_OPTION_NAME = 'substitutions'
+_EXISTING_CODE_BLOCK_DIRECTIVE = _EXISTING_DIRECTIVES["code-block"]
+_SUBSTITUTION_OPTION_NAME = "substitutions"
 
 
 class SubstitutionCodeBlock(_EXISTING_CODE_BLOCK_DIRECTIVE):  # type: ignore
@@ -26,13 +26,13 @@ class SubstitutionCodeBlock(_EXISTING_CODE_BLOCK_DIRECTIVE):  # type: ignore
     """
 
     option_spec = _EXISTING_CODE_BLOCK_DIRECTIVE.option_spec
-    option_spec['substitutions'] = directives.flag
+    option_spec["substitutions"] = directives.flag
 
     def run(self) -> List:
         """
         Replace placeholders with given variables.
         """
-        self.option_spec['substitutions'] = directives.flag
+        self.option_spec["substitutions"] = directives.flag
 
         new_content = []
         self.content = (  # pylint: disable=attribute-defined-outside-init
@@ -45,15 +45,14 @@ class SubstitutionCodeBlock(_EXISTING_CODE_BLOCK_DIRECTIVE):  # type: ignore
                 if _SUBSTITUTION_OPTION_NAME in self.options:
                     replacement = value.astext()
                     item = item.replace(
-                        '|{original}|'.format(original=name),
+                        "|{original}|".format(original=name),
                         replacement,
                     )
             new_content.append(item)
 
-        self.content = (  # pylint: disable=attribute-defined-outside-init
-            new_content
-        )
+        self.content = new_content  # pylint: disable=attribute-defined-outside-init
         return list(super().run())
+
 
 def substitution_code_role(  # pylint: disable=dangerous-default-value
     typ: str,
@@ -71,11 +70,11 @@ def substitution_code_role(  # pylint: disable=dangerous-default-value
     for name, value in document.substitution_defs.items():
         replacement = value.astext()
         text = text.replace(
-            '|{original}|'.format(original=name),
+            "|{original}|".format(original=name),
             replacement,
         )
         rawtext = text.replace(
-            '|{original}|'.format(original=name),
+            "|{original}|".format(original=name),
             replacement,
         )
         rawtext = rawtext.replace(name, replacement)
@@ -92,10 +91,11 @@ def substitution_code_role(  # pylint: disable=dangerous-default-value
 
     return result_nodes, system_messages
 
+
 def setup(app: Sphinx) -> None:
     """
     Add the custom directives to Sphinx.
     """
-    app.add_config_value('substitutions', [], 'html')
-    directives.register_directive('code-block', SubstitutionCodeBlock)
-    app.add_role('substitution-code', substitution_code_role)
+    app.add_config_value("substitutions", [], "html")
+    directives.register_directive("code-block", SubstitutionCodeBlock)
+    app.add_role("substitution-code", substitution_code_role)

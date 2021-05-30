@@ -1,7 +1,7 @@
 .. title:: Sphinx ScyllaDB Theme
 
 .. raw:: html
-  
+
     <div class="welcome">
       <h1 class="welcome__title">Sphinx ScyllaDB Theme</h1>
       <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
@@ -27,12 +27,12 @@
 .. toctree::
    :hidden:
 
-   _icon[scylla-icon, scylla-icon--getting-started] Getting Started <getting-started/index>
-   _icon[scylla-icon, scylla-icon--integrations] Configuration <configuration/index>
-   _icon[scylla-icon, scylla-icon--apps] Commands <commands>
-   _icon[fa,fa-github] GitHub Pages <github-pages>
-   _icon[scylla-icon, scylla-icon--tech-talks] Examples <examples/index>
-   _icon[scylla-icon, scylla-icon--about-team] Contribute <contribute/index>
+   getting-started/index
+   configuration/index
+   commands
+   github-pages
+   examples/index
+   contribute/index
 
 .. raw:: html
 

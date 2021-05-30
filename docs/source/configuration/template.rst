@@ -7,7 +7,7 @@ Configuration options for this theme.
 Template Options
 ----------------
 
-Template-level settings can be configured via your ``conf.py`` in ``html_theme_options``. 
+Template-level settings can be configured via your ``conf.py`` in ``html_theme_options``.
 For example:
 
 .. code:: python
@@ -52,7 +52,7 @@ For example:
       -  List of tags and branches names to hide from the multiversion dropdown.
       -  []
     * - ``default_branch``
-      -  Name of the default branch where changes are integrated. Used to display the "You are not reading the most current version of the documentation" warning. 
+      -  Name of the default branch where changes are integrated. Used to display the "You are not reading the most current version of the documentation" warning.
       -  master
     * - ``branch_substring_removed``
       -  Part of the branch name to skip from the multiversion dropdown.

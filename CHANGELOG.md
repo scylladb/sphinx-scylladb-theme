@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Top-bar for Scylla University live (#152)
 - Contribution guidelines (#146)
-- ``*-substring_removed`` settings in ``conf`` overrides part of the version name in the multiversion dropdown. (#110)
+- `*-substring_removed` settings in `conf` overrides part of the version name in the multiversion dropdown. (#110)
 
 ### Fixed
 
@@ -27,24 +27,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- ``smv_rename_latest_version`` setting in ``conf.py`` overrides the latest version output directory (#121).
+- `smv_rename_latest_version` setting in `conf.py` overrides the latest version output directory (#121).
 
 ### Changed
 
-- Moved ``smv_latest_version`` from ``github/workflows/pages.yaml`` to ``conf.py`` (#121).
+- Moved `smv_latest_version` from `github/workflows/pages.yaml` to `conf.py` (#121).
 
 ### Removed
 
-- ``_utils/redirects.sh`` file (#121).
+- `_utils/redirects.sh` file (#121).
 
 ### Fixed
 
-- ``make multiversionpreview`` redirects automatically to the latest version (#121).
- 
+- `make multiversionpreview` redirects automatically to the latest version (#121).
 
 ## [0.1.20] - 19 Jan 2021
 
 ### Added
+
 - Unstable version warning (#111).
 
 ### Changed
@@ -104,6 +104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.13] - 20 Oct 2020
 
 ### Added
+
 - External links and download links are now followed by an icon (#65).
 - Code blocks can now include substitutions (#53).
 
