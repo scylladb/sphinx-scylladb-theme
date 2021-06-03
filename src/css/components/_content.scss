@@ -2,7 +2,7 @@
   padding: $spacing;
   overflow-wrap: break-word;
 
-  &--right-sidebar-hidden {
+  &--full-width {
     padding: 0;
   }
 
@@ -16,7 +16,6 @@
 
     li::before {
       font-family: $font-icons-family;
-      font-display: swap;
       content: "\2022";
       color: $color-typography-bullet;
       font-weight: bold;
@@ -46,7 +45,6 @@
   .reference:after {
     font-family: $font-icons-family;
     font-size: $font-smallest-size;
-    font-display: swap;
     padding: 0 4px;
   }
 
@@ -88,7 +86,7 @@
     padding-bottom: 100px;
     min-height: calc(100vh - 276px);
 
-    &--right-sidebar-hidden {
+    &--full-width {
       padding: 0;
     }
   }
@@ -113,7 +111,7 @@
   .content {
     padding: $spacing-l;
 
-    &--right-sidebar-hidden {
+    &--full-width {
       padding: 0;
     }
   }

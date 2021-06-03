@@ -14,7 +14,6 @@
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   font-family: $font-icons-family;
-  font-display: swap;
   border-color: $color-white transparent transparent;
   border: 0;
   content: "\f054";

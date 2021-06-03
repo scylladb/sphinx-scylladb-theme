@@ -1,3 +1,11 @@
+.panel {
+  background-color: $color-background-panel;
+  border: 0;
+  padding: 16px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
 .panel-grid {
   padding: $spacing;
 
@@ -9,33 +17,30 @@
 
   &__text {
     font-size: 18px;
-    color: $color-typography-topic-grid-title;
+    color: $color-typography-panel-grid-title;
     margin-bottom: 30px !important;
   }
-}
 
-.panel {
-  background-color: $color-background-panel;
-  border: 0;
-  padding: 16px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-}
-
-.panel-grid .panel {
-  background-color: transparent;
-  margin: 0;
-  padding: 16px 0;
-
-  &__title {
-    font-weight: 700;
-    color: $color-typography-topic-grid-title;
-    font-size: 18px;
-    line-height: 32px;
-  }
-
-  .container p:last-child {
+  .panel {
+    background-color: transparent;
     margin: 0;
+    padding: 16px 20px;
+    border: 1px solid $color-border-panel-grid;
+
+    &__title {
+      font-weight: 700;
+      color: $color-typography-panel-grid-title;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    .container p:last-child {
+      margin: 0;
+      a {
+        color: $color-typography-panel-grid-link;
+        font-weight: bold;
+      }
+    }
   }
 }
 

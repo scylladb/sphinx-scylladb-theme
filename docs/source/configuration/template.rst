@@ -19,7 +19,7 @@ For example:
         ('ScyllaDB Home', 'https://www.scylladb.com/')],
         'site_description': 'Sphinx Theme for ScyllaDB projects.',
         'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
-        'hide_right_sidebar_index': 'false',
+        'hide_sidebar_index': 'true',
         'hide_banner': 'true',
         'default_branch': 'master',
         'branch_substring_removed': 'branch-',
@@ -42,8 +42,8 @@ For example:
     * - ``github_issues_repository``
       - Repository organization name and project slug, separated by a slash (/). Used by the "Report an Issue on this Page" button.
       -  scylladb/sphinx-scylladb-theme
-    * - ``hide_right_sidebar_index``
-      -  Set to ``true`` to hide the right sidebar on the index page.
+    * - ``hide_sidebar_index``
+      -  Set to ``true`` to hide the sidebars on the index page.
       -  true
     * - ``hide_banner``
       -  Set to ``true`` to hide the ScyllaDB Summit registration banner at the top of the page.

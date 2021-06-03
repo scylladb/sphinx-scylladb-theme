@@ -45,10 +45,12 @@ $color-typography-latest-news-text: $color-waikawa-gray;
 $color-typography-latest-news-title: $color-ebony-clay;
 $color-typography-menu-item: $color-waikawa-gray;
 $color-typography-on-this-page: $color-blue-bell;
+$color-typography-panel-grid-title: $color-ebony-clay;
+$color-typography-panel-grid-link: $color-waikawa-gray;
 $color-typography-sidebar-button: $color-mine-shaft;
 $color-typography-table-header: $color-dodger-blue;
 $color-typography-table-body: $color-waikawa-gray;
-$color-typography-topic-grid-title: $color-san-marino;
+$color-typography-topic-grid-title: $color-waikawa-gray;
 $color-typography-toc-link: $color-waikawa-gray;
 
 $color-background-admonition-caution: $color-web-orange;
@@ -70,3 +72,4 @@ $color-border-footer-top: transparentize($color-black, 0.9);
 $color-border-sidebar-ul: transparentize($color-lavender-gray, 0.6);
 $color-border-sidebar-button: $color-royal-blue;
 $color-border-toc-local-li: transparentize($color-waikawa-gray, 0.9);
+$color-border-panel-grid: $color-san-marino;

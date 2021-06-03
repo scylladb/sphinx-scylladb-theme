@@ -2,9 +2,12 @@
 
 .. raw:: html
 
-    <div class="welcome">
-      <h1 class="welcome__title">Sphinx ScyllaDB Theme</h1>
-      <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
+    <div class="welcome grid-x">
+
+      <div class="columns large-7 centered">
+        <h1 class="welcome__title">Sphinx ScyllaDB Theme</h1>
+        <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
+      </div>
     </div>
 
 .. raw:: html
@@ -36,7 +39,58 @@
 
 .. raw:: html
 
-  <div class="topics-grid">
+  <div class="panel-grid grid-x">
+
+  <div class="columns large-7 centered">
+
+  <h2 class="panel-grid__title">Quick Start</h2>
+  <p class="panel-grid__text">To begin choose a topic from the list below</p>
+
+  <div class="grid-container full">
+  <div class="grid-x grid-margin-x">
+
+.. panel-box::
+  :title: Manage your own Scylla Cluster
+  :id: "getting-started"
+  :class: large-4
+
+
+  Provision and manage a Scylla cluster in your environment.
+
+  :doc:`Getting Started > <getting-started/index>`
+
+.. panel-box::
+  :title: Let us manage a Scylla Cluster for you
+  :id: "getting-started"
+  :class: large-4
+
+  Take advantage of  Scylla Cloud, a fully-managed database-as-a-service.
+
+  :doc:`Getting Started > <scylla-cloud/cloud-setup/index>`
+
+.. panel-box::
+  :title: Connect your application to Scylla
+  :id: "getting-started"
+  :class: large-4
+
+
+  Use high performance Scylla drivers to connect your application to your Scylla cluster.
+
+  :doc:`Getting Started > <using-scylla/drivers/index>`
+
+.. raw:: html
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+.. raw:: html
+
+  <div class="topics-grid grid-x">
+
+    <div class="columns large-7 centered">
+
 
   <h2 class="topics-grid__title">Topics</h2>
   <p class="topics-grid__text">To get started, choose a topic from the list</p>
@@ -89,6 +143,7 @@
 
 .. raw:: html
 
+  </div>
   </div>
   </div>
   </div>
