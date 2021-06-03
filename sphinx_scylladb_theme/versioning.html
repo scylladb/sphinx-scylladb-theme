@@ -8,9 +8,9 @@
 	 <i class="fa fa-caret-down" aria-hidden="true"></i>
     </button>
     <ul class="content">
-        {%- for item in versions.branches %}
+        {%- for item in versions.branches|reverse %}
             {% if item.name not in theme_hide_version_dropdown %}
-            <li><a href="{{ item.url }}">{{ item.name | replace(theme_branch_substring_removed, '') }}</a></li>
+                <li><a href="{{ item.url }}">{{ item.name | replace(theme_branch_substring_removed, '') }}</a></li>
             {% endif %}
         {%- endfor %}
         {%- for item in versions.tags|reverse %}
