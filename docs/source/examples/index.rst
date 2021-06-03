@@ -13,6 +13,7 @@ Examples
    links
    lists
    panel-box
+   substitutions
    tables
    tabs
    text
@@ -31,6 +32,7 @@ Examples
   * :doc:`Links <links>`
   * :doc:`Lists <lists>`
   * :doc:`Panel Box <panel-box>`
+  * :doc:`Substitutions <substitutions>`
   * :doc:`Tables <tables>`
   * :doc:`Tabs <tabs>`
   * :doc:`Text <text>`
