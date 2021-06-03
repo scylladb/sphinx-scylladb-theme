@@ -9,10 +9,14 @@
     </button>
     <ul class="content">
         {%- for item in versions.branches|reverse %}
-            <li><a href="{{ item.url }}">{{ item.name | replace(theme_branch_substring_removed, '') }}</a></li>
+            {% if item.name not in theme_hide_version_dropdown %}
+                <li><a href="{{ item.url }}">{{ item.name | replace(theme_branch_substring_removed, '') }}</a></li>
+            {% endif %}
         {%- endfor %}
         {%- for item in versions.tags|reverse %}
-            <li><a href="{{ item.url }}">{{item.name | replace(theme_tag_substring_removed, '' ) }}</a></li>
+            {% if item.name not in theme_hide_version_dropdown %}
+                <li><a href="{{ item.url }}">{{item.name | replace(theme_tag_substring_removed, '' ) }}</a></li>
+            {% endif %}
         {%- endfor %}
     </ul>
 </div>

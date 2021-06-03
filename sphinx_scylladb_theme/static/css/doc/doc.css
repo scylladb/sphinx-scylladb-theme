@@ -107,6 +107,10 @@
     color: #F6374E;
 }
 
+.inline-icon.fa-check {
+  color: #42C4E6;
+}
+
 .meta-bar-section {
     display:none;
 }
