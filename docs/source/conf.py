@@ -107,7 +107,8 @@ html_theme_options = {
     ('Scylla University', 'https://university.scylladb.com/'),
     ('ScyllaDB Home', 'https://www.scylladb.com/')],
     'site_description': 'Sphinx Theme for ScyllaDB projects.',
-    'github_issues_repository': 'scylladb/sphinx-scylladb-theme',
+    'github_issues_repository': 'scylladb/scylla-doc-issues',
+    'default_branch': 'master',
     'show_sidebar_index': 'false',
 }
 

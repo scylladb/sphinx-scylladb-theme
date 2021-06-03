@@ -209,8 +209,7 @@
             <a class="link" href="https://docs.scylladb.com">Docs</a>
             <a class="link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
             <a class="link" href="https://www.scylladb.com/company/">About Us</a>
-            <a class="link button" href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix" target="_blank">
-                Report an issue on this page</a>
+          {% include 'contribute.html' %}
         </div>
         <div class="footer-actions">
             <a class="link-icon" href="https://github.com/ScyllaDB" target="_blank">
@@ -258,6 +257,7 @@
 <script src="{{ pathto('_static/expertrec.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.js', 1) }}"></script>
 <script src="{{ pathto('_static/js/foundation/foundation.topbar.js', 1) }}"></script>
+<script src="{{ pathto('_static/js/foundation/foundation.dropdown.js', 1) }}"></script>
 <script src="{{ pathto('_static/app.js', 1) }}"></script>
 <script>
     $(document).foundation();
