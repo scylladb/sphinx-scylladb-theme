@@ -1,27 +1,31 @@
-<div
-  class="versions-dropdown {{ 'versions-dropdown--single' if (not versions.tags and versions.branches|count==1) or (versions.tags|count==1 and not versions.branches) }}"
+<ul
+  class="scylla-dropdown scylla-dropdown--versions {{ 'scylla-dropdown--single-version' if (not versions.tags and versions.branches|count==1) or (versions.tags|count==1 and not versions.branches) }} dropdown menu"
+  data-dropdown-menu
 >
-  <button class="versions-dropdown__button">
-    {% if current_version in versions.branches %} {{ current_version.name |
-    replace(theme_branch_substring_removed, '') }} {% else %} {{
-    current_version.name | replace(theme_tag_substring_removed, '') }} {% endif
-    %}
-
-    <i class="fa fa-caret-down" aria-hidden="true"></i>
-  </button>
-  <ul class="versions-dropdown__content">
-    {%- for item in versions.branches %}
-    <li>
-      <a href="{{ item.url }}"
-        >{{ item.name | replace(theme_branch_substring_removed, '') }}</a
-      >
-    </li>
-    {%- endfor %} {%- for item in versions.tags|reverse %}
-    <li>
-      <a href="{{ item.url }}"
-        >{{item.name | replace(theme_tag_substring_removed, '' ) }}</a
-      >
-    </li>
-    {%- endfor %}
-  </ul>
-</div>
+  <li class="scylla-dropdown__title">
+    <a href="#">
+      {% if current_version in versions.branches %} {{ current_version.name |
+      replace(theme_branch_substring_removed, '') }} {% else %} {{
+      current_version.name | replace(theme_tag_substring_removed, '') }} {%
+      endif %}
+      <i class="chevron scylla-icon scylla-icon--chevron-right"></i>
+    </a>
+    <ul class="menu scylla-dropdown__content">
+      {%- for item in versions.branches|reverse %} {% if item.name not in
+      theme_hide_version_dropdown %}
+      <li>
+        <a href="{{ item.url }}"
+          >{{ item.name | replace(theme_branch_substring_removed, '') }}</a
+        >
+      </li>
+      {% endif %} {%- endfor %} {%- for item in versions.tags|reverse %} {% if
+      item.name not in theme_hide_version_dropdown %}
+      <li>
+        <a href="{{ item.url }}"
+          >{{item.name | replace(theme_tag_substring_removed, '' ) }}</a
+        >
+      </li>
+      {% endif %} {%- endfor %}
+    </ul>
+  </li>
+</ul>
