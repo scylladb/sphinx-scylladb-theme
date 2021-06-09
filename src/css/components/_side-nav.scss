@@ -7,58 +7,61 @@
   display: none;
   background-color: $color-background-sidebar;
   overflow-y: auto;
-}
 
-.side-nav-content {
-  font-family: $font-title-family;
-  font-size: $font-base-size;
-  overflow-wrap: break-word;
-  padding: $spacing;
-
-  a {
-    color: $color-typography-base;
+  &-wrapper {
+    padding: $spacing;
   }
 
-  ul {
-    margin: 0;
-  }
+  &__content {
+    font-family: $font-title-family;
+    font-size: $font-base-size;
+    overflow-wrap: break-word;
 
-  li {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    padding-bottom: 24px;
-
-    > a {
-      flex: 1;
-    }
-
-    > label {
-      height: 0;
-      flex: 0;
-      float: right;
-    }
-
-    &.current {
-      a {
-        color: $color-typography-base-link;
-        &.current {
-          font-weight: 700;
-        }
-      }
+    a {
+      color: $color-typography-base;
     }
 
     ul {
-      width: 100%;
-      border-left: 2px solid $color-border-sidebar-ul;
-      margin-top: 20px;
-      li {
-        padding: 4px 0 4px 20px;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      padding-bottom: 24px;
+
+      > a {
+        flex: 1;
+      }
+
+      > label {
+        height: 0;
+        flex: 0;
+        float: right;
+      }
+
+      &.current {
+        a {
+          color: $color-typography-base-link;
+          &.current {
+            font-weight: 700;
+          }
+        }
       }
 
       ul {
-        margin-left: 0;
+        width: 100%;
+        border-left: 2px solid $color-border-sidebar-ul;
+        margin-top: 20px;
+        li {
+          padding: 4px 0 4px 20px;
+        }
+
+        ul {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -105,7 +108,7 @@
 }
 
 /* Override custom navigation extension style */
-.side-nav-content {
+.side-nav__content {
   label,
   label i {
     padding: 0;
@@ -152,20 +155,23 @@
     top: $header-height;
     max-height: 100vh;
     max-height: calc(100vh - 80px);
-  }
-  .side-nav-content {
-    padding-bottom: 0 !important;
-    > ul {
+
+    &-wrapper {
+      padding-bottom: 0 !important;
+    }
+
+    &__content {
       padding-bottom: $footer-height;
     }
   }
+
   .side-nav-toggle {
     display: none;
   }
 }
 
 @media screen and (min-width: $xlarge) {
-  .side-nav-content {
+  .side-nav-wrapper {
     padding: $spacing-l;
   }
 
@@ -175,7 +181,7 @@
 }
 
 @media screen and (min-width: $xxlarge) {
-  .side-nav-content {
+  .side-nav-wrapper {
     width: $side-nav-width;
     float: right;
   }
