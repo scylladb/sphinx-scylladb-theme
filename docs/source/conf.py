@@ -27,7 +27,8 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx_scylladb_theme',
     'sphinx_multiversion',
-    'recommonmark'
+    'recommonmark',
+    'sphinx_last_updated_by_git'
 ]
 
 # The suffix(es) of source filenames.
@@ -123,7 +124,7 @@ extlinks = {
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.
 #
-html_last_updated_fmt = '%d %B %Y'
+html_o_fmt = '%d %B %Y'
 
 # Custom sidebar templates, maps document names to template names.
 #
