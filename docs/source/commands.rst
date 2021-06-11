@@ -20,16 +20,19 @@ To preview the docs:
 
 2. Open http://127.0.0.1:5500/ with your preferred browser.
 
-You can pass custom options to increase or decrease verbosity. For a list of all the available options, refer to the `Sphinx documentation <https://www.sphinx-doc.org/en/master/man/sphinx-build.html>`_.
-For example:
+You can pass custom options to increase or decrease verbosity. For example, use ``-v`` to increase verbosity:
 
 .. code:: console
 
     make preview SPHINXOPTS=-v
 
+For a list with all the available options, refer to the `Sphinx documentation <https://www.sphinx-doc.org/en/master/man/sphinx-build.html>`_.
+
 Preview multiversion 
 --------------------
-The multiversionpreview generates a local instance of the docs site with all specified versions available for navigation. You can view the rendering in a sandbox environment on your local browser. 
+
+The multiversionpreview command generates a local instance of the docs site with all :doc:`specified versions <../configuration/multiversion>` available for navigation.
+You can view the rendering in a sandbox environment on your local browser.
 To preview multiple versions:
 
 1. Build the docs.
@@ -37,25 +40,64 @@ To preview multiple versions:
 .. code:: console
 
     cd docs
-    make previewmultiversion
+    make multiversionpreview
 
 2. Open http://0.0.0.0:5500/ with your preferred browser.
 
-If the version drop-down menu does not contain the all of the listed versions, try to run ``git fetch --tags`` to download the latest tags from remote.
+Troubleshooting
+===============
 
-Build HTML for the current branch
----------------------------------
+.. _Sync_Fork:
 
-To generate an HTML version:
+I cannot see my latest local changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Build the docs.
+By default, the command builds the documentation that is available on GitHub (remote repository).
+
+To build multiversion docs for the local branches:
+
+1. In ``conf.py``, set ``smv_remote_whitelist`` to ``None``:
 
 .. code:: console
 
-    cd docs
-    make dirhtml
+    smv_remote_whitelist = None
 
-2. The previous command should generate HTML docs under the ``docs/_build/dirhtml`` directory.
+2. Follow `Syncing a Fork <https://docs.github.com/es/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_ for every branch not updated in your fork.
+
+3. Run ``make multiversionpreview`` again.
+
+.. _Preview_Production:
+
+I want to preview the documentation published in production
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Follow `these steps <https://docs.github.com/es/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_ to configure a remote that points to the upstream repository in Git.
+
+2. Download the latest tags and branches from upstream:
+
+.. code:: console
+
+    git fetch --all
+
+3. Edit the setting ``smv_remote_whitelist`` in the file `conf.py` to build the docs from upstream as follows:
+
+.. code:: console
+
+    smv_remote_whitelist = r"^upstream$"
+
+4. Run the command ``make multiversionpreview`` again.
+
+No matching refs found!
+^^^^^^^^^^^^^^^^^^^^^^^
+
+If the console raises the error "No matching refs found!", most likely your fork is not updated with the upstream repository.
+
+In this case, you can:
+
+* Build multiversion docs for the upstream repository. See :ref:`Preview documentation published in production <Preview_Production>` (recommended)
+* Sync the fork with the upstream repository. See :ref:`Preview latest local changes <Sync_Fork>`
+
+Another frequent mistake that raises the error message is to have typos in the configuration file. Make sure that the version names listed in ``TAGS`` and ``BRANCHES`` settings from ``conf.py`` match the repository's branch and tags names on Git.
 
 Build HTML for multiple versions
 --------------------------------
@@ -66,10 +108,10 @@ To generate multiple versions of the documentation:
 
 1. Build the docs.
 
-.. code:: console
+    .. code:: console
 
-    cd docs
-    make multiversion
+        cd docs
+        make multiversion
 
 2. The previous command should generate HTML docs under the ``docs/_build/dirhtml`` directory.
 
