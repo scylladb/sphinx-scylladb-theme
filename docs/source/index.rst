@@ -10,22 +10,6 @@
       </div>
     </div>
 
-.. raw:: html
-
-   <div class="latest-news">
-   <h3 class="latest-news__title">What's new in the theme</h3>
-   <div class="latest-news__cards">
-
-.. postlist:: 5
-   :date: %B %d, %Y
-   :format: {date} {title}
-   :excerpts:
-   :expand: Read more ...
-
-.. raw:: html
-
-  </div>
-  </div>
 
 .. toctree::
    :hidden:
@@ -39,44 +23,39 @@
 
 .. raw:: html
 
-  <div class="panel-grid grid-x">
+  <div class="topic_grid grid-x">
 
   <div class="columns large-7 centered">
-
-  <h2 class="panel-grid__title">Quick Start</h2>
-  <p class="panel-grid__text">To begin choose a topic from the list below</p>
 
   <div class="grid-container full">
   <div class="grid-x grid-margin-x">
 
-.. panel-box::
+.. topic-box::
   :title: Manage your own Scylla Cluster
-  :id: "getting-started"
+  :link: getting-started/index
   :class: large-4
-
 
   Provision and manage a Scylla cluster in your environment.
 
-  :doc:`Getting Started > <getting-started/index>`
+  Get started
 
-.. panel-box::
+.. topic-box::
   :title: Let us manage a Scylla Cluster for you
-  :id: "getting-started"
+  :link: getting-started/index
   :class: large-4
 
   Take advantage of  Scylla Cloud, a fully-managed database-as-a-service.
 
-  :doc:`Getting Started > <scylla-cloud/cloud-setup/index>`
+  Get started
 
-.. panel-box::
+.. topic-box::
   :title: Connect your application to Scylla
-  :id: "getting-started"
+  :link: using-scylla/drivers/index
   :class: large-4
-
 
   Use high performance Scylla drivers to connect your application to your Scylla cluster.
 
-  :doc:`Getting Started > <using-scylla/drivers/index>`
+  Get started
 
 .. raw:: html
 
@@ -102,6 +81,7 @@
   :title: Installation
   :link: getting-started
   :icon: scylla-icon scylla-icon--getting-started
+  :class: topic-box--product,large-3,small-6
 
   Contains information on how to install the theme and extensions in a new project.
 
@@ -109,6 +89,7 @@
   :title: Configuration
   :link: configuration
   :icon: scylla-icon scylla-icon--integrations
+  :class: topic-box--product,large-3,small-6
 
   Contains information on configuring Sphinx projects with this theme.
 
@@ -116,6 +97,7 @@
   :title: Commands
   :link: commands
   :icon: scylla-icon scylla-icon--apps
+  :class: topic-box--product,large-3,small-6
 
   Contains information about all the available commands to build and preview the docs.
 
@@ -123,6 +105,7 @@
   :title: GitHub Pages
   :link: github-pages
   :icon: fa fa-github
+  :class: topic-box--product,large-3,small-6
 
   Contains guides for publishing documentation sites using GitHub Actions & Pages.
 
@@ -130,6 +113,7 @@
   :title: Demos and Examples
   :link: examples
   :icon: scylla-icon scylla-icon--tech-talks
+  :class: topic-box--product,large-3,small-6
 
   Contains example pages and components one can use in ScyllaDB docs.
 
@@ -137,6 +121,7 @@
   :title: Contribute
   :link: contribute
   :icon: scylla-icon scylla-icon--about-team
+  :class: topic-box--product,large-3,small-6
 
   Contains information on how to set up a developer environment,
   update the theme and static assets, and publish a Python package.

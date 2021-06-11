@@ -14,10 +14,10 @@
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   font-family: $font-icons-family;
-  border-color: $color-white transparent transparent;
+  border-color: $color-typography-header-link transparent transparent;
   border: 0;
   content: "\f054";
-  color: $color-white;
+  color: $color-typography-header-link;
   margin-top: -10px;
 }
 
@@ -35,6 +35,7 @@
   position: relative;
   width: 100%;
   z-index: 99;
+  box-shadow: 0px 2px 22px rgba(74, 93, 166, 0.15);
 }
 
 .header-logo {
@@ -50,6 +51,14 @@
 
   .menu-icon {
     margin-bottom: 4px;
+
+    &:after {
+      background: $color-typography-header-link;
+      --webkit-box-shadow: 0 7px 0 $color-typography-header-link,
+        0 14px 0 $color-typography-header-link;
+      box-shadow: 0 7px 0 $color-typography-header-link,
+        0 14px 0 $color-typography-header-link;
+    }
   }
 }
 
@@ -109,7 +118,7 @@
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
     content: "";
     border: inset 6px;
-    border-color: $color-white transparent transparent;
+    border-color: $color-typography-header-link transparent transparent;
     border-bottom-width: 0;
     border-top-style: solid;
     margin-top: -3px;

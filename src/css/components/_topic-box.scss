@@ -15,50 +15,72 @@
 }
 
 .topic-box {
-  display: block;
-  text-align: center;
-  padding: 20px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  font-size: $font-small-size;
-  color: $color-typography-base;
+  .card {
+    @include floating;
+    border-radius: 8px !important;
+    border: 0 !important;
+    display: block;
+    margin: 0 auto;
+    padding: 45px 30px;
+    margin-bottom: 60px;
+    color: $color-typography-base;
+    font-size: 18px;
+  }
 
   &__title {
     font-weight: 700;
-    color: $color-typography-topic-grid-title;
-    font-size: 18px;
+    color: $color-typography-base;
+    font-size: 20px;
     margin-bottom: 0;
     line-height: 32px;
   }
 
-  &__icon {
-    font-size: 50px;
-    margin-bottom: 20px;
-    display: block;
-
-    i {
-      filter: brightness(0);
-      min-height: 50px;
-      width: 50px;
-    }
-
-    img {
-      margin: 0;
-      height: 115px;
-    }
-  }
-
   &__body {
+    .container,
     p {
       margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin-top: 10px;
     }
   }
 
-  &:hover {
-    @include floating;
-    border-radius: 4px;
-    color: $color-typography-base;
-    font-weight: 400;
+  &--product .card {
+    box-shadow: none;
+    padding: 20px;
+    font-size: $font-small-size;
+    text-align: center;
+
+    .topic-box__title {
+      color: $color-typography-base;
+      font-size: 18px;
+    }
+
+    .topic-box__icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+      display: block;
+
+      i {
+        filter: brightness(0);
+        min-height: 50px;
+        width: 50px;
+      }
+
+      img {
+        margin: 0;
+        height: 115px;
+      }
+    }
+
+    &:hover {
+      @include floating;
+      border-radius: 4px;
+      color: $color-typography-base;
+      font-weight: 400;
+    }
   }
 }
 

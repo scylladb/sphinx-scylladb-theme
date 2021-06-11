@@ -7,7 +7,6 @@
 }
 
 .footer-group {
-  max-width: 1024px;
   margin: 0 auto;
   padding: 0 $spacing;
 }
@@ -39,13 +38,10 @@
     margin-right: 28px;
     letter-spacing: 2.4px;
   }
-  &__button {
-    margin: 30px 0;
-    font-size: $font-smallest-size !important;
-  }
 }
 
 .footer-actions {
+  display: none;
   margin: 0 auto;
   &__link {
     color: $color-typography-footer-icon;
@@ -74,18 +70,6 @@
 @media screen and (min-width: $medium) {
   .footer-links {
     margin: 0;
-  }
-
-  .footer-actions {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 751px) {
-  .footer-links {
-    &__button {
-      margin: 0;
-    }
   }
 }
 

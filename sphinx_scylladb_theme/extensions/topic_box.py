@@ -22,23 +22,21 @@ class TopicBox(Directive):
 
     def run(self):
         class_name = "topic-box"
-        container_class_name = self.options.get("class", "small-6 large-3").replace(
-            ",", " "
-        )
+        container_class_name = self.options.get("class", "").replace(",", " ")
 
         link = self.options.get("link")
         html_tag_open = generate_template(
             """
-            <div class="cell {container_class_name}">
-            <a class="{class_name}" href="{link}">
+            <div class="cell {class_name} {container_class_name}">
+            <a class="card" href="{link}">
             """
             if link
             else """
-            <div class="{container_class_name}">
-            <div class="{class_name}">
+            <div class="{class_name} {container_class_name}">
+            <div class="card">
             """,
-            container_class_name=container_class_name,
             class_name=class_name,
+            container_class_name=container_class_name,
             link=link,
         )
         html_tag_close = "</a></div>" if link else "</div></div>"
