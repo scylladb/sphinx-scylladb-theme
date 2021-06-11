@@ -28,20 +28,20 @@ $(document).ready(function () {
 
 // Displays a custom banner on top
 if (!$.cookie("hide-enterprise-banner")) {
-  $(".custom-promo-banner-wrap").show();
-  $("body").css("padding-top", $(".custom-promo-banner-wrap").outerHeight());
+  $(".promo-banner-wrap").show();
+  $("body").css("padding-top", $(".promo-banner-wrap").outerHeight());
 } else {
-  $(".custom-promo-banner-wrap").hide();
+  $(".promo-banner-wrap").hide();
 }
 
-$(".custom-promo-banner__close").on("click", function () {
+$(".promo-banner__close").on("click", function () {
   $.cookie("hide-enterprise-banner", "1");
   $("body").css("padding-top", 0);
-  $(".custom-promo-banner-wrap").hide();
+  $(".promo-banner-wrap").hide();
 });
 
 $(window).resize(function () {
-  if ($(".custom-promo-banner-wrap").is(":visible")) {
-    $("body").css("padding-top", $(".custom-promo-banner-wrap").outerHeight());
+  if ($(".promo-banner-wrap").is(":visible")) {
+    $("body").css("padding-top", $(".promo-banner-wrap").outerHeight());
   }
 });
