@@ -10,12 +10,12 @@ For Docs Maintainers
   :id: "components"
   :class: my-panel
 
-  #. :doc:`Read about the toolchain <toolchain>`
-  #. :doc:`Add Sphinx & theme to a project <installation>`
-  #. :doc:`Configure the theme <../configuration/template>`
-  #. :doc:`List new versions  <../configuration/multiversion>`
-  #. :doc:`Publish to GitHub Pages  <../github-pages>`
-  #. :doc:`Commands to build docs  <../commands>`
+  * :doc:`Read about the toolchain <toolchain>`
+  * :doc:`Add Sphinx & theme to a project <installation>`
+  * :doc:`Configure the theme <../configuration/template>`
+  * :doc:`List new versions  <../configuration/multiversion>`
+  * :doc:`Publish to GitHub Pages  <../github-pages>`
+  * :doc:`Commands to build docs  <../commands>`
 
 For Docs Contributors
 ---------------------
