@@ -17,7 +17,7 @@ All ScyllaDB documentation sites share a common look and feel.
 
 Build docs for different versions of your project.
 
-**GitHub Pages Support**:
+**GitHub Pages Support**
 
 Publish the documentation to GitHub Pages automatically every time the theme receives new content.
 
