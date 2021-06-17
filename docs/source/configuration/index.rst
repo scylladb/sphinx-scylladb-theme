@@ -7,7 +7,7 @@ Configuration
 
    template
    multiversion
-   blog
+   troubleshooting
 
 .. panel-box::
   :title: Overview
@@ -17,3 +17,4 @@ Configuration
   * :doc:`Template Options <template>` - Configuration options for this theme.
   * :doc:`Multiversion Options <multiversion>` - Configuration options for the multiversion extension.
   * :doc:`Blog Options <blog>` - Configuration options for the blog extension.
+  * :doc:`Troubleshooting <multiversion>` - Help to resolve common issues.

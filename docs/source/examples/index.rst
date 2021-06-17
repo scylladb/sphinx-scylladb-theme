@@ -12,6 +12,7 @@ Examples
    images
    links
    lists
+   markdown
    panel-box
    substitutions
    tables
@@ -31,6 +32,7 @@ Examples
   * :doc:`Images <images>`
   * :doc:`Links <links>`
   * :doc:`Lists <lists>`
+  * :doc:`Markdown <markdown>`
   * :doc:`Panel Box <panel-box>`
   * :doc:`Substitutions <substitutions>`
   * :doc:`Tables <tables>`

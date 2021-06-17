@@ -2,7 +2,7 @@
 name = "sphinx-scylladb-theme"
 version = "1.0.0"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
-authors = ["David García <dgarcia360@outlook.com>"]
+authors = ["David García <hi@davidgarcia.dev>"]
 exclude = [".github", "config", "docs", ".postcss.config.js", ".prettierrc.json", "deploy.sh", "src", "package.json", "package-lock.json"]
 readme = "PYPI.rst"
 

@@ -24,7 +24,11 @@ For example:
         'hide_version_dropdown': ['master'],
         'default_branch': 'master',
         'branch_substring_removed': 'branch-',
-        'tag_substring_removed': '-scylla'
+        'tag_substring_removed': '-scylla',
+        'hide_banner': 'true',
+        'banner_title_text': 'Scylla University Live | Free Virtual Training Event',
+        'banner_button_text': 'Learn More >',
+        'banner_button_url': '#',
     }
 
 .. list-table::
@@ -42,12 +46,9 @@ For example:
       - Scylla is an Apache Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
     * - ``github_issues_repository``
       - Repository organization name and project slug, separated by a slash (/). Used by the "Report an Issue on this Page" button.
-      -  scylladb/sphinx-scylladb-theme
+      -  scylladb/scylla-doc-issues
     * - ``hide_sidebar_index``
       -  Set to ``true`` to hide the sidebars on the index page.
-      -  true
-    * - ``hide_banner``
-      -  Set to ``true`` to hide the ScyllaDB Summit registration banner at the top of the page.
       -  true
     * - ``hide_version_dropdown``
       -  List of tags and branches names to hide from the multiversion dropdown.
@@ -61,3 +62,15 @@ For example:
     * - ``tag_substring_removed``
       -  Part of the tag name to skip from the multiversion dropdown.
       -  -scylla
+    * - ``hide_banner``
+      -  Set to ``true`` to hide the promotional banner. This banner is mainly used to promote events and new features, and is located at the top of every page.
+      -  true
+    * - ``banner_title_text``
+      - Leading text shown in the promotional banner.
+      - Scylla University Live | Free Virtual Training Event
+    * - ``banner_button_text``
+      - Caption for the promotional banner call to action.
+      - Learn More >
+    * - ``banner_button_url``
+      - Link for the promotional banner call to action.
+      - #

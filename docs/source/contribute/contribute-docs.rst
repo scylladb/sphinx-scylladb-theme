@@ -216,7 +216,7 @@ Submit a pull request (PR)
 
 We expect that you are aware of how to submit a PR to GitHub. If you are not, please look at this `tutorial <https://guides.github.com/activities/hello-world/>`_.
 Every repository handles PRs differently. Some require you to use a template for submissions and some do not.
-Make sure to speak with your project’s maintainer before submitting the PR to avoid any misunderstanding or issues.
+Make sure to speak with the project’s maintainer before submitting the PR to avoid any misunderstanding or issues.
 
 If you are writing new content it is **highly recommended** to set your PR to a draft state.
 For Documentation PRs, the following guidelines should be applicable to all Scylla projects:
