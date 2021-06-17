@@ -2,7 +2,7 @@
 Installation
 ============
 
-This guide explains how to install Sphinx and this theme in a ScyllaDB project.
+This guide explains how to add the documentation toolchain to a project hosted on GitHub.
 
 1. Copy the ``docs`` and ``.github`` directories from the repository `scylladb/sphinx-scylladb-theme <https://github.com/scylladb/sphinx-scylladb-theme>`_
 to the project root directory where you want to set up docs. The directory structure should look like this:
@@ -33,5 +33,4 @@ to the project root directory where you want to set up docs. The directory struc
 5. Delete or adapt the sample documentation files under ``docs/source``.
 
 6. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
-
 
