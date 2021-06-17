@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "0.1.24"
+version = "0.1.25"
 description = "A Sphinx Theme for ScyllaDB projects documentation"
 authors = ["David Garcia <hi@davidgarcia.dev>"]
 exclude = ["docs", "deploy.sh"]
