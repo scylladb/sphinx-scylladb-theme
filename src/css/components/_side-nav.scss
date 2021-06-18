@@ -1,24 +1,21 @@
 .side-nav {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  height: 100vh;
-  width: 100%;
   display: none;
   background-color: $color-background-sidebar;
+  height: 100vh;
   overflow-y: auto;
-
-  &-wrapper {
-    padding: $spacing;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 
   &__content {
-    font-family: $font-title-family;
-    font-size: $font-base-size;
     overflow-wrap: break-word;
 
     a {
       color: $color-typography-base;
+      &:hover {
+        color: $color-typography-base-link;
+      }
     }
 
     ul {
@@ -30,10 +27,21 @@
       flex-wrap: wrap;
       list-style: none;
       padding: 0;
-      padding-bottom: 24px;
+      padding-bottom: 18px;
 
       > a {
         flex: 1;
+      }
+
+      &.current {
+        > a {
+          font-weight: 700;
+          color: $color-typography-base-link;
+        }
+
+        a.current {
+          color: $color-typography-base-link;
+        }
       }
 
       > label {
@@ -42,21 +50,11 @@
         float: right;
       }
 
-      &.current {
-        a {
-          color: $color-typography-base-link;
-          &.current {
-            font-weight: 700;
-          }
-        }
-      }
-
       ul {
         width: 100%;
-        border-left: 2px solid $color-border-sidebar-ul;
         margin-top: 20px;
         li {
-          padding: 4px 0 4px 20px;
+          padding: 4px 0 4px 10px;
         }
 
         ul {
@@ -64,6 +62,51 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: $large) {
+  .side-nav {
+    display: block;
+    z-index: 25;
+    width: inherit;
+    height: 100%;
+    top: $header-height;
+    max-height: 100vh;
+    max-height: calc(100vh - 80px);
+
+    &-wrapper {
+      padding-bottom: 0 !important;
+    }
+
+    &__content {
+      padding-bottom: $footer-height;
+    }
+  }
+
+  .side-nav-toggle {
+    display: none;
+  }
+}
+
+.side-nav-wrapper {
+  padding: $spacing;
+}
+
+@media screen and (min-width: $xlarge) {
+  .side-nav-wrapper {
+    padding: 30px $spacing-l;
+  }
+
+  .toctree-checkbox {
+    right: $spacing-l;
+  }
+}
+
+@media screen and (min-width: $xxlarge) {
+  .side-nav-wrapper {
+    width: $side-nav-width;
+    float: right;
   }
 }
 
@@ -107,7 +150,7 @@
   }
 }
 
-/* Override custom navigation extension style */
+/* Override custom navigation extension */
 .side-nav__content {
   label,
   label i {
@@ -117,6 +160,9 @@
 
   label .scylla-icon {
     min-height: 14px;
+    width: 8px;
+    filter: invert(81%) sepia(20%) saturate(128%) hue-rotate(177deg)
+      brightness(90%) contrast(89%);
   }
 
   .toctree-checkbox {
@@ -134,7 +180,6 @@
       }
       ~ label i {
         margin-top: 5px;
-        margin-right: 5px;
         transform: rotate(90deg);
       }
     }
@@ -143,46 +188,5 @@
   li.current .toctree-checkbox:checked ~ label i {
     filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
       brightness(90%) contrast(95%);
-  }
-}
-
-@media screen and (min-width: $large) {
-  .side-nav {
-    display: block;
-    z-index: 25;
-    width: inherit;
-    height: 100%;
-    top: $header-height;
-    max-height: 100vh;
-    max-height: calc(100vh - 80px);
-
-    &-wrapper {
-      padding-bottom: 0 !important;
-    }
-
-    &__content {
-      padding-bottom: $footer-height;
-    }
-  }
-
-  .side-nav-toggle {
-    display: none;
-  }
-}
-
-@media screen and (min-width: $xlarge) {
-  .side-nav-wrapper {
-    padding: $spacing-l;
-  }
-
-  .toctree-checkbox {
-    right: $spacing-l;
-  }
-}
-
-@media screen and (min-width: $xxlarge) {
-  .side-nav-wrapper {
-    width: $side-nav-width;
-    float: right;
   }
 }

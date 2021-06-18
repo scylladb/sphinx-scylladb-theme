@@ -38,10 +38,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-title-family;
   font-weight: 500;
   margin-bottom: 16px;
   letter-spacing: 0.2px;
+  line-height: 24px;
 
   &:hover > a.headerlink {
     visibility: visible;
@@ -56,10 +56,12 @@ h1 {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 28px;
+  line-height: 40px;
 }
 
 h2 {
   font-size: 24px;
+  line-height: 32px;
 }
 
 h3 {
@@ -72,111 +74,6 @@ img {
 
 button:focus {
   outline: 0;
-}
-
-table {
-  display: block;
-  max-width: 100%;
-  overflow-x: scroll;
-
-  @include floating;
-  font-size: $font-small-size;
-  margin-bottom: $gap;
-  color: $color-typography-table-body;
-
-  p {
-    margin: 0 !important;
-  }
-
-  thead {
-    background: transparent;
-    color: $color-typography-table-header;
-    font-family: $font-title-family;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: $font-smallest-size;
-    letter-spacing: 1.5px;
-    border: 0;
-  }
-
-  thead th,
-  td {
-    padding: 20px;
-  }
-
-  tbody tr {
-    border-top: 1px solid rgba(90, 94, 154, 0.1);
-    background-color: transparent !important;
-  }
-}
-
-code {
-  border: none;
-  font-size: $font-small-size;
-  background-color: $color-background-code;
-  border-radius: 4px;
-  color: $color-typography-code;
-
-  &.download {
-    color: $color-typography-code;
-    background: none;
-  }
-}
-
-.highlight {
-  background: transparent !important;
-  pre {
-    color: $color-typography-base;
-    padding: 16px;
-    background-color: $color-background-code;
-    margin-bottom: $gap;
-    line-height: 26px;
-    border-radius: $round;
-    overflow: auto;
-    font-size: $font-small-size;
-  }
-
-  a.copybtn {
-    top: 1em;
-    right: 1em;
-  }
-}
-
-.highlighttable {
-  border-radius: $round;
-  box-shadow: none;
-  background-color: $color-background-code;
-
-  tbody {
-    border: 0;
-    background-color: transparent;
-
-    tr {
-      border-top: none;
-    }
-  }
-
-  .linenos {
-    background-color: $color-background-code;
-    color: $color-typography-code-line-number;
-    width: 60px;
-
-    span {
-      line-height: 26px;
-    }
-  }
-
-  .highlight {
-    pre {
-      margin: 0;
-      padding: 0;
-      background-color: transparent;
-    }
-    a.copybtn {
-      top: 0.2em;
-      right: 0.2em;
-    }
-  }
 }
 
 blockquote {

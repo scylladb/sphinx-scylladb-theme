@@ -1,8 +1,7 @@
 #search-box {
-  display: flex;
-  width: 100%;
   background: rgba(58, 45, 85, 0.05);
   border-radius: 4px;
+  display: flex;
   padding: 10px 15px;
 
   &:before {
@@ -20,18 +19,18 @@
   }
 
   ci-search,
-  .er-dummy-search-box {
-    width: 100%;
-    overflow: hidden;
+  .er-dummy-search,
+  .er-dummy-search-box,
+  .er-search-form {
+    /* Reset expertect */
+    width: 100% !important;
+    margin: 0 !important;
   }
 
   input {
-    font-family: $font-title-family;
-    font-size: $font-small-size;
     background: transparent;
     color: rgba(80, 80, 80, 0.5);
-    max-width: 100%;
-    flex-grow: 1;
+    font-size: $font-small-size;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -45,10 +44,6 @@
   button {
     display: none !important;
   }
-}
-
-.er-dummy-search {
-  position: absolute;
 }
 
 .er_search_suggestions {

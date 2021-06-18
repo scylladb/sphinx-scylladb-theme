@@ -1,0 +1,68 @@
+code {
+  color: $color-typography-code;
+  background-color: $color-background-code;
+  border: none;
+  border-radius: 4px;
+  font-size: $font-small-size;
+
+  &.download {
+    background: none;
+    color: $color-typography-code;
+  }
+}
+
+.highlight {
+  background: transparent !important;
+  pre {
+    background-color: $color-background-code;
+    border-radius: $round;
+    color: $color-typography-base;
+    font-size: $font-small-size;
+    line-height: 26px;
+    margin-bottom: $gap;
+    overflow: auto;
+    padding: 16px;
+  }
+
+  a.copybtn {
+    right: 1em;
+    top: 1em;
+  }
+}
+
+.highlighttable {
+  background-color: $color-background-code;
+  border-radius: $round;
+  box-shadow: none;
+
+  tbody {
+    background-color: transparent;
+    border: 0;
+
+    tr {
+      border-top: none;
+    }
+  }
+
+  .linenos {
+    color: $color-typography-code-line-number;
+    background-color: $color-background-code;
+    width: 60px;
+
+    span {
+      line-height: 26px;
+    }
+  }
+
+  .highlight {
+    pre {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+    }
+    a.copybtn {
+      right: 0.2em;
+      top: 0.2em;
+    }
+  }
+}

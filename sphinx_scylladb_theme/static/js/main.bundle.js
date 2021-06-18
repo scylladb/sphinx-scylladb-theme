@@ -607,10 +607,12 @@
                         n.length && n.removeClass(this.options.labelErrorClass),
                           i.length &&
                             i.removeClass(this.options.formErrorClass),
-                          e.removeClass(this.options.inputErrorClass).attr({
-                            "data-invalid": null,
-                            "aria-invalid": null,
-                          });
+                          e
+                            .removeClass(this.options.inputErrorClass)
+                            .attr({
+                              "data-invalid": null,
+                              "aria-invalid": null,
+                            });
                       },
                     },
                     {
@@ -624,10 +626,12 @@
                         n.length && n.removeClass(this.options.labelErrorClass),
                           i.length &&
                             i.removeClass(this.options.formErrorClass),
-                          e.removeClass(this.options.inputErrorClass).attr({
-                            "data-invalid": null,
-                            "aria-invalid": null,
-                          });
+                          e
+                            .removeClass(this.options.inputErrorClass)
+                            .attr({
+                              "data-invalid": null,
+                              "aria-invalid": null,
+                            });
                       },
                     },
                     {
@@ -644,10 +648,12 @@
                         e.length && e.removeClass(this.options.labelErrorClass),
                           n.length &&
                             n.removeClass(this.options.formErrorClass),
-                          t.removeClass(this.options.inputErrorClass).attr({
-                            "data-invalid": null,
-                            "aria-invalid": null,
-                          });
+                          t
+                            .removeClass(this.options.inputErrorClass)
+                            .attr({
+                              "data-invalid": null,
+                              "aria-invalid": null,
+                            });
                       },
                     },
                     {
@@ -1082,13 +1088,15 @@
                               a = e.id
                                 ? "".concat(e.id, "-label")
                                 : "".concat(s, "-label");
-                            n.find("a:first").attr({
-                              "aria-controls": s,
-                              role: "tab",
-                              id: a,
-                              "aria-expanded": !1,
-                              "aria-selected": !1,
-                            }),
+                            n
+                              .find("a:first")
+                              .attr({
+                                "aria-controls": s,
+                                role: "tab",
+                                id: a,
+                                "aria-expanded": !1,
+                                "aria-selected": !1,
+                              }),
                               i.attr({
                                 role: "tabpanel",
                                 "aria-labelledby": a,
@@ -2293,11 +2301,13 @@
                               .data("savedHref", e.attr("href"))
                               .removeAttr("href")
                               .attr("tabindex", 0),
-                            e.children("[data-submenu]").attr({
-                              "aria-hidden": !0,
-                              tabindex: 0,
-                              role: "group",
-                            }),
+                            e
+                              .children("[data-submenu]")
+                              .attr({
+                                "aria-hidden": !0,
+                                tabindex: 0,
+                                role: "group",
+                              }),
                             t._events(e);
                         }),
                           this.$submenus.each(function () {
@@ -4782,13 +4792,15 @@
                       key: "_events",
                       value: function () {
                         var t = this;
-                        this.$element.off(".zf.trigger .zf.offCanvas").on({
-                          "open.zf.trigger": this.open.bind(this),
-                          "close.zf.trigger": this.close.bind(this),
-                          "toggle.zf.trigger": this.toggle.bind(this),
-                          "keydown.zf.offCanvas":
-                            this._handleKeyboard.bind(this),
-                        }),
+                        this.$element
+                          .off(".zf.trigger .zf.offCanvas")
+                          .on({
+                            "open.zf.trigger": this.open.bind(this),
+                            "close.zf.trigger": this.close.bind(this),
+                            "toggle.zf.trigger": this.toggle.bind(this),
+                            "keydown.zf.offCanvas":
+                              this._handleKeyboard.bind(this),
+                          }),
                           !0 === this.options.closeOnClick &&
                             (this.options.contentOverlay
                               ? this.$overlay
@@ -5373,10 +5385,12 @@
                       key: "_events",
                       value: function () {
                         var t = this;
-                        this.$element.off(".resizeme.zf.trigger").on({
-                          "resizeme.zf.trigger":
-                            this._prepareForOrbit.bind(this),
-                        }),
+                        this.$element
+                          .off(".resizeme.zf.trigger")
+                          .on({
+                            "resizeme.zf.trigger":
+                              this._prepareForOrbit.bind(this),
+                          }),
                           this.$slides.length > 1 &&
                             (this.options.swipe &&
                               this.$slides
@@ -7511,24 +7525,28 @@
                           n =
                             this.inputs.eq(t).attr("id") ||
                             Object(a.GetYoDigits)(6, "slider");
-                        this.inputs.eq(t).attr({
-                          id: n,
-                          max: this.options.end,
-                          min: this.options.start,
-                          step: this.options.step,
-                        }),
+                        this.inputs
+                          .eq(t)
+                          .attr({
+                            id: n,
+                            max: this.options.end,
+                            min: this.options.start,
+                            step: this.options.step,
+                          }),
                           this.inputs.eq(t).val(e),
-                          this.handles.eq(t).attr({
-                            role: "slider",
-                            "aria-controls": n,
-                            "aria-valuemax": this.options.end,
-                            "aria-valuemin": this.options.start,
-                            "aria-valuenow": e,
-                            "aria-orientation": this.options.vertical
-                              ? "vertical"
-                              : "horizontal",
-                            tabindex: 0,
-                          });
+                          this.handles
+                            .eq(t)
+                            .attr({
+                              role: "slider",
+                              "aria-controls": n,
+                              "aria-valuemax": this.options.end,
+                              "aria-valuemin": this.options.start,
+                              "aria-valuenow": e,
+                              "aria-orientation": this.options.vertical
+                                ? "vertical"
+                                : "horizontal",
+                              tabindex: 0,
+                            });
                       },
                     },
                     {
@@ -9219,13 +9237,15 @@
                           .concat(this.options.tooltipClass, " ")
                           .concat(this.options.templateClasses)
                           .trim();
-                        return o()("<div></div>").addClass(e).attr({
-                          role: "tooltip",
-                          "aria-hidden": !0,
-                          "data-is-active": !1,
-                          "data-is-focus": !1,
-                          id: t,
-                        });
+                        return o()("<div></div>")
+                          .addClass(e)
+                          .attr({
+                            role: "tooltip",
+                            "aria-hidden": !0,
+                            "data-is-active": !1,
+                            "data-is-focus": !1,
+                            id: t,
+                          });
                       },
                     },
                     {

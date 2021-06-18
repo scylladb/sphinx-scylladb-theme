@@ -2,11 +2,10 @@
 
 .. raw:: html
 
-    <div class="welcome grid-x">
-
-      <div class="columns large-7 centered">
-        <h1 class="welcome__title">Sphinx ScyllaDB Theme</h1>
-        <p class="welcome__text"> Do you want to add the theme to your project? <a href="installation">Start Here</a></p>
+    <div class="hero-section">
+      <div class="hero">
+        <h1 class="hero__title">Sphinx ScyllaDB Theme</h1>
+        <p class="hero__text"> The documentation toolchain for ScyllaDB projects.</p>
       </div>
     </div>
 
@@ -23,11 +22,8 @@
 
 .. raw:: html
 
-  <div class="topic_grid grid-x">
+  <div class="topics-grid grid-container full">
 
-  <div class="columns large-7 centered">
-
-  <div class="grid-container full">
   <div class="grid-x grid-margin-x">
 
 .. topic-box::
@@ -60,30 +56,16 @@
 .. raw:: html
 
   </div>
-  </div>
-  </div>
-  </div>
 
 .. raw:: html
 
-  <div class="topics-grid grid-x">
+  <div class="topics-grid">
 
-    <div class="columns large-7 centered">
+      <h2 class="topics-grid__title">Topics</h2>
+      <p class="topics-grid__text">To get started, choose a topic from the list</p>
 
-
-  <h2 class="topics-grid__title">Topics</h2>
-  <p class="topics-grid__text">To get started, choose a topic from the list</p>
-
-  <div class="grid-container full">
-  <div class="grid-x grid-margin-x">
-
-.. topic-box::
-  :title: Installation
-  :link: getting-started
-  :icon: scylla-icon scylla-icon--getting-started
-  :class: topic-box--product,large-3,small-6
-
-  Contains information on how to install the theme and extensions in a new project.
+      <div class="grid-container full">
+        <div class="grid-x grid-margin-x">
 
 .. topic-box::
   :title: Configuration
@@ -128,7 +110,4 @@
 
 .. raw:: html
 
-  </div>
-  </div>
-  </div>
-  </div>
+  </div></div></div>

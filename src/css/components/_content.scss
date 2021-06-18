@@ -15,15 +15,15 @@
     list-style: none;
 
     li::before {
-      font-family: $font-icons-family;
       content: "\2022";
       color: $color-typography-bullet;
-      font-weight: bold;
-      width: 1em;
-      margin-left: -1em;
-      margin-top: -2px;
+      font-family: $font-icons-family;
       float: left;
       font-size: 20px;
+      font-weight: bold;
+      margin-left: -1em;
+      margin-top: -2px;
+      width: 1em;
     }
 
     ul {
@@ -57,43 +57,19 @@
   }
 
   .section {
-    padding-top: $header-height;
     margin-top: -$header-height;
-  }
-}
-
-.welcome {
-  text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
-  padding: 60px $spacing;
-
-  &__title {
-    margin-bottom: 10px;
-  }
-
-  &__text {
-    font-size: 18px;
-
-    a {
-      color: $color-typography-topic-grid-title;
-      border-bottom: 1px $color-typography-topic-grid-title dotted;
-    }
+    padding-top: $header-height;
   }
 }
 
 @media screen and (min-width: $medium) {
   .content {
-    padding-bottom: 100px;
     min-height: calc(100vh - 276px);
+    padding-bottom: 100px;
 
     &--full-width {
       padding: 0;
     }
-  }
-
-  .welcome {
-    text-align: left;
-    padding: 60px $spacing-l;
   }
 }
 

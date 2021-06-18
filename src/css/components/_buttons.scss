@@ -1,12 +1,17 @@
 .button {
-  font-size: $font-small-size;
-  color: $color-typography-button;
-  text-transform: uppercase;
-  font-weight: 500;
+  background: transparent;
+  border: 1px solid $color-border-button;
   border-radius: 4px;
-  padding: 12px;
-  background-color: $color-background-button;
+  color: $color-typography-button;
+  display: inline;
+  font-size: $font-small-size;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding: 12px 14px;
+  text-transform: uppercase;
+
   &:hover {
-    background-color: darken($color-background-button, 10%);
+    background: transparent;
+    color: $color-typography-button;
   }
 }

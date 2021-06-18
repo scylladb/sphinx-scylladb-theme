@@ -1,41 +1,48 @@
 .topics-grid {
-  padding: $spacing;
+  display: block;
+  margin: 0 auto;
+  max-width: 1300px !important;
+  margin-bottom: 30px;
 
   &__title {
-    font-size: 22px;
-    margin-bottom: 10px;
+    color: $color-typography-topic-grid-title;
+    font-size: 24px;
+    margin-bottom: 6px;
     font-weight: 700;
   }
 
   &__text {
     font-size: 18px;
-    color: $color-typography-topic-grid-title;
-    margin-bottom: 60px !important;
+    color: $color-typography-topic-grid-text;
   }
 }
 
 .topic-box {
   .card {
     @include floating;
-    border-radius: 8px !important;
-    border: 0 !important;
     display: block;
     margin: 0 auto;
-    padding: 45px 30px;
     margin-bottom: 60px;
-    color: $color-typography-base;
+    padding: 45px 30px;
     font-size: 18px;
+
+    &:hover {
+      color: $color-typography-base;
+      font-weight: 400;
+    }
   }
 
   &__title {
     font-weight: 700;
-    color: $color-typography-base;
+    color: $color-typography-topic-title;
     font-size: 20px;
     margin-bottom: 0;
     line-height: 32px;
   }
 
   &__body {
+    color: $color-typography-topic-text;
+
     .container,
     p {
       margin: 0;
@@ -44,24 +51,36 @@
 
     p {
       margin-top: 10px;
+
+      &:nth-child(2) {
+        font-size: 20px;
+        font-weight: 700;
+        color: $color-typography-topic-link;
+      }
     }
   }
 
   &--product .card {
     box-shadow: none;
     padding: 20px;
-    font-size: $font-small-size;
+    min-height: 261px;
     text-align: center;
 
     .topic-box__title {
       color: $color-typography-base;
       font-size: 18px;
+      line-height: 32px;
+    }
+
+    .topic-box__body {
+      font-size: $font-small-size;
+      line-height: 24px;
     }
 
     .topic-box__icon {
+      display: block;
       font-size: 50px;
       margin-bottom: 20px;
-      display: block;
 
       i {
         filter: brightness(0);
@@ -70,23 +89,19 @@
       }
 
       img {
-        margin: 0;
         height: 115px;
+        margin: 0;
       }
     }
 
     &:hover {
       @include floating;
-      border-radius: 4px;
-      color: $color-typography-base;
-      font-weight: 400;
     }
   }
 }
 
 @media screen and (min-width: $medium) {
   .topics-grid {
-    padding: $spacing-l;
-    padding-bottom: 0;
+    margin-bottom: 70px;
   }
 }

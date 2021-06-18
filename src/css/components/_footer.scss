@@ -1,9 +1,9 @@
 .footer {
   background-color: $color-background-footer;
+  box-shadow: 0px -4px 10px rgba(208, 208, 208, 0.25);
   position: relative;
   padding: 30px 0;
   z-index: 50;
-  box-shadow: 0px -4px 10px rgba(208, 208, 208, 0.25);
 }
 
 .footer-group {
@@ -13,8 +13,8 @@
 
 .footer-top {
   align-items: center;
-  padding-bottom: 30px;
   border-bottom: 1px solid $color-border-footer-top;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -29,14 +29,15 @@
 
 .footer-links {
   margin-top: 30px;
+  text-align: left;
 
   &__link:not(.button) {
     color: $color-typography-footer-link;
-    text-transform: uppercase;
     font-weight: 500;
     font-size: $font-small-size;
-    margin-right: 28px;
     letter-spacing: 2.4px;
+    margin-right: 28px;
+    text-transform: uppercase;
   }
 }
 
@@ -50,18 +51,18 @@
 }
 
 .footer-bottom {
+  color: $color-typography-footer-copyright;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  padding: 20px 0 10px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 23px;
+  justify-content: center;
   letter-spacing: 1.4px;
+  line-height: 23px;
+  padding: 20px 0 10px 0;
+  text-align: center;
   text-transform: uppercase;
-  color: $color-typography-footer-copyright;
   div {
     margin-bottom: 20px;
   }
@@ -94,15 +95,15 @@
   }
 
   .footer-actions {
-    text-align: right;
     display: block;
+    text-align: right;
   }
 
   .footer-bottom {
     div {
+      border-left: 1px solid $color-typography-footer-copyright;
       margin: 0;
       padding: 0 10px;
-      border-left: 1px solid $color-typography-footer-copyright;
       &.footer-bottom__copyright {
         border-left: none;
       }

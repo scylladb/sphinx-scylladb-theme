@@ -1,0 +1,32 @@
+.hero-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+  margin-bottom: 30px;
+  padding: 30px 15px;
+  text-align: left;
+}
+
+.hero {
+  display: block;
+  margin: 0 auto;
+  max-width: 1300px;
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-size: 18px;
+
+    a {
+      border-bottom: 1px $color-typography-topic-grid-title dotted;
+      color: $color-typography-topic-grid-title;
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .hero-section {
+    padding: 60px 0px;
+  }
+}
