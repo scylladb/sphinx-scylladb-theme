@@ -71,9 +71,9 @@ const onCloseBanner = () => {
 };
 
 const onResizeBanner = () => {
-  const promoBanner = $(".promo-banner");
-  const promoBannerHeight = promoBanner.outerHeight();
   $(window).resize(function () {
+    const promoBanner = $(".promo-banner");
+    const promoBannerHeight = promoBanner.outerHeight();
     if (promoBanner.is(":visible")) {
       $("body").css("padding-top", promoBannerHeight);
       $(".side-nav").css("padding-top", promoBannerHeight);
