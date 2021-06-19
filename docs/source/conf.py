@@ -102,9 +102,14 @@ html_style = ""
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "site_description": "Sphinx Theme for ScyllaDB projects.",
-    "github_issues_repository": "scylladb/scylla-doc-issues",
+    "banner_button_text": "Learn More >",
+    "banner_button_url": "#",
+    "banner_icon_path": "",
+    "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",
     "hide_sidebar_index": "true",
+    "hide_banner": "false",
+    "github_issues_repository": "scylladb/scylla-doc-issues",
+    "site_description": "Sphinx Theme for ScyllaDB projects.",
 }
 
 extlinks = {}

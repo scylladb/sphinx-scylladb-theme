@@ -8,10 +8,22 @@
   letter-spacing: 1px;
   line-height: 21px;
   padding: 12px 14px;
-  text-transform: uppercase;
+  margin: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: transparent;
     color: $color-typography-button;
+    text-decoration: none;
+  }
+
+  &--reverse {
+    border: 0;
+    background: $color-white;
+
+    &:hover,
+    &:focus {
+      background: $color-white;
+    }
   }
 }
