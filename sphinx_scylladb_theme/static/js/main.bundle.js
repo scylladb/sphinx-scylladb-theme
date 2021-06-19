@@ -16033,6 +16033,21 @@
                     s(this).attr("target", "_blank"))
                   : s(this).addClass("internal");
             }),
+            s("table").wrap("<div class='table-wrapper'></div>"),
+            (e = s(".content").find("h2").parent()),
+            console.log(e),
+            s(window).scroll(function () {
+              var t = s(this).scrollTop();
+              e.each(function () {
+                if (s(this).offset().top - 83 - 20 < t) {
+                  var e = s(this).attr("id");
+                  s(".secondary-side-nav a").removeClass("current"),
+                    s('.secondary-side-nav a[href="#' + e + '"]').addClass(
+                      "current"
+                    );
+                }
+              });
+            }),
             o().get("hide-enterprise-banner")
               ? s(".custom-promo-banner-wrap").hide()
               : (s(".custom-promo-banner-wrap").show(),
@@ -16051,20 +16066,6 @@
               o().set("hide-enterprise-banner", "1"),
                 s("body").css("padding-top", 0),
                 s(".custom-promo-banner-wrap").hide();
-            }),
-            (e = s(".content").find("h2").parent()),
-            console.log(e),
-            s(window).scroll(function () {
-              var t = s(this).scrollTop();
-              e.each(function () {
-                if (s(this).offset().top - 83 - 20 < t) {
-                  var e = s(this).attr("id");
-                  s(".secondary-side-nav a").removeClass("current"),
-                    s('.secondary-side-nav a[href="#' + e + '"]').addClass(
-                      "current"
-                    );
-                }
-              });
             });
         });
     },

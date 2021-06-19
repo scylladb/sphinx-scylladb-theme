@@ -8673,37 +8673,39 @@ code.download {
   cursor: pointer;
 }
 .sphinx-tabs {
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
 }
-.sphinx-tabs .top.attached {
-  border: 0 !important;
+.sphinx-tabs-tab {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.46);
+  color: rgba(0, 0, 0, 0.46);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 13px;
+  padding: 20px 25px;
 }
-.sphinx-tabs .top.attached a.item {
-  color: #5a5e9a !important;
-  border: 0 !important;
+.sphinx-tabs-tab[aria-selected="true"] {
+  color: #2196f3;
+  border-bottom: 2px solid #2196f3;
+  padding-bottom: 19px;
 }
-.sphinx-tabs .top.attached a.item.active {
-  border-radius: 8px 8px 0 0 !important;
-  margin-bottom: 0 !important;
-  background-color: rgba(179, 186, 197, 0.1);
+.sphinx-tabs-panel {
+  margin: 30px 0;
 }
-.sphinx-tabs .top.attached p {
-  margin: 0;
-}
-.sphinx-tabs .bottom.attached {
-  border-radius: 0 0 8px 8px !important;
-  border: 0 !important;
-  background-color: rgba(179, 186, 197, 0.1);
+.table-wrapper {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 30px;
 }
 table {
   color: #000;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  display: block;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 30px;
-  max-width: 100%;
-  overflow-x: auto;
+  margin: 0;
+  overflow: hidden;
 }
 table p {
   margin: 0 !important;
@@ -8711,7 +8713,7 @@ table p {
 table thead {
   background: transparent;
   border: 0;
-  color: rgba(0, 0, 0, 0.44);
+  color: rgba(0, 0, 0, 0.46);
   font-size: 12px;
   font-weight: 400;
 }

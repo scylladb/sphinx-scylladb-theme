@@ -5,11 +5,8 @@ from datetime import date
 
 import recommonmark
 from recommonmark.transform import AutoStructify
-from sphinx.util import logging
 
 from sphinx_scylladb_theme.utils import multiversion_regex_builder
-
-logger = logging.getLogger(__name__)
 
 # -- General configuration ------------------------------------------------
 
@@ -26,10 +23,10 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.githubpages",
     "sphinx.ext.extlinks",
-    "ablog",
     "sphinx_scylladb_theme",
-    "sphinx_multiversion",
-    "recommonmark",
+    "ablog",  # optional
+    "sphinx_multiversion",  # optional
+    "recommonmark",  # optional
 ]
 
 # The suffix(es) of source filenames.
@@ -162,60 +159,3 @@ smv_remote_whitelist = r"^origin$"
 smv_released_pattern = r"^tags/.*$"
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = "{ref.name}"
-
-# -- Options for LaTeX page output ---------------------------------------
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (
-        master_doc,
-        "ScyllaDocumentation.tex",
-        u"Scylla Documentation Documentation",
-        u"Scylla Project Contributors",
-        "manual",
-    ),
-]
-
-# -- Options for manual page output ---------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (
-        master_doc,
-        "scylladocumentation",
-        u"Scylla Documentation Documentation",
-        [author],
-        1,
-    )
-]
-
-# -- Options for Texinfo output -------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (
-        master_doc,
-        "ScyllaDocumentation",
-        u"Scylla Documentation Documentation",
-        author,
-        "ScyllaDocumentation",
-        "One line description of project.",
-        "Miscellaneous",
-    ),
-]
-
-# -- Options for Epub output ----------------------------------------------
-
-# Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
-
-# A list of files that should not be packed into the epub file.
-epub_exclude_files = ["search.html"]

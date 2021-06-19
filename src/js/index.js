@@ -2,7 +2,7 @@ require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
 import Cookies from "js-cookie";
 
-const openExternalLinkNewTab = () => {
+const openExternalLinksNewBrowserTab = () => {
   const isExternal = new RegExp("^(?:[a-z]+:)?//", "i");
   $("a.reference").each(function () {
     $(this).removeClass("internal external");
@@ -13,6 +13,30 @@ const openExternalLinkNewTab = () => {
     } else {
       $(this).addClass("internal");
     }
+  });
+};
+
+const createResponsiveTables = () => {
+  $("table").wrap("<div class='table-wrapper'></div>");
+};
+
+const onScrollHighlightSecondarySidebar = () => {
+  const sections = $(".content").find("h2").parent();
+  console.log(sections);
+  const headerHeight = 83;
+  const offset = 20;
+
+  $(window).scroll(function () {
+    const currentScroll = $(this).scrollTop();
+    sections.each(function () {
+      const sectionPosition = $(this).offset().top;
+      if (sectionPosition - headerHeight - offset < currentScroll) {
+        const id = $(this).attr("id");
+
+        $(".secondary-side-nav a").removeClass("current");
+        $('.secondary-side-nav a[href="#' + id + '"]').addClass("current");
+      }
+    });
   });
 };
 
@@ -44,31 +68,12 @@ const onResizeBanner = () => {
   });
 };
 
-const onScrollHighlightSecondarySidebar = () => {
-  const sections = $(".content").find("h2").parent();
-  console.log(sections);
-  const headerHeight = 83;
-  const offset = 20;
-
-  $(window).scroll(function () {
-    const currentScroll = $(this).scrollTop();
-    sections.each(function () {
-      const sectionPosition = $(this).offset().top;
-      if (sectionPosition - headerHeight - offset < currentScroll) {
-        const id = $(this).attr("id");
-
-        $(".secondary-side-nav a").removeClass("current");
-        $('.secondary-side-nav a[href="#' + id + '"]').addClass("current");
-      }
-    });
-  });
-};
-
 $(document).ready(function () {
   $(document).foundation();
-  openExternalLinkNewTab();
+  openExternalLinksNewBrowserTab();
+  createResponsiveTables();
+  onScrollHighlightSecondarySidebar();
   hideBanner();
   onResizeBanner();
   onCloseBanner();
-  onScrollHighlightSecondarySidebar();
 });

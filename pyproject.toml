@@ -9,13 +9,13 @@ readme = "PYPI.rst"
 [tool.poetry.dependencies]
 python = "^3.7"
 pyyaml = "^5.3"
-sphinx-tabs = "^1.1.13"
 sphinx-copybutton = "^0.2.8"
 Sphinx = "^2.4.4"
 sphinx-multiversion-scylla = "^0.2.4"
 sphinx-notfound-page = "^0.5"
 recommonmark = "0.5.0"
 beautifulsoup4 = "^4.9.3"
+sphinx-tabs = "^3.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
