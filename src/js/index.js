@@ -17,7 +17,7 @@ const openExternalLinksNewBrowserTab = () => {
 };
 
 const createResponsiveTables = () => {
-  $("table").wrap("<div class='table-wrapper'></div>");
+  $("table.docutils").wrap("<div class='table-wrapper'></div>");
 };
 
 const onScrollHighlightSecondarySidebar = () => {

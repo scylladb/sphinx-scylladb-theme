@@ -13,6 +13,7 @@ code {
 
 .highlight {
   background: transparent !important;
+
   pre {
     background-color: $color-background-code;
     border-radius: $round;
@@ -32,12 +33,16 @@ code {
 
 .highlighttable {
   background-color: $color-background-code;
-  border-radius: $round;
+  border-radius: 16px;
   box-shadow: none;
 
   tbody {
     background-color: transparent;
     border: 0;
+
+    td {
+      padding: 15px !important;
+    }
 
     tr {
       border-top: none;
@@ -47,7 +52,7 @@ code {
   .linenos {
     color: $color-typography-code-line-number;
     background-color: $color-background-code;
-    width: 60px;
+    width: 50px;
 
     span {
       line-height: 26px;
@@ -65,4 +70,8 @@ code {
       top: 0.2em;
     }
   }
+}
+
+a.copybtn img:hover {
+  filter: brightness(0);
 }

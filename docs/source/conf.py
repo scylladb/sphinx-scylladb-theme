@@ -24,7 +24,6 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx.ext.extlinks",
     "sphinx_scylladb_theme",
-    "ablog",  # optional
     "sphinx_multiversion",  # optional
     "recommonmark",  # optional
 ]
