@@ -24,6 +24,11 @@
 .header-navigation {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.header-button {
+  margin-left: 15px;
 }
 
 .header-search-box {

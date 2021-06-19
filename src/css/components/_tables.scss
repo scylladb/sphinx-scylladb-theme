@@ -35,4 +35,26 @@ table {
     background-color: transparent !important;
     border-top: 1px solid $color-border-table;
   }
+
+  &.thead-border thead {
+    th {
+      border: 1px solid $color-border-table;
+    }
+
+    tr:first-child th {
+      border-top: none;
+    }
+
+    tr:last-child th {
+      border-bottom: none;
+    }
+
+    tr th:first-child {
+      border-left: none;
+    }
+
+    tr th:last-child {
+      border-right: none;
+    }
+  }
 }

@@ -60,6 +60,10 @@
     margin-top: -$header-height;
     padding-top: $header-height;
   }
+
+  .inline-icon.fa-check {
+    color: $color-typography-icon-checkmark;
+  }
 }
 
 @media screen and (min-width: $medium) {

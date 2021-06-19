@@ -17,13 +17,20 @@ const openExternalLinksNewBrowserTab = () => {
 };
 
 const createResponsiveTables = () => {
-  $("table.docutils").wrap("<div class='table-wrapper'></div>");
+  const tables = $("table.docutils");
+  tables.wrap("<div class='table-wrapper'></div>");
+
+  tables.each(function () {
+    if ($(this).find("thead tr").length > 1) {
+      console.log("in");
+      $(this).addClass("thead-border");
+    }
+  });
 };
 
 const onScrollHighlightSecondarySidebar = () => {
   const sections = $(".content").find("h2").parent();
-  console.log(sections);
-  const headerHeight = 83;
+  const headerHeight = 80;
   const offset = 20;
 
   $(window).scroll(function () {
