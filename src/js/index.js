@@ -2,7 +2,7 @@ require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
 import Cookies from "js-cookie";
 
-const openExternalLinkNewTab = () => {
+const openExternalLinksNewBrowserTab = () => {
   const isExternal = new RegExp("^(?:[a-z]+:)?//", "i");
   $("a.reference").each(function () {
     $(this).removeClass("internal external");
@@ -16,38 +16,21 @@ const openExternalLinkNewTab = () => {
   });
 };
 
-const hideBanner = () => {
-  if (!Cookies.get("hide-enterprise-banner")) {
-    $(".custom-promo-banner-wrap").show();
-    $("body").css("padding-top", $(".custom-promo-banner-wrap").outerHeight());
-  } else {
-    $(".custom-promo-banner-wrap").hide();
-  }
-};
+const createResponsiveTables = () => {
+  const tables = $("table.docutils");
+  tables.wrap("<div class='table-wrapper'></div>");
 
-const onCloseBanner = () => {
-  $(".custom-promo-banner__close").on("click", function () {
-    Cookies.set("hide-enterprise-banner", "1");
-    $("body").css("padding-top", 0);
-    $(".custom-promo-banner-wrap").hide();
-  });
-};
-
-const onResizeBanner = () => {
-  $(window).resize(function () {
-    if ($(".custom-promo-banner-wrap").is(":visible")) {
-      $("body").css(
-        "padding-top",
-        $(".custom-promo-banner-wrap").outerHeight()
-      );
+  tables.each(function () {
+    if ($(this).find("thead tr").length > 1) {
+      console.log("in");
+      $(this).addClass("thead-border");
     }
   });
 };
 
 const onScrollHighlightSecondarySidebar = () => {
   const sections = $(".content").find("h2").parent();
-  console.log(sections);
-  const headerHeight = 83;
+  const headerHeight = 80;
   const offset = 20;
 
   $(window).scroll(function () {
@@ -64,11 +47,47 @@ const onScrollHighlightSecondarySidebar = () => {
   });
 };
 
+const hideBanner = () => {
+  const promoBanner = $(".promo-banner");
+  const promoBannerHeight = promoBanner.outerHeight();
+  if (!Cookies.get("scylladocs-hide-banner")) {
+    promoBanner.show();
+    $("body").css("margin-top", promoBannerHeight);
+    $(".side-nav").css("margin-top", promoBannerHeight);
+    $(".secondary-side-nav").css("margin-top", promoBannerHeight);
+  } else {
+    promoBanner.hide();
+  }
+};
+
+const onCloseBanner = () => {
+  $(".promo-banner__close").on("click", function () {
+    Cookies.set("scylladocs-hide-banner", "1");
+    $("body").css("margin-top", 0);
+    $(".sidebar-left").css("margin-top", 0);
+    $(".sidebar-right").css("margin-top", 0);
+    $(".promo-banner").hide();
+  });
+};
+
+const onResizeBanner = () => {
+  $(window).resize(function () {
+    const promoBanner = $(".promo-banner");
+    const promoBannerHeight = promoBanner.outerHeight();
+    if (promoBanner.is(":visible")) {
+      $("body").css("margin-top", promoBannerHeight);
+      $(".side-nav").css("margin-top", promoBannerHeight);
+      $(".secondary-side-nav").css("margin-top", promoBannerHeight);
+    }
+  });
+};
+
 $(document).ready(function () {
   $(document).foundation();
-  openExternalLinkNewTab();
+  createResponsiveTables();
   hideBanner();
-  onResizeBanner();
   onCloseBanner();
+  onResizeBanner();
   onScrollHighlightSecondarySidebar();
+  openExternalLinksNewBrowserTab();
 });

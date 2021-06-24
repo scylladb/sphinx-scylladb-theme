@@ -2,13 +2,13 @@
   /* Reset Foundation */
   margin-bottom: 10px;
   text-transform: uppercase;
+
   .bread__item,
   a,
   .bread__item:not(.bread__item--last)::after {
-    font-family: $font-title-family;
     color: $color-typography-breadcrumbs;
     font-size: $font-smallest-size;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 1.5px;
     line-height: 1;
     margin: 0;
@@ -21,10 +21,10 @@
     }
 
     &:not(.bread__item--last)::after {
-      margin: 0 5px;
-      position: relative;
-      opacity: 1;
       content: "/";
+      margin: 0 5px;
+      opacity: 1;
+      position: relative;
     }
   }
 }

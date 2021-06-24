@@ -1,7 +1,11 @@
 $font-base-family: "Roboto", sans-serif;
-$font-title-family: "Roboto", sans-serif;
 $font-icons-family: "FontAwesome";
 
 $font-base-size: 16px;
 $font-small-size: 14px;
 $font-smallest-size: 12px;
+
+@font-face {
+  font-family: $font-icons-family;
+  font-display: "swap";
+}

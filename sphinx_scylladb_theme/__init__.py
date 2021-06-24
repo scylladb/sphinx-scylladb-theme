@@ -62,6 +62,7 @@ def override_rst_prolog(config):
 def update_config(app, config):
     override_smv_latest_version(config)
     override_rst_prolog(config)
+    config.sphinx_tabs_disable_css_loading = True
 
 
 def setup(app):

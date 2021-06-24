@@ -1,9 +1,9 @@
 <ul
-  class="scylla-dropdown scylla-dropdown--versions {{ 'scylla-dropdown--single-version' if (not versions.tags and versions.branches|count==1) or (versions.tags|count==1 and not versions.branches) }} dropdown menu"
+  class="dropdown menu scylla-dropdown scylla-dropdown--versions {{ 'scylla-dropdown--single-version' if (not versions.tags and versions.branches|count==1) or (versions.tags|count==1 and not versions.branches) }}"
   data-dropdown-menu
 >
-  <li class="scylla-dropdown__title">
-    <a href="#">
+  <li class="scylla-dropdown__item">
+    <a class="scylla-dropdown__title" href="#">
       {% if current_version in versions.branches %} {{ current_version.name |
       replace(theme_branch_substring_removed, '') }} {% else %} {{
       current_version.name | replace(theme_tag_substring_removed, '') }} {%

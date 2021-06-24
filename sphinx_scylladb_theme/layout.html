@@ -136,15 +136,15 @@
     include 'banner.html' %} {% endif %} {% include 'header.html'%}
 
     <section>
-      {% set hide_right_sidebar_index = pagename == master_doc and
-      theme_hide_right_sidebar_index|lower == 'true' %}
+      {% set hide_sidebar = pagename == master_doc and
+      theme_hide_sidebar_index|lower == 'true' %}
 
       <div class="grid-x">
         <div
-          class="content cell large-order-2 {{'large-6' if not hide_right_sidebar_index else 'large-9'}} {{'content--right-sidebar-hidden' if hide_right_sidebar_index}}"
+          class="content cell large-order-2 {{'large-6' if not hide_sidebar else 'large-12'}} {{'content--full-width' if hide_sidebar}}"
         >
-          {% if versions and current_version and latest_version and
-          current_version != latest_version %}
+          {% if pagename != master_doc %} {% if versions and current_version and
+          latest_version and current_version != latest_version %}
 
           <div class="admonition caution">
             <p class="admonition-title">Caution</p>
@@ -160,20 +160,22 @@
               replace(theme_tag_substring_removed, '') }} {% endif %} </a
             >.
           </div>
-          {% endif %} {% if pagename != master_doc %}
+          {% endif %}
 
           <div class="grid-x">
             <div class="cell large-8">{% include 'breadcrumbs.html'%}</div>
-            <div class="cell large-4">{% include 'last-updated.html' %}</div>
+            <div class="cell large-4">{% include 'contribute.html' %}</div>
           </div>
           {% endif %} {{ body }} {% if not pagename == master_doc %} {% include
           'content-navigation.html'%} {% endif %}
         </div>
-        <div class="sidebar-left cell large-3 large-order-1">
+        <div
+          class="sidebar-left cell {{'large-3' if not hide_sidebar else 'hide-for-large'}} large-order-1"
+        >
           {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%
           include sidebartemplate %} {%- endfor %} {%- endif %}
         </div>
-        {% if not hide_right_sidebar_index %}
+        {% if not hide_sidebar %}
         <div class="sidebar-right cell large-3 large-order-3 show-for-large">
           {% include 'secondary-side-nav.html' %}
         </div>

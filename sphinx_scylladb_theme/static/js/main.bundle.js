@@ -16003,41 +16003,40 @@
       n(113),
         n(277),
         s(document).ready(function () {
-          var t, e;
+          var t, e, n, i, r;
           s(document).foundation(),
-            (t = new RegExp("^(?:[a-z]+:)?//", "i")),
-            s("a.reference").each(function () {
-              s(this).removeClass("internal external"),
-                t.test(s(this).attr("href"))
-                  ? (s(this).addClass("external"),
-                    s(this).attr("target", "_blank"))
-                  : s(this).addClass("internal");
+            (t = s("table.docutils")).wrap("<div class='table-wrapper'></div>"),
+            t.each(function () {
+              s(this).find("thead tr").length > 1 &&
+                (console.log("in"), s(this).addClass("thead-border"));
             }),
-            o().get("hide-enterprise-banner")
-              ? s(".custom-promo-banner-wrap").hide()
-              : (s(".custom-promo-banner-wrap").show(),
-                s("body").css(
-                  "padding-top",
-                  s(".custom-promo-banner-wrap").outerHeight()
-                )),
+            (n = (e = s(".promo-banner")).outerHeight()),
+            o().get("scylladocs-hide-banner")
+              ? e.hide()
+              : (e.show(),
+                s("body").css("margin-top", n),
+                s(".side-nav").css("margin-top", n),
+                s(".secondary-side-nav").css("margin-top", n)),
+            s(".promo-banner__close").on("click", function () {
+              o().set("scylladocs-hide-banner", "1"),
+                s("body").css("margin-top", 0),
+                s(".sidebar-left").css("margin-top", 0),
+                s(".sidebar-right").css("margin-top", 0),
+                s(".promo-banner").hide();
+            }),
             s(window).resize(function () {
-              s(".custom-promo-banner-wrap").is(":visible") &&
-                s("body").css(
-                  "padding-top",
-                  s(".custom-promo-banner-wrap").outerHeight()
-                );
+              var t = s(".promo-banner"),
+                e = t.outerHeight();
+              t.is(":visible") &&
+                (s("body").css("margin-top", e),
+                s(".side-nav").css("margin-top", e),
+                s(".secondary-side-nav").css("margin-top", e));
             }),
-            s(".custom-promo-banner__close").on("click", function () {
-              o().set("hide-enterprise-banner", "1"),
-                s("body").css("padding-top", 0),
-                s(".custom-promo-banner-wrap").hide();
-            }),
-            (e = s(".content").find("h2").parent()),
-            console.log(e),
+            (i = s(".content").find("h2").parent()),
             s(window).scroll(function () {
               var t = s(this).scrollTop();
-              e.each(function () {
-                if (s(this).offset().top - 83 - 20 < t) {
+              i.each(function () {
+                if (s(this).offset().top - 80 - 20 < t) {
                   var e = s(this).attr("id");
                   s(".secondary-side-nav a").removeClass("current"),
                     s('.secondary-side-nav a[href="#' + e + '"]').addClass(
@@ -16045,6 +16044,14 @@
                     );
                 }
               });
+            }),
+            (r = new RegExp("^(?:[a-z]+:)?//", "i")),
+            s("a.reference").each(function () {
+              s(this).removeClass("internal external"),
+                r.test(s(this).attr("href"))
+                  ? (s(this).addClass("external"),
+                    s(this).attr("target", "_blank"))
+                  : s(this).addClass("internal");
             });
         });
     },

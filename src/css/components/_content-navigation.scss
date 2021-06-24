@@ -9,6 +9,32 @@
   max-width: 50%;
   word-break: break-word;
 
+  &__title {
+    color: $color-typography-content-navigation-text;
+    display: none;
+    font-weight: 500;
+    font-size: $font-smallest-size;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+
+  &__button {
+    @include floating;
+    background-color: $color-white;
+    padding: 13px 16.5px;
+    vertical-align: top;
+    cursor: pointer;
+
+    i {
+      height: 16px;
+      width: 10px;
+      min-height: 16px;
+      margin: 0;
+    }
+  }
+
   &--prev {
     .navigation__title {
       margin-left: 15px;
@@ -22,33 +48,6 @@
       }
       margin-right: 15px;
     }
-  }
-
-  &__button {
-    @include floating;
-    background-color: $color-white;
-    color: $color-typography-content-navigation-button;
-    vertical-align: top;
-    font-weight: bold;
-    padding: 13px 16.5px;
-    cursor: pointer;
-    i {
-      height: 16px;
-      width: 10px;
-      min-height: 16px;
-      margin: 0;
-    }
-  }
-
-  &__title {
-    display: none;
-    font-family: $font-title-family;
-    font-weight: 500;
-    font-size: $font-smallest-size;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    line-height: 24px;
-    word-wrap: break-word;
   }
 }
 

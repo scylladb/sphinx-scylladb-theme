@@ -1,40 +1,69 @@
 .topics-grid {
-  padding: $spacing;
+  display: block;
+  margin: 0 auto;
+  max-width: 1300px !important;
+  margin-bottom: 30px;
 
   &__title {
-    font-size: 22px;
-    margin-bottom: 10px;
+    color: $color-typography-topic-grid-title;
+    font-size: 24px;
+    margin-bottom: 6px;
     font-weight: 700;
   }
 
   &__text {
     font-size: 18px;
-    color: $color-typography-topic-grid-title;
-    margin-bottom: 60px !important;
+    color: $color-typography-topic-grid-text;
   }
 }
 
 .topic-box {
-  display: block;
-  text-align: center;
-  padding: 20px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  font-size: $font-small-size;
-  color: $color-typography-base;
+  .card {
+    @include floating;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 45px 30px;
+    font-size: 18px;
+
+    &:hover {
+      color: $color-typography-base;
+      font-weight: 400;
+    }
+  }
 
   &__title {
     font-weight: 700;
-    color: $color-typography-topic-grid-title;
-    font-size: 18px;
+    color: $color-typography-topic-title;
+    font-size: 20px;
     margin-bottom: 0;
     line-height: 32px;
   }
 
+  &__body {
+    color: $color-typography-topic-text;
+    max-width: 80%;
+
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  &__anchor {
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-typography-topic-link;
+  }
+
   &__icon {
+    display: block;
     font-size: 50px;
     margin-bottom: 20px;
-    display: block;
 
     i {
       filter: brightness(0);
@@ -43,28 +72,45 @@
     }
 
     img {
-      margin: 0;
       height: 115px;
-    }
-  }
-
-  &__body {
-    p {
       margin: 0;
     }
   }
 
-  &:hover {
-    @include floating;
-    border-radius: 4px;
-    color: $color-typography-base;
-    font-weight: 400;
+  &--product .card {
+    box-shadow: none;
+    padding: 20px;
+    min-height: 261px;
+    text-align: center;
+
+    .topic-box__title {
+      color: $color-typography-base;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    .topic-box__body {
+      font-size: $font-small-size;
+      line-height: 24px;
+      max-width: 100%;
+    }
+
+    &:hover {
+      @include floating;
+    }
   }
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
   .topics-grid {
-    padding: $spacing-l;
-    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .topic-box .card {
+    margin-bottom: 60px;
+
+    .topic-box__body p {
+      min-height: 56px;
+    }
   }
 }

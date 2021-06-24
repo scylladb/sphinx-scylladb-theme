@@ -1,9 +1,16 @@
 .content {
-  padding: $spacing;
   overflow-wrap: break-word;
 
-  &--right-sidebar-hidden {
+  padding: $spacing;
+  margin-top: $header-height;
+  scroll-margin-top: $header-height;
+
+  &--full-width {
     padding: 0;
+
+    blockquote {
+      display: none;
+    }
   }
 
   p {
@@ -15,16 +22,15 @@
     list-style: none;
 
     li::before {
-      font-family: $font-icons-family;
-      font-display: swap;
       content: "\2022";
       color: $color-typography-bullet;
-      font-weight: bold;
-      width: 1em;
-      margin-left: -1em;
-      margin-top: -2px;
+      font-family: $font-icons-family;
       float: left;
       font-size: 20px;
+      font-weight: bold;
+      margin-left: -1em;
+      margin-top: -2px;
+      width: 1em;
     }
 
     ul {
@@ -46,7 +52,6 @@
   .reference:after {
     font-family: $font-icons-family;
     font-size: $font-smallest-size;
-    font-display: swap;
     padding: 0 4px;
   }
 
@@ -59,52 +64,22 @@
   }
 
   .section {
-    padding-top: $header-height;
     margin-top: -$header-height;
-  }
-}
-
-.welcome {
-  text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
-  padding: 60px $spacing;
-
-  &__title {
-    margin-bottom: 10px;
+    padding-top: $header-height;
   }
 
-  &__text {
-    font-size: 18px;
-
-    a {
-      color: $color-typography-topic-grid-title;
-      border-bottom: 1px $color-typography-topic-grid-title dotted;
-    }
+  .inline-icon.fa-check {
+    color: $color-typography-icon-checkmark;
   }
 }
 
 @media screen and (min-width: $medium) {
   .content {
-    padding-bottom: 100px;
     min-height: calc(100vh - 276px);
+    padding-bottom: 100px;
 
-    &--right-sidebar-hidden {
+    &--full-width {
       padding: 0;
-    }
-  }
-
-  .welcome {
-    text-align: left;
-    padding: 60px $spacing-l;
-  }
-}
-
-@media screen and (min-width: $large) {
-  .content {
-    margin-top: $header-height;
-    section {
-      // header + offset
-      scroll-margin-top: calc(80px);
     }
   }
 }
@@ -113,7 +88,7 @@
   .content {
     padding: $spacing-l;
 
-    &--right-sidebar-hidden {
+    &--full-width {
       padding: 0;
     }
   }

@@ -1,55 +1,7 @@
-.panel-grid {
-  padding: $spacing;
-
-  &__title {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-weight: 700;
-  }
-
-  &__text {
-    font-size: 18px;
-    color: $color-typography-topic-grid-title;
-    margin-bottom: 30px !important;
-  }
-}
-
 .panel {
   background-color: $color-background-panel;
   border: 0;
   padding: 16px;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.panel-grid .panel {
-  background-color: transparent;
-  margin: 0;
-  padding: 16px 0;
-
-  &__title {
-    font-weight: 700;
-    color: $color-typography-topic-grid-title;
-    font-size: 18px;
-    line-height: 32px;
-  }
-
-  .container p:last-child {
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: $medium) {
-  .panel-grid {
-    padding: $spacing-l;
-    padding-bottom: 0;
-  }
-}
-
-@media screen and (min-width: $large) {
-  .panel-grid {
-    .panel {
-      margin-bottom: 0;
-    }
-  }
 }

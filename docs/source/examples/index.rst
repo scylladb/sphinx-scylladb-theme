@@ -12,11 +12,13 @@ Examples
    images
    links
    lists
+   markdown
    panel-box
    substitutions
    tables
    tabs
    text
+   topic-box
    versioning
 
 .. panel-box::
@@ -31,10 +33,12 @@ Examples
   * :doc:`Images <images>`
   * :doc:`Links <links>`
   * :doc:`Lists <lists>`
+  * :doc:`Markdown <markdown>`
   * :doc:`Panel Box <panel-box>`
   * :doc:`Substitutions <substitutions>`
   * :doc:`Tables <tables>`
   * :doc:`Tabs <tabs>`
   * :doc:`Text <text>`
+  * :doc:`Topic Box <topic-box>`
   * :doc:`Versioning <versioning>`
   * `404 Page </404>`_
