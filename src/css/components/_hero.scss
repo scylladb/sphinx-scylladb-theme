@@ -1,18 +1,15 @@
-.hero-section {
+.hero {
   background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
   margin-bottom: 30px;
-  padding: 30px 15px;
+  padding: 30px 16px;
   text-align: left;
-}
 
-.hero {
-  display: block;
-  margin: 0 auto;
-  max-width: 1300px;
   &__title {
     font-size: 32px;
+    font-family: $font-base-family;
     font-weight: 500;
     margin-bottom: 14px;
+    max-width: 482px;
   }
 
   &__text {
@@ -25,8 +22,14 @@
   }
 }
 
-@media screen and (min-width: $medium) {
-  .hero-section {
-    padding: 60px 0px;
+.hero-wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+@media screen and (min-width: $large) {
+  .hero {
+    padding: 60px 16px;
   }
 }

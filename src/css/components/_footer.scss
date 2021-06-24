@@ -43,7 +43,8 @@
 
 .footer-actions {
   display: none;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: end;
   &__link {
     color: $color-typography-footer-icon;
     padding: 0 10px;
@@ -95,8 +96,7 @@
   }
 
   .footer-actions {
-    display: block;
-    text-align: right;
+    display: flex;
   }
 
   .footer-bottom {

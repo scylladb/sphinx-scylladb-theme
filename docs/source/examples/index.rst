@@ -18,6 +18,7 @@ Examples
    tables
    tabs
    text
+   topic-box
    versioning
 
 .. panel-box::
@@ -38,5 +39,6 @@ Examples
   * :doc:`Tables <tables>`
   * :doc:`Tabs <tabs>`
   * :doc:`Text <text>`
+  * :doc:`Topic Box <topic-box>`
   * :doc:`Versioning <versioning>`
   * `404 Page </404>`_

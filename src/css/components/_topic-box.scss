@@ -22,7 +22,7 @@
     @include floating;
     display: block;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding: 45px 30px;
     font-size: 18px;
 
@@ -42,21 +42,38 @@
 
   &__body {
     color: $color-typography-topic-text;
+    max-width: 80%;
 
-    .container,
-    p {
+    .container {
       margin: 0;
       padding: 0;
     }
 
     p {
       margin-top: 10px;
+    }
+  }
 
-      &:nth-child(2) {
-        font-size: 20px;
-        font-weight: 700;
-        color: $color-typography-topic-link;
-      }
+  &__anchor {
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-typography-topic-link;
+  }
+
+  &__icon {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 20px;
+
+    i {
+      filter: brightness(0);
+      min-height: 50px;
+      width: 50px;
+    }
+
+    img {
+      height: 115px;
+      margin: 0;
     }
   }
 
@@ -75,23 +92,7 @@
     .topic-box__body {
       font-size: $font-small-size;
       line-height: 24px;
-    }
-
-    .topic-box__icon {
-      display: block;
-      font-size: 50px;
-      margin-bottom: 20px;
-
-      i {
-        filter: brightness(0);
-        min-height: 50px;
-        width: 50px;
-      }
-
-      img {
-        height: 115px;
-        margin: 0;
-      }
+      max-width: 100%;
     }
 
     &:hover {
@@ -100,8 +101,16 @@
   }
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
   .topics-grid {
-    margin-bottom: 70px;
+    margin-bottom: 10px;
+  }
+
+  .topic-box .card {
+    margin-bottom: 60px;
+
+    .topic-box__body p {
+      min-height: 56px;
+    }
   }
 }

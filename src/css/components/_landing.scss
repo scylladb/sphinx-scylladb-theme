@@ -1,0 +1,26 @@
+.landing__content {
+  padding: 0px 16px;
+}
+
+@media screen and (min-width: $large) {
+  .landing {
+    &--floating {
+      .topics-grid--large .card {
+        padding: 60px 30px 45px 30px;
+      }
+
+      .landing__content {
+        position: relative;
+        top: -120px;
+      }
+
+      .hero {
+        padding: 60px 16px 138px 16px !important;
+      }
+    }
+
+    .topics-grid--products {
+      margin-bottom: 40px;
+    }
+  }
+}

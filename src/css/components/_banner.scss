@@ -1,7 +1,3 @@
-body {
-  transition: all 400ms ease;
-}
-
 .promo-banner {
   background-color: $color-background-banner;
   background-image: url("../img/banner-background.svg");
@@ -31,6 +27,7 @@ body {
   &__button {
     background: $color-white;
     border-radius: 4px;
+    min-width: max-content;
     padding: 10px !important;
   }
 
@@ -56,8 +53,6 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
   padding: 13px;
 }
 

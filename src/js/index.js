@@ -52,20 +52,20 @@ const hideBanner = () => {
   const promoBannerHeight = promoBanner.outerHeight();
   if (!Cookies.get("scylladocs-hide-banner")) {
     promoBanner.show();
-    $("body").css("padding-top", promoBannerHeight);
-    $(".side-nav").css("padding-top", promoBannerHeight);
-    $(".secondary-side-nav").css("padding-top", promoBannerHeight);
+    $("body").css("margin-top", promoBannerHeight);
+    $(".side-nav").css("margin-top", promoBannerHeight);
+    $(".secondary-side-nav").css("margin-top", promoBannerHeight);
   } else {
     promoBanner.hide();
   }
 };
 
 const onCloseBanner = () => {
-  $(".custom-promo-banner__close").on("click", function () {
+  $(".promo-banner__close").on("click", function () {
     Cookies.set("scylladocs-hide-banner", "1");
-    $("body").css("padding-top", 0);
-    $(".sidebar-left").css("padding-top", 0);
-    $(".sidebar-right").css("padding-top", 0);
+    $("body").css("margin-top", 0);
+    $(".sidebar-left").css("margin-top", 0);
+    $(".sidebar-right").css("margin-top", 0);
     $(".promo-banner").hide();
   });
 };
@@ -75,19 +75,19 @@ const onResizeBanner = () => {
     const promoBanner = $(".promo-banner");
     const promoBannerHeight = promoBanner.outerHeight();
     if (promoBanner.is(":visible")) {
-      $("body").css("padding-top", promoBannerHeight);
-      $(".side-nav").css("padding-top", promoBannerHeight);
-      $(".secondary-side-nav").css("padding-top", promoBannerHeight);
+      $("body").css("margin-top", promoBannerHeight);
+      $(".side-nav").css("margin-top", promoBannerHeight);
+      $(".secondary-side-nav").css("margin-top", promoBannerHeight);
     }
   });
 };
 
 $(document).ready(function () {
   $(document).foundation();
-  openExternalLinksNewBrowserTab();
   createResponsiveTables();
-  onScrollHighlightSecondarySidebar();
   hideBanner();
-  onResizeBanner();
   onCloseBanner();
+  onResizeBanner();
+  onScrollHighlightSecondarySidebar();
+  openExternalLinksNewBrowserTab();
 });

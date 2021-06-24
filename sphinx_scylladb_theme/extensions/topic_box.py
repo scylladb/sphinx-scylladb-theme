@@ -12,11 +12,11 @@ class TopicBox(Directive):
     option_spec = {
         "title": directives.unchanged_required,
         "link": directives.path,
+        "anchor": directives.path,
         "icon": directives.path,
         "icon_color": directives.path,
         "icon_bg": directives.path,
         "image": directives.path,
-        "last_updated": directives.unchanged_required,
         "class": directives.unchanged,
     }
 
@@ -72,16 +72,16 @@ class TopicBox(Directive):
             else ""
         )
 
-        last_updated = self.options.get("last_updated")
-        html_last_updated = (
+        anchor = self.options.get("anchor")
+        anchor = (
             generate_template(
                 """
-            <div class="{class_name}__subtitle">Last updated: {last_updated}</div>
+            <div class="{class_name}__anchor">{anchor}</div>
             """,
                 class_name=class_name,
-                last_updated=last_updated,
+                anchor=anchor,
             )
-            if last_updated
+            if anchor
             else ""
         )
 
@@ -92,7 +92,6 @@ class TopicBox(Directive):
                     {html_icon}
                     <div class="{class_name}-head-content">
                         <h3 class="{class_name}__title">{title}</h3>
-                        {html_last_updated}
                     </div>
                 </div>
                 <div class="{class_name}__body">
@@ -100,14 +99,15 @@ class TopicBox(Directive):
             class_name=class_name,
             html_tag_open=html_tag_open,
             html_icon=html_icon,
-            html_last_updated=html_last_updated,
             title=self.options.get("title", ""),
         )
         html1 = generate_template(
             """
+                {anchor}
                 </div>
             {html_tag_close}
             """,
+            anchor=anchor,
             class_name=class_name,
             html_tag_close=html_tag_close,
         )

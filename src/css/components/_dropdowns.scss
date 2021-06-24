@@ -32,10 +32,12 @@
     @include floating;
     list-style: none;
     margin-top: 15px;
+    padding: 16px 0;
     width: max-content;
+    font-size: $font-base-size;
 
     li {
-      padding: 16px;
+      padding: 7px 16px;
       .scylla-icon {
         margin-right: 10px;
       }

@@ -24,6 +24,7 @@ $color-web-orange: #ffab00;
 $color-deep-cove: #061938;
 $color-dodger-blue: #2196f3;
 $color-alto: #e0e0e0;
+$color-selago: #f2f7fe;
 
 $color-typography-admonition-caution: $color-deep-cove;
 $color-typography-admonition-note: $color-white;
@@ -71,6 +72,7 @@ $color-background-admonition-tip: $color-apple;
 $color-background-admonition-warning: $color-milano-red;
 $color-background-banner: $color-san-marino;
 $color-background-code: transparentize($color-cadet-blue, 0.9);
+$color-background-dropdown-contribute: $color-selago;
 $color-background-footer: $color-white;
 $color-background-header: $color-white;
 $color-background-not-found: $color-zircon;
@@ -81,6 +83,7 @@ $color-background-sidebar-button: $color-porcelain;
 
 $color-border-button: $color-martinique;
 $color-border-blockquote: transparentize($color-lavender-gray, 0.9);
+$color-border-dropdown-contribute: $color-waikawa-gray;
 $color-border-footer-top: transparentize($color-black, 0.9);
 $color-border-sidebar-ul: transparentize($color-lavender-gray, 0.6);
 $color-border-sidebar-button: $color-royal-blue;

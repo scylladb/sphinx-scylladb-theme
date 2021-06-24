@@ -22,7 +22,6 @@
 
       a {
         font-size: $font-small-size;
-        color: $color-typography-toc-link;
 
         &:before {
           content: "";
@@ -38,9 +37,6 @@
 
         &:hover,
         &.current {
-          font-weight: 700;
-          color: $color-typography-toc-link-active;
-
           &:before {
             opacity: 1;
             filter: brightness(0);

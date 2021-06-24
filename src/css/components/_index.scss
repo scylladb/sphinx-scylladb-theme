@@ -1,10 +1,12 @@
 /* Layout */
 @import "header";
 @import "side-nav";
+@import "side-nav-toggle";
 @import "secondary-side-nav";
 @import "content";
 @import "toc-local";
 @import "footer";
+@import "landing";
 
 /* Extensions */
 @import "admonitions";
@@ -14,6 +16,7 @@
 @import "code-blocks";
 @import "content-navigation";
 @import "dropdowns";
+@import "dropdown-contribute";
 @import "hero";
 @import "icons";
 @import "last-updated";
