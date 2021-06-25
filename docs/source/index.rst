@@ -6,6 +6,7 @@
 
 .. hero-box::
   :title: Sphinx ScyllaDB Theme
+  :image: /_static/img/mascots/scylla-opensource.svg
 
   The documentation toolchain for ScyllaDB projects.
 

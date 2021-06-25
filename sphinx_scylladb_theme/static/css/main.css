@@ -8352,6 +8352,7 @@ a.copybtn img:hover {
 .hero {
   background: linear-gradient(180deg, #fff 0%, #f6f8ff 100%);
   margin-bottom: 30px;
+  overflow: hidden;
   padding: 30px 16px;
   text-align: left;
 }
@@ -8369,14 +8370,26 @@ a.copybtn img:hover {
   border-bottom: 1px #23263b dotted;
   color: #23263b;
 }
+.hero__img {
+  bottom: -170px;
+  display: none;
+  max-height: 300px;
+  opacity: 0.1;
+  position: absolute;
+  right: -20px;
+}
 .hero-wrapper {
   display: block;
   margin: 0 auto;
   max-width: 1300px;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .hero {
     padding: 60px 16px;
+  }
+  .hero__img {
+    display: block;
   }
 }
 .scylla-icon,

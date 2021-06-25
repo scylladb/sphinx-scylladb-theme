@@ -23,7 +23,7 @@ To initialize a Python development environment for this project:
 
 #.  Initialize a virtual environment with:
 
-    ..  code-block:: bash
+    ..  code-block:: console
 
         poetry install
 
@@ -32,7 +32,7 @@ To initialize a Python development environment for this project:
 
 #.  Activate the virtual environment for current shell session:
 
-    ..  code-block:: bash
+    ..  code-block:: console
 
         poetry shell
 
@@ -81,7 +81,8 @@ To build the minimized static files for this project:
 #.  Make sure you have Node.js LTS installed.
 #.  Build the static files with:
 
-..  code-block:: bash
+.. code:: console
+
     npm run build
 
 This will create minified static files under the ``sphinx_scylladb_theme/static``.
@@ -95,7 +96,6 @@ Run:
 .. code:: console
 
     poetry run pytest tests
-
 
 Publishing the theme to PyPi
 ----------------------------
