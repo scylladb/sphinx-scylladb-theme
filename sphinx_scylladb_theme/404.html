@@ -9,22 +9,14 @@
 
     <title>ScyllaDB</title>
     <meta name="description" content="{{ theme_site_description }}" />
-    <link
-      rel="icon"
-      src="{{ html_baseurl }}/_static/img/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" src="/_static/img/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="{{ html_baseurl }}/_static/css/main.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="/_static/css/main.css" type="text/css" />
     <link
       rel="stylesheet"
       href="{{ pathto('_static/css/main.css', 1) }}"
@@ -32,15 +24,13 @@
     />
   </head>
   <body class="not-found">
-    <img
-      class="not-found__icon"
-      src="{{ html_baseurl }}/_static/img/vertigo.jpg"
-      alt=""
-    />
+    <img class="not-found__icon" src="/_static/img/mascots/404.jpg" alt="" />
     <div class="not-found__text">
       <h1>404</h1>
       <p>The Scylla monster ate your page!</p>
-      <p><a href="{{ html_baseurl }}" class="button">Home</a></p>
+      <p>
+        <a href="{{ html_baseurl }}" class="button not-found__button">Home</a>
+      </p>
     </div>
   </body>
 </html>

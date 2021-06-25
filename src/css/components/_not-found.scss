@@ -1,11 +1,11 @@
 .not-found {
+  background-color: $color-background-not-found;
   height: 100%;
   overflow: hidden;
-  background-color: #f6f8ff;
 
   &__icon {
-    margin: 40px auto;
     display: block;
+    margin: 40px auto;
     max-width: 300px;
   }
 
@@ -13,13 +13,17 @@
     text-align: center;
 
     h1 {
-      line-height: 1;
       font-size: 60px;
+      line-height: 1;
     }
 
     p {
-      width: 100%;
       margin: 30px 0;
+      width: 100%;
     }
+  }
+
+  &__button {
+    text-transform: uppercase;
   }
 }
