@@ -1,4 +1,20 @@
-from sphinx_scylladb_theme.extensions.redirects import build_redirect_body, is_url
+from sphinx_scylladb_theme.extensions.utils import (
+    generate_template,
+    build_redirect_body,
+    is_url,
+)
+
+
+def test_generate_content():
+    expected = "<div>Hello World!</div>"
+    result = generate_template(
+        """
+            <div>{value_a} {value_b}!</div>
+            """,
+        value_a="Hello",
+        value_b="World",
+    )
+    assert result.split() == expected.split()
 
 
 def test_build_redirect_body():
