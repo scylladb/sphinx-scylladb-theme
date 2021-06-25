@@ -9,6 +9,7 @@ Examples
    code-blocks
    glossary
    headings
+   hero-box
    images
    links
    lists
@@ -30,6 +31,7 @@ Examples
   * :doc:`Code Blocks <code-blocks>`
   * :doc:`Glossary <glossary>`
   * :doc:`Headings <headings>`
+  * :doc:`Hero Box <hero-box>`
   * :doc:`Images <images>`
   * :doc:`Links <links>`
   * :doc:`Lists <lists>`

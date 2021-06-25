@@ -1,18 +1,18 @@
 """
-Sphinx directive that renders a group of links together in a panel box.
+Sphinx directive for HTML Panel Box Components.
 """
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-from .utils import generate_content, generate_styles, generate_template
+from .utils import generate_template
 
 
 class PanelBox(Directive):
     has_content = True
     option_spec = {
         "title": directives.unchanged_required,
-        "id": directives.unchanged,
         "class": directives.unchanged,
+        "id": directives.unchanged,
     }
 
     def run(self):
@@ -21,20 +21,20 @@ class PanelBox(Directive):
 
         html0 = generate_template(
             """
-        <div class="cell {container_class_name}">
+            <div class="cell {container_class_name}">
                 <div class="{class_name}">
-                <h5 id={id} class="{class_name}__title">{title}</h5>
+                    <h5 class="{class_name}__title">{title}</h5>
             """,
             container_class_name=container_class_name,
             class_name=class_name,
             title=self.options.get("title", ""),
-            id=self.options.get("id", ""),
         )
 
         html1 = "</div></div>"
 
         description_node = nodes.container()
-        self.state.nested_parse(self.content, 0, description_node)
+        if self.state:
+            self.state.nested_parse(self.content, 0, description_node)
 
         return [
             nodes.raw(text=html0, format="html"),

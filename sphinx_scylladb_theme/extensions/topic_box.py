@@ -1,10 +1,10 @@
 """
-Sphinx directive for creating cards in a grid layout.
+Sphinx directive for HTML Topic Box Components.
 """
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-from .utils import generate_content, generate_styles, generate_template
+from .utils import generate_template
 
 
 class TopicBox(Directive):
@@ -15,7 +15,6 @@ class TopicBox(Directive):
         "anchor": directives.path,
         "icon": directives.path,
         "icon_color": directives.path,
-        "icon_bg": directives.path,
         "image": directives.path,
         "class": directives.unchanged,
     }
@@ -28,12 +27,12 @@ class TopicBox(Directive):
         html_tag_open = generate_template(
             """
             <div class="cell {class_name} {container_class_name}">
-            <a class="card" href="{link}">
+                <a class="card" href="{link}">
             """
             if link
             else """
             <div class="{class_name} {container_class_name}">
-            <div class="card">
+                <div class="card">
             """,
             class_name=class_name,
             container_class_name=container_class_name,
@@ -43,26 +42,24 @@ class TopicBox(Directive):
 
         icon = self.options.get("icon")
         icon_color = self.options.get("icon_color", "#23263b")
-        icon_bg = self.options.get("icon_bg", "transparent")
         image = self.options.get("image")
 
         html_icon = (
             generate_template(
                 """
-            <div class="{class_name}__icon" style="background-color: {icon_bg}">
+            <div class="{class_name}__icon">
                 <i class="{icon}" style="color:{icon_color}"></i>
             </div>
             """,
                 class_name=class_name,
                 icon=icon,
                 icon_color=icon_color,
-                icon_bg=icon_bg,
             )
             if icon
             else generate_template(
                 """
             <div class="{class_name}__icon"">
-                <img src="/_static/{image}"/>
+                <img src="{image}"/>
             </div>
             """,
                 class_name=class_name,
@@ -89,10 +86,8 @@ class TopicBox(Directive):
             """
             {html_tag_open}
                 <div class="{class_name}__head">
-                    {html_icon}
-                    <div class="{class_name}-head-content">
-                        <h3 class="{class_name}__title">{title}</h3>
-                    </div>
+                {html_icon}
+                <h3 class="{class_name}__title">{title}</h3>
                 </div>
                 <div class="{class_name}__body">
             """,
@@ -103,8 +98,8 @@ class TopicBox(Directive):
         )
         html1 = generate_template(
             """
-                {anchor}
-                </div>
+            {anchor}
+            </div>
             {html_tag_close}
             """,
             anchor=anchor,
@@ -113,7 +108,8 @@ class TopicBox(Directive):
         )
 
         description_node = nodes.container()
-        self.state.nested_parse(self.content, 0, description_node)
+        if self.state:
+            self.state.nested_parse(self.content, 0, description_node)
 
         return [
             nodes.raw(text=html0, format="html"),

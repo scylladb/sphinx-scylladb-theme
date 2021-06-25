@@ -23,6 +23,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 30px;
+    position: relative;
     padding: 45px 30px;
     font-size: 18px;
 
@@ -38,6 +39,15 @@
     font-size: 20px;
     margin-bottom: 0;
     line-height: 32px;
+
+    img {
+      position: absolute;
+      right: 0px;
+      bottom: 0;
+      top: 0;
+      bottom: 0px;
+      opacity: 0.1;
+    }
   }
 
   &__body {
@@ -72,8 +82,12 @@
     }
 
     img {
-      height: 115px;
+      bottom: -12px;
+      height: 140px;
       margin: 0;
+      opacity: 0.1;
+      position: absolute;
+      right: -5px;
     }
   }
 
@@ -93,6 +107,11 @@
       font-size: $font-small-size;
       line-height: 24px;
       max-width: 100%;
+    }
+
+    .topic-box__icon img {
+      opacity: 1;
+      position: initial;
     }
 
     &:hover {

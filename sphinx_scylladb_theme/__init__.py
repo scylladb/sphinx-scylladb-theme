@@ -1,13 +1,15 @@
 from os import getenv, path
 
+from notfound import extension as not_found
 import sphinx_copybutton
 from sphinx_tabs import tabs
 
+
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
-    gh_pages,
+    hero_box,
+    multiversion,
     navigation,
-    not_found,
     panel_box,
     redirects,
     topic_box,
@@ -76,7 +78,8 @@ def setup(app):
     app.add_lexer("ditaa", DitaaLexer())
 
     """Setup custom extensions"""
-    gh_pages.setup(app)
+    hero_box.setup(app)
+    multiversion.setup(app)
     not_found.setup(app)
     panel_box.setup(app)
     redirects.setup(app)

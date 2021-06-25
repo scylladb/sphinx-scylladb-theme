@@ -4,14 +4,15 @@
 
   <div class="landing landing--floating">
 
-    <div class="hero">
-      <div class="hero-wrapper">
-        <h1 class="hero__title">Sphinx ScyllaDB Theme</h1>
-        <p class="hero__text"> The documentation toolchain for ScyllaDB projects.</p>
-      </div>
-    </div>
+.. hero-box::
+  :title: Sphinx ScyllaDB Theme
+  :image: /_static/img/mascots/scylla-opensource.svg
 
-    <div class="landing__content landing__content">
+  The documentation toolchain for ScyllaDB projects.
+
+.. raw:: html
+
+  <div class="landing__content landing__content">
 
 .. raw:: html
 

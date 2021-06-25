@@ -15,20 +15,11 @@
 
 
 """
-    CQL pygments lexer
-    ~~~~~~~~~~~~~~~~~~
-    Lexer for the Cassandra Query Language (CQL).
-    This is heavily inspired from the pygments SQL lexer (and the Postgres one in particular) but adapted to CQL
-    keywords and specificities.
-    TODO: This has been hacked quickly, but once it's more tested, we could submit it upstream.
-          In particular, we have alot of keywords whose meaning depends on the context and we could potentially improve
-          their handling. For instance, SET is a keyword, but also a type name (that's why currently we also consider
-          map and list as keywords, not types; we could disambiguate by looking if there is a '<' afterwards). Or things
-          like USERS, which can is used in some documentation example as a table name but is a keyword too (we could
-          only consider it a keyword if after LIST for instance). Similarly, type nanes are not reserved, so they and
-          are sometime used as column identifiers (also, timestamp is both a type and a keyword). I "think" we can
-          somewhat disambiguate through "states", but unclear how far it's worth going.
-          We could also add the predefined functions?
+CQL pygments lexer
+~~~~~~~~~~~~~~~~~~
+Lexer for the Cassandra Query Language (CQL).
+This is heavily inspired from the pygments SQL lexer (and the Postgres one in particular) but adapted to CQL
+keywords and specificities.
 """
 
 import re
@@ -196,7 +187,8 @@ DATATYPES = (
 
 
 def language_callback(lexer, match):
-    """Parse the content of a $-string using a lexer
+    """
+    Parse the content of a $-string using a lexer
     The lexer is chosen looking for a nearby LANGUAGE or assumed as
     java if no LANGUAGE has been found.
     """
