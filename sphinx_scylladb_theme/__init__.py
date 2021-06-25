@@ -1,6 +1,6 @@
 from os import getenv, path
 
-from notfound import extension as notfound
+from notfound import extension as not_found
 import sphinx_copybutton
 from sphinx_tabs import tabs
 
