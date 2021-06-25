@@ -5,6 +5,9 @@ Topic Box
 Default Topic
 -------------
 
+With Icon
+=========
+
 Using:
 
 .. code-block:: rst
@@ -27,6 +30,32 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+With Image
+==========
+
+Using:
+
+.. code-block:: rst
+
+    .. topic-box::
+        :title: Lorem Ipsum
+        ::image: _/static/img/mascots/scylla-enterprise.svg
+        :link: #
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Results in:
+
+.. topic-box::
+    :title: Lorem Ipsum
+    :image: _/static/img/mascots/scylla-enterprise.svg
+    :link: #
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
 Product Topic
 -------------
 
@@ -37,8 +66,8 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
-        :class: topic-box--product,large-3,small-6
+        :image: _/static/img/mascots/scylla-enterprise.svg
+        :class: topic-box--product
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -47,8 +76,8 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
-    :class: topic-box--product,large-3,small-6
+    :image: _/static/img/mascots/scylla-enterprise.svg
+    :class: topic-box--product
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -73,7 +102,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -81,7 +110,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -89,7 +118,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -97,7 +126,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -105,7 +134,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -113,7 +142,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -121,7 +150,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -129,7 +158,7 @@ Using:
     .. topic-box::
         :title: Lorem Ipsum
         :link: #
-        :image: img/mascots/scylla-enterprise.svg
+        :image: _/static/img/mascots/scylla-enterprise.svg
         :class: topic-box--product,large-3,small-6
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -154,7 +183,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -162,7 +191,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -170,7 +199,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -178,7 +207,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -186,7 +215,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -194,7 +223,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -202,7 +231,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -210,7 +239,7 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: #
-    :image: img/mascots/scylla-enterprise.svg
+    :image: _/static/img/mascots/scylla-enterprise.svg
     :class: topic-box--product,large-3,small-6
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -62,7 +62,7 @@ class TopicBox(Directive):
             else generate_template(
                 """
             <div class="{class_name}__icon"">
-                <img src="/_static/{image}"/>
+                <img src="/{image}"/>
             </div>
             """,
                 class_name=class_name,
