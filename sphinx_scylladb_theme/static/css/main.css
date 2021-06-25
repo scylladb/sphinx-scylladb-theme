@@ -7574,6 +7574,7 @@ blockquote {
 }
 .side-nav__content .toctree-checkbox:checked ~ label i {
   margin-top: 5px;
+  margin-right: 3px;
   transform: rotate(90deg);
 }
 @media screen and (min-width: 1024px) {
@@ -8326,6 +8327,27 @@ a.copybtn img:hover {
 .scylla-dropdown--contribute .scylla-dropdown__content .fa {
   font-size: 12px;
   margin-left: 4px;
+}
+.scylla-dropdown--versions.scylla-dropdown--single-version
+  .scylla-dropdown__content,
+.scylla-dropdown--versions.scylla-dropdown--single-version .chevron {
+  display: none !important;
+}
+.scylla-dropdown--versions .scylla-dropdown__item {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.scylla-dropdown--versions .scylla-dropdown__title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.scylla-dropdown--versions .scylla-dropdown__title .chevron {
+  min-height: 12px;
+  transform: rotate(90deg);
+  width: 8px;
 }
 .hero {
   background: linear-gradient(180deg, #fff 0%, #f6f8ff 100%);

@@ -1,0 +1,27 @@
+.scylla-dropdown--versions {
+  &.scylla-dropdown--single-version {
+    .scylla-dropdown__content,
+    .chevron {
+      display: none !important;
+    }
+  }
+
+  .scylla-dropdown__item {
+    background: $color-white;
+    border-radius: $round;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .scylla-dropdown__title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .chevron {
+      min-height: 12px;
+      transform: rotate(90deg);
+      width: 8px;
+    }
+  }
+}
