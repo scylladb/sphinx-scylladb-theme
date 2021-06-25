@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
    sphinx_scylladb_theme.extensions
+   sphinx_scylladb_theme.lexers
 
 Submodules
 ----------

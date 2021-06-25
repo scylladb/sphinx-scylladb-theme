@@ -12,6 +12,7 @@ class PanelBox(Directive):
     option_spec = {
         "title": directives.unchanged_required,
         "class": directives.unchanged,
+        "id": directives.unchanged,
     }
 
     def run(self):
