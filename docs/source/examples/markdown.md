@@ -4,7 +4,7 @@ The theme supports writing documents in MarkDown thanks to the extension [recomm
 
 ## MarkDown Cheatsheet
 
-For Markdown syntax reference, you can use this [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+For Markdown syntax reference, you can use this `Cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`\_.
 
 ## Using directives in MarkDown
 
