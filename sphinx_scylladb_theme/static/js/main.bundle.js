@@ -16020,8 +16020,8 @@
             s(".promo-banner__close").on("click", function () {
               o().set("scylladocs-hide-banner", "1"),
                 s("body").css("margin-top", 0),
-                s(".sidebar-left").css("margin-top", 0),
-                s(".sidebar-right").css("margin-top", 0),
+                s(".side-nav").css("margin-top", 0),
+                s(".secondary-side-nav").css("margin-top", 0),
                 s(".promo-banner").hide();
             }),
             s(window).resize(function () {

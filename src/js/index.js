@@ -64,8 +64,8 @@ const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
     Cookies.set("scylladocs-hide-banner", "1");
     $("body").css("margin-top", 0);
-    $(".sidebar-left").css("margin-top", 0);
-    $(".sidebar-right").css("margin-top", 0);
+    $(".side-nav").css("margin-top", 0);
+    $(".secondary-side-nav").css("margin-top", 0);
     $(".promo-banner").hide();
   });
 };
