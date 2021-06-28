@@ -8373,7 +8373,8 @@ a.copybtn img:hover {
 .hero__img {
   bottom: -170px;
   display: none;
-  max-height: 300px;
+  height: 300px;
+  margin: 0 !important;
   opacity: 0.1;
   position: absolute;
   right: -20px;
