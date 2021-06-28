@@ -22,7 +22,7 @@ class HeroBox(Directive):
         image = (
             generate_template(
                 """
-            <img class="{class_name}__img" src="{image}"</p>
+            <img class="{class_name}__img" src="{image}" />
             """,
                 image=image,
                 class_name=class_name,

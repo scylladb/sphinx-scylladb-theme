@@ -51,7 +51,7 @@ test_data = [
             <div class="card">
                 <div class="topic-box__head">
                     <div class="topic-box__icon"">
-                        <img src="/test.png"/>
+                        <img src="test.png"/>
                     </div>
                     <h3 class="topic-box__title">Lorem Ipsum</h3>
                 </div>
