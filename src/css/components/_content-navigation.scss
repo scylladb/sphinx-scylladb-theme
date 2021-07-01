@@ -18,6 +18,10 @@
     text-transform: uppercase;
     line-height: 24px;
     word-wrap: break-word;
+
+    .colored {
+      color: $color-typography-content-navigation-title-colored;
+    }
   }
 
   &__button {
@@ -43,9 +47,6 @@
 
   &--next {
     .navigation__title {
-      .colored {
-        color: $color-typography-content-navigation-next;
-      }
       margin-right: 15px;
     }
   }

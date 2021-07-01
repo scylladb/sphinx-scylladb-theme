@@ -28,6 +28,7 @@
       list-style: none;
       padding: 0;
       padding-bottom: 18px;
+      align-items: center;
 
       > a {
         flex: 1;
@@ -47,12 +48,6 @@
           filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
             brightness(90%) contrast(95%);
         }
-      }
-
-      > label {
-        height: 0;
-        flex: 0;
-        float: right;
       }
 
       ul {
@@ -97,8 +92,6 @@
           display: block;
         }
         ~ label i {
-          margin-top: 5px;
-          margin-right: 3px;
           transform: rotate(90deg);
         }
       }
