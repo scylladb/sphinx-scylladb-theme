@@ -1,86 +1,96 @@
 .admonition {
-  padding: 20px;
-  margin-bottom: $gap;
-  line-height: 20px;
-  overflow: auto;
   border-radius: 4px;
-  font-weight: 500;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  color: $color-typography-admonition-text;
   font-size: $font-small-size;
+  line-height: 20px;
+  margin-bottom: $gap;
+  overflow: auto;
+  padding: 20px;
+  position: relative;
 
-  a {
-    text-decoration: underline;
-  }
-
-  code {
-    background: $color-white;
-  }
-
-  &.tip {
-    background: $color-background-admonition-tip;
-    color: $color-typography-admonition-tip;
-
-    a {
-      color: $color-typography-admonition-tip;
-    }
-
-    .admonition-title:before {
-      @extend .scylla-icon--tip;
-      filter: brightness(100);
-    }
-  }
-
-  &.note {
-    background: $color-background-admonition-note;
-    color: $color-typography-admonition-note;
-
-    a {
-      color: $color-typography-admonition-note;
-    }
-    .admonition-title:before {
-      @extend .scylla-icon--exclamation;
-      filter: brightness(100);
-    }
-  }
-
-  &.caution {
-    background: $color-background-admonition-caution;
-    color: $color-typography-admonition-caution;
-
-    a {
-      color: $color-typography-admonition-caution;
-    }
-    .admonition-title:before {
-      @extend .scylla-icon--warning;
-    }
-  }
-
-  &.warning {
-    background: $color-background-admonition-warning;
-    color: $color-typography-admonition-warning;
-
-    a {
-      color: $color-typography-admonition-warning;
-    }
-
-    .admonition-title:before {
-      @extend .scylla-icon--exclamation;
-      filter: brightness(100);
-    }
+  &:before {
+    content: " ";
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 
   &-title {
-    text-transform: uppercase;
-    font-weight: bold;
+    color: $color-typography-admonition-title;
 
     &:before {
       content: "";
       @extend .scylla-icon;
-      margin-right: 12px;
-      min-height: 24px !important;
-      width: 24px !important;
+      margin-right: 8px;
+      min-height: 24px;
+      width: 24px;
     }
   }
+
   p:not(.admonition-title) {
     margin-bottom: 0;
+    margin-left: 32px;
+  }
+
+  &.tip {
+    border: 1px solid $color-border-admonition-tip;
+
+    &:before {
+      border-left: 8px solid transparentize($color-border-admonition-tip, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--tip;
+      filter: invert(56%) sepia(13%) saturate(1979%) hue-rotate(73deg)
+        brightness(92%) contrast(87%);
+    }
+  }
+
+  &.note {
+    border: 1px solid $color-border-admonition-note;
+
+    &:before {
+      border-left: 8px solid transparentize($color-border-admonition-note, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--exclamation;
+      filter: invert(44%) sepia(55%) saturate(2310%) hue-rotate(191deg)
+        brightness(81%) contrast(103%);
+    }
+  }
+
+  &.caution {
+    border: 1px solid $color-border-admonition-caution;
+
+    &:before {
+      border-left: 8px solid
+        transparentize($color-border-admonition-caution, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--warning;
+      filter: invert(77%) sepia(56%) saturate(3332%) hue-rotate(357deg)
+        brightness(98%) contrast(108%);
+    }
+  }
+
+  &.warning {
+    border: 1px solid $color-border-admonition-warning;
+
+    &:before {
+      border-left: 8px solid
+        transparentize($color-border-admonition-warning, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--exclamation;
+      filter: invert(41%) sepia(42%) saturate(6427%) hue-rotate(343deg)
+        brightness(99%) contrast(83%);
+    }
   }
 }
