@@ -7509,6 +7509,7 @@ blockquote {
   margin: 0;
 }
 .side-nav__content li {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -7528,11 +7529,6 @@ blockquote {
 .side-nav__content li.current .toctree-checkbox:checked ~ label i {
   filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
     brightness(90%) contrast(95%);
-}
-.side-nav__content li > label {
-  height: 0;
-  flex: 0;
-  float: right;
 }
 .side-nav__content li ul {
   width: 100%;
@@ -7573,8 +7569,6 @@ blockquote {
   display: block;
 }
 .side-nav__content .toctree-checkbox:checked ~ label i {
-  margin-top: 5px;
-  margin-right: 3px;
   transform: rotate(90deg);
 }
 @media screen and (min-width: 1024px) {
@@ -7834,7 +7828,7 @@ blockquote {
   filter: brightness(0);
 }
 .topic-title {
-  color: #9698c3;
+  color: rgba(35, 38, 59, 0.75);
   font-size: 10px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -7974,6 +7968,7 @@ blockquote {
 }
 .admonition-title {
   color: #23263b;
+  margin-bottom: 0;
 }
 .admonition-title:before {
   content: "";
@@ -8136,7 +8131,7 @@ blockquote {
   background: #fff;
 }
 code {
-  color: #484c7a;
+  color: #23263b;
   background-color: rgba(179, 186, 197, 0.1);
   border: none;
   border-radius: 4px;
@@ -8144,7 +8139,7 @@ code {
 }
 code.download {
   background: none;
-  color: #484c7a;
+  color: #23263b;
 }
 .highlight {
   background: transparent !important;
@@ -8218,6 +8213,9 @@ a.copybtn img:hover {
   line-height: 24px;
   word-wrap: break-word;
 }
+.navigation__title .colored {
+  color: #42c4e6;
+}
 .navigation__button {
   background: #fff;
   border: 0;
@@ -8241,9 +8239,6 @@ a.copybtn img:hover {
 .navigation--next .navigation__title {
   margin-right: 15px;
 }
-.navigation--next .navigation__title .colored {
-  color: #42c4e6;
-}
 @media screen and (min-width: 1200px) {
   .navigation__title {
     display: inline-block;
@@ -8251,12 +8246,12 @@ a.copybtn img:hover {
 }
 .scylla-dropdown {
   font-size: 14px;
-  color: #3a2d55;
+  color: #23263b;
 }
 .scylla-dropdown a,
 .scylla-dropdown a:hover,
 .scylla-dropdown a:focus {
-  color: #3a2d55 !important;
+  color: #23263b !important;
   padding: 0 !important;
 }
 .scylla-dropdown__item {
@@ -8641,7 +8636,7 @@ a.copybtn img:hover {
   text-transform: uppercase;
 }
 .panel {
-  background-color: #f7f8f9;
+  background-color: rgba(179, 186, 197, 0.1);
   border: 0;
   padding: 16px;
   margin-bottom: 30px;
@@ -8702,7 +8697,7 @@ a.copybtn img:hover {
   border-width: 1px !important;
 }
 .er_search_suggestions .er-search-result-box:hover {
-  background: #f7f8f9 !important;
+  background: rgba(179, 186, 197, 0.1) !important;
 }
 .er_search_suggestions .er_more_result_btn {
   cursor: pointer;
