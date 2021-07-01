@@ -35,15 +35,16 @@ class HeroBox(Directive):
             """
             <div class="hero">
                 <div class="hero-wrapper">
-                    <h1 class="{class_name}__title">{title}</h1>
                     {image}
-                    <div class="{class_name}__text">
+                    <div class="hero-header">
+                        <h1 class="{class_name}__title">{title}</h1>
+                        <div class="{class_name}__text">
             """,
             title=self.options.get("title", ""),
             image=image,
             class_name=class_name,
         )
-        html_tag_close = "</div></div></div>"
+        html_tag_close = "</div></div></div></div>"
 
         description_node = nodes.container()
         if self.state:

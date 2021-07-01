@@ -1,14 +1,14 @@
-.. title:: Sphinx ScyllaDB Theme
+.. title:: Scylla Sphinx Theme
 
 .. raw:: html
 
   <div class="landing landing--floating">
 
 .. hero-box::
-  :title: Sphinx ScyllaDB Theme
-  :image: /_static/img/mascots/scylla-opensource.svg
+  :title: Welcome to Scylla Sphinx Theme documentation
+  :image: /_static/img/mascots/scylla-computer-3-monsters.png
 
-  The documentation toolchain for ScyllaDB projects.
+  The documentation toolchain for Scylla projects.
 
 .. raw:: html
 
@@ -27,7 +27,7 @@
   :class: large-6
   :anchor: Learn more
 
-  Create a new documentation project with the Sphinx ScyllaDB Theme.
+  Create a new documentation project with the Sphinx theme.
 
 .. topic-box::
   :title: Configuration
@@ -63,7 +63,7 @@
   :class: large-6
   :anchor: Learn more
 
-  Explore example pages and components you can use in ScyllaDB docs.
+  Explore example pages and components you can use in Scylla docs.
 
 .. topic-box::
   :title: Contribute

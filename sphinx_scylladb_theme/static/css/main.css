@@ -7932,18 +7932,9 @@ blockquote {
   padding: 0px 16px;
 }
 @media screen and (min-width: 1024px) {
-  .landing--floating .topics-grid--large .card {
-    padding: 60px 30px 45px 30px;
-  }
   .landing--floating .landing__content {
     position: relative;
     top: -120px;
-  }
-  .landing--floating .hero {
-    padding: 60px 16px 138px 16px !important;
-  }
-  .landing .topics-grid--products {
-    margin-bottom: 40px;
   }
 }
 .admonition {
@@ -8373,17 +8364,20 @@ a.copybtn img:hover {
   border-bottom: 1px #23263b dotted;
   color: #23263b;
 }
+.hero__text p {
+  margin-bottom: 0 !important;
+}
 .hero__img {
-  bottom: -170px;
   display: none;
-  height: 300px;
-  margin: 0 !important;
+  height: 216px;
+  margin-bottom: 0 !important;
   opacity: 0.1;
-  position: absolute;
-  right: -20px;
 }
 .hero-wrapper {
-  display: block;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 1300px;
   position: relative;
@@ -8394,6 +8388,9 @@ a.copybtn img:hover {
   }
   .hero__img {
     display: block;
+  }
+  .landing--floating .hero {
+    padding: 30px 16px 120px 16px;
   }
 }
 .scylla-icon,
@@ -8888,5 +8885,11 @@ table.thead-border thead tr th:last-child {
   }
   .topic-box .card .topic-box__body p {
     min-height: 56px;
+  }
+  .landing--floating .topics-grid--large .card {
+    padding: 60px 30px 45px 30px;
+  }
+  .landing .topics-grid--products {
+    margin-bottom: 40px;
   }
 }

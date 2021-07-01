@@ -132,4 +132,16 @@
       min-height: 56px;
     }
   }
+
+  .landing {
+    &--floating {
+      .topics-grid--large .card {
+        padding: 60px 30px 45px 30px;
+      }
+    }
+
+    .topics-grid--products {
+      margin-bottom: 40px;
+    }
+  }
 }

@@ -10,16 +10,16 @@ Using:
 .. code-block:: rst
 
     .. hero-box::
-        :title: Sphinx ScyllaDB Theme
+        :title: Lorem Ipsum
 
-        The documentation toolchain for ScyllaDB projects.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 Results in:
 
 .. hero-box::
-    :title: Sphinx ScyllaDB Theme
+    :title: Lorem Ipsum
 
-    The documentation toolchain for ScyllaDB projects.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 With Image
 ----------
@@ -30,15 +30,15 @@ Using:
 .. code-block:: rst
 
     .. hero-box::
-        :title: Sphinx ScyllaDB Theme
+        :title: Lorem Ipsum
         :image: /_static/img/mascots/scylla-enterprise.svg
 
-        The documentation toolchain for ScyllaDB projects.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 Results in:
 
 .. hero-box::
-    :title: Sphinx ScyllaDB Theme
+    :title: Lorem Ipsum
     :image: /_static/img/mascots/scylla-enterprise.svg
 
-    The documentation toolchain for ScyllaDB projects.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.

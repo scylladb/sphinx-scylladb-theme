@@ -17,7 +17,7 @@ The following options can be defined in the file ``conf.py`` per project, using 
         'hide_banner': 'true',
         'hide_sidebar_index': 'true',
         'hide_version_dropdown': ['master'],
-        'site_description': 'Sphinx Theme for ScyllaDB projects.',
+        'site_description': 'Documentation toolchain for Scylla projects.',
         'tag_substring_removed': '-scylla',
     }
 

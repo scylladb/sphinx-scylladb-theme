@@ -20,21 +20,25 @@
       border-bottom: 1px $color-typography-topic-grid-title dotted;
       color: $color-typography-topic-grid-title;
     }
+
+    p {
+      margin-bottom: 0 !important;
+    }
   }
 
   &__img {
-    bottom: -170px;
     display: none;
-    height: 300px;
-    margin: 0 !important;
+    height: 216px;
+    margin-bottom: 0 !important;
     opacity: 0.1;
-    position: absolute;
-    right: -20px;
   }
 }
 
 .hero-wrapper {
-  display: block;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 1300px;
   position: relative;
@@ -47,5 +51,9 @@
     &__img {
       display: block;
     }
+  }
+
+  .landing--floating .hero {
+    padding: 30px 16px 120px 16px;
   }
 }
