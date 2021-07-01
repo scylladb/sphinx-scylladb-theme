@@ -7959,7 +7959,7 @@ blockquote {
 }
 .admonition-title {
   color: #23263b;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .admonition-title:before {
   content: "";
@@ -7968,7 +7968,7 @@ blockquote {
   width: 24px;
 }
 .admonition p:not(.admonition-title) {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   margin-left: 32px;
 }
 .admonition.tip {

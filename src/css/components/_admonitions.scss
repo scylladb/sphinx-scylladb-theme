@@ -21,7 +21,7 @@
 
   &-title {
     color: $color-typography-admonition-title;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 
     &:before {
       content: "";
@@ -33,7 +33,7 @@
   }
 
   p:not(.admonition-title) {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     margin-left: 32px;
   }
 
