@@ -8884,7 +8884,10 @@ table.thead-border thead tr th:last-child {
     margin-bottom: 60px;
   }
   .topic-box .card .topic-box__body p {
-    min-height: 56px;
+    min-height: 84px;
+  }
+  .topic-box--product .card .topic-box__body p {
+    min-height: 0px;
   }
   .landing--floating .topics-grid--large .card {
     padding: 60px 30px 45px 30px;

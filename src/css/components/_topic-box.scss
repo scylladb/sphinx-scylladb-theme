@@ -129,8 +129,12 @@
     margin-bottom: 60px;
 
     .topic-box__body p {
-      min-height: 56px;
+      min-height: 84px;
     }
+  }
+
+  .topic-box--product .card .topic-box__body p {
+    min-height: 0px;
   }
 
   .landing {
