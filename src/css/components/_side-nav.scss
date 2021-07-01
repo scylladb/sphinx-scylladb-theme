@@ -23,12 +23,12 @@
     }
 
     li {
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
       list-style: none;
       padding: 0;
       padding-bottom: 18px;
-      align-items: center;
 
       > a {
         flex: 1;

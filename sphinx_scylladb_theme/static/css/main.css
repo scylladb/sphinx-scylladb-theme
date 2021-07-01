@@ -7509,12 +7509,12 @@ blockquote {
   margin: 0;
 }
 .side-nav__content li {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   padding-bottom: 18px;
-  align-items: center;
 }
 .side-nav__content li > a {
   flex: 1;
