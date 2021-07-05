@@ -14,16 +14,6 @@
     </div>
   </div>
 
-.. toctree::
-   :hidden:
-
-   getting-started/index
-   configuration/index
-   commands
-   github-pages
-   examples/index
-   contribute/index
-
 .. raw:: html
 
   <div class="topics-grid">
@@ -97,3 +87,13 @@
 .. raw:: html
 
   </div>
+
+.. toctree::
+   :hidden:
+
+   getting-started/index
+   configuration/index
+   commands
+   github-pages
+   examples/index
+   contribute/index
