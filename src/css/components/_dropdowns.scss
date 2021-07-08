@@ -15,8 +15,9 @@
   }
 
   &__title {
-    position: initial;
-    display: flex;
+    /* Override Foundation */
+    position: initial !important;
+    display: flex !important;
     align-items: center;
     &:after {
       display: none !important;

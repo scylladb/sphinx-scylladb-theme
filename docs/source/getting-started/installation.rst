@@ -2,7 +2,7 @@
 Installation
 ============
 
-This guide explains how to add the documentation toolchain to a project hosted on GitHub.
+This quickstart walks you through the steps required to add the documentation toolchain to a project hosted on GitHub.
 
 Step 1: Download the sample project
 -----------------------------------
@@ -48,4 +48,4 @@ Step 3: Preview the site locally
 Step 4: Deploy to GitHub Pages
 ------------------------------
 
-.. note:: For more information, see :doc:`Publish your site on GitHub <../github-pages>`.
+To deploy the documentation site, see :doc:`GitHub Pages Configuration <../github-pages>`.

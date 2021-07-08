@@ -2,9 +2,14 @@ GitHub Pages
 ============
 
 The theme uses GitHub Pages and GitHub Actions to make the documentation publicly available.
+Projects using this toolchain build and deploy a new site every time the default branch (master) receives an update.
 
-Most projects build and deploy a new site every time the default branch (master) receives an update.
-When :doc:`multiversion <../configuration/multiversion>` is enabled, GitHub Pages builds docs for all versions listed in the file ``conf.py``.
+On this page, you’ll learn:
+
+- How to enable GitHub Pages
+- How to set up a custom domain.
+- How to re-run a workflow.
+- How to disable GitHub Pages
 
 Enabling GitHub Pages
 ---------------------
@@ -32,18 +37,18 @@ Follow the next steps to set up a custom domain:
 
 #. Once the DNS changes propagate (<24 h), the docs will be accessible from the custom domain name.
 
-Disabling GitHub Pages
-----------------------
-
-To disable the docs deployment temporarily, see `Unpublishing a GitHub Pages Site <https://help.github.com/en/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site>`_.
-
-Triggering builds manually
----------------------------
+Re-running a workflow
+---------------------
 
 Re-running workflows is useful when:
 
-- The theme received an update. By running the last build manually, the documentation project will receive the latest version. Otherwise, the theme will be automatically updated when the default branch gets an update.
+- The theme received an update. By re-running the last build manually, the documentation project will receive the latest version. Otherwise, the theme will be automatically updated when the default branch gets an update.
 
 - A previous version (branch or a tag) received a patch. Otherwise, the changes will not be reflected in production until the master branch gets an update.
 
 To re-run a workflow see, `Re-running a workflow <https://docs.github.com/en/actions/managing-workflow-runs/re-running-a-workflow>`_.
+
+Disabling GitHub Pages
+----------------------
+
+To disable the docs deployment temporarily, see `Unpublishing a GitHub Pages Site <https://help.github.com/en/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site>`_.

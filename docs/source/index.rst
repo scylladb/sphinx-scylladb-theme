@@ -48,7 +48,7 @@
   Run commands to build and preview the documentation.
 
 .. topic-box::
-  :title: GitHub Pages
+  :title: Deployment
   :link: github-pages
   :icon: fa fa-github
   :class: large-6
@@ -89,6 +89,6 @@
    getting-started/index
    configuration/index
    commands
-   github-pages
+   Deployment <github-pages>
    examples/index
    contribute/index

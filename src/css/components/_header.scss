@@ -45,8 +45,15 @@
 }
 
 .scylla-dropdown--header {
+  .scylla-dropdown__item {
+    font-size: $font-small-size;
+  }
   .scylla-dropdown__title {
     text-transform: uppercase;
+
+    .chevron {
+      margin-left: 10px;
+    }
   }
   .scylla-dropdown__content .scylla-icon {
     min-height: 20px;

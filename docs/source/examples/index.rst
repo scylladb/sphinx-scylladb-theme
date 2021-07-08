@@ -1,6 +1,8 @@
 Examples
 ========
 
+This sections list some of the components that you can use with Sphinx.
+
 .. toctree::
    :maxdepth: 2
    :hidden:

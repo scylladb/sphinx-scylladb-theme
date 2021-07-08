@@ -7438,8 +7438,14 @@ blockquote {
 .header-search-box #search-box {
   width: 100%;
 }
+.scylla-dropdown--header .scylla-dropdown__item {
+  font-size: 14px;
+}
 .scylla-dropdown--header .scylla-dropdown__title {
   text-transform: uppercase;
+}
+.scylla-dropdown--header .scylla-dropdown__title .chevron {
+  margin-left: 10px;
 }
 .scylla-dropdown--header .scylla-dropdown__content .scylla-icon,
 .scylla-dropdown--header
@@ -8251,8 +8257,8 @@ a.copybtn img:hover {
   font-size: 16px;
 }
 .scylla-dropdown__title {
-  position: initial;
-  display: flex;
+  position: initial !important;
+  display: flex !important;
   align-items: center;
 }
 .scylla-dropdown__title:after {

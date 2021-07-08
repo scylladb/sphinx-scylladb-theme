@@ -1,3 +1,7 @@
+{% if current_version %} {% if current_version.name == latest_version_name %} {%
+set branch = latest_version %} {% else %} {% set branch = current_version.name
+%} {% endif %} {% else %} {% set branch = theme_default_branch %} {% endif %}
+
 <ul
   class="dropdown menu scylla-dropdown scylla-dropdown--contribute"
   data-dropdown-menu
@@ -19,6 +23,16 @@
           <i class="fa fa-external-link" aria-hidden="true"></i
         ></a>
       </li>
+      {% if theme_github_repository and theme_hide_edit_this_page_button|lower
+      == 'false'%}
+      <li>
+        <a
+          href="https://github.com/{{ theme_github_repository }}/edit/{{ branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
+          target="_blank"
+          >Edit this page <i class="fa fa-external-link" aria-hidden="true"></i
+        ></a>
+      </li>
+      {% endif %}
       <li>
         <a href="https://docs.scylladb.com/contribute/" target="_blank"
           >Learn how to contribute
