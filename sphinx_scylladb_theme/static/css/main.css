@@ -7941,7 +7941,7 @@ blockquote {
 @media screen and (min-width: 1024px) {
   .landing--floating .landing__content {
     position: relative;
-    top: -120px;
+    top: -70px;
   }
 }
 .admonition {
@@ -8406,7 +8406,7 @@ a.copybtn img:hover {
     flex-direction: row-reverse;
   }
   .landing--floating .hero {
-    padding: 30px 16px 120px 16px;
+    padding: 30px 16px 100px 16px;
   }
 }
 .scylla-icon,
