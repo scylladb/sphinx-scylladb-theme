@@ -7350,6 +7350,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin-bottom: 16px;
   letter-spacing: 0.2px;
@@ -8352,13 +8353,13 @@ a.copybtn img:hover {
 }
 .hero__title {
   font-size: 32px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin-bottom: 14px;
   max-width: 482px;
 }
 .hero__text {
   font-size: 18px;
+  max-width: 482px;
 }
 .hero__text a {
   border-bottom: 1px #23263b dotted;

@@ -7,7 +7,6 @@
 
   &__title {
     font-size: 32px;
-    font-family: $font-base-family;
     font-weight: 500;
     margin-bottom: 14px;
     max-width: 482px;
@@ -15,6 +14,7 @@
 
   &__text {
     font-size: 18px;
+    max-width: 482px;
 
     a {
       border-bottom: 1px $color-typography-topic-grid-title dotted;

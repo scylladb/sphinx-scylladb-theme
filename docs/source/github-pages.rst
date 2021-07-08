@@ -22,7 +22,7 @@ Enabling GitHub Pages
 Setting up a custom domain
 --------------------------
 
-.. note:: You need access to the domain DNS configuration.
+.. note:: To set up a custom domain, you need access scylladb.com DNS configuration.
 
 Follow the next steps to set up a custom domain:
 
