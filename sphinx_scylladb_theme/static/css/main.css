@@ -8380,10 +8380,16 @@ a.copybtn img:hover {
   margin-bottom: 0 !important;
   opacity: 0.1;
 }
+.hero__button {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.hero__button .icon {
+  margin-right: 5px;
+}
 .hero-wrapper {
   align-items: center;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1300px;
@@ -8395,6 +8401,9 @@ a.copybtn img:hover {
   }
   .hero__img {
     display: block;
+  }
+  .hero-wrapper {
+    flex-direction: row-reverse;
   }
   .landing--floating .hero {
     padding: 30px 16px 120px 16px;

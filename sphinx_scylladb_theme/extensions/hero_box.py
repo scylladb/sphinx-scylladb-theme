@@ -13,6 +13,9 @@ class HeroBox(Directive):
         "title": directives.unchanged_required,
         "text": directives.unchanged_required,
         "image": directives.path,
+        "button_icon": directives.path,
+        "button_url": directives.path,
+        "button_text": directives.path,
     }
 
     def run(self):
@@ -22,12 +25,28 @@ class HeroBox(Directive):
         image = (
             generate_template(
                 """
-            <img class="{class_name}__img" src="{image}" />
-            """,
+                <img class="{class_name}__img" src="{image}" />
+                """,
                 image=image,
                 class_name=class_name,
             )
             if image
+            else ""
+        )
+
+        button_icon = self.options.get("button_icon")
+        button_url = self.options.get("button_url")
+        button_text = self.options.get("button_text")
+        button = (
+            generate_template(
+                """
+                <a href="{button_url}"><button class="hero__button button"><i class="icon {button_icon}" aria-hidden="true"></i>{button_text}</button></a>
+                """,
+                button_icon=button_icon,
+                button_url=button_url,
+                button_text=button_text,
+            )
+            if button_text
             else ""
         )
 
@@ -44,8 +63,9 @@ class HeroBox(Directive):
             image=image,
             class_name=class_name,
         )
-        html_tag_close = "</div></div></div></div>"
-
+        html_tag_close = generate_template(
+            """</div>{button}</div></div></div>""", button=button
+        )
         description_node = nodes.container()
         if self.state:
             self.state.nested_parse(self.content, 0, description_node)

@@ -114,8 +114,10 @@ html_theme_options = {
     "banner_icon_path": "",
     "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",
     "hide_sidebar_index": "true",
+    "hide_version_dropdown": "false",
     "hide_banner": "false",
     "github_issues_repository": "scylladb/scylla-doc-issues",
+    "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
 }
 

@@ -32,12 +32,20 @@
     margin-bottom: 0 !important;
     opacity: 0.1;
   }
+
+  &__button {
+    text-transform: uppercase;
+    margin-top: 20px;
+
+    .icon {
+      margin-right: 5px;
+    }
+  }
 }
 
 .hero-wrapper {
   align-items: center;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1300px;
@@ -51,6 +59,10 @@
     &__img {
       display: block;
     }
+  }
+
+  .hero-wrapper {
+    flex-direction: row-reverse;
   }
 
   .landing--floating .hero {
