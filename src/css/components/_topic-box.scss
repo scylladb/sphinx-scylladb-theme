@@ -129,6 +129,12 @@
     margin-bottom: 60px;
 
     .topic-box__body p {
+      min-height: 56px;
+    }
+  }
+
+  .topic-box--min-3-lines {
+    .topic-box__body p {
       min-height: 84px;
     }
   }
