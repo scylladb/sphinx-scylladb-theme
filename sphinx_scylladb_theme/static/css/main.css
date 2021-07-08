@@ -7734,7 +7734,8 @@ blockquote {
 .content--full-width blockquote {
   display: none;
 }
-.content p {
+.content p,
+.content .line-block {
   line-height: 28px;
   margin-bottom: 20px;
 }
@@ -8839,7 +8840,8 @@ table.thead-border thead tr th:last-child {
   margin: 0;
   padding: 0;
 }
-.topic-box__body p {
+.topic-box__body p,
+.topic-box__body .line-block {
   margin-top: 10px;
 }
 .topic-box__anchor {
@@ -8899,13 +8901,16 @@ table.thead-border thead tr th:last-child {
   .topic-box .card {
     margin-bottom: 60px;
   }
-  .topic-box .card .topic-box__body p {
+  .topic-box .card .topic-box__body p,
+  .topic-box .card .topic-box__body .line-block {
     min-height: 56px;
   }
-  .topic-box--min-3-lines .topic-box__body p {
+  .topic-box--min-3-lines .card .topic-box__body p,
+  .topic-box--min-3-lines .card .topic-box__body .line-block {
     min-height: 84px;
   }
-  .topic-box--product .card .topic-box__body p {
+  .topic-box--product .card .topic-box__body p p,
+  .topic-box--product .card .topic-box__body p .line-block {
     min-height: 0px;
   }
   .landing--floating .topics-grid--large .card {

@@ -59,7 +59,8 @@
       padding: 0;
     }
 
-    p {
+    p,
+    .line-block {
       margin-top: 10px;
     }
   }
@@ -128,19 +129,25 @@
   .topic-box .card {
     margin-bottom: 60px;
 
-    .topic-box__body p {
-      min-height: 56px;
+    .topic-box__body {
+      p,
+      .line-block {
+        min-height: 56px;
+      }
     }
   }
 
-  .topic-box--min-3-lines {
-    .topic-box__body p {
+  .topic-box--min-3-lines .card .topic-box__body {
+    p,
+    .line-block {
       min-height: 84px;
     }
   }
-
   .topic-box--product .card .topic-box__body p {
-    min-height: 0px;
+    p,
+    .line-block {
+      min-height: 0px;
+    }
   }
 
   .landing {
