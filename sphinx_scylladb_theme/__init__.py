@@ -36,6 +36,11 @@ def compute_toc_tree(context):
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
     context["navigation_tree"] = compute_toc_tree(context)
+    if (
+        hasattr(app.config, "smv_rename_latest_version")
+        and app.config.smv_rename_latest_version
+    ):
+        context["rename_latest_version"] = app.config.smv_rename_latest_version
 
 
 def override_smv_latest_version(config):

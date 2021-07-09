@@ -134,8 +134,4 @@ htmlhelp_basename = "ScyllaDocumentationdoc"
 html_baseurl = "https://sphinx-theme.scylladb.com"
 
 # Dictionary of values to pass into the template engine’s context for all pages
-html_context = {
-    "html_baseurl": html_baseurl,
-    "latest_version": smv_latest_version,
-    "latest_version_name": smv_rename_latest_version,
-}
+html_context = {"html_baseurl": html_baseurl}

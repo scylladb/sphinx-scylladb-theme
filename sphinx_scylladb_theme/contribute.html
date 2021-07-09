@@ -1,7 +1,3 @@
-{% if current_version %} {% if current_version.name == latest_version_name %} {%
-set branch = latest_version %} {% else %} {% set branch = current_version.name
-%} {% endif %} {% else %} {% set branch = theme_default_branch %} {% endif %}
-
 <ul
   class="dropdown menu scylla-dropdown scylla-dropdown--contribute"
   data-dropdown-menu
@@ -26,6 +22,10 @@ set branch = latest_version %} {% else %} {% set branch = current_version.name
       {% if theme_github_repository and theme_hide_edit_this_page_button|lower
       == 'false'%}
       <li>
+        {% set branch = theme_default_branch %} {% if current_version %} {% if
+        current_version.name == rename_latest_version %} {%set branch =
+        latest_version %} {% else %} {% set branch = current_version.name %} {%
+        endif %} {% endif %}
         <a
           href="https://github.com/{{ theme_github_repository }}/edit/{{ branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
           target="_blank"
