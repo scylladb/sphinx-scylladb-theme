@@ -1,13 +1,17 @@
 <header class="header">
   <div class="header-logo">
-    <a class="header-logo__img" href="https://docs.scylladb.com/">
+    <a class="header-logo__img" href="https://scylladb.com/">
       <img
         src="{{ pathto('_static/img/logo-scylla-docs.svg', 1) }}"
         alt="Scylla Documentation Logo"
       />
     </a>
+    <span class="header-logo__bar"></span>
+    <a class="header-logo__text" href="https://docs.scylladb.com/">
+      Documentation
+    </a>
   </div>
-  <div class="header-navigation show-for-large">
+  <div class="header-navigation">
     <ul
       class="dropdown menu scylla-dropdown scylla-dropdown--header"
       data-dropdown-menu
@@ -18,13 +22,13 @@
         ></a>
         <ul class="menu scylla-dropdown__content">
           <li>
-            <a href="https://docs.scylladb.com/getting-started/"
+            <a href="https://docs.scylladb.com/"
               ><i class="scylla-icon scylla-icon--about-us"></i>Scylla Open
               Source</a
             >
           </li>
           <li>
-            <a href="https://docs.scylladb.com/getting-started/"
+            <a href="https://docs.scylladb.com/"
               ><i class="scylla-icon scylla-icon--enterprise"></i>Scylla
               Enterprise</a
             >
@@ -106,8 +110,8 @@
       <a href="https://www.scylladb.com/download/" class="button">Download</a>
     </div>
   </div>
-  <div class="header-search-box show-for-large">
-    <div id="search-box">
+  <div class="header-search-box">
+    <div class="search-box">
       <ci-search></ci-search>
     </div>
   </div>

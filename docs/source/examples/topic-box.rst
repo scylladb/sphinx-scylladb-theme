@@ -55,6 +55,83 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+With Horizontal Scroll (Mobile)
+===============================
+
+Using:
+
+.. code-block::
+
+    .. raw:: html
+
+        <div class="topics-grid topics-grid--scrollable grid-container full">
+
+        <div class="grid-x grid-margin-x hs">
+
+    .. topic-box::
+        :title: Lorem ipsum
+        :link: scylla-cloud
+        :class: large-4
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    .. topic-box::
+        :title: Lorem ipsum
+        :link: scylla-cloud
+        :class: large-4
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    .. topic-box::
+        :title: Lorem ipsum
+        :link: scylla-cloud
+        :class: large-4
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    .. raw:: html
+
+        </div></div>
+
+
+Results in:
+
+.. raw:: html
+
+    <div class="topics-grid topics-grid--scrollable grid-container full">
+
+    <div class="grid-x grid-margin-x hs">
+
+.. topic-box::
+    :title: Lorem ipsum
+    :link: scylla-cloud
+    :class: large-4
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+.. topic-box::
+    :title: Lorem ipsum
+    :link: scylla-cloud
+    :class: large-4
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+.. topic-box::
+    :title: Lorem ipsum
+    :link: scylla-cloud
+    :class: large-4
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+.. raw:: html
+
+    </div></div>
 
 Product Topic
 -------------

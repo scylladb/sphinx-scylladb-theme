@@ -1,6 +1,6 @@
 .contents.local {
   > ul {
-    margin-bottom: 30px;
+    margin-bottom: $gap;
     margin-left: 0;
 
     > li {
@@ -25,7 +25,7 @@
       }
 
       a {
-        font-size: $font-small-size;
+        font-size: $font-small;
 
         &:before {
           content: "";

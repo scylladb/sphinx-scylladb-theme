@@ -1,7 +1,7 @@
 .secondary-side-nav {
   display: none;
   height: 100%;
-  padding: $spacing;
+  padding: 20px;
   width: 100%;
 
   &__content {
@@ -26,7 +26,7 @@
         align-items: baseline;
         color: $color-typography-toc-link;
         display: flex;
-        font-size: $font-small-size;
+        font-size: $font-small;
 
         &:before {
           content: "";
@@ -42,13 +42,17 @@
 
         &:hover,
         &.current {
-          font-weight: 700;
+          font-weight: 400;
           color: $color-typography-toc-link-active;
 
           &:before {
             opacity: 1;
             filter: brightness(0);
           }
+        }
+
+        &.current {
+          font-weight: 700;
         }
       }
     }
@@ -77,9 +81,9 @@
     padding-left: 20px;
     position: fixed;
     max-height: 100vh;
-    max-height: calc(100vh - #{$header-height});
-    padding: $spacing;
-    top: $header-height;
+    max-height: calc(100vh - #{$header-height-large});
+    padding: 20px;
+    top: $header-height-large;
     width: $secondary-side-nav-width;
 
     &__content {

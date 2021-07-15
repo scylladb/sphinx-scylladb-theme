@@ -158,7 +158,7 @@
   </head>
   <body>
     {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
-    include 'banner.html' %} {% endif %} {% include 'header.html'%}
+    include 'promo-banner.html' %} {% endif %} {% include 'header.html'%}
 
     <section class="layout">
       {% set hide_sidebar = pagename == master_doc and
@@ -186,9 +186,9 @@
         </div>
         {% endif %}
 
-        <div class="grid-x">
-          <div class="cell small-8">{% include 'breadcrumbs.html'%}</div>
-          <div class="cell small-4">{% include 'contribute.html' %}</div>
+        <div class="pre-content">
+          <div class="pre-content__left">{% include 'breadcrumbs.html'%}</div>
+          <div class="pre-content__right">{% include 'contribute.html' %}</div>
         </div>
         {% endif %} {{ body }} {% if not pagename == master_doc %} {% include
         'content-navigation.html'%} {% endif %}
@@ -201,7 +201,8 @@
       </div>
       {% if not hide_sidebar %}
       <div class="sidebar-right large-order-3">
-        {% include 'secondary-side-nav.html' %}
+        {% if not hide_toc %} {% include 'secondary-side-nav.html' %} {% endif
+        %}
       </div>
       {%- endif %}
     </section>

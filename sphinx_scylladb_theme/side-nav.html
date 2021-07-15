@@ -1,4 +1,9 @@
 <div id="side-nav" class="side-nav" data-closable data-toggler=".show">
+  <div class="side-nav__search">
+    <div class="search-box">
+      <ci-search></ci-search>
+    </div>
+  </div>
   <div class="side-nav__versions">
     {% if versions %} {% include 'versions.html' %} {% endif %}
   </div>

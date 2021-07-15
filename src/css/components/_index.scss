@@ -1,3 +1,7 @@
+/* Base*/
+@import "icons";
+@import "buttons";
+
 /* Layout */
 @import "header";
 @import "side-nav";
@@ -7,22 +11,20 @@
 @import "toc-local";
 @import "footer";
 @import "landing";
+@import "not-found";
 
 /* Extensions */
 @import "admonitions";
-@import "banner";
 @import "breadcrumbs";
-@import "buttons";
 @import "code-blocks";
 @import "content-navigation";
 @import "dropdowns";
 @import "dropdown-contribute";
 @import "dropdown-versions";
 @import "hero";
-@import "icons";
 @import "last-updated";
-@import "not-found";
 @import "panel-box";
+@import "promo-banner";
 @import "search-box";
 @import "sphinx-tab";
 @import "tables";

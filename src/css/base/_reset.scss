@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-size: $font-base-size;
+  font-size: $font-base;
   font-family: $font-base-family;
   line-height: 1;
 }
@@ -55,7 +55,7 @@ h6 {
 
 h1 {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 28px;
   line-height: 40px;
 }
@@ -78,7 +78,8 @@ button:focus {
 }
 
 blockquote {
-  border-left: 2px solid $color-border-blockquote;
+  padding: 0;
+  margin: 0;
 }
 
 .show {
@@ -88,4 +89,10 @@ blockquote {
 .centered {
   display: block;
   margin: 0 auto;
+}
+
+@media screen and (min-width: $large) {
+  h1 {
+    font-size: 36px;
+  }
 }

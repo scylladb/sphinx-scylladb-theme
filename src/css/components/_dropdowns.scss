@@ -1,5 +1,5 @@
 .scylla-dropdown {
-  font-size: $font-small-size;
+  font-size: $font-small;
   color: $color-typography-dropdown;
 
   a,
@@ -11,7 +11,7 @@
 
   &__item {
     padding: 15px;
-    font-size: $font-base-size;
+    font-size: $font-base;
   }
 
   &__title {
@@ -35,7 +35,7 @@
     margin-top: 15px;
     padding: 16px 0;
     width: max-content;
-    font-size: $font-base-size;
+    font-size: $font-base;
 
     li {
       padding: 7px 16px;

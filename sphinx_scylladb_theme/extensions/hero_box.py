@@ -25,10 +25,9 @@ class HeroBox(Directive):
         image = (
             generate_template(
                 """
-                <img class="{class_name}__img" src="{image}" />
+                <img src="{image}" />
                 """,
                 image=image,
-                class_name=class_name,
             )
             if image
             else ""
@@ -54,7 +53,9 @@ class HeroBox(Directive):
             """
             <div class="hero">
                 <div class="hero-wrapper">
+                    <div class="{class_name}__img">
                     {image}
+                    </div>
                     <div class="hero-header">
                         <h1 class="{class_name}__title">{title}</h1>
                         <div class="{class_name}__text">

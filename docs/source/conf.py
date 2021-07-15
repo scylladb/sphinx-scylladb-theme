@@ -109,7 +109,7 @@ html_theme_path = ["../.."]
 # further.  For a list of options available for the theme, see the
 # documentation.
 html_theme_options = {
-    "banner_button_text": "Learn More >",
+    "banner_button_text": "Learn more",
     "banner_button_url": "#",
     "banner_icon_path": "",
     "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",

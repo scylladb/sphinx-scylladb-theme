@@ -14,7 +14,7 @@
     border-radius: 2px;
     display: flex;
     font-weight: 500;
-    font-size: $font-smallest-size;
+    font-size: $font-smallest;
     line-height: 16px;
     padding: 2px 6px !important;
 
@@ -34,7 +34,7 @@
 
   .scylla-dropdown__content {
     margin-top: 7px;
-    font-size: $font-small-size;
+    font-size: $font-small;
 
     .fa {
       font-size: 12px;

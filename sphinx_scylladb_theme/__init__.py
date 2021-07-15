@@ -4,7 +4,6 @@ from notfound import extension as not_found
 import sphinx_copybutton
 from sphinx_tabs import tabs
 
-
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     hero_box,
@@ -33,9 +32,18 @@ def compute_toc_tree(context):
     return toctree_html
 
 
+def compute_hide_toc(context):
+    if "toc" not in context:
+        return True
+
+    return navigation.side_nav_has_one_item(context["toc"])
+
+
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
     context["navigation_tree"] = compute_toc_tree(context)
+    context["hide_toc"] = compute_hide_toc(context)
+
     if (
         hasattr(app.config, "smv_rename_latest_version")
         and app.config.smv_rename_latest_version

@@ -1,5 +1,5 @@
 .table-wrapper {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   display: block;
   max-width: 100%;
   overflow-x: auto;
@@ -8,8 +8,8 @@
 
 table {
   color: $color-typography-table-body;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  font-size: $font-small-size;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  font-size: $font-small;
   line-height: 24px;
   margin: 0;
   overflow: hidden;
@@ -22,7 +22,7 @@ table {
     background: transparent;
     border: 0;
     color: $color-typography-table-header;
-    font-size: $font-smallest-size;
+    font-size: $font-smallest;
     font-weight: 400;
   }
 

@@ -19,7 +19,7 @@ Configuration options for the banner shown at the top of the page.
     - Description
   * - ``banner_button_text``
     - string
-    - Learn More >
+    - Learn more
     - Caption for the promotional banner call to action.
   * - ``banner_button_url``
     - string
@@ -43,7 +43,7 @@ Example:
 .. code:: python
 
   html_theme_options = {
-      'banner_button_text': 'Learn More >',
+      'banner_button_text': 'Learn more',
       'banner_button_url': '#',
       'banner_icon_path': '_static/mascots/scylla-opensource.svg',
       'banner_title_text': 'Scylla University Live | Free Virtual Training Event',

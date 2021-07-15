@@ -1,25 +1,9 @@
 .side-nav-toggle {
+  cursor: pointer;
   display: block;
-  height: 13px;
   margin-right: 20px;
-  text-align: center;
-  width: 30px;
+  position: relative;
   z-index: 300;
-
-  &__button {
-    background: $color-typography-sidebar-button;
-    -webkit-box-shadow: 0 7px 0 $color-typography-sidebar-button,
-      0 14px 0 $color-typography-sidebar-button;
-    box-shadow: 0 7px 0 $color-typography-sidebar-button,
-      0 14px 0 $color-typography-sidebar-button;
-    color: $color-typography-sidebar-button;
-    cursor: pointer;
-
-    display: block;
-    font-size: 30px;
-    height: 3px;
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: $large) {

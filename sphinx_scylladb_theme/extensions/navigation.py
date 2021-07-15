@@ -3,7 +3,7 @@ Extensions for Sphinx which generate the navigation tree from Sphinx's toctree f
 
 Copyright (c) 2020 Pradyun Gedam Licensed under the MIT License
 
-Adapted from https://github.com/adamtheturtle/sphinx-substitution-extensions for ScyllaDB.
+Adapted from https://github.com/pradyunsg/furo for ScyllaDB.
 """
 
 import functools
@@ -73,3 +73,14 @@ def get_navigation_tree(toctree_html: str) -> str:
         last_element_with_current["class"].append("current-page")
 
     return str(soup)
+
+
+@functools.lru_cache(maxsize=None)
+def side_nav_has_one_item(toc: str) -> bool:
+    """Check if the toc has exactly one list item."""
+
+    soup = BeautifulSoup(toc, "html.parser")
+    if len(soup.find_all("li")) == 1:
+        return True
+
+    return False

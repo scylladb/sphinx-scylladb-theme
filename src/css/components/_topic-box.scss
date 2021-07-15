@@ -1,7 +1,7 @@
 .topics-grid {
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: $gap;
 
   &__title {
     color: $color-typography-topic-grid-title;
@@ -14,16 +14,33 @@
     font-size: 18px;
     color: $color-typography-topic-grid-text;
   }
+
+  &--scrollable .hs {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .topic-box {
+  display: flex;
+  align-items: stretch;
+
   .card {
     @include floating;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: $gap;
     position: relative;
-    padding: 45px 30px;
+    padding: 20px;
     font-size: 18px;
 
     &:hover {
@@ -35,9 +52,8 @@
   &__title {
     font-weight: 700;
     color: $color-typography-topic-title;
-    font-size: 20px;
+    font-size: $font-base;
     margin-bottom: 0;
-    line-height: 32px;
 
     img {
       position: absolute;
@@ -51,23 +67,28 @@
 
   &__body {
     color: $color-typography-topic-text;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     max-width: 80%;
 
     .container {
       margin: 0;
       padding: 0;
+      flex-grow: 1;
     }
 
     p,
     .line-block {
+      font-size: $font-base;
       margin-top: 10px;
     }
   }
 
   &__anchor {
-    font-size: 20px;
-    font-weight: 700;
     color: $color-typography-topic-link;
+    font-size: $font-small;
+    font-weight: 700;
   }
 
   &__icon {
@@ -94,24 +115,28 @@
   &--product .card {
     box-shadow: none;
     padding: 20px;
-    min-height: 261px;
     text-align: center;
 
     .topic-box__title {
       color: $color-typography-topic-title;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: $font-small;
     }
 
     .topic-box__body {
-      font-size: $font-small-size;
-      line-height: 24px;
+      display: flex;
+      flex-direction: column;
       max-width: 100%;
+
+      p,
+      .line-block {
+        font-size: $font-smallest;
+      }
     }
 
     .topic-box__icon img {
       opacity: 1;
       position: initial;
+      max-height: 84px;
     }
 
     &:hover {
@@ -120,42 +145,68 @@
   }
 }
 
+@media screen and (max-width: $large) {
+  .topics-grid--scrollable .topic-box {
+    /* Overwrite Foundation */
+    width: 280px !important;
+  }
+
+  .topic-box--product:nth-last-child(-n + 2) .card {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: $large) {
   .topics-grid {
     margin-bottom: 10px;
+
+    &__text {
+      font-size: $font-base;
+    }
+
+    &--scrollable .hs {
+      display: flex;
+    }
   }
 
-  .topic-box .card {
-    margin-bottom: 60px;
-
-    .topic-box__body {
+  .topic-box {
+    .card {
+      margin-bottom: 60px;
+      padding: 45px 30px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__body {
       p,
       .line-block {
-        min-height: 56px;
+        font-size: 18px;
       }
+    }
+    &__anchor {
+      font-size: 20px;
     }
   }
 
-  .topic-box--min-3-lines .card .topic-box__body {
-    p,
-    .line-block {
-      min-height: 84px;
+  .topic-box--product .card {
+    padding: 20px;
+    .topic-box__title {
+      font-size: 18px;
     }
-  }
-  .topic-box--product .card .topic-box__body p {
-    p,
-    .line-block {
-      min-height: 0px;
+
+    .topic-box__body p {
+      p,
+      .line-block {
+        font-size: $font-small;
+      }
+    }
+
+    .topic-box__icon img {
+      max-height: 111px;
     }
   }
 
   .landing {
-    &--floating {
-      .topics-grid--large .card {
-        padding: 60px 30px 45px 30px;
-      }
-    }
-
     .topics-grid--products {
       margin-bottom: 40px;
     }

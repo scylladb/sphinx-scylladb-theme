@@ -11,6 +11,7 @@ test_data = [
         """
         <div class="hero">
                 <div class="hero-wrapper">
+                    <div class="hero__img"></div>
                     <div class="hero-header">
                         <h1 class="hero__title">Lorem Ipsum</h1>
                         <div class="hero__text">
@@ -23,7 +24,9 @@ test_data = [
         """
         <div class="hero">
                 <div class="hero-wrapper">
-                    <img class="hero__img" src="image.png" />
+                    <div class="hero_img">
+                        <img src="image.png" />
+                    </div>
                     <div class="hero-header">
                         <h1 class="hero__title">Lorem Ipsum</h1>
                         <div class="hero__text">

@@ -1,6 +1,6 @@
 .content-navigation {
-  margin-top: 50px;
   display: flex;
+  margin-top: 50px;
   justify-content: space-between;
 }
 
@@ -9,11 +9,14 @@
   max-width: 50%;
   word-break: break-word;
 
+  &__link {
+    display: flex;
+  }
+
   &__title {
     color: $color-typography-content-navigation-text;
-    display: none;
     font-weight: 500;
-    font-size: $font-smallest-size;
+    font-size: $font-smallest;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     line-height: 24px;
@@ -27,6 +30,7 @@
   &__button {
     @include floating;
     background-color: $color-white;
+    display: none;
     padding: 13px 16.5px;
     vertical-align: top;
     cursor: pointer;
@@ -48,6 +52,7 @@
   &--next {
     .navigation__title {
       margin-right: 15px;
+      text-align: right;
     }
   }
 }
@@ -56,6 +61,14 @@
   .navigation {
     &__title {
       display: inline-block;
+    }
+    &__button {
+      display: block;
+    }
+    &--next {
+      .navigation__title {
+        text-align: left;
+      }
     }
   }
 }

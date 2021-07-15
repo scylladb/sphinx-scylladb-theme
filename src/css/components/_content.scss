@@ -5,7 +5,7 @@
 .content {
   overflow-wrap: break-word;
 
-  padding: $spacing;
+  padding: 20px;
   margin-top: $header-height;
   scroll-margin-top: $header-height;
   width: 100%;
@@ -49,7 +49,7 @@
 
   .reference:after {
     font-family: $font-icons-family;
-    font-size: $font-smallest-size;
+    font-size: $font-smallest;
     padding: 0 4px;
   }
 
@@ -64,6 +64,15 @@
   .section {
     margin-top: -$header-height;
     padding-top: $header-height;
+  }
+
+  &--has-banner {
+    scroll-margin-top: $promo-banner-header-height;
+
+    .section {
+      margin-top: -$promo-banner-header-height;
+      padding-top: $promo-banner-header-height;
+    }
   }
 
   .inline-icon.fa-check {
@@ -82,34 +91,55 @@
     .hero-wrapper {
       max-width: $full-width;
     }
-
-    blockquote {
-      display: none;
-    }
   }
+}
 
-  &--has-banner {
-    scroll-margin-top: calc(#{$header-height} + #{$banner-height});
+.pre-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 
-    .section {
-      margin-top: calc((#{$header-height} + #{$banner-height}) * -1);
-      padding-top: calc(#{$header-height} + #{$banner-height});
-    }
+  &__right {
+    display: none;
   }
 }
 
 @media screen and (min-width: $large) {
   .content {
-    min-height: calc(100vh - (#{$footer-height} + #{$header-height}));
+    min-height: calc(100vh - (#{$footer-height} + #{$header-height-large}));
     padding-bottom: 100px;
     margin-left: $secondary-side-nav-width;
+    margin-top: $header-height-large;
+    scroll-margin-top: $header-height-large;
     width: calc(100% - #{$secondary-side-nav-width});
+
+    .section {
+      margin-top: -$header-height-large;
+      padding-top: $header-height-large;
+    }
+
+    &--has-banner {
+      scroll-margin-top: $promo-banner-header-height-large;
+
+      .section {
+        margin-top: -$promo-banner-header-height-large;
+        padding-top: calc(#{$promo-banner-header-height-large});
+      }
+    }
+  }
+
+  .pre-content {
+    margin-bottom: 10px;
+    &__right {
+      display: block;
+    }
   }
 }
 
 @media screen and (min-width: $xlarge) {
   .content {
-    padding: $spacing-l;
+    padding: 40px;
     padding-top: 60px;
     margin-left: $side-nav-width;
     width: calc(100% - (#{$side-nav-width} + #{$secondary-side-nav-width}));
