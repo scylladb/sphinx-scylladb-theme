@@ -1,4 +1,5 @@
 .secondary-side-nav {
+  display: none;
   height: 100%;
   padding: $spacing;
   width: 100%;
@@ -16,6 +17,10 @@
       display: none;
       padding: 10px 0;
       word-break: break-word;
+
+      &:last-child {
+        border: 0;
+      }
 
       a {
         align-items: baseline;
@@ -64,9 +69,12 @@
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: $xlarge) {
   .secondary-side-nav {
+    display: block;
     overflow-y: auto;
+    padding: 60px;
+    padding-left: 20px;
     position: fixed;
     max-height: 100vh;
     max-height: calc(100vh - #{$header-height});
@@ -77,12 +85,5 @@
     &__content {
       padding-bottom: $footer-height;
     }
-  }
-}
-
-@media screen and (min-width: $xlarge) {
-  .secondary-side-nav {
-    padding: 60px;
-    padding-left: 20px;
   }
 }

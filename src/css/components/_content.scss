@@ -103,7 +103,7 @@
     min-height: calc(100vh - (#{$footer-height} + #{$header-height}));
     padding-bottom: 100px;
     margin-left: $secondary-side-nav-width;
-    width: calc(100% - (#{$secondary-side-nav-width} * 2));
+    width: calc(100% - #{$secondary-side-nav-width});
   }
 }
 

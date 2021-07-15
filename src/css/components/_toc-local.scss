@@ -12,6 +12,10 @@
         content: "";
       }
 
+      &:last-child {
+        border: 0;
+      }
+
       ul {
         display: none;
       }
