@@ -1,17 +1,13 @@
 .header {
+  align-items: center;
   background-color: $color-background-header;
   box-shadow: 0px 2px 22px rgba(74, 93, 166, 0.15);
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   padding: 17px 0px;
   width: 100%;
   z-index: 99;
-}
-
-.header-wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
 }
 
 .header-logo {
@@ -36,12 +32,8 @@
 }
 
 .header-search-box {
-  .search-box {
-    padding: 0 $spacing;
-  }
-  #search-box {
-    width: 100%;
-  }
+  margin-right: 30px;
+  width: 200px;
 }
 
 .scylla-dropdown--header {
@@ -62,24 +54,21 @@
 }
 
 @media screen and (min-width: $xlarge) {
-  .header-logo__img,
-  .search-box {
+  .header-logo,
+  #search-box {
     padding: 0 $spacing-l;
+  }
+
+  .header-logo {
+    width: $side-nav-width;
+  }
+
+  .header-search-box {
+    max-width: 20%;
+    width: $search-box-width;
   }
 
   .header-button {
     display: block;
-  }
-}
-
-@media screen and (min-width: $xxlarge) {
-  .header-logo__img {
-    float: right;
-    width: $side-nav-width;
-  }
-
-  .search-box {
-    float: left;
-    width: $side-nav-width;
   }
 }
