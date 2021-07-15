@@ -1,6 +1,7 @@
 .layout {
   display: flex;
 }
+
 .content {
   overflow-wrap: break-word;
 
@@ -8,24 +9,6 @@
   margin-top: $header-height;
   scroll-margin-top: $header-height;
   width: 100%;
-
-  &--full-width {
-    padding: 0 !important;
-    margin-left: 0 !important;
-    width: 100% !important;
-
-    .topics-grid {
-      max-width: $full-width;
-    }
-
-    .hero-wrapper {
-      max-width: $full-width;
-    }
-
-    blockquote {
-      display: none;
-    }
-  }
 
   p,
   .line-block {
@@ -85,6 +68,33 @@
 
   .inline-icon.fa-check {
     color: $color-typography-icon-checkmark;
+  }
+
+  &--full-width {
+    padding: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+
+    .topics-grid {
+      max-width: $full-width;
+    }
+
+    .hero-wrapper {
+      max-width: $full-width;
+    }
+
+    blockquote {
+      display: none;
+    }
+  }
+
+  &--has-banner {
+    scroll-margin-top: calc(#{$header-height} + #{$banner-height});
+
+    .section {
+      margin-top: calc((#{$header-height} + #{$banner-height}) * -1);
+      padding-top: calc(#{$header-height} + #{$banner-height});
+    }
   }
 }
 

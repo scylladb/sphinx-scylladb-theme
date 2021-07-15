@@ -55,6 +55,7 @@ const hideBanner = () => {
     $("body").css("margin-top", promoBannerHeight);
     $(".side-nav").css("margin-top", promoBannerHeight);
     $(".secondary-side-nav").css("margin-top", promoBannerHeight);
+    $(".content").addClass("content--has-banner");
   } else {
     promoBanner.hide();
   }
@@ -67,6 +68,7 @@ const onCloseBanner = () => {
     $(".side-nav").css("margin-top", 0);
     $(".secondary-side-nav").css("margin-top", 0);
     $(".promo-banner").hide();
+    $(".content").removeClass("content--has-banner");
   });
 };
 

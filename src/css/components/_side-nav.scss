@@ -7,6 +7,7 @@
   padding: $spacing;
   padding-bottom: 0;
   top: 77px;
+  left: 0;
   width: 100%;
   z-index: 100;
 
@@ -110,6 +111,7 @@
     max-height: calc(100vh - #{$header-height});
     padding: 30px $spacing-l;
     top: $header-height;
+    left: initial;
     width: $secondary-side-nav-width;
     z-index: 25;
 
