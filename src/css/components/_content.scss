@@ -4,9 +4,9 @@
 
 .content {
   overflow-wrap: break-word;
-
   padding: 20px;
   margin-top: $header-height;
+  max-width: $max-content-width;
   scroll-margin-top: $header-height;
   width: 100%;
 
@@ -80,16 +80,18 @@
   }
 
   &--full-width {
+    /* Reset for all screen sizes */
     padding: 0 !important;
     margin-left: 0 !important;
     width: 100% !important;
+    max-width: 100% !important;
 
     .topics-grid {
-      max-width: $full-width;
+      max-width: $max-full-width;
     }
 
     .hero-wrapper {
-      max-width: $full-width;
+      max-width: $max-full-width;
     }
   }
 }

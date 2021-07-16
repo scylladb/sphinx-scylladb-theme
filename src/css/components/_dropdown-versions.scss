@@ -2,6 +2,7 @@
   &.scylla-dropdown--single-version {
     .scylla-dropdown__content,
     .chevron {
+      /* Override Foundation */
       display: none !important;
     }
   }
@@ -9,7 +10,7 @@
   .scylla-dropdown__item {
     background: $color-white;
     border-radius: $round;
-    margin-bottom: 20px;
+    box-shadow: 0 28px 32px rgba(0, 0, 0, 0.06);
     width: 100%;
   }
 
@@ -22,6 +23,14 @@
       min-height: 12px;
       transform: rotate(90deg);
       width: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: $large) {
+  .scylla-dropdown--versions {
+    .scylla-dropdown__item {
+      box-shadow: none;
     }
   }
 }

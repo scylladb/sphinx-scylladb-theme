@@ -93,3 +93,13 @@
   top: 0 !important;
   right: 0 !important;
 }
+
+/* Mobile */
+.er-suggestion-sm {
+  .er_search_input_dummy {
+    margin: 0 !important;
+  }
+  .er_search_button_dummy {
+    border: 0 !important;
+  }
+}

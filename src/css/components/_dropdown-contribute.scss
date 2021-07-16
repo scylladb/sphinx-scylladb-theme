@@ -16,10 +16,12 @@
     font-weight: 500;
     font-size: $font-smallest;
     line-height: 16px;
+    /* Override Foundation */
     padding: 2px 6px !important;
 
     &:hover,
     &:focus {
+      /* Override Foundation */
       background: $color-background-dropdown-contribute !important;
       padding: 2px 6px !important;
     }
