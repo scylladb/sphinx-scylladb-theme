@@ -7639,7 +7639,7 @@ blockquote {
   padding: 6px;
 }
 .tooltip:before {
-  display: none;
+  display: none !important;
 }
 .has-tip {
   border: 0;
