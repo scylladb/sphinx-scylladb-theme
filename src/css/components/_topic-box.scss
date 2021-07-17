@@ -7,11 +7,13 @@
     color: $color-typography-topic-grid-title;
     font-size: 24px;
     margin-bottom: 6px;
+    line-height: 32px;
     font-weight: 700;
   }
 
   &__text {
     font-size: 18px;
+    line-height: 24px;
     color: $color-typography-topic-grid-text;
   }
 
@@ -25,6 +27,11 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
+    .topic-box:last-child:after {
+      content: "";
+      width: 20px;
+    }
   }
 }
 
@@ -36,7 +43,6 @@
     @include floating;
     display: flex;
     flex-direction: column;
-    line-height: 24px;
     margin: 0 auto;
     margin-bottom: $gap;
     position: relative;
@@ -53,6 +59,7 @@
     font-weight: 700;
     color: $color-typography-topic-title;
     font-size: $font-base;
+    line-height: 24px;
     margin-bottom: 0;
 
     img {
@@ -81,6 +88,7 @@
     p,
     .line-block {
       font-size: $font-base;
+      line-height: 19px;
       margin-top: 10px;
     }
   }
@@ -89,6 +97,7 @@
     color: $color-typography-topic-link;
     font-size: $font-small;
     font-weight: 700;
+    line-height: 24px;
   }
 
   &__icon {
@@ -166,6 +175,10 @@
 
     &--scrollable .hs {
       display: flex;
+
+      .topic-box:last-child:after {
+        display: none;
+      }
     }
   }
 
@@ -176,15 +189,18 @@
     }
     &__title {
       font-size: 20px;
+      line-height: 32px;
     }
     &__body {
       p,
       .line-block {
         font-size: 18px;
+        line-height: 26px;
       }
     }
     &__anchor {
       font-size: 20px;
+      line-height: 26px;
     }
   }
 
@@ -192,9 +208,10 @@
     padding: 20px;
     .topic-box__title {
       font-size: 18px;
+      line-height: 24px;
     }
 
-    .topic-box__body p {
+    .topic-box__body {
       p,
       .line-block {
         font-size: $font-small;

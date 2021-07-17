@@ -20,7 +20,7 @@
   &__title {
     color: $color-typography-banner-title;
     font-size: $font-smallest;
-    line-height: 23px;
+    line-height: 16px;
     margin-right: 15px;
   }
 
@@ -55,13 +55,14 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 5.5px;
+  padding: 5.85px 20px;
 }
 
 @media (min-width: $large) {
   .promo-banner {
     &__title {
       font-size: 18px;
+      line-height: 23px;
     }
 
     &__button {

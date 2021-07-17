@@ -34,6 +34,7 @@ table {
   tbody tr {
     background-color: transparent !important;
     border-top: 1px solid $color-border-table;
+    line-height: 18px;
   }
 
   &.thead-border thead {

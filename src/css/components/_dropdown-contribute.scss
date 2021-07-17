@@ -26,6 +26,15 @@
       padding: 2px 6px !important;
     }
 
+    .scylla-dropdown__title--body {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-right: 5px;
+      }
+    }
+
     .chevron {
       margin-left: 4px;
       min-height: 6px;
@@ -38,7 +47,7 @@
     margin-top: 7px;
     font-size: $font-small;
 
-    .fa {
+    .icon {
       font-size: 12px;
       margin-left: 4px;
     }

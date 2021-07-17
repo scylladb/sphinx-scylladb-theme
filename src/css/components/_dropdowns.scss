@@ -1,6 +1,7 @@
 .scylla-dropdown {
-  font-size: $font-small;
   color: $color-typography-dropdown;
+  font-size: $font-small;
+  line-height: 20px;
 
   a,
   a:hover,
@@ -10,15 +11,15 @@
   }
 
   &__item {
-    padding: 15px;
     font-size: $font-base;
+    padding: 15px;
   }
 
   &__title {
     /* Override Foundation */
-    position: initial !important;
-    display: flex !important;
     align-items: center;
+    display: flex !important;
+    position: initial !important;
     &:after {
       display: none !important;
     }
@@ -31,11 +32,11 @@
 
   &__content {
     @include floating;
+    font-size: $font-base;
     list-style: none;
     margin-top: 15px;
     padding: 16px 0;
     width: max-content;
-    font-size: $font-base;
 
     li {
       padding: 7px 16px;

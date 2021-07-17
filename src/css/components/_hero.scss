@@ -8,6 +8,7 @@
   &__title {
     font-size: 28px;
     font-weight: 500;
+    line-height: 38px;
     margin-bottom: 14px;
     max-width: 229px;
   }
@@ -15,6 +16,7 @@
   &__text {
     font-size: $font-base;
     max-width: 343px;
+    line-height: 26px;
 
     a {
       border-bottom: 1px $color-typography-topic-grid-title dotted;
@@ -30,7 +32,7 @@
     opacity: 0.1;
     position: absolute;
     right: -18px;
-    top: 30px;
+    top: 20px;
     img {
       width: 124px;
       margin-bottom: 0 !important;
@@ -61,12 +63,14 @@
 
     &__title {
       font-size: 32px;
+      line-height: 42px;
       max-width: 482px;
     }
 
     &__text {
       font-size: 18px;
       max-width: 482px;
+      line-height: 26px;
     }
 
     &__img {
