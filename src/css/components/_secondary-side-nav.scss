@@ -91,4 +91,8 @@
       padding-bottom: $footer-height;
     }
   }
+
+  .layout--has-banner .secondary-side-nav {
+    max-height: calc(100vh - #{$promo-banner-header-height-large});
+  }
 }

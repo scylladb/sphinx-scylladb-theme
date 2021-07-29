@@ -66,8 +66,8 @@
     }
 
     &__button {
-      font-size: $font-base;
-      padding: 10px;
+      font-size: $font-small;
+      padding: 8.5px;
     }
     &__close {
       display: block;
@@ -75,6 +75,6 @@
   }
   .promo-banner-wrapper {
     flex-direction: unset;
-    padding: 14.5px;
+    padding: 16px;
   }
 }

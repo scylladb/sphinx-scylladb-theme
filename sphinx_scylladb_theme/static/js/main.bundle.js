@@ -16017,14 +16017,14 @@
                 s("body").css("margin-top", n),
                 s(".side-nav").css("margin-top", n),
                 s(".secondary-side-nav").css("margin-top", n),
-                s(".content").addClass("content--has-banner")),
+                s(".layout").addClass("layout--has-banner")),
             s(".promo-banner__close").on("click", function () {
               o().set("scylladocs-hide-banner", "1"),
                 s("body").css("margin-top", 0),
                 s(".side-nav").css("margin-top", 0),
                 s(".secondary-side-nav").css("margin-top", 0),
                 s(".promo-banner").hide(),
-                s(".content").removeClass("content--has-banner");
+                s(".layout").removeClass("layout--has-banner");
             }),
             s(window).resize(function () {
               var t = s(".promo-banner"),

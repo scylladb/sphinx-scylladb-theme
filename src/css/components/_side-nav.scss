@@ -76,12 +76,12 @@
       }
 
       &.current {
-        > a {
-          font-weight: 700;
-          color: $color-typography-base-link;
-        }
-
         a.current {
+          color: $color-typography-base-link;
+          font-weight: 400;
+        }
+        &.has-children > a {
+          font-weight: 700 !important;
           color: $color-typography-base-link;
         }
 
@@ -107,8 +107,11 @@
   }
 
   &__versions {
-    margin-bottom: 20px;
     max-width: 90%;
+
+    .dropdown {
+      margin-bottom: 20px;
+    }
   }
 
   &__search {
@@ -149,6 +152,10 @@
 
   .toctree-checkbox {
     right: 40px;
+  }
+
+  .layout--has-banner .side-nav {
+    max-height: calc(100vh - #{$promo-banner-header-height-large});
   }
 }
 

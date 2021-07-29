@@ -7887,11 +7887,12 @@ blockquote {
 .side-nav__content li > a {
   flex: 1;
 }
-.side-nav__content li.current > a {
-  font-weight: 700;
-  color: #3c4fe0;
-}
 .side-nav__content li.current a.current {
+  color: #3c4fe0;
+  font-weight: 400;
+}
+.side-nav__content li.current.has-children > a {
+  font-weight: 700 !important;
   color: #3c4fe0;
 }
 .side-nav__content li.current .toctree-checkbox:checked ~ label i {
@@ -7910,8 +7911,10 @@ blockquote {
   margin-left: 0;
 }
 .side-nav__versions {
-  margin-bottom: 20px;
   max-width: 90%;
+}
+.side-nav__versions .dropdown {
+  margin-bottom: 20px;
 }
 .side-nav__search {
   margin-bottom: 20px;
@@ -7949,6 +7952,9 @@ blockquote {
   }
   .toctree-checkbox {
     right: 40px;
+  }
+  .layout--has-banner .side-nav {
+    max-height: calc(100vh - 150px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -8044,6 +8050,9 @@ blockquote {
   .secondary-side-nav__content {
     padding-bottom: 193px;
   }
+  .layout--has-banner .secondary-side-nav {
+    max-height: calc(100vh - 150px);
+  }
 }
 .layout {
   display: flex;
@@ -8102,27 +8111,27 @@ blockquote {
   margin-top: -50px;
   padding-top: 50px;
 }
-.content--has-banner {
-  scroll-margin-top: 92.5px;
-}
-.content--has-banner .section {
-  margin-top: -92.5px;
-  padding-top: 92.5px;
-}
 .content .inline-icon.fa-check {
   color: #42c4e6;
 }
-.content--full-width {
+.layout--full-width .content {
   padding: 0 !important;
   margin-left: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
 }
-.content--full-width .topics-grid {
+.layout--full-width .content .topics-grid {
   max-width: 1190px;
 }
-.content--full-width .hero-wrapper {
+.layout--full-width .content .hero-wrapper {
   max-width: 1190px;
+}
+.layout--has-banner .content {
+  scroll-margin-top: 92.5px;
+}
+.layout--has-banner .content .section {
+  margin-top: -92.5px;
+  padding-top: 92.5px;
 }
 .pre-content {
   display: flex;
@@ -8146,18 +8155,18 @@ blockquote {
     margin-top: -80px;
     padding-top: 80px;
   }
-  .content--has-banner {
-    scroll-margin-top: 150px;
-  }
-  .content--has-banner .section {
-    margin-top: -150px;
-    padding-top: calc(150px);
-  }
   .pre-content {
     margin-bottom: 10px;
   }
   .pre-content__right {
     display: block;
+  }
+  .layout--has-banner .content {
+    scroll-margin-top: 150px;
+  }
+  .layout--has-banner .content .section {
+    margin-top: -150px;
+    padding-top: calc(150px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -8812,15 +8821,15 @@ a.copybtn img:hover {
     line-height: 23px;
   }
   .promo-banner__button {
-    font-size: 16px;
-    padding: 10px;
+    font-size: 14px;
+    padding: 8.5px;
   }
   .promo-banner__close {
     display: block;
   }
   .promo-banner-wrapper {
     flex-direction: unset;
-    padding: 14.5px;
+    padding: 16px;
   }
 }
 .search-box {
