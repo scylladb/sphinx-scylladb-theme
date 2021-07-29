@@ -7,9 +7,6 @@
 .. hero-box::
   :title: Welcome to Scylla Sphinx Theme documentation
   :image: /_static/img/mascots/scylla-docs.svg
-  :button_icon: fa fa-github
-  :button_url: https://github.com/scylladb/sphinx-scylladb-theme
-  :button_text: Scylla Sphinx Theme
 
   The documentation toolchain for Scylla projects.
 

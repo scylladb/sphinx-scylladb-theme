@@ -69,10 +69,10 @@ linkcheck: setup
 .PHONY: multiversion
 multiversion: setup
 	@mkdir -p $(HOME)/.cache/pypoetry/virtualenvs
-	$(POETRY) run sphinx-multiversion source _build/dirhtml
+	$(POETRY) run sphinx-multiversion source $(BUILDDIR)/dirhtml
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
 .PHONY: multiversionpreview
 multiversionpreview: multiversion
-	$(POETRY) run python3 -m http.server 5500 --directory $(BUILDDIR)/dirhtml
+	$(POETRY) run livereload -p 5500 $(BUILDDIR)/dirhtml
