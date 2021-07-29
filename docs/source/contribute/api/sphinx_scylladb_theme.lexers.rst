@@ -1,5 +1,5 @@
-sphinx\_scylladb\_theme.lexers package
-======================================
+Custom Lexers
+=============
 
 Submodules
 ----------

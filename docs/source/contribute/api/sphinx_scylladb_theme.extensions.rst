@@ -1,5 +1,5 @@
-sphinx\_scylladb\_theme.extensions package
-==========================================
+Custom Extensions
+=================
 
 Submodules
 ----------
