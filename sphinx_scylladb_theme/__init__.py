@@ -59,24 +59,24 @@ def override_smv_latest_version(config):
     return config.smv_latest_version
 
 
-def override_rst_prolog(config):
+def override_rst_epilog(config):
     substitutions = """
-    .. |v| raw:: html
+.. role:: raw-html(raw)
+   :format: html
 
-        <i class="inline-icon fa fa-check" aria-hidden="true"></i>
+.. |v| replace:: :raw-html:`<i class="inline-icon fa fa-check" aria-hidden="true"></i>`
+.. |x| replace:: :raw-html:`<i class="inline-icon fa fa-times" aria-hidden="true"></i>`
+"""
 
-    .. |x| raw:: html
-
-        <i class="inline-icon fa fa-times" aria-hidden="true"></i>
-    """
-    rst_prolog = config.rst_prolog or ""
-    config.rst_prolog = substitutions + rst_prolog
-    return config.rst_prolog
+    print(config.rst_epilog)
+    epilog = config.rst_epilog or ""
+    config.rst_epilog = substitutions + epilog
+    return config.rst_epilog
 
 
 def update_config(app, config):
     override_smv_latest_version(config)
-    override_rst_prolog(config)
+    override_rst_epilog(config)
     config.sphinx_tabs_disable_css_loading = True
 
 

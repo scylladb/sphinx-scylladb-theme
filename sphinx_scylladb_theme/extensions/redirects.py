@@ -24,6 +24,7 @@ def create_redirects(app, exception):
     :type exception: sphinx.error.SphinxError
     """
     redirects_file = app.config.redirects_file
+    is_multiversion = os.getenv("SPHINX_MULTIVERSION_NAME")
     if not redirects_file:
         return
     if os.path.exists("docs"):
@@ -38,7 +39,7 @@ def create_redirects(app, exception):
                 target_path = app.outdir + "/" + from_path
 
                 # Handles sphinx-multiversion redirects
-                if os.getenv("SPHINX_MULTIVERSION_NAME") and not is_url(redirect_to):
+                if is_multiversion and not is_url(redirect_to):
                     redirect_to = (
                         app.config.html_baseurl
                         + "/"

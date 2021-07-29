@@ -87,12 +87,12 @@
   </div></div>
 
 .. toctree::
-   :hidden:
+  :hidden:
 
-   getting-started/index
-   configuration/index
-   commands
-   Deployment <github-pages>
-   examples/index
-   contribute/index
-   CHANGELOG
+  getting-started/index
+  configuration/index
+  commands
+  Deployment <github-pages>
+  examples/index
+  contribute/index
+  CHANGELOG

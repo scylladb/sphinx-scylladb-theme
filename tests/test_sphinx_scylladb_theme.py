@@ -2,14 +2,14 @@ import os
 from sphinx_scylladb_theme import (
     version,
     override_smv_latest_version,
-    override_rst_prolog,
+    override_rst_epilog,
 )
 
 
 class ConfigStub:
     def __init__(self):
         self.smv_latest_version = ""
-        self.rst_prolog = ""
+        self.rst_epilog = ""
 
 
 def test_override_smv_latest_version_default():
@@ -23,8 +23,8 @@ def test_override_smv_latest_version_env():
     assert override_smv_latest_version(config) == "abc"
 
 
-def test_override_rst_prolog():
+def test_override_rst_epilog():
     config = ConfigStub()
-    config.rst_prolog = "|a| raw:: html"
-    assert "|v| raw:: html" in override_rst_prolog(config)
-    assert "|a| raw:: html" in override_rst_prolog(config)
+    config.rst_epilog = "|a| raw:: html"
+    assert "|v| raw:: html" in override_rst_epilog(config)
+    assert "|x| raw:: html" in override_rst_epilog(config)

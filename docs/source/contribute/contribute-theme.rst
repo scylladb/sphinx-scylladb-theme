@@ -114,6 +114,6 @@ The script automatically increases the package's version and will ask you for th
 After publishing the package, you should see the new release listed on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
 
 .. toctree::
-   :hidden:
+    :hidden:
 
-   api/sphinx_scylladb_theme
+    api/sphinx_scylladb_theme
