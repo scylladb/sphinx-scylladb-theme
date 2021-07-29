@@ -95,3 +95,4 @@
    Deployment <github-pages>
    examples/index
    contribute/index
+   CHANGELOG

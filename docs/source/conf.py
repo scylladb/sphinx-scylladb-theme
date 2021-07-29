@@ -86,11 +86,11 @@ redirects_file = "_utils/redirections.yaml"
 TAGS = []
 smv_tag_whitelist = multiversion_regex_builder(TAGS)
 # Whitelist pattern for branches (set to None to ignore all branches)
-BRANCHES = ["multiversion-test", "new-design"]
+BRANCHES = ["branch-1.0", "multiversion-test", "master"]
 smv_branch_whitelist = multiversion_regex_builder(BRANCHES)
 # Defines which version is considered to be the latest stable version.
 # Must be listed in smv_tag_whitelist or smv_branch_whitelist.
-smv_latest_version = "new-design"
+smv_latest_version = "branch-1.0"
 smv_rename_latest_version = "stable"
 # Whitelist pattern for remotes (set to None to use local branches only)
 smv_remote_whitelist = r"^origin$"
@@ -110,11 +110,12 @@ html_theme_path = ["../.."]
 # documentation.
 html_theme_options = {
     "banner_button_text": "Learn more",
-    "banner_button_url": "#",
+    "banner_button_url": "https://sphinx-theme.scylladb.com/stable/CHANGELOG",
     "banner_icon_path": "",
     "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",
     "hide_sidebar_index": "true",
     "hide_banner": "false",
+    "hide_version_dropdown": ["master"],
     "hide_edit_this_page_button": "false",
     "github_issues_repository": "scylladb/scylla-doc-issues",
     "github_repository": "scylladb/sphinx-scylladb-theme",
