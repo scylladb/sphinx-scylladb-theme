@@ -115,7 +115,6 @@ html_theme_options = {
     "hide_sidebar_index": "true",
     "hide_banner": "false",
     "hide_version_dropdown": ["master"],
-    "hide_edit_this_page_button": "false",
     "github_issues_repository": "scylladb/scylla-doc-issues",
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
