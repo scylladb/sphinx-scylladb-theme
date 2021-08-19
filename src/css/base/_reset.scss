@@ -39,6 +39,7 @@ h4,
 h5,
 h6 {
   font-family: $font-base-family;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 16px;
   letter-spacing: 0.2px;
@@ -67,6 +68,18 @@ h2 {
 
 h3 {
   font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-weight: 400;
 }
 
 img {
