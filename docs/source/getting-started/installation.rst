@@ -13,7 +13,8 @@ Step 1: Download the sample project
 
       project-name/
          ├── pyproject.toml
-         ├── .github/workflows/pages.yaml
+         ├── .github/workflows/docs-pages@v2.yaml
+         ├── .github/workflows/docs-pr@v1.yaml
          ├── docs/
          │   ├── _utils/
          │   |   ├── deploy.sh
