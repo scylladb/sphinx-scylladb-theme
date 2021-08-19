@@ -10,14 +10,6 @@
    */
 
 /*!
- * Javascript Cookie v1.5.1
- * https://github.com/js-cookie/js-cookie
- *
- * Copyright 2006, 2014 Klaus Hartl
- * Released under the MIT license
- */
-
-/*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
  *

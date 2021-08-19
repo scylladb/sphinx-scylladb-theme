@@ -10798,28 +10798,28 @@
               },
               R =
                 "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
-              M = "[\\x20\\t\\r\\n\\f]",
-              H = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
-              q = H.replace("w", "w#"),
+              H = "[\\x20\\t\\r\\n\\f]",
+              M = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
+              q = M.replace("w", "w#"),
               N =
                 "\\[[\\x20\\t\\r\\n\\f]*(" +
-                H +
+                M +
                 ")(?:" +
-                M +
+                H +
                 "*([*^$|!~]?=)" +
-                M +
+                H +
                 "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" +
                 q +
                 "))|)" +
-                M +
+                H +
                 "*\\]",
               F =
                 ":(" +
-                H +
+                M +
                 ")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|" +
                 N +
                 ")*)|.*)\\)|)",
-              I = new RegExp(M + "+", "g"),
+              I = new RegExp(H + "+", "g"),
               B = new RegExp(
                 "^[\\x20\\t\\r\\n\\f]+|((?:^|[^\\\\])(?:\\\\.)*)[\\x20\\t\\r\\n\\f]+$",
                 "g"
@@ -10835,9 +10835,9 @@
               Y = new RegExp(F),
               K = new RegExp("^" + q + "$"),
               U = {
-                ID: new RegExp("^#(" + H + ")"),
-                CLASS: new RegExp("^\\.(" + H + ")"),
-                TAG: new RegExp("^(" + H.replace("w", "w*") + ")"),
+                ID: new RegExp("^#(" + M + ")"),
+                CLASS: new RegExp("^\\.(" + M + ")"),
+                TAG: new RegExp("^(" + M.replace("w", "w*") + ")"),
                 ATTR: new RegExp("^" + N),
                 PSEUDO: new RegExp("^" + F),
                 CHILD: new RegExp(
@@ -11369,7 +11369,7 @@
                     return (
                       e ||
                       ((e = new RegExp(
-                        "(^|[\\x20\\t\\r\\n\\f])" + t + "(" + M + "|$)"
+                        "(^|[\\x20\\t\\r\\n\\f])" + t + "(" + H + "|$)"
                       )) &&
                         j(t, function (t) {
                           return e.test(
@@ -12528,26 +12528,26 @@
                 e(t[a], n, r ? i : i.call(t[a], a, e(t[a], n)));
             return o ? t : u ? e.call(t) : l ? e(t[0], n) : s;
           });
-          function M() {
+          function H() {
             Object.defineProperty((this.cache = {}), 0, {
               get: function () {
                 return {};
               },
             }),
-              (this.expando = g.expando + M.uid++);
+              (this.expando = g.expando + H.uid++);
           }
           (g.acceptData = function (t) {
             return 1 === t.nodeType || 9 === t.nodeType || !+t.nodeType;
           }),
-            (M.uid = 1),
-            (M.accepts = g.acceptData),
-            (M.prototype = {
+            (H.uid = 1),
+            (H.accepts = g.acceptData),
+            (H.prototype = {
               key: function (t) {
-                if (!M.accepts(t)) return 0;
+                if (!H.accepts(t)) return 0;
                 var e = {},
                   n = t[this.expando];
                 if (!n) {
-                  n = M.uid++;
+                  n = H.uid++;
                   try {
                     (e[this.expando] = { value: n }),
                       Object.defineProperties(t, e);
@@ -12607,8 +12607,8 @@
                 t[this.expando] && delete this.cache[t[this.expando]];
               },
             });
-          var H = new M(),
-            q = new M(),
+          var M = new H(),
+            q = new H(),
             N = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
             F = /([A-Z])/g;
           function I(t, e, n) {
@@ -12636,7 +12636,7 @@
           }
           g.extend({
             hasData: function (t) {
-              return q.hasData(t) || H.hasData(t);
+              return q.hasData(t) || M.hasData(t);
             },
             data: function (t, e, n) {
               return q.access(t, e, n);
@@ -12645,10 +12645,10 @@
               q.remove(t, e);
             },
             _data: function (t, e, n) {
-              return H.access(t, e, n);
+              return M.access(t, e, n);
             },
             _removeData: function (t, e) {
-              H.remove(t, e);
+              M.remove(t, e);
             },
           }),
             g.fn.extend({
@@ -12662,13 +12662,13 @@
                   if (
                     this.length &&
                     ((o = q.get(s)),
-                    1 === s.nodeType && !H.get(s, "hasDataAttrs"))
+                    1 === s.nodeType && !M.get(s, "hasDataAttrs"))
                   ) {
                     for (n = r.length; n--; )
                       r[n] &&
                         0 === (i = r[n].name).indexOf("data-") &&
                         ((i = g.camelCase(i.slice(5))), I(s, i, o[i]));
-                    H.set(s, "hasDataAttrs", !0);
+                    M.set(s, "hasDataAttrs", !0);
                   }
                   return o;
                 }
@@ -12714,10 +12714,10 @@
                 if (t)
                   return (
                     (e = (e || "fx") + "queue"),
-                    (i = H.get(t, e)),
+                    (i = M.get(t, e)),
                     n &&
                       (!i || g.isArray(n)
-                        ? (i = H.access(t, e, g.makeArray(n)))
+                        ? (i = M.access(t, e, g.makeArray(n)))
                         : i.push(n)),
                     i || []
                   );
@@ -12744,10 +12744,10 @@
               _queueHooks: function (t, e) {
                 var n = e + "queueHooks";
                 return (
-                  H.get(t, n) ||
-                  H.access(t, n, {
+                  M.get(t, n) ||
+                  M.access(t, n, {
                     empty: g.Callbacks("once memory").add(function () {
-                      H.remove(t, [e + "queue", n]);
+                      M.remove(t, [e + "queue", n]);
                     }),
                   })
                 );
@@ -12794,7 +12794,7 @@
                   r--;
 
                 )
-                  (n = H.get(s[r], t + "queueHooks")) &&
+                  (n = M.get(s[r], t + "queueHooks")) &&
                     n.empty &&
                     (i++, n.empty.add(a));
                 return a(), o.promise(e);
@@ -12851,7 +12851,7 @@
                 h,
                 p,
                 m,
-                v = H.get(t);
+                v = M.get(t);
               if (v)
                 for (
                   n.handler && ((n = (s = n).handler), (o = s.selector)),
@@ -12909,7 +12909,7 @@
                 h,
                 p,
                 m,
-                v = H.hasData(t) && H.get(t);
+                v = M.hasData(t) && M.get(t);
               if (v && (l = v.events)) {
                 for (u = (e = (e || "").match(P) || [""]).length; u--; )
                   if (
@@ -12946,7 +12946,7 @@
                         g.removeEvent(t, h, v.handle),
                       delete l[h]);
                   } else for (h in l) g.event.remove(t, h + e[u], n, i, !0);
-                g.isEmptyObject(l) && (delete v.handle, H.remove(t, "events"));
+                g.isEmptyObject(l) && (delete v.handle, M.remove(t, "events"));
               }
             },
             trigger: function (t, e, n, o) {
@@ -12999,8 +12999,8 @@
                 for (s = 0; (r = h[s++]) && !t.isPropagationStopped(); )
                   (t.type = s > 1 ? l : f.bindType || m),
                     (c =
-                      (H.get(r, "events") || {})[t.type] &&
-                      H.get(r, "handle")) && c.apply(r, e),
+                      (M.get(r, "events") || {})[t.type] &&
+                      M.get(r, "handle")) && c.apply(r, e),
                     (c = u && r[u]) &&
                       c.apply &&
                       g.acceptData(r) &&
@@ -13033,7 +13033,7 @@
                 s,
                 a = [],
                 l = r.call(arguments),
-                u = (H.get(this, "events") || {})[t.type] || [],
+                u = (M.get(this, "events") || {})[t.type] || [],
                 c = g.event.special[t.type] || {};
               if (
                 ((l[0] = t),
@@ -13281,16 +13281,16 @@
                 g.event.special[e] = {
                   setup: function () {
                     var i = this.ownerDocument || this,
-                      o = H.access(i, e);
+                      o = M.access(i, e);
                     o || i.addEventListener(t, n, !0),
-                      H.access(i, e, (o || 0) + 1);
+                      M.access(i, e, (o || 0) + 1);
                   },
                   teardown: function () {
                     var i = this.ownerDocument || this,
-                      o = H.access(i, e) - 1;
+                      o = M.access(i, e) - 1;
                     o
-                      ? H.access(i, e, o)
-                      : (i.removeEventListener(t, n, !0), H.remove(i, e));
+                      ? M.access(i, e, o)
+                      : (i.removeEventListener(t, n, !0), M.remove(i, e));
                   },
                 };
               }),
@@ -13399,14 +13399,14 @@
           }
           function mt(t, e) {
             for (var n = 0, i = t.length; n < i; n++)
-              H.set(t[n], "globalEval", !e || H.get(e[n], "globalEval"));
+              M.set(t[n], "globalEval", !e || M.get(e[n], "globalEval"));
           }
           function gt(t, e) {
             var n, i, o, s, r, a, l, u;
             if (1 === e.nodeType) {
               if (
-                H.hasData(t) &&
-                ((s = H.access(t)), (r = H.set(e, s)), (u = s.events))
+                M.hasData(t) &&
+                ((s = M.access(t)), (r = M.set(e, s)), (u = s.events))
               )
                 for (o in (delete r.handle, (r.events = {}), u))
                   for (n = 0, i = u[o].length; n < i; n++)
@@ -13522,15 +13522,15 @@
                 ) {
                   if (
                     g.acceptData(n) &&
-                    (o = n[H.expando]) &&
-                    (e = H.cache[o])
+                    (o = n[M.expando]) &&
+                    (e = M.cache[o])
                   ) {
                     if (e.events)
                       for (i in e.events)
                         s[i]
                           ? g.event.remove(n, i)
                           : g.removeEvent(n, i, e.handle);
-                    H.cache[o] && delete H.cache[o];
+                    M.cache[o] && delete M.cache[o];
                   }
                   delete q.cache[n[q.expando]];
                 }
@@ -13704,7 +13704,7 @@
                     )
                       (r = o[u]),
                         lt.test(r.type || "") &&
-                          !H.access(r, "globalEval") &&
+                          !M.access(r, "globalEval") &&
                           g.contains(l, r) &&
                           (r.src
                             ? g._evalUrl && g._evalUrl(r.src)
@@ -13918,27 +13918,27 @@
             }
             return o + Dt(t, e, n || (r ? "border" : "content"), i, s) + "px";
           }
-          function Mt(t, e) {
+          function Ht(t, e) {
             for (var n, i, o, s = [], r = 0, a = t.length; r < a; r++)
               (i = t[r]).style &&
-                ((s[r] = H.get(i, "olddisplay")),
+                ((s[r] = M.get(i, "olddisplay")),
                 (n = i.style.display),
                 e
                   ? (s[r] || "none" !== n || (i.style.display = ""),
                     "" === i.style.display &&
                       Y(i) &&
-                      (s[r] = H.access(i, "olddisplay", kt(i.nodeName))))
+                      (s[r] = M.access(i, "olddisplay", kt(i.nodeName))))
                   : ((o = Y(i)),
                     ("none" === n && o) ||
-                      H.set(i, "olddisplay", o ? n : g.css(i, "display"))));
+                      M.set(i, "olddisplay", o ? n : g.css(i, "display"))));
             for (r = 0; r < a; r++)
               (i = t[r]).style &&
                 ((e && "none" !== i.style.display && "" !== i.style.display) ||
                   (i.style.display = e ? s[r] || "" : "none"));
             return t;
           }
-          function Ht(t, e, n, i, o) {
-            return new Ht.prototype.init(t, e, n, i, o);
+          function Mt(t, e, n, i, o) {
+            return new Mt.prototype.init(t, e, n, i, o);
           }
           g.extend({
             cssHooks: {
@@ -14094,10 +14094,10 @@
                 );
               },
               show: function () {
-                return Mt(this, !0);
+                return Ht(this, !0);
               },
               hide: function () {
-                return Mt(this);
+                return Ht(this);
               },
               toggle: function (t) {
                 return "boolean" == typeof t
@@ -14109,9 +14109,9 @@
                     });
               },
             }),
-            (g.Tween = Ht),
-            (Ht.prototype = {
-              constructor: Ht,
+            (g.Tween = Mt),
+            (Mt.prototype = {
+              constructor: Mt,
               init: function (t, e, n, i, o, s) {
                 (this.elem = t),
                   (this.prop = n),
@@ -14122,14 +14122,14 @@
                   (this.unit = s || (g.cssNumber[n] ? "" : "px"));
               },
               cur: function () {
-                var t = Ht.propHooks[this.prop];
+                var t = Mt.propHooks[this.prop];
                 return t && t.get
                   ? t.get(this)
-                  : Ht.propHooks._default.get(this);
+                  : Mt.propHooks._default.get(this);
               },
               run: function (t) {
                 var e,
-                  n = Ht.propHooks[this.prop];
+                  n = Mt.propHooks[this.prop];
                 return (
                   this.options.duration
                     ? (this.pos = e =
@@ -14144,13 +14144,13 @@
                   (this.now = (this.end - this.start) * e + this.start),
                   this.options.step &&
                     this.options.step.call(this.elem, this.now, this),
-                  n && n.set ? n.set(this) : Ht.propHooks._default.set(this),
+                  n && n.set ? n.set(this) : Mt.propHooks._default.set(this),
                   this
                 );
               },
             }),
-            (Ht.prototype.init.prototype = Ht.prototype),
-            (Ht.propHooks = {
+            (Mt.prototype.init.prototype = Mt.prototype),
+            (Mt.propHooks = {
               _default: {
                 get: function (t) {
                   var e;
@@ -14172,7 +14172,7 @@
                 },
               },
             }),
-            (Ht.propHooks.scrollTop = Ht.propHooks.scrollLeft =
+            (Mt.propHooks.scrollTop = Mt.propHooks.scrollLeft =
               {
                 set: function (t) {
                   t.elem.nodeType &&
@@ -14188,7 +14188,7 @@
                 return 0.5 - Math.cos(t * Math.PI) / 2;
               },
             }),
-            (g.fx = Ht.prototype.init),
+            (g.fx = Mt.prototype.init),
             (g.fx.step = {});
           var qt,
             Nt,
@@ -14208,7 +14208,7 @@
                   f = {},
                   d = t.style,
                   h = t.nodeType && Y(t),
-                  p = H.get(t, "fxshow");
+                  p = M.get(t, "fxshow");
                 for (i in (n.queue ||
                   (null == (a = g._queueHooks(t, "fx")).unqueued &&
                     ((a.unqueued = 0),
@@ -14227,7 +14227,7 @@
                   ((n.overflow = [d.overflow, d.overflowX, d.overflowY]),
                   "inline" ===
                     ("none" === (u = g.css(t, "display"))
-                      ? H.get(t, "olddisplay") || kt(t.nodeName)
+                      ? M.get(t, "olddisplay") || kt(t.nodeName)
                       : u) &&
                     "none" === g.css(t, "float") &&
                     (d.display = "inline-block")),
@@ -14256,7 +14256,7 @@
                 else
                   for (i in (p
                     ? "hidden" in p && (h = p.hidden)
-                    : (p = H.access(t, "fxshow", {})),
+                    : (p = M.access(t, "fxshow", {})),
                   s && (p.hidden = !h),
                   h
                     ? g(t).show()
@@ -14265,7 +14265,7 @@
                       }),
                   c.done(function () {
                     var e;
-                    for (e in (H.remove(t, "fxshow"), f)) g.style(t, e, f[e]);
+                    for (e in (M.remove(t, "fxshow"), f)) g.style(t, e, f[e]);
                   }),
                   f))
                     (r = Kt(h ? p[i] : 0, i, c)),
@@ -14464,7 +14464,7 @@
                   s = g.speed(e, n, i),
                   r = function () {
                     var e = Ut(this, g.extend({}, t), s);
-                    (o || H.get(this, "finish")) && e.stop(!0);
+                    (o || M.get(this, "finish")) && e.stop(!0);
                   };
                 return (
                   (r.finish = r),
@@ -14483,7 +14483,7 @@
                     var e = !0,
                       o = null != t && t + "queueHooks",
                       s = g.timers,
-                      r = H.get(this);
+                      r = M.get(this);
                     if (o) r[o] && r[o].stop && i(r[o]);
                     else
                       for (o in r) r[o] && r[o].stop && Bt.test(o) && i(r[o]);
@@ -14500,7 +14500,7 @@
                   !1 !== t && (t = t || "fx"),
                   this.each(function () {
                     var e,
-                      n = H.get(this),
+                      n = M.get(this),
                       i = n[t + "queue"],
                       o = n[t + "queueHooks"],
                       s = g.timers,
@@ -14822,11 +14822,11 @@
                     else
                       (n !== U && "boolean" !== n) ||
                         (this.className &&
-                          H.set(this, "__className__", this.className),
+                          M.set(this, "__className__", this.className),
                         (this.className =
                           this.className || !1 === t
                             ? ""
-                            : H.get(this, "__className__") || ""));
+                            : M.get(this, "__className__") || ""));
                   });
             },
             hasClass: function (t) {
@@ -15901,159 +15901,62 @@
                 })
           : o(i);
     },
-    302: (t, e, n) => {
-      var i, o, s;
-      (o = [n(563)]),
-        void 0 ===
-          (s =
-            "function" ==
-            typeof (i = function (t) {
-              var e = /\+/g;
-              function n(t) {
-                return l.raw ? t : encodeURIComponent(t);
-              }
-              function i(t) {
-                return l.raw ? t : decodeURIComponent(t);
-              }
-              function o(t) {
-                return n(l.json ? JSON.stringify(t) : String(t));
-              }
-              function s(t, n) {
-                var i = l.raw
-                  ? t
-                  : (function (t) {
-                      0 === t.indexOf('"') &&
-                        (t = t
-                          .slice(1, -1)
-                          .replace(/\\"/g, '"')
-                          .replace(/\\\\/g, "\\"));
-                      try {
-                        return (
-                          (t = decodeURIComponent(t.replace(e, " "))),
-                          l.json ? JSON.parse(t) : t
-                        );
-                      } catch (t) {}
-                    })(t);
-                return a(n) ? n(i) : i;
-              }
-              function r() {
-                for (var t, e, n = 0, i = {}; n < arguments.length; n++)
-                  for (t in (e = arguments[n])) i[t] = e[t];
-                return i;
-              }
-              function a(t) {
-                return (
-                  "[object Function]" === Object.prototype.toString.call(t)
-                );
-              }
-              var l = function (t, e, u) {
-                if (arguments.length > 1 && !a(e)) {
-                  if ("number" == typeof (u = r(l.defaults, u)).expires) {
-                    var c = u.expires,
-                      f = (u.expires = new Date());
-                    f.setMilliseconds(f.getMilliseconds() + 864e5 * c);
-                  }
-                  return (document.cookie = [
-                    n(t),
-                    "=",
-                    o(e),
-                    u.expires ? "; expires=" + u.expires.toUTCString() : "",
-                    u.path ? "; path=" + u.path : "",
-                    u.domain ? "; domain=" + u.domain : "",
-                    u.secure ? "; secure" : "",
-                  ].join(""));
-                }
-                for (
-                  var d = t ? void 0 : {},
-                    h = document.cookie ? document.cookie.split("; ") : [],
-                    p = 0,
-                    m = h.length;
-                  p < m;
-                  p++
-                ) {
-                  var g = h[p].split("="),
-                    v = i(g.shift()),
-                    y = g.join("=");
-                  if (t === v) {
-                    d = s(y, e);
-                    break;
-                  }
-                  t || void 0 === (y = s(y)) || (d[v] = y);
-                }
-                return d;
-              };
-              return (
-                (l.get = l.set = l),
-                (l.defaults = {}),
-                (l.remove = function (t, e) {
-                  return l(t, "", r(e, { expires: -1 })), !l(t);
-                }),
-                t && ((t.cookie = l), (t.removeCookie = l.remove)),
-                l
-              );
-            })
-              ? i.apply(e, o)
-              : i) || (t.exports = s);
-    },
     126: (t, e, n) => {
-      "use strict";
-      var i = n(302),
-        o = n.n(i),
-        s = n(563);
+      var i = n(563);
       n(113),
         n(277),
-        s(document).ready(function () {
-          var t, e, n, i, r;
-          s(document).foundation(),
-            (t = s("table.docutils")).wrap("<div class='table-wrapper'></div>"),
+        i(document).ready(function () {
+          var t, e, n, o, s;
+          i(document).foundation(),
+            (t = i("table.docutils")).wrap("<div class='table-wrapper'></div>"),
             t.each(function () {
-              s(this).find("thead tr").length > 1 &&
-                (console.log("in"), s(this).addClass("thead-border"));
+              i(this).find("thead tr").length > 1 &&
+                (console.log("in"), i(this).addClass("thead-border"));
             }),
-            (n = (e = s(".promo-banner")).outerHeight()),
-            o().get("scylladocs-hide-banner")
+            (n = (e = i(".promo-banner")).outerHeight()),
+            localStorage.getItem("scylladocs-hide-banner")
               ? e.hide()
               : (e.show(),
-                s("body").css("margin-top", n),
-                s(".side-nav").css("margin-top", n),
-                s(".secondary-side-nav").css("margin-top", n),
-                s(".layout").addClass("layout--has-banner")),
-            s(".promo-banner__close").on("click", function () {
-              o().set("scylladocs-hide-banner", "1"),
-                s("body").css("margin-top", 0),
-                s(".side-nav").css("margin-top", 0),
-                s(".secondary-side-nav").css("margin-top", 0),
-                s(".promo-banner").hide(),
-                s(".layout").removeClass("layout--has-banner");
+                i("body").css("margin-top", n),
+                i(".side-nav").css("margin-top", n),
+                i(".secondary-side-nav").css("margin-top", n),
+                i(".layout").addClass("layout--has-banner")),
+            i(".promo-banner__close").on("click", function () {
+              localStorage.setItem("scylladocs-hide-banner", "1"),
+                i("body").css("margin-top", 0),
+                i(".side-nav").css("margin-top", 0),
+                i(".secondary-side-nav").css("margin-top", 0),
+                i(".promo-banner").hide(),
+                i(".layout").removeClass("layout--has-banner");
             }),
-            s(window).resize(function () {
-              var t = s(".promo-banner"),
+            i(window).resize(function () {
+              var t = i(".promo-banner"),
                 e = t.outerHeight();
               t.is(":visible") &&
-                (s("body").css("margin-top", e),
-                s(".side-nav").css("margin-top", e),
-                s(".secondary-side-nav").css("margin-top", e));
+                (i("body").css("margin-top", e),
+                i(".side-nav").css("margin-top", e),
+                i(".secondary-side-nav").css("margin-top", e));
             }),
-            (i = s(".content").find("h2").parent()),
-            s(window).scroll(function () {
-              var t = s(this).scrollTop();
-              i.each(function () {
-                if (s(this).offset().top - 80 - 20 < t) {
-                  var e = s(this).attr("id");
-                  s(".secondary-side-nav a").removeClass("current"),
-                    s('.secondary-side-nav a[href="#' + e + '"]').addClass(
+            (o = i(".content").find("h2").parent()),
+            i(window).scroll(function () {
+              var t = i(this).scrollTop();
+              o.each(function () {
+                if (i(this).offset().top - 80 - 20 < t) {
+                  var e = i(this).attr("id");
+                  i(".secondary-side-nav a").removeClass("current"),
+                    i('.secondary-side-nav a[href="#' + e + '"]').addClass(
                       "current"
                     );
                 }
               });
             }),
-            (r = new RegExp("^(?:[a-z]+:)?//", "i")),
-            s("a.reference").each(function () {
-              s(this).removeClass("internal external"),
-                r.test(s(this).attr("href"))
-                  ? (s(this).addClass("external"),
-                    s(this).attr("target", "_blank"))
-                  : s(this).addClass("internal");
+            (s = new RegExp("^(?:[a-z]+:)?//", "i")),
+            i("a.reference").each(function () {
+              i(this).removeClass("internal external"),
+                s.test(i(this).attr("href"))
+                  ? (i(this).addClass("external"),
+                    i(this).attr("target", "_blank"))
+                  : i(this).addClass("internal");
             });
         });
     },

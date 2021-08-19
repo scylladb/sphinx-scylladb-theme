@@ -1,6 +1,5 @@
 require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
-import Cookies from "js-cookie";
 
 const openExternalLinksNewBrowserTab = () => {
   const isExternal = new RegExp("^(?:[a-z]+:)?//", "i");
@@ -50,7 +49,7 @@ const onScrollHighlightSecondarySidebar = () => {
 const hideBanner = () => {
   const promoBanner = $(".promo-banner");
   const promoBannerHeight = promoBanner.outerHeight();
-  if (!Cookies.get("scylladocs-hide-banner")) {
+  if (!localStorage.getItem("scylladocs-hide-banner")) {
     promoBanner.show();
     $("body").css("margin-top", promoBannerHeight);
     $(".side-nav").css("margin-top", promoBannerHeight);
@@ -63,7 +62,7 @@ const hideBanner = () => {
 
 const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
-    Cookies.set("scylladocs-hide-banner", "1");
+    localStorage.setItem("scylladocs-hide-banner", "1");
     $("body").css("margin-top", 0);
     $(".side-nav").css("margin-top", 0);
     $(".secondary-side-nav").css("margin-top", 0);
