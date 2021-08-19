@@ -8017,6 +8017,7 @@ blockquote {
   content: "";
   filter: invert(40%) sepia(11%) saturate(2157%) hue-rotate(198deg)
     brightness(89%) contrast(87%) !important;
+  flex-shrink: 0;
   opacity: 0.5;
   min-height: 10px;
   width: 6px;
