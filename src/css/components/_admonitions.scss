@@ -45,9 +45,9 @@
     }
 
     .admonition-title:before {
-      @extend .scylla-icon--tip;
-      filter: invert(56%) sepia(13%) saturate(1979%) hue-rotate(73deg)
-        brightness(92%) contrast(87%);
+      @extend .scylla-icon--exclamation;
+      filter: invert(47%) sepia(11%) saturate(2286%) hue-rotate(73deg)
+        brightness(109%) contrast(88%);
     }
   }
 
@@ -89,7 +89,7 @@
     }
 
     .admonition-title:before {
-      @extend .scylla-icon--exclamation;
+      @extend .scylla-icon--warning;
       filter: invert(41%) sepia(42%) saturate(6427%) hue-rotate(343deg)
         brightness(99%) contrast(83%);
     }
