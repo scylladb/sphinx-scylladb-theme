@@ -68,7 +68,6 @@ def override_rst_epilog(config):
 .. |x| replace:: :raw-html:`<i class="inline-icon fa fa-times" aria-hidden="true"></i>`
 """
 
-    print(config.rst_epilog)
     epilog = config.rst_epilog or ""
     config.rst_epilog = substitutions + epilog
     return config.rst_epilog

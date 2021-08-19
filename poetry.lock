@@ -503,7 +503,7 @@ sphinx = ">=2.1"
 
 [[package]]
 name = "sphinx-notfound-page"
-version = "0.5"
+version = "0.6"
 description = "Sphinx extension to build a 404 page with absolute URLs"
 category = "main"
 optional = false
@@ -688,7 +688,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "759a70eb1db7e2567fcac272f510a56004f8f050028cbfe338a7b0eadc9cb2a9"
+content-hash = "fb04ce0dcfdeaadfd91374302aaa992245eccd4998a377cfae75e843c03d3443"
 
 [metadata.files]
 alabaster = [
@@ -928,8 +928,8 @@ sphinx-multiversion-scylla = [
     {file = "sphinx-multiversion-scylla-0.2.10.tar.gz", hash = "sha256:b54d664ecedcf45b98d6be1e939eac596719daa514e4a35f58d8e6330fb05d22"},
 ]
 sphinx-notfound-page = [
-    {file = "sphinx-notfound-page-0.5.tar.gz", hash = "sha256:0ff34a26140ede859dc9bcc216107a5e27dcd0076a1b1defaa31f61fb67b489c"},
-    {file = "sphinx_notfound_page-0.5-py3-none-any.whl", hash = "sha256:557ad998d7a2897a5da7ba9ed0762a8f535c4250c49325db7b105e69c386f690"},
+    {file = "sphinx-notfound-page-0.6.tar.gz", hash = "sha256:5686892db509020d235069dd8a6c7e8bf6fcff43695046b945fe82925cb6c40c"},
+    {file = "sphinx_notfound_page-0.6-py3-none-any.whl", hash = "sha256:3e8893d47638cc7ac06d4f6d10e97a18508658e36e530e7d24a429e6556c6894"},
 ]
 sphinx-tabs = [
     {file = "sphinx-tabs-3.2.0.tar.gz", hash = "sha256:33137914ed9b276e6a686d7a337310ee77b1dae316fdcbce60476913a152e0a4"},
