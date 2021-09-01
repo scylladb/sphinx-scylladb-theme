@@ -1,6 +1,6 @@
 # You can set these variables from the command line.
 POETRY        = $(HOME)/.poetry/bin/poetry
-SPHINXOPTS    =
+SPHINXOPTS    = -j auto
 SPHINXBUILD   = $(POETRY) run sphinx-build
 PAPER         =
 BUILDDIR      = _build
@@ -9,7 +9,7 @@ SOURCEDIR     = source
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR) -j auto
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
 TESTSPHINXOPTS  = $(ALLSPHINXOPTS) -W --keep-going
 
 # the i18n builder cannot share the environment and doctrees with the others
