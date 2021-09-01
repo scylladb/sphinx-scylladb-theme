@@ -16,19 +16,17 @@ from sphinx_scylladb_theme.extensions import (
 from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
 
 
-def compute_toc_tree(context):
-    if "toctree" in context:
-        toctree = context["toctree"]
+def compute_toc_tree(toctree, maxdepth, collapse):
+    if toctree:
         toctree_html = toctree(
-            collapse=False,
+            collapse=collapse,
             titles_only=True,
-            maxdepth=-1,
+            maxdepth=maxdepth,
             includehidden=True,
         )
     else:
         toctree_html = ""
-
-    toctree_html = navigation.get_navigation_tree(toctree_html)
+    toctree_html = navigation.get_navigation_tree(toctree_html, collapse)
     return toctree_html
 
 
@@ -41,7 +39,7 @@ def compute_hide_toc(context):
 
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
-    context["navigation_tree"] = compute_toc_tree(context)
+    context["navigation_tree"] = compute_toc_tree
     context["hide_toc"] = compute_hide_toc(context)
 
     if (

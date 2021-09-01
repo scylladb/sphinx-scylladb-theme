@@ -7,5 +7,8 @@
   <div class="side-nav__versions">
     {% if versions %} {% include 'versions.html' %} {% endif %}
   </div>
-  <div class="side-nav__content">{{ navigation_tree }}</div>
+  <div class="side-nav__content">
+    {{ navigation_tree(toctree, maxdepth=theme_navigation_depth|int,
+    collapse=theme_collapse_navigation|tobool)}}
+  </div>
 </div>

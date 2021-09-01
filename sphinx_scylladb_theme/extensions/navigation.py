@@ -20,7 +20,7 @@ def _get_navigation_expand_image(soup: BeautifulSoup) -> Tag:
 
 
 @functools.lru_cache(maxsize=None)
-def get_navigation_tree(toctree_html: str) -> str:
+def get_navigation_tree(toctree_html: str, collapse: bool) -> str:
     """Modify the given navigation tree, with furo-specific elements.
     Adds a checkbox + corresponding label to <li>s that contain a <ul> tag, to enable
     the I-spent-too-much-time-making-this-CSS-only collapsing sidebar tree.
@@ -38,8 +38,8 @@ def get_navigation_tree(toctree_html: str) -> str:
         if "current" in classes:
             last_element_with_current = element
 
-        # Nothing more to do, unless this has "children"
-        if not element.find("ul"):
+        # Nothing more to do, unless this has "children" or sidebar is collapsed
+        if not element.find("ul") or collapse:
             continue
 
         # Add a class to indicate that this has children.

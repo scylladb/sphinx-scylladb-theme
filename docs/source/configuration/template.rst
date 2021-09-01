@@ -148,6 +148,14 @@ Configuration options for the left sidebar.
     -  string
     -  true
     -  Set to ``true`` to hide the sidebars on the index page.
+  * - ``collapse_navigation``
+    - string
+    - false
+    - Set to `true` to remove the ">" icon next to each sidebar entry.
+  * - ``navigation_depth``
+    - number
+    - -1
+    - The maximum depth of the sidebar nested entries. Set to `-1` to allow unlimited depth.
 
 Example:
 
@@ -155,6 +163,8 @@ Example:
 
   html_theme_options = {
       'hide_sidebar_index': 'true',
+      'collapse_navigation': 'false',
+      'navigation_depth': '-1'
   }
 
 SEO options
