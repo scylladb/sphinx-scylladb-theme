@@ -71,6 +71,10 @@
       padding: 0;
       padding-bottom: 18px;
 
+      &.has-children.current-page {
+        padding-bottom: 0;
+      }
+
       > a {
         flex: 1;
       }
