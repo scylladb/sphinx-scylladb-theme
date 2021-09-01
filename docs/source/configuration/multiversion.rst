@@ -64,7 +64,7 @@ Disabling multiversion support
         smv_tag_whitelist = None
         smv_branch_whitelist = None
 
-or:
+    or:
 
     .. code:: python
 

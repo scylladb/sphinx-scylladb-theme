@@ -41,6 +41,7 @@
 
   .card {
     @include floating;
+    border: 1px solid transparent;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -51,6 +52,7 @@
 
     &:hover {
       color: $color-typography-base;
+      border: 1px solid $color-border-topic-box-hover;
       font-weight: 400;
     }
   }
@@ -68,7 +70,7 @@
       bottom: 0;
       top: 0;
       bottom: 0px;
-      opacity: 0.1;
+      opacity: 0.2;
     }
   }
 
@@ -115,7 +117,7 @@
       bottom: -12px;
       height: 140px;
       margin: 0;
-      opacity: 0.1;
+      opacity: 0.2;
       position: absolute;
       right: -5px;
     }

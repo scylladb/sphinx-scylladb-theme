@@ -95,6 +95,15 @@ blockquote {
   margin: 0;
 }
 
+cite {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  &:before {
+    content: "";
+  }
+}
+
 .show {
   display: block !important;
 }

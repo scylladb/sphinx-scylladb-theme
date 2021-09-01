@@ -49,7 +49,7 @@ const onScrollHighlightSecondarySidebar = () => {
 const hideBanner = () => {
   const promoBanner = $(".promo-banner");
   const promoBannerHeight = promoBanner.outerHeight();
-  if (!localStorage.getItem("scylladocs-hide-banner")) {
+  if (!promoBanner || !localStorage.getItem("scylladocs-hide-banner")) {
     promoBanner.show();
     $("body").css("margin-top", promoBannerHeight);
     $(".side-nav").css("margin-top", promoBannerHeight);
