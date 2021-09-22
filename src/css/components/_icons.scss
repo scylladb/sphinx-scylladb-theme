@@ -113,6 +113,11 @@
     background-image: url("../img/icons/icon-knowledge-base.svg");
   }
 
+  &--less {
+    background-image: url("../img/icons/icon-less.svg");
+    filter: none;
+  }
+
   &--live-test {
     background-image: url("../img/icons/icon-live-test.svg");
   }
@@ -167,6 +172,11 @@
 
   &--partners {
     background-image: url("../img/icons/icon-partners.svg");
+  }
+
+  &--plus {
+    background-image: url("../img/icons/icon-plus.svg");
+    filter: none;
   }
 
   &--pricing {

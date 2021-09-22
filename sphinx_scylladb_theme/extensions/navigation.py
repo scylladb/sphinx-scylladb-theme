@@ -13,9 +13,7 @@ from bs4 import BeautifulSoup, Tag
 
 @functools.lru_cache(maxsize=None)
 def _get_navigation_expand_image(soup: BeautifulSoup) -> Tag:
-    retval = soup.new_tag(
-        "i", attrs={"class": "scylla-icon scylla-icon--chevron-right"}
-    )
+    retval = soup.new_tag("i", attrs={"class": "scylla-icon scylla-icon--expand"})
     return retval
 
 
