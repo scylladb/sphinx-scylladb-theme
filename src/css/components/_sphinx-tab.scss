@@ -1,0 +1,25 @@
+/* Todo: Remove important */
+.sphinx-tabs {
+  margin-bottom: $gap;
+}
+
+.sphinx-tabs-tab {
+  border-bottom: 1px solid $color-border-tabs;
+  color: $color-typography-tabs-title;
+  cursor: pointer;
+  font-size: $font-small;
+  font-weight: 500;
+  line-height: 13px;
+
+  padding: 20px 25px;
+
+  &[aria-selected="true"] {
+    color: $color-typography-tabs-title-active;
+    border-bottom: 2px solid $color-border-tabs-active;
+    padding-bottom: 19px;
+  }
+}
+
+.sphinx-tabs-panel {
+  margin: $gap 0;
+}

@@ -17,4 +17,3 @@ Results in:
 Checkmark: |v|
 
 Cross: |x|
-

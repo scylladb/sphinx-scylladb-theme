@@ -1,0 +1,31 @@
+repos:
+  - repo: local
+    hooks:
+      - id: build-assets
+        name: build-assets
+        entry: npm run
+        args: ["build"]
+        language: system
+        pass_filenames: false
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.0
+    hooks:
+      - id: prettier
+
+  - repo: https://github.com/psf/black
+    rev: 21.5b1
+    hooks:
+      - id: black
+
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: end-of-file-fixer
+        exclude: "sphinx_scylladb_theme/static"
+      - id: forbid-new-submodules
+      - id: trailing-whitespace

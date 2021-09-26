@@ -1,0 +1,29 @@
+.button {
+  background: transparent;
+  border: 1px solid $color-border-button;
+  border-radius: 4px;
+  color: $color-typography-button;
+  display: inline;
+  font-size: $font-small;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding: 12px 14px;
+  margin: 0;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: $color-typography-button;
+    text-decoration: none;
+  }
+
+  &--reverse {
+    border: 0;
+    background: $color-white;
+
+    &:hover,
+    &:focus {
+      background: $color-white;
+    }
+  }
+}

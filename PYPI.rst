@@ -1,7 +1,7 @@
-==========================
-Scylla Documentation Theme
-==========================
+===================
+Scylla Sphinx Theme
+===================
 
-Sphinx theme for ScyllaDB documentation projects.
+Sphinx theme for Scylla documentation projects.
 
 `Read More: <https://github.com/scylladb/sphinx-scylladb-theme>`_

@@ -1,269 +1,219 @@
-{#
-    layout.html
-    ~~~~~~~~~~~~~~~~~
+{# layout.html #}
 
-    Layout template for scylla docs.
-#}
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
+  {%- macro script() %}
 
+  <script
+    type="text/javascript"
+    id="documentation_options"
+    data-url_root="{{ pathto('', 1) }}"
+    src="{{ pathto('_static/documentation_options.js', 1) }}"
+  ></script>
+  <script
+    type="text/javascript"
+    src="{{ pathto('_static/js/runtime.bundle.js', 1) }}"
+  ></script>
+  <script
+    type="text/javascript"
+    src="{{ pathto('_static/js/main.bundle.js', 1) }}"
+  ></script>
+  {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %} {%- endmacro %}
+  {%- macro css() %}
+  <!-- connect to domain of font files -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-{%- macro script() %}
-    <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
-    {%- for js in script_files %}
-    {{ js_tag(js) }}
-    {%- endfor %}
-{%- endmacro %}
+  <!-- optionally increase loading priority -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+  />
 
-{%- macro css() %}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    {%- for css in css_files %}
-      {%- if css|attr("filename") %}
-    {{ css_tag(css) }}
-      {%- else %}
-    <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
-      {%- endif %}
-    {%- endfor %}
-{%- endmacro %}
-  
-<head><!-- begin head.html -->
-    <meta charset="utf-8">
+  <!-- async CSS -->
+  <link
+    rel="stylesheet"
+    media="print"
+    onload="this.onload=null;this.removeAttribute('media');"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+  />
+
+  <!-- no-JS fallback -->
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    />
+  </noscript>
+  <link
+    rel="stylesheet"
+    href="{{ pathto('_static/css/main.css', 1) }}"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ pathto('_static/pygments.css', 1) }}"
+    type="text/css"
+  />
+  {%- for css in css_files %} {%- if css|attr("filename") %} {{ css_tag(css) }}
+  {%- else %}
+
+  <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+  {%- endif %} {%- endfor %} {%- endmacro %}
+
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-    {%- block title %}
-    {{ title|striptags|e }} | Scylla Docs
-    {%- endblock %}
+      {%- block title %} {{ title|striptags|e }} | Scylla Docs {%- endblock %}
     </title>
-    <meta name="description" content="{{ theme_site_description }}"/>
+    <meta name="description" content="{{ theme_site_description }}" />
+    <link
+      rel="icon"
+      href="{{ pathto('_static/img/favicon.ico', 1) }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{{ pathto('_static/img/favicon-32x32.png', 1) }}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{{ pathto('_static/img/favicon-228x228.png', 1) }}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{{ pathto('_static/img/favicon-228x228.png', 1) }}"
+    />
+    <meta
+      name="msapplication-TileImage"
+      href="{{ pathto('_static/img/favicon-228x228.png', 1) }}"
+    />
+    <link rel="canonical" href="https://docs.scylladb.com/" />
+    <link rel="author" href="mailto:info@scylladb.com" />
 
-    <link rel="icon" href="{{ pathto('_static/img/favicon.ico', 1) }}" type="image/x-icon"/>
-    <link rel="canonical" href="https://docs.scylladb.com/">
-    <link rel="author" href="mailto:info@scylladb.com">
+    {%- block css %} {{- css() }} {%- endblock %} {%- block scripts %} {{-
+    script() }}
 
-    {%- block css %}
-    {{- css() }}
-    {%- endblock %}
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/css/doc/main.css', 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css"/>
-    
-    {%- block scripts %}
-    {{- script() }}
-    {%- endblock %}
-
-    <script src="{{ pathto('_static/js/vendor/modernizr.js', 1) }}"></script>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T8P2JP');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T8P2JP");
+    </script>
     <!-- End Google Tag Manager -->
-
     <!-- Marketo -->
-    <script type="text/javascript"> (function() { var didInit = false; function initMunchkin() { if(didInit === false) { didInit = true; Munchkin.init('791-QBF-350'); } } var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//munchkin.marketo.net/munchkin.js'; s.onreadystatechange = function() { if (this.readyState == 'complete' || this.readyState == 'loaded') { initMunchkin(); } }; s.onload = initMunchkin; document.getElementsByTagName('head')[0].appendChild(s); })(); </script>
+    <script type="text/javascript">
+      (function () {
+        var didInit = false;
+        function initMunchkin() {
+          if (didInit === false) {
+            didInit = true;
+            Munchkin.init("791-QBF-350");
+          }
+        }
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "//munchkin.marketo.net/munchkin.js";
+        s.onreadystatechange = function () {
+          if (this.readyState == "complete" || this.readyState == "loaded") {
+            initMunchkin();
+          }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
     <!-- End Marketo -->
+    <!-- Expertrec -->
+    <script>
+      var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
+      var ci_search = document.createElement("script");
+      ci_search.type = "text/javascript";
+      ci_search.async = true;
+      ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ci_search, s);
+    </script>
+    <!-- End Expertrec -->
+    {%- endblock %}
 
-<!-- end head.html -->
-</head>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b1870adf6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End Font Awesome -->
+  </head>
+  {% set hide_sidebar = pagename == master_doc and
+  theme_hide_sidebar_index|lower == 'true' %}
+  <body>
+    {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
+    include 'promo-banner.html' %} {% endif %} {% include 'header.html'%}
+    <section class="layout {{'layout--full-width' if hide_sidebar}}">
+      <div class="content large-order-2">
+        {% if pagename != master_doc %} {% if versions and current_version and
+        latest_version and current_version != latest_version %}
 
-<body>
-
-{% if not theme_hide_banner or theme_hide_banner|lower == 'false' %}
-    {% include 'banner.html' %}
-{% endif %}
-
-<header id="header" class="animated">
-    <div class="topbar_continer contain-to-grid clearfix">
-        <nav class="top-bar" id="top-bar" data-topbar role="navigation">
-            <ul class="title-area">
-                <li class="name">
-                    <div class="logo">
-                        <a href="https://docs.scylladb.com/"><img src="{{ pathto('_static/img/logo-scylla-docs.svg', 1) }}" alt="" width="151"></a>
-                    </div>
-                </li>
-                <li class="toggle-topbar"><a href="#"><span class="icon-manu"></span></a></li>
-            </ul>
-            <section class="top-bar-section clearfix">
-                <ul class="right">
-                    {% for link in theme_header_links %}
-                    <li>
-                        <a href="{{link[1]}}">{{link[0]}}</a>
-                    </li>
-                    {% endfor %}
-                    <li class="search_continer show-for-medium-up">	
-                        <ci-search></ci-search>	
-                    </li>	
-                </ul>
-            </section>
-        </nav>
-    </div>
-</header>
-<section id="content">
-    {%- if pagename == master_doc and (not theme_show_sidebar_index or theme_show_sidebar_index|lower == 'false') %}
-    <div class="content-full">
-        {{ body }}
-    </div>
-    {%- else %}
-    <div class="row">
-	
-	<div class="large-6 large-push-3 columns">
-
-        {% if versions and current_version and latest_version and current_version != latest_version %}
         <div class="admonition caution">
-            <p class="admonition-title">Caution</p>
-            {% if current_version.name == theme_default_branch %}
-            You are reading an unstable version of this documentation.
-            {% else %}
-            You are not reading the most current version of the documentation.
-            {% endif %}
-            If you want up-to-date information, please have a look at 
+          <p class="admonition-title">Caution</p>
+          <p>
+            {% if current_version.name == theme_default_branch %} You are
+            reading an unstable version of this documentation. {% else %} You
+            are not reading the most current version of the documentation. {%
+            endif %} If you want up-to-date information, please have a look at
+
             <a href="{{ vpathto(latest_version.name) }}">
-                {% if latest_version in versions.branches %}
-                    {{ latest_version.name | replace(theme_branch_substring_removed, '') }}
-                {% else %}
-                    {{ latest_version.name | replace(theme_tag_substring_removed, '') }}
-                {% endif %}        
-            </a>.
+              {% if latest_version in versions.branches %} {{
+              latest_version.name | replace(theme_branch_substring_removed, '')
+              }} {% else %} {{ latest_version.name |
+              replace(theme_tag_substring_removed, '') }} {% endif %} </a
+            >.
+          </p>
         </div>
         {% endif %}
 
-        {{ body }}
+        <div class="pre-content">
+          <div class="pre-content__left">{% include 'breadcrumbs.html'%}</div>
+          <div class="pre-content__right">{% include 'contribute.html' %}</div>
         </div>
+        {% endif %} {{ body }} {% if not pagename == master_doc %} {% include
+        'content-navigation.html'%} {% endif %}
+      </div>
+      <div
+        class="sidebar-left {{'hide-for-large' if hide_sidebar}} large-order-1"
+      >
+        {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%
+        include sidebartemplate %} {%- endfor %} {%- endif %}
+      </div>
+      {% if not hide_sidebar %}
+      <div class="sidebar-right large-order-3">
+        {% if not hide_toc %} {% include 'secondary-side-nav.html' %} {% endif
+        %}
+      </div>
+      {%- endif %}
+    </section>
 
-        <div id="sidebar" class="large-3 large-pull-6 columns">
-            {%- if sidebars != None %}
-            {%- for sidebartemplate in sidebars %}
-            {%- include sidebartemplate %}
-            {%- endfor %}
-            {%- endif %}
-        </div>
+    {% include 'footer.html' %}
 
-        <div class="large-3 columns">
-            {% if versions %}
-                {% include 'versioning.html' %}
-            {% endif %}
-        </div>
-
-    </div>
-    {%- endif %}
-</section>
-
-<!-- newsleter modal -->
-
-<div id="newsletter_signup" class="reveal-modal tiny radius dark_modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-    <a class="close-reveal-modal" aria-label="Close">×</a>
-    <h2 id="modalTitle">Sign up for the Scylla newsletter</h2>
-    <div id="mc_embed_signup">
-        <form action="//cloudius-systems.us10.list-manage.com/subscribe/post?u=df8bb543c68230d5f7b4dcf78&amp;id=9a4589f144" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-            <div id="mc_embed_signup_scroll">
-
-                <div class="mc-field-group">
-                    <div class="row collapse">
-                        <div class="small-3 columns"><label for="mce-EMAIL">Email</label></div>
-                        <div class="small-9 columns"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"></div>
-                    </div>
-                </div>
-                <div class="mc-field-group">
-                    <div class="row collapse">
-                        <div class="small-3 columns"><label for="mce-FNAME">First Name </label></div>
-                        <div class="small-9 columns"><input type="text" value="" name="FNAME" class="" id="mce-FNAME"></div>
-                    </div>
-                </div>
-                <div class="mc-field-group">
-                    <div class="row collapse">
-                        <div class="small-3 columns"><label for="mce-LNAME">Last Name </label></div>
-                        <div class="small-9 columns"><input type="text" value="" name="LNAME" class="" id="mce-LNAME"></div>
-                    </div>
-                </div>
-                <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_df8bb543c68230d5f7b4dcf78_9a4589f144" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" class="button" value="Sign up" name="subscribe" id="mc-embedded-subscribe"></div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- end newsleter modal -->
-
-
-
-<!-- footer.html -->
-<footer id="footer">
-    <div class="footer-top">
-        <a class="logo" href="https://www.scylladb.com"><img src="{{ pathto('_static/img/logo-scylla-horizontal-RGB.svg', 1) }}" alt=""></a>
-        <div class="footer-links">
-            <a class="link" href="https://docs.scylladb.com">Docs</a>
-            <a class="link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
-            <a class="link" href="https://www.scylladb.com/company/">About Us</a>
-          {% include 'contribute.html' %}
-        </div>
-        <div class="footer-actions">
-            <a class="link-icon" href="https://github.com/ScyllaDB" target="_blank">
-                <span class="icon-github2"></span></a>
-            <a class="link-icon" href="https://twitter.com/ScyllaDB" target="_blank">
-                <span class="icon-twitter"></span></a>
-            <a class="link-icon" href="https://www.linkedin.com/company/scylladb"  target="_blank">
-                <span class="icon-linkedin2"></span></a>
-            <a class="link-icon" href="https://www.facebook.com/scylladb/" target="_blank">
-                <span class="icon-facebook"></span></a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="footer-info">
-            {%- if show_copyright %}
-            <div class="footer-copyright">
-                {%- if hasdoc('copyright') %}
-                {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}{% endtrans %}
-                {%- else %}
-                {% trans copyright=copyright|e %}&#169; {{ copyright }}{% endtrans %}
-                {%- endif %}
-            </div>
-            {%- endif %}
-            {%- if last_updated %}
-            <div class="footer-last-updated">
-                {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-            </div>
-            {%- endif %}
-            <div class="footer-version">
-                Powered by <a href="http://sphinx-doc.org/">Sphinx {{ sphinx_version }}</a>
-                &amp; <a href="https://sphinx-theme.scylladb.com">ScyllaDB Theme {{ scylladb_theme_version }}</a>
-            </div>
-        </div>
-        <div class="footer-links">
-        </div>
-    </div>
-</footer>
-<!-- end footer.html -->
-
-<!-- bodyscripts.html -->
-<!-- at the end of the BODY --> 
-<script src="{{ pathto('_static/js/vendor/jquery.js', 1) }}"></script>
-<script src="{{ pathto('_static/js/vendor/jquery.cookie.min.js', 1) }}"></script>
-<script src="{{ pathto('_static/expertrec.js', 1) }}"></script>
-<script src="{{ pathto('_static/js/foundation/foundation.js', 1) }}"></script>
-<script src="{{ pathto('_static/js/foundation/foundation.topbar.js', 1) }}"></script>
-<script src="{{ pathto('_static/js/foundation/foundation.dropdown.js', 1) }}"></script>
-<script src="{{ pathto('_static/app.js', 1) }}"></script>
-<script>
-    $(document).foundation();
-</script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-  <!-- end bodyscripts.html -->
-</body>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+  </body>
 </html>

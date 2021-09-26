@@ -1,0 +1,97 @@
+.admonition {
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  color: $color-typography-admonition-text;
+  font-size: $font-small;
+  line-height: 20px;
+  margin-bottom: $gap;
+  overflow: auto;
+  padding: 20px;
+  position: relative;
+
+  &:before {
+    content: " ";
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &-title {
+    color: $color-typography-admonition-title;
+    margin-bottom: 0 !important;
+
+    &:before {
+      content: "";
+      @extend .scylla-icon;
+      margin-right: 8px;
+      min-height: 24px;
+      width: 24px;
+    }
+  }
+
+  p:not(.admonition-title) {
+    margin-bottom: 0 !important;
+    margin-left: 32px;
+  }
+
+  &.tip {
+    border: 1px solid $color-border-admonition-tip;
+
+    &:before {
+      border-left: 8px solid transparentize($color-border-admonition-tip, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--exclamation;
+      filter: invert(47%) sepia(11%) saturate(2286%) hue-rotate(73deg)
+        brightness(109%) contrast(88%);
+    }
+  }
+
+  &.note {
+    border: 1px solid $color-border-admonition-note;
+
+    &:before {
+      border-left: 8px solid transparentize($color-border-admonition-note, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--exclamation;
+      filter: invert(44%) sepia(55%) saturate(2310%) hue-rotate(191deg)
+        brightness(81%) contrast(103%);
+    }
+  }
+
+  &.caution {
+    border: 1px solid $color-border-admonition-caution;
+
+    &:before {
+      border-left: 8px solid
+        transparentize($color-border-admonition-caution, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--warning;
+      filter: invert(77%) sepia(56%) saturate(3332%) hue-rotate(357deg)
+        brightness(98%) contrast(108%);
+    }
+  }
+
+  &.warning {
+    border: 1px solid $color-border-admonition-warning;
+
+    &:before {
+      border-left: 8px solid
+        transparentize($color-border-admonition-warning, 0.6);
+    }
+
+    .admonition-title:before {
+      @extend .scylla-icon--warning;
+      filter: invert(41%) sepia(42%) saturate(6427%) hue-rotate(343deg)
+        brightness(99%) contrast(83%);
+    }
+  }
+}

@@ -1,14 +1,18 @@
 import os
 import shutil
+from urllib.parse import urlparse
+
 
 def generate_template(template, **vars):
+    """
+    Replaces variables inside a template.
+
+    :param template: Text with variables between brackets {}.
+    :type src: str
+    """
+
     return template.format(**vars)
 
-def generate_styles(**styles):
-    return ''.join(['{}:{};'.format(k, v) for k, v in styles.items() if v])
-
-def generate_content(*lines, line_break='\n'):
-    return line_break.join([line for line in lines])
 
 def copy(src, dest):
     """
@@ -30,3 +34,33 @@ def copy(src, dest):
             shutil.copytree(src, dest)
         except:
             shutil.copy(src, dest)
+
+
+def build_redirect_body(path):
+    """
+    Builds the contents of the redirection file.
+
+    :param path: Path to redirect to.
+    :type path: str
+
+    :return: HTML body of the redirection.
+    :rtype: str
+    """
+    html = generate_template(
+        """<html><head><meta http-equiv="refresh" content="0; url={path}"></head></html>""",
+        path=path,
+    )
+    return html
+
+
+def is_url(path):
+    """
+    Checks if a path is an external url or a relative path.
+
+    :param path: Path to evaluate.
+    :type path: str
+
+    :return: True if path is an external url.
+    :rtype: bool
+    """
+    return bool(urlparse(path).netloc)

@@ -4,18 +4,26 @@ Custom Extensions
 Submodules
 ----------
 
-sphinx\_scylladb\_theme.extensions.gh\_pages module
+sphinx\_scylladb\_theme.extensions.hero\_box module
 ---------------------------------------------------
 
-.. automodule:: sphinx_scylladb_theme.extensions.gh_pages
+.. automodule:: sphinx_scylladb_theme.extensions.hero_box
    :members:
    :undoc-members:
    :show-inheritance:
 
-sphinx\_scylladb\_theme.extensions.not\_found module
+sphinx\_scylladb\_theme.extensions.multiversion module
+------------------------------------------------------
+
+.. automodule:: sphinx_scylladb_theme.extensions.multiversion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_scylladb\_theme.extensions.navigation module
 ----------------------------------------------------
 
-.. automodule:: sphinx_scylladb_theme.extensions.not_found
+.. automodule:: sphinx_scylladb_theme.extensions.navigation
    :members:
    :undoc-members:
    :show-inheritance:

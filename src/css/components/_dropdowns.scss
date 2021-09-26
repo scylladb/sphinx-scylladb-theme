@@ -1,0 +1,48 @@
+.scylla-dropdown {
+  color: $color-typography-dropdown;
+  font-size: $font-small;
+  line-height: 20px;
+
+  a,
+  a:hover,
+  a:focus {
+    color: $color-typography-dropdown !important;
+    padding: 0 !important;
+  }
+
+  &__item {
+    font-size: $font-base;
+    padding: 15px;
+  }
+
+  &__title {
+    /* Override Foundation */
+    align-items: center;
+    display: flex !important;
+    position: initial !important;
+    &:after {
+      display: none !important;
+    }
+
+    .chevron {
+      min-height: 5px;
+      width: 12px;
+    }
+  }
+
+  &__content {
+    @include floating;
+    font-size: $font-base;
+    list-style: none;
+    margin-top: 15px;
+    padding: 16px 0;
+    width: max-content;
+
+    li {
+      padding: 7px 16px;
+      .scylla-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}

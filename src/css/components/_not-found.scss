@@ -1,0 +1,29 @@
+.not-found {
+  background-color: $color-background-not-found;
+  height: 100%;
+  overflow: hidden;
+
+  &__icon {
+    display: block;
+    margin: 40px auto;
+    max-width: 300px;
+  }
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      font-size: 60px;
+      line-height: 1;
+    }
+
+    p {
+      margin: 30px 0;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+  }
+}

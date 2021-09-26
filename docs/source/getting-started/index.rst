@@ -40,9 +40,9 @@ For Theme Maintainers
   :doc:`Contribute to the Theme <../contribute/contribute-theme>`
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
-   :hidden:
-   
-   toolchain
-   installation
+  :maxdepth: 2
+  :glob:
+  :hidden:
+
+  toolchain
+  installation

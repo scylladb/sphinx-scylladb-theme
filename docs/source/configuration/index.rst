@@ -4,7 +4,7 @@ Configuration
 .. toctree::
    :maxdepth: 2
    :hidden:
-   
+
    template
    multiversion
    troubleshooting

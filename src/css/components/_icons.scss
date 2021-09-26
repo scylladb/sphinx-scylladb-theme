@@ -1,0 +1,260 @@
+.scylla-icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(0);
+
+  &--apps {
+    background-image: url("../img/icons/icon-apps.svg");
+  }
+
+  &--about-team {
+    background-image: url("../img/icons/icon-about-team.svg");
+  }
+
+  &--about-us {
+    background-image: url("../img/icons/icon-about-us.svg");
+  }
+
+  &--architecture {
+    background-image: url("../img/icons/icon-architecture.svg");
+  }
+
+  &--benchmarks {
+    background-image: url("../img/icons/icon-benchmarks.svg");
+  }
+
+  &--blog {
+    background-image: url("../img/icons/icon-blog.svg");
+  }
+
+  &--careers {
+    background-image: url("../img/icons/icon-careers.svg");
+  }
+
+  &--chevron-left {
+    background-image: url("../img/icons/icon-chevron-left.svg");
+  }
+
+  &--chevron-right {
+    background-image: url("../img/icons/icon-chevron-right.svg");
+  }
+
+  &--circe {
+    background-image: url("../img/icons/icon-circe.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/icons/icon-clock.svg");
+  }
+
+  &--close {
+    background-image: url("../img/icons/icon-close.svg");
+  }
+
+  &--cloud {
+    background-image: url("../img/icons/icon-cloud.svg");
+  }
+
+  &--cloud-docs {
+    background-image: url("../img/icons/icon-cloud-docs.svg");
+  }
+
+  &--comparison {
+    background-image: url("../img/icons/icon-comparison.svg");
+  }
+
+  &--contact-us {
+    background-image: url("../img/icons/icon-contact-us.svg");
+  }
+
+  &--developers-blog {
+    background-image: url("../img/icons/icon-developers-blog.svg");
+  }
+
+  &--docs {
+    background-image: url("../img/icons/icon-docs.svg");
+  }
+
+  &--enterprise {
+    background-image: url("../img/icons/icon-enterprise.svg");
+  }
+
+  &--events {
+    background-image: url("../img/icons/icon-events.svg");
+  }
+
+  &--exclamation {
+    background-image: url("../img/icons/icon-exclamation.svg");
+  }
+
+  &--home {
+    background-image: url("../img/icons/icon-home.svg");
+  }
+
+  &--getting-started {
+    background-image: url("../img/icons/icon-getting-started.svg");
+  }
+
+  &--glossary {
+    background-image: url("../img/icons/icon-glossary.svg");
+  }
+
+  &--infoworld {
+    background-image: url("../img/icons/icon-infoworld.svg");
+  }
+
+  &--integrations {
+    background-image: url("../img/icons/icon-integrations.svg");
+  }
+
+  &--knowledge-base {
+    background-image: url("../img/icons/icon-knowledge-base.svg");
+  }
+
+  &--less {
+    background-image: url("../img/icons/icon-less.svg");
+    filter: none;
+  }
+
+  &--live-test {
+    background-image: url("../img/icons/icon-live-test.svg");
+  }
+
+  &--mail-list {
+    background-image: url("../img/icons/icon-mail-list.svg");
+  }
+
+  &--manager {
+    background-image: url("../img/icons/icon-manager.svg");
+  }
+
+  &--memory-management {
+    background-image: url("../img/icons/icon-memory-management.svg");
+  }
+
+  &--memory-management {
+    background-image: url("../img/icons/icon-memory-management.svg");
+  }
+
+  &--monitoring {
+    background-image: url("../img/icons/icon-monitoring.svg");
+  }
+
+  &--networking {
+    background-image: url("../img/icons/icon-networking.svg");
+  }
+
+  &--news {
+    background-image: url("../img/icons/icon-news.svg");
+  }
+
+  &--newsletter {
+    background-image: url("../img/icons/icon-newsletter.svg");
+  }
+
+  &--nsql-guides {
+    background-image: url("../img/icons/icon-nsql-guides.svg");
+  }
+
+  &--open-source {
+    background-image: url("../img/icons/icon-open-source.svg");
+  }
+
+  &--operator {
+    background-image: url("../img/icons/icon-operator.svg");
+  }
+
+  &--overview {
+    background-image: url("../img/icons/icon-overview.svg");
+  }
+
+  &--partners {
+    background-image: url("../img/icons/icon-partners.svg");
+  }
+
+  &--plus {
+    background-image: url("../img/icons/icon-plus.svg");
+    filter: none;
+  }
+
+  &--pricing {
+    background-image: url("../img/icons/icon-pricing.svg");
+  }
+
+  &--release-note {
+    background-image: url("../img/icons/icon-release-notes.svg");
+  }
+
+  &--resource-center {
+    background-image: url("../img/icons/icon-resource-center.svg");
+  }
+
+  &--roadmap {
+    background-image: url("../img/icons/icon-roadmap.svg");
+  }
+
+  &--search {
+    background-image: url("../img/icons/icon-search.svg");
+  }
+  &--slack {
+    background-image: url("../img/icons/icon-slack.svg");
+  }
+
+  &--stack-overflow {
+    background-image: url("../img/icons/icon-stack-overflow.svg");
+  }
+
+  &--summit {
+    background-image: url("../img/icons/icon-summit.svg");
+  }
+
+  &--support {
+    background-image: url("../img/icons/icon-support.svg");
+  }
+
+  &--tech-talks {
+    background-image: url("../img/icons/icon-tech-talks.svg");
+  }
+
+  &--testing {
+    background-image: url("../img/icons/icon-testing.svg");
+  }
+
+  &--tip {
+    background-image: url("../img/icons/icon-tip.svg");
+  }
+
+  &--training {
+    background-image: url("../img/icons/icon-training.svg");
+  }
+
+  &--triangle-down {
+    background-image: url("../img/icons/icon-triangle-down.svg");
+  }
+
+  &--university {
+    background-image: url("../img/icons/icon-university.svg");
+  }
+
+  &--users-blog {
+    background-image: url("../img/icons/icon-users-blog.svg");
+  }
+
+  &--warning {
+    background-image: url("../img/icons/icon-warning.svg");
+  }
+
+  &--webinars {
+    background-image: url("../img/icons/icon-webinars.svg");
+  }
+
+  &--whitepapers {
+    background-image: url("../img/icons/icon-whitepapers.svg");
+  }
+
+  &--workshop {
+    background-image: url("../img/icons/icon-workshop.svg");
+  }
+}

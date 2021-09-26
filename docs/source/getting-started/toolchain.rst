@@ -21,8 +21,8 @@ Sphinx also has directives and extensions to add additional options for formatti
 
 `Learn more <https://www.sphinx-doc.org>`__
 
-ScyllaDB Sphinx Theme
----------------------
+Scylla Sphinx Theme
+-------------------
 
 The theme all Scylla documentation projects share to have a common look and feel.
 It also adds a set of custom functionallities available to make them available to all projects.

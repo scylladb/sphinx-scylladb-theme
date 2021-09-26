@@ -1,0 +1,80 @@
+.promo-banner {
+  background-color: $color-background-banner;
+  background-image: url("../img/banner-background.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+
+  &__icon {
+    margin-right: 15px;
+    img {
+      height: 40px;
+    }
+  }
+
+  &__title {
+    color: $color-typography-banner-title;
+    font-size: $font-smallest;
+    line-height: 16px;
+    margin-right: 15px;
+  }
+
+  &__button {
+    background: $color-white;
+    border-radius: 4px;
+    font-size: $font-smallest;
+    min-width: max-content;
+    padding: 5px;
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+    .scylla-icon {
+      height: 34px;
+      width: 34px;
+      filter: brightness(100%);
+    }
+
+    &:hover {
+      filter: opacity(0.8);
+      cursor: pointer;
+    }
+  }
+}
+
+.promo-banner-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5.85px 20px;
+}
+
+@media (min-width: $large) {
+  .promo-banner {
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &__button {
+      font-size: $font-small;
+      padding: 8.5px;
+    }
+    &__close {
+      display: block;
+    }
+  }
+  .promo-banner-wrapper {
+    flex-direction: unset;
+    padding: 16px;
+  }
+}

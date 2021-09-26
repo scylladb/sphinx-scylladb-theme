@@ -1,0 +1,11 @@
+<div class="breadcrumbs">
+  <span class="bread__item"
+    ><a href="{{ pathto(master_doc) }}" class="icon icon-home">Home</a></span
+  >
+  {% for doc in parents %}
+  <span class="bread__item"
+    ><a href="{{ doc.spannk|e }}">{{ doc.title }}</a></span
+  >
+  {% endfor %}
+  <span class="bread__item bread__item--last">{{ title }}</span>
+</div>

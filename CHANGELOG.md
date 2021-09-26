@@ -5,12 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0] - 01 September 2021
+
+### Added
+
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): We’ve made a number of updates to the look and feel of the theme to improve the overall user experience.
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): The static front end files (CSS, JS, and images) are now managed with `webpack`. For more information, see [Contribute to the Theme](https://sphinx-theme.scylladb.com/stable/contribute/contribute-theme.html).
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): The promo banner now supports icons with the option theme option `banner_icon_path`. For more information, see [Template Options](https://sphinx-theme.scylladb.com/stable/configuration/template.html).
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): The contribute button adds the option "Edit on GitHub". To configure your project to support this option, read [Template Options](https://sphinx-theme.scylladb.com/stable/configuration/template.html).
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): We run hooks on every commit to automatically point out linting issues.
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): The new workflow `docs-pr` runs on pull requests to make sure docs build without warnings before being merged. For more information, see [Deployment](https://sphinx-theme.scylladb.com/stable/github-pages.html).
+
+### Changed
+
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): Topics boxes (cards) can be used in other sections, and not just on the home page. We now have different layouts to suit most projects' needs. Check them out at [Topic Boxes](https://sphinx-theme.scylladb.com/stable/examples/topic-box)
+
+### Fixed
+
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): We've added more unit tests to the project, especially to extensions.
+- [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): We've fixed JavaScript warnings and errors raised by the console.
+
 ## [0.1.25] - 05 July 2021
 
 ### Fixed
 
-- [#171](https://github.com/scylladb/sphinx-scylladb-theme/pull/194): FontAwesome 5.0 backwards compatibility.
-
+- [#194](https://github.com/scylladb/sphinx-scylladb-theme/pull/194): FontAwesome 5.0 backwards compatibility.
 
 ## [0.1.24] - 17 June 2021
 
@@ -52,20 +71,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): ``smv_rename_latest_version`` setting in ``conf.py`` overrides the latest version output directory.
+- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): `smv_rename_latest_version` setting in `conf.py` overrides the latest version output directory.
 
 ### Changed
 
-- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): Moved ``smv_latest_version`` from ``github/workflows/pages.yml`` to ``conf.py``.
+- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): Moved `smv_latest_version` from `github/workflows/pages.yml` to `conf.py`.
 
 ### Removed
 
-- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): ``_utils/redirects.sh`` script.
+- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): `_utils/redirects.sh` script.
 
 ### Fixed
 
-- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): ``make multiversionpreview`` was not redirecting automatically to the latest version.
-
+- [#121](https://github.com/scylladb/sphinx-scylladb-theme/issues/121): `make multiversionpreview` was not redirecting automatically to the latest version.
 
 ## [0.1.20] - 19 Jan 2021
 
@@ -92,7 +110,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#103](https://github.com/scylladb/sphinx-scylladb-theme/issues/103): Report button does not break when the page title has inlines.
 
-
 ## [0.1.18] - 31 Dec 2020
 
 ### Added
@@ -111,7 +128,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - [#83](https://github.com/scylladb/sphinx-scylladb-theme/issues/83): Copyright year in the footer is now updated automatically.
-
 
 ## [0.1.15] - 17 Nov 2020
 
@@ -152,6 +168,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#59](https://github.com/scylladb/sphinx-scylladb-theme/issues/59): All projects now share a 404 page.
 - [#58](https://github.com/scylladb/sphinx-scylladb-theme/issues/58): Support for redirections.
 
+[1.0]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.25...1.0.4
 [0.1.25]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.24...0.1.25
 [0.1.24]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.23...0.1.24
 [0.1.23]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.22...0.1.23

@@ -1,0 +1,78 @@
+<footer class="footer">
+  <div class="footer-group">
+    <div class="footer-top">
+      <a class="footer-logo" href="https://www.scylladb.com"
+        ><img
+          src="{{ pathto('_static/img/logo-scylla-horizontal-RGB.svg', 1) }}"
+          alt="Logo"
+      /></a>
+      <div class="footer-links">
+        <a class="footer-links__link" href="https://docs.scylladb.com/">Docs</a>
+        <a
+          class="footer-links__link"
+          href="https://www.scylladb.com/company/contact-us/"
+          >Contact Us</a
+        >
+        <a class="footer-links__link" href="https://www.scylladb.com/company/"
+          >About Us</a
+        >
+      </div>
+      <div class="footer-actions">
+        <a
+          class="footer-actions__link"
+          href="https://groups.google.com/g/scylladb-users"
+          target="_blank"
+          ><span
+            data-tooltip
+            tabindex="1"
+            title="User mailing list"
+            data-position="bottom"
+          >
+            <img
+              src="{{ pathto('_static/img/icons/icon-mail-list.svg', 1) }}"
+              alt="Mail List Icon"
+            />
+          </span>
+        </a>
+        <a
+          class="footer-actions__link"
+          href="http://slack.scylladb.com/"
+          target="_blank"
+          ><span
+            data-tooltip
+            tabindex="1"
+            title="User Slack channel"
+            data-position="bottom"
+          >
+            <img
+              src="{{ pathto('_static/img/icons/icon-slack.svg', 1) }}"
+              alt="Slack Icon"
+          /></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      {%- if show_copyright %}
+      <div class="footer-bottom__copyright">
+        {%- if hasdoc('copyright') %} {% trans path=pathto('copyright'),
+        copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{
+        copyright }}{% endtrans %} {%- else %} {% trans copyright=copyright|e
+        %}&#169; {{ copyright }}{% endtrans %} {%- endif %}
+      </div>
+      {%- endif %} {%- if last_updated %}
+      <div class="footer-bottom__last-updated">
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated
+        }}.{% endtrans %}
+      </div>
+      {%- endif %}
+      <div class="footer-bottom__version">
+        Powered by
+        <a href="http://sphinx-doc.org/">Sphinx {{ sphinx_version }}</a> &amp;
+        <a href="https://sphinx-theme.scylladb.com/"
+          >ScyllaDB Theme {{ scylladb_theme_version }}</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>

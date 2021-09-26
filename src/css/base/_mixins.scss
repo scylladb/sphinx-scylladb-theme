@@ -1,0 +1,7 @@
+@mixin floating {
+  background: $color-white;
+  border: 0;
+  border-radius: $round;
+  box-shadow: 0 28px 32px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}

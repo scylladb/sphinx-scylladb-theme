@@ -1,0 +1,13 @@
+.side-nav-toggle {
+  cursor: pointer;
+  display: block;
+  margin-right: 20px;
+  position: relative;
+  z-index: 300;
+}
+
+@media screen and (min-width: $large) {
+  .side-nav-toggle {
+    display: none;
+  }
+}

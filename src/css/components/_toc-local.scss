@@ -1,0 +1,59 @@
+.contents.local {
+  > ul {
+    margin-bottom: $gap;
+    margin-left: 0;
+
+    > li {
+      border-bottom: 1px solid $color-border-toc-local-li;
+      padding: 10px 0;
+      word-break: break-word;
+
+      &:before {
+        content: "";
+      }
+
+      &:last-child {
+        border: 0;
+      }
+
+      ul {
+        display: none;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        font-size: $font-small;
+
+        &:before {
+          content: "";
+          @extend .scylla-icon;
+          @extend .scylla-icon--chevron-right;
+          filter: invert(40%) sepia(11%) saturate(2157%) hue-rotate(198deg)
+            brightness(89%) contrast(87%) !important;
+          opacity: 0.5;
+          min-height: 10px;
+          width: 10px;
+          margin-right: 10px;
+        }
+
+        &:hover,
+        &.current {
+          &:before {
+            opacity: 1;
+            filter: brightness(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.topic-title {
+  color: $color-typography-on-this-page;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}

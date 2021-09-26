@@ -1,0 +1,18 @@
+.last-updated {
+  margin: 10px 0;
+  color: $color-typography-last-updated;
+  font-size: $font-smallest;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  &__icon {
+    font-size: $font-small;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .last-updated {
+    float: right;
+    margin: 0;
+  }
+}

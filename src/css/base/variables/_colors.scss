@@ -1,0 +1,89 @@
+/* Color names from https://chir.ag/projects/name-that-color */
+
+$color-alto: #e0e0e0;
+$color-apple: #43a047;
+$color-black: #000;
+$color-blue-bayoux: #5a7184;
+$color-cadet-blue: #b3bac5;
+$color-cinnabar: #e74c3c;
+$color-denim: #1976d2;
+$color-dodger-blue: #2196f3;
+$color-dusty-gray: #979797;
+$color-ebony-clay: #23263b;
+$color-lavender-gray: #b6b7d5;
+$color-martinique: #3a2d55;
+$color-mine-shaft: #333;
+$color-piction-blue: #42c4e6;
+$color-royal-blue: #3c4fe0;
+$color-san-marino: #4458a3;
+$color-selago: #f2f7fe;
+$color-waikawa-gray: #5a5e9a;
+$color-web-orange: #ffab00;
+$color-white: #fff;
+$color-zircon: #f6f8ff;
+
+/* Background */
+$color-background-banner: $color-san-marino;
+$color-background-code: transparentize($color-cadet-blue, 0.9);
+$color-background-dropdown-contribute: $color-selago;
+$color-background-footer: $color-white;
+$color-background-header: $color-white;
+$color-background-not-found: $color-zircon;
+$color-background-panel: transparentize($color-cadet-blue, 0.9);
+$color-background-search-item-hover: transparentize($color-cadet-blue, 0.9);
+$color-background-sidebar: $color-zircon;
+$color-background-table: $color-zircon;
+$color-background-tooltip: transparentize($color-black, 0.44);
+
+/* Border */
+$color-border-admonition-caution: $color-web-orange;
+$color-border-admonition-note: $color-denim;
+$color-border-admonition-tip: $color-apple;
+$color-border-admonition-warning: $color-cinnabar;
+$color-border-button: $color-martinique;
+$color-border-dropdown-contribute: $color-waikawa-gray;
+$color-border-footer-top: transparentize($color-black, 0.9);
+$color-border-sidebar-item: $color-royal-blue;
+$color-border-table: $color-alto;
+$color-border-table-header: $color-san-marino;
+$color-border-tabs-active: $color-dodger-blue;
+$color-border-tabs: transparentize($color-black, 0.44);
+$color-border-topic-box-hover: $color-san-marino;
+$color-border-toc-local-li: transparentize($color-waikawa-gray, 0.9);
+
+/* Typography */
+$color-typography-admonition-text: transparentize($color-black, 0.44);
+$color-typography-admonition-title: $color-ebony-clay;
+$color-typography-banner-title: $color-white;
+$color-typography-base-link: $color-royal-blue;
+$color-typography-base: $color-ebony-clay;
+$color-typography-breadcrumbs: $color-ebony-clay;
+$color-typography-bullet: $color-cadet-blue;
+$color-typography-button: $color-martinique;
+$color-typography-code-line-number: $color-blue-bayoux;
+$color-typography-code: $color-ebony-clay;
+$color-typography-content-navigation-text: $color-ebony-clay;
+$color-typography-content-navigation-title-colored: $color-piction-blue;
+$color-typography-dropdown: $color-ebony-clay;
+$color-typography-footer-copyright: $color-dusty-gray;
+$color-typography-footer-icon: $color-black;
+$color-typography-footer-link: $color-mine-shaft;
+$color-typography-icon-checkmark: $color-piction-blue;
+$color-typography-last-updated: $color-san-marino;
+$color-typography-logo: $color-martinique;
+$color-typography-on-this-page: transparentize($color-ebony-clay, 0.25);
+$color-typography-panel-grid-link: $color-waikawa-gray;
+$color-typography-panel-grid-link: $color-ebony-clay;
+$color-typography-sidebar-button: $color-mine-shaft;
+$color-typography-table-body: $color-black;
+$color-typography-table-header: transparentize($color-black, 0.44);
+$color-typography-table-header-bold: transparentize($color-black, 0.13);
+$color-typography-tabs-title-active: $color-dodger-blue;
+$color-typography-tabs-title: transparentize($color-black, 0.44);
+$color-typography-toc-link-active: $color-ebony-clay;
+$color-typography-toc-link: $color-cadet-blue;
+$color-typography-topic-grid-text: $color-san-marino;
+$color-typography-topic-grid-title: $color-ebony-clay;
+$color-typography-topic-link: $color-piction-blue;
+$color-typography-topic-text: $color-black;
+$color-typography-topic-title: $color-ebony-clay;

@@ -1,91 +1,120 @@
 """
-Sphinx directive for creating cards in a grid layout.
+Sphinx directive for HTML Topic Box Components.
 """
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
-from .utils import generate_template, generate_styles, generate_content
+
+from .utils import generate_template
+
 
 class TopicBox(Directive):
     has_content = True
     option_spec = {
-        'title': directives.unchanged_required,
-        'link': directives.path,
-        'icon': directives.path,
-        'icon_color': directives.unchanged,
-        'icon_bg': directives.unchanged,
-        'last_updated': directives.unchanged_required,
-        'class': directives.unchanged,
+        "title": directives.unchanged_required,
+        "link": directives.path,
+        "anchor": directives.path,
+        "icon": directives.path,
+        "icon_color": directives.path,
+        "image": directives.path,
+        "class": directives.unchanged,
     }
 
     def run(self):
-        class_name = 'topic-box'
+        class_name = "topic-box"
+        container_class_name = self.options.get("class", "").replace(",", " ")
 
-        link = self.options.get('link')
-        html_tag_open = generate_template('''
-            <a class="{class_name}" href="{link}">
-            ''' if link else '''
-            <div class="{class_name}">
-            ''',
+        link = self.options.get("link")
+        html_tag_open = generate_template(
+            """
+            <div class="cell {class_name} {container_class_name}">
+                <a class="card" href="{link}">
+            """
+            if link
+            else """
+            <div class="{class_name} {container_class_name}">
+                <div class="card">
+            """,
             class_name=class_name,
+            container_class_name=container_class_name,
             link=link,
         )
-        html_tag_close = '</a>' if link else '</div>'
-        
-        icon = self.options.get('icon')
-        html_icon = generate_template('''
-            <div class="{class_name}-icon" style="{style_icon}">
-                <i class="{icon}"></i>
+        html_tag_close = "</a></div>" if link else "</div></div>"
+
+        icon = self.options.get("icon")
+        icon_color = self.options.get("icon_color", "#23263b")
+        image = self.options.get("image")
+
+        html_icon = (
+            generate_template(
+                """
+            <div class="{class_name}__icon">
+                <i class="{icon}" style="color:{icon_color} !important;"></i>
             </div>
-            ''',
-            class_name=class_name,
-            icon=icon,
-            style_icon=generate_styles(**{
-                'color': self.options.get('icon_color'),
-                'background-color': self.options.get('icon_bg'),
-            }),
-        ) if icon else ''
+            """,
+                class_name=class_name,
+                icon=icon,
+                icon_color=icon_color,
+            )
+            if icon
+            else generate_template(
+                """
+            <div class="{class_name}__icon"">
+                <img src="{image}"/>
+            </div>
+            """,
+                class_name=class_name,
+                image=image,
+            )
+            if image
+            else ""
+        )
 
-        last_updated = self.options.get('last_updated')
-        html_last_updated = generate_template('''
-            <div class="{class_name}-subtitle">Last updated: {last_updated}</div>
-            ''',
-            class_name=class_name,
-            last_updated=last_updated,
-        ) if last_updated else ''
+        anchor = self.options.get("anchor")
+        anchor = (
+            generate_template(
+                """
+            <div class="{class_name}__anchor">{anchor}</div>
+            """,
+                class_name=class_name,
+                anchor=anchor,
+            )
+            if anchor
+            else ""
+        )
 
-        html0 = generate_template('''
+        html0 = generate_template(
+            """
             {html_tag_open}
-                <div class="{class_name}-head">
-                    {html_icon}
-                    <div class="{class_name}-head-content">
-                        <div class="{class_name}-title">{title}</div>
-                        {html_last_updated}
-                    </div>
+                <div class="{class_name}__head">
+                {html_icon}
+                <h3 class="{class_name}__title">{title}</h3>
                 </div>
-                <div class="{class_name}-body">
-            ''',
+                <div class="{class_name}__body">
+            """,
             class_name=class_name,
             html_tag_open=html_tag_open,
             html_icon=html_icon,
-            html_last_updated=html_last_updated,
-            title=self.options.get('title', ''),
+            title=self.options.get("title", ""),
         )
-        html1 = generate_template('''
-                    <div class="{class_name}-readmore">Read more <i class="fa fa-arrow-right"></i></div>
-                </div>
+        html1 = generate_template(
+            """
+            {anchor}
+            </div>
             {html_tag_close}
-            ''',
+            """,
+            anchor=anchor,
             class_name=class_name,
             html_tag_close=html_tag_close,
         )
 
         description_node = nodes.container()
-        self.state.nested_parse(self.content, 0, description_node)
+        if self.state:
+            self.state.nested_parse(self.content, 0, description_node)
 
         return [
-            nodes.raw(text=html0, format='html'),
+            nodes.raw(text=html0, format="html"),
             description_node,
-            nodes.raw(text=html1, format='html'),
+            nodes.raw(text=html1, format="html"),
         ]
 
 
@@ -93,7 +122,7 @@ def setup(app):
     app.add_directive("topic-box", TopicBox)
 
     return {
-        'version': '0.1',
-        'parallel_read_safe': True,
-        'parallel_write_safe': True,
+        "version": "0.1",
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
     }

@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $font-base;
+  font-family: $font-base-family;
+  line-height: 1;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $color-typography-base-link;
+}
+
+a:hover {
+  color: $color-typography-base-link;
+  font-weight: 500;
+}
+
+.headerlink {
+  margin-left: 5px;
+  visibility: hidden;
+}
+
+.toc-backref:hover {
+  color: $color-typography-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-base-family;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+
+  &:hover > a.headerlink {
+    visibility: visible;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 28px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+button:focus {
+  outline: 0;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+blockquote,
+blockquote p {
+  color: inherit;
+}
+
+cite {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  &:before {
+    content: "";
+  }
+}
+
+.show {
+  display: block !important;
+}
+
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $large) {
+  h1 {
+    font-size: 36px;
+  }
+}

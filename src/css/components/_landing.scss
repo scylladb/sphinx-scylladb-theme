@@ -1,0 +1,14 @@
+.landing__content {
+  padding: 0 16px;
+}
+
+@media screen and (min-width: $large) {
+  .landing {
+    &--floating {
+      .landing__content {
+        position: relative;
+        top: -70px;
+      }
+    }
+  }
+}

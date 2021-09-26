@@ -1,0 +1,122 @@
+.header {
+  align-items: center;
+  background-color: $color-background-header;
+  box-shadow: 0 2px 22px rgba(74, 93, 166, 0.15);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 12.75px 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  width: initial;
+
+  &__img {
+    width: 110px;
+  }
+
+  &__bar {
+    background-color: $color-typography-logo;
+    border-left: 1px solid $color-typography-logo;
+    height: 11.56px;
+    margin: 0 7.5px;
+    width: 0px;
+  }
+
+  &__text {
+    color: $color-typography-logo;
+    font-size: 10.11px;
+    letter-spacing: 0.722408px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.header-navigation {
+  display: none;
+}
+
+.header-button {
+  margin-left: 15px;
+  text-transform: uppercase;
+  display: none;
+}
+
+.header-search-box {
+  display: none;
+  margin-right: 20px;
+  width: 200px;
+}
+
+.scylla-dropdown--header {
+  .scylla-dropdown__item {
+    font-size: $font-small;
+  }
+  .scylla-dropdown__title {
+    text-transform: uppercase;
+
+    .chevron {
+      margin-left: 10px;
+    }
+  }
+  .scylla-dropdown__content .scylla-icon {
+    min-height: 20px;
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .header {
+    padding: 18px 0;
+  }
+
+  .header-logo {
+    &__img {
+      width: 152px;
+    }
+
+    &__bar {
+      height: 16px;
+      margin: 0 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+      letter-spacing: 0.722408px;
+      line-height: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  .header-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-search-box {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .header-logo {
+    margin-left: 30px;
+    width: $side-nav-width;
+  }
+
+  .header-search-box {
+    margin-right: 30px;
+    max-width: 20%;
+    width: $search-box-width;
+  }
+
+  .header-button {
+    display: block;
+  }
+}
