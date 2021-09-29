@@ -27,4 +27,13 @@
       position: relative;
     }
   }
+
+  .bread__highlight {
+    color: $color-typography-breadcrumbs-highlight;
+
+    &:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
 }
