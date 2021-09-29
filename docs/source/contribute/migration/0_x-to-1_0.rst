@@ -22,6 +22,7 @@ New landing page
 
 
 New "Edit on GitHub" button
--------------------------
+---------------------------
+
 If your project is open-source, we invite you to enable the new "Edit on GitHub". 
 For more information, see :doc:`Template Options / Contribute button <../../configuration/template>`.
