@@ -1,6 +1,7 @@
-========
 Hero Box
 ========
+
+This is a custom directive which creates a header on home pages. Do not use the topic-box on the subordinate `index.rst` files.
 
 Default
 -------

@@ -1,10 +1,11 @@
-====
 Tabs
 ====
 
-Using:
+When there are several languages or options available and the reader will use one and keep using that option throughout the procedure, a tabbed content box is the best way to display this informaiton.
 
-.. code-block:: rst
+For example:
+
+.. code-block:: none
 
    .. tabs::
 
@@ -28,7 +29,7 @@ Using:
 
          (without stopping *some-scylla* container)
 
-Results in:
+Renders as:
 
 .. tabs::
 

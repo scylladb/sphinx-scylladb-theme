@@ -1,7 +1,9 @@
-
-======
 Tables
 ======
+
+We use the List Table directive for tables.
+If possible give your table a name as this helps with SEO and screen readers for Accessibility.
+In the width declaration, determine the number of columns and the width for each.
 
 Regular table
 -------------

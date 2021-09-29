@@ -63,7 +63,6 @@ To preview the theme locally:
 
 #. The previous command should generate a ``docs/_build/dirhtml`` directory. To preview the docs, open http://127.0.0.1:5500/ with your preferred browser.
 
-
 Building the frontend
 ---------------------
 
@@ -102,18 +101,23 @@ Publishing the theme to PyPi
 
 .. note:: You need a PyPi account and be a project maintainer to release new theme versions.
 
-All the documentation projects receives new patches when the theme is released on PyPi.
-The script automatically increases the package's version and will ask you for the PyPi username and password.
+To publish a new version of the theme to PyPi, run the following script:
 
 .. code:: console
 
     ./deploy.sh
 
-The script automatically increases the package's version and will ask you for the PyPi username and password.
+Behind the scenes, ``deploy.sh`` executes the following logic:
+
+1. Checks if the local git URL matches the original repository to prevent you from releasing from a personal fork.
+2. Checks if the local contents differ from the remote master branch.
+3. Increases the package's version **patch** with the command ``poetry version patch``.
+4. Builds the package with the command ``poetry build``.
+5. Asks for your PyPI username and password and publishes the package to PyPI with ``poetry publish``.
 
 After publishing the package, you should see the new release listed on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
 
-.. toctree::
-    :hidden:
+To increase the **minor version**, run ``poetry version minor`` before  ``./deploy``.
 
-    api/sphinx_scylladb_theme
+To increase the **major version**, run ``poetry version major`` before  ``./deploy``.
+

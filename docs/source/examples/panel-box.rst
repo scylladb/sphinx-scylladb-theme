@@ -1,10 +1,9 @@
-=========
 Panel Box
 =========
 
-Panel boxes are mainly used on the index pages.
+This is a custom directive which creates boxes on the index screens. Do not use the panel-box on the root ``index.rst``.
 
-Using:
+For example, using:
 
 .. code-block:: rst
 

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0] - 01 September 2021
 
+**IMPORTANT**: For more information on how to update, see [Migrating from 0.x to 1.0](https://sphinx-theme.scylladb.com/stable/contribute/migration/0_x-to-1_0).
+
 ### Added
 
 - [#201](https://github.com/scylladb/sphinx-scylladb-theme/pull/201): We’ve made a number of updates to the look and feel of the theme to improve the overall user experience.

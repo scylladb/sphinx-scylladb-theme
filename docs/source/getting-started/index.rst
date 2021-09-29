@@ -26,8 +26,7 @@ For Docs Contributors
   :class: my-panel
 
   * :doc:`Scylla Docs Contributor’s Handbook <../contribute/contribute-docs>`
-  * :doc:`Markup Guide for Docs Contributors <../contribute/markup-guide>`
-
+  * :doc:`Markup Guide for Docs Contributors <../examples/index>`
 
 For Theme Maintainers
 ---------------------
