@@ -5,8 +5,12 @@
   <div class="landing landing--floating">
 
 .. hero-box::
+  :button_icon: fa fa-github
+  :button_url: https://github.com/scylladb/sphinx-scylladb-theme
+  :button_text: Source code
   :title: Welcome to Scylla Sphinx Theme documentation
   :image: /_static/img/mascots/scylla-docs.svg
+
 
   The documentation toolchain for Scylla projects.
 
