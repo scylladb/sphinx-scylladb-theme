@@ -22,7 +22,16 @@ Here are the main breaking changes between the 0.x and 1.0 versions.
 
 #. Set ``sphinx-scylladb-theme`` in ``docs/pyproject.toml`` to ``sphinx-scylladb-theme = "~1.0.0"``.
 #. Remove the settings ``header_links`` and ``show_sidebar_index`` from ``html_theme_options`` in the file ``conf.py``.  This file could be located in ``docs/source/conf.py`` or ``docs/conf.py``.
-#. Remove the file ``.github/workflows/pages.yml`` and ``docs/Makefile``, and copy the new workflows in the ``.github/workflows`` folder. You can download the latest workflows `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
+#. Remove the file ``.github/workflows/pages.yml``. Then, copy the new workflows in the ``.github/workflows`` folder. You can download the latest workflows `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
+#. Add the following lines at the end of `docs/Makefile`:
+
+.. code-block::
+    
+    .PHONY: test
+    test: setup
+	$(SPHINXBUILD) -b dirhtml $(TESTSPHINXOPTS) $(BUILDDIR)/dirhtml
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
 Optional features
 -----------------
