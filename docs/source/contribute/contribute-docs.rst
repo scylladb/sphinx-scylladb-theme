@@ -40,7 +40,6 @@ Some of our upstream content is written in MarkDown and Sphinx also supports Mar
 You will find templates and cheatsheet links later in this document.
 You can use them to make sure your document is organized and tagged correctly.
 
-
 We use the following tools for the following purposes:
 
 .. list-table::
@@ -138,7 +137,7 @@ Cheatsheets
 
 If you want to use a cheat sheet for Markdown or RestructuredText, here are some which are helpful:
 
-* `Scylla Cheat Sheet <https://sphinx-theme.scylladb.com/stable/examples/example-topic.htm>`_
+* :doc:`Scylla Cheat Sheet <../examples/index>` - samples of |rst| markup.
 * `RestructuredText Cheat Sheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
 * `GitHub Markdown Cheat Sheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_
 

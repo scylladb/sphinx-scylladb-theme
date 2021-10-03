@@ -1,0 +1,46 @@
+Migrating from 0.x to 1.0
+=========================
+
+This guide explains how to upgrade the version of the Scylla Sphinx Theme.
+
+
+How to check your current theme version
+---------------------------------------
+
+The theme version is displayed in the footer of the project's documentation site.
+
+.. image:: version.png
+
+
+If your project theme's version is <1.0, follow this guide to get the latest version.
+
+
+Upgrade to version 1.0
+----------------------
+
+Here are the main breaking changes between the 0.x and 1.0 versions.
+
+#. Set ``sphinx-scylladb-theme`` in ``docs/pyproject.toml`` to ``sphinx-scylladb-theme = "~1.0.0"``.
+#. Remove the settings ``header_links`` and ``show_sidebar_index`` from ``html_theme_options`` in the file ``conf.py``.  This file could be located in ``docs/source/conf.py`` or ``docs/conf.py``.
+#. Remove the file ``.github/workflows/pages.yml`` and ``docs/Makefile``, and copy the new workflows in the ``.github/workflows`` folder. You can download the latest workflows `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
+
+Optional features
+-----------------
+
+New landing page
+................
+
+With 1.0, you can add a custom landing page for your project using the new :doc:`topic box <../../examples/topic-box>` components.
+For example, check out link:Scylla Sphinx Theme <https://sphinx-theme.scylladb.com/stable/>` landing page for inspiration.
+
+To add a landing page to your project:
+
+#. Create a new ``docs/source/index.rst`` file. Here you have a `sample template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/source/index.rst>`_ ready to be adapted.
+#. Set ``'show_sidebar_index': true`` in ``html_theme_options`` (``conf.py``).
+
+
+New "Edit on GitHub" button
+...........................
+
+If your project is open-source, we invite you to enable the new "Edit on GitHub" option. 
+For more information, see :doc:`Template Options / Contribute button <../../configuration/template>`.
