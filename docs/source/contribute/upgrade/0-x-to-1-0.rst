@@ -40,7 +40,7 @@ New landing page
 ................
 
 With 1.0, you can add a custom landing page for your project using the new :doc:`topic box <../../examples/topic-box>` components.
-For example, check out link:Scylla Sphinx Theme <https://sphinx-theme.scylladb.com/stable/>` landing page for inspiration.
+For example, check out `Scylla Sphinx Theme <https://sphinx-theme.scylladb.com/stable/>`_ landing page for inspiration.
 
 To add a landing page to your project:
 
