@@ -29,7 +29,7 @@ It also adds a set of custom functionallities available to make them available t
 
 `Learn more <https://github.com/scylladb/sphinx-scylladb-theme>`__
 
-Multiversion Extension
+Multiversion extension
 ----------------------
 
 The extension Scylla docs use to build docs for different versions.

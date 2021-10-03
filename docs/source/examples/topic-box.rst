@@ -1,12 +1,13 @@
-=========
 Topic Box
 =========
+
+This is a custom directive which creates graphical boxes on root index screens. Do not use the topic-box on the subordinate `index.rst` files.
 
 Default Topic
 -------------
 
 With Icon
-=========
+.........
 
 Using:
 
@@ -31,7 +32,7 @@ Results in:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 With Image
-==========
+..........
 
 Using:
 
@@ -56,7 +57,7 @@ Results in:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 With Horizontal Scroll (Mobile)
-===============================
+-------------------------------
 
 Using:
 

@@ -2,11 +2,10 @@
 Getting Started
 ===============
 
-For Docs Maintainers
+For docs maintainers
 --------------------
 
 .. panel-box::
-  :title: Documentation
   :id: "components"
   :class: my-panel
 
@@ -17,23 +16,20 @@ For Docs Maintainers
   * :doc:`Publish to GitHub Pages  <../github-pages>`
   * :doc:`Commands to build docs  <../commands>`
 
-For Docs Contributors
+For docs contributors
 ---------------------
 
 .. panel-box::
-  :title: Documentation
   :id: "components"
   :class: my-panel
 
   * :doc:`Scylla Docs Contributor’s Handbook <../contribute/contribute-docs>`
-  * :doc:`Markup Guide for Docs Contributors <../contribute/markup-guide>`
+  * :doc:`Markup Guide for Docs Contributors <../examples/index>`
 
-
-For Theme Maintainers
+For theme maintainers
 ---------------------
 
 .. panel-box::
-  :title: Documentation
   :id: "components"
   :class: my-panel
 

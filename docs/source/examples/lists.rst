@@ -1,36 +1,52 @@
 Lists
 =====
 
+There are two kinds of lists, ordered and unordered.
+Remember to insert a blank line before and after the lists.
 
-Using:
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
 
-.. code-block:: rst
+   * - List type
+     - Markup
+     - Renders as
+     - Description
+   * - Ordered List
+     - .. code-block:: rst
 
-    Lorem ipsum is:
+          #. First Item
+          #. Second Item
 
-    * a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
-    * Also called placeholder (or filler) text.
-    * A convenient tool for mock-ups.
-    * Helps to outline the visual elements of a document or presentation, eg typography, font, or layout.
-    * Latin text by the classical author and philosopher Cicero.
+             a. Sub Item
+             #. Sub Item
 
-    #. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical;
-    #. It's not genuine, correct, or comprehensible Latin anymore.
-    #. While lorem ipsum's still resembles classical Latin, it actually has no meaning whatsoever.
-    #. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearance of European languages, as are digraphs not to be found in the original.
+          #. Third Item
+     -    #. First Item
+          #. Second Item
 
+             a. Sub Item
+             #. Sub Item
 
-Results in:
+          #. Third Item
 
-Lorem ipsum is:
+     - Use this markup for procedures and in any place where oder matters. Use number sign for the number. When the page is generated it is numbered automatically. A blank line is required at the end of a list.
+   * - Unordered List
+     - .. code-block:: rst
 
-* a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
-* Also called placeholder (or filler) text.
-* A convenient tool for mock-ups.
-* Helps to outline the visual elements of a document or presentation, eg typography, font, or layout.
-* Latin text by the classical author and philosopher Cicero.
+          * First Item
+          * Second Item
 
-#. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical;
-#. It's not genuine, correct, or comprehensible Latin anymore.
-#. While lorem ipsum's still resembles classical Latin, it actually has no meaning whatsoever.
-#. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearance of European languages, as are digraphs not to be found in the original.
+            * Sub Item
+            * Sub Item
+
+          * Third Item
+     -    * First Item
+          * Second Item
+
+            * Sub Item
+            * Sub Item
+
+          * Third Item
+
+     - Use for any list where order doesn't matter. Use an asterisk for the bullet. When the page is generated it is bulleted automatically. A blank line is required at the end of a list.
