@@ -53,4 +53,4 @@ You can create code-blocks in any of the following `languages <https://pygments.
        exit 1
    fi
 
-If you are including a large example (an entire file) as a code-block, refer to :ref:`Literal Include <literalinclude>`.
+If you are including a large example (an entire file) as a code-block, refer to :doc:`Literal Include <includes>`.
