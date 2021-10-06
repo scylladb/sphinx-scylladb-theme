@@ -1,10 +1,65 @@
 Hero Box
 ========
 
-This is a custom directive which creates a header on home pages. Do not use the topic-box on the subordinate `index.rst` files.
+A custom directive to create a header on the root ``index.rst`` file.
+
+.. warning:: Do not use the ``hero-box`` on the subordinate ``index.rst`` files.
+
+Syntax
+------
+
+.. code-block:: rst
+
+   .. hero-box::
+      <options>
+
+      <text>
+
+Options
+-------
+
+The ``hero-box`` directive supports the following options:
+
+.. list-table::
+  :widths: 20 20 10 20 30
+  :header-rows: 1
+
+  * - Option
+    - Type
+    - Required
+    - Example Value
+    - Description
+  * - ``title``
+    - string
+    - Y
+    - Lorem ipsum
+    - Hero box title.
+  * - ``button_icon``
+    - string
+    - 
+    - fa fa-home
+    - A list of CSS classes to render an icon, separated by comma or space.
+  * - ``button text``
+    - string
+    - 
+    - Lorem ipsum
+    - Text for the call to action.
+  * - ``button_url``
+    - string
+    - Relative link or external URL for the call to action. Do not use leading and trailing ("/") symbols to define relative links. (e.g. instead of ``/getting-started/``, use ``getting-started``).
+    - fa fa-home
+    - Link to
+  * - ``image``
+    - string
+    -
+    - /_static/img/mascots/scylla-enterprise.svg
+    - Path to the image. The image should be located in the project's ``_static`` folder.
+
+Usage
+-----
 
 Default
--------
+.......
 
 Using:
 
@@ -22,9 +77,8 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-With Image
-----------
-
+Hero box with image
+...................
 
 Using:
 
@@ -44,8 +98,8 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-With Button
------------
+Hero box with button
+....................
 
 Using:
 
