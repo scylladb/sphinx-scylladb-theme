@@ -6,10 +6,6 @@
 
 .. title:: Scylla Sphinx Theme
 
-.. raw:: html
-
-  <div class="landing landing--floating">
-
 .. hero-box::
   :button_icon: fa fa-github
   :button_url: https://github.com/scylladb/sphinx-scylladb-theme
@@ -91,7 +87,7 @@
 
 .. raw:: html
 
-  </div></div>
+  </div>
 
 .. toctree::
   :hidden:
