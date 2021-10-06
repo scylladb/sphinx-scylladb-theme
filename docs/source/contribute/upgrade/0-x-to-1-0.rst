@@ -3,7 +3,6 @@ Migrating from 0.x to 1.0
 
 This guide explains how to upgrade the version of the Scylla Sphinx Theme.
 
-
 How to check your current theme version
 ---------------------------------------
 
@@ -46,7 +45,7 @@ Here are the main breaking changes between the 0.x and 1.0 versions.
 	#. Add the following lines at the end of the ``Makefile``:
 
 		.. code-block::
-			
+
 			.PHONY: test
 			test: setup
 			    $(SPHINXBUILD) -b dirhtml $(TESTSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -75,5 +74,5 @@ To add a landing page to your project:
 New "Edit on GitHub" button
 ...........................
 
-If your project is open-source, we invite you to enable the new "Edit on GitHub" option. 
+If your project is open-source, we invite you to enable the new "Edit on GitHub" option.
 For more information, see :doc:`Template Options / Contribute button <../../configuration/template>`.

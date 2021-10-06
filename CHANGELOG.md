@@ -5,9 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1] - 06 October 2021
+
+**IMPORTANT**: For more information on how to update, see [Migrating from 1.0 to 1.1](https://sphinx-theme.scylladb.com/stable/contribute/upgrade/1-0-to-1-1).
+
+### Added
+
+- [#213](https://github.com/scylladb/sphinx-scylladb-theme/pull/213): We've added guides to help Scylla developers to migrate to Scylla Sphinx Theme 1.0 and 1.1.
+- [#230](https://github.com/scylladb/sphinx-scylladb-theme/pull/230): The only option we had to configure the layout of the site was to do it globally. Now, you can configure a few options at the page level. For more information, see [File-wide metadata](https://sphinx-theme.scylladb.com/stable/examples/metadata.html).
+
+### Changed
+
+- [#214](https://github.com/scylladb/sphinx-scylladb-theme/pull/214): Breadcrumbs now highlight the project's name. With this change, readers will know which documentation site they are navigating.
+
+### Fixed
+
+- [#231](https://github.com/scylladb/sphinx-scylladb-theme/pull/231): We've added back external links icons for sidebar links and topic boxes.
+
 ## [1.0] - 01 September 2021
 
-**IMPORTANT**: For more information on how to update, see [Migrating from 0.x to 1.0](https://sphinx-theme.scylladb.com/stable/contribute/migration/0-x-to-1-0).
+**IMPORTANT**: For more information on how to update, see [Migrating from 0.x to 1.0](https://sphinx-theme.scylladb.com/stable/contribute/upgrade/0-x-to-1-0).
 
 ### Added
 
@@ -170,6 +187,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#59](https://github.com/scylladb/sphinx-scylladb-theme/issues/59): All projects now share a 404 page.
 - [#58](https://github.com/scylladb/sphinx-scylladb-theme/issues/58): Support for redirections.
 
+[1.1]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.4...1.1.0
 [1.0]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.25...1.0.4
 [0.1.25]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.24...0.1.25
 [0.1.24]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.23...0.1.24

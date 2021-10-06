@@ -4,6 +4,8 @@ Template Options
 
 The following options can be defined in the file ``conf.py`` per project, using ``html_theme_options`` setting.
 
+.. tip:: Do you want to customize the layout of a specific page? See :doc:`File-wide metadata <../examples/metadata>`.
+
 Banner options
 --------------
 

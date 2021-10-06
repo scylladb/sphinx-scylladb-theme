@@ -112,7 +112,7 @@ html_theme_options = {
     "banner_button_text": "Learn more",
     "banner_button_url": "https://sphinx-theme.scylladb.com/stable/CHANGELOG",
     "banner_icon_path": "",
-    "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",
+    "banner_title_text": "Sphinx ScyllaDB Theme 1.1 is now released 🥳",
     "hide_edit_this_page_button": "false",
     "hide_sidebar_index": "true",
     "hide_banner": "false",

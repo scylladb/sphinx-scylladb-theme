@@ -1,0 +1,36 @@
+Migrating from 1.0 to 1.1
+=========================
+
+This guide explains how to upgrade the version of the Scylla Sphinx Theme.
+
+How to check your current theme version
+---------------------------------------
+
+The theme version is displayed in the footer of the project's documentation site.
+
+.. image:: version.png
+
+If your project theme's version is <1.0, follow this guide to get the latest version.
+
+Upgrade to version 1.1
+----------------------
+
+Here are the main breaking changes between the 1.0 and 1.1 versions.
+
+#. Set ``sphinx-scylladb-theme`` in ``docs/pyproject.toml`` to ``sphinx-scylladb-theme = "~1.1.0"``.
+
+#. In ``conf.py``, remove the option ``html_theme_options`` from ``html_theme_options``.
+
+	.. note:: Depending on your project configuration, you may find ``conf.py`` under ``docs/source/conf.py`` or ``docs/conf.py``.
+
+#. With 1.1, you can configure the layout of a specific page. For example, if you are using a home page created with topic boxes as explained in the :doc:`previous upgrade guide <0-x-to-1-0>`, we recommend you to add the following lines at the beginning of your root ``index.rst`` file:
+
+	.. code-block:: rst
+
+		:full-width:
+		:hide-version-warning:
+		:hide-pre-content:
+		:hide-post-content:
+		:landing:
+
+For more information about what each annotation does, see :doc:`File-wide metadata <../../examples/metadata>`.
