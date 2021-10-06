@@ -27,7 +27,13 @@ Here are the main breaking changes between the 0.x and 1.0 versions.
 	.. note:: Depending on your project configuration, you may find ``conf.py`` under ``docs/source/conf.py`` or ``docs/conf.py``.
 
 	#. Remove the option ``header_links`` from ``html_theme_options``.
-	#. If exist, remove the option ``show_sidebar_index``. If this option was set to ``true``, set ``"show_sidebar_index": "false"``.
+	#. If exist, remove the option ``show_sidebar_index`` from ``html_theme_options``. If this option was set to ``true``, set ``"hide_sidebar_index": "false"``.
+	#. If they exist, remove or comment out the following lines:
+
+		.. code-block:: python
+
+			# Add ExpertRec Search
+			# html_js_files = ['expertrec.js']
 
 #. Edit ``docs/Makefile``:
 
@@ -63,7 +69,7 @@ For example, check out `Scylla Sphinx Theme <https://sphinx-theme.scylladb.com/s
 To add a landing page to your project:
 
 #. Create a new ``docs/source/index.rst`` file. Here you have a `sample template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/source/index.rst>`_ ready to be adapted.
-#. Set ``"show_sidebar_index": "true"`` in ``html_theme_options`` (``conf.py``).
+#. Set ``"hide_sidebar_index": "false"`` in ``html_theme_options`` (``conf.py``).
 
 
 New "Edit on GitHub" button
