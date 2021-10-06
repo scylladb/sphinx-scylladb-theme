@@ -147,7 +147,7 @@ Configuration options for the left sidebar.
   * - ``hide_sidebar_index``
     -  string
     -  true
-    -  Set to ``true`` to hide the sidebars on the index page.
+    -  **DEPRECATED**: This option will be deleted in future releases. Instead, use the :doc:`:full-width: annotation <../examples/metadata>`.
   * - ``collapse_navigation``
     - string
     - false
@@ -162,7 +162,6 @@ Example:
 .. code:: python
 
   html_theme_options = {
-      'hide_sidebar_index': 'true',
       'collapse_navigation': 'false',
       'navigation_depth': '-1'
   }

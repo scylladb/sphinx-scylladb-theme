@@ -156,12 +156,10 @@
     ></script>
     <!-- End Font Awesome -->
   </head>
-  {% set hide_sidebar = pagename == master_doc and
-  theme_hide_sidebar_index|lower == 'true' %}
   <body>
     {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
     include 'promo-banner.html' %} {% endif %} {% include 'header.html'%}
-    <section class="layout {{'layout--full-width' if hide_sidebar}}">
+    <section class="layout {{'layout--full-width' if full_width}}">
       <div class="content large-order-2">
         {% if pagename != master_doc %} {% if versions and current_version and
         latest_version and current_version != latest_version %}
@@ -192,12 +190,12 @@
         'content-navigation.html'%} {% endif %}
       </div>
       <div
-        class="sidebar-left {{'hide-for-large' if hide_sidebar}} large-order-1"
+        class="sidebar-left {{'hide-for-large' if full_width}} large-order-1"
       >
         {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%
         include sidebartemplate %} {%- endfor %} {%- endif %}
       </div>
-      {% if not hide_sidebar %}
+      {% if not full_width %}
       <div class="sidebar-right large-order-3">
         {% if not hide_toc %} {% include 'secondary-side-nav.html' %} {% endif
         %}

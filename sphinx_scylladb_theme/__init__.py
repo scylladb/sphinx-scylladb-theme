@@ -30,6 +30,11 @@ def compute_toc_tree(toctree, maxdepth, collapse):
     return toctree_html
 
 
+def compute_full_width(context):
+    file_meta = context.get("meta", None) or {}
+    return "full-width" in file_meta
+
+
 def compute_hide_toc(context):
     if "toc" not in context:
         return True
@@ -40,6 +45,7 @@ def compute_hide_toc(context):
 def update_context(app, pagename, templatename, context, doctree):
     context["scylladb_theme_version"] = version
     context["navigation_tree"] = compute_toc_tree
+    context["full_width"] = compute_full_width(context)
     context["hide_toc"] = compute_hide_toc(context)
 
     if (

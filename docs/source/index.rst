@@ -1,3 +1,5 @@
+:full-width:
+
 .. title:: Scylla Sphinx Theme
 
 .. raw:: html
