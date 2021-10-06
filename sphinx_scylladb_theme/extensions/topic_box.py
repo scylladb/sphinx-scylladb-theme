@@ -4,7 +4,7 @@ Sphinx directive for HTML Topic Box Components.
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-from .utils import generate_template
+from .utils import generate_template, is_url
 
 
 class TopicBox(Directive):
@@ -24,16 +24,23 @@ class TopicBox(Directive):
         container_class_name = self.options.get("class", "").replace(",", " ")
 
         link = self.options.get("link")
-        html_tag_open = generate_template(
+        link_template = """
+            <div class="{class_name} {container_class_name}">
+                <div class="card">
             """
+        if is_url(link):
+            link_template = """
+            <div class="cell {class_name} {container_class_name}">
+                <a class="card" href="{link}" target="_blank">
+            """
+        elif link:
+            link_template = """
             <div class="cell {class_name} {container_class_name}">
                 <a class="card" href="{link}">
             """
-            if link
-            else """
-            <div class="{class_name} {container_class_name}">
-                <div class="card">
-            """,
+
+        html_tag_open = generate_template(
+            link_template,
             class_name=class_name,
             container_class_name=container_class_name,
             link=link,
@@ -73,8 +80,12 @@ class TopicBox(Directive):
         anchor = (
             generate_template(
                 """
-            <div class="{class_name}__anchor">{anchor}</div>
-            """,
+                <div class="{class_name}__anchor">{anchor} <i class="fa fa-link" aria-hidden="true"></i></div>
+                """
+                if is_url(link)
+                else """
+                <div class="{class_name}__anchor">{anchor}</div>
+                """,
                 class_name=class_name,
                 anchor=anchor,
             )
