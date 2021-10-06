@@ -1,0 +1,18 @@
+{% if versions and current_version and latest_version and current_version !=
+latest_version %}
+<div class="admonition caution">
+  <p class="admonition-title">Caution</p>
+  <p>
+    {% if current_version.name == theme_default_branch %} You are reading an
+    unstable version of this documentation. {% else %} You are not reading the
+    most current version of the documentation. {% endif %} If you want
+    up-to-date information, please have a look at
+    <a href="{{ vpathto(latest_version.name) }}">
+      {% if latest_version in versions.branches %} {{ latest_version.name |
+      replace(theme_branch_substring_removed, '') }} {% else %} {{
+      latest_version.name | replace(theme_tag_substring_removed, '') }} {% endif
+      %} </a
+    >.
+  </p>
+</div>
+{% endif %}

@@ -144,10 +144,6 @@ Configuration options for the left sidebar.
     - Type
     - Default Value
     - Description
-  * - ``hide_sidebar_index``
-    -  string
-    -  true
-    -  **DEPRECATED**: This option will be deleted in future releases. Instead, use the :doc:`:full-width: annotation <../examples/metadata>`.
   * - ``collapse_navigation``
     - string
     - false

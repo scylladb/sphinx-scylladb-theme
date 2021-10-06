@@ -71,9 +71,13 @@
   }
 }
 
-.layout--full-width .content {
+.layout--full-width.landing .content {
   /* Reset for all screen sizes */
   padding: 0 !important;
+}
+
+.layout--full-width .content {
+  /* Reset for all screen sizes */
   margin-left: 0 !important;
   width: 100% !important;
   max-width: 100% !important;

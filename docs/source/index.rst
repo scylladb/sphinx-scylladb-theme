@@ -1,4 +1,8 @@
 :full-width:
+:hide-version-warning:
+:hide-pre-content:
+:hide-post-content:
+:landing:
 
 .. title:: Scylla Sphinx Theme
 

@@ -26,8 +26,44 @@ This would be converted to the following HTML:
 Full width
 ----------
 
-If set, hides boths sidenavs and makes the content full-width. 
+If set, hides boths sidenavs and makes the content full-width.
 
 .. code-block:: none
 
    :full-width:
+
+Landing page
+------------
+
+If set, removes all internal paddings from the page.
+
+.. code-block:: none
+
+   :landing:
+
+Hide version warning
+--------------------
+
+If set, hides the version warning from the page.
+
+.. code-block:: none
+
+   :hide-version-warning:
+
+Hide pre content
+----------------
+
+If set, hides the breadcrumbs and contribute button from the page.
+
+.. code-block:: none
+
+   :hide-pre-content:
+
+Hide post content
+-----------------
+
+If set, hides the prev / next navigation buttons from the page.
+
+.. code-block:: none
+
+   :hide-post-content:

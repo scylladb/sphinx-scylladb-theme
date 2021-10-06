@@ -26,7 +26,7 @@ Here are the main breaking changes between the 0.x and 1.0 versions.
 	.. note:: Depending on your project configuration, you may find ``conf.py`` under ``docs/source/conf.py`` or ``docs/conf.py``.
 
 	#. Remove the option ``header_links`` from ``html_theme_options``.
-	#. If exist, remove the option ``show_sidebar_index`` from ``html_theme_options``.
+	#. If exists, remove the option ``show_sidebar_index`` from ``html_theme_options``.
 	#. If they exist, remove or comment out the following lines:
 
 		.. code-block:: python
@@ -45,7 +45,7 @@ Here are the main breaking changes between the 0.x and 1.0 versions.
 	#. Add the following lines at the end of the ``Makefile``:
 
 		.. code-block::
-			
+
 			.PHONY: test
 			test: setup
 			    $(SPHINXBUILD) -b dirhtml $(TESTSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -71,5 +71,5 @@ Here you can find a `sample template <https://github.com/scylladb/sphinx-scyllad
 New "Edit on GitHub" button
 ...........................
 
-If your project is open-source, we invite you to enable the new "Edit on GitHub" option. 
+If your project is open-source, we invite you to enable the new "Edit on GitHub" option.
 For more information, see :doc:`Template Options / Contribute button <../../configuration/template>`.
