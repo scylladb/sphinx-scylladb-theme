@@ -19,7 +19,7 @@ Here are the main breaking changes between the 1.0 and 1.1 versions.
 
 #. Set ``sphinx-scylladb-theme`` in ``docs/pyproject.toml`` to ``sphinx-scylladb-theme = "~1.1.0"``.
 
-#. In ``conf.py``, remove the option ``html_theme_options`` from ``html_theme_options``.
+#. In ``conf.py``, remove the option ``hide_sidebar_index`` from ``html_theme_options``.
 
 	.. note:: Depending on your project configuration, you may find ``conf.py`` under ``docs/source/conf.py`` or ``docs/conf.py``.
 
