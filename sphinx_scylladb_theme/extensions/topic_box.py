@@ -80,7 +80,7 @@ class TopicBox(Directive):
         anchor = (
             generate_template(
                 """
-                <div class="{class_name}__anchor">{anchor} <i class="fa fa-link" aria-hidden="true"></i></div>
+                <div class="{class_name}__anchor">{anchor} <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 """
                 if is_url(link)
                 else """
