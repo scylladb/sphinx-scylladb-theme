@@ -21,6 +21,4 @@ jobs:
         with:
           python-version: 3.7
       - name: Build docs
-        run: |
-          export PATH=$PATH:~/.local/bin
-          make -C docs test
+        run: make -C docs test
