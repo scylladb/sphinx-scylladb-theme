@@ -1,4 +1,4 @@
-name: "Publish docs to GitHub Pages"
+name: "Docs / Publish"
 
 on:
   push:
@@ -6,9 +6,10 @@ on:
       - master
     paths:
       - "docs/**"
+  workflow_dispatch:
+
 jobs:
   release:
-    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,11 +22,8 @@ jobs:
         with:
           python-version: 3.7
       - name: Build docs
-        run: |
-          export PATH=$PATH:~/.local/bin
-          cd docs
-          make multiversion
-      - name: Deploy
+        run: make -C docs multiversion
+      - name: Deploy docs to GitHub Pages
         run: ./docs/_utils/deploy.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

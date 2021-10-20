@@ -1,4 +1,4 @@
-name: "Build docs on pull requests"
+name: "Docs / Build PR"
 
 on:
   pull_request:
@@ -8,8 +8,7 @@ on:
       - "docs/**"
 
 jobs:
-  release:
-    name: Build
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,5 +23,4 @@ jobs:
       - name: Build docs
         run: |
           export PATH=$PATH:~/.local/bin
-          cd docs
-          make test
+          make -C docs test
