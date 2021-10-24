@@ -26,5 +26,5 @@ def test_override_smv_latest_version_env():
 def test_override_rst_epilog():
     config = ConfigStub()
     config.rst_epilog = "|a| raw:: html"
-    assert "|v| raw:: html" in override_rst_epilog(config)
-    assert "|x| raw:: html" in override_rst_epilog(config)
+    assert "|v| replace:: :raw-html:" in override_rst_epilog(config)
+    assert "|x| replace:: :raw-html:" in override_rst_epilog(config)

@@ -18,6 +18,20 @@ a {
   color: $color-typography-base-link;
 }
 
+a.reference:after {
+  font-family: $font-icons-family;
+  font-size: $font-smallest;
+  padding: 0 4px;
+}
+
+a.reference.external:after {
+  content: "\f08e";
+}
+
+a.reference.download:after {
+  content: "\f019";
+}
+
 a:hover {
   color: $color-typography-base-link;
   font-weight: 500;

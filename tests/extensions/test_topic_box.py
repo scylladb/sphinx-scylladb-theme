@@ -71,6 +71,19 @@ test_data = [
                 <div class="topic-box__body">
         """,
     ],
+    [
+        [],
+        {"title": "Lorem Ipsum", "link": "https://test.local"},
+        ["Content"],
+        """
+        <div class="cell topic-box ">
+            <a class="card" href="https://test.local" target="_blank">
+                <div class="topic-box__head">
+                    <h3 class="topic-box__title">Lorem Ipsum</h3>
+                </div>
+                <div class="topic-box__body">
+        """,
+    ],
 ]
 
 
