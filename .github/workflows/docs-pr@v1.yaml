@@ -1,4 +1,4 @@
-name: "Build docs on pull requests"
+name: "Docs / Build PR"
 
 on:
   pull_request:
@@ -8,8 +8,7 @@ on:
       - "docs/**"
 
 jobs:
-  release:
-    name: Build
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +21,4 @@ jobs:
         with:
           python-version: 3.7
       - name: Build docs
-        run: |
-          export PATH=$PATH:~/.local/bin
-          cd docs
-          make test
+        run: make -C docs test
