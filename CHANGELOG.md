@@ -5,7 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 27 October 2021
+
+### Added
+
+- [#213](https://github.com/scylladb/sphinx-scylladb-theme/pull/213): We've added guides to help Scylla developers to migrate to Scylla Sphinx Theme 1.0 and 1.1.
+- [#236](https://github.com/scylladb/sphinx-scylladb-theme/pull/236): Added documentation to install the toolchain for Windows users.
+
+### Changed
+
+- [#214](https://github.com/scylladb/sphinx-scylladb-theme/pull/214): Breadcrumbs now highlight the project's name. With this change, readers will know which documentation site they are navigating.
+- [#231](https://github.com/scylladb/sphinx-scylladb-theme/pull/231): All external links include an external link icon, and they now open on a new page.
+- [#240](https://github.com/scylladb/sphinx-scylladb-theme/pull/240): We've removed transparency from the home page mascot.
+
+### Fixed
+
+- [#214](https://github.com/scylladb/sphinx-scylladb-theme/pull/214): Breadcrumbs links to internal pages were not working.
+
 ## [1.0] - 01 September 2021
+
+**IMPORTANT**: For more information on how to update, see [Migrating from 0.x to 1.0](https://sphinx-theme.scylladb.com/stable/contribute/migration/0-x-to-1-0).
 
 ### Added
 
@@ -168,6 +187,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#59](https://github.com/scylladb/sphinx-scylladb-theme/issues/59): All projects now share a 404 page.
 - [#58](https://github.com/scylladb/sphinx-scylladb-theme/issues/58): Support for redirections.
 
+[1.0.5]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.4...1.0.5
 [1.0]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.25...1.0.4
 [0.1.25]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.24...0.1.25
 [0.1.24]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.23...0.1.24

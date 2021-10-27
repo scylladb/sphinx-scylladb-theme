@@ -1,23 +1,44 @@
-=====
 Links
 =====
 
 There are a few links you can use with different purposes.
 
-Using:
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
 
-.. code-block:: rst
+   * - Link type
+     - Markup
+     - Renders as
+     - Description
+   * - External Link
+     - .. code-block:: rst
 
-    * This is an example of an `External Link <https://docs.scylladb.com/some-doc>`_. It links to another site and has a arrow pointing out icon. It opens in a new tab.
-    * This is an example of an :ref:`Internal Link <link-format-examples>`. This is an internal cross reference. It requires a bookmark.
-    * This is an example of an :doc:`Internal Doc <../index>`. This is an internal doc cross reference. it looks for a file. A full path is required.
-    * This is an example of an :download:`download <index.rst>`. This opens a download window. It is for downloading software.
+          `External Link <https://docs.scylladb.com/some-doc>`_
+     - `External Link <https://docs.scylladb.com/some-doc>`_
+     - Use this markup to create a link to another site or project. When rendered it has an arrow pointing out icon. It opens the content in a new tab.
+   * - Internal Cross-reference
+     - .. code-block:: rst
 
-.. _link-format-examples:
+          :ref:`Internal Link <here>`
+     - :ref:`Internal Link <here>`
+     - This is an internal cross reference. It requires a bookmark. Content opens in the same tab.
+   * - Internal Cross-reference Bookmark
+     - .. code-block:: rst
 
-Results in:
+          .. _here:
+     - .. _here:
+     - This is an internal cross reference bookmark. It requires an internal cross-reference anchor (above). It does not render, but serves as a point to link to.
+   * - Internal Doc Reference
+     - .. code-block:: rst
 
-* This is an example of an `External Link <https://docs.scylladb.com/some-doc>`_. It links to another site and has a arrow pointing out icon. It opens in a new tab.
-* This is an example of an :ref:`Internal Link <link-format-examples>`. This is an internal cross reference. It requires a bookmark.
-* This is an example of an :doc:`Internal Doc <../index>`. This is an internal doc cross reference. it looks for a file. A full path is required.
-* This is an example of an :download:`download <index.rst>`. This opens a download window. It is for downloading software.
+          :doc:`Internal Doc <../index>`
+     - :doc:`Internal Doc <../index>`
+     - This is an internal doc cross reference. it looks for a file. A full path is required.
+   * - Download Link
+     - .. code-block:: rst
+
+          :download:`download <index.rst>`
+
+     - :download:`download <index.rst>`
+     - This opens a download window. It is used to help users download software or files.

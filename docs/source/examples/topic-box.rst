@@ -1,12 +1,65 @@
-=========
 Topic Box
 =========
 
-Default Topic
--------------
+A custom directive that creates graphical boxes (cards) on the root ``index.rst`` file.
 
-With Icon
-=========
+.. warning:: Do not use the ``topic-box`` on subordinate ``index.rst`` files.
+
+Syntax
+------
+
+.. code-block:: rst
+
+   .. topic-box::
+      <options>
+
+      <text>
+
+Options
+-------
+
+The ``topic-box`` directive supports the following options:
+
+.. list-table::
+  :widths: 20 20 10 20 30
+  :header-rows: 1
+
+  * - Option
+    - Type
+    - Required
+    - Example Value
+    - Description
+  * - ``title``
+    - string
+    - Y
+    - Lorem ipsum
+    - Topic box title.
+  * - ``icon``
+    - string
+    -
+    - fa fa-home
+    - A list of CSS classes to render icons, separated by comma or space.
+  * - ``image``
+    - string
+    -
+    - /_static/img/mascots/scylla-enterprise.svg
+    - Path to the image. The image should be located in the project's ``_static`` folder.
+  * - ``link``
+    - string
+    -
+    - getting-started
+    - Relative link or external URL for the call to action. Do not use leading and trailing ("/") symbols to define relative links. (e.g. instead of ``/getting-started/``, use ``getting-started``).
+  * - ``anchor``
+    - string
+    -
+    - Getting Started >
+    - Text for the call to action.
+
+Usage
+-----
+
+Topic with icon
+...............
 
 Using:
 
@@ -30,8 +83,8 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-With Image
-==========
+Topic with image
+................
 
 Using:
 
@@ -55,8 +108,32 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-With Horizontal Scroll (Mobile)
-===============================
+Topic with external link
+........................
+
+Using:
+
+.. code-block:: rst
+
+    .. topic-box::
+        :title: Lorem Ipsum
+        :link: https://scylladb.com
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Results in:
+
+.. topic-box::
+    :title: Lorem Ipsum
+    :link: https://scylladb.com
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+Topic with horizontal scroll (mobile)
+.....................................
 
 Using:
 
@@ -133,8 +210,8 @@ Results in:
 
     </div></div>
 
-Product Topic
--------------
+Product topic
+.............
 
 Using:
 
@@ -159,8 +236,14 @@ Results in:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 
-Topic Grid
-----------
+Topic grid
+..........
+
+Create powerful, multi-device, topic box grids using Foundation's 12-column grid system.
+To make the columns wider or smaller, you can use the option ``:class:``.
+For example, ``:class: large-3`` means that the topic box will take 3 out of 12 columns in desktop devices.
+
+For more information, see `The Grid System <https://get.foundation/sites/docs/grid.html>`_.
 
 Using:
 

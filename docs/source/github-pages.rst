@@ -38,7 +38,7 @@ To configure the workflows:
 
 #. Edit the workflows to match the project configuration if the default branch is not ``master`` or the docs are not under the ``docs`` folder. For example:
 
-    .. code-block:
+    .. code-block::
 
         on:
         push:

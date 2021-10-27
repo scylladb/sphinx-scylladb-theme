@@ -35,7 +35,7 @@ autosectionlabel_prefix_document = True
 master_doc = "index"
 
 # General information about the project.
-project = "Scylla Documentation Theme and Extensions"
+project = "Scylla Sphinx Theme"
 copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
 author = u"Scylla Project Contributors"
 
@@ -85,7 +85,7 @@ redirects_file = "_utils/redirections.yaml"
 TAGS = []
 smv_tag_whitelist = multiversion_regex_builder(TAGS)
 # Whitelist pattern for branches (set to None to ignore all branches)
-BRANCHES = ["branch-1.0", "multiversion-test"]
+BRANCHES = ["branch-1.0", "master"]
 smv_branch_whitelist = multiversion_regex_builder(BRANCHES)
 # Defines which version is considered to be the latest stable version.
 # Must be listed in smv_tag_whitelist or smv_branch_whitelist.
@@ -108,14 +108,16 @@ html_theme_path = ["../.."]
 # further.  For a list of options available for the theme, see the
 # documentation.
 html_theme_options = {
+    "conf_py_path": "docs/source/",
     "banner_button_text": "Learn more",
     "banner_button_url": "https://sphinx-theme.scylladb.com/stable/CHANGELOG",
     "banner_icon_path": "",
     "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",
+    "hide_edit_this_page_button": "false",
     "hide_sidebar_index": "true",
     "hide_banner": "false",
     "hide_version_dropdown": ["master"],
-    "github_issues_repository": "scylladb/scylla-doc-issues",
+    "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
 }
