@@ -1,6 +1,9 @@
 <div class="breadcrumbs">
-  <span class="bread__item"
-    ><a href="{{ pathto(master_doc) }}" class="bread__highlight">
+  <span class="bread__item">
+    <a
+      href="{% if 'contents' in master_doc %}{{html_baseurl}}{% else %}{{ pathto(master_doc) }}{% endif %}"
+      class="bread__highlight"
+    >
       <i class="fas fa-home"></i> {{ project }}</a
     ></span
   >
