@@ -25,7 +25,10 @@
     }
 
     label {
+      font-size: inherit;
+      line-height: 1;
       margin-left: 8px;
+      max-height: 17px;
     }
 
     .scylla-icon--expand {
@@ -72,10 +75,6 @@
       padding-bottom: 24px;
 
       &.has-children {
-        a {
-          max-width: 80%;
-        }
-
         &.current {
           padding-bottom: 20px;
         }
