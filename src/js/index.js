@@ -1,3 +1,6 @@
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
 require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
 
