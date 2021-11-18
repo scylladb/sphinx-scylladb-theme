@@ -1,39 +1,17 @@
-a.enlarge-image {
-  color: inherit;
-  font-weight: inherit;
-}
-
-.enlarge-button {
-  cursor: pointer;
-  height: 100%;
-  padding: 5px;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  user-select: none;
-  width: 100%;
-  z-index: 90;
-
-  &__icon {
-    width: 21px;
-    height: 21px;
-  }
+.enlarge-image {
+  cursor: zoom-in;
 }
 
 .enlarge-image-reveal {
   background: transparent;
+  cursor: zoom-out;
   border: none;
   padding: 0px;
   text-align: center;
   width: fit-content;
 
-  &__button i {
-    height: 34px;
-    width: 34px;
-    filter: brightness(100%);
-  }
-
   img {
-    padding: 45px;
+    padding: 15px;
+    background-color: $color-white;
   }
 }

@@ -15,7 +15,7 @@ renders the image
    :alt: checkmark
 
 
-Whereas the Figure directive allows you to use captions
+Whereas the Figure directive allows you to use captions.
 
 .. code-block:: none
 
@@ -31,19 +31,24 @@ Renders the image as:
 
    This is the caption for the image
 
-The custom class ``enlarge-image`` adds a button with the caption "Enlarge" on the top-right side corner of your images. 
-When the user clicks on it, it opens a popup with the image in full width. 
-This is handy when images are too small to be readable on the documentation page.
+Resize images
+-------------
+
+You can resize images (and figures) with the option ``width``.
+When a reader clicks on an image with this option set, the image opens in a popup in full size.
+This is handy when images are too small to be read from the documentation page.
+
+For example:
 
 .. code-block:: none
 
    .. figure:: diagram.svg
       :width: 150px
-      :class: enlarge-image
 
 Renders the image as:
 
 .. figure:: diagram.svg
    :width: 150px
-   :class: enlarge-image
+
+Click on the image to preview it in full size.
 
