@@ -1,6 +1,7 @@
 import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
+
 require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
 
@@ -24,8 +25,34 @@ const createResponsiveTables = () => {
 
   tables.each(function () {
     if ($(this).find("thead tr").length > 1) {
-      console.log("in");
       $(this).addClass("thead-border");
+    }
+  });
+};
+
+const createEnlargeImagesButtons = () => {
+  $(".content img[width]").each(function () {
+    // Update parent css
+    const reveal_id = (Math.random() + 1).toString(36).substring(7);
+    $(this).wrap(
+      `<span class="enlarge-image"  data-open="` + reveal_id + `"></div>`
+    );
+    // Add image reveal
+    const image_reveal =
+      `
+      <div class="reveal enlarge-image-reveal" id="` +
+      reveal_id +
+      `" data-reveal>
+        <img src="` +
+      $(this).attr("src") +
+      `" data-close aria-label="Close modal">
+      </div>
+    `;
+    $(this).after(image_reveal);
+  });
+  $(".content a.image-reference").click(function (event) {
+    if ($(this).children(".enlarge-image").length > 0) {
+      event.preventDefault();
     }
   });
 };
@@ -87,6 +114,7 @@ const onResizeBanner = () => {
 };
 
 $(document).ready(function () {
+  createEnlargeImagesButtons();
   $(document).foundation();
   createResponsiveTables();
   hideBanner();

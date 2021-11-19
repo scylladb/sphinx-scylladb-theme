@@ -1,0 +1,17 @@
+.enlarge-image {
+  cursor: zoom-in;
+}
+
+.enlarge-image-reveal {
+  background: transparent;
+  cursor: zoom-out;
+  border: none;
+  padding: 0px;
+  text-align: center;
+  width: fit-content;
+
+  img {
+    padding: 15px;
+    background-color: $color-white;
+  }
+}
