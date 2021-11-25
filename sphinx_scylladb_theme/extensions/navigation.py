@@ -12,12 +12,6 @@ from bs4 import BeautifulSoup, Tag
 
 
 @functools.lru_cache(maxsize=None)
-def _get_navigation_expand_image(soup: BeautifulSoup) -> Tag:
-    retval = soup.new_tag("i", attrs={"class": "scylla-icon scylla-icon--expand"})
-    return retval
-
-
-@functools.lru_cache(maxsize=None)
 def get_navigation_tree(toctree_html: str, collapse: bool) -> str:
     """Modify the given navigation tree, with furo-specific elements.
     Adds a checkbox + corresponding label to <li>s that contain a <ul> tag, to enable
@@ -49,8 +43,10 @@ def get_navigation_tree(toctree_html: str, collapse: bool) -> str:
 
         # Add the "label" for the checkbox which will get filled.
         label = soup.new_tag("label", attrs={"for": checkbox_name})
-        label.append(_get_navigation_expand_image(soup))
+        label.append(soup.new_tag("i", attrs={"class": "scylla-icon scylla-icon--expand"}))
         element.insert(1, label)
+        space = soup.new_tag("div", attrs={"class": "break"})
+        element.insert(2, space)
 
         # Add the checkbox that's used to store expanded/collapsed state.
         checkbox = soup.new_tag(
