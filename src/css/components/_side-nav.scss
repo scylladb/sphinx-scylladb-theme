@@ -27,14 +27,15 @@
     label {
       font-size: inherit;
       line-height: 1;
-      margin-left: 8px;
-      max-height: 17px;
+      margin-left: 5px;
+      max-height: 5px;
     }
 
     .scylla-icon--expand {
-      height: 17px;
-      width: 17px;
-      @extend .scylla-icon--plus;
+      height: 5px;
+      width: 10px;
+      vertical-align: top;
+      @extend .scylla-icon--triangle-down;
     }
 
     .toctree-checkbox {
@@ -44,6 +45,7 @@
 
       ~ ul {
         display: none;
+        margin-right: 20px;
       }
 
       &:checked {
@@ -51,7 +53,7 @@
           display: block;
         }
         ~ label .scylla-icon--expand {
-          @extend .scylla-icon--less;
+          @extend .scylla-icon--triangle-down;
         }
       }
     }
@@ -75,6 +77,15 @@
       padding-bottom: 24px;
 
       &.has-children {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & > a {
+          /* 100% - icon size */
+          max-width: calc(100% - 15px);
+        }
+
         &.current {
           padding-bottom: 20px;
         }
