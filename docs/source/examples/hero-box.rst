@@ -36,12 +36,12 @@ The ``hero-box`` directive supports the following options:
     - Hero box title.
   * - ``button_icon``
     - string
-    - 
+    -
     - fa fa-home
     - A list of CSS classes to render an icon, separated by comma or space.
   * - ``button text``
     - string
-    - 
+    -
     - Lorem ipsum
     - Text for the call to action.
   * - ``button_url``

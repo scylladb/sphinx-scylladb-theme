@@ -8,7 +8,6 @@ Contribute
    Contribute to the Documentation <contribute-docs>
    Contribute to the Sphinx Theme <contribute-theme>
    upgrade/index
-   api/sphinx_scylladb_theme
    Source Code <https://github.com/scylladb/sphinx-scylladb-theme>
 
 We are always looking for those who want to help and appreciate any contribution we can get.

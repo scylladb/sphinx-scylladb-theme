@@ -18,8 +18,8 @@
     type="text/javascript"
     src="{{ pathto('_static/js/main.bundle.js', 1) }}"
   ></script>
-  {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %} {%- endmacro %}
-  {%- macro css() %}
+  {%- for js in script_files %} {%- if not 'jquery' in js %} {{ js_tag(js) }}
+  {%- endif %} {%- endfor %} {%- endmacro %} {%- macro css() %}
   <!-- connect to domain of font files -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -169,16 +169,13 @@
         <div class="admonition caution">
           <p class="admonition-title">Caution</p>
           <p>
-            {% if current_version.name == theme_default_branch %} You are
-            reading an unstable version of this documentation. {% else %} You
-            are not reading the most current version of the documentation. {%
-            endif %} If you want up-to-date information, please have a look at
-
+            You are not reading the latest stable version of this documentation.
+            If you want up-to-date information, please have a look at
             <a href="{{ vpathto(latest_version.name) }}">
               {% if latest_version in versions.branches %} {{
               latest_version.name | replace(theme_branch_substring_removed, '')
-              }} {% else %} {{ latest_version.name |
-              replace(theme_tag_substring_removed, '') }} {% endif %} </a
+              }}{% else %} {{ latest_version.name |
+              replace(theme_tag_substring_removed, '') }}{% endif %}</a
             >.
           </p>
         </div>

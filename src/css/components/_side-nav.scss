@@ -25,13 +25,17 @@
     }
 
     label {
-      margin-left: 8px;
+      font-size: inherit;
+      line-height: 1;
+      margin-left: 5px;
+      max-height: 5px;
     }
 
     .scylla-icon--expand {
-      height: 17px;
-      width: 17px;
-      @extend .scylla-icon--plus;
+      height: 5px;
+      width: 10px;
+      vertical-align: top;
+      @extend .scylla-icon--triangle-down;
     }
 
     .toctree-checkbox {
@@ -41,6 +45,7 @@
 
       ~ ul {
         display: none;
+        margin-right: 20px;
       }
 
       &:checked {
@@ -48,7 +53,7 @@
           display: block;
         }
         ~ label .scylla-icon--expand {
-          @extend .scylla-icon--less;
+          @extend .scylla-icon--triangle-down;
         }
       }
     }
@@ -72,18 +77,36 @@
       padding-bottom: 24px;
 
       &.has-children {
-        a {
-          max-width: 80%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & > a {
+          /* 100% - icon size */
+          max-width: calc(100% - 15px);
         }
 
         &.current {
           padding-bottom: 20px;
+        }
+
+        &:hover > a {
+          color: $color-typography-base-link;
+        }
+
+        &:hover > .toctree-checkbox ~ label i {
+          filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
+            brightness(90%) contrast(95%);
         }
       }
 
       &.current-page {
         & > a {
           color: $color-typography-base-link;
+        }
+        & > .toctree-checkbox:checked ~ label i {
+          filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
+            brightness(90%) contrast(95%);
         }
       }
 
@@ -113,6 +136,34 @@
 
   &__search {
     margin-bottom: 20px;
+  }
+}
+
+.collapsible-button {
+  @include floating;
+  background-color: $color-white;
+  border-radius: 50%;
+  bottom: 10px;
+  display: none;
+  font-size: 0px;
+  left: 300px;
+  padding: 13.5px;
+  position: fixed;
+  cursor: pointer;
+
+  i {
+    @extend .scylla-icon--expand;
+    height: 16px;
+    width: 16px;
+    margin: 0;
+  }
+}
+
+.side-nav--collapsed .collapsible-button {
+  left: -10px;
+  border-radius: 0 20px 20px 0;
+  i {
+    transform: rotate(180deg);
   }
 }
 
@@ -159,5 +210,19 @@
 @media screen and (min-width: $xlarge) {
   .side-nav {
     width: $side-nav-width;
+
+    &--collapsed {
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      width: $side-nav-width-collapsed;
+      .side-nav-content {
+        display: none;
+      }
+    }
+  }
+
+  .collapsible-button {
+    display: block;
   }
 }

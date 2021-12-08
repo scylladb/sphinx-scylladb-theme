@@ -133,6 +133,11 @@ cite {
   margin: 0 auto;
 }
 
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 @media screen and (min-width: $large) {
   h1 {
     font-size: 36px;

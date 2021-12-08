@@ -95,5 +95,5 @@
   commands
   Deployment <github-pages>
   examples/index
+  upgrade/index
   contribute/index
-  CHANGELOG

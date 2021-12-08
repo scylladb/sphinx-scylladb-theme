@@ -16,4 +16,3 @@ This would be converted to the following HTML:
    <meta name="description"
       content="The reStructuredText plaintext markup language">
    <meta name="keywords" content="plaintext, markup language">
-
