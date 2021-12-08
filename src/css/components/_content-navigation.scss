@@ -31,15 +31,14 @@
     @include floating;
     background-color: $color-white;
     display: none;
+    height: fit-content;
     font-size: 0px;
     padding: 13.5px 16.5px;
-    vertical-align: top;
     cursor: pointer;
 
     i {
       height: 16px;
       width: 10px;
-      min-height: 16px;
       margin: 0;
     }
   }

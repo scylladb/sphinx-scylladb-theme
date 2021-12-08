@@ -114,6 +114,22 @@ const onResizeBanner = () => {
   });
 };
 
+const calculateCollapsibleNavigationButtonPosition = () => {
+  const collapsibleButton = $(".collapsible-button");
+  const footer = $(".footer");
+  const offset = 10;
+  const footerOffset = footer.offset();
+  const footerTop = footerOffset.top;
+  const footerBottom = footerTop + footer.outerHeight();
+  const screenBottom = $(window).scrollTop() + $(window).innerHeight();
+  const screenTop = $(window).scrollTop();
+  if (screenBottom > footerTop && screenTop < footerBottom) {
+    collapsibleButton.css("bottom", screenBottom - footerTop + offset);
+  } else {
+    collapsibleButton.css("bottom", offset);
+  }
+};
+
 const collapseNavigation = () => {
   new Foundation.Tooltip($(".collapsible-button"), {
     position: "top",
@@ -140,6 +156,7 @@ const loadCollapsibleNavigation = () => {
   } else {
     expandNavigation();
   }
+  calculateCollapsibleNavigationButtonPosition();
 };
 
 const onClickCollapsibleNavigationButton = () => {
@@ -150,6 +167,13 @@ const onClickCollapsibleNavigationButton = () => {
     } else {
       collapseNavigation();
     }
+    calculateCollapsibleNavigationButtonPosition();
+  });
+};
+
+const onScrollCollapsibleNavigation = () => {
+  $(window).scroll(function () {
+    calculateCollapsibleNavigationButtonPosition();
   });
 };
 
@@ -166,4 +190,5 @@ $(document).ready(function () {
   /* Collapsible navigation */
   loadCollapsibleNavigation();
   onClickCollapsibleNavigationButton();
+  onScrollCollapsibleNavigation();
 });
