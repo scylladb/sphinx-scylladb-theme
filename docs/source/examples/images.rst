@@ -51,4 +51,3 @@ Renders the image as:
    :width: 150px
 
 Click on the image to preview it in full size.
-

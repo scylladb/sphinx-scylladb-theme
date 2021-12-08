@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6] - 08 December 2021
+
+### Added
+
+- [#187](https://github.com/scylladb/sphinx-scylladb-theme/issues/187): When a reader clicks on an image that has been resized, this now opens in full width.
+- [#193](https://github.com/scylladb/sphinx-scylladb-theme/issues/193): We've added a button to hide the sidebar. With this feature, our readers can read the documentation with fewer distractions.
+
+### Changed
+
+- [#206](https://github.com/scylladb/sphinx-scylladb-theme/issues/206): We've updated jQuery dependency to 3.6.0.
+- [#246](https://github.com/scylladb/sphinx-scylladb-theme/pull/246): The contribute button is now more pronounced to make it more noticeable.
+- [#247](https://github.com/scylladb/sphinx-scylladb-theme/issues/247): The sidebar's dropdown icons sport a new design.
+- [#245](https://github.com/scylladb/sphinx-scylladb-theme/pull/245): The panel box component sports a new design.
+- [#252](https://github.com/scylladb/sphinx-scylladb-theme/issues/252): We've reviewed the warning that appears when the user is not reading the latest stable version of the documentation. Now, the warning also considers branches that are still under active development.
+- [#259](https://github.com/scylladb/sphinx-scylladb-theme/issues/259): The sidebar's scrollbar is now thinner and in line with the new design.
+
+
 ## [1.0.5] - 27 October 2021
 
 ### Added
@@ -24,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0] - 01 September 2021
 
-**IMPORTANT**: For more information on how to update, see [Migrating from 0.x to 1.0](https://sphinx-theme.scylladb.com/stable/contribute/migration/0-x-to-1-0).
+**IMPORTANT**: For more information on how to update, see [Migrating from 0.x to 1.0](https://sphinx-theme.scylladb.com/stable/upgrade/0-x-to-1-0).
 
 ### Added
 
@@ -187,6 +204,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#59](https://github.com/scylladb/sphinx-scylladb-theme/issues/59): All projects now share a 404 page.
 - [#58](https://github.com/scylladb/sphinx-scylladb-theme/issues/58): Support for redirections.
 
+[1.0.6]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.5...1.0.6
 [1.0.5]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.4...1.0.5
 [1.0]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.25...1.0.4
 [0.1.25]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.24...0.1.25

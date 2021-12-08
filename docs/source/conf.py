@@ -110,7 +110,7 @@ html_theme_path = ["../.."]
 html_theme_options = {
     "conf_py_path": "docs/source/",
     "banner_button_text": "Learn more",
-    "banner_button_url": "https://sphinx-theme.scylladb.com/stable/CHANGELOG",
+    "banner_button_url": "https://sphinx-theme.scylladb.com/stable/upgrade/CHANGELOG",
     "banner_icon_path": "",
     "banner_title_text": "Sphinx ScyllaDB Theme 1.0 is now released 🥳",
     "hide_edit_this_page_button": "false",
