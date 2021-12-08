@@ -1,4 +1,5 @@
 import $ from "jquery";
+
 window.jQuery = $;
 window.$ = $;
 
@@ -113,13 +114,81 @@ const onResizeBanner = () => {
   });
 };
 
+const calculateCollapsibleNavigationButtonPosition = () => {
+  const collapsibleButton = $(".collapsible-button");
+  const footer = $(".footer");
+  const offset = 10;
+  const footerOffset = footer.offset();
+  const footerTop = footerOffset.top;
+  const footerBottom = footerTop + footer.outerHeight();
+  const screenBottom = $(window).scrollTop() + $(window).innerHeight();
+  const screenTop = $(window).scrollTop();
+  if (screenBottom > footerTop && screenTop < footerBottom) {
+    collapsibleButton.css("bottom", screenBottom - footerTop + offset);
+  } else {
+    collapsibleButton.css("bottom", offset);
+  }
+};
+
+const collapseNavigation = () => {
+  new Foundation.Tooltip($(".collapsible-button"), {
+    position: "top",
+    tipText: "Expand",
+  });
+  localStorage.setItem("scylladocs-collapse-side-nav", "1");
+  $("#side-nav").addClass("side-nav--collapsed");
+  $(".content").addClass("content--collapsed");
+};
+
+const expandNavigation = () => {
+  new Foundation.Tooltip($(".collapsible-button"), {
+    position: "top",
+    tipText: "Collapse",
+  });
+  localStorage.setItem("scylladocs-collapse-side-nav", "0");
+  $("#side-nav").removeClass("side-nav--collapsed");
+  $(".content").removeClass("content--collapsed");
+};
+
+const loadCollapsibleNavigation = () => {
+  if (localStorage.getItem("scylladocs-collapse-side-nav") == "1") {
+    collapseNavigation();
+  } else {
+    expandNavigation();
+  }
+  calculateCollapsibleNavigationButtonPosition();
+};
+
+const onClickCollapsibleNavigationButton = () => {
+  $(".collapsible-button").on("click", function () {
+    $(".collapsible-button").foundation("destroy");
+    if ($("#side-nav").hasClass("side-nav--collapsed")) {
+      expandNavigation();
+    } else {
+      collapseNavigation();
+    }
+    calculateCollapsibleNavigationButtonPosition();
+  });
+};
+
+const onScrollCollapsibleNavigation = () => {
+  $(window).scroll(function () {
+    calculateCollapsibleNavigationButtonPosition();
+  });
+};
+
 $(document).ready(function () {
   createEnlargeImagesButtons();
   $(document).foundation();
   createResponsiveTables();
+  onScrollHighlightSecondarySidebar();
+  openExternalLinksNewBrowserTab();
+  /* Banner */
   hideBanner();
   onCloseBanner();
   onResizeBanner();
-  onScrollHighlightSecondarySidebar();
-  openExternalLinksNewBrowserTab();
+  /* Collapsible navigation */
+  loadCollapsibleNavigation();
+  onClickCollapsibleNavigationButton();
+  onScrollCollapsibleNavigation();
 });
