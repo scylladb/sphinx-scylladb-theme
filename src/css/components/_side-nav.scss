@@ -138,27 +138,28 @@
 .collapsible-button {
   @include floating;
   background-color: $color-white;
+  border-radius: 50%;
   bottom: 10px;
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
   display: none;
   font-size: 0px;
   left: 290px;
-  padding: 13.5px 16.5px;
+  padding: 13.5px;
   position: fixed;
   cursor: pointer;
 
   i {
-    @extend .scylla-icon--chevron-left;
+    @extend .scylla-icon--expand;
     height: 16px;
-    width: 10px;
+    width: 16px;
     margin: 0;
   }
 }
 
 .side-nav--collapsed .collapsible-button {
-  left: 0;
+  left: -10px;
+  border-radius: 0 20px 20px 0;
   i {
-    @extend .scylla-icon--chevron-right;
+    transform: rotate(180deg);
   }
 }
 
@@ -211,7 +212,7 @@
       padding-left: 0;
       padding-right: 0;
       width: $side-nav-width-collapsed;
-      #side-nav-content {
+      .side-nav-content {
         display: none;
       }
     }
