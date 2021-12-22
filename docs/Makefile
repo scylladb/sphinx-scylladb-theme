@@ -83,4 +83,4 @@ multiversion: setup
 
 .PHONY: multiversionpreview
 multiversionpreview: multiversion
-	$(POETRY) run python -m http.server 5500 --directory $(BUILDDIR)/dirhtml
+	$(POETRY) run python3 -m http.server 5500 --directory $(BUILDDIR)/dirhtml
