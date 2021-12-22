@@ -8,7 +8,7 @@ readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pyyaml = "^5.3"
+pyyaml = ">=5.3,<7.0"
 sphinx-copybutton = "^0.2.8"
 Sphinx = "^2.4.4"
 sphinx-multiversion-scylla = "^0.2.4"
