@@ -19,7 +19,7 @@ sphinx-tabs = "^3.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
-sphinx-autobuild = "^0.7.1"
+sphinx-autobuild = "^2021.3.14"
 pre-commit = "^2.13.0"
 
 [build-system]
