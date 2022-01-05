@@ -12,7 +12,7 @@ Using:
 
 .. code-block:: rst
 
-    .. list-table::
+    .. list-table:: Caption
         :widths: 33 33 33
         :header-rows: 1
 
@@ -25,7 +25,7 @@ Using:
 
 Results in:
 
-.. list-table::
+.. list-table:: Caption
     :widths: 33 33 33
     :header-rows: 1
 
