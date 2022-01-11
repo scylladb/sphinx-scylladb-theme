@@ -1,4 +1,4 @@
-name: "Docs / Build PR"
+name: "Test docs"
 
 on:
   pull_request:
@@ -20,5 +20,7 @@ jobs:
         uses: actions/setup-python@v2.3.1
         with:
           python-version: 3.7
+      - name: Set up Poetry
+        run: curl -sSL https://install.python-poetry.org | python -
       - name: Build docs
         run: make -C docs test

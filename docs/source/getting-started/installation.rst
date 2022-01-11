@@ -7,9 +7,10 @@ This quickstart walks you through the steps required to add the documentation to
 Prerequisites
 -------------
 
-Before adding the documentation toolchain to a project, you will need to have installed **Python +3.7** and **PIP** on your local environment.
+Before adding the documentation toolchain to a project, you will need to have installed:
 
-If you are on **Windows**, you will need to run ``make`` commands from a Unix-based terminal such as `Git Bash <https://www.atlassian.com/git/tutorials/git-bash>`_.
+- `Python 3.7 <https://www.python.org/downloads/>`_ or later.
+- `Poetry 1.12 <https://python-poetry.org/docs/master/>`_ or later.
 
 Step 1: Download the sample project
 -----------------------------------
@@ -27,7 +28,6 @@ Step 1: Download the sample project
          │   ├── _utils/
          │   |   ├── redirections.yaml
          │   |   ├── deploy.sh
-         │   |   ├── setup.sh
          │   ├── source/
          │   ├── Makefile
 
@@ -50,6 +50,8 @@ Step 3: Preview the site locally
 #. Delete or adapt the sample documentation files under ``docs/source``.
 
 #. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx.
+
+   .. note:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`: 
 
 #. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
 

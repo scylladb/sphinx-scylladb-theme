@@ -2,13 +2,34 @@
 Troubleshooting
 ===============
 
+Installation
+------------
+
+.. _Windows_Installation:
+
+How to use the toolchain in Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To run the toolchain on **Windows**, you will need to:
+
+1. Edit the ``POETRY`` constant in ``docs/Makefile`` to point to the ``PATH`` where you have installed Poetry.
+This is normally under ``C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry``.
+
+.. code-block::
+
+    # You can set these variables from the command line.
+    POETRY        = C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry
+
+
+2. Run ``make`` commands from a Unix-based terminal such as `Git Bash <https://www.atlassian.com/git/tutorials/git-bash>`_.
+
 Multiversion
 ------------
 
 .. _Sync_Fork:
 
-I cannot see my latest local changes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How to preview latest local changes with multiverson
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the command builds the documentation that is available on GitHub (remote repository).
 
@@ -26,8 +47,8 @@ To build multiversion docs for the local branches:
 
 .. _Preview_Production:
 
-I want to preview the documentation published in production
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How to preview locally the documentation published in production
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Follow `these steps <https://docs.github.com/es/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_ to configure a remote that points to the upstream repository in Git.
 
@@ -45,8 +66,10 @@ I want to preview the documentation published in production
 
 4. Run the command ``make multiversionpreview`` again.
 
-No matching refs found!
-^^^^^^^^^^^^^^^^^^^^^^^
+.. _No_Matching_Refs_Found:
+
+How to fix the error "No matching refs found!"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the console raises the error "No matching refs found!", most likely your fork is not updated with the upstream repository.
 

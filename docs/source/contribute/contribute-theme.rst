@@ -18,28 +18,8 @@ It combines several things in one tool:
 
 To initialize a Python development environment for this project:
 
-#.  Make sure you have Python version 3.7 or later installed.
+#.  Make sure you have Python 3.7 or later installed.
 #.  `Install Poetry <https://python-poetry.org/docs/>`_.
-
-#.  Initialize a virtual environment with:
-
-    ..  code-block:: console
-
-        poetry install
-
-    This will create an environment outside of the project directory, somewhere under ``~/Library/Caches/pypoetry/virtualenvs/``.
-    You'll see the path in installation logs.
-
-#.  Activate the virtual environment for current shell session:
-
-    ..  code-block:: console
-
-        poetry shell
-
-    Alternatively, if you use PyCharm, you can configure the project to use this environment as the default Python interpreter.
-    PyCharm doesn't detect Poetry (yet), so just use the "virtualenv" option and
-    provide the full path to the environment.
-
 
 Previewing the theme locally
 ----------------------------
@@ -107,6 +87,10 @@ To publish a new version of the theme to PyPi, run the following script:
 
     ./deploy.sh
 
+To increase the **minor version**, run ``poetry version minor`` before  ``./deploy``.
+
+To increase the **major version**, run ``poetry version major`` before  ``./deploy``.
+
 Behind the scenes, ``deploy.sh`` executes the following logic:
 
 1. Checks if the local git URL matches the original repository to prevent you from releasing from a personal fork.
@@ -117,6 +101,3 @@ Behind the scenes, ``deploy.sh`` executes the following logic:
 
 After publishing the package, you should see the new release listed on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
 
-To increase the **minor version**, run ``poetry version minor`` before  ``./deploy``.
-
-To increase the **major version**, run ``poetry version major`` before  ``./deploy``.
