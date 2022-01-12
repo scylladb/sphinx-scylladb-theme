@@ -7,7 +7,7 @@ Scylla Sphinx Theme
 
 The documentation toolchain for Scylla projects.
 
-The toolchain is available as a `PyPI package <https://pypi.org/project/sphinx-scylladb-theme/>`_. It is tested with Python 3.7, Sphinx 2.4.4, and Fedora 32.
+The toolchain is available as a `PyPI package <https://pypi.org/project/sphinx-scylladb-theme/>`_. It is tested with Python 3.7, Sphinx 4.2, and Fedora 32.
 
 Features
 --------
