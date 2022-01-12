@@ -1,4 +1,6 @@
-/* Overwrite expertrec */
+/* This stylesheet uses the !important operator
+   to overwrite expertrec custom CSS rules. 
+*/
 .search-box {
   background: $color-background-search-box;
   border-radius: 4px;
@@ -77,6 +79,7 @@
 #er_search_results {
   .er-search-result-box {
     margin: 0 auto !important;
+    margin-top: 10px !important;
     display: block !important;
   }
 
