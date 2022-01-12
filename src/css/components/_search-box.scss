@@ -1,4 +1,6 @@
-/* Overwrite expertect */
+/* This stylesheet uses the !important operator
+   to overwrite expertrec custom CSS rules. 
+*/
 .search-box {
   background: $color-background-search-box;
   border-radius: 4px;
@@ -77,12 +79,17 @@
 #er_search_results {
   .er-search-result-box {
     margin: 0 auto !important;
+    margin-top: 10px !important;
     display: block !important;
   }
 
   .text {
     width: 100% !important;
   }
+}
+
+#search-result-input-form {
+  max-width: 800px !important;
 }
 
 #er_search_button {
@@ -94,6 +101,15 @@
   right: 0 !important;
 }
 
+.er-facet-header {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.er-facet-val {
+  padding: 5px 2px !important;
+}
+
 /* Mobile */
 .er-suggestion-sm {
   .er_search_input_dummy {
@@ -101,5 +117,24 @@
   }
   .er_search_button_dummy {
     border: 0 !important;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .er-facets {
+    display: none;
+    width: initial !important;
+    min-width: initial !important;
+    max-width: 300px !important;
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .er-facets {
+    display: block;
+    position: fixed !important;
+  }
+  .er-facet-count {
+    display: none;
   }
 }
