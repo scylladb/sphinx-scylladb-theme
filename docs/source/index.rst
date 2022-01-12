@@ -1,8 +1,10 @@
+:full-width:
+:hide-version-warning:
+:hide-pre-content:
+:hide-post-content:
+:landing:
+
 .. title:: Scylla Sphinx Theme
-
-.. raw:: html
-
-  <div class="landing landing--floating">
 
 .. hero-box::
   :button_icon: fa fa-github
@@ -85,7 +87,7 @@
 
 .. raw:: html
 
-  </div></div>
+  </div>
 
 .. toctree::
   :hidden:
