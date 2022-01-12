@@ -1,19 +1,15 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
+import warnings
 from datetime import date
 
-import recommonmark
-from recommonmark.transform import AutoStructify
 
 from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 sys.path.insert(0, os.path.abspath(".."))
 
 # -- General configuration ------------------------------------------------
-
-# Target Sphinx version
-needs_sphinx = "1.8"
 
 # Add any Sphinx extension module names here, as strings.
 extensions = [
@@ -29,7 +25,6 @@ extensions = [
 
 # The suffix(es) of source filenames.
 source_suffix = [".rst", ".md"]
-autosectionlabel_prefix_document = True
 
 # The master toctree document.
 master_doc = "index"
@@ -45,22 +40,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
-
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
-
-# Setup Sphinx
-def setup(sphinx):
-    sphinx.add_config_value(
-        "recommonmark_config",
-        {
-            "enable_eval_rst": True,
-            "enable_auto_toc_tree": False,
-        },
-        True,
-    )
-    sphinx.add_transform(AutoStructify)
-
 
 # List of substitutions
 rst_prolog = """
@@ -134,3 +113,11 @@ html_baseurl = "https://sphinx-theme.scylladb.com"
 
 # Dictionary of values to pass into the template engine’s context for all pages
 html_context = {"html_baseurl": html_baseurl}
+
+# -- Initialize Sphinx ----------------------------------------------
+def setup(sphinx):
+    warnings.filterwarnings(
+        action='ignore',
+        category=UserWarning,
+        message=r'.*Container node skipped.*',
+    )
