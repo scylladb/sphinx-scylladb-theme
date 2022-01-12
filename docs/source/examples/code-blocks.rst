@@ -63,6 +63,17 @@ Hide copy button
 
 Add the class ``hide-copy-button`` to the ``code-block`` directive to hide the copy button.
 
+For example:
+
+.. code-block:: rst
+
+   .. code-block:: rst
+      :class: hide-copy-button
+      
+      .. tip:: here's a tip
+
+Renders:
+
 .. code-block:: rst
    :class: hide-copy-button
    
