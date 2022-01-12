@@ -18,8 +18,8 @@
     type="text/javascript"
     src="{{ pathto('_static/js/main.bundle.js', 1) }}"
   ></script>
-  {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %} {%- endmacro %}
-  {%- macro css() %}
+  {%- for js in script_files %} {%- if not 'jquery' in js %} {{ js_tag(js) }}
+  {%- endif %} {%- endfor %} {%- endmacro %} {%- macro css() %}
   <!-- connect to domain of font files -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 

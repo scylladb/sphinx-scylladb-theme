@@ -22,7 +22,6 @@ This would be converted to the following HTML:
       content="The reStructuredText plaintext markup language">
    <meta name="keywords" content="plaintext, markup language">
 
-
 Full width
 ----------
 

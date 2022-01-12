@@ -120,4 +120,3 @@ After publishing the package, you should see the new release listed on `PyPI <ht
 To increase the **minor version**, run ``poetry version minor`` before  ``./deploy``.
 
 To increase the **major version**, run ``poetry version major`` before  ``./deploy``.
-

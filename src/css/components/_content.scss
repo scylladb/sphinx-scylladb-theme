@@ -47,20 +47,6 @@
     margin-bottom: $gap;
   }
 
-  .reference:after {
-    font-family: $font-icons-family;
-    font-size: $font-smallest;
-    padding: 0 4px;
-  }
-
-  .reference.external:after {
-    content: "\f08e";
-  }
-
-  .reference.download:after {
-    content: "\f019";
-  }
-
   .section {
     margin-top: -$header-height;
     padding-top: $header-height;
@@ -149,5 +135,12 @@
     padding-top: 60px;
     margin-left: $side-nav-width;
     width: calc(100% - (#{$side-nav-width} + #{$secondary-side-nav-width}));
+
+    &--collapsed {
+      margin-left: $side-nav-width-collapsed;
+      width: calc(
+        100% - (#{$side-nav-width-collapsed} + #{$secondary-side-nav-width})
+      );
+    }
   }
 }

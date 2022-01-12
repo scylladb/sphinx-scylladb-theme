@@ -36,9 +36,9 @@ The ``topic-box`` directive supports the following options:
     - Topic box title.
   * - ``icon``
     - string
-    - 
+    -
     - fa fa-home
-    - A list of CSS classes to render icons, separated by comma or space. 
+    - A list of CSS classes to render icons, separated by comma or space.
   * - ``image``
     - string
     -
@@ -107,6 +107,30 @@ Results in:
     :anchor: Lorem ipsum
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Topic with external link
+........................
+
+Using:
+
+.. code-block:: rst
+
+    .. topic-box::
+        :title: Lorem Ipsum
+        :link: https://scylladb.com
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Results in:
+
+.. topic-box::
+    :title: Lorem Ipsum
+    :link: https://scylladb.com
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
 
 Topic with horizontal scroll (mobile)
 .....................................
