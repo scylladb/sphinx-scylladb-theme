@@ -75,7 +75,7 @@ To generate multiple versions of the documentation:
 
 2. The previous command should generate HTML docs under the ``docs/_build/dirhtml`` directory.
 
-.. tip:: If the command raises an error, see :doc:`Troubleshooting <configuration/troubleshooting>` for help.
+.. tip:: If the command raises an error, see :ref:`Troubleshooting <No_Matching_Refs_Found>` for help.
 
 Clean all builds
 ----------------
