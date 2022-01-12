@@ -72,6 +72,6 @@ code {
   }
 }
 
-a.copybtn img:hover {
-  filter: brightness(0);
+.hide-copy-button .copybtn {
+  display: none;
 }
