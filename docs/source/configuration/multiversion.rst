@@ -13,7 +13,7 @@ On this page, you’ll learn:
 Listing new versions
 --------------------
 
-.. warning:: Maintaining multiple versions is expensive. Consider listing docs for new versions only if the release introduces relevant breaking changes reflected in the documentation.
+.. caution:: Maintaining multiple versions is expensive. Consider listing docs for new versions only if the release introduces relevant breaking changes reflected in the documentation.
     For example, it's preferable to build docs for a major release rather than one release per patch.
 
 The settings ``TAGS`` and ``BRANCHES`` in ``conf.py`` defines which versions are supported:
@@ -49,7 +49,6 @@ The purpose is to have default documentation links that do not change, which is 
 You can override the latest version output directory via the configuration file ``conf.py`` with the setting ``smv_rename_latest_version``:
 
 .. code:: python
-
 
     smv_latest_version = 'x.y.z'         # Use the branch/tag name
     smv_rename_latest_version = 'stable' # Use the commit hash
