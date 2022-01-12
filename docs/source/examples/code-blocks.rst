@@ -5,6 +5,9 @@ Code block directives are for displaying code. By default the code is copyable a
 To keep code snippets neat, separate the display from the command.
 This keeps the command copyable without having the screen return inside the command.
 
+Basic usage
+-----------
+
 For example using the rst code block before a |rst| example:
 
 ``.. code-block:: rst`` when used with the ``.. tip:: here's a tip`` as shown above, renders as:
@@ -54,3 +57,14 @@ You can create code-blocks in any of the following `languages <https://pygments.
    fi
 
 If you are including a large example (an entire file) as a code-block, refer to :doc:`Literal Include <includes>`.
+
+Hide copy button
+----------------
+
+Add the class ``hide-copy-button`` to the ``code-block`` directive to hide the copy button.
+
+.. code-block:: rst
+   :class: hide-copy-button
+   
+   .. tip:: here's a tip
+
