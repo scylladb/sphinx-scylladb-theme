@@ -38,6 +38,7 @@ repos:
     rev: v4.1.0
     hooks:
       - id: end-of-file-fixer
+        exclude: "sphinx_scylladb_theme/static"
       - id: trailing-whitespace
       - id: check-yaml
       - id: check-json

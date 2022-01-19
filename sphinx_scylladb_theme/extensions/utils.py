@@ -32,7 +32,7 @@ def copy(src, dest):
     if os.path.exists(src):
         try:
             shutil.copytree(src, dest)
-        except:
+        except Exception:
             shutil.copy(src, dest)
 
 
@@ -47,7 +47,13 @@ def build_redirect_body(path):
     :rtype: str
     """
     html = generate_template(
-        """<html><head><meta http-equiv="refresh" content="0; url={path}"></head></html>""",
+        """
+        <html>
+        <head>
+        <meta http-equiv="refresh" content="0; url={path}">
+        </head>
+        </html>
+        """,
         path=path,
     )
     return html

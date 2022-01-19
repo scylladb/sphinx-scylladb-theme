@@ -1,10 +1,6 @@
 import os
 
-from sphinx_scylladb_theme import (
-    override_rst_epilog,
-    override_smv_latest_version,
-    version,
-)
+from sphinx_scylladb_theme import override_rst_epilog, override_smv_latest_version
 
 
 class ConfigStub:

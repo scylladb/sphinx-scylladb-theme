@@ -39,7 +39,12 @@ class HeroBox(Directive):
         button = (
             generate_template(
                 """
-                <a href="{button_url}"><button class="hero__button button"><i class="icon {button_icon}" aria-hidden="true"></i>{button_text}</button></a>
+                <a href="{button_url}">
+                <button class="hero__button button">
+                <i class="icon {button_icon}" aria-hidden="true"></i>
+                {button_text}
+                </button>
+                </a>
                 """,
                 button_icon=button_icon,
                 button_url=button_url,
