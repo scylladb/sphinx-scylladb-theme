@@ -1,6 +1,7 @@
 from os import getenv, path
 
 from notfound import extension as not_found
+import sphinx_collapse
 import sphinx_copybutton
 from sphinx_tabs import tabs
 
@@ -93,17 +94,20 @@ def setup(app):
     app.add_lexer("cql", CQLLexer())
     app.add_lexer("ditaa", DitaaLexer())
 
+    """Setup thid-party extensions"""
+    not_found.setup(app)
+    sphinx_collapse.setup(app)
+    sphinx_copybutton.setup(app)
+    tabs.setup(app)
+
     """Setup custom extensions"""
     hero_box.setup(app)
     multiversion.setup(app)
-    not_found.setup(app)
     panel_box.setup(app)
     redirects.setup(app)
-    sphinx_copybutton.setup(app)
     from .extensions import substitutions
 
     substitutions.setup(app)
-    tabs.setup(app)
     topic_box.setup(app)
 
     return {"version": version, "parallel_read_safe": True}
