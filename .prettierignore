@@ -1,1 +1,3 @@
 sphinx_scylladb_theme/static
+*.py
+*.html

@@ -51,7 +51,7 @@ Step 3: Preview the site locally
 
 #. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx.
 
-   .. note:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`: 
+   .. note:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`:
 
 #. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
 

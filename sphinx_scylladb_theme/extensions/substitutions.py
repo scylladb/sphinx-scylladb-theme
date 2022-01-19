@@ -1,9 +1,8 @@
 """
-Extensions for Sphinx which allow substitutions in code blocks.
+Extensions for Sphinx which allows substitutions within code blocks.
 
-Copyright 2014-2016 ClusterHQ Licensed under the Apache License, Version 2.0.
-
-Adapted from https://github.com/adamtheturtle/sphinx-substitution-extensions for ScyllaDB.
+Adapted from https://github.com/adamtheturtle/sphinx-substitution-extensions
+(Copyright 2014-2016 ClusterHQ, Apache License, Version 2.0) for ScyllaDB.
 """
 
 from typing import Dict, List, Tuple

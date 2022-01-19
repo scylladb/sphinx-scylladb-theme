@@ -21,7 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#252](https://github.com/scylladb/sphinx-scylladb-theme/issues/252): We've reviewed the warning that appears when the user is not reading the latest stable version of the documentation. Now, the warning also considers branches that are still under active development.
 - [#259](https://github.com/scylladb/sphinx-scylladb-theme/issues/259): The sidebar's scrollbar is now thinner and in line with the new design.
 
-
 ## [1.0.5] - 27 October 2021
 
 ### Added

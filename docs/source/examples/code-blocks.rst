@@ -69,13 +69,12 @@ For example:
 
    .. code-block:: rst
       :class: hide-copy-button
-      
+
       .. tip:: here's a tip
 
 Renders:
 
 .. code-block:: rst
    :class: hide-copy-button
-   
-   .. tip:: here's a tip
 
+   .. tip:: here's a tip

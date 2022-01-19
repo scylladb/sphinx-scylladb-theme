@@ -11,7 +11,8 @@ from .utils import build_redirect_body, is_url
 
 def create_redirects(app, exception):
     """
-    Creates redirections for all the paths listed in the ``redirects_file`` defined in ``conf.py``.
+    Creates redirections for all the paths listed in the
+    ``redirects_file`` defined in ``conf.py``.
 
     The file should contain a dictionary of redirections formatted as:
 

@@ -1,6 +1,6 @@
 import os
 
-from .utils import copy, build_redirect_body
+from .utils import build_redirect_body, copy
 
 
 def add_gh_pages_support(app, exception):

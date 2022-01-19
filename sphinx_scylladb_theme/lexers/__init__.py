@@ -1,2 +1,2 @@
-from .cql import CQLLexer
-from .ditaa import DitaaLexer
+from .cql import CQLLexer  # noqa: F401
+from .ditaa import DitaaLexer  # noqa: F401

@@ -1,14 +1,16 @@
 """
-Extensions for Sphinx which generate the navigation tree from Sphinx's toctree function's output.
+Extension for Sphinx that generates a navigation tree with dropdowns
+from Sphinx's toctree function's output.
 
-Copyright (c) 2020 Pradyun Gedam Licensed under the MIT License
 
-Adapted from https://github.com/pradyunsg/furo for ScyllaDB.
+Adapted from https://github.com/pradyunsg/furo
+(Copyright (c) 2020 Pradyun Gedam, MIT License)
+for sphinx-scylladb-theme.
 """
 
 import functools
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup
 
 
 @functools.lru_cache(maxsize=None)
@@ -60,7 +62,8 @@ def get_navigation_tree(toctree_html: str, collapse: bool) -> str:
                 "name": checkbox_name,
             },
         )
-        # if this has a "current" class, be expanded by default (by checking the checkbox)
+        # if this has a "current" class,
+        # be expanded by default (by checking the checkbox)
         if "current" in classes:
             checkbox.attrs["checked"] = ""
 

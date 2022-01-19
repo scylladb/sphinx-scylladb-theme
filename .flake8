@@ -1,0 +1,3 @@
+[flake8]
+max-line-length = 88
+exclude = sphinx_scylladb_theme/lexers/cql.py

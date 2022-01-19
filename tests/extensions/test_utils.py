@@ -1,6 +1,6 @@
 from sphinx_scylladb_theme.extensions.utils import (
-    generate_template,
     build_redirect_body,
+    generate_template,
     is_url,
 )
 
@@ -19,7 +19,13 @@ def test_generate_content():
 
 def test_build_redirect_body():
     path = "/redirect"
-    expected_output = '<html><head><meta http-equiv="refresh" content="0; url=/redirect"></head></html>'
+    expected_output = """
+    <html>
+    <head>
+    <meta http-equiv="refresh" content="0; url=/redirect">
+    </head>
+    </html>
+    """
     assert build_redirect_body(path) == expected_output
 
 
