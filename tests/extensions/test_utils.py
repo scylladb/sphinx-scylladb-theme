@@ -1,6 +1,6 @@
 from sphinx_scylladb_theme.extensions.utils import (
-    generate_template,
     build_redirect_body,
+    generate_template,
     is_url,
 )
 

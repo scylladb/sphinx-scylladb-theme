@@ -29,7 +29,7 @@ For more information about the stack, see `Toolchain <https://sphinx-theme.scyll
 Installation
 ------------
 
-To add the toolchain to your project, see the `Getting Started <https://sphinx-theme.scylladb.com/stable/getting-started/index.html>`_ section of our docs.
+To add the toolchain to a ScyllaDB project, see the `Getting Started <https://sphinx-theme.scylladb.com/stable/getting-started/index.html>`_ section of our docs.
 
 Usage
 -----

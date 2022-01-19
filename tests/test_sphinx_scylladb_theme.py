@@ -1,8 +1,9 @@
 import os
+
 from sphinx_scylladb_theme import (
-    version,
-    override_smv_latest_version,
     override_rst_epilog,
+    override_smv_latest_version,
+    version,
 )
 
 

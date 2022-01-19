@@ -4,7 +4,6 @@ import sys
 import warnings
 from datetime import date
 
-
 from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 sys.path.insert(0, os.path.abspath(".."))
@@ -117,7 +116,7 @@ html_context = {"html_baseurl": html_baseurl}
 # -- Initialize Sphinx ----------------------------------------------
 def setup(sphinx):
     warnings.filterwarnings(
-        action='ignore',
+        action="ignore",
         category=UserWarning,
-        message=r'.*Container node skipped.*',
+        message=r".*Container node skipped.*",
     )

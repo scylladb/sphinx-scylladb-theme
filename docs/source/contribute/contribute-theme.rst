@@ -100,4 +100,3 @@ Behind the scenes, ``deploy.sh`` executes the following logic:
 5. Asks for your PyPI username and password and publishes the package to PyPI with ``poetry publish``.
 
 After publishing the package, you should see the new release listed on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.
-
