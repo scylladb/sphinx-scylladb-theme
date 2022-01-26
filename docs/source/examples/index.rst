@@ -16,6 +16,7 @@ In general, there are  main components to the markup of any document:
    :hidden:
 
    admonitions
+   collapse
    code-blocks
    glossary
    headings
@@ -41,6 +42,7 @@ In general, there are  main components to the markup of any document:
   :class: my-panel
 
   * :doc:`Admonitions <admonitions>`
+  * :doc:`Collapse <collapse>`
   * :doc:`Code Blocks <code-blocks>`
   * :doc:`Glossary <glossary>`
   * :doc:`Headings <headings>`
