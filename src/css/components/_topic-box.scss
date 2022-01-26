@@ -21,6 +21,7 @@
     display: grid;
     grid-auto-flow: column;
     overflow-x: scroll;
+    padding: 20px 10px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -177,6 +178,8 @@
 
     &--scrollable .hs {
       display: flex;
+      overflow-x: initial;
+      padding: 0;
 
       .topic-box:last-child:after {
         display: none;
