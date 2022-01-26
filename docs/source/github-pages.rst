@@ -3,11 +3,11 @@ Deployment
 
 The theme uses GitHub Pages and GitHub Actions to make the documentation publicly available.
 
-On this page, you’ll learn:
+On this page, you will learn:
 
-- How to configure the workflows.
 - How to deploy to GitHub Pages.
 - How to set up a custom domain.
+- How to read build error messages.
 - How to re-run a workflow.
 - How to disable GitHub Pages.
 
@@ -16,7 +16,7 @@ On this page, you’ll learn:
 Available workflows
 -------------------
 
-The toolchain provides the following GitHub Actions under the directory ``.github/workflows``:
+The toolchain provides the following workflows under the directory ``.github/workflows``:
 
 .. list-table::
     :widths: 30 70
@@ -29,14 +29,22 @@ The toolchain provides the following GitHub Actions under the directory ``.githu
     * - ``docs-pr.yaml``
       - Builds the docs when the default branch receives a new pull request or when the pull request receives new commits. The purpose of this workflow is to make sure pull requests do not break the default branch after being merged.
 
-Configuring the workflows
--------------------------
+Installation
+------------
 
-To configure the workflows:
+To install the workflows:
 
-#. Ensure you have the :ref:`workflows <available-workflows>` in your project under ``.github/workflows``. If you have followed :doc:`Getting Started <../getting-started/installation>` to install the project, the workflows are already included in the documentation project by default. If this is not the case, you can download them from `this link <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/.github/workflows>`_.
+#. Copy the workflows named ``docs-*.yaml`` from `.github/workflows <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/.github/workflows>`_ to your project. The project's directory structure should look like the following:
 
-#. Edit the workflows to match the project configuration if the default branch is not ``master`` or the docs are not under the ``docs`` folder. For example:
+    .. code:: console
+
+        project-name/
+          ├── .github/
+          |   ├── workflows/
+          |   |   ├── docs-pages@vX.yaml
+          |   |   ├── docs-pr@vX.yaml
+
+#. If the default branch is not ``master`` or the docs are not under the ``docs`` folder, the workflows to match the project configuration. For example:
 
     .. code-block::
 
@@ -49,22 +57,18 @@ To configure the workflows:
 
 #. Commit and push the changes to GitHub (default branch).
 
-Enabling GitHub Pages
----------------------
-
-Once you push the :ref:`workflows <available-workflows>`  to the remote repository default branch, GitHub might take a couple of minutes to build and publish the site.
-
-You can check the status of the build on GitHub. Under your repository name, click **Actions**.
+Once you push the :ref:`workflows <available-workflows>` to the remote repository default branch, GitHub might take a couple of minutes to build and publish the site.
 
 If everything goes well, you will see the docs published under ``https://scylladb.github.io/<repository-slug>``.
 
+.. tip:: You can check the status of the build on GitHub. Under your repository name, click **Actions**.
 
 Setting up a custom domain
 --------------------------
 
-Follow the following steps to set up a custom domain:
+.. note:: Setting up a custom domain requieres access to `scylladb.com` DNS configuration. Contact us in Slack ``#scylla-docs`` channel to set this configuration for you.
 
-.. note::To set up a custom domain, you need access scylladb.com DNS configuration.
+Follow the following steps to set up a custom domain:
 
 #. In the domain's DNS configuration, create a new CNAME record that points ``<custom-sudomain>.scylladb.com`` to ``scylladb.github.io``.
 
@@ -74,6 +78,22 @@ Follow the following steps to set up a custom domain:
 
 #. Once the DNS changes propagate (<24 h), the docs will be accessible from the custom domain name.
 
+Reading error messages
+----------------------
+
+Docs builds usually fail when there is a critical error or warning in the documenation syntax.
+
+To get the specific error message:
+
+#. Hover the |x| that you will see next to the commit message, and click on **Details**.
+
+    .. figure:: images/build-error.png
+
+#. Search for "warning" and "error" in the box you will find at the top right of the screen.
+
+    .. figure:: images/build-log.png
+
+You should see the error messages highlighted.
 
 Re-running a workflow
 ---------------------

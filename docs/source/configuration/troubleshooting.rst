@@ -17,8 +17,7 @@ This is normally under ``C:\Users\<username>\AppData\Roaming\Python\Scripts\poet
 
 .. code-block::
 
-    # You can set these variables from the command line.
-    POETRY        = C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry
+    POETRY = C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry
 
 
 2. Run ``make`` commands from a Unix-based terminal such as `Git Bash <https://www.atlassian.com/git/tutorials/git-bash>`_.
@@ -28,8 +27,8 @@ Multiversion
 
 .. _Sync_Fork:
 
-How to preview latest local changes with multiverson
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How to preview latest local changes with multiversion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the command builds the documentation that is available on GitHub (remote repository).
 
