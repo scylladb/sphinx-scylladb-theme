@@ -58,6 +58,8 @@ To check if the upgrade completed successfully, run the command :doc:`make previ
 Optional features
 -----------------
 
+.. _new_landing_page:
+
 New landing page
 ................
 

@@ -15,20 +15,18 @@ Before adding the documentation toolchain to a project, you will need to have in
 Step 1: Download the sample project
 -----------------------------------
 
-#. Copy the ``docs`` and ``.github`` directories from the repository `scylladb/sphinx-scylladb-theme <https://github.com/scylladb/sphinx-scylladb-theme>`_  to the root directory of the project where you want to set up docs. The project's directory structure should look like the following:
+#. Copy the ``docs`` directory from the repository `scylladb/sphinx-scylladb-theme <https://github.com/scylladb/sphinx-scylladb-theme>`_  to the root directory of the project where you want to set up docs. The project's directory structure should look like the following:
 
    .. code:: console
 
       project-name/
-         ├── .github/
-         |   ├── workflows/
-         |   |   ├── docs-pages@vX.yaml
-         |   |   ├── docs-pr@vX.yaml
          ├── docs/
          │   ├── _utils/
          │   |   ├── redirections.yaml
          │   |   ├── deploy.sh
          │   ├── source/
+         │   |   ├── conf.py
+         │   |   ├── index.rst
          │   ├── Makefile
 
    .. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to ``docs/source`` directory.
@@ -51,7 +49,7 @@ Step 3: Preview the site locally
 
 #. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx.
 
-   .. note:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`:
+   .. tip:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`.
 
 #. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
 
