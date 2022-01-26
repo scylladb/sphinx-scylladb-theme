@@ -25,6 +25,8 @@ Step 1: Download the sample project
          │   |   ├── redirections.yaml
          │   |   ├── deploy.sh
          │   ├── source/
+         │   |   ├── conf.py
+         │   |   ├── index.rst
          │   ├── Makefile
 
    .. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to ``docs/source`` directory.
