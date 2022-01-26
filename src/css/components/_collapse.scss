@@ -1,0 +1,27 @@
+/* This stylesheet uses the !important operator
+   to overwrite sphinx_collapse custom CSS rules. 
+*/
+.sphinx_collapse__label {
+  display: flex !important;
+  font-size: initial;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-left: 0 !important;
+}
+
+.sphinx_collapse__icon {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.sphinx_collapse__input:checked ~ .sphinx_collapse__label,
+.sphinx_collapse__label:hover {
+  color: $color-typography-base-link;
+  .sphinx_collapse__icon {
+    border-top-color: $color-typography-base-link;
+  }
+}
+
+.sphinx_collapse__content {
+  margin-top: 10px;
+}
