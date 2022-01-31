@@ -1,6 +1,6 @@
 <div class="content-navigation">
     <div class="navigation navigation--prev">
-        {%- if prev and "no title" not in prev.title %}
+        {% if prev and "no title" not in prev.title %}
             <a class="navigation__link" href="{{ prev.link|e }}">
                 <button class="navigation__button">
                     <i class="scylla-icon scylla-icon--chevron-left"></i>
@@ -9,10 +9,10 @@
                     <span class="colored">PREVIOUS</span> <br />{{ prev.title }}
                 </div>
             </a>
-        {%- endif %}
+        {% endif %}
     </div>
     <div class="navigation navigation--next">
-        {%- if next and "no title" not in next.title %}
+        {% if next and "no title" not in next.title %}
             <a class="navigation__link" href="{{ next.link|e }}">
                 <div class="navigation__title">
                     <span class="colored">NEXT</span> <br />{{ next.title }}
@@ -21,6 +21,6 @@
                     <i class="scylla-icon scylla-icon--chevron-right"></i>
                 </button>
             </a>
-        {%- endif %}
+        {% endif %}
     </div>
 </div>

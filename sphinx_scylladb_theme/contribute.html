@@ -1,7 +1,4 @@
-<ul
-    class="dropdown menu scylla-dropdown scylla-dropdown--contribute"
-    data-dropdown-menu
->
+<ul class="dropdown menu scylla-dropdown scylla-dropdown--contribute" data-dropdown-menu>
     <li class="scylla-dropdown__item">
         <a class="scylla-dropdown__title" href="#">
             <div class="scylla-dropdown__title--body">
@@ -12,34 +9,36 @@
         </a>
         <ul class="menu scylla-dropdown__content">
             <li>
-                <a
-                    href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix"
-                    target="_blank"
-                >Report a doc issue
-                    <i class="icon fa fa-external-link" aria-hidden="true"></i
-                        ></a>
-                </li>
-                {% if theme_github_repository and theme_hide_edit_this_page_button|lower
-                == 'false'%}
+                <a href="https://github.com/{{ theme_github_issues_repository}}/issues/new?title=Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix"
+                    target="_blank">
+                    Report a doc issue
+                    <i class="icon fa fa-external-link" aria-hidden="true"></i>
+                </a>
+            </li>
+            {% if theme_github_repository and theme_hide_edit_this_page_button|lower == 'false'%}
                 <li>
-                    {% set branch = theme_default_branch %} {% if current_version %} {% if
-                        current_version.name == rename_latest_version %} {%set branch =
-                        latest_version %} {% else %} {% set branch = current_version.name %} {%
-                        endif %} {% endif %}
-                    <a
-                        href="https://github.com/{{ theme_github_repository }}/edit/{{ branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
-                        target="_blank"
-                    >Edit this page
-                        <i class="icon fa fa-external-link" aria-hidden="true"></i
-                            ></a>
-                    </li>
-{% endif %}
-<li>
-    <a href="https://docs.scylladb.com/contribute/" target="_blank"
-    >Learn how to contribute
-        <i class="icon fa fa-external-link" aria-hidden="true"></i
-            ></a>
+                    {% set branch = theme_default_branch %}
+                    {% if current_version %}
+                        {% if current_version.name == rename_latest_version %}
+                            {%set branch = latest_version %}
+                        {% else %}
+                            {% set branch = current_version.name %}
+                        {% endif %}
+                    {% endif %}
+                    <a href="https://github.com/{{ theme_github_repository }}/edit/{{ branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
+                        target="_blank">
+                        Edit this page
+                        <i class="icon fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                </li>
+            {% endif %}
+            <li>
+                <a href="https://docs.scylladb.com/contribute/" target="_blank">
+                    Learn how to contribute
+                    <i class="icon fa fa-external-link" aria-hidden="true">
+                    </i>
+                </a>
+            </li>
+        </ul>
     </li>
-</ul>
-</li>
 </ul>

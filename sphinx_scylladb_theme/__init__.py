@@ -1,8 +1,8 @@
 from os import getenv, path
 
-from notfound import extension as not_found
 import sphinx_collapse
 import sphinx_copybutton
+from notfound import extension as not_found
 from sphinx_tabs import tabs
 
 from sphinx_scylladb_theme._version import version
