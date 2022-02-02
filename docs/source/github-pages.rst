@@ -29,6 +29,8 @@ The toolchain provides the following workflows under the directory ``.github/wor
     * - ``docs-pr.yaml``
       - Builds the docs when the default branch receives a new pull request or when the pull request receives new commits. The purpose of this workflow is to make sure pull requests do not break the default branch after being merged.
 
+.. caution:: If you modify these workflows in your repository, you will need to maintain the changes. So instead, we recommend you to open an issue in the `sphinx-scylladb-theme repository <https://github.com/scylladb/sphinx-scylladb-theme>`_ so that all projects can benefit from the improvements you made.
+
 Installation
 ------------
 
