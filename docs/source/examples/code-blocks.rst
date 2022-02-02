@@ -17,24 +17,13 @@ For example using the rst code block before a |rst| example:
    .. tip:: here's a tip
 
 The code block directive can be changed to a language which is supported by |rst|.
-For example, the following code-block is bash. If you add the following code block directive, to the code sample below:
+For example, the following code-block is cql. If you add the following code block directive, to the code sample below:
 
-``.. code-block:: bash``
+``.. code-block:: cql``
 
-.. code-block:: bash
+.. code-block:: cql
 
-   #!/bin/bash
-
-   # Checks if local url matches the original repository
-   original_repo='scylladb/sphinx-scylladb-theme'
-   origin_repo=$(git config --get remote.origin.url)
-   if [[ $origin_repo != *$original_repo* ]]; then
-       echo "Error: You are tring to publish a new version of the theme"\
-            "from your personal fork."\
-            "Clone the repository '${original_repo}' locally,"\
-            "then run 'deploy.sh' from the original project."
-       exit 1
-   fi
+   create_keyspace_statement: CREATE KEYSPACE [ IF NOT EXISTS ] `keyspace_name` WITH `options`
 
 You see that there is syntax highlighting.
 
@@ -43,18 +32,7 @@ You can create code-blocks in any of the following `languages <https://pygments.
 
 .. code-block:: none
 
-   #!/bin/bash
-
-   # Checks if local url matches the original repository
-   original_repo='scylladb/sphinx-scylladb-theme'
-   origin_repo=$(git config --get remote.origin.url)
-   if [[ $origin_repo != *$original_repo* ]]; then
-       echo "Error: You are tring to publish a new version of the theme"\
-            "from your personal fork."\
-            "Clone the repository '${original_repo}' locally,"\
-            "then run 'deploy.sh' from the original project."
-       exit 1
-   fi
+   create_keyspace_statement: CREATE KEYSPACE [ IF NOT EXISTS ] `keyspace_name` WITH `options`
 
 If you are including a large example (an entire file) as a code-block, refer to :doc:`Literal Include <includes>`.
 
