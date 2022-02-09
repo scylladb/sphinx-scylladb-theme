@@ -14,7 +14,7 @@ from sphinx_scylladb_theme.extensions import (
     redirects,
     topic_box,
 )
-from sphinx_scylladb_theme.lexers import CQLLexer, DitaaLexer
+from sphinx_scylladb_theme.lexers import cql, ditaa
 
 
 def compute_toc_tree(toctree, maxdepth, collapse):
@@ -91,8 +91,8 @@ def setup(app):
     app.connect("config-inited", update_config)
 
     """Setup lexers"""
-    app.add_lexer("cql", CQLLexer())
-    app.add_lexer("ditaa", DitaaLexer())
+    app.add_lexer("cql", cql.CQLLexer)
+    app.add_lexer("ditaa", ditaa.DitaaLexer)
 
     """Setup thid-party extensions"""
     not_found.setup(app)

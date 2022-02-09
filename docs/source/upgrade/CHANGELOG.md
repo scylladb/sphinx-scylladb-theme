@@ -5,19 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.0] - 26 January 2022
+## [1.1] - 01 February 2022
 
 **IMPORTANT**: For more information on how to update, see [Migrating from 1.0 to 1.1](https://sphinx-theme.scylladb.com/stable/upgrade/1-0-to-1-1).
 
 ### Added
 
 - [#323](https://github.com/scylladb/sphinx-scylladb-theme/pull/323): The theme includes a new directive to collapse long content and redundant information.
-- [#263](https://github.com/scylladb/sphinx-scylladb-theme/pull/263): We use dependabot to receive automatic notifications when there are new dependency updates.
 - [#300](https://github.com/scylladb/sphinx-scylladb-theme/pull/300) : Support for Sphinx 4.x.
+- [#263](https://github.com/scylladb/sphinx-scylladb-theme/pull/263): We use dependabot to receive automatic notifications when there are new dependency updates.
+- [#229](https://github.com/scylladb/sphinx-scylladb-theme/issues/229): New file-wide metadata options.
+
+## Updated
+
+- [#263](https://github.com/scylladb/sphinx-scylladb-theme/pull/263): Update JavaScript and Python dependencies to the latest version.
+- [#307](https://github.com/scylladb/sphinx-scylladb-theme/issues/307): Before, poetry was installed as a dependency. From this release, you must install Poetry as a prerequisite.
 
 ### Fixed
 
-- [#263](https://github.com/scylladb/sphinx-scylladb-theme/pull/263): Update JavaScript and Python dependencies to the latest version.
 - [#301](https://github.com/scylladb/sphinx-scylladb-theme/pull/301): Tables with headings were not styled.
 - [#309](https://github.com/scylladb/sphinx-scylladb-theme/pull/309): Expertrec added a new component for projects in the search box page. We have re-styled the page to match the theme's look and feel.
 
@@ -219,7 +224,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#59](https://github.com/scylladb/sphinx-scylladb-theme/issues/59): All projects now share a 404 page.
 - [#58](https://github.com/scylladb/sphinx-scylladb-theme/issues/58): Support for redirections.
 
-[1.1.0]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.6...1.1.0
+[1.1]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.6...1.1.0
 [1.0.6]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.5...1.0.6
 [1.0.5]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.4...1.0.5
 [1.0]: https://github.com/scylladb/sphinx-scylladb-theme/compare/0.1.25...1.0.4
