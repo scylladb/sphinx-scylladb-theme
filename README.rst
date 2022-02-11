@@ -2,8 +2,8 @@
 Scylla Sphinx Theme
 ===================
 
-.. image:: https://github.com/scylladb/sphinx-scylladb-theme/actions/workflows/docs-pages@v3.yaml/badge.svg
-   :target: https://github.com/scylladb/sphinx-scylladb-theme/actions/workflows/docs-pages@v3.yaml
+.. image:: https://github.com/scylladb/sphinx-scylladb-theme/actions/workflows/docs-pages.yaml/badge.svg
+   :target: https://github.com/scylladb/sphinx-scylladb-theme/actions/workflows/docs-pages.yaml
    
 The documentation toolchain for Scylla projects.
 
