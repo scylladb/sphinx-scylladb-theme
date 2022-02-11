@@ -9,7 +9,7 @@ readme = "PYPI.rst"
 [tool.poetry.dependencies]
 python = "^3.7"
 sphinx-collapse = "^0.1.1"
-sphinx-copybutton = "^0.4.0"
+sphinx-copybutton = ">=0.4,<0.6"
 sphinx-notfound-page = "^0.8"
 beautifulsoup4 = "^4.10.0"
 sphinx-tabs = "^3.2.0"
