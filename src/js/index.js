@@ -32,7 +32,7 @@ const createResponsiveTables = () => {
 };
 
 const createEnlargeImagesButtons = () => {
-  $(".content img[width]").each(function () {
+  $(".content img[width], .content img[style]").each(function () {
     // Update parent css
     const reveal_id = (Math.random() + 1).toString(36).substring(7);
     $(this).wrap(
