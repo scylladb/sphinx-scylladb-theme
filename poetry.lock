@@ -130,7 +130,7 @@ testing = ["covdefaults (>=1.2.0)", "coverage (>=4)", "pytest (>=4)", "pytest-co
 
 [[package]]
 name = "identify"
-version = "2.4.7"
+version = "2.4.9"
 description = "File identification library for Python"
 category = "dev"
 optional = false
@@ -157,7 +157,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "importlib-metadata"
-version = "4.10.1"
+version = "4.11.0"
 description = "Read metadata from Python packages"
 category = "main"
 optional = false
@@ -235,7 +235,7 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [[package]]
 name = "platformdirs"
-version = "2.4.1"
+version = "2.5.0"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 category = "dev"
 optional = false
@@ -306,7 +306,7 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pytest"
-version = "7.0.0"
+version = "7.0.1"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -592,7 +592,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "tomli"
-version = "2.0.0"
+version = "2.0.1"
 description = "A lil' TOML parser"
 category = "dev"
 optional = false
@@ -629,7 +629,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "virtualenv"
-version = "20.13.0"
+version = "20.13.1"
 description = "Virtual Python Environment builder"
 category = "dev"
 optional = false
@@ -717,8 +717,8 @@ filelock = [
     {file = "filelock-3.4.2.tar.gz", hash = "sha256:38b4f4c989f9d06d44524df1b24bd19e167d851f19b50bf3e3559952dddc5b80"},
 ]
 identify = [
-    {file = "identify-2.4.7-py2.py3-none-any.whl", hash = "sha256:e64210654dfbca6ced33230eb1b137591a0981425e1a60b4c6c36309f787bbd5"},
-    {file = "identify-2.4.7.tar.gz", hash = "sha256:8408f01e0be25492017346d7dffe7e7711b762b23375c775d24d3bc38618fabc"},
+    {file = "identify-2.4.9-py2.py3-none-any.whl", hash = "sha256:bff7c4959d68510bc28b99d664b6a623e36c6eadc933f89a4e0a9ddff9b4fee4"},
+    {file = "identify-2.4.9.tar.gz", hash = "sha256:e926ae3b3dc142b6a7a9c65433eb14ccac751b724ee255f7c2ed3b5970d764fb"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
@@ -729,8 +729,8 @@ imagesize = [
     {file = "imagesize-1.3.0.tar.gz", hash = "sha256:cd1750d452385ca327479d45b64d9c7729ecf0b3969a58148298c77092261f9d"},
 ]
 importlib-metadata = [
-    {file = "importlib_metadata-4.10.1-py3-none-any.whl", hash = "sha256:899e2a40a8c4a1aec681feef45733de8a6c58f3f6a0dbed2eb6574b4387a77b6"},
-    {file = "importlib_metadata-4.10.1.tar.gz", hash = "sha256:951f0d8a5b7260e9db5e41d429285b5f451e928479f19d80818878527d36e95e"},
+    {file = "importlib_metadata-4.11.0-py3-none-any.whl", hash = "sha256:6affcdb3aec542dd98df8211e730bba6c5f2bec8288d47bacacde898f548c9ad"},
+    {file = "importlib_metadata-4.11.0.tar.gz", hash = "sha256:9e5e553bbba1843cb4a00823014b907616be46ee503d2b9ba001d214a8da218f"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
@@ -823,8 +823,8 @@ packaging = [
     {file = "packaging-21.3.tar.gz", hash = "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"},
 ]
 platformdirs = [
-    {file = "platformdirs-2.4.1-py3-none-any.whl", hash = "sha256:1d7385c7db91728b83efd0ca99a5afb296cab9d0ed8313a45ed8ba17967ecfca"},
-    {file = "platformdirs-2.4.1.tar.gz", hash = "sha256:440633ddfebcc36264232365d7840a970e75e1018d15b4327d11f91909045fda"},
+    {file = "platformdirs-2.5.0-py3-none-any.whl", hash = "sha256:30671902352e97b1eafd74ade8e4a694782bd3471685e78c32d0fdfd3aa7e7bb"},
+    {file = "platformdirs-2.5.0.tar.gz", hash = "sha256:8ec11dfba28ecc0715eb5fb0147a87b1bf325f349f3da9aab2cd6b50b96b692b"},
 ]
 pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
@@ -847,8 +847,8 @@ pyparsing = [
     {file = "pyparsing-3.0.7.tar.gz", hash = "sha256:18ee9022775d270c55187733956460083db60b37d0d0fb357445f3094eed3eea"},
 ]
 pytest = [
-    {file = "pytest-7.0.0-py3-none-any.whl", hash = "sha256:42901e6bd4bd4a0e533358a86e848427a49005a3256f657c5c8f8dd35ef137a9"},
-    {file = "pytest-7.0.0.tar.gz", hash = "sha256:dad48ffda394e5ad9aa3b7d7ddf339ed502e5e365b1350e0af65f4a602344b11"},
+    {file = "pytest-7.0.1-py3-none-any.whl", hash = "sha256:9ce3ff477af913ecf6321fe337b93a2c0dcf2a0a1439c43f5452112c1e4280db"},
+    {file = "pytest-7.0.1.tar.gz", hash = "sha256:e30905a0c131d3d94b89624a1cc5afec3e0ba2fbdb151867d8e0ebd49850f171"},
 ]
 pytz = [
     {file = "pytz-2021.3-py2.py3-none-any.whl", hash = "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c"},
@@ -965,8 +965,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 tomli = [
-    {file = "tomli-2.0.0-py3-none-any.whl", hash = "sha256:b5bde28da1fed24b9bd1d4d2b8cba62300bfb4ec9a6187a957e8ddb9434c5224"},
-    {file = "tomli-2.0.0.tar.gz", hash = "sha256:c292c34f58502a1eb2bbb9f5bbc9a5ebc37bee10ffb8c2d6bbdfa8eb13cc14e1"},
+    {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+    {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 tornado = [
     {file = "tornado-6.1-cp35-cp35m-macosx_10_9_x86_64.whl", hash = "sha256:d371e811d6b156d82aa5f9a4e08b58debf97c302a35714f6f45e35139c332e32"},
@@ -1020,8 +1020,8 @@ urllib3 = [
     {file = "urllib3-1.26.8.tar.gz", hash = "sha256:0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"},
 ]
 virtualenv = [
-    {file = "virtualenv-20.13.0-py2.py3-none-any.whl", hash = "sha256:339f16c4a86b44240ba7223d0f93a7887c3ca04b5f9c8129da7958447d079b09"},
-    {file = "virtualenv-20.13.0.tar.gz", hash = "sha256:d8458cf8d59d0ea495ad9b34c2599487f8a7772d796f9910858376d1600dd2dd"},
+    {file = "virtualenv-20.13.1-py2.py3-none-any.whl", hash = "sha256:45e1d053cad4cd453181ae877c4ffc053546ae99e7dd049b9ff1d9be7491abf7"},
+    {file = "virtualenv-20.13.1.tar.gz", hash = "sha256:e0621bcbf4160e4e1030f05065c8834b4e93f4fcc223255db2a823440aca9c14"},
 ]
 zipp = [
     {file = "zipp-3.7.0-py3-none-any.whl", hash = "sha256:b47250dd24f92b7dd6a0a8fc5244da14608f3ca90a5efcd37a3b1642fac9a375"},

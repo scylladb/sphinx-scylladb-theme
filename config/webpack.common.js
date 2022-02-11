@@ -1,6 +1,5 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const PrettierPlugin = require("prettier-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const webpack = require("webpack");
 const paths = require("./paths");
@@ -40,10 +39,7 @@ module.exports = {
       formatter: "table",
     }),
 
-    // Prettier configuration
-    new PrettierPlugin(),
-
-    // Prettier configuration
+    // jQuery configuration
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
