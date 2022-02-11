@@ -45,9 +45,15 @@ For example:
    .. figure:: diagram.svg
       :width: 150px
 
+   .. image:: checkmark.png
+      :width: 150px
+
 Renders the image as:
 
 .. figure:: diagram.svg
+   :width: 150px
+
+.. image:: checkmark.png
    :width: 150px
 
 Click on the image to preview it in full size.
