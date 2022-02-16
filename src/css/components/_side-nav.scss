@@ -195,6 +195,10 @@
 
     &__versions {
       max-width: 100%;
+
+      &:empty {
+        padding-top: 30px;
+      }
     }
   }
 

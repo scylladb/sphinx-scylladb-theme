@@ -91,10 +91,6 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-
-  &__right {
-    display: none;
-  }
 }
 
 @media screen and (min-width: $large) {
@@ -114,9 +110,6 @@
 
   .pre-content {
     margin-bottom: 10px;
-    &__right {
-      display: block;
-    }
   }
 
   .layout--has-banner .content {
