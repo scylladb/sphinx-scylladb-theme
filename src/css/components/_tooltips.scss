@@ -9,6 +9,10 @@
   }
 }
 
+.tooltip:empty {
+  display: none !important;
+}
+
 .has-tip {
   border: 0;
   cursor: pointer;
