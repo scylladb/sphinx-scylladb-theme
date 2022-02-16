@@ -21,6 +21,9 @@ table {
 
   caption {
     background: $color-background-table;
+    border-bottom: 1px solid $color-border-table;
+    color: $color-typography-table-header;
+    padding: 10px 25px;
   }
 
   thead {
@@ -31,11 +34,10 @@ table {
     th {
       color: $color-typography-table-header;
       font-size: $font-small;
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 
-  caption,
   thead th,
   td {
     padding: 20px 25px;
@@ -58,7 +60,7 @@ table {
   &.thead-border {
     thead {
       .row-odd th {
-        color: $color-typography-table-header-bold;
+        color: $color-typography-table-header;
       }
 
       .row-even th {
