@@ -1,6 +1,6 @@
 # Global variables
 # You can set these variables from the command line.
-POETRY        = $(HOME)/.local/bin/poetry
+POETRY        = poetry
 SPHINXOPTS    = -j auto
 SPHINXBUILD   = $(POETRY) run sphinx-build
 PAPER         =
@@ -24,7 +24,7 @@ all: dirhtml
 # Setup commands
 .PHONY: setupenv
 setupenv:
-	curl -sSL https://install.python-poetry.org | python
+	pip install -q poetry
 
 .PHONY: setup
 setup:
