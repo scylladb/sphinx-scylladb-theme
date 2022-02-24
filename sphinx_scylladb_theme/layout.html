@@ -133,8 +133,7 @@
                 {% endif %}
                 {% if not hide_pre_content %}
                     <div class="pre-content">
-                        <div class="pre-content__left">{% include 'breadcrumbs.html'%}</div>
-                        <div class="pre-content__right">{% include 'contribute.html' %}</div>
+                        {% include 'breadcrumbs.html'%}
                     </div>
                 {% endif %}
                 {{ body }}
