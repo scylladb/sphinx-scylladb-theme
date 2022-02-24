@@ -10,7 +10,7 @@
     "lint": "eslint . src config || true"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.2",
+    "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -18,7 +18,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^6.6.0",
     "css-minimizer-webpack-plugin": "^3.4.1",
-    "eslint": "^8.8.0",
+    "eslint": "^8.9.0",
     "eslint-formatter-table": "^7.32.1",
     "eslint-import-resolver-webpack": "^0.13.2",
     "eslint-plugin-import": "^2.25.4",
@@ -27,10 +27,10 @@
     "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^2.5.3",
     "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^7.3.1",
-    "sass": "^1.49.7",
-    "sass-loader": "^12.4.0",
-    "webpack": "^5.68.0",
+    "postcss-preset-env": "^7.4.1",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-merge": "^5.8.0"
   }
