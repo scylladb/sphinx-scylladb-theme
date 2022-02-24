@@ -1,7 +1,7 @@
-Deployment
-==========
+Production deployment
+=====================
 
-The theme uses GitHub Pages and GitHub Actions to make the documentation publicly available.
+We use GitHub Pages and GitHub Actions to make the documentation publicly available.
 
 On this page, you will learn:
 

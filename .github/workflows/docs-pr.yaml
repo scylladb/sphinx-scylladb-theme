@@ -1,6 +1,6 @@
 name: "Docs / Build PR"
 # For more information,
-# see https://sphinx-theme.scylladb.com/stable/github-pages.html#available-workflows
+# see https://sphinx-theme.scylladb.com/stable/deployment/production.html#available-workflows
 
 on:
   pull_request:
@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-python@v2.3.2
         with:
           python-version: 3.7
-      - name: Set up Poetry
-        run: curl -sSL https://install.python-poetry.org | python -
+      - name: Set up env
+        run: make -C docs setupenv
       - name: Build docs
         run: make -C docs test
