@@ -53,7 +53,6 @@ singlehtml: setup
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
 
-
 .PHONY: epub
 epub: setup
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
