@@ -10,17 +10,17 @@ Installation
 How to use the toolchain in Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To run the toolchain on **Windows**, you will need to:
+To run the toolchain on **Windows**:
 
-1. Edit the ``POETRY`` constant in ``docs/Makefile`` to point to the ``PATH`` where you have installed Poetry.
-This is normally under ``C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry``.
+#. Make sure you have `Make <https://www.gnu.org/software/make/>`_ installed.
 
-.. code-block::
+    The easiest way to install it is using Chocolatey.
+    First, you need to `install this package manager <https://chocolatey.org/install>`_.
+    Then, install Make with the command ``choco install make``.
 
-    POETRY = C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry
+   .. tip:: If you get an error when installing make, try to run the command in a console prompt with elevated permissions.
 
-
-2. Run ``make`` commands from a Unix-based terminal such as `Git Bash <https://www.atlassian.com/git/tutorials/git-bash>`_.
+#. You must run ``make`` commands from a Unix-based terminal such as `Git Bash <https://www.atlassian.com/git/tutorials/git-bash>`_.
 
 Multiversion
 ------------
@@ -74,7 +74,7 @@ If the console raises the error "No matching refs found!", most likely your fork
 
 In this case, you can:
 
-* Build multiversion docs for the upstream repository. See :ref:`Preview documentation published in production <Preview_Production>` (recommended)
-* Sync the fork with the upstream repository. See :ref:`Preview latest local changes <Sync_Fork>`
+* Build multiversion docs for the upstream repository. See :ref:`Preview documentation published in production <Preview_Production>` (recommended).
+* Sync the fork with the upstream repository. See :ref:`Preview latest local changes <Sync_Fork>`.
 
 Another frequent mistake that raises the error message is to have typos in the configuration file. Make sure that the version names listed in ``TAGS`` and ``BRANCHES`` settings from ``conf.py`` match the repository's branch and tags names on Git.

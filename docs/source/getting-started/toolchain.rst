@@ -56,3 +56,10 @@ Builds and deploys the documentation to GitHub Pages whenever new content is in 
 All the repositories deploy the documentation automatically except the repository ``scylla-docs``, which is deployed manually.
 
 `Learn more <https://docs.github.com/actions>`__
+
+Netlify CI
+----------
+
+Builds a preview site for the docs every time someone sends a pull request that updates the docs folder.
+
+`Learn more <https://docs.netlify.com/site-deploys/deploy-previews/>`__
