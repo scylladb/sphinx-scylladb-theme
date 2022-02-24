@@ -56,4 +56,4 @@ Step 3: Preview the site locally
 Step 4: Deploy to GitHub Pages
 ------------------------------
 
-To deploy the documentation site, see :doc:`GitHub Pages Configuration <../github-pages>`.
+To deploy the documentation site, see :doc:`GitHub Pages Configuration <../deployment/production>`.

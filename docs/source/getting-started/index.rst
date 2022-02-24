@@ -13,7 +13,7 @@ For docs maintainers
   * :doc:`Add Sphinx & theme to a project <installation>`
   * :doc:`Configure the theme <../configuration/template>`
   * :doc:`List new versions  <../configuration/multiversion>`
-  * :doc:`Publish to GitHub Pages  <../github-pages>`
+  * :doc:`Publish to GitHub Pages  <../deployment/production>`
   * :doc:`Commands to build docs  <../commands>`
 
 For docs contributors

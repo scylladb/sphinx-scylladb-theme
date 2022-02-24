@@ -9,7 +9,7 @@ Prerequisites
 
 To run the following commands, you will need to have installed **Python +3.7** and **PIP** on your local environment.
 
-If you are on **Windows**, you will need to run them from a Unix-based terminal such as `Git Bash <https://www.atlassian.com/git/tutorials/git-bash>`_.
+.. tip:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`.
 
 Preview current branch
 ----------------------

@@ -55,7 +55,7 @@
 
 .. topic-box::
   :title: Deployment
-  :link: github-pages
+  :link: deployment
   :icon: fa fa-github
   :class: large-6
   :anchor: Learn more
@@ -95,7 +95,7 @@
   getting-started/index
   configuration/index
   commands
-  Deployment <github-pages>
+  deployment/index
   examples/index
   upgrade/index
   contribute/index
