@@ -28,6 +28,8 @@ The toolchain provides the following workflows under the directory ``.github/wor
       - Builds multi versioned docs every time the default branch (e.g. ``master``)  receives an update. If the build completes successfully, the workflow publishes the HTML version to GitHub Pages.
     * - ``docs-pr.yaml``
       - Builds the docs when the default branch receives a new pull request or when the pull request receives new commits. The purpose of this workflow is to make sure pull requests do not break the default branch after being merged.
+    * - ``docs-links.yaml``
+      -  Looks for broken links once a week. If there are broken links, it creates an issue in the same repository with the list of affected links.
 
 .. caution:: If you modify these workflows in your repository, you will need to maintain the changes. So instead, we recommend you to open an issue in the `sphinx-scylladb-theme repository <https://github.com/scylladb/sphinx-scylladb-theme>`_ so that all projects can benefit from the improvements you made.
 
@@ -43,8 +45,9 @@ To install the workflows:
         project-name/
           ├── .github/
           |   ├── workflows/
-          |   |   ├── docs-pages@vX.yaml
-          |   |   ├── docs-pr@vX.yaml
+          |   |   ├── docs-pages.yaml
+          |   |   ├── docs-pr.yaml
+          |   |   ├── docs-links.yaml
 
 #. If the default branch is not ``master`` or the docs are not under the ``docs`` folder, the workflows to match the project configuration. For example:
 
