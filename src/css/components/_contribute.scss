@@ -1,0 +1,14 @@
+.contribute {
+  margin: 0;
+  margin-bottom: 20px;
+
+  &__item {
+    font-size: $font-small;
+    padding-bottom: 10px;
+    list-style: none;
+
+    .icon {
+      margin-right: 5px;
+    }
+  }
+}

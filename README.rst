@@ -7,7 +7,7 @@ Scylla Sphinx Theme
    
 The documentation toolchain for Scylla projects.
 
-.. image:: https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/source/images/preview.png
+.. image:: https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/source/deployment/images/preview.png
 
 Features
 --------

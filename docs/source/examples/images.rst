@@ -6,27 +6,27 @@ Refer to `DocUtils <https://docutils.sourceforge.io/docs/ref/rst/directives.html
 
 .. code-block:: none
 
-  .. image:: checkmark.png
+  .. image:: images/checkmark.png
       :alt: checkmark
 
 renders the image
 
-.. image:: checkmark.png
+.. image:: images/checkmark.png
    :alt: checkmark
 
 
-Whereas the Figure directive allows you to use captions.
+Whereas the figure directive allows you to use captions.
 
 .. code-block:: none
 
-   .. figure:: checkmark.png
+   .. figure:: images/checkmark.png
       :alt: checkmark
 
    This is the caption for the image
 
 Renders the image as:
 
-.. figure:: checkmark.png
+.. figure:: images/checkmark.png
    :alt: checkmark
 
    This is the caption for the image
@@ -42,12 +42,18 @@ For example:
 
 .. code-block:: none
 
-   .. figure:: diagram.svg
+   .. figure:: images/diagram.svg
+      :width: 150px
+
+   .. image:: images/checkmark.png
       :width: 150px
 
 Renders the image as:
 
-.. figure:: diagram.svg
+.. figure:: images/diagram.svg
+   :width: 150px
+
+.. image:: images/checkmark.png
    :width: 150px
 
 Click on the image to preview it in full size.
