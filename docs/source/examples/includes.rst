@@ -33,7 +33,7 @@ For example:
    .. literalinclude:: ../conf.py
       :lines: 1-10
 
-Gets the conf.py file from the parent directory and displays the first 10 lines.
+Gets the ``conf.py`` file from the parent directory and displays the first 10 lines.
 
 .. literalinclude:: ../conf.py
       :lines: 1-10
