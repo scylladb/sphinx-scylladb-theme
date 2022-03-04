@@ -2,6 +2,7 @@ from os import getenv, path
 
 import sphinx_collapse
 import sphinx_copybutton
+import sphinx_substitution_extensions
 from notfound import extension as not_found
 from sphinx_tabs import tabs
 
@@ -98,6 +99,7 @@ def setup(app):
     not_found.setup(app)
     sphinx_collapse.setup(app)
     sphinx_copybutton.setup(app)
+    sphinx_substitution_extensions.setup(app)
     tabs.setup(app)
 
     """Setup custom extensions"""
@@ -105,9 +107,6 @@ def setup(app):
     multiversion.setup(app)
     panel_box.setup(app)
     redirects.setup(app)
-    from .extensions import substitutions
-
-    substitutions.setup(app)
     topic_box.setup(app)
 
     return {"version": version, "parallel_read_safe": True}
