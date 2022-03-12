@@ -1,16 +1,15 @@
-{% if versions and current_version and latest_version and current_version !=
-latest_version %}
-<div class="admonition caution">
-    <p class="admonition-title">Caution</p>
-    <p>
-        You are not reading the latest stable version of this documentation.
-        If you want up-to-date information, please have a look at
-        <a href="{{ vpathto(latest_version.name) }}">
-            {% if latest_version in versions.branches %} {{
-                latest_version.name | replace(theme_branch_substring_removed, '')
-                }}{% else %} {{ latest_version.name |
-                replace(theme_tag_substring_removed, '') }}{% endif %}</a
-            >.
+{% if versions and current_version and latest_version and current_version != latest_version %}
+    <div class="admonition caution">
+        <p class="admonition-title">Caution</p>
+        <p>
+            {% if current_version in theme_versions_unstable %}
+                You're viewing documentation for an unstable version of {{ project }}.
+            {% elif current_version in theme_versions_deprecated %}
+                You're viewing documentation for a deprecated version of {{ project }}.
+            {% else %}
+                You're viewing documentation for a previous version of {{ project }}.
+            {% endif %}
+            <a href="{{ vpathto(latest_version.name) }}">Switch to the latest stable version.</a>
         </p>
     </div>
 {% endif %}

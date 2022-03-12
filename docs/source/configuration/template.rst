@@ -91,6 +91,38 @@ Example:
       'tag_substring_removed': '-scylla',
   }
 
+Version warning options
+-----------------------
+
+Configuration options for version warning.
+
+.. list-table::
+  :widths: 20 20 20 40
+  :header-rows: 1
+
+  * - Option
+    - Type
+    - Default Value
+    - Description
+  * - ``versions_unstable``
+    -  list of strings
+    -  []
+    -  List of versions (branches or tags) that are not released yet.
+  * - ``versions_deprecated``
+    -  list of strings
+    -  []
+    -  List of deprecated versions (branches or tags).
+
+Example:
+
+.. code:: python
+
+  html_theme_options = {
+      'versions_unstable': ['master'],
+      'versions_deprecated': [],
+  }
+
+
 Contribute button options
 -------------------------
 
