@@ -2,9 +2,9 @@
     <div class="admonition caution">
         <p class="admonition-title">Caution</p>
         <p>
-            {% if current_version in theme_versions_unstable %}
+            {% if current_version.name in theme_versions_unstable %}
                 You're viewing documentation for an unstable version of {{ project }}.
-            {% elif current_version in theme_versions_deprecated %}
+            {% elif current_version.name in theme_versions_deprecated %}
                 You're viewing documentation for a deprecated version of {{ project }}.
             {% else %}
                 You're viewing documentation for a previous version of {{ project }}.
