@@ -1,4 +1,4 @@
-name: "Theme tests"
+name: "Theme / Unit tests"
 
 on:
   pull_request:
