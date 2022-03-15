@@ -26,7 +26,7 @@ The settings ``TAGS`` and ``BRANCHES`` in ``conf.py`` defines which versions are
 The setting ``LATEST_VERSION`` in ``conf.py`` defines which branch or tag is considered the latest.
 This is used to redirect users to the latest version of the docs automatically once they open the main project URL.
 
-For example, if you want to build docs for the tags ``3.22.0`` and ``3.21.0``, ``master`` branch, the configuration file conf.py should look like this:
+For example, if you want to build docs for the tags ``3.22.0`` and ``3.21.0``, ``master`` branch, the configuration file ``conf.py`` should look like this:
 
 .. code:: python
 
@@ -49,6 +49,36 @@ You can override the latest version output directory via the configuration file 
 
     smv_latest_version = LATEST_VERSION  # Use the branch/tag name
     smv_rename_latest_version = 'stable' # Use the commit hash
+
+Defining unstable versions
+--------------------------
+
+Suppose you want to build docs for a version of the software you have not released yet (e.g. ``master``).
+In this case, you can mark the version as unstable in the ``conf.py`` file.
+
+.. code:: python
+
+    BRANCHES = ['master']
+    UNSTABLE_VERSIONS = ['master']
+
+ By doing so, the warning message that appears at the top of the page will change to:
+
+.. image:: images/unstable.png
+
+Defining deprecated versions
+----------------------------
+
+Suppose you want to build docs for a version of the software you don't support anymore.
+In this case, you can mark the version as deprecated in the ``conf.py`` file.
+
+.. code:: python
+
+    VERSION = ['3.2.0']
+    DEPRECATED_VERSIONS = ['3.2.0']
+
+By doing so, the warning message that appears at the top of the page will change to:
+
+.. image:: images/deprecated.png
 
 Disabling multiversion support
 ------------------------------
