@@ -59,6 +59,10 @@
   }
 
   .landing {
+    &__content {
+      padding: 0 60px;
+    }
+
     &--floating {
       .landing__content {
         position: relative;
