@@ -27,5 +27,5 @@ jobs:
           python-version: 3.7
       - name: Set up env
         run: make -C docs setupenv
-      - name: Build docs
-        run: poetry python -m run pytest .
+      - name: Run tests
+        run: poetry run python -m run pytest .
