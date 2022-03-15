@@ -1,8 +1,10 @@
 :full-width:
+:landing:
+:hide-secondary-sidebar:
 :hide-version-warning:
 :hide-pre-content:
 :hide-post-content:
-:landing:
+
 
 .. title:: Scylla Sphinx Theme
 
@@ -18,7 +20,7 @@
 
 .. raw:: html
 
-  <div class="landing__content landing__content">
+  <div class="landing__content">
 
 .. raw:: html
 

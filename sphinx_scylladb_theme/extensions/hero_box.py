@@ -11,6 +11,7 @@ class HeroBox(Directive):
     has_content = True
     option_spec = {
         "title": directives.unchanged_required,
+        "class": directives.path,
         "text": directives.unchanged_required,
         "image": directives.path,
         "button_icon": directives.path,
@@ -20,6 +21,7 @@ class HeroBox(Directive):
 
     def run(self):
         class_name = "hero"
+        container_class_name = self.options.get("class", "")
 
         image = self.options.get("image")
         image = (
@@ -40,7 +42,7 @@ class HeroBox(Directive):
             generate_template(
                 """
                 <a href="{button_url}">
-                <button class="hero__button button">
+                <button class="{class_name}__button button">
                 <i class="icon {button_icon}" aria-hidden="true"></i>
                 {button_text}
                 </button>
@@ -49,6 +51,7 @@ class HeroBox(Directive):
                 button_icon=button_icon,
                 button_url=button_url,
                 button_text=button_text,
+                class_name=class_name,
             )
             if button_text
             else ""
@@ -56,18 +59,19 @@ class HeroBox(Directive):
 
         html_tag_open = generate_template(
             """
-            <div class="hero">
-                <div class="hero-wrapper">
+            <div class="{class_name} {container_class_name}">
+                <div class="{class_name}-wrapper">
                     <div class="{class_name}__img">
                     {image}
                     </div>
-                    <div class="hero-header">
+                    <div class="{class_name}-header">
                         <h1 class="{class_name}__title">{title}</h1>
                         <div class="{class_name}__text">
             """,
             title=self.options.get("title", ""),
             image=image,
             class_name=class_name,
+            container_class_name=container_class_name,
         )
         html_tag_close = generate_template(
             """</div>{button}</div></div></div>""", button=button

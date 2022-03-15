@@ -31,9 +31,14 @@ The ``topic-box`` directive supports the following options:
     - Description
   * - ``title``
     - string
-    - Y
+    - |v|
     - Lorem ipsum
     - Hero box title.
+  * - ``class``
+    - string
+    -
+    -
+    - Custom CSS class.
 
 Usage
 -----

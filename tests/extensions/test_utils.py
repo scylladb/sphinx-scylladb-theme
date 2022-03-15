@@ -19,14 +19,7 @@ def test_generate_content():
 
 def test_build_redirect_body():
     path = "/redirect"
-    expected_output = """
-    <html>
-    <head>
-    <meta http-equiv="refresh" content="0; url=/redirect">
-    </head>
-    </html>
-    """
-    assert build_redirect_body(path) == expected_output
+    assert "url=/redirect" in build_redirect_body(path)
 
 
 def test_is_url_external():

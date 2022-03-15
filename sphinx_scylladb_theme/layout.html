@@ -61,60 +61,7 @@
         {% endblock %}
         {% block scripts %}
             {{ script() }}
-
-            <!-- Google Tag Manager -->
-            <script>
-                (function (w, d, s, l, i) {
-                    w[l] = w[l] || [];
-                    w[l].push({
-                        "gtm.start": new Date().getTime(),
-                        event: "gtm.js"
-                    });
-                    var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != "dataLayer" ? "&l=" + l : "";
-                    j.async = true;
-                    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                    f.parentNode.insertBefore(j, f);
-                })(window, document, "script", "dataLayer", "GTM-T8P2JP");
-            </script>
-            <!-- End Google Tag Manager -->
-            <!-- Marketo -->
-            <script type="text/javascript">
-                (function () {
-                    var didInit = false;
-
-                    function initMunchkin() {
-                        if (didInit === false) {
-                            didInit = true;
-                            Munchkin.init("791-QBF-350");
-                        }
-                    }
-                    var s = document.createElement("script");
-                    s.type = "text/javascript";
-                    s.async = true;
-                    s.src = "//munchkin.marketo.net/munchkin.js";
-                    s.onreadystatechange = function () {
-                        if (this.readyState == "complete" || this.readyState == "loaded") {
-                            initMunchkin();
-                        }
-                    };
-                    s.onload = initMunchkin;
-                    document.getElementsByTagName("head")[0].appendChild(s);
-                })();
-            </script>
-            <!-- End Marketo -->
-            <!-- Expertrec -->
-            <script>
-                var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
-                var ci_search = document.createElement("script");
-                ci_search.type = "text/javascript";
-                ci_search.async = true;
-                ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(ci_search, s);
-            </script>
-            <!-- End Expertrec -->
+            {% include 'custom-scripts.html' %}
         {% endblock %}
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
@@ -126,7 +73,8 @@
             {% include 'promo-banner.html' %}
         {% endif %}
         {% include 'header.html'%}
-        <section class="layout {{'layout--full-width' if full_width}} {{'landing landing--floating' if landing}}">
+        <section
+            class="layout {{'layout--full-width' if full_width}} {{'layout--sidebar' if not hide_sidebar}} {{'layout--has-secondary-sidebar' if not hide_secondary_sidebar}} {{'landing landing--floating' if landing}}">
             <div class="content large-order-2">
                 {% if not hide_version_warning %}
                     {% include 'version-warning.html'%}
@@ -141,14 +89,14 @@
                     <div class="post-content">{% include 'content-navigation.html'%}</div>
                 {% endif %}
             </div>
-            <div class="sidebar-left {{'hide-for-large' if full_width}} large-order-1">
+            <div class="sidebar-left {{'hide-for-large' if hide_sidebar}} large-order-1">
                 {% if sidebars != None %}
                     {% for sidebartemplate in sidebars %}
                         {% include sidebartemplate %}
                     {% endfor %}
                 {% endif %}
             </div>
-            {% if not full_width %}
+            {% if not hide_secondary_sidebar %}
                 <div class="sidebar-right large-order-3">
                     {% if not hide_toc %}
                         {% include 'secondary-side-nav.html' %}

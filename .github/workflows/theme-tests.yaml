@@ -1,0 +1,31 @@
+name: "Theme tests"
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "sphinx_scylladb_theme/**"
+  push:
+    branches:
+      - master
+    paths:
+      - "sphinx_scylladb_theme/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.7
+      - name: Set up env
+        run: make -C docs setupenv
+      - name: Build docs
+        run: poetry python -m run pytest .
