@@ -1,12 +1,4 @@
 .scylla-dropdown--versions {
-  &.scylla-dropdown--single-version {
-    .scylla-dropdown__content,
-    .chevron {
-      /* Override Foundation */
-      display: none !important;
-    }
-  }
-
   .scylla-dropdown__item {
     background: $color-white;
     border-radius: $round;
