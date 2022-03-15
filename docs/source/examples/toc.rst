@@ -10,12 +10,12 @@ The :abbr:`TOC (Table of Contents)` is automatically generated in sphinx when yo
 
 Each index.rst needs to have a toctree directive in order to build the left side nav menu.
 
-See the template for more details.
-
 .. code-block:: rst
 
    .. toctree::
       :maxdepth: 2
+
+For more details, see `toctree documentation <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree>`_.
 
 Mini-TOC
 --------
