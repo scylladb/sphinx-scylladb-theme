@@ -73,7 +73,7 @@ In this case, you can mark the version as deprecated in the ``conf.py`` file.
 
 .. code:: python
 
-    VERSION = ['3.2.0']
+    TAGS = ['3.2.0']
     DEPRECATED_VERSIONS = ['3.2.0']
 
 By doing so, the warning message that appears at the top of the page will change to:
