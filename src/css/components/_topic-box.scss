@@ -121,6 +121,7 @@
       opacity: 0.3;
       position: absolute;
       right: -5px;
+      display: none;
     }
   }
 
@@ -149,6 +150,7 @@
       opacity: 1;
       position: initial;
       max-height: 84px;
+      display: inline-block;
     }
 
     &:hover {
@@ -206,6 +208,9 @@
     &__anchor {
       font-size: 20px;
       line-height: 26px;
+    }
+    .topic-box__icon img {
+      display: inline-block;
     }
   }
 

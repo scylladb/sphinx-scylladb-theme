@@ -92,7 +92,7 @@ Using:
 
     .. topic-box::
         :title: Lorem Ipsum
-        ::image: /_static/img/mascots/scylla-enterprise.svg
+        :image: /_static/img/mascots/scylla-enterprise.svg
         :link: #
         :anchor: Lorem ipsum
 
