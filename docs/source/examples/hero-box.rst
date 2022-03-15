@@ -31,7 +31,7 @@ The ``hero-box`` directive supports the following options:
     - Description
   * - ``title``
     - string
-    - Y
+    - |v|
     - Lorem ipsum
     - Hero box title.
   * - ``button_icon``
@@ -46,9 +46,9 @@ The ``hero-box`` directive supports the following options:
     - Text for the call to action.
   * - ``button_url``
     - string
+    -
+    -
     - Relative link or external URL for the call to action. Do not use leading and trailing ("/") symbols to define relative links. (e.g. instead of ``/getting-started/``, use ``getting-started``).
-    - fa fa-home
-    - Link to
   * - ``image``
     - string
     -
