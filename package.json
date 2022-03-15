@@ -10,7 +10,7 @@
     "lint": "eslint . src config || true"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -18,7 +18,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "eslint-formatter-table": "^7.32.1",
     "eslint-import-resolver-webpack": "^0.13.2",
     "eslint-plugin-import": "^2.25.4",

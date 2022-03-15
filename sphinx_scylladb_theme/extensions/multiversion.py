@@ -1,3 +1,9 @@
+"""
+Extends sphinx_multiversion:
+- GH Pages support
+- 404 pages support
+- Redirect to latest version
+"""
 import os
 
 from .utils import build_redirect_body, copy

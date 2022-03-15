@@ -8,6 +8,18 @@ from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 sys.path.insert(0, os.path.abspath(".."))
 
+# -- Global variables
+
+# Build documentation for the following tags and branches
+TAGS = []
+BRANCHES = ["branch-1.1", "branch-1.0", "master"]
+# Set the latest version.
+LATEST_VERSION = "branch-1.1"
+# Set which versions are not released yet.
+UNSTABLE_VERSIONS = ["master"]
+# Set which versions are deprecated
+DEPRECATED_VERSIONS = [""]
+
 # -- General configuration ------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings.
@@ -59,15 +71,13 @@ redirects_file = "_utils/redirections.yaml"
 
 # -- Options for multiversion extension ----------------------------------
 
-# Whitelist pattern for tags (set to None to ignore all tags)
-TAGS = []
+# Whitelist pattern for tags
 smv_tag_whitelist = multiversion_regex_builder(TAGS)
-# Whitelist pattern for branches (set to None to ignore all branches)
-BRANCHES = ["branch-1.1", "branch-1.0", "master"]
+# Whitelist pattern for branches
 smv_branch_whitelist = multiversion_regex_builder(BRANCHES)
 # Defines which version is considered to be the latest stable version.
-# Must be listed in smv_tag_whitelist or smv_branch_whitelist.
-smv_latest_version = "branch-1.1"
+smv_latest_version = LATEST_VERSION
+# Defines the new name for the latest version.
 smv_rename_latest_version = "stable"
 # Whitelist pattern for remotes (set to None to use local branches only)
 smv_remote_whitelist = r"^origin$"
@@ -96,6 +106,8 @@ html_theme_options = {
     "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
+    "versions_unstable": UNSTABLE_VERSIONS,
+    "versions_deprecated": DEPRECATED_VERSIONS,
 }
 
 # Last updated format
