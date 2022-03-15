@@ -28,4 +28,4 @@ jobs:
       - name: Set up env
         run: make -C docs setupenv
       - name: Run tests
-        run: poetry run python -m run pytest .
+        run: poetry run pytest .
