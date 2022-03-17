@@ -6,10 +6,10 @@ from sphinx_scylladb_theme.extensions.hero_box import HeroBox
 test_data = [
     [
         [],
-        {"title": "Lorem Ipsum", "class": "abc"},
+        {"title": "Lorem Ipsum", "class": "hero_test"},
         ["Content"],
         """
-        <div class="hero">
+        <div class="hero hero_test">
                 <div class="hero-wrapper">
                     <div class="hero__img">
                     </div>
@@ -20,10 +20,10 @@ test_data = [
     ],
     [
         [],
-        {"title": "Lorem Ipsum", "image": "image.png"},
+        {"title": "Lorem Ipsum", "class": "hero_test", "image": "image.png"},
         ["Content"],
         """
-        <div class="hero">
+        <div class="hero hero_test">
                 <div class="hero-wrapper">
                     <div class="hero__img">
                         <img src="image.png" />

@@ -34,6 +34,11 @@ The ``topic-box`` directive supports the following options:
     - |v|
     - Lorem ipsum
     - Topic box title.
+  * - ``class``
+    - string
+    -
+    -
+    - Custom CSS class.
   * - ``icon``
     - string
     -

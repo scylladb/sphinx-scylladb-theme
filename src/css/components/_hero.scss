@@ -91,3 +91,9 @@
     }
   }
 }
+
+@media screen and (min-width: $large) {
+  .hero {
+    padding: 60px 60px;
+  }
+}

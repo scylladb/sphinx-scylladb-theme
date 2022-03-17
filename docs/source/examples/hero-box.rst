@@ -34,6 +34,11 @@ The ``hero-box`` directive supports the following options:
     - |v|
     - Lorem ipsum
     - Hero box title.
+  * - ``class``
+    - string
+    -
+    -
+    - Custom CSS class.
   * - ``button_icon``
     - string
     -
