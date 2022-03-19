@@ -53,7 +53,12 @@
         <link rel="icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" sizes="192x192" />
         <link rel="apple-touch-icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
         <meta name="msapplication-TileImage" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
-        <link rel="canonical" href="https://docs.scylladb.com/" />
+        {% if versions and latest_version %}
+            {% set latest_slug = rename_latest_version or latest_version.name %}
+            <link rel="canonical" href="{{ html_baseurl }}/{{latest_slug}}/{{ pagename }}.html"/>
+        {% else %}
+            <link rel="canonical" href="{{ html_baseurl }}/{{ pagename }}.html"/>
+        {% endif %}
         <link rel="author" href="mailto:info@scylladb.com" />
 
         {% block css %}
