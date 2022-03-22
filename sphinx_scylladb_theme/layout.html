@@ -15,10 +15,11 @@
         {% endfor %}
     {% endmacro %}
     {% macro css() %}
-        <!-- connect to domain of font files -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- increase expertrec loading priority-->
+        <link rel="dns-prefetch" href="https://cse.expertrec.com">
 
-        <!-- optionally increase loading priority -->
+        <!-- increase font loading priority -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preload" as="style"
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
 
