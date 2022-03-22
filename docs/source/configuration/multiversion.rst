@@ -1,5 +1,5 @@
 ====================
-Multiversion Options
+Multiversion options
 ====================
 
 The toolchain adds by default the extension `sphinx-multiversion <https://github.com/dgarcia360/sphinx-multiversion>`_ for building self-hosted versioned documentation.

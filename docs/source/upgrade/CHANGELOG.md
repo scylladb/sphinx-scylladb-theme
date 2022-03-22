@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2] - 22 March 2022
+
+**IMPORTANT**: For more information on how to update, see [Migrating from 1.1 to 1.2](https://sphinx-theme.scylladb.com/stable/upgrade/1-0-to-1-2).
+
+### Added
+
+- [#379](https://github.com/scylladb/sphinx-scylladb-theme/pull/379): We've added Netlify support to automatically build pull requests previews for docs. This feature is in beta for a reduced number of projects.
+- [#390](https://github.com/scylladb/sphinx-scylladb-theme/pull/390): Once a week, a GitHub Action finds for broken links in Markdown and restructuredText files. If there are broken links, the action will create a new issue in the same repository with the links that have to be fixed.
+- [#401](https://github.com/scylladb/sphinx-scylladb-theme/pull/401): We've added new warning messages when previewing a non-stable version of the documentation.
+- [#402](https://github.com/scylladb/sphinx-scylladb-theme/pull/402): Now, you can create landing pages with sidebars.
+- [#402](https://github.com/scylladb/sphinx-scylladb-theme/pull/402): The theme includes a GitHub Action that runs the theme tests automatically when some of the theme files are edited.
+
+### Changed
+
+- [#359](https://github.com/scylladb/sphinx-scylladb-theme/pull/359): We've updated all the JavaScript and Python dependencies to the latest version.
+- [#361](https://github.com/scylladb/sphinx-scylladb-theme/pull/361): Tables were redesigned to make them more readable.
+- [#371](https://github.com/scylladb/sphinx-scylladb-theme/pull/371): We've moved the contribute buttons to the right sidebar.
+- [#372](https://github.com/scylladb/sphinx-scylladb-theme/pull/372): The substitutions extension is now installed as a third-party dependency.
+- [#403](https://github.com/scylladb/sphinx-scylladb-theme/pull/403): The theme does not show the multiversion dropdown in the sidebar if there is only one item.
+- [#404](https://github.com/scylladb/sphinx-scylladb-theme/pull/404): Now, topic box images are hidden in responsive view.
+- [#410](https://github.com/scylladb/sphinx-scylladb-theme/pull/410): We've improved the search component load time.
+
+### Fixed
+
+- [#357](https://github.com/scylladb/sphinx-scylladb-theme/issues/357): The copy button displayed an empty circle on hover.
+- [#362](https://github.com/scylladb/sphinx-scylladb-theme/pull/362): The zoom option for images was only working with SVG images. Now, this feature is compatible with other formats such as PNG and JPG.
+- [#382](https://github.com/scylladb/sphinx-scylladb-theme/pull/382): When the top bar was closed, it continued appearing for milliseconds when the page was refreshed.
+- [#389](https://github.com/scylladb/sphinx-scylladb-theme/pull/389): We've increased the breadcrumbs spacing.
+- [#406](https://github.com/scylladb/sphinx-scylladb-theme/pull/406): Various pages shared the same canonical URL. Now, we point to the URL of the latest stable version of the document.
+
+## [1.1.1] - 02 February 2022
+
+### Fixed
+
+- [#344](https://github.com/scylladb/sphinx-scylladb-theme/pull/344): Fixes the error `TypeError: 'CQLLexer' object is not callable`.
+
 ## [1.1] - 01 February 2022
 
 **IMPORTANT**: For more information on how to update, see [Migrating from 1.0 to 1.1](https://sphinx-theme.scylladb.com/stable/upgrade/1-0-to-1-1).
@@ -16,7 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#263](https://github.com/scylladb/sphinx-scylladb-theme/pull/263): We use dependabot to receive automatic notifications when there are new dependency updates.
 - [#229](https://github.com/scylladb/sphinx-scylladb-theme/issues/229): New file-wide metadata options.
 
-## Updated
+### Changed
 
 - [#263](https://github.com/scylladb/sphinx-scylladb-theme/pull/263): Update JavaScript and Python dependencies to the latest version.
 - [#307](https://github.com/scylladb/sphinx-scylladb-theme/issues/307): Before, poetry was installed as a dependency. From this release, you must install Poetry as a prerequisite.
@@ -24,7 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - [#301](https://github.com/scylladb/sphinx-scylladb-theme/pull/301): Tables with headings were not styled.
-- [#309](https://github.com/scylladb/sphinx-scylladb-theme/pull/309): Expertrec added a new component for projects in the search box page. We have re-styled the page to match the theme's look and feel.
+- [#309](https://github.com/scylladb/sphinx-scylladb-theme/pull/309): Expertrec added a new component for projects in the search box page. We've re-styled the page to match the theme's look and feel.
 
 ## [1.0.6] - 08 December 2021
 
@@ -224,6 +260,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#59](https://github.com/scylladb/sphinx-scylladb-theme/issues/59): All projects now share a 404 page.
 - [#58](https://github.com/scylladb/sphinx-scylladb-theme/issues/58): Support for redirections.
 
+[1.2]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.1.1...1.2.0
+[1.1.1]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.1.0...1.1.1
 [1.1]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.6...1.1.0
 [1.0.6]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.5...1.0.6
 [1.0.5]: https://github.com/scylladb/sphinx-scylladb-theme/compare/1.0.4...1.0.5

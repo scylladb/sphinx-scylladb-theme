@@ -5,7 +5,7 @@ Paragraph Styles
 ----------------
 
 A paragraph style is markup which applies to an entire paragraph.
-In RestructuredText, there is no need to markup body text.
+In restructuredText, there is no need to markup body text.
 Any text which is not marked up will be treated as body text.
 
 Character Styles (in-line Markup)

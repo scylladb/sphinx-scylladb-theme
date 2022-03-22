@@ -1,12 +1,15 @@
-Metadata
-========
+Page options
+============
 
 Add the following annotations at the beggining of ``.rst`` files to customize the layout of a specific page.
 
 Description
 -----------
 
-Adds a description to a document. This description is mainly used for Search Engine Optimization.
+Adds a description to a document.
+This description displayed in search engines results page.
+
+For example:
 
 .. code-block:: none
 
@@ -14,7 +17,7 @@ Adds a description to a document. This description is mainly used for Search Eng
       :description: The reStructuredText plaintext markup language
       :keywords: plaintext, markup language
 
-This would be converted to the following HTML:
+Results in the following HTML:
 
 .. code-block:: html
 
@@ -43,7 +46,7 @@ If set, makes the content within the div with class ``landing_content`` float on
 Hide pre content
 ----------------
 
-If set, hides the breadcrumbs and contribute button from the page.
+If set, hides the breadcrumbs from the page.
 
 .. code-block:: none
 

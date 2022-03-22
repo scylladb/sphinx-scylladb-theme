@@ -1,4 +1,4 @@
-Panel Box
+Panel box
 =========
 
 A custom directive to creates boxes on subordinate ``index.rst`` files.

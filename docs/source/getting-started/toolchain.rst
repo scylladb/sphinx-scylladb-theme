@@ -8,7 +8,7 @@ Markup language
 ---------------
 
 We recommend using **reStructuredText** markup language to write documentation.
-Additionally, the toolchain supports :doc:`MarkDown <../examples/markdown>`.
+Additionally, the toolchain supports :doc:`Markdown <../configuration/markdown>`.
 
 `Learn more <https://www.sphinx-doc.org/es/master/usage/restructuredtext/index.html>`__
 

@@ -1,5 +1,5 @@
 =======================
-Contribute to the Theme
+Contribute to the theme
 =======================
 
 If you are reading this guide because you have decided to contribute to the Scylla Sphinx Theme, thank you!

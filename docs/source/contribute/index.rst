@@ -5,8 +5,8 @@ Contribute
 .. toctree::
    :hidden:
 
-   Contribute to the Documentation <contribute-docs>
-   Contribute to the Sphinx Theme <contribute-theme>
+   Contribute to the documentation <contribute-docs>
+   Contribute to the theme <contribute-theme>
    Source Code <https://github.com/scylladb/sphinx-scylladb-theme>
 
 We are always looking for those who want to help and appreciate any contribution we can get.
@@ -15,5 +15,5 @@ Before you can contribute to Scylla for the first time, you should download, pri
 
 There are two ways to contribute to Scylla Docs:
 
-* :doc:`Contribute to the Documentation <contribute-docs>` - by writing new or changing existing Documentation.
-* :doc:`Contribute to the Sphinx Theme <contribute-theme>` - this is the CSS for our docs website.
+* :doc:`Contribute to the documentation <contribute-docs>` - by writing new or changing existing Documentation.
+* :doc:`Contribute to the theme <contribute-theme>` - this is the CSS for our docs website.

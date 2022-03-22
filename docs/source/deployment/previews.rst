@@ -1,6 +1,8 @@
 Pull requests previews
 ======================
 
+.. warning:: This feature is under beta testing and only available for a selected number of projects.
+
 We use Netlify CI to build a preview site for the docs every time someone sends a pull request that updates the docs folder.
 
 Once the build completes, the pull request receives a message with a link to preview the docs.

@@ -1,5 +1,5 @@
 ===================================
-Scylla Docs Contributor’s Handbook
+Scylla docs contributor’s handbook
 ===================================
 
 .. contents::
@@ -35,7 +35,7 @@ Languages/toolchain we use
 ==========================
 
 The backbone of the docs is written in reStructuredText and the Documentation is compiled with Sphinx.
-Some of our upstream content is written in MarkDown and Sphinx also supports MarkDown as well.
+Some of our upstream content is written in Markdown and Sphinx also supports Markdown as well.
 
 You will find templates and cheatsheet links later in this document.
 You can use them to make sure your document is organized and tagged correctly.
@@ -61,9 +61,9 @@ We use the following tools for the following purposes:
    * - GitHub Actions
      - Builds and deploys the documentation to GitHub Pages every time there is new content. All the repositories deploy the documentation automatically except the repository scylla-docs, which is deployed manually.
    * - Markdown
-     - Content written upstream is often written in Markdown. You can use markdown to create content pages as an alternative to RestructuredText.
-   * - RestructuredText
-     - Most of our content is written in RestructuredText. RestructuredText is a markdown-like language which can be converted to HTML with Sphinx.
+     - Content written upstream is often written in Markdown. You can use Markdown to create content pages as an alternative to restructuredText.
+   * - restructuredText
+     - Most of our content is written in restructuredText. restructuredText is a Markdown-like language which can be converted to HTML with Sphinx.
 
 About Issues and Pull Requests
 -------------------------------
@@ -135,10 +135,10 @@ Use these templates to create new content. There are templates in .rst and .md f
 Cheatsheets
 ...........
 
-If you want to use a cheat sheet for Markdown or RestructuredText, here are some which are helpful:
+If you want to use a cheat sheet for Markdown or restructuredText, here are some which are helpful:
 
 * :doc:`Scylla Cheat Sheet <../examples/index>` - samples of |rst| markup.
-* `RestructuredText Cheat Sheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
+* `restructuredText Cheat Sheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
 * `GitHub Markdown Cheat Sheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_
 
 Add new content to the TOC tree

@@ -1,4 +1,4 @@
-Topic Box
+Topic box
 =========
 
 A custom directive that creates graphical boxes (cards) on the root ``index.rst`` file.

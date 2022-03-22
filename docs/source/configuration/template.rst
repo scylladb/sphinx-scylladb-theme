@@ -1,5 +1,5 @@
 ================
-Template Options
+Template options
 ================
 
 The following options can be defined in the file ``conf.py`` per project, using ``html_theme_options`` setting.
