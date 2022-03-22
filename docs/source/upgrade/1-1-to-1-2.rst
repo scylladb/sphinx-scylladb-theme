@@ -35,6 +35,8 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
             With:
 
             .. code-block::
+                
+		POETRY = poetry
 
                 # Windows variables
                 ifeq ($(OS),Windows_NT)
