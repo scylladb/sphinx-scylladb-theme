@@ -1,5 +1,6 @@
 :full-width:
 :landing:
+:hide-sidebar:
 :hide-secondary-sidebar:
 :hide-version-warning:
 :hide-pre-content:

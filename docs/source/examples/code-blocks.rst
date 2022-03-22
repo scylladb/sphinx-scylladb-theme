@@ -1,4 +1,4 @@
-Code Blocks
+Code blocks
 ===========
 
 Code block directives are for displaying code. By default the code is copyable and includes a copy icon.

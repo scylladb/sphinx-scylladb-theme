@@ -1,4 +1,4 @@
-Hero Box
+Hero box
 ========
 
 A custom directive to create a header on the root ``index.rst`` file.

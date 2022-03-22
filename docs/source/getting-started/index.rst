@@ -1,5 +1,5 @@
 ===============
-Getting Started
+Getting started
 ===============
 
 For docs maintainers
@@ -23,8 +23,9 @@ For docs contributors
   :id: "components"
   :class: my-panel
 
-  * :doc:`Scylla Docs Contributor’s Handbook <../contribute/contribute-docs>`
-  * :doc:`Markup Guide for Docs Contributors <../examples/index>`
+  * :doc:`Scylla docs contributor’s handbook <../contribute/contribute-docs>`
+  * :doc:`Commands to build docs  <../commands>`
+  * :doc:`Markup guide for docs contributors <../examples/index>`
 
 For theme maintainers
 ---------------------
@@ -33,7 +34,7 @@ For theme maintainers
   :id: "components"
   :class: my-panel
 
-  :doc:`Contribute to the Theme <../contribute/contribute-theme>`
+  :doc:`Contribute to the theme <../contribute/contribute-theme>`
 
 .. toctree::
   :maxdepth: 2
