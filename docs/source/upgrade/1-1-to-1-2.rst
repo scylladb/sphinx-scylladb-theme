@@ -20,7 +20,8 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
 #. Update the following Python dependencies in ``docs/pyproject.toml``:
 
     .. code-block::
-
+    
+	sphinx-scylladb-theme = "~1.2.0"
         sphinx-multiversion-scylla = "~0.2.11"
 
 #. Edit ``docs/Makefile``:
