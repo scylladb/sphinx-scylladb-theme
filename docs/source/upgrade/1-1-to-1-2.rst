@@ -23,6 +23,14 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
     
 	sphinx-scylladb-theme = "~1.2.0"
         sphinx-multiversion-scylla = "~0.2.11"
+        sphinx-scylladb-theme = "~1.2.0"
+
+#. Remove the following dependency in ``docs/pyproject.toml``:
+
+    .. code-block::
+
+    sphinx-sitemap = "^2.1.0"
+
 
 #. Edit ``docs/Makefile``:
 
@@ -94,6 +102,16 @@ To list versions as unstable:
             "versions_unstable": UNSTABLE_VERSIONS,
             ...
         }
+
+Sitemap
+.......
+
+Sitemaps are useful for search engines to index content.
+To generate a ``sitemap.xml`` for the site, add the following line in the ``conf.py`` file:
+
+    .. code-block:: python
+
+        sitemap_url_scheme = "{smv_rename_latest_version}/{link}"
 
 Changes in custom landing pages
 ...............................
