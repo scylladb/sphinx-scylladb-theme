@@ -111,7 +111,7 @@ To generate a ``sitemap.xml`` for the site, add the following line in the ``conf
 
     .. code-block:: python
 
-        sitemap_url_scheme = "{smv_rename_latest_version}/{link}"
+        sitemap_url_scheme = "stable/{link}"
 
 Changes in custom landing pages
 ...............................

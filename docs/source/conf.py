@@ -67,7 +67,7 @@ notfound_urls_prefix = ""
 
 # -- Options for sitemap extension ---------------------------------------
 
-sitemap_url_scheme = "{smv_rename_latest_version}/{link}"
+sitemap_url_scheme = "stable/{link}"
 
 # -- Options for redirect extension --------------------------------------
 
