@@ -20,9 +20,15 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
 #. Update the following Python dependencies in ``docs/pyproject.toml``:
 
     .. code-block::
-    
-	sphinx-scylladb-theme = "~1.2.0"
+
+	    sphinx-scylladb-theme = "~1.2.0"
         sphinx-multiversion-scylla = "~0.2.11"
+
+#. Remove the following dependency in ``docs/pyproject.toml``:
+
+    .. code-block::
+
+        sphinx-sitemap = "^2.1.0"
 
 #. Edit ``docs/Makefile``:
 
@@ -35,7 +41,7 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
             With:
 
             .. code-block::
-                
+
 		POETRY = poetry
 
                 # Windows variables
@@ -79,7 +85,7 @@ Listing unstable versions
 
 To list versions as unstable:
 
-#. Define in your `conf.py` the list ``UNSTABLE_VERSIONS``:
+#. Define in your ``conf.py`` the list ``UNSTABLE_VERSIONS``:
 
     .. code-block:: python
 
@@ -95,10 +101,22 @@ To list versions as unstable:
             ...
         }
 
+Sitemap
+.......
+
+Sitemaps are useful for search engines to index content.
+By default, the theme now automatically generates a sitemap for the site.
+
+If your project has the multiversion extension enabled, add the following line in the ``conf.py`` file:
+
+    .. code-block:: python
+
+        sitemap_url_scheme = "stable/{link}"
+
 Changes in custom landing pages
 ...............................
 
-If you were using the :ref:`Custom landing page feature <new_landing_page>`, add the following lines at the top of the file ``docs/source/index.rst``:
+If your project uses the :ref:`Custom landing page feature <new_landing_page>`, add the following lines at the top of the file ``docs/source/index.rst``:
 
     .. code-block:: restructuredText
 

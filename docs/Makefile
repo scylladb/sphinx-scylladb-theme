@@ -1,7 +1,7 @@
 # Global variables
 # You can set these variables from the command line.
 POETRY        = poetry
-SPHINXOPTS    = -j auto
+SPHINXOPTS    =
 SPHINXBUILD   = $(POETRY) run sphinx-build
 PAPER         =
 BUILDDIR      = _build
