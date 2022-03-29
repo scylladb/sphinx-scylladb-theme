@@ -13,7 +13,6 @@ sphinx-copybutton = ">=0.4,<0.6"
 sphinx-notfound-page = "^0.8"
 beautifulsoup4 = "^4.10.0"
 sphinx-tabs = "^3.2.0"
-sphinx-sitemap = "^2.2.0"
 Sphinx = "^4.3.2"
 pyyaml = "^6.0"
 Sphinx-Substitution-Extensions = "^2022.2.16"
@@ -24,6 +23,7 @@ sphinx-autobuild = "^2021.3.14"
 pre-commit = "^2.17.0"
 recommonmark = "^0.7.1"
 sphinx-multiversion-scylla = "^0.2.11"
+sphinx-sitemap = "^2.2.0"
 
 [build-system]
 requires = ["poetry>=0.12"]

@@ -23,12 +23,7 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
 
 	    sphinx-scylladb-theme = "~1.2.0"
         sphinx-multiversion-scylla = "~0.2.11"
-
-#. Remove the following dependency in ``docs/pyproject.toml``:
-
-    .. code-block::
-
-        sphinx-sitemap = "^2.1.0"
+        sphinx-sitemap = "^2.2.0"
 
 #. Edit ``docs/Makefile``:
 
@@ -105,9 +100,18 @@ Sitemap
 .......
 
 Sitemaps are useful for search engines to index content.
-By default, the theme now automatically generates a sitemap for the site.
+The toolchain now automatically generates a sitemap for the site.
 
-If your project has the multiversion extension enabled, add the following line in the ``conf.py`` file:
+To install the sitemap extension, list it the ``conf.py`` file:
+
+    .. code-block:: python
+
+        extensions = [
+            ...,
+            "sphinx_sitemap",
+        ]
+
+If the project has the multiversion extension enabled, add the following line at the end of the  file:
 
     .. code-block:: python
 
