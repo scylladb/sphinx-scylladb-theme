@@ -107,6 +107,7 @@ html_theme_options = {
     "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
+    "hide_version_dropdown": ["master"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
 }

@@ -21,9 +21,9 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
 
     .. code-block::
 
-	    sphinx-scylladb-theme = "~1.2.0"
+        sphinx-scylladb-theme = "~1.2.1"
         sphinx-multiversion-scylla = "~0.2.11"
-        sphinx-sitemap = "^2.2.0"
+        sphinx-sitemap = "2.2.0"
 
 #. Edit ``docs/Makefile``:
 
