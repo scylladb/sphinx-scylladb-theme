@@ -144,7 +144,7 @@ If you want to use a cheat sheet for Markdown or restructuredText, here are some
 Add new content to the TOC tree
 ===============================
 
-When adding new content to any repo you must add the topic to the `toc tree <https://www.sphinx-doc.org/en/1.4.8/markup/toctree.html>`_. If you do not you will have an error when compiling.
+When adding new content to any repo you must add the topic to the `toc tree <https://www.sphinx-doc.org/en/master/markup/toctree.html>`_. If you do not you will have an error when compiling.
 
 **Procedure**
 

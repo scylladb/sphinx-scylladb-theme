@@ -21,7 +21,9 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
 
     .. code-block::
 
+        sphinx-scylladb-theme = "~1.2.1"
         sphinx-multiversion-scylla = "~0.2.11"
+        sphinx-sitemap = "2.2.0"
 
 #. Edit ``docs/Makefile``:
 
@@ -34,6 +36,8 @@ Here are the main breaking changes between the 1.1 and 1.2 versions.
             With:
 
             .. code-block::
+
+		POETRY = poetry
 
                 # Windows variables
                 ifeq ($(OS),Windows_NT)
@@ -76,7 +80,7 @@ Listing unstable versions
 
 To list versions as unstable:
 
-#. Define in your `conf.py` the list ``UNSTABLE_VERSIONS``:
+#. Define in your ``conf.py`` the list ``UNSTABLE_VERSIONS``:
 
     .. code-block:: python
 
@@ -92,10 +96,31 @@ To list versions as unstable:
             ...
         }
 
+Sitemap
+.......
+
+Sitemaps are useful for search engines to index content.
+The toolchain now automatically generates a sitemap for the site.
+
+To install the sitemap extension, list it the ``conf.py`` file:
+
+    .. code-block:: python
+
+        extensions = [
+            ...,
+            "sphinx_sitemap",
+        ]
+
+If the project has the multiversion extension enabled, add the following line at the end of the  file:
+
+    .. code-block:: python
+
+        sitemap_url_scheme = "stable/{link}"
+
 Changes in custom landing pages
 ...............................
 
-If you were using the :ref:`Custom landing page feature <new_landing_page>`, add the following lines at the top of the file ``docs/source/index.rst``:
+If your project uses the :ref:`Custom landing page feature <new_landing_page>`, add the following lines at the top of the file ``docs/source/index.rst``:
 
     .. code-block:: restructuredText
 
