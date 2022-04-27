@@ -27,7 +27,7 @@
     "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^7.4.3",
+    "postcss-preset-env": "^7.4.4",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
     "webpack": "^5.72.0",
