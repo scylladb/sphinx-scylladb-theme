@@ -20,7 +20,7 @@ Sphinx-Substitution-Extensions = "^2022.2.16"
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
 sphinx-autobuild = "^2021.3.14"
-pre-commit = "^2.18.1"
+pre-commit = "^2.19.0"
 recommonmark = "^0.7.1"
 sphinx-multiversion-scylla = "^0.2.11"
 sphinx-sitemap = "^2.2.0"
