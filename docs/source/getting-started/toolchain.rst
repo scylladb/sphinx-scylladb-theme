@@ -2,7 +2,7 @@
 Toolchain
 =========
 
-Here are some basic concepts you should know before adding the doc toolchain to a project.
+Here are some concepts you should know before adding the doc toolchain to a project.
 
 Markup language
 ---------------
@@ -57,9 +57,16 @@ All the repositories deploy the documentation automatically except the repositor
 
 `Learn more <https://docs.github.com/actions>`__
 
-Netlify CI
-----------
+AWS Amplify
+-----------
 
 Builds a preview site for the docs every time someone sends a pull request that updates the docs folder.
 
-`Learn more <https://docs.netlify.com/site-deploys/deploy-previews/>`__
+`Learn more <https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html>`__
+
+Expertrec
+---------
+
+Crawls all the documentation sites to offer a unified search experience.
+
+`Learn more <https://blog.expertrec.com/knowledge-base/>`__

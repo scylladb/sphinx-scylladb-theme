@@ -10,8 +10,8 @@ For docs maintainers
   :class: my-panel
 
   * :doc:`Read about the toolchain <toolchain>`
-  * :doc:`Add Sphinx & theme to a project <installation>`
-  * :doc:`Configure the theme <../configuration/template>`
+  * :doc:`Add the toolchain to a project <installation>`
+  * :doc:`Configure the toolchain <../configuration/template>`
   * :doc:`List new versions  <../configuration/multiversion>`
   * :doc:`Publish to GitHub Pages  <../deployment/production>`
   * :doc:`Commands to build docs  <../commands>`
