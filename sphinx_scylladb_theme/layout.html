@@ -54,12 +54,23 @@
         <link rel="icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" sizes="192x192" />
         <link rel="apple-touch-icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
         <meta name="msapplication-TileImage" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
+
+        {% if pagename == "index" %}
+            {% set canonical_page = "" %}
+        {% elif pagename.endswith("/index") %}
+            {% set canonical_page = pagename[:-("/index"|length)] + "/" %}
+        {% else %}
+            {% set ending = "/" if builder == "dirhtml" else ".html" %}
+            {% set canonical_page = pagename + ending %}
+        {% endif %}
+
         {% if versions and latest_version %}
             {% set latest_slug = rename_latest_version or latest_version.name %}
-            <link rel="canonical" href="{{ html_baseurl }}/{{latest_slug}}/{{ pagename }}.html"/>
+            <link rel="canonical" href="{{ html_baseurl }}/{{latest_slug}}/{{ canonical_page }}"/>
         {% else %}
-            <link rel="canonical" href="{{ html_baseurl }}/{{ pagename }}.html"/>
+            <link rel="canonical" href="{{ html_baseurl }}/{{ canonical_page }}"/>
         {% endif %}
+
         <link rel="author" href="mailto:info@scylladb.com" />
 
         {% block css %}

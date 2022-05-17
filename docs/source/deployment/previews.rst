@@ -17,7 +17,7 @@ On this page, you will learn how to enable pull request previews in a repository
 Installation
 ------------
 
-#. Copy the file `amplify.yml <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/amplify.yml>`_ in the project `root` directory.
+#. Copy the file `amplify.yml <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/amplify.yml>`_ in the project `root` directory.
 
 #. Commit and push the changes to GitHub (default branch).
 

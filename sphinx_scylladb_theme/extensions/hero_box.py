@@ -17,6 +17,7 @@ class HeroBox(Directive):
         "button_icon": directives.path,
         "button_url": directives.path,
         "button_text": directives.path,
+        "search_box": directives.flag,
     }
 
     def run(self):
@@ -57,6 +58,20 @@ class HeroBox(Directive):
             else ""
         )
 
+        has_search_box = "search_box" in self.options
+        search_box = (
+            generate_template(
+                """
+                <div class="{class_name}__search-box search-box search-box--hero">
+                <ci-search></ci-search>
+                </div>
+                """,
+                class_name=class_name,
+            )
+            if has_search_box
+            else ""
+        )
+
         html_tag_open = generate_template(
             """
             <div class="{class_name} {container_class_name}">
@@ -74,7 +89,9 @@ class HeroBox(Directive):
             container_class_name=container_class_name,
         )
         html_tag_close = generate_template(
-            """</div>{button}</div></div></div>""", button=button
+            """</div>{button}{search_box}</div></div></div>""",
+            button=button,
+            search_box=search_box,
         )
         description_node = nodes.container()
         if self.state:

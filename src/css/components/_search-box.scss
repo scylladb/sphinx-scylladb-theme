@@ -7,6 +7,11 @@
   display: flex;
   padding: 10px 15px;
 
+  &--hero {
+    background-color: #fff;
+    padding: 12px 14px;
+  }
+
   &:before {
     content: "";
     display: inline-block;
@@ -81,10 +86,12 @@
     margin: 0 auto !important;
     margin-top: 10px !important;
     display: block !important;
-  }
-
-  .text {
     width: 100% !important;
+  }
+  .title a,
+  .url a,
+  .text {
+    max-width: 100% !important;
   }
 }
 
@@ -93,7 +100,7 @@
 }
 
 #er_search_button {
-  text-align: center !important;
+  text-align: center;
 }
 
 #er_clear_input {
@@ -104,10 +111,26 @@
 .er-facet-header {
   background-color: transparent !important;
   border: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 8px !important;
 }
 
 .er-facet-val {
   padding: 5px 2px !important;
+
+  input {
+    display: block !important;
+    margin: 0;
+  }
+}
+
+#er_search_pagination {
+  margin-top: 20px !important;
+
+  li.er-paginator-list.er-active {
+    border-bottom: 0 !important;
+    font-weight: bold;
+  }
 }
 
 /* Mobile */
@@ -120,12 +143,22 @@
   }
 }
 
+#er_gcs_mobile_model_container .er-facet-values .er-facet-val {
+  align-items: baseline;
+}
+
 @media screen and (min-width: $medium) {
   .er-facets {
     display: none;
     width: initial !important;
     min-width: initial !important;
     max-width: 300px !important;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .er-suggestions {
+    left: 15px !important;
   }
 }
 

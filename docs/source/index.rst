@@ -16,7 +16,6 @@
   :title: Welcome to Scylla Sphinx Theme documentation
   :image: /_static/img/mascots/scylla-docs.svg
 
-
   The documentation toolchain for Scylla projects.
 
 .. raw:: html
