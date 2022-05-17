@@ -59,6 +59,11 @@ The ``hero-box`` directive supports the following options:
     -
     - /_static/img/mascots/scylla-enterprise.svg
     - Path to the image. The image should be located in the project's ``_static`` folder.
+  * - ``search_box``
+    - flag
+    -
+    -
+    - If set, displays the site's search box.
 
 Usage
 -----
@@ -100,6 +105,27 @@ Results in:
 .. hero-box::
     :title: Lorem Ipsum
     :image: /_static/img/mascots/scylla-enterprise.svg
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Hero box with search box
+........................
+
+Using:
+
+.. code-block:: rst
+
+  .. hero-box::
+      :title: Lorem Ipsum
+      :search_box:
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Results in:
+
+.. hero-box::
+    :title: Lorem Ipsum
+    :search_box:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

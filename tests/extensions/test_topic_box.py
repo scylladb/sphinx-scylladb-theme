@@ -91,4 +91,7 @@ test_data = [
 def test(arguments, options, content, expected):
     directive = TopicBox("component", arguments, options, content, 0, 0, "", None, None)
     result = directive.run()
-    assert bs(result[0].astext(), "html.parser") == bs(expected, "html.parser")
+    assert (
+        bs(result[0].astext(), "html.parser").prettify()
+        == bs(expected, "html.parser").prettify()
+    )

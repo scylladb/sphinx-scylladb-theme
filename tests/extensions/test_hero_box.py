@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 
 from sphinx_scylladb_theme.extensions.hero_box import HeroBox
 
-test_data = [
+pre_content_data = [
     [
         [],
         {"title": "Lorem Ipsum", "class": "hero_test"},
@@ -35,9 +35,54 @@ test_data = [
     ],
 ]
 
+post_content_data = [
+    [
+        [],
+        {
+            "title": "Lorem Ipsum",
+            "button_icon": "fa",
+            "button_text": "Test",
+            "button_url": "#",
+        },
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button">
+                <i class="icon fa" aria-hidden="true"></i>
+                Test
+            </button>
+        </a>
+        </div></div></div>
+        """,
+    ],
+    [
+        [],
+        {"title": "Lorem Ipsum", "search_box": True},
+        ["Content"],
+        """
+        </div>
+        <div class="hero__search-box search-box search-box--hero">
+            <ci-search></ci-search>
+        </div>
+        </div></div></div>
+        """,
+    ],
+]
 
-@pytest.mark.parametrize("arguments, options, content, expected", test_data)
-def test(arguments, options, content, expected):
+
+@pytest.mark.parametrize("arguments, options, content, expected", pre_content_data)
+def test_pre_content(arguments, options, content, expected):
     directive = HeroBox("component", arguments, options, content, 0, 0, "", None, None)
     result = directive.run()
     assert bs(result[0].astext(), "html.parser") == bs(expected, "html.parser")
+
+
+@pytest.mark.parametrize("arguments, options, content, expected", post_content_data)
+def test_post_content(arguments, options, content, expected):
+    directive = HeroBox("component", arguments, options, content, 0, 0, "", None, None)
+    result = directive.run()
+    assert (
+        bs(result[2].astext(), "html.parser").prettify()
+        == bs(expected, "html.parser").prettify()
+    )
