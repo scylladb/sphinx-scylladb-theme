@@ -447,7 +447,7 @@ test = ["pytest", "pytest-cov"]
 
 [[package]]
 name = "sphinx-collapse"
-version = "0.1.1"
+version = "0.1.2"
 description = "Collapse extension for Sphinx."
 category = "main"
 optional = false
@@ -917,8 +917,8 @@ sphinx-autobuild = [
     {file = "sphinx_autobuild-2021.3.14-py3-none-any.whl", hash = "sha256:8fe8cbfdb75db04475232f05187c776f46f6e9e04cacf1e49ce81bdac649ccac"},
 ]
 sphinx-collapse = [
-    {file = "sphinx_collapse-0.1.1-py3-none-any.whl", hash = "sha256:16c13a614074393acac304af1ee722c6dd93e4fe3ab2333b3a52ee6ac05f6964"},
-    {file = "sphinx_collapse-0.1.1.tar.gz", hash = "sha256:51352f1f3fcd8d3c672a0ede3c4240f6a3a8558e4d0883725e978d5dc6c8f8d2"},
+    {file = "sphinx_collapse-0.1.2-py3-none-any.whl", hash = "sha256:7a2082da3c779916cc4c4d44832db3522a3a8bfbd12598ef01fb9eb523a164d0"},
+    {file = "sphinx_collapse-0.1.2.tar.gz", hash = "sha256:a186000bf3fdac8ac0e8a99979f720ae790de15a5efc1435d4816f79a3d377c2"},
 ]
 sphinx-copybutton = [
     {file = "sphinx-copybutton-0.5.0.tar.gz", hash = "sha256:a0c059daadd03c27ba750da534a92a63e7a36a7736dcf684f26ee346199787f6"},
