@@ -5,4 +5,4 @@
 # removing redirection html script files
 # test: /
 
-/stable/test-redirect: /stable/index.html
+/stable/test-redirect.html: /stable/index.html
