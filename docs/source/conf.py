@@ -69,11 +69,6 @@ notfound_urls_prefix = ""
 
 sitemap_url_scheme = "stable/{link}"
 
-# -- Options for redirect extension --------------------------------------
-
-# Read a YAML dictionary of redirections and generate an HTML file for each
-redirects_file = "_utils/redirections.yaml"
-
 # -- Options for multiversion extension ----------------------------------
 
 # Whitelist pattern for tags

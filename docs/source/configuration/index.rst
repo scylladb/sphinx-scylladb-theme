@@ -9,7 +9,7 @@ Configuration
    page
    multiversion
    markdown
-   redirections
+   redirects
    search
    troubleshooting
 
@@ -22,6 +22,6 @@ Configuration
   * :doc:`Template options <template>` - Configuration options for this theme.
   * :doc:`Multiversion options <multiversion>` - Configuration options for the multiversion extension.
   * :doc:`Markdown support <markdown>` - Extension to write documentation with Markdown.
-  * :doc:`Redirections support <redirections>` - Extension to create redirections.
+  * :doc:`Redirects support <redirects>` - Extension to create redirects.
   * :doc:`Search support <search>` - Service to index content that is searchable across all sites.
   * :doc:`Troubleshooting <multiversion>` - Help to resolve common issues.
