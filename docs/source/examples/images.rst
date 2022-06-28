@@ -22,7 +22,7 @@ Whereas the figure directive allows you to use captions.
    .. figure:: images/checkmark.png
       :alt: checkmark
 
-   This is the caption for the image
+      This is the caption for the image
 
 Renders the image as:
 

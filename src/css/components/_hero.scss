@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+  background: $color-background-hero;
   margin-bottom: $gap;
   overflow: hidden;
   padding: 30px 16px;
@@ -49,6 +49,7 @@
 
   &__search-box {
     margin-top: 20px;
+    box-shadow: 0 4px 25px rgb(0 0 0 / 2%);
   }
 }
 
