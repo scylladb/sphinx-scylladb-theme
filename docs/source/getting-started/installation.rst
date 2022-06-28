@@ -22,7 +22,7 @@ Step 1: Download the sample project
       project-name/
          ├── docs/
          │   ├── _utils/
-         │   |   ├── redirections.yaml
+         │   |   ├── redirects.yaml
          │   |   ├── deploy.sh
          │   ├── source/
          │   |   ├── conf.py

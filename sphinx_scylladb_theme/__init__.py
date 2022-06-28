@@ -12,7 +12,6 @@ from sphinx_scylladb_theme.extensions import (
     multiversion,
     navigation,
     panel_box,
-    redirects,
     topic_box,
 )
 from sphinx_scylladb_theme.lexers import cql, ditaa
@@ -108,7 +107,6 @@ def setup(app):
     hero_box.setup(app)
     multiversion.setup(app)
     panel_box.setup(app)
-    redirects.setup(app)
     topic_box.setup(app)
 
     return {"version": version, "parallel_read_safe": True}
