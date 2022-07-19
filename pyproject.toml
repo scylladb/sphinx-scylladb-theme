@@ -13,7 +13,7 @@ sphinx-copybutton = ">=0.4,<0.6"
 sphinx-notfound-page = "^0.8"
 beautifulsoup4 = "^4.10.0"
 sphinx-tabs = "^3.2.0"
-Sphinx = "^4.3.2"
+Sphinx = ">=4.3.2,<6.0.0"
 pyyaml = "^6.0"
 Sphinx-Substitution-Extensions = "^2022.2.16"
 
