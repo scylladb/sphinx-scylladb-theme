@@ -117,3 +117,11 @@ Block a user from triggering previews
 Code owners and third-party contributors can build pull request previews.
 To ban abusive users, see `Blocking a user from your organization <https://docs.github.com/en/communities/maintaining-your-safety-on-github/blocking-a-user-from-your-organization>`_.
 
+Limitations
+-----------
+
+- Previews builds have a 15 min limit. Nevertheless, we recommend you make sure the command ``make dirhtml`` does not take more than 3 minutes to build on average.
+- Even if your repository is private, all the pull requests previews will be publicly available by default.
+- AWS deletes previews when the pull request gets merged or closed.
+
+
