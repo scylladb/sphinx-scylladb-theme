@@ -240,4 +240,4 @@ Resources
 
 The following resources can be used to help you create content for Scylla:
 
-How to contribute to `Scylla code <https://scylla.docs.scylladb.com/master/contribute/index.html>`_
+How to contribute to `Scylla code <https://docs.scylladb.com/stable/contribute.html#contribute-to-scylla-s-source-code>`_
