@@ -2,7 +2,7 @@
 Pull requests previews
 ======================
 
-.. warning:: This feature is under beta testing and only available for a selected number of projects.
+.. caution:: This feature is under beta testing and only available for a selected number of projects.
 
 We use `AWS Amplify <https://docs.amplify.aws/>`_ to build a preview site for the docs every time someone sends a pull request that updates the docs folder.
 
@@ -93,8 +93,26 @@ Step 4: Enable pull request previews
 
 The next time you submit a pull request for the branch, AWS Amplify will build the docs automatically and share a preview URL as a pull request comment.
 
-Blocking a user from triggering previews
-----------------------------------------
+
+Build previews only if the docs folder is updated
+-------------------------------------------------
+
+To build pull-request previews only if the pull-request edits the docs folder, set the following environment variables on your AWS Amplify application:
+
+.. code-block::
+
+    AMPLIFY_DIFF_DEPLOY = true
+    AMPLIFY_DIFF_DEPLOY_ROOT = docs
+    AMPLIFY_SKIP_BACKEND_BUILD = true
+
+Preview:
+
+    .. figure:: images/amplify-env.png
+
+For more information on how to set environment variables, see the `Environment variables <https://docs.aws.amazon.com/amplify/latest/userguide/environment-variables.html#setting-env-vars>`_ section  on AWS Amplify docs.
+
+Block a user from triggering previews
+-------------------------------------
 
 Code owners and third-party contributors can build pull request previews.
 To ban abusive users, see `Blocking a user from your organization <https://docs.github.com/en/communities/maintaining-your-safety-on-github/blocking-a-user-from-your-organization>`_.
@@ -103,6 +121,7 @@ Limitations
 -----------
 
 - Previews builds have a 15 min limit. Nevertheless, we recommend you make sure the command ``make dirhtml`` does not take more than 3 minutes to build on average.
-- If your repository is private, all the pull requests previews will be publicly available by default.
-- AWS Amplify only builds previews if the ``docs`` folder receives an update.
-- AWS deletes previews when the pull requets gets merged or closed.
+- Even if your repository is private, all the pull requests previews will be publicly available by default.
+- AWS deletes previews when the pull request gets merged or closed.
+
+
