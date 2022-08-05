@@ -67,14 +67,16 @@ Step 2: Connect a repository
 Step 3: Configure build settings
 ================================
 
-.. figure:: images/amplify-build.png
 
-On this page, you should verify that the ``amplify.yml`` file was imported successfully.
+#. Under **Build and test settings**, you should see the message "We detected ``amplify.yml`` in your repository and will use it to deploy your app.". If it is not the case, review :ref:`Installation <Preview_Installation>`.
 
-Under **Build and test settings**, you should see the message "We detected ``amplify.yml`` in your repository and will use it to deploy your app.". If it is not the case, review :ref:`Installation <Preview_Installation>`.
+    .. figure:: images/amplify-build.png
 
-Once the file is imported automatically, choose **Next**.
-On the **Review** page, choose **Save and deploy**.
+#. Expand **Advanced settings** and set **Build image** to ``python:3.8``:
+
+    .. figure:: images/amplify-image.png
+
+Choose **Next**. On the **Review** page, choose **Save and deploy**.
 
 Step 4: Enable pull request previews
 ====================================
