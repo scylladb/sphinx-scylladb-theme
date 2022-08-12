@@ -21,7 +21,7 @@ The redirects file has this structure:
     # old_path: new_path
 
     # redirection to internal link
-    /previous_path/page_a:/new_path/page_a
+    /previous_path/page_a.html:/new_path/page_a.html
 
     # redirection to external link
     /previous_path/page_b:https://docs.scylladb.com/
@@ -40,10 +40,10 @@ To create a redirection:
 
     .. code-block:: none
 
-        /previous_path/page_a:/new_path/page_a
+        /previous_path/page_a.html:/new_path/page_a.html
 
     Or, to redirect to an external URL:
 
     .. code-block:: none
 
-        /previous_path/page_b:https://docs.scylladb.com/
+        /previous_path/page_b.html:https://docs.scylladb.com/
