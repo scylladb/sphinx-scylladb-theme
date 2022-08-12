@@ -2,12 +2,6 @@
 Scylla docs contributor’s handbook
 ===================================
 
-.. contents::
-   :depth: 2
-   :local:
-
-Introduction
-------------
 If you are reading this guide because you have decided to contribute to Scylla Documentation, thank you!
 We appreciate your contribution and hope that this handbook will answer any questions you may have.
 
@@ -28,8 +22,7 @@ How we write
 
 Documentation is written primarily for developers and database administrators.
 All documentation is saved and tracked on GitHub.
-We have created a Style Guide that breaks down the writing rules.
-Our documentation has an optional Vale linter which can be used to check that your writing conforms to the Scylla Style.
+We have created a style guide that breaks down the writing rules.
 
 Languages/toolchain we use
 ==========================
@@ -40,30 +33,7 @@ Some of our upstream content is written in Markdown and Sphinx also supports Mar
 You will find templates and cheatsheet links later in this document.
 You can use them to make sure your document is organized and tagged correctly.
 
-We use the following tools for the following purposes:
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Tool
-     - Purpose
-   * - `Sphinx <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-     - Used to compile the HTML pages. This tool converts .rst and .md to .html.
-       It also has directives and extensions to add more style and options for formatting the text.
-       The CSS for the project is a sphinx theme. Our theme is not open-sourced.
-   * - `Vale <https://github.com/apps/vale-linter>`_
-     - Used as a linter to check for issues with style, spelling, and grammar.
-   * - GitHub
-     - Hosts all our code and docs
-   * - GitHub Pages
-     - Static site generator for the docs.
-   * - GitHub Actions
-     - Builds and deploys the documentation to GitHub Pages every time there is new content. All the repositories deploy the documentation automatically except the repository scylla-docs, which is deployed manually.
-   * - Markdown
-     - Content written upstream is often written in Markdown. You can use Markdown to create content pages as an alternative to restructuredText.
-   * - restructuredText
-     - Most of our content is written in restructuredText. restructuredText is a Markdown-like language which can be converted to HTML with Sphinx.
+To learn more about our Stack, see :doc:`Toolchain <../getting-started/toolchain>`.
 
 About Issues and Pull Requests
 -------------------------------
@@ -118,7 +88,7 @@ After the introduction, there should be a numbered list of steps. Use the follow
 Scylla Style guide
 ..................
 
-The Scylla Style guide is being developed. You can view the document here. The style guide outlines the way we write documentation. In short, use this handbook, the style guide, and the templates to write content.
+The Scylla Style guide is being developed. You can view the document `here <https://docs.google.com/document/d/1lyHp1MKdyj0Hh3NprNFvEczA4dFSZIFoukGUvFJb9yE/edit>`_. The style guide outlines the way we write documentation. In short, use this handbook, the style guide, and the templates to write content.
 Documentation templates and cheat sheets
 In the Scylla-docs project we will store templates which can be used in every Scylla Project.
 
@@ -141,18 +111,6 @@ If you want to use a cheat sheet for Markdown or restructuredText, here are some
 * `restructuredText Cheat Sheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
 * `GitHub Markdown Cheat Sheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_
 
-Add new content to the TOC tree
-===============================
-
-When adding new content to any repo you must add the topic to the `toc tree <https://www.sphinx-doc.org/en/master/markup/toctree.html>`_. If you do not you will have an error when compiling.
-
-**Procedure**
-
-#. Look in the folder in which the topic is located and find the index.rst / index.md file which is inside the same directory as the topic.
-#. Edit the toctree directive to include the name of the new topic without its extension
-#. Save the file
-#. Make a preview and make sure there are no errors.
-
 Best practices for content submission
 =====================================
 
@@ -163,52 +121,8 @@ Best practices for content submission
 
 Test the new/changed content
 ============================
-Included in every existing documentation project is a make file.
-This file contains scripts that you can run to create a testing environment, compile the docs, and produce a local sandbox (website) to test the rendering of the HTML documentation.
 
-When you run a preview it creates a local website for the docs project you’re running.
-
-**Procedure**
-
-#. From a terminal, change the directory to the /docs directory.
-#. Run ``make preview`` command.
-#. Confirm the script completes successfully.
-#. From a browser navigate to http://127.0.0.1:5500/ to view the content. If you are generating multiple versions, navigate to  http://0.0.0.0:5500/. Confirm that the content renders properly, the links work, and you are happy with the results.
-
-Additional Scripts
-From the Make file (located in most projects in the /docs/makefile directory), there are several scripts you can run:
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 1
-
-   * - Command
-     - Description
-     - When to use
-   * - ``make preview``
-     - The preview command builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser.
-       The build contains only a single version even if the docs are enabled for more.
-       This command can keep running while you’re working and will refresh the content accordingly.
-     - Each time you want to create a copy of the Scylla Docs site. If you are sending a PR you must run this command with no errors before submitting the PR.  Note that if you make changes to the index or TOC while this command is running the changes may not be implemented and you will have to stop this command and run a make clean and then rerun the make preview.
-   * - ``make clean``
-     - The make preview operation creates content in the _build directory. When making changes to the docs, it is helpful to delete the contents of this directory before running make preview.
-     - * Run before make preview (first time).
-       * Run if you have changed the toc or index pages.
-   * - ``make pristine``
-     - Provides a deeper clean of the temporary files. This script resets all the custom changes done in the repository that are not committed.
-     - This command should be used in cases where the make clean command does not work effectively.
-   * - ``make dirhtml``
-     - Creates an HTML version which you can view using a file explorer. This command  generates HTML docs under the docs/_build/dirhtml directory.
-     - Mainly used by CI scripts.
-   * - ``make linkcheck``
-     - Runs a check on all links in the entire site and confirms that they do not result in a 404
-     - When you make structural changes to the docs, especially when you delete pages.
-   * - ``make multiversion``
-     - If there is more than one version of the documentation defined, this script will create a multiversion output.
-     - Mainly used by CI scripts.
-   * - ``make multiversionpreview``
-     - Allows you to view multiple versions of the docs as defined in the multiversion configuration settings.
-     - When you want to preview how the documentation will be published when multiple versions are defined.
+For more information, see our :doc:`Quickstart guide <../getting-started/quickstart>`.
 
 Submit a pull request (PR)
 ==========================
@@ -220,11 +134,10 @@ Make sure to speak with the project’s maintainer before submitting the PR to a
 If you are writing new content it is **highly recommended** to set your PR to a draft state.
 For Documentation PRs, the following guidelines should be applicable to all Scylla projects:
 
-* Use the Vale Linter before submitting your PR to make sure your submission is free of any mechanical or grammatical errors.
 * Test the instructions against the product. For all tests you must use a clean, new install unless otherwise specified in the issue.
 * Make sure the PR renders with no errors and that make preview does not return any errors.
 * Cite the issue you are fixing in the PR comments and use screenshots to show changes in formatting.
-* In the subject line of the PR prepend the subject with ``Docs:``.
+* In the subject line of the PR prepend the subject with ``docs:``.
 
 If you have any questions about the process, ask the maintainer of the project you're working on.
 
@@ -234,10 +147,3 @@ Scylla-docs Slack Channel
 
 The `Scylla Users Slack <http://slack.scylladb.com/>`_ has a scylla-docs channel. There you will find the docs team and other enthusiasts about docs.
 This channel is public.
-
-Resources
-----------
-
-The following resources can be used to help you create content for Scylla:
-
-How to contribute to `Scylla code <https://docs.scylladb.com/stable/contribute.html#contribute-to-scylla-s-source-code>`_

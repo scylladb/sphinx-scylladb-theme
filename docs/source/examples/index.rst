@@ -4,7 +4,7 @@ Examples
 This documentation covers the markup convention used for Scylla Docs.
 
 Our official documentation is written in restructuredText.
-If you are not familiar with restructuredText, refer to `this cheat sheet <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html>`_.
+If you are not familiar with restructuredText, refer to `this cheat sheet <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_.
 Keep in mind, that in this cheat sheet there may be directives or elements of the markup we're not using.
 
 In general, there are main components to the markup of any document:

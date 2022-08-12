@@ -2,7 +2,7 @@
 Installation
 ============
 
-This quickstart walks you through the steps required to add the documentation toolchain to a ScyllaDB project hosted on GitHub.
+This guide walks you through the steps required to add the documentation toolchain to a ScyllaDB project hosted on GitHub.
 
 Prerequisites
 -------------
@@ -17,7 +17,7 @@ Step 1: Download the sample project
 
 #. Copy the ``docs`` directory from the repository `scylladb/sphinx-scylladb-theme <https://github.com/scylladb/sphinx-scylladb-theme>`_  to the root directory of the project where you want to set up docs. The project's directory structure should look like the following:
 
-   .. code:: console
+   .. code-block:: console
 
       project-name/
          ├── docs/
@@ -48,8 +48,6 @@ Step 3: Preview the site locally
 #. Delete or adapt the sample documentation files under ``docs/source``.
 
 #. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx.
-
-   .. tip:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`.
 
 #. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
 

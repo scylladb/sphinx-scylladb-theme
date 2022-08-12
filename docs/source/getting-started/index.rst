@@ -9,12 +9,10 @@ For docs maintainers
   :id: "components"
   :class: my-panel
 
-  * :doc:`Read about the toolchain <toolchain>`
   * :doc:`Add the toolchain to a project <installation>`
-  * :doc:`Configure the toolchain <../configuration/template>`
+  * :doc:`Configure the project <../configuration/template>`
   * :doc:`List new versions  <../configuration/multiversion>`
   * :doc:`Publish to GitHub Pages  <../deployment/production>`
-  * :doc:`Commands to build docs  <../commands>`
 
 For docs contributors
 ---------------------
@@ -23,9 +21,9 @@ For docs contributors
   :id: "components"
   :class: my-panel
 
-  * :doc:`Scylla docs contributor’s handbook <../contribute/contribute-docs>`
-  * :doc:`Commands to build docs  <../commands>`
-  * :doc:`Markup guide for docs contributors <../examples/index>`
+  * :doc:`Read about the toolchain <toolchain>`
+  * :doc:`Create your first documentation page <quickstart>`
+  * :doc:`Submit your changes <../contribute/contribute-docs>`
 
 For theme maintainers
 ---------------------
@@ -43,3 +41,4 @@ For theme maintainers
 
   toolchain
   installation
+  quickstart
