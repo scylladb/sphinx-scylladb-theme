@@ -34,6 +34,28 @@ Here are the main breaking changes between the 1.2 and 1.3 versions.
             @echo
             @echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
+#. If you have a file ``docs/_utils/redirections.yml``, rename it to ``docs/_utils/redirects.yml`` and update it to the new format:
+
+    Before, redirects were created for all versions:
+
+    .. code-block::
+
+        test-redirect: /stable/index
+
+    If the project were building docs for the branches ``stable`` and ``branch-1.0``, it would generate the following redirections:
+
+        * ``/stable/test-redirect`` -> ``/stable/index``
+        * ``/branch-1.0/test-redirect`` -> ``/stable/index``
+
+    Now, you have more control to define redirects per version. To create the same redirects as in the previous example, the new format is:
+
+    .. code-block::
+
+        /stable/test-redirect.html: /stable/index.html
+        /branch-1.0/test-redirect.html: /stable/index.html
+
+    .. note:: Notice that now you must append the ``.html`` extension to the redirects.
+
 #. Remove the file ``.github/workflows/docs-pages.yml``. Then, copy the new workflow in the ``.github/workflows`` folder. You can download the latest `docs-pages.yml` workflow `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
 
     If the default branch is not ``master`` or the docs are not under the ``docs`` folder, the workflows to match the project configuration. For example:
@@ -51,3 +73,15 @@ Here are the main breaking changes between the 1.2 and 1.3 versions.
 
 To check if the upgrade completed successfully, run the command :doc:`make preview <../../commands>`.
 Then, check if the site footer displays version 1.3 or greater.
+
+Optional features
+------------------
+
+Build previews only if the docs folder is updated
+.................................................
+
+If the project is deploying docs pull request previews with AWS Ampify, you can update the configuration to improve the build time:
+
+1. Replace the ``amplify.yml`` in your root directory with the `latest version <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/amplify.yml>`_.
+2. Follow the guide :ref:`Build previews only if the docs folder is updated <enable_previews_doc_folder_updated>`.
+3. Set the base image to build the docs to ``python:3.8`` as described in :ref:`Configure build settings <configure_build_settings>`.

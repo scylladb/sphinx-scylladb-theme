@@ -29,13 +29,13 @@
   <div class="grid-x grid-margin-x">
 
 .. topic-box::
-  :title: Installation
+  :title: Getting started
   :link: getting-started
   :icon: scylla-icon scylla-icon--getting-started
   :class: large-6
   :anchor: Learn more
 
-  Create a new documentation project with the Sphinx theme.
+  Create a new documentation project with the Sphinx theme and preview the documentation in your browser.
 
 .. topic-box::
   :title: Configuration

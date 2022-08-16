@@ -12,9 +12,9 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # Build documentation for the following tags and branches
 TAGS = []
-BRANCHES = ["branch-1.2", "branch-1.1", "branch-1.0", "master"]
+BRANCHES = ["branch-1.3", "branch-1.2", "branch-1.1", "branch-1.0", "master"]
 # Set the latest version.
-LATEST_VERSION = "branch-1.2"
+LATEST_VERSION = "branch-1.3"
 # Set which versions are not released yet.
 UNSTABLE_VERSIONS = ["master"]
 # Set which versions are deprecated

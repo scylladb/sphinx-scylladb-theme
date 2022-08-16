@@ -64,6 +64,8 @@ Step 2: Connect a repository
 
 #. Choose **Next**.
 
+.. _configure_build_settings:
+
 Step 3: Configure build settings
 ================================
 
@@ -95,6 +97,7 @@ Step 4: Enable pull request previews
 
 The next time you submit a pull request for the branch, AWS Amplify will build the docs automatically and share a preview URL as a pull request comment.
 
+.. _enable_previews_doc_folder_updated:
 
 Build previews only if the docs folder is updated
 -------------------------------------------------
@@ -125,5 +128,3 @@ Limitations
 - Previews builds have a 15 min limit. Nevertheless, we recommend you make sure the command ``make dirhtml`` does not take more than 3 minutes to build on average.
 - Even if your repository is private, all the pull requests previews will be publicly available by default.
 - AWS deletes previews when the pull request gets merged or closed.
-
-
