@@ -22,7 +22,7 @@ Here are the main breaking changes between the 1.2 and 1.3 versions.
     .. code-block::
 
         sphinx-scylladb-theme = "~1.3.0"
-        redirects_cli ="0.1.0"
+        redirects_cli ="0.1.1"
 
 #. Add the new `redirects` command in ``docs/Makefile``:
 
@@ -34,7 +34,7 @@ Here are the main breaking changes between the 1.2 and 1.3 versions.
             @echo
             @echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
-#. If you have a file ``docs/_utils/redirections.yml``, rename it to ``docs/_utils/redirects.yml`` and update it to the new format:
+#. Create a new file ``docs/_utils/redirects.yml``. If the project has a file ``docs/_utils/redirections.yml``, rename it to ``docs/_utils/redirects.yml`` and update it to the new format:
 
     Before, redirects were created for all versions:
 

@@ -75,6 +75,10 @@ Configuration options for version dropdown.
     -  list of strings
     -  []
     -  List of tags and branches names to hide from the multiversion dropdown.
+  * - ``hide_versions_dropdown``
+    - string
+    - true
+    -  Set tp `true` to remove completely the multiversion dropdown.
   * - ``tag_substring_removed``
     -  string
     -  -scylla

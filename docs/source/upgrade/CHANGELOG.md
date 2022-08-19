@@ -5,13 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.3.0 - 12 Aug 2022
+## 1.3.1 - 19 Aug 2022
 
 ### Added
 
 - [#525](https://github.com/scylladb/sphinx-scylladb-theme/issues/525): When a user clicks on **Create an issue** button, the issue is now created with the prefix `docs:` and the label `documentation`.
 - [#531](https://github.com/scylladb/sphinx-scylladb-theme/pull/531): Adds instructions to trigger pull requests previews with Amplify only when there are updates within the `docs` folder.
 - We added a quickstart guide to create your first documentation page, list it in the table of contents, and preview the site locally.
+- [#551](https://github.com/scylladb/sphinx-scylladb-theme/pull/551): Adds an option to hide the multiversion selector for projects for projects that only build one version.
 
 ### Changed
 
