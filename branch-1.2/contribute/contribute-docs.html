@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    
+    
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>
+             Scylla docs contributor’s handbook | Scylla Docs 
+        </title>
+        <meta name="description" content="Sphinx Theme for ScyllaDB projects." />
+        <link rel="icon" href="../_static/img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../_static/img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="../_static/img/favicon-228x228.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="../_static/img/favicon-228x228.png" />
+        <meta name="msapplication-TileImage" href="../_static/img/favicon-228x228.png" />
+
+        
+            
+            
+        
+
+        
+            
+            <link rel="canonical" href="https://sphinx-theme.scylladb.com/stable/contribute/contribute-docs.html"/>
+        
+
+        <link rel="author" href="mailto:info@scylladb.com" />
+
+        
+            
+        <!-- increase expertrec loading priority-->
+        <link rel="dns-prefetch" href="https://cse.expertrec.com">
+
+        <!-- increase font loading priority -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- async CSS -->
+        <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- no-JS fallback -->
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+        </noscript>
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/css/main.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/sphinx_collapse.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+            
+        
+    
+        
+        
+            
+
+        <script type="text/javascript" id="documentation_options" data-url_root="../"
+            src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/js/runtime.bundle.js"></script>
+        <script type="text/javascript" src="../_static/js/main.bundle.js"></script>
+        
+            
+                <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+            
+        
+            
+        
+            
+                <script src="../_static/underscore.js"></script>
+            
+        
+            
+                <script src="../_static/doctools.js"></script>
+            
+        
+            
+                <script src="../_static/clipboard.min.js"></script>
+            
+        
+            
+                <script src="../_static/copybutton.js"></script>
+            
+        
+    
+            <!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T8P2JP");
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Expertrec -->
+<script>
+    var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
+    var ci_search = document.createElement("script");
+    ci_search.type = "text/javascript";
+    ci_search.async = true;
+    ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ci_search, s);
+</script>
+<!-- End Expertrec -->
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
+        <!-- End Font Awesome -->
+    </head>
+
+    <body>
+        
+        <header class="header">
+    <div class="header-logo">
+        <a class="header-logo__img" href="https://scylladb.com/">
+            <img src="../_static/img/logo-docs.svg" alt="Scylla Documentation Logo" />
+        </a>
+        <span class="header-logo__bar"></span>
+        <a class="header-logo__text" href="https://docs.scylladb.com/">
+            Documentation
+        </a>
+    </div>
+    <div class="header-navigation">
+        <ul class="dropdown menu scylla-dropdown scylla-dropdown--header" data-dropdown-menu>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Server
+                    <i class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--about-us"></i>
+                            Scylla Open Source
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--enterprise"></i>Scylla Enterprise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scylla.docs.scylladb.com/stable/alternator/alternator.html">
+                            <i class="scylla-icon scylla-icon--overview"></i>
+                            Scylla Alternator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Cloud <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://cloud.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--cloud"></i>Scylla Cloud</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/scylla-cloud/">
+                            <i class="scylla-icon scylla-icon--cloud-docs"></i>Scylla Cloud
+                            Docs</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Tools <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://manager.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--manager"></i>Scylla Manager</a>
+                    </li>
+                    <li>
+                        <a href="https://monitoring.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--monitoring"></i>Scylla
+                            Monitoring Stack</a>
+                    </li>
+                    <li>
+                        <a href="https://operator.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--operator"></i>Scylla Operator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Drivers <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/cql-drivers/">
+                            <i class="scylla-icon scylla-icon--nsql-guides"></i>CQL Drivers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/dynamo-drivers/">
+                            <i class="scylla-icon scylla-icon--overview"></i>DynamoDB Drivers
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="header-button">
+            <a href="https://www.scylladb.com/download/" class="button">Download</a>
+        </div>
+    </div>
+    <div class="header-search-box">
+        <div class="search-box">
+            <ci-search></ci-search>
+        </div>
+    </div>
+    <div class="side-nav-toggle" data-toggle="side-nav">
+    <div class="side-nav-toggle__button">
+        <img src="../_static/img/menu.svg" alt="Menu" />
+    </div>
+</div>
+</header>
+        <section
+            class="layout  layout--sidebar layout--has-secondary-sidebar ">
+            <div class="content large-order-2">
+                
+                    
+    <div class="admonition caution">
+        <p class="admonition-title">Caution</p>
+        <p>
+            
+                You're viewing documentation for a previous version of Scylla Sphinx Theme.
+            
+            <a href="../../stable/contribute/contribute-docs.html">Switch to the latest stable version.</a>
+        </p>
+    </div>
+
+                
+                
+                    <div class="pre-content">
+                        <div class="breadcrumbs">
+    <span class="bread__item">
+        <a href="../index.html"
+            class="bread__highlight">
+            <i class="fas fa-home"></i> Scylla Sphinx Theme
+        </a>
+    </span>
+    
+        <span class="bread__item">
+            <a href="index.html">
+                Contribute
+            </a>
+        </span>
+    
+    <span class="bread__item bread__item--last">Scylla docs contributor’s handbook</span>
+</div>
+                    </div>
+                
+                <section id="scylla-docs-contributors-handbook">
+<h1>Scylla docs contributor’s handbook<a class="headerlink" href="#scylla-docs-contributors-handbook" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#about-scylla-docs" id="id2">About Scylla Docs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-we-write" id="id3">How we write</a></p></li>
+<li><p><a class="reference internal" href="#languages-toolchain-we-use" id="id4">Languages/toolchain we use</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#about-issues-and-pull-requests" id="id5">About Issues and Pull Requests</a></p></li>
+<li><p><a class="reference internal" href="#workflow-for-submissions" id="id6">Workflow for Submissions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#issue-assignment" id="id7">Issue assignment</a></p></li>
+<li><p><a class="reference internal" href="#guidelines-for-branch-names" id="id8">Guidelines for branch names</a></p></li>
+<li><p><a class="reference internal" href="#write-content" id="id9">Write content</a></p></li>
+<li><p><a class="reference internal" href="#add-new-content-to-the-toc-tree" id="id10">Add new content to the TOC tree</a></p></li>
+<li><p><a class="reference internal" href="#best-practices-for-content-submission" id="id11">Best practices for content submission</a></p></li>
+<li><p><a class="reference internal" href="#test-the-new-changed-content" id="id12">Test the new/changed content</a></p></li>
+<li><p><a class="reference internal" href="#submit-a-pull-request-pr" id="id13">Submit a pull request (PR)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#scylla-docs-slack-channel" id="id14">Scylla-docs Slack Channel</a></p></li>
+<li><p><a class="reference internal" href="#resources" id="id15">Resources</a></p></li>
+</ul>
+</div>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>If you are reading this guide because you have decided to contribute to Scylla Documentation, thank you!
+We appreciate your contribution and hope that this handbook will answer any questions you may have.</p>
+<p>The purpose of this handbook is to explain how to contribute new content to Scylla Docs either as a new topic or by editing an existing topic.</p>
+<p>If you feel something is missing from this document, do not hesitate to let us know. You can use the Feedback button at the bottom to open an issue.</p>
+</section>
+<section id="about-scylla-docs">
+<h2><a class="toc-backref" href="#id2">About Scylla Docs</a><a class="headerlink" href="#about-scylla-docs" title="Permalink to this headline">¶</a></h2>
+<p>Scylla Docs contains all of the user documentation for installing, maintaining, administering, and developing applications for the Scylla Database.
+Each project in the ScyllaDB organization is hosted on GitHub.
+For most of the projects, there is a dedicated <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder where all of the documentation for that project is stored.
+All projects have a file called <code class="docutils literal notranslate"><span class="pre">README</span></code>. Consult the README file for more specific information on any individual project.</p>
+<section id="how-we-write">
+<h3><a class="toc-backref" href="#id3">How we write</a><a class="headerlink" href="#how-we-write" title="Permalink to this headline">¶</a></h3>
+<p>Documentation is written primarily for developers and database administrators.
+All documentation is saved and tracked on GitHub.
+We have created a Style Guide that breaks down the writing rules.
+Our documentation has an optional Vale linter which can be used to check that your writing conforms to the Scylla Style.</p>
+</section>
+<section id="languages-toolchain-we-use">
+<h3><a class="toc-backref" href="#id4">Languages/toolchain we use</a><a class="headerlink" href="#languages-toolchain-we-use" title="Permalink to this headline">¶</a></h3>
+<p>The backbone of the docs is written in reStructuredText and the Documentation is compiled with Sphinx.
+Some of our upstream content is written in Markdown and Sphinx also supports Markdown as well.</p>
+<p>You will find templates and cheatsheet links later in this document.
+You can use them to make sure your document is organized and tagged correctly.</p>
+<p>We use the following tools for the following purposes:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Sphinx</a></p></td>
+<td><p>Used to compile the HTML pages. This tool converts .rst and .md to .html.
+It also has directives and extensions to add more style and options for formatting the text.
+The CSS for the project is a sphinx theme. Our theme is not open-sourced.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/apps/vale-linter">Vale</a></p></td>
+<td><p>Used as a linter to check for issues with style, spelling, and grammar.</p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p>Hosts all our code and docs</p></td>
+</tr>
+<tr class="row-odd"><td><p>GitHub Pages</p></td>
+<td><p>Static site generator for the docs.</p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub Actions</p></td>
+<td><p>Builds and deploys the documentation to GitHub Pages every time there is new content. All the repositories deploy the documentation automatically except the repository scylla-docs, which is deployed manually.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Markdown</p></td>
+<td><p>Content written upstream is often written in Markdown. You can use Markdown to create content pages as an alternative to restructuredText.</p></td>
+</tr>
+<tr class="row-even"><td><p>restructuredText</p></td>
+<td><p>Most of our content is written in restructuredText. restructuredText is a Markdown-like language which can be converted to HTML with Sphinx.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="about-issues-and-pull-requests">
+<h2><a class="toc-backref" href="#id5">About Issues and Pull Requests</a><a class="headerlink" href="#about-issues-and-pull-requests" title="Permalink to this headline">¶</a></h2>
+<p>Any documentation contribution, no matter how small, is made as a pull request (PR) on GitHub. You can use a client, the Web UI, or the command line to manage your PRs.</p>
+</section>
+<section id="workflow-for-submissions">
+<h2><a class="toc-backref" href="#id6">Workflow for Submissions</a><a class="headerlink" href="#workflow-for-submissions" title="Permalink to this headline">¶</a></h2>
+<p>As all content is submitted as a pull request the following diagram can be used to represent the workflow.</p>
+<a class="reference internal image-reference" href="../_images/docs-submission.png"><img alt="../_images/docs-submission.png" src="../_images/docs-submission.png" style="width: 400pt;" /></a>
+<section id="issue-assignment">
+<h3><a class="toc-backref" href="#id7">Issue assignment</a><a class="headerlink" href="#issue-assignment" title="Permalink to this headline">¶</a></h3>
+<p>Each repository has an issues page on GitHub.
+Doc issues are generally labeled with a documentation or docs label.
+Although assignment specifics may change from project to project, please do not work on issues that are not assigned to you.
+This avoids working on something someone else is working on.
+Also, if there is an issue with any guide and the issue does not exist, please create an issue so it can be tracked.</p>
+</section>
+<section id="guidelines-for-branch-names">
+<h3><a class="toc-backref" href="#id8">Guidelines for branch names</a><a class="headerlink" href="#guidelines-for-branch-names" title="Permalink to this headline">¶</a></h3>
+<p>Ask the Maintainer of the project if he/she has any preference for naming branches before you contribute to the repo to avoid any collisions or confusion.
+If you are providing both documentation and code, it is recommended to name all of your documentation branches with a doc- prefix.</p>
+</section>
+<section id="write-content">
+<h3><a class="toc-backref" href="#id9">Write content</a><a class="headerlink" href="#write-content" title="Permalink to this headline">¶</a></h3>
+<p>When writing content for Scylla, we use an informal topic-based writing approach.
+There are three kinds of topics:</p>
+<ul class="simple">
+<li><p>Informational — Gives an overview of the subject</p></li>
+<li><p>Procedural — Gives instructions on how to use the subject</p></li>
+<li><p>Referential — Gives additional information about the particular topic</p></li>
+<li><p>All content must be written in US English. Use as few words as possible and try to keep the reading level to under grade 8. You can use word counters and readability tests to keep the reading level down.</p></li>
+</ul>
+<section id="write-procedures">
+<h4>Write procedures<a class="headerlink" href="#write-procedures" title="Permalink to this headline">¶</a></h4>
+<p>Each procedure should have an introductory paragraph (1-3 sentences) which explains what the procedure does, when you should use it, and what benefit the procedure provides.
+After the introduction, there should be a numbered list of steps. Use the following guidelines to write the steps:</p>
+<ul class="simple">
+<li><p>Each step should be one single action.</p></li>
+<li><p>Steps should be written in clear, simple vocabulary that is easy to follow. If the step includes a code snippet, a screenshot of the expected outcome should follow.</p></li>
+<li><p>If the procedure includes changing a configuration, the next step should include how to verify that the configuration change was successful.</p></li>
+<li><p>Wherever possible, instructions on how to reverse the action should also be included (not part of the original procedure, but included in a separate procedure.</p></li>
+</ul>
+</section>
+<section id="scylla-style-guide">
+<h4>Scylla Style guide<a class="headerlink" href="#scylla-style-guide" title="Permalink to this headline">¶</a></h4>
+<p>The Scylla Style guide is being developed. You can view the document here. The style guide outlines the way we write documentation. In short, use this handbook, the style guide, and the templates to write content.
+Documentation templates and cheat sheets
+In the Scylla-docs project we will store templates which can be used in every Scylla Project.</p>
+</section>
+<section id="templates">
+<h4>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h4>
+<p>Use these templates to create new content. There are templates in .rst and .md for the following documents:</p>
+<ul class="simple">
+<li><p>KB Articles</p></li>
+<li><p>General Topics</p></li>
+<li><p>Known Issues / Troubleshooting</p></li>
+<li><p>Procedures (How To)</p></li>
+</ul>
+</section>
+<section id="cheatsheets">
+<h4>Cheatsheets<a class="headerlink" href="#cheatsheets" title="Permalink to this headline">¶</a></h4>
+<p>If you want to use a cheat sheet for Markdown or restructuredText, here are some which are helpful:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../examples/index.html"><span class="doc">Scylla Cheat Sheet</span></a> - samples of restructuredText markup.</p></li>
+<li><p><a class="reference external" href="https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst">restructuredText Cheat Sheet</a></p></li>
+<li><p><a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">GitHub Markdown Cheat Sheet</a></p></li>
+</ul>
+</section>
+</section>
+<section id="add-new-content-to-the-toc-tree">
+<h3><a class="toc-backref" href="#id10">Add new content to the TOC tree</a><a class="headerlink" href="#add-new-content-to-the-toc-tree" title="Permalink to this headline">¶</a></h3>
+<p>When adding new content to any repo you must add the topic to the <a class="reference external" href="https://www.sphinx-doc.org/en/master/markup/toctree.html">toc tree</a>. If you do not you will have an error when compiling.</p>
+<p><strong>Procedure</strong></p>
+<ol class="arabic simple">
+<li><p>Look in the folder in which the topic is located and find the index.rst / index.md file which is inside the same directory as the topic.</p></li>
+<li><p>Edit the toctree directive to include the name of the new topic without its extension</p></li>
+<li><p>Save the file</p></li>
+<li><p>Make a preview and make sure there are no errors.</p></li>
+</ol>
+</section>
+<section id="best-practices-for-content-submission">
+<h3><a class="toc-backref" href="#id11">Best practices for content submission</a><a class="headerlink" href="#best-practices-for-content-submission" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Always open an issue describing what you want to work on if one doesn’t already exist.</p></li>
+<li><p>Use GitHub search to see if there is someone else working on the issue already. Look at the open PRs.</p></li>
+<li><p>Test the new / changed content using the make preview script. Confirm there are no compilation errors before submitting.</p></li>
+<li><p>Give some text to your commit message. Explain why you did what you did. If you changed something in formatting, provide a before and after screenshot.</p></li>
+</ul>
+</section>
+<section id="test-the-new-changed-content">
+<h3><a class="toc-backref" href="#id12">Test the new/changed content</a><a class="headerlink" href="#test-the-new-changed-content" title="Permalink to this headline">¶</a></h3>
+<p>Included in every existing documentation project is a make file.
+This file contains scripts that you can run to create a testing environment, compile the docs, and produce a local sandbox (website) to test the rendering of the HTML documentation.</p>
+<p>When you run a preview it creates a local website for the docs project you’re running.</p>
+<p><strong>Procedure</strong></p>
+<ol class="arabic simple">
+<li><p>From a terminal, change the directory to the /docs directory.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">preview</span></code> command.</p></li>
+<li><p>Confirm the script completes successfully.</p></li>
+<li><p>From a browser navigate to <a class="reference external" href="http://127.0.0.1:5500/">http://127.0.0.1:5500/</a> to view the content. If you are generating multiple versions, navigate to  <a class="reference external" href="http://0.0.0.0:5500/">http://0.0.0.0:5500/</a>. Confirm that the content renders properly, the links work, and you are happy with the results.</p></li>
+</ol>
+<p>Additional Scripts
+From the Make file (located in most projects in the /docs/makefile directory), there are several scripts you can run:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>When to use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">preview</span></code></p></td>
+<td><p>The preview command builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser.
+The build contains only a single version even if the docs are enabled for more.
+This command can keep running while you’re working and will refresh the content accordingly.</p></td>
+<td><p>Each time you want to create a copy of the Scylla Docs site. If you are sending a PR you must run this command with no errors before submitting the PR.  Note that if you make changes to the index or TOC while this command is running the changes may not be implemented and you will have to stop this command and run a make clean and then rerun the make preview.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code></p></td>
+<td><p>The make preview operation creates content in the _build directory. When making changes to the docs, it is helpful to delete the contents of this directory before running make preview.</p></td>
+<td><ul class="simple">
+<li><p>Run before make preview (first time).</p></li>
+<li><p>Run if you have changed the toc or index pages.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">pristine</span></code></p></td>
+<td><p>Provides a deeper clean of the temporary files. This script resets all the custom changes done in the repository that are not committed.</p></td>
+<td><p>This command should be used in cases where the make clean command does not work effectively.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">dirhtml</span></code></p></td>
+<td><p>Creates an HTML version which you can view using a file explorer. This command  generates HTML docs under the docs/_build/dirhtml directory.</p></td>
+<td><p>Mainly used by CI scripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">linkcheck</span></code></p></td>
+<td><p>Runs a check on all links in the entire site and confirms that they do not result in a 404</p></td>
+<td><p>When you make structural changes to the docs, especially when you delete pages.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">multiversion</span></code></p></td>
+<td><p>If there is more than one version of the documentation defined, this script will create a multiversion output.</p></td>
+<td><p>Mainly used by CI scripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">multiversionpreview</span></code></p></td>
+<td><p>Allows you to view multiple versions of the docs as defined in the multiversion configuration settings.</p></td>
+<td><p>When you want to preview how the documentation will be published when multiple versions are defined.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="submit-a-pull-request-pr">
+<h3><a class="toc-backref" href="#id13">Submit a pull request (PR)</a><a class="headerlink" href="#submit-a-pull-request-pr" title="Permalink to this headline">¶</a></h3>
+<p>We expect that you are aware of how to submit a PR to GitHub. If you are not, please look at this <a class="reference external" href="https://guides.github.com/activities/hello-world/">tutorial</a>.
+Every repository handles PRs differently. Some require you to use a template for submissions and some do not.
+Make sure to speak with the project’s maintainer before submitting the PR to avoid any misunderstanding or issues.</p>
+<p>If you are writing new content it is <strong>highly recommended</strong> to set your PR to a draft state.
+For Documentation PRs, the following guidelines should be applicable to all Scylla projects:</p>
+<ul class="simple">
+<li><p>Use the Vale Linter before submitting your PR to make sure your submission is free of any mechanical or grammatical errors.</p></li>
+<li><p>Test the instructions against the product. For all tests you must use a clean, new install unless otherwise specified in the issue.</p></li>
+<li><p>Make sure the PR renders with no errors and that make preview does not return any errors.</p></li>
+<li><p>Cite the issue you are fixing in the PR comments and use screenshots to show changes in formatting.</p></li>
+<li><p>In the subject line of the PR prepend the subject with <code class="docutils literal notranslate"><span class="pre">Docs:</span></code>.</p></li>
+</ul>
+<p>If you have any questions about the process, ask the maintainer of the project you’re working on.</p>
+</section>
+</section>
+<section id="scylla-docs-slack-channel">
+<h2><a class="toc-backref" href="#id14">Scylla-docs Slack Channel</a><a class="headerlink" href="#scylla-docs-slack-channel" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="http://slack.scylladb.com/">Scylla Users Slack</a> has a scylla-docs channel. There you will find the docs team and other enthusiasts about docs.
+This channel is public.</p>
+</section>
+<section id="resources">
+<h2><a class="toc-backref" href="#id15">Resources</a><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p>The following resources can be used to help you create content for Scylla:</p>
+<p>How to contribute to <a class="reference external" href="https://scylla.docs.scylladb.com/master/contribute/index.html">Scylla code</a></p>
+</section>
+</section>
+
+                
+                    <div class="post-content"><div class="content-navigation">
+    <div class="navigation navigation--prev">
+        
+            <a class="navigation__link" href="index.html">
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-left"></i>
+                </button>
+                <div class="navigation__title">
+                    <span class="colored">PREVIOUS</span> <br />Contribute
+                </div>
+            </a>
+        
+    </div>
+    <div class="navigation navigation--next">
+        
+            <a class="navigation__link" href="contribute-theme.html">
+                <div class="navigation__title">
+                    <span class="colored">NEXT</span> <br />Contribute to the theme
+                </div>
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-right"></i>
+                </button>
+            </a>
+        
+    </div>
+</div></div>
+                
+            </div>
+            <div class="sidebar-left  large-order-1">
+                
+                    
+                        <div id="side-nav" class="side-nav custom-scroll-bar" data-closable data-toggler=".show">
+    <button class="collapsible-button">
+        <i class="scylla-icon scylla-icon--chevron-left"></i>
+    </button>
+    <div class="side-nav-content">
+        <div class="side-nav__search">
+            <div class="search-box">
+                <ci-search></ci-search>
+            </div>
+        </div>
+        <div class="side-nav__versions"><ul class="dropdown menu scylla-dropdown scylla-dropdown--versions" data-dropdown-menu>
+    <li class="scylla-dropdown__item">
+        <a class="scylla-dropdown__title" href="#">
+            
+                1.2
+            
+            <i class="chevron scylla-icon scylla-icon--chevron-right"></i>
+        </a>
+        <ul class="menu scylla-dropdown__content">
+            
+                
+            
+                
+                    <li>
+                        <a href="../../stable/contribute/contribute-docs.html">1.3</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="contribute-docs.html">1.2</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.1/contribute/contribute-docs.html">1.1</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.0/contribute/contribute-docs.html">1.0</a>
+                    </li>
+                
+            
+            
+        </ul>
+    </li>
+</ul></div>
+        <div class="side-nav__content">
+            <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started/index.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/toolchain.html">Toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration/index.html">Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/template.html">Template options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/page.html">Page options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/multiversion.html">Multiversion options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/markdown.html">Markdown support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/redirections.html">Redirections support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/search.html">Search support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../deployment/index.html">Deployment</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html">Production deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/previews.html">Pull requests previews</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/collapse.html">Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/code-blocks.html">Code blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/headings.html">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/hero-box.html">Hero box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/includes.html">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/links.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/panel-box.html">Panel box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/substitutions.html">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tabs.html">Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/toc.html">TOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/topic-box.html">Topic box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/versions.html">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../upgrade/index.html">Upgrade guides</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/1-1-to-1-2.html">Migrating from 1.1 to 1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/1-0-to-1-1.html">Migrating from 1.0 to 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/0-x-to-1-0.html">Migrating from 0.x to 1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/CHANGELOG.html">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Contribute</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Contribute to the documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute-theme.html">Contribute to the theme</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme">Source Code</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+                    
+                
+            </div>
+            
+                <div class="sidebar-right large-order-3">
+                    <div class="secondary-side-nav custom-scroll-bar">
+    
+    <ul class="contribute">
+        <li class="contribute__item">
+            <a href="https://github.com/scylladb/sphinx-scylladb-theme/issues/new?title=docs:%20Issue in page Scylla docs contributor’s handbook&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20https://sphinx-theme.scylladb.com/branch-1.2/contribute/contribute-docs%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation"
+                target="_blank">
+                <i class="icon fab fa-github" aria-hidden="true"></i>Create an issue
+            </a>
+        </li>
+        
+            <li class="contribute__item">
+                
+                
+                    
+                        
+                    
+                
+                <a href="https://github.com/scylladb/sphinx-scylladb-theme/edit/branch-1.2/docs/source/contribute/contribute-docs.rst"
+                    target="_blank">
+                    <i class="icon fa fa-edit" aria-hidden="true"></i>Edit this page
+                </a>
+            </li>
+        
+    </ul>
+
+    
+        <div class="secondary-side-nav__content">
+            <p class="topic-title">On this page</p>
+            <ul>
+<li><a class="reference internal" href="#">Scylla docs contributor’s handbook</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#about-scylla-docs">About Scylla Docs</a><ul>
+<li><a class="reference internal" href="#how-we-write">How we write</a></li>
+<li><a class="reference internal" href="#languages-toolchain-we-use">Languages/toolchain we use</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#about-issues-and-pull-requests">About Issues and Pull Requests</a></li>
+<li><a class="reference internal" href="#workflow-for-submissions">Workflow for Submissions</a><ul>
+<li><a class="reference internal" href="#issue-assignment">Issue assignment</a></li>
+<li><a class="reference internal" href="#guidelines-for-branch-names">Guidelines for branch names</a></li>
+<li><a class="reference internal" href="#write-content">Write content</a><ul>
+<li><a class="reference internal" href="#write-procedures">Write procedures</a></li>
+<li><a class="reference internal" href="#scylla-style-guide">Scylla Style guide</a></li>
+<li><a class="reference internal" href="#templates">Templates</a></li>
+<li><a class="reference internal" href="#cheatsheets">Cheatsheets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#add-new-content-to-the-toc-tree">Add new content to the TOC tree</a></li>
+<li><a class="reference internal" href="#best-practices-for-content-submission">Best practices for content submission</a></li>
+<li><a class="reference internal" href="#test-the-new-changed-content">Test the new/changed content</a></li>
+<li><a class="reference internal" href="#submit-a-pull-request-pr">Submit a pull request (PR)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scylla-docs-slack-channel">Scylla-docs Slack Channel</a></li>
+<li><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    
+</div>
+                </div>
+            
+        </section>
+
+        <footer class="footer">
+    <div class="footer-group">
+        <div class="footer-top">
+            <a class="footer-logo" href="https://www.scylladb.com">
+                <img src="../_static/img/logo-scylla-horizontal-RGB.svg" alt="Logo" />
+            </a>
+            <div class="footer-links">
+                <a class="footer-links__link" href="https://docs.scylladb.com/">Docs</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/">About Us</a>
+            </div>
+            <div class="footer-actions">
+                <a class="footer-actions__link" href="https://groups.google.com/g/scylladb-users" target="_blank">
+                    <span data-tooltip tabindex="1" title="User mailing list" data-position="bottom">
+                        <img src="../_static/img/icons/icon-mail-list.svg" alt="Mail List Icon" />
+                    </span>
+                </a>
+                <a class="footer-actions__link" href="http://slack.scylladb.com/" target="_blank">
+                    <span data-tooltip tabindex="1" title="User Slack channel" data-position="bottom">
+                        <img src="../_static/img/icons/icon-slack.svg" alt="Slack Icon" />
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            
+                <div class="footer-bottom__copyright">
+                    
+                        
+                            &#169; 2022, ScyllaDB. All rights reserved.
+                        
+                    
+                </div>
+            
+            
+                <div class="footer-bottom__last-updated">
+                    
+                        Last updated on 19 Aug 2022.
+                    
+                </div>
+            
+            <div class="footer-bottom__version">
+                Powered by
+                <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a> &amp;
+                <a href="https://sphinx-theme.scylladb.com/">ScyllaDB Theme 1.3.1</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP" height="0" width="0"
+                style="display: none; visibility: hidden"></iframe>
+        </noscript>
+    </body>
+
+</html>

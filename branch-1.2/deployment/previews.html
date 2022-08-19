@@ -1,0 +1,670 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    
+    
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>
+             Pull requests previews | Scylla Docs 
+        </title>
+        <meta name="description" content="Sphinx Theme for ScyllaDB projects." />
+        <link rel="icon" href="../_static/img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../_static/img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="../_static/img/favicon-228x228.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="../_static/img/favicon-228x228.png" />
+        <meta name="msapplication-TileImage" href="../_static/img/favicon-228x228.png" />
+
+        
+            
+            
+        
+
+        
+            
+            <link rel="canonical" href="https://sphinx-theme.scylladb.com/stable/deployment/previews.html"/>
+        
+
+        <link rel="author" href="mailto:info@scylladb.com" />
+
+        
+            
+        <!-- increase expertrec loading priority-->
+        <link rel="dns-prefetch" href="https://cse.expertrec.com">
+
+        <!-- increase font loading priority -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- async CSS -->
+        <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- no-JS fallback -->
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+        </noscript>
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/css/main.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/sphinx_collapse.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+            
+        
+    
+        
+        
+            
+
+        <script type="text/javascript" id="documentation_options" data-url_root="../"
+            src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/js/runtime.bundle.js"></script>
+        <script type="text/javascript" src="../_static/js/main.bundle.js"></script>
+        
+            
+                <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+            
+        
+            
+        
+            
+                <script src="../_static/underscore.js"></script>
+            
+        
+            
+                <script src="../_static/doctools.js"></script>
+            
+        
+            
+                <script src="../_static/clipboard.min.js"></script>
+            
+        
+            
+                <script src="../_static/copybutton.js"></script>
+            
+        
+    
+            <!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T8P2JP");
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Expertrec -->
+<script>
+    var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
+    var ci_search = document.createElement("script");
+    ci_search.type = "text/javascript";
+    ci_search.async = true;
+    ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ci_search, s);
+</script>
+<!-- End Expertrec -->
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
+        <!-- End Font Awesome -->
+    </head>
+
+    <body>
+        
+        <header class="header">
+    <div class="header-logo">
+        <a class="header-logo__img" href="https://scylladb.com/">
+            <img src="../_static/img/logo-docs.svg" alt="Scylla Documentation Logo" />
+        </a>
+        <span class="header-logo__bar"></span>
+        <a class="header-logo__text" href="https://docs.scylladb.com/">
+            Documentation
+        </a>
+    </div>
+    <div class="header-navigation">
+        <ul class="dropdown menu scylla-dropdown scylla-dropdown--header" data-dropdown-menu>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Server
+                    <i class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--about-us"></i>
+                            Scylla Open Source
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--enterprise"></i>Scylla Enterprise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scylla.docs.scylladb.com/stable/alternator/alternator.html">
+                            <i class="scylla-icon scylla-icon--overview"></i>
+                            Scylla Alternator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Cloud <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://cloud.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--cloud"></i>Scylla Cloud</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/scylla-cloud/">
+                            <i class="scylla-icon scylla-icon--cloud-docs"></i>Scylla Cloud
+                            Docs</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Tools <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://manager.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--manager"></i>Scylla Manager</a>
+                    </li>
+                    <li>
+                        <a href="https://monitoring.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--monitoring"></i>Scylla
+                            Monitoring Stack</a>
+                    </li>
+                    <li>
+                        <a href="https://operator.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--operator"></i>Scylla Operator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Drivers <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/cql-drivers/">
+                            <i class="scylla-icon scylla-icon--nsql-guides"></i>CQL Drivers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/dynamo-drivers/">
+                            <i class="scylla-icon scylla-icon--overview"></i>DynamoDB Drivers
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="header-button">
+            <a href="https://www.scylladb.com/download/" class="button">Download</a>
+        </div>
+    </div>
+    <div class="header-search-box">
+        <div class="search-box">
+            <ci-search></ci-search>
+        </div>
+    </div>
+    <div class="side-nav-toggle" data-toggle="side-nav">
+    <div class="side-nav-toggle__button">
+        <img src="../_static/img/menu.svg" alt="Menu" />
+    </div>
+</div>
+</header>
+        <section
+            class="layout  layout--sidebar layout--has-secondary-sidebar ">
+            <div class="content large-order-2">
+                
+                    
+    <div class="admonition caution">
+        <p class="admonition-title">Caution</p>
+        <p>
+            
+                You're viewing documentation for a previous version of Scylla Sphinx Theme.
+            
+            <a href="../../stable/deployment/previews.html">Switch to the latest stable version.</a>
+        </p>
+    </div>
+
+                
+                
+                    <div class="pre-content">
+                        <div class="breadcrumbs">
+    <span class="bread__item">
+        <a href="../index.html"
+            class="bread__highlight">
+            <i class="fas fa-home"></i> Scylla Sphinx Theme
+        </a>
+    </span>
+    
+        <span class="bread__item">
+            <a href="index.html">
+                Deployment
+            </a>
+        </span>
+    
+    <span class="bread__item bread__item--last">Pull requests previews</span>
+</div>
+                    </div>
+                
+                <section id="pull-requests-previews">
+<h1>Pull requests previews<a class="headerlink" href="#pull-requests-previews" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is under beta testing and only available for a selected number of projects.</p>
+</div>
+<p>We use <a class="reference external" href="https://docs.amplify.aws/">AWS Amplify</a> to build a preview site for the docs every time someone sends a pull request that updates the docs folder.</p>
+<p>Once the build completes, the pull request receives a message with a link to preview the docs.</p>
+<figure class="align-default">
+<img alt="../_images/amplify-message.png" src="../_images/amplify-message.png" />
+</figure>
+<p>On this page, you will learn how to enable pull request previews in a repository with the toolchain installed.</p>
+<section id="installation">
+<span id="preview-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Copy the file <a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/blob/master/amplify.yml">amplify.yml</a> in the project <cite>root</cite> directory.</p></li>
+<li><p>Commit and push the changes to GitHub (default branch).</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To complete the installation, we must list the repository in the company’s AWS account. Contact us in Slack (<code class="docutils literal notranslate"><span class="pre">#scylla-docs</span></code> channel) to set this configuration for you.</p>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="enable-previews">
+<h2>Enable previews<a class="headerlink" href="#enable-previews" title="Permalink to this headline">¶</a></h2>
+<p>Instructions to enable previews on AWS:</p>
+<section id="step-1-access-aws-amplify">
+<h3>Step 1: Access AWS Amplify<a class="headerlink" href="#step-1-access-aws-amplify" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>In the company’s AWS account, search for <strong>AWS Amplify</strong> in the search console.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-search.png" src="../_images/amplify-search.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Do one of the following:</p>
+<blockquote>
+<div><ul>
+<li><p>If you are at the AWS Amplify homepage, click on <strong>Get Started</strong> under <strong>AWS Amplify Hosting</strong>.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-get-started.png" src="../_images/amplify-get-started.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Otherwise, click on <strong>New App</strong> &gt; <strong>Host Web App</strong>.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-app.png" src="../_images/amplify-app.png" />
+</figure>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Select <strong>Import from GitHub</strong>. You might be asked to grant permissions to AWS Amplify in your GitHub account.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-github.png" src="../_images/amplify-github.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Choose <strong>Continue</strong>.</p></li>
+</ol>
+</section>
+<section id="step-2-connect-a-repository">
+<h3>Step 2: Connect a repository<a class="headerlink" href="#step-2-connect-a-repository" title="Permalink to this headline">¶</a></h3>
+<figure class="align-default">
+<img alt="../_images/amplify-branch.png" src="../_images/amplify-branch.png" />
+</figure>
+<ol class="arabic simple">
+<li><p>Find the repository you want to enable pull request previews.</p></li>
+<li><p>Set the default branch (e.g. <code class="docutils literal notranslate"><span class="pre">master</span></code>).</p></li>
+<li><p>Check <strong>Connecting to a monorepo?</strong> and pick the folder <code class="docutils literal notranslate"><span class="pre">docs</span></code>.</p></li>
+<li><p>Choose <strong>Next</strong>.</p></li>
+</ol>
+</section>
+<section id="step-3-configure-build-settings">
+<h3>Step 3: Configure build settings<a class="headerlink" href="#step-3-configure-build-settings" title="Permalink to this headline">¶</a></h3>
+<figure class="align-default">
+<img alt="../_images/amplify-build.png" src="../_images/amplify-build.png" />
+</figure>
+<p>On this page, you should verify that the <code class="docutils literal notranslate"><span class="pre">amplify.yml</span></code> file was imported successfully.</p>
+<p>Under <strong>Build and test settings</strong>, you should see the message “We detected <code class="docutils literal notranslate"><span class="pre">amplify.yml</span></code> in your repository and will use it to deploy your app.”. If it is not the case, review <a class="reference internal" href="#preview-installation"><span class="std std-ref">Installation</span></a>.</p>
+<p>Once the file is imported automatically, choose <strong>Next</strong>.
+On the <strong>Review</strong> page, choose <strong>Save and deploy</strong>.</p>
+</section>
+<section id="step-4-enable-pull-request-previews">
+<h3>Step 4: Enable pull request previews<a class="headerlink" href="#step-4-enable-pull-request-previews" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>On the left sidebar, go to <strong>Previews</strong> page and choose <strong>Preview Settings</strong>.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-preview-settings.png" src="../_images/amplify-preview-settings.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Select the default branch from the list and choose <strong>Manage</strong>.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-preview-manage.png" src="../_images/amplify-preview-manage.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Turn on pull request previews.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/amplify-preview-enable.png" src="../_images/amplify-preview-enable.png" />
+</figure>
+</div></blockquote>
+</li>
+</ol>
+<p>The next time you submit a pull request for the branch, AWS Amplify will build the docs automatically and share a preview URL as a pull request comment.</p>
+</section>
+</section>
+<section id="blocking-a-user-from-triggering-previews">
+<h2>Blocking a user from triggering previews<a class="headerlink" href="#blocking-a-user-from-triggering-previews" title="Permalink to this headline">¶</a></h2>
+<p>Code owners and third-party contributors can build pull request previews.
+To ban abusive users, see <a class="reference external" href="https://docs.github.com/en/communities/maintaining-your-safety-on-github/blocking-a-user-from-your-organization">Blocking a user from your organization</a>.</p>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Previews builds have a 15 min limit. Nevertheless, we recommend you make sure the command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">dirhtml</span></code> does not take more than 3 minutes to build on average.</p></li>
+<li><p>If your repository is private, all the pull requests previews will be publicly available by default.</p></li>
+<li><p>AWS Amplify only builds previews if the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder receives an update.</p></li>
+<li><p>AWS deletes previews when the pull requets gets merged or closed.</p></li>
+</ul>
+</section>
+</section>
+
+                
+                    <div class="post-content"><div class="content-navigation">
+    <div class="navigation navigation--prev">
+        
+            <a class="navigation__link" href="production.html">
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-left"></i>
+                </button>
+                <div class="navigation__title">
+                    <span class="colored">PREVIOUS</span> <br />Production deployment
+                </div>
+            </a>
+        
+    </div>
+    <div class="navigation navigation--next">
+        
+            <a class="navigation__link" href="../examples/index.html">
+                <div class="navigation__title">
+                    <span class="colored">NEXT</span> <br />Examples
+                </div>
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-right"></i>
+                </button>
+            </a>
+        
+    </div>
+</div></div>
+                
+            </div>
+            <div class="sidebar-left  large-order-1">
+                
+                    
+                        <div id="side-nav" class="side-nav custom-scroll-bar" data-closable data-toggler=".show">
+    <button class="collapsible-button">
+        <i class="scylla-icon scylla-icon--chevron-left"></i>
+    </button>
+    <div class="side-nav-content">
+        <div class="side-nav__search">
+            <div class="search-box">
+                <ci-search></ci-search>
+            </div>
+        </div>
+        <div class="side-nav__versions"><ul class="dropdown menu scylla-dropdown scylla-dropdown--versions" data-dropdown-menu>
+    <li class="scylla-dropdown__item">
+        <a class="scylla-dropdown__title" href="#">
+            
+                1.2
+            
+            <i class="chevron scylla-icon scylla-icon--chevron-right"></i>
+        </a>
+        <ul class="menu scylla-dropdown__content">
+            
+                
+            
+                
+                    <li>
+                        <a href="../../stable/deployment/previews.html">1.3</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="previews.html">1.2</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.1/index.html">1.1</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.0/index.html">1.0</a>
+                    </li>
+                
+            
+            
+        </ul>
+    </li>
+</ul></div>
+        <div class="side-nav__content">
+            <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started/index.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/toolchain.html">Toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration/index.html">Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/template.html">Template options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/page.html">Page options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/multiversion.html">Multiversion options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/markdown.html">Markdown support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/redirections.html">Redirections support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/search.html">Search support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Deployment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="production.html">Production deployment</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Pull requests previews</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/collapse.html">Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/code-blocks.html">Code blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/headings.html">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/hero-box.html">Hero box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/includes.html">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/links.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/panel-box.html">Panel box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/substitutions.html">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tabs.html">Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/toc.html">TOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/topic-box.html">Topic box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/versions.html">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../upgrade/index.html">Upgrade guides</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/1-1-to-1-2.html">Migrating from 1.1 to 1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/1-0-to-1-1.html">Migrating from 1.0 to 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/0-x-to-1-0.html">Migrating from 0.x to 1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/CHANGELOG.html">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contribute/index.html">Contribute</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contribute-docs.html">Contribute to the documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contribute-theme.html">Contribute to the theme</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme">Source Code</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+                    
+                
+            </div>
+            
+                <div class="sidebar-right large-order-3">
+                    <div class="secondary-side-nav custom-scroll-bar">
+    
+    <ul class="contribute">
+        <li class="contribute__item">
+            <a href="https://github.com/scylladb/sphinx-scylladb-theme/issues/new?title=docs:%20Issue in page Pull requests previews&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20https://sphinx-theme.scylladb.com/branch-1.2/deployment/previews%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation"
+                target="_blank">
+                <i class="icon fab fa-github" aria-hidden="true"></i>Create an issue
+            </a>
+        </li>
+        
+            <li class="contribute__item">
+                
+                
+                    
+                        
+                    
+                
+                <a href="https://github.com/scylladb/sphinx-scylladb-theme/edit/branch-1.2/docs/source/deployment/previews.rst"
+                    target="_blank">
+                    <i class="icon fa fa-edit" aria-hidden="true"></i>Edit this page
+                </a>
+            </li>
+        
+    </ul>
+
+    
+        <div class="secondary-side-nav__content">
+            <p class="topic-title">On this page</p>
+            <ul>
+<li><a class="reference internal" href="#">Pull requests previews</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#enable-previews">Enable previews</a><ul>
+<li><a class="reference internal" href="#step-1-access-aws-amplify">Step 1: Access AWS Amplify</a></li>
+<li><a class="reference internal" href="#step-2-connect-a-repository">Step 2: Connect a repository</a></li>
+<li><a class="reference internal" href="#step-3-configure-build-settings">Step 3: Configure build settings</a></li>
+<li><a class="reference internal" href="#step-4-enable-pull-request-previews">Step 4: Enable pull request previews</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#blocking-a-user-from-triggering-previews">Blocking a user from triggering previews</a></li>
+<li><a class="reference internal" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    
+</div>
+                </div>
+            
+        </section>
+
+        <footer class="footer">
+    <div class="footer-group">
+        <div class="footer-top">
+            <a class="footer-logo" href="https://www.scylladb.com">
+                <img src="../_static/img/logo-scylla-horizontal-RGB.svg" alt="Logo" />
+            </a>
+            <div class="footer-links">
+                <a class="footer-links__link" href="https://docs.scylladb.com/">Docs</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/">About Us</a>
+            </div>
+            <div class="footer-actions">
+                <a class="footer-actions__link" href="https://groups.google.com/g/scylladb-users" target="_blank">
+                    <span data-tooltip tabindex="1" title="User mailing list" data-position="bottom">
+                        <img src="../_static/img/icons/icon-mail-list.svg" alt="Mail List Icon" />
+                    </span>
+                </a>
+                <a class="footer-actions__link" href="http://slack.scylladb.com/" target="_blank">
+                    <span data-tooltip tabindex="1" title="User Slack channel" data-position="bottom">
+                        <img src="../_static/img/icons/icon-slack.svg" alt="Slack Icon" />
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            
+                <div class="footer-bottom__copyright">
+                    
+                        
+                            &#169; 2022, ScyllaDB. All rights reserved.
+                        
+                    
+                </div>
+            
+            
+                <div class="footer-bottom__last-updated">
+                    
+                        Last updated on 19 Aug 2022.
+                    
+                </div>
+            
+            <div class="footer-bottom__version">
+                Powered by
+                <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a> &amp;
+                <a href="https://sphinx-theme.scylladb.com/">ScyllaDB Theme 1.3.1</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP" height="0" width="0"
+                style="display: none; visibility: hidden"></iframe>
+        </noscript>
+    </body>
+
+</html>

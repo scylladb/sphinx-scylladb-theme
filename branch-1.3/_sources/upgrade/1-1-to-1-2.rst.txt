@@ -1,0 +1,128 @@
+Migrating from 1.1 to 1.2
+=========================
+
+This guide explains how to upgrade the version of the Scylla Sphinx Theme.
+
+How to check your current theme version
+---------------------------------------
+
+The theme version is displayed in the footer of the project's documentation site.
+
+.. image:: version.png
+
+If your project theme's version is **>=1.1**, follow this guide to get the latest version.
+
+Upgrade to version 1.2
+----------------------
+
+Here are the main breaking changes between the 1.1 and 1.2 versions.
+
+#. Update the following Python dependencies in ``docs/pyproject.toml``:
+
+    .. code-block::
+
+        sphinx-scylladb-theme = "~1.2.1"
+        sphinx-multiversion-scylla = "~0.2.11"
+        sphinx-sitemap = "2.2.0"
+
+#. Edit ``docs/Makefile``:
+
+	#. Replace:
+
+            .. code-block::
+
+                POETRY = $(HOME)/.local/bin/poetry
+
+            With:
+
+            .. code-block::
+
+		POETRY = poetry
+
+                # Windows variables
+                ifeq ($(OS),Windows_NT)
+                    POETRY = $(APPDATA)\Python\Scripts\poetry
+                endif
+
+    #. Add:
+
+            .. code-block::
+
+                 # Setup commands
+                .PHONY: setupenv
+                setupenv:
+                    pip install -q poetry
+
+
+#. Remove the files ``.github/workflows/docs-*.yml``. Then, copy the new workflows in the ``.github/workflows`` folder. You can download the latest workflows `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
+
+    If the default branch is not ``master`` or the docs are not under the ``docs`` folder, the workflows to match the project configuration. For example:
+
+    .. code-block::
+
+        on:
+        push:
+            branches:
+            - master # edit this line
+            paths:
+            - "docs/**" # edit this line
+
+#. Commit and push the changes to GitHub (default branch).
+
+To check if the upgrade completed successfully, run the command :doc:`make preview <../../commands>`.
+Then, check if the site footer displays version 1.2 or greater.
+
+Optional features
+-----------------
+
+Listing unstable versions
+.........................
+
+To list versions as unstable:
+
+#. Define in your ``conf.py`` the list ``UNSTABLE_VERSIONS``:
+
+    .. code-block:: python
+
+        # Set which versions are not released yet.
+        UNSTABLE_VERSIONS = ["master"]
+
+#. Add a new option ``versions_unstable`` in ``html_options``:
+
+    .. code-block:: python
+
+        html_theme_options = {
+            "versions_unstable": UNSTABLE_VERSIONS,
+            ...
+        }
+
+Sitemap
+.......
+
+Sitemaps are useful for search engines to index content.
+The toolchain now automatically generates a sitemap for the site.
+
+To install the sitemap extension, list it the ``conf.py`` file:
+
+    .. code-block:: python
+
+        extensions = [
+            ...,
+            "sphinx_sitemap",
+        ]
+
+If the project has the multiversion extension enabled, add the following line at the end of the  file:
+
+    .. code-block:: python
+
+        sitemap_url_scheme = "stable/{link}"
+
+Changes in custom landing pages
+...............................
+
+If your project uses the :ref:`Custom landing page feature <new_landing_page>`, add the following lines at the top of the file ``docs/source/index.rst``:
+
+    .. code-block:: restructuredText
+
+        :hide-sidebar:
+        :hide-secondary-sidebar:

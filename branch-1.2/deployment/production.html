@@ -1,0 +1,664 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    
+    
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>
+             Production deployment | Scylla Docs 
+        </title>
+        <meta name="description" content="Sphinx Theme for ScyllaDB projects." />
+        <link rel="icon" href="../_static/img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../_static/img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="../_static/img/favicon-228x228.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="../_static/img/favicon-228x228.png" />
+        <meta name="msapplication-TileImage" href="../_static/img/favicon-228x228.png" />
+
+        
+            
+            
+        
+
+        
+            
+            <link rel="canonical" href="https://sphinx-theme.scylladb.com/stable/deployment/production.html"/>
+        
+
+        <link rel="author" href="mailto:info@scylladb.com" />
+
+        
+            
+        <!-- increase expertrec loading priority-->
+        <link rel="dns-prefetch" href="https://cse.expertrec.com">
+
+        <!-- increase font loading priority -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- async CSS -->
+        <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- no-JS fallback -->
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+        </noscript>
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/css/main.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/sphinx_collapse.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+            
+        
+    
+        
+        
+            
+
+        <script type="text/javascript" id="documentation_options" data-url_root="../"
+            src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/js/runtime.bundle.js"></script>
+        <script type="text/javascript" src="../_static/js/main.bundle.js"></script>
+        
+            
+                <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+            
+        
+            
+        
+            
+                <script src="../_static/underscore.js"></script>
+            
+        
+            
+                <script src="../_static/doctools.js"></script>
+            
+        
+            
+                <script src="../_static/clipboard.min.js"></script>
+            
+        
+            
+                <script src="../_static/copybutton.js"></script>
+            
+        
+    
+            <!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T8P2JP");
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Expertrec -->
+<script>
+    var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
+    var ci_search = document.createElement("script");
+    ci_search.type = "text/javascript";
+    ci_search.async = true;
+    ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ci_search, s);
+</script>
+<!-- End Expertrec -->
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
+        <!-- End Font Awesome -->
+    </head>
+
+    <body>
+        
+        <header class="header">
+    <div class="header-logo">
+        <a class="header-logo__img" href="https://scylladb.com/">
+            <img src="../_static/img/logo-docs.svg" alt="Scylla Documentation Logo" />
+        </a>
+        <span class="header-logo__bar"></span>
+        <a class="header-logo__text" href="https://docs.scylladb.com/">
+            Documentation
+        </a>
+    </div>
+    <div class="header-navigation">
+        <ul class="dropdown menu scylla-dropdown scylla-dropdown--header" data-dropdown-menu>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Server
+                    <i class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--about-us"></i>
+                            Scylla Open Source
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--enterprise"></i>Scylla Enterprise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scylla.docs.scylladb.com/stable/alternator/alternator.html">
+                            <i class="scylla-icon scylla-icon--overview"></i>
+                            Scylla Alternator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Cloud <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://cloud.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--cloud"></i>Scylla Cloud</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/scylla-cloud/">
+                            <i class="scylla-icon scylla-icon--cloud-docs"></i>Scylla Cloud
+                            Docs</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Tools <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://manager.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--manager"></i>Scylla Manager</a>
+                    </li>
+                    <li>
+                        <a href="https://monitoring.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--monitoring"></i>Scylla
+                            Monitoring Stack</a>
+                    </li>
+                    <li>
+                        <a href="https://operator.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--operator"></i>Scylla Operator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Drivers <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/cql-drivers/">
+                            <i class="scylla-icon scylla-icon--nsql-guides"></i>CQL Drivers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/dynamo-drivers/">
+                            <i class="scylla-icon scylla-icon--overview"></i>DynamoDB Drivers
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="header-button">
+            <a href="https://www.scylladb.com/download/" class="button">Download</a>
+        </div>
+    </div>
+    <div class="header-search-box">
+        <div class="search-box">
+            <ci-search></ci-search>
+        </div>
+    </div>
+    <div class="side-nav-toggle" data-toggle="side-nav">
+    <div class="side-nav-toggle__button">
+        <img src="../_static/img/menu.svg" alt="Menu" />
+    </div>
+</div>
+</header>
+        <section
+            class="layout  layout--sidebar layout--has-secondary-sidebar ">
+            <div class="content large-order-2">
+                
+                    
+    <div class="admonition caution">
+        <p class="admonition-title">Caution</p>
+        <p>
+            
+                You're viewing documentation for a previous version of Scylla Sphinx Theme.
+            
+            <a href="../../stable/deployment/production.html">Switch to the latest stable version.</a>
+        </p>
+    </div>
+
+                
+                
+                    <div class="pre-content">
+                        <div class="breadcrumbs">
+    <span class="bread__item">
+        <a href="../index.html"
+            class="bread__highlight">
+            <i class="fas fa-home"></i> Scylla Sphinx Theme
+        </a>
+    </span>
+    
+        <span class="bread__item">
+            <a href="index.html">
+                Deployment
+            </a>
+        </span>
+    
+    <span class="bread__item bread__item--last">Production deployment</span>
+</div>
+                    </div>
+                
+                <section id="production-deployment">
+<h1>Production deployment<a class="headerlink" href="#production-deployment" title="Permalink to this headline">¶</a></h1>
+<p>We use GitHub Pages and GitHub Actions to make the documentation publicly available.</p>
+<p>On this page, you will learn:</p>
+<ul class="simple">
+<li><p>How to deploy to GitHub Pages.</p></li>
+<li><p>How to set up a custom domain.</p></li>
+<li><p>How to read build error messages.</p></li>
+<li><p>How to re-run a workflow.</p></li>
+<li><p>How to disable GitHub Pages.</p></li>
+</ul>
+<section id="available-workflows">
+<span id="id1"></span><h2>Available workflows<a class="headerlink" href="#available-workflows" title="Permalink to this headline">¶</a></h2>
+<p>The toolchain provides the following workflows under the directory <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code>:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Filename</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">docs-pages.yaml</span></code></p></td>
+<td><p>Builds multi versioned docs every time the default branch (e.g. <code class="docutils literal notranslate"><span class="pre">master</span></code>)  receives an update. If the build completes successfully, the workflow publishes the HTML version to GitHub Pages.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">docs-pr.yaml</span></code></p></td>
+<td><p>Builds the docs when the default branch receives a new pull request or when the pull request receives new commits. The purpose of this workflow is to make sure pull requests do not break the default branch after being merged.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">docs-links.yaml</span></code></p></td>
+<td><p>Looks for broken links once a week. If there are broken links, it creates an issue in the same repository with the list of affected links.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>If you modify these workflows in your repository, you will need to maintain the changes. So instead, we recommend you to open an issue in the <a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme">sphinx-scylladb-theme repository</a> so that all projects can benefit from the improvements you made.</p>
+</div>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>To install the workflows:</p>
+<ol class="arabic">
+<li><p>Copy the workflows named <code class="docutils literal notranslate"><span class="pre">docs-*.yaml</span></code> from <a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/blob/master/.github/workflows">.github/workflows</a> to your project. The project’s directory structure should look like the following:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">project-name/</span>
+<span class="go">  ├── .github/</span>
+<span class="go">  |   ├── workflows/</span>
+<span class="go">  |   |   ├── docs-pages.yaml</span>
+<span class="go">  |   |   ├── docs-pr.yaml</span>
+<span class="go">  |   |   ├── docs-links.yaml</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If the default branch is not <code class="docutils literal notranslate"><span class="pre">master</span></code> or the docs are not under the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder, the workflows to match the project configuration. For example:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span><span class="p">:</span>
+<span class="n">push</span><span class="p">:</span>
+    <span class="n">branches</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">master</span> <span class="c1"># edit this line</span>
+    <span class="n">paths</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s2">&quot;docs/**&quot;</span> <span class="c1"># edit this line</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Commit and push the changes to GitHub (default branch).</p></li>
+</ol>
+<p>Once you push the <a class="reference internal" href="#available-workflows"><span class="std std-ref">workflows</span></a> to the remote repository default branch, GitHub might take a couple of minutes to build and publish the site.</p>
+<p>If everything goes well, you will see the docs published under <code class="docutils literal notranslate"><span class="pre">https://scylladb.github.io/&lt;repository-slug&gt;</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can check the status of the build on GitHub. Under your repository name, click <strong>Actions</strong>.</p>
+</div>
+</section>
+<section id="setting-up-a-custom-domain">
+<h2>Setting up a custom domain<a class="headerlink" href="#setting-up-a-custom-domain" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting up a custom domain requieres access to <cite>scylladb.com</cite> DNS configuration. Contact us in Slack <code class="docutils literal notranslate"><span class="pre">#scylla-docs</span></code> channel to set this configuration for you.</p>
+</div>
+<p>Follow the following steps to set up a custom domain:</p>
+<ol class="arabic simple">
+<li><p>In the domain’s DNS configuration, create a new CNAME record that points <code class="docutils literal notranslate"><span class="pre">&lt;custom-sudomain&gt;.scylladb.com</span></code> to <code class="docutils literal notranslate"><span class="pre">scylladb.github.io</span></code>.</p></li>
+<li><p>Change <code class="docutils literal notranslate"><span class="pre">html_baseurl</span></code> setting in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> for the desired sub-domain name. For instance, we will use <code class="docutils literal notranslate"><span class="pre">sphinx-theme.scylladb.com</span></code>.</p></li>
+<li><p>Commit and push the changes to GitHub (default branch).</p></li>
+<li><p>Once the DNS changes propagate (&lt;24 h), the docs will be accessible from the custom domain name.</p></li>
+</ol>
+</section>
+<section id="reading-error-messages">
+<h2>Reading error messages<a class="headerlink" href="#reading-error-messages" title="Permalink to this headline">¶</a></h2>
+<p>Docs builds usually fail when there is a critical error or warning in the documenation syntax.</p>
+<p>To get the specific error message:</p>
+<ol class="arabic">
+<li><p>Hover the <span class="raw-html"><i class="inline-icon fa fa-times" aria-hidden="true"></i></span> that you will see next to the commit message, and click on <strong>Details</strong>.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/build-error.png" src="../_images/build-error.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Search for “warning” and “error” in the box you will find at the top right of the screen.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="../_images/build-log.png" src="../_images/build-log.png" />
+</figure>
+</div></blockquote>
+</li>
+</ol>
+<p>You should see the error messages highlighted.</p>
+</section>
+<section id="re-running-a-workflow">
+<h2>Re-running a workflow<a class="headerlink" href="#re-running-a-workflow" title="Permalink to this headline">¶</a></h2>
+<p>Re-running workflows is useful when:</p>
+<ul class="simple">
+<li><p>The theme received an update. By re-running the last build manually, the documentation project will receive the latest version. Otherwise, the theme will be automatically updated when the default branch gets an update.</p></li>
+<li><p>A previous version (branch or a tag) received a patch. Otherwise, the changes will not be reflected in production until the master branch gets an update.</p></li>
+</ul>
+<p>To re-run a workflow see, <a class="reference external" href="https://docs.github.com/en/actions/managing-workflow-runs/re-running-a-workflow">Re-running a workflow</a>.</p>
+</section>
+<section id="disabling-github-pages">
+<h2>Disabling GitHub Pages<a class="headerlink" href="#disabling-github-pages" title="Permalink to this headline">¶</a></h2>
+<p>To disable the docs deployment temporarily:</p>
+<ol class="arabic simple">
+<li><p>Delete the <a class="reference internal" href="#available-workflows"><span class="std std-ref">workflows</span></a> from <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code>, and push the changes.</p></li>
+<li><p>Disable GitHub Pages from the repository settings. For more information, see  <a class="reference external" href="https://help.github.com/en/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site">Unpublishing a GitHub Pages Site</a>.</p></li>
+</ol>
+</section>
+</section>
+
+                
+                    <div class="post-content"><div class="content-navigation">
+    <div class="navigation navigation--prev">
+        
+            <a class="navigation__link" href="index.html">
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-left"></i>
+                </button>
+                <div class="navigation__title">
+                    <span class="colored">PREVIOUS</span> <br />Deployment
+                </div>
+            </a>
+        
+    </div>
+    <div class="navigation navigation--next">
+        
+            <a class="navigation__link" href="previews.html">
+                <div class="navigation__title">
+                    <span class="colored">NEXT</span> <br />Pull requests previews
+                </div>
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-right"></i>
+                </button>
+            </a>
+        
+    </div>
+</div></div>
+                
+            </div>
+            <div class="sidebar-left  large-order-1">
+                
+                    
+                        <div id="side-nav" class="side-nav custom-scroll-bar" data-closable data-toggler=".show">
+    <button class="collapsible-button">
+        <i class="scylla-icon scylla-icon--chevron-left"></i>
+    </button>
+    <div class="side-nav-content">
+        <div class="side-nav__search">
+            <div class="search-box">
+                <ci-search></ci-search>
+            </div>
+        </div>
+        <div class="side-nav__versions"><ul class="dropdown menu scylla-dropdown scylla-dropdown--versions" data-dropdown-menu>
+    <li class="scylla-dropdown__item">
+        <a class="scylla-dropdown__title" href="#">
+            
+                1.2
+            
+            <i class="chevron scylla-icon scylla-icon--chevron-right"></i>
+        </a>
+        <ul class="menu scylla-dropdown__content">
+            
+                
+            
+                
+                    <li>
+                        <a href="../../stable/deployment/production.html">1.3</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="production.html">1.2</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.1/index.html">1.1</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.0/index.html">1.0</a>
+                    </li>
+                
+            
+            
+        </ul>
+    </li>
+</ul></div>
+        <div class="side-nav__content">
+            <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started/index.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/toolchain.html">Toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration/index.html">Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/template.html">Template options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/page.html">Page options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/multiversion.html">Multiversion options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/markdown.html">Markdown support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/redirections.html">Redirections support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/search.html">Search support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Deployment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Production deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="previews.html">Pull requests previews</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/collapse.html">Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/code-blocks.html">Code blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/headings.html">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/hero-box.html">Hero box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/includes.html">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/links.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/panel-box.html">Panel box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/substitutions.html">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tabs.html">Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/toc.html">TOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/topic-box.html">Topic box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/versions.html">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../upgrade/index.html">Upgrade guides</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/1-1-to-1-2.html">Migrating from 1.1 to 1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/1-0-to-1-1.html">Migrating from 1.0 to 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/0-x-to-1-0.html">Migrating from 0.x to 1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade/CHANGELOG.html">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contribute/index.html">Contribute</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contribute-docs.html">Contribute to the documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contribute-theme.html">Contribute to the theme</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme">Source Code</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+                    
+                
+            </div>
+            
+                <div class="sidebar-right large-order-3">
+                    <div class="secondary-side-nav custom-scroll-bar">
+    
+    <ul class="contribute">
+        <li class="contribute__item">
+            <a href="https://github.com/scylladb/sphinx-scylladb-theme/issues/new?title=docs:%20Issue in page Production deployment&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20https://sphinx-theme.scylladb.com/branch-1.2/deployment/production%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation"
+                target="_blank">
+                <i class="icon fab fa-github" aria-hidden="true"></i>Create an issue
+            </a>
+        </li>
+        
+            <li class="contribute__item">
+                
+                
+                    
+                        
+                    
+                
+                <a href="https://github.com/scylladb/sphinx-scylladb-theme/edit/branch-1.2/docs/source/deployment/production.rst"
+                    target="_blank">
+                    <i class="icon fa fa-edit" aria-hidden="true"></i>Edit this page
+                </a>
+            </li>
+        
+    </ul>
+
+    
+        <div class="secondary-side-nav__content">
+            <p class="topic-title">On this page</p>
+            <ul>
+<li><a class="reference internal" href="#">Production deployment</a><ul>
+<li><a class="reference internal" href="#available-workflows">Available workflows</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#setting-up-a-custom-domain">Setting up a custom domain</a></li>
+<li><a class="reference internal" href="#reading-error-messages">Reading error messages</a></li>
+<li><a class="reference internal" href="#re-running-a-workflow">Re-running a workflow</a></li>
+<li><a class="reference internal" href="#disabling-github-pages">Disabling GitHub Pages</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    
+</div>
+                </div>
+            
+        </section>
+
+        <footer class="footer">
+    <div class="footer-group">
+        <div class="footer-top">
+            <a class="footer-logo" href="https://www.scylladb.com">
+                <img src="../_static/img/logo-scylla-horizontal-RGB.svg" alt="Logo" />
+            </a>
+            <div class="footer-links">
+                <a class="footer-links__link" href="https://docs.scylladb.com/">Docs</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/">About Us</a>
+            </div>
+            <div class="footer-actions">
+                <a class="footer-actions__link" href="https://groups.google.com/g/scylladb-users" target="_blank">
+                    <span data-tooltip tabindex="1" title="User mailing list" data-position="bottom">
+                        <img src="../_static/img/icons/icon-mail-list.svg" alt="Mail List Icon" />
+                    </span>
+                </a>
+                <a class="footer-actions__link" href="http://slack.scylladb.com/" target="_blank">
+                    <span data-tooltip tabindex="1" title="User Slack channel" data-position="bottom">
+                        <img src="../_static/img/icons/icon-slack.svg" alt="Slack Icon" />
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            
+                <div class="footer-bottom__copyright">
+                    
+                        
+                            &#169; 2022, ScyllaDB. All rights reserved.
+                        
+                    
+                </div>
+            
+            
+                <div class="footer-bottom__last-updated">
+                    
+                        Last updated on 19 Aug 2022.
+                    
+                </div>
+            
+            <div class="footer-bottom__version">
+                Powered by
+                <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a> &amp;
+                <a href="https://sphinx-theme.scylladb.com/">ScyllaDB Theme 1.3.1</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP" height="0" width="0"
+                style="display: none; visibility: hidden"></iframe>
+        </noscript>
+    </body>
+
+</html>

@@ -1,0 +1,1050 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    
+    
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>
+             Changelog | Scylla Docs 
+        </title>
+        <meta name="description" content="Sphinx Theme for ScyllaDB projects." />
+        <link rel="icon" href="../_static/img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../_static/img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="../_static/img/favicon-228x228.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="../_static/img/favicon-228x228.png" />
+        <meta name="msapplication-TileImage" href="../_static/img/favicon-228x228.png" />
+
+        
+            
+            
+        
+
+        
+            
+            <link rel="canonical" href="https://sphinx-theme.scylladb.com/stable/upgrade/CHANGELOG.html"/>
+        
+
+        <link rel="author" href="mailto:info@scylladb.com" />
+
+        
+            
+        <!-- increase expertrec loading priority-->
+        <link rel="dns-prefetch" href="https://cse.expertrec.com">
+
+        <!-- increase font loading priority -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- async CSS -->
+        <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+
+        <!-- no-JS fallback -->
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+        </noscript>
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/css/main.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/sphinx_collapse.css" />
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+            
+        
+    
+        
+        
+            
+
+        <script type="text/javascript" id="documentation_options" data-url_root="../"
+            src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/js/runtime.bundle.js"></script>
+        <script type="text/javascript" src="../_static/js/main.bundle.js"></script>
+        
+            
+                <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+            
+        
+            
+        
+            
+                <script src="../_static/underscore.js"></script>
+            
+        
+            
+                <script src="../_static/doctools.js"></script>
+            
+        
+            
+                <script src="../_static/clipboard.min.js"></script>
+            
+        
+            
+                <script src="../_static/copybutton.js"></script>
+            
+        
+    
+            <!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T8P2JP");
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Expertrec -->
+<script>
+    var id = "e2077224-9ccf-11e9-a0c9-0242ac130002";
+    var ci_search = document.createElement("script");
+    ci_search.type = "text/javascript";
+    ci_search.async = true;
+    ci_search.src = "https://cse.expertrec.com/api/js/ci_common.js?id=" + id;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ci_search, s);
+</script>
+<!-- End Expertrec -->
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
+        <!-- End Font Awesome -->
+    </head>
+
+    <body>
+        
+        <header class="header">
+    <div class="header-logo">
+        <a class="header-logo__img" href="https://scylladb.com/">
+            <img src="../_static/img/logo-docs.svg" alt="Scylla Documentation Logo" />
+        </a>
+        <span class="header-logo__bar"></span>
+        <a class="header-logo__text" href="https://docs.scylladb.com/">
+            Documentation
+        </a>
+    </div>
+    <div class="header-navigation">
+        <ul class="dropdown menu scylla-dropdown scylla-dropdown--header" data-dropdown-menu>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Server
+                    <i class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--about-us"></i>
+                            Scylla Open Source
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--enterprise"></i>Scylla Enterprise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scylla.docs.scylladb.com/stable/alternator/alternator.html">
+                            <i class="scylla-icon scylla-icon--overview"></i>
+                            Scylla Alternator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Cloud <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://cloud.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--cloud"></i>Scylla Cloud</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/scylla-cloud/">
+                            <i class="scylla-icon scylla-icon--cloud-docs"></i>Scylla Cloud
+                            Docs</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Tools <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://manager.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--manager"></i>Scylla Manager</a>
+                    </li>
+                    <li>
+                        <a href="https://monitoring.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--monitoring"></i>Scylla
+                            Monitoring Stack</a>
+                    </li>
+                    <li>
+                        <a href="https://operator.docs.scylladb.com/">
+                            <i class="scylla-icon scylla-icon--operator"></i>Scylla Operator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="scylla-dropdown__item">
+                <a href="#" class="scylla-dropdown__title">Drivers <i
+                    class="chevron scylla-icon scylla-icon--triangle-down"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/cql-drivers/">
+                            <i class="scylla-icon scylla-icon--nsql-guides"></i>CQL Drivers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/using-scylla/drivers/dynamo-drivers/">
+                            <i class="scylla-icon scylla-icon--overview"></i>DynamoDB Drivers
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="header-button">
+            <a href="https://www.scylladb.com/download/" class="button">Download</a>
+        </div>
+    </div>
+    <div class="header-search-box">
+        <div class="search-box">
+            <ci-search></ci-search>
+        </div>
+    </div>
+    <div class="side-nav-toggle" data-toggle="side-nav">
+    <div class="side-nav-toggle__button">
+        <img src="../_static/img/menu.svg" alt="Menu" />
+    </div>
+</div>
+</header>
+        <section
+            class="layout  layout--sidebar layout--has-secondary-sidebar ">
+            <div class="content large-order-2">
+                
+                    
+                
+                
+                    <div class="pre-content">
+                        <div class="breadcrumbs">
+    <span class="bread__item">
+        <a href="../index.html"
+            class="bread__highlight">
+            <i class="fas fa-home"></i> Scylla Sphinx Theme
+        </a>
+    </span>
+    
+        <span class="bread__item">
+            <a href="index.html">
+                Upgrade guides
+            </a>
+        </span>
+    
+    <span class="bread__item bread__item--last">Changelog</span>
+</div>
+                    </div>
+                
+                <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<section id="aug-2022">
+<h2>1.3.1 - 19 Aug 2022<a class="headerlink" href="#aug-2022" title="Permalink to this headline">¶</a></h2>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/525">#525</a>: When a user clicks on <strong>Create an issue</strong> button, the issue is now created with the prefix <code class="docutils literal notranslate"><span class="pre">docs:</span></code> and the label <code class="docutils literal notranslate"><span class="pre">documentation</span></code>.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/531">#531</a>: Adds instructions to trigger pull requests previews with Amplify only when there are updates within the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder.</p></li>
+<li><p>We added a quickstart guide to create your first documentation page, list it in the table of contents, and preview the site locally.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/551">#551</a>: Adds an option to hide the multiversion selector for projects for projects that only build one version.</p></li>
+</ul>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/509">#509</a>: We redesigned the home page search box to make it more visible.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/515">#515</a>: Before, redirects were part of the theme. This means that, for every version, the same redirects were being created, giving us little control if we wanted to redirect a page from the previous version to a different URL. Now, we are using a separate third-party package to create redirections. Also, instead of creating the same redirections for each version, we generate them at the end once the docs are built. This allows us to have better control of the redirects per version.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/533">#533</a>: We improved the build time of docs previews by 80%.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/546">#536</a>: The multiversion version dropdown is now always displayed, even if there is only one version.</p></li>
+</ul>
+</section>
+</section>
+<section id="may-2022">
+<h2>1.2.2 - 17 May 2022<a class="headerlink" href="#may-2022" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3>Added<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/472">#472</a>: The hero box directive now can display the search box with a new option.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/452">#452</a>: Various improvements on the search page UI.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Changed<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/447">#447</a>: We’ve replaced Netlify for AWS Amplify to automatically build pull requests previews for docs.</p></li>
+</ul>
+</section>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/406">#406</a>: Pages built with the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> builder were displaying an incorrect canonical URL.</p></li>
+</ul>
+</section>
+</section>
+<section id="march-2022">
+<h2>1.2.1 - 29 March 2022<a class="headerlink" href="#march-2022" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/422">#422</a>: The theme generates a <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code> by default.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Fixed<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/421">#421</a>: Show always contribute buttons.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/425">#425</a>: CSS for the 404 page was not loading.</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>1.2 - 22 March 2022<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p><strong>IMPORTANT</strong>: For more information on how to update, see <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/upgrade/1-1-to-1-2.html">Migrating from 1.1 to 1.2</a>.</p>
+<section id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/379">#379</a>: We’ve added Netlify support to automatically build pull requests previews for docs. This feature is in beta for a reduced number of projects.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/390">#390</a>: Once a week, a GitHub Action finds for broken links in Markdown and restructuredText files. If there are broken links, the action will create a new issue in the same repository with the links that have to be fixed.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/401">#401</a>: We’ve added new warning messages when previewing a non-stable version of the documentation.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/402">#402</a>: Now, you can create landing pages with sidebars.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/402">#402</a>: The theme includes a GitHub Action that runs the theme tests automatically when some of the theme files are edited.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Changed<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/359">#359</a>: We’ve updated all the JavaScript and Python dependencies to the latest version.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/361">#361</a>: Tables were redesigned to make them more readable.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/371">#371</a>: We’ve moved the contribute buttons to the right sidebar.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/372">#372</a>: The substitutions extension is now installed as a third-party dependency.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/403">#403</a>: The theme does not show the multiversion dropdown in the sidebar if there is only one item.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/404">#404</a>: Now, topic box images are hidden in responsive view.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/410">#410</a>: We’ve improved the search component load time.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Fixed<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/357">#357</a>: The copy button displayed an empty circle on hover.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/362">#362</a>: The zoom option for images was only working with SVG images. Now, this feature is compatible with other formats such as PNG and JPG.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/382">#382</a>: When the top bar was closed, it continued appearing for milliseconds when the page was refreshed.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/389">#389</a>: We’ve increased the breadcrumbs spacing.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/406">#406</a>: Various pages shared the same canonical URL. Now, we point to the URL of the latest stable version of the document.</p></li>
+</ul>
+</section>
+</section>
+<section id="february-2022">
+<h2>1.1.1 - 02 February 2022<a class="headerlink" href="#february-2022" title="Permalink to this headline">¶</a></h2>
+<section id="id9">
+<h3>Fixed<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/344">#344</a>: Fixes the error <code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">'CQLLexer'</span> <span class="pre">object</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">callable</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h2>1.1 - 01 February 2022<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p><strong>IMPORTANT</strong>: For more information on how to update, see <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/upgrade/1-0-to-1-1">Migrating from 1.0 to 1.1</a>.</p>
+<section id="id11">
+<h3>Added<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/323">#323</a>: The theme includes a new directive to collapse long content and redundant information.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/300">#300</a> : Support for Sphinx 4.x.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/263">#263</a>: We use dependabot to receive automatic notifications when there are new dependency updates.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/229">#229</a>: New file-wide metadata options.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Changed<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/263">#263</a>: Update JavaScript and Python dependencies to the latest version.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/307">#307</a>: Before, poetry was installed as a dependency. From this release, you must install Poetry as a prerequisite.</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Fixed<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/301">#301</a>: Tables with headings were not styled.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/309">#309</a>: Expertrec added a new component for projects in the search box page. We’ve re-styled the page to match the theme’s look and feel.</p></li>
+</ul>
+</section>
+</section>
+<section id="december-2021">
+<h2>1.0.6 - 08 December 2021<a class="headerlink" href="#december-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id14">
+<h3>Added<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/187">#187</a>: When a reader clicks on an image that has been resized, this now opens in full width.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/193">#193</a>: We’ve added a button to hide the sidebar. With this feature, our readers can read the documentation with fewer distractions.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Changed<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/206">#206</a>: We’ve updated jQuery dependency to 3.6.0.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/246">#246</a>: The contribute button is more noticeable.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/247">#247</a>: The sidebar’s dropdown icons sport a new design.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/245">#245</a>: The panel box component sports a new design.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/252">#252</a>: We’ve reviewed the warning that appears when the user is not reading the latest stable version of the documentation. Now, the warning also considers branches that are still under active development.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/259">#259</a>: The sidebar’s scrollbar is now thinner and in line with the new design.</p></li>
+</ul>
+</section>
+</section>
+<section id="october-2021">
+<h2>1.0.5 - 27 October 2021<a class="headerlink" href="#october-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id16">
+<h3>Added<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/213">#213</a>: We’ve added guides to help Scylla developers to migrate to Scylla Sphinx Theme 1.0 and 1.1.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/236">#236</a>: Added documentation to install the toolchain for Windows users.</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Changed<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/214">#214</a>: Breadcrumbs now highlight the project’s name. With this change, readers will know which documentation site they are navigating.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/231">#231</a>: All external links include an external link icon, and they now open on a new page.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/240">#240</a>: We’ve removed transparency from the home page mascot.</p></li>
+</ul>
+</section>
+<section id="id18">
+<h3>Fixed<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/214">#214</a>: Breadcrumbs links to internal pages were not working.</p></li>
+</ul>
+</section>
+</section>
+<section id="september-2021">
+<h2>1.0 - 01 September 2021<a class="headerlink" href="#september-2021" title="Permalink to this headline">¶</a></h2>
+<p><strong>IMPORTANT</strong>: For more information on how to update, see <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/upgrade/0-x-to-1-0">Migrating from 0.x to 1.0</a>.</p>
+<section id="id19">
+<h3>Added<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: We’ve made a number of updates to the look and feel of the theme to improve the overall user experience.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: The static front end files (CSS, JS, and images) are now managed with <code class="docutils literal notranslate"><span class="pre">webpack</span></code>. For more information, see <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/contribute/contribute-theme.html">Contribute to the Theme</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: The promo banner now supports icons with the option theme option <code class="docutils literal notranslate"><span class="pre">banner_icon_path</span></code>. For more information, see <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/configuration/template.html">Template Options</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: The contribute button adds the option “Edit on GitHub”. To configure your project to support this option, read <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/configuration/template.html">Template Options</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: We run hooks on every commit to automatically point out linting issues.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: The new workflow <code class="docutils literal notranslate"><span class="pre">docs-pr</span></code> runs on pull requests to make sure docs build without warnings before being merged. For more information, see <a class="reference external" href="https://sphinx-theme.scylladb.com/branch-1.0/github-pages.html">Deployment</a>.</p></li>
+</ul>
+</section>
+<section id="id20">
+<h3>Changed<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: Topics boxes (cards) can be used in other sections, and not just on the home page. We now have different layouts to suit most projects’ needs. Check them out at <a class="reference external" href="https://sphinx-theme.scylladb.com/stable/examples/topic-box">Topic Boxes</a></p></li>
+</ul>
+</section>
+<section id="id21">
+<h3>Fixed<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: We’ve added more unit tests to the project, especially to extensions.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/201">#201</a>: We’ve fixed JavaScript warnings and errors raised by the console.</p></li>
+</ul>
+</section>
+</section>
+<section id="july-2021">
+<h2>0.1.25 - 05 July 2021<a class="headerlink" href="#july-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id22">
+<h3>Fixed<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/pull/194">#194</a>: FontAwesome 5.0 backwards compatibility.</p></li>
+</ul>
+</section>
+</section>
+<section id="june-2021">
+<h2>0.1.24 - 17 June 2021<a class="headerlink" href="#june-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id23">
+<h3>Added<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/180">#180</a>: Now projects can configure promotional banners.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/179">#179</a>: Troubleshooting guides for multiversion.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/173">#173</a>: Dropdown for Contributors with the options to “Report an Issue” and “Learn How to Contribute”.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/170">#170</a>: Option to hide versions from the multiversion dropdown.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/174">#174</a>: Shared substitutions for all projects.</p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Fixed<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/171">#171</a>: Branches name were rendered in ASC order.</p></li>
+</ul>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/179">#173</a>: Report an issue button from footer.</p></li>
+</ul>
+</section>
+</section>
+<section id="apr-2021">
+<h2>0.1.23 - 22 Apr 2021<a class="headerlink" href="#apr-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id25">
+<h3>Removed<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/152">#152</a>: Top-bar for Scylla University live.</p></li>
+</ul>
+</section>
+</section>
+<section id="id26">
+<h2>0.1.22 - 14 Apr 2021<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<section id="id27">
+<h3>Added<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/152">#152</a>: Top-bar for Scylla University live.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/146">#146</a>: Guidelines for project maintainers.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/110">#110</a>: Theme option to override part of the version name in the multiversion dropdown.</p></li>
+</ul>
+</section>
+<section id="id28">
+<h3>Fixed<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/153">#153</a>: Create intermediate directories for redirections.</p></li>
+</ul>
+</section>
+</section>
+<section id="jan-2021">
+<h2>0.1.21 - 24 Jan 2021<a class="headerlink" href="#jan-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id29">
+<h3>Added<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/121">#121</a>: <code class="docutils literal notranslate"><span class="pre">smv_rename_latest_version</span></code> setting in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> overrides the latest version output directory.</p></li>
+</ul>
+</section>
+<section id="id30">
+<h3>Changed<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/121">#121</a>: Moved <code class="docutils literal notranslate"><span class="pre">smv_latest_version</span></code> from <code class="docutils literal notranslate"><span class="pre">github/workflows/pages.yml</span></code> to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p></li>
+</ul>
+</section>
+<section id="id31">
+<h3>Removed<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/121">#121</a>: <code class="docutils literal notranslate"><span class="pre">_utils/redirects.sh</span></code> script.</p></li>
+</ul>
+</section>
+<section id="id32">
+<h3>Fixed<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/121">#121</a>: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">multiversionpreview</span></code> was not redirecting automatically to the latest version.</p></li>
+</ul>
+</section>
+</section>
+<section id="id33">
+<h2>0.1.20 - 19 Jan 2021<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<section id="id34">
+<h3>Added<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/111">#111</a>: Show a warning if the latest version is not stable.</p></li>
+</ul>
+</section>
+<section id="id35">
+<h3>Changed<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/106">#106</a>: Disable Scylla Summit banner (#106).</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/108">#108</a>: Documentation of the project moved under docs folder.</p></li>
+</ul>
+</section>
+</section>
+<section id="id36">
+<h2>0.1.19 - 07 Jan 2021<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<section id="id37">
+<h3>Added<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/98">#98</a>: Show Sphinx &amp; Theme version in the footer.</p></li>
+</ul>
+</section>
+<section id="id38">
+<h3>Changed<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/100">#100</a>: Show the multiversion label when there is only one version.</p></li>
+</ul>
+</section>
+<section id="id39">
+<h3>Fixed<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/103">#103</a>: Report button does not break when the page title has inlines.</p></li>
+</ul>
+</section>
+</section>
+<section id="dec-2020">
+<h2>0.1.18 - 31 Dec 2020<a class="headerlink" href="#dec-2020" title="Permalink to this headline">¶</a></h2>
+<section id="id40">
+<h3>Added<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/84">#84</a>: Banner for Scylla Summit.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/95">#95</a>: Support for custom domain.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/92">#92</a>: Command to preview multiversion build.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/89">#89</a>: Rename the latest version URL automatically to stable.</p></li>
+</ul>
+</section>
+</section>
+<section id="nov-2020">
+<h2>0.1.16 - 24 Nov 2020<a class="headerlink" href="#nov-2020" title="Permalink to this headline">¶</a></h2>
+<section id="id41">
+<h3>Added<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/84">#84</a>: Banner for Scylla Summit.</p></li>
+</ul>
+</section>
+<section id="id42">
+<h3>Changed<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/83">#83</a>: Copyright year in the footer is now updated automatically.</p></li>
+</ul>
+</section>
+</section>
+<section id="id43">
+<h2>0.1.15 - 17 Nov 2020<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h2>
+<section id="id44">
+<h3>Added<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/78">#78</a>: Show a warning when the user is not reading not reading the latest version.</p></li>
+</ul>
+</section>
+</section>
+<section id="oct-2020">
+<h2>0.1.14 - 28 Oct 2020<a class="headerlink" href="#oct-2020" title="Permalink to this headline">¶</a></h2>
+<section id="id45">
+<h3>Changed<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/72">#72</a>: Overwrite the Sphinx classification for external and internal links.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/71">#71</a>: Site description is now configurable per project.</p></li>
+</ul>
+</section>
+</section>
+<section id="id46">
+<h2>0.1.13 - 20 Oct 2020<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h2>
+<section id="id47">
+<h3>Added<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/65">#65</a>: External links and download links are now followed by an icon.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/53">#53</a>: Now code blocks can include substitutions.</p></li>
+</ul>
+</section>
+<section id="id48">
+<h3>Changed<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/64">#64</a>: The 404 page sports a new design.</p></li>
+</ul>
+</section>
+<section id="id49">
+<h3>Fixed<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/69">#69</a>: Redirections on multiversion builds were not working</p></li>
+</ul>
+</section>
+<section id="id50">
+<h3>Removed<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/68">#68</a>: PIPX dependency.</p></li>
+</ul>
+</section>
+</section>
+<section id="id51">
+<h2>0.1.12 - 01 Oct 2020<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h2>
+<section id="id52">
+<h3>Added<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/59">#59</a>: All projects now share a 404 page.</p></li>
+<li><p><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme/issues/58">#58</a>: Support for redirections.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+                
+                    <div class="post-content"><div class="content-navigation">
+    <div class="navigation navigation--prev">
+        
+            <a class="navigation__link" href="0-x-to-1-0.html">
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-left"></i>
+                </button>
+                <div class="navigation__title">
+                    <span class="colored">PREVIOUS</span> <br />Migrating from 0.x to 1.0
+                </div>
+            </a>
+        
+    </div>
+    <div class="navigation navigation--next">
+        
+            <a class="navigation__link" href="../contribute/index.html">
+                <div class="navigation__title">
+                    <span class="colored">NEXT</span> <br />Contribute
+                </div>
+                <button class="navigation__button">
+                    <i class="scylla-icon scylla-icon--chevron-right"></i>
+                </button>
+            </a>
+        
+    </div>
+</div></div>
+                
+            </div>
+            <div class="sidebar-left  large-order-1">
+                
+                    
+                        <div id="side-nav" class="side-nav custom-scroll-bar" data-closable data-toggler=".show">
+    <button class="collapsible-button">
+        <i class="scylla-icon scylla-icon--chevron-left"></i>
+    </button>
+    <div class="side-nav-content">
+        <div class="side-nav__search">
+            <div class="search-box">
+                <ci-search></ci-search>
+            </div>
+        </div>
+        <div class="side-nav__versions"><ul class="dropdown menu scylla-dropdown scylla-dropdown--versions" data-dropdown-menu>
+    <li class="scylla-dropdown__item">
+        <a class="scylla-dropdown__title" href="#">
+            
+                1.3
+            
+            <i class="chevron scylla-icon scylla-icon--chevron-right"></i>
+        </a>
+        <ul class="menu scylla-dropdown__content">
+            
+                
+            
+                
+                    <li>
+                        <a href="CHANGELOG.html">1.3</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.2/upgrade/CHANGELOG.html">1.2</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.1/upgrade/CHANGELOG.html">1.1</a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="../../branch-1.0/upgrade/CHANGELOG.html">1.0</a>
+                    </li>
+                
+            
+            
+        </ul>
+    </li>
+</ul></div>
+        <div class="side-nav__content">
+            <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started/index.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/toolchain.html">Toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration/index.html">Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/template.html">Template options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/page.html">Page options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/multiversion.html">Multiversion options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/markdown.html">Markdown support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/redirects.html">Redirects support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/search.html">Search support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../deployment/index.html">Deployment</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html">Production deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/previews.html">Pull requests previews</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/collapse.html">Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/code-blocks.html">Code blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/headings.html">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/hero-box.html">Hero box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/includes.html">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/links.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/panel-box.html">Panel box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/substitutions.html">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/tabs.html">Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/toc.html">TOC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/topic-box.html">Topic box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/versions.html">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Upgrade guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-2-to-1-3.html">Migrating from 1.2 to 1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-1-to-1-2.html">Migrating from 1.1 to 1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-0-to-1-1.html">Migrating from 1.0 to 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0-x-to-1-0.html">Migrating from 0.x to 1.0</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contribute/index.html">Contribute</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="scylla-icon scylla-icon--expand"></i></label><div class="break"></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contribute-docs.html">Contribute to the documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contribute-theme.html">Contribute to the theme</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/scylladb/sphinx-scylladb-theme">Source Code</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+                    
+                
+            </div>
+            
+                <div class="sidebar-right large-order-3">
+                    <div class="secondary-side-nav custom-scroll-bar">
+    
+    <ul class="contribute">
+        <li class="contribute__item">
+            <a href="https://github.com/scylladb/sphinx-scylladb-theme/issues/new?title=docs:%20Issue in page Changelog&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20https://sphinx-theme.scylladb.com/branch-1.3/upgrade/CHANGELOG%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation"
+                target="_blank">
+                <i class="icon fab fa-github" aria-hidden="true"></i>Create an issue
+            </a>
+        </li>
+        
+            <li class="contribute__item">
+                
+                
+                    
+                        
+                    
+                
+                <a href="https://github.com/scylladb/sphinx-scylladb-theme/edit/branch-1.3/docs/source/upgrade/CHANGELOG.md"
+                    target="_blank">
+                    <i class="icon fa fa-edit" aria-hidden="true"></i>Edit this page
+                </a>
+            </li>
+        
+    </ul>
+
+    
+        <div class="secondary-side-nav__content">
+            <p class="topic-title">On this page</p>
+            <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#aug-2022">1.3.1 - 19 Aug 2022</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#changed">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#may-2022">1.2.2 - 17 May 2022</a><ul>
+<li><a class="reference internal" href="#id1">Added</a></li>
+<li><a class="reference internal" href="#id2">Changed</a></li>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#march-2022">1.2.1 - 29 March 2022</a><ul>
+<li><a class="reference internal" href="#id3">Added</a></li>
+<li><a class="reference internal" href="#id4">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">1.2 - 22 March 2022</a><ul>
+<li><a class="reference internal" href="#id6">Added</a></li>
+<li><a class="reference internal" href="#id7">Changed</a></li>
+<li><a class="reference internal" href="#id8">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#february-2022">1.1.1 - 02 February 2022</a><ul>
+<li><a class="reference internal" href="#id9">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">1.1 - 01 February 2022</a><ul>
+<li><a class="reference internal" href="#id11">Added</a></li>
+<li><a class="reference internal" href="#id12">Changed</a></li>
+<li><a class="reference internal" href="#id13">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#december-2021">1.0.6 - 08 December 2021</a><ul>
+<li><a class="reference internal" href="#id14">Added</a></li>
+<li><a class="reference internal" href="#id15">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#october-2021">1.0.5 - 27 October 2021</a><ul>
+<li><a class="reference internal" href="#id16">Added</a></li>
+<li><a class="reference internal" href="#id17">Changed</a></li>
+<li><a class="reference internal" href="#id18">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#september-2021">1.0 - 01 September 2021</a><ul>
+<li><a class="reference internal" href="#id19">Added</a></li>
+<li><a class="reference internal" href="#id20">Changed</a></li>
+<li><a class="reference internal" href="#id21">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#july-2021">0.1.25 - 05 July 2021</a><ul>
+<li><a class="reference internal" href="#id22">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#june-2021">0.1.24 - 17 June 2021</a><ul>
+<li><a class="reference internal" href="#id23">Added</a></li>
+<li><a class="reference internal" href="#id24">Fixed</a></li>
+<li><a class="reference internal" href="#removed">Removed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apr-2021">0.1.23 - 22 Apr 2021</a><ul>
+<li><a class="reference internal" href="#id25">Removed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">0.1.22 - 14 Apr 2021</a><ul>
+<li><a class="reference internal" href="#id27">Added</a></li>
+<li><a class="reference internal" href="#id28">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#jan-2021">0.1.21 - 24 Jan 2021</a><ul>
+<li><a class="reference internal" href="#id29">Added</a></li>
+<li><a class="reference internal" href="#id30">Changed</a></li>
+<li><a class="reference internal" href="#id31">Removed</a></li>
+<li><a class="reference internal" href="#id32">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">0.1.20 - 19 Jan 2021</a><ul>
+<li><a class="reference internal" href="#id34">Added</a></li>
+<li><a class="reference internal" href="#id35">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id36">0.1.19 - 07 Jan 2021</a><ul>
+<li><a class="reference internal" href="#id37">Added</a></li>
+<li><a class="reference internal" href="#id38">Changed</a></li>
+<li><a class="reference internal" href="#id39">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dec-2020">0.1.18 - 31 Dec 2020</a><ul>
+<li><a class="reference internal" href="#id40">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nov-2020">0.1.16 - 24 Nov 2020</a><ul>
+<li><a class="reference internal" href="#id41">Added</a></li>
+<li><a class="reference internal" href="#id42">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id43">0.1.15 - 17 Nov 2020</a><ul>
+<li><a class="reference internal" href="#id44">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#oct-2020">0.1.14 - 28 Oct 2020</a><ul>
+<li><a class="reference internal" href="#id45">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id46">0.1.13 - 20 Oct 2020</a><ul>
+<li><a class="reference internal" href="#id47">Added</a></li>
+<li><a class="reference internal" href="#id48">Changed</a></li>
+<li><a class="reference internal" href="#id49">Fixed</a></li>
+<li><a class="reference internal" href="#id50">Removed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id51">0.1.12 - 01 Oct 2020</a><ul>
+<li><a class="reference internal" href="#id52">Added</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    
+</div>
+                </div>
+            
+        </section>
+
+        <footer class="footer">
+    <div class="footer-group">
+        <div class="footer-top">
+            <a class="footer-logo" href="https://www.scylladb.com">
+                <img src="../_static/img/logo-scylla-horizontal-RGB.svg" alt="Logo" />
+            </a>
+            <div class="footer-links">
+                <a class="footer-links__link" href="https://docs.scylladb.com/">Docs</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/contact-us/">Contact Us</a>
+                <a class="footer-links__link" href="https://www.scylladb.com/company/">About Us</a>
+            </div>
+            <div class="footer-actions">
+                <a class="footer-actions__link" href="https://groups.google.com/g/scylladb-users" target="_blank">
+                    <span data-tooltip tabindex="1" title="User mailing list" data-position="bottom">
+                        <img src="../_static/img/icons/icon-mail-list.svg" alt="Mail List Icon" />
+                    </span>
+                </a>
+                <a class="footer-actions__link" href="http://slack.scylladb.com/" target="_blank">
+                    <span data-tooltip tabindex="1" title="User Slack channel" data-position="bottom">
+                        <img src="../_static/img/icons/icon-slack.svg" alt="Slack Icon" />
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            
+                <div class="footer-bottom__copyright">
+                    
+                        
+                            &#169; 2022, ScyllaDB. All rights reserved.
+                        
+                    
+                </div>
+            
+            
+                <div class="footer-bottom__last-updated">
+                    
+                        Last updated on 19 Aug 2022.
+                    
+                </div>
+            
+            <div class="footer-bottom__version">
+                Powered by
+                <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a> &amp;
+                <a href="https://sphinx-theme.scylladb.com/">ScyllaDB Theme 1.3.1</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP" height="0" width="0"
+                style="display: none; visibility: hidden"></iframe>
+        </noscript>
+    </body>
+
+</html>

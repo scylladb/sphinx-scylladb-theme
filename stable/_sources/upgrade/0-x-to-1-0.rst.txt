@@ -1,0 +1,79 @@
+Migrating from 0.x to 1.0
+=========================
+
+This guide explains how to upgrade the version of the Scylla Sphinx Theme.
+
+How to check your current theme version
+---------------------------------------
+
+The theme version is displayed in the footer of the project's documentation site.
+
+.. image:: version.png
+
+If your project theme's version is <1.0, follow this guide to get the latest version.
+
+
+Upgrade to version 1.0
+----------------------
+
+Here are the main breaking changes between the 0.x and 1.0 versions.
+
+#. Set ``sphinx-scylladb-theme`` in ``docs/pyproject.toml`` to ``sphinx-scylladb-theme = "~1.0.0"``.
+
+#. Edit ``conf.py``:
+
+	.. note:: Depending on your project configuration, you may find ``conf.py`` under ``docs/source/conf.py`` or ``docs/conf.py``.
+
+	#. Remove the option ``header_links`` from ``html_theme_options``.
+	#. If exists, remove the option ``show_sidebar_index`` from ``html_theme_options``. If this option was set to ``true``, set ``"hide_sidebar_index": "false"``.
+	#. If they exist, remove or comment out the following lines:
+
+		.. code-block:: python
+
+			# Add ExpertRec Search
+			# html_js_files = ['expertrec.js']
+
+#. Edit ``docs/Makefile``:
+
+	#. Under the section ``# Internal variables``, add the following line after the variable ``ALLSPHINXOPTS``:
+
+		.. code-block::
+
+			TESTSPHINXOPTS  = $(ALLSPHINXOPTS) -W --keep-going
+
+	#. Add the following lines at the end of the ``Makefile``:
+
+		.. code-block::
+
+			.PHONY: test
+			test: setup
+			    $(SPHINXBUILD) -b dirhtml $(TESTSPHINXOPTS) $(BUILDDIR)/dirhtml
+			    @echo
+			    @echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
+
+#. Remove the file ``.github/workflows/pages.yml``. Then, copy the new workflows in the ``.github/workflows`` folder. You can download the latest workflows `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
+
+To check if the upgrade completed successfully, run the command :doc:`make preview <../../commands>`. Then, check if the site footer displays version 1.0 or greater.
+
+Optional features
+-----------------
+
+.. _new_landing_page:
+
+New landing page
+................
+
+With 1.0, you can add a custom landing page for your project using the new :doc:`topic box <../../examples/topic-box>` components.
+For example, check out `Scylla Sphinx Theme <https://sphinx-theme.scylladb.com/stable/>`_ landing page for inspiration.
+
+To add a landing page to your project:
+
+#. Create a new ``docs/source/index.rst`` file. Here you can find a `sample template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/source/index.rst>`_ ready to be adapted.
+#. Set ``"hide_sidebar_index": "false"`` in ``html_theme_options`` (``conf.py``).
+
+
+New "Edit on GitHub" button
+...........................
+
+If your project is open-source, we invite you to enable the new "Edit on GitHub" option.
+For more information, see :doc:`Template Options / Contribute button <../../configuration/template>`.

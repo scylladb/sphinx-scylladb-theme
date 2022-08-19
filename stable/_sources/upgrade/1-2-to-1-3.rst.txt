@@ -1,0 +1,87 @@
+Migrating from 1.2 to 1.3
+=========================
+
+This guide explains how to upgrade the version of the Scylla Sphinx Theme.
+
+How to check your current theme version
+---------------------------------------
+
+The theme version is displayed in the footer of the project's documentation site.
+
+.. image:: version.png
+
+If your project theme's version is **>=1.2**, follow this guide to get the latest version.
+
+Upgrade to version 1.3
+----------------------
+
+Here are the main breaking changes between the 1.2 and 1.3 versions.
+
+#. Update the following Python dependencies in ``docs/pyproject.toml``:
+
+    .. code-block::
+
+        sphinx-scylladb-theme = "~1.3.0"
+        redirects_cli ="0.1.1"
+
+#. Add the new `redirects` command in ``docs/Makefile``:
+
+    .. code-block::
+
+        .PHONY: redirects
+        redirects: setup
+            $(POETRY) run redirects-cli fromfile --yaml-file ./_utils/redirects.yaml --output-dir $(BUILDDIR)/dirhtml
+            @echo
+            @echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
+
+#. Create a new file ``docs/_utils/redirects.yml``. If the project has a file ``docs/_utils/redirections.yml``, rename it to ``docs/_utils/redirects.yml`` and update it to the new format:
+
+    Before, redirects were created for all versions:
+
+    .. code-block::
+
+        test-redirect: /stable/index
+
+    If the project were building docs for the branches ``stable`` and ``branch-1.0``, it would generate the following redirections:
+
+        * ``/stable/test-redirect`` -> ``/stable/index``
+        * ``/branch-1.0/test-redirect`` -> ``/stable/index``
+
+    Now, you have more control to define redirects per version. To create the same redirects as in the previous example, the new format is:
+
+    .. code-block::
+
+        /stable/test-redirect.html: /stable/index.html
+        /branch-1.0/test-redirect.html: /stable/index.html
+
+    .. note:: Notice that now you must append the ``.html`` extension to the redirects.
+
+#. Remove the file ``.github/workflows/docs-pages.yml``. Then, copy the new workflow in the ``.github/workflows`` folder. You can download the latest `docs-pages.yml` workflow `here <https://github.com/scylladb/sphinx-scylladb-theme/tree/master/.github/workflows>`_.
+
+    If the default branch is not ``master`` or the docs are not under the ``docs`` folder, the workflows to match the project configuration. For example:
+
+    .. code-block::
+
+        on:
+        push:
+            branches:
+            - master # edit this line
+            paths:
+            - "docs/**" # edit this line
+
+#. Commit and push the changes to GitHub (default branch).
+
+To check if the upgrade completed successfully, run the command :doc:`make preview <../../commands>`.
+Then, check if the site footer displays version 1.3 or greater.
+
+Optional features
+------------------
+
+Build previews only if the docs folder is updated
+.................................................
+
+If the project is deploying docs pull request previews with AWS Ampify, you can update the configuration to improve the build time:
+
+1. Replace the ``amplify.yml`` in your root directory with the `latest version <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/amplify.yml>`_.
+2. Follow the guide :ref:`Build previews only if the docs folder is updated <enable_previews_doc_folder_updated>`.
+3. Set the base image to build the docs to ``python:3.8`` as described in :ref:`Configure build settings <configure_build_settings>`.
