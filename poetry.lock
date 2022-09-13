@@ -514,7 +514,7 @@ rtd = ["ipython", "myst-nb", "sphinx", "sphinx-book-theme"]
 
 [[package]]
 name = "sphinx-multiversion-scylla"
-version = "0.2.11"
+version = "0.2.12"
 description = "Add support for multiple versions to sphinx"
 category = "dev"
 optional = false
@@ -750,7 +750,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "e524749ad96dca6f71ba0f90cbff5db2a08ffded3b91d4f1b3d4659c9d7ec732"
+content-hash = "dbfd54e48942b4735d9eb382517ba6ad0b452ecd6cb05279e68a5aab8895649b"
 
 [metadata.files]
 alabaster = [
@@ -994,8 +994,8 @@ sphinx-copybutton = [
     {file = "sphinx_copybutton-0.5.0-py3-none-any.whl", hash = "sha256:9684dec7434bd73f0eea58dda93f9bb879d24bff2d8b187b1f2ec08dfe7b5f48"},
 ]
 sphinx-multiversion-scylla = [
-    {file = "sphinx-multiversion-scylla-0.2.11.tar.gz", hash = "sha256:524cc2b253ad578481761124fb679c879de65924fffccea0afad98a523950206"},
-    {file = "sphinx_multiversion_scylla-0.2.11-py3-none-any.whl", hash = "sha256:e50e533d4e3caa73eed2b912470f74e129fd9c6600687c1e8a7f9d6917017e85"},
+    {file = "sphinx-multiversion-scylla-0.2.12.tar.gz", hash = "sha256:c61eb2de5a522c41d320325594d9789e220e9968f6201aaed464c35ed54dbcec"},
+    {file = "sphinx_multiversion_scylla-0.2.12-py3-none-any.whl", hash = "sha256:cc1a6e65879c9f5118e2243d158070639b0da6738366814c0407dde84dfdeba5"},
 ]
 sphinx-notfound-page = [
     {file = "sphinx-notfound-page-0.8.3.tar.gz", hash = "sha256:f728403280026b84c234540bebbed7f710b9ea582e7348a35a5becefe4024332"},
