@@ -71,7 +71,7 @@ async function main() {
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         comment_id: github.context.payload.comment.id,
-        body: `${bodyComment}\n\nFiles changed:\n${docFiles}`,
+        body: `${bodyComment}\n\nFiles changed:\n${docFiles.join()}`,
       });
     } catch (err) {
       core.setFailed(`Comment failed with error ${err}`);
