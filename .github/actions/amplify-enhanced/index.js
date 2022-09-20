@@ -45,6 +45,7 @@ async function main() {
       (file.filename.endsWith(".rst") || file.filename.endsWith(".md"))
     ) {
       const baseFilename = file.filename
+        .replace("docs/source/", "")
         .replace("docs/", "")
         .split(".")
         .slice(0, -1)
