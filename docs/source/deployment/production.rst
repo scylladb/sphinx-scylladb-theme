@@ -82,6 +82,8 @@ Follow the following steps to set up a custom domain:
 
 #. Commit and push the changes to GitHub (default branch).
 
+#. Verify the domain name to restrict its usage only on ScyllaDB organization repositories. To do so, follow the steps in `Verifying your domain with GitHub <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages#verifying-a-domain-for-your-organization-site>`_.
+
 #. Once the DNS changes propagate (<24 h), the docs will be accessible from the custom domain name.
 
 Reading error messages
