@@ -42,6 +42,7 @@ async function main() {
     if (
       acceptedFilesStatus.includes(file.status) &&
       file.filename.startsWith("docs/") &&
+      !file.filename.includes("docs/dev") &&
       (file.filename.endsWith(".rst") || file.filename.endsWith(".md"))
     ) {
       const baseFilename = file.filename
