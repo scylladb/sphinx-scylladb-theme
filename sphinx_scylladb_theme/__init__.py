@@ -9,6 +9,7 @@ from sphinx_tabs import tabs
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     hero_box,
+    labels,
     multiversion,
     navigation,
     panel_box,
@@ -105,6 +106,7 @@ def setup(app):
 
     """Setup custom extensions"""
     hero_box.setup(app)
+    labels.setup(app)
     multiversion.setup(app)
     panel_box.setup(app)
     topic_box.setup(app)
