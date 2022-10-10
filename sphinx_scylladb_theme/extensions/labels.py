@@ -1,49 +1,46 @@
 """
-Sphinx directive for HTML Label Components.
+Sphinx role for HTML Label Components.
 """
 from docutils import nodes
-from docutils.parsers.rst import Directive, directives
-
-from .utils import generate_template
+from sphinx.util.docutils import SphinxRole
 
 
-class Label(Directive):
-    has_content = True
-    option_spec = {
-        "class": directives.unchanged,
-        "style": directives.unchanged,
-        "text": directives.unchanged,
-    }
+class LabelRole(SphinxRole):
+    def __init__(self, style):
+        super().__init__()
+        self.style = style
 
     def run(self):
-        class_name = "label"
-        container_class_name = self.options.get("class", "")
-        style_name = "label--" + self.options.get("style", "")
-        text = self.options.get("text", "")
-
-        html0 = generate_template(
-            """
-            <span class="{container_class_name}">
-            """,
-            container_class_name=container_class_name,
-            class_name=class_name,
-            text=self.options.get("text", ""),
+        node = nodes.inline(
+            self.rawtext,
+            self.text,
+            classes=["label", self.style],
         )
-
-        html1 = "</span>"
-
-        text_node = nodes.inline(text=text, classes=["label", style_name])
-
-        return [
-            nodes.raw(text=html0, format="html"),
-            text_node,
-            nodes.raw(text=html1, format="html"),
-        ]
+        self.set_source_info(node)
+        return [node], []
 
 
 def setup(app):
-    app.add_directive("label", Label)
-    app.add_role("label", Label)
+    app.add_role(
+        "label-default",
+        LabelRole("label--default"),
+    )
+    app.add_role(
+        "label-note",
+        LabelRole("label--note"),
+    )
+    app.add_role(
+        "label-tip",
+        LabelRole("label--tip"),
+    )
+    app.add_role(
+        "label-caution",
+        LabelRole("label--caution"),
+    )
+    app.add_role(
+        "label-warning",
+        LabelRole("label--warning"),
+    )
 
     return {
         "version": "0.1",

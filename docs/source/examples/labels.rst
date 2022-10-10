@@ -1,44 +1,21 @@
 Labels
 ======
 
-A custom directive that lets you add labels to your text.
+A custom role that lets you add labels to your text.
 
-For example, you could use the label directive to promote experimental features or highlight that a feature is only available in a specific software version.
+For example, you could use the label role to promote experimental features or highlight that a feature is only available in a specific software version.
 
 Syntax
 ------
 
 .. code-block:: rst
 
-   .. labels::
-      <options>
+   :label-<style>:`Text`
 
-      <text>
 
-Options
--------
+Where:
 
-The ``topic-box`` directive supports the following options:
-
-.. list-table::
-  :widths: 20 20 10 20 30
-  :header-rows: 1
-
-  * - Option
-    - Type
-    - Required
-    - Example Value
-    - Description
-  * - ``class``
-    - string
-    -
-    -
-    - Custom CSS class.
-  * - ``style``
-    - string
-    -
-    -
-    - Label style. Available values are ``default``, ``note``, ``tip``, ``caution``, ``warning``.
+* **style:** Available values are ``default``, ``note``, ``tip``, ``caution``, ``warning``.
 
 Usage
 -----
@@ -50,43 +27,24 @@ Using:
 
 .. code-block:: rst
 
-   .. label::
-      :text: Default
-
-   .. label::
-      :style: note
-      :text: Note
-
-   .. label::
-      :style: tip
-      :text: Tip
-
-   .. label::
-      :style: caution
-      :text: Caution
-
-   .. label::
-      :style: warning
-      :text: Warning
+   :label-default:`Default`, :label-note:`Note`, :label-tip:`Tip`, :label-caution:`Caution`, :label-warning:`Warning`, :label-note:`Note`
 
 
 Results in:
 
-   .. label::
-      :text: Default
+:label-default:`Default`, :label-note:`Note`, :label-tip:`Tip`, :label-caution:`Caution`, :label-warning:`Warning`, :label-note:`Note`
 
-   .. label::
-      :style: note
-      :text: Note
+Inlined with text
+.................
 
-   .. label::
-      :style: tip
-      :text: Tip
+Using:
 
-   .. label::
-      :style: caution
-      :text: Caution
+.. code-block:: rst
 
-   .. label::
-      :style: warning
-      :text: Warning
+   Heading :label-caution:`Beta`
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Results in:
+
+Heading :label-caution:`Beta`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
