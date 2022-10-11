@@ -27,12 +27,13 @@ Using:
 
 .. code-block:: rst
 
-   :label-default:`Default`, :label-note:`Note`, :label-tip:`Tip`, :label-caution:`Caution`, :label-warning:`Warning`, :label-note:`Note`
+   :label-default:`Default`, :label-note:`Note`, :label-tip:`Tip`, :label-caution:`Caution`, :label-warning:`Warning`
 
 
 Results in:
 
-:label-default:`Default`, :label-note:`Note`, :label-tip:`Tip`, :label-caution:`Caution`, :label-warning:`Warning`, :label-note:`Note`
+:label-default:`Default`, :label-note:`Note`, :label-tip:`Tip`, :label-caution:`Caution`, :label-warning:`Warning`
+
 
 Inlined with text
 .................
