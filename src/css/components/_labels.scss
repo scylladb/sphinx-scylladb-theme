@@ -1,0 +1,23 @@
+.label {
+  border: 0;
+  border-radius: 4px;
+  background-color: $color-background-label;
+  color: $color-typography-label;
+  font-size: inherit;
+
+  &--note {
+    background-color: $color-background-label-note;
+  }
+
+  &--tip {
+    background-color: $color-background-label-tip;
+  }
+
+  &--caution {
+    background-color: $color-background-label-caution;
+  }
+
+  &--warning {
+    background-color: $color-background-label-warning;
+  }
+}
