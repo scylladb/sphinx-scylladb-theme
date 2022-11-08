@@ -103,7 +103,10 @@
                 {% endif %}
                 {{ body }}
                 {% if not hide_post_content %}
-                    <div class="post-content">{% include 'content-navigation.html'%}</div>
+                    <div class="post-content">
+                        {% include 'content-navigation.html'%}
+                        {% include 'notice.html'%}
+                    </div>
                 {% endif %}
             </div>
             <div class="sidebar-left {{'hide-for-large' if hide_sidebar}} large-order-1">
