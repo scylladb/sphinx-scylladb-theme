@@ -543,7 +543,7 @@ test = ["tox"]
 
 [[package]]
 name = "sphinx-sitemap"
-version = "2.2.0"
+version = "2.2.1"
 description = "Sitemap generator for Sphinx"
 category = "dev"
 optional = false
@@ -753,7 +753,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "cd4f3a9b861ddb6438145f335fdad921c2e2488a71ba3d5d5eb62d1fd8596d92"
+content-hash = "504d10ea7531746b8c55ab082f7463f392d05162992d3c12a17d463ef1646695"
 
 [metadata.files]
 alabaster = [
@@ -1012,7 +1012,7 @@ sphinx-notfound-page = [
     {file = "sphinx_notfound_page-0.8.3-py2.py3-none-any.whl", hash = "sha256:c4867b345afccef72de71fb410c412540dfbb5c2de0dc06bde70b331b8f30469"},
 ]
 sphinx-sitemap = [
-    {file = "sphinx-sitemap-2.2.0.tar.gz", hash = "sha256:65adda39233cb17c0da10ba1cebaa2df73e271cdb6f8efd5cec8eef3b3cf7737"},
+    {file = "sphinx-sitemap-2.2.1.tar.gz", hash = "sha256:f1f2149c8013b6d68cc48e6b5bd90f088658cd4584c0220224e72ca85d07b92b"},
 ]
 Sphinx-Substitution-Extensions = [
     {file = "Sphinx Substitution Extensions-2022.2.16.tar.gz", hash = "sha256:ff7d05bd00e8b2d7eb8a403b9f317d70411d4e9b6812bf91534a50df22190c75"},
