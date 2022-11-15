@@ -18,4 +18,4 @@ def test_multiversion_regex_builder_one_version():
 
 def test_multiversion_regex_builder_many_version():
     versions = ["1.0", "2.0"]
-    assert multiversion_regex_builder(versions) == r"\b(^1.0$|^2.0$)\b"
+    assert multiversion_regex_builder(versions) == r"\b(1.0|2.0)\b"

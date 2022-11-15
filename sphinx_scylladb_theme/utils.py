@@ -18,5 +18,4 @@ def multiversion_regex_builder(versions):
     elif len(versions) == 1:
         return r"^" + versions[0] + r"$"
     else:
-        versions = [f'^{version}$' for version in versions]
         return r"\b(" + "|".join(versions) + r")\b"
