@@ -17,8 +17,8 @@ Where:
 
 * **style:** Available values are ``default``, ``note``, ``tip``, ``caution``, ``warning``.
 
-Usage
------
+Usage :label-caution:`Beta`
+---------------------------
 
 Default
 .......
