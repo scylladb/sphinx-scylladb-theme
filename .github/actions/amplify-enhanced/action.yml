@@ -1,0 +1,8 @@
+name: "amplify-enhanced-action"
+description: "Powers up AWS Amplify with preview links for every change edited"
+outputs:
+  comment:
+    description: "Amplify comment with links for every change edited"
+runs:
+  using: "node12"
+  main: "index.js"

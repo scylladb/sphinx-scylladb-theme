@@ -21,6 +21,7 @@ In general, there are main components to the markup of any document:
    hero-box
    includes
    images
+   labels
    links
    lists
    panel-box
@@ -45,6 +46,7 @@ In general, there are main components to the markup of any document:
   * :doc:`Hero box <hero-box>`
   * :doc:`Images <images>`
   * :doc:`Includes <includes>`
+  * :doc:`Labels <labels>`
   * :doc:`Links <links>`
   * :doc:`Lists <lists>`
   * :doc:`Panel box <panel-box>`

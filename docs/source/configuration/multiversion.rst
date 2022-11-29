@@ -61,7 +61,8 @@ In this case, you can mark the version as unstable in the ``conf.py`` file.
     BRANCHES = ['master']
     UNSTABLE_VERSIONS = ['master']
 
- By doing so, the warning message that appears at the top of the page will change to:
+
+By doing so, the warning message that appears at the top of the page will change to:
 
 .. image:: images/unstable.png
 

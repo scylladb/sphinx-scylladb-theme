@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.3 - 29 Nov 2022
+
+### Added
+
+- [#661](https://github.com/scylladb/sphinx-scylladb-theme/pull/611): Maintainers can now add custom text after the content. This is useful for projects requiring a license notice on every documentation page.
+
+### Fixed
+
+- [#624](https://github.com/scylladb/sphinx-scylladb-theme/pull/624): Label roles are now hidden on the right sidebar.
+
+## 1.3.2 - 28 Oct 2022
+
+### Added
+
+- [#590](https://github.com/scylladb/sphinx-scylladb-theme/pull/590): Create a new "label" role to differenciate between enterprise and open-source features.
+- [#599](https://github.com/scylladb/sphinx-scylladb-theme/pull/599): Zendesk verification tag.
+
+### Updated
+
+- [#555](https://github.com/scylladb/sphinx-scylladb-theme/pull/555): Now the multiversion extension is mantained on this repository.
+- dependabot: We've updated all the JavaScript and Python dependencies to the latest version.
+
+### Removed
+
+- [#556]: Removed the `_utils/deploy.sh` script. Now the logic to deploy the docs is in the GitHub Actions workflow.
+
 ## 1.3.1 - 19 Aug 2022
 
 ### Added
