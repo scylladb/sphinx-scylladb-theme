@@ -31,7 +31,7 @@ Configuration options for the banner shown at the top of the page.
     - Relative path to icon for the promotional banner.
   * - ``banner_title_text``
     - string
-    - Scylla University Live | Free Virtual Training Event
+    - ScyllaDB University Live | Free Virtual Training Event
     - Leading text shown in the promotional banner.
   * - ``hide_banner``
     - string
@@ -46,7 +46,7 @@ Example:
       'banner_button_text': 'Learn more',
       'banner_button_url': '#',
       'banner_icon_path': '_static/mascots/scylla-opensource.svg',
-      'banner_title_text': 'Scylla University Live | Free Virtual Training Event',
+      'banner_title_text': 'ScyllaDB University Live | Free Virtual Training Event',
       'hide_banner': 'true',
   }
 
@@ -213,7 +213,7 @@ Configuration options for Search Engine Optimization.
     - Description
   * - ``site_description``
     - string
-    - Scylla is an Apache Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
+    - ScyllaDB is an Apache Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
     - Short summary describing the site.
 
 Example:
@@ -221,5 +221,5 @@ Example:
 .. code:: python
 
   html_theme_options = {
-      'site_description': 'Documentation toolchain for Scylla projects.',
+      'site_description': 'Documentation toolchain for ScyllaDB projects.',
   }

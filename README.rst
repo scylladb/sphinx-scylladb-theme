@@ -1,11 +1,11 @@
-===================
-Scylla Sphinx Theme
-===================
+=====================
+ScyllaDB Sphinx Theme
+=====================
 
 .. image:: https://github.com/scylladb/sphinx-scylladb-theme/actions/workflows/docs-pages.yaml/badge.svg
    :target: https://github.com/scylladb/sphinx-scylladb-theme/actions/workflows/docs-pages.yaml
-   
-The documentation toolchain for Scylla projects.
+
+The documentation toolchain for ScyllaDB projects.
 
 .. image:: https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/source/deployment/images/preview.png
 
@@ -14,7 +14,7 @@ Features
 
 **Shared Design**
 
-All Scylla documentation sites share a common look and feel.
+All ScyllaDB documentation sites share a common look and feel.
 
 **Multiversion Support**
 

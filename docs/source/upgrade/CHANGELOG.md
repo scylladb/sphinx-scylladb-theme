@@ -150,7 +150,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#213](https://github.com/scylladb/sphinx-scylladb-theme/pull/213): We've added guides to help Scylla developers to migrate to Scylla Sphinx Theme 1.0 and 1.1.
+- [#213](https://github.com/scylladb/sphinx-scylladb-theme/pull/213): We've added guides to help maintainers to migrate to ScyllaDB Sphinx Theme 1.0 and 1.1.
 - [#236](https://github.com/scylladb/sphinx-scylladb-theme/pull/236): Added documentation to install the toolchain for Windows users.
 
 ### Changed
@@ -213,13 +213,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- [#152](https://github.com/scylladb/sphinx-scylladb-theme/issues/152): Top-bar for Scylla University live.
+- [#152](https://github.com/scylladb/sphinx-scylladb-theme/issues/152): Top-bar for ScyllaDB University live.
 
 ## 0.1.22 - 14 Apr 2021
 
 ### Added
 
-- [#152](https://github.com/scylladb/sphinx-scylladb-theme/issues/152): Top-bar for Scylla University live.
+- [#152](https://github.com/scylladb/sphinx-scylladb-theme/issues/152): Top-bar for ScyllaDB University live.
 - [#146](https://github.com/scylladb/sphinx-scylladb-theme/issues/146): Guidelines for project maintainers.
 - [#110](https://github.com/scylladb/sphinx-scylladb-theme/issues/110): Theme option to override part of the version name in the multiversion dropdown.
 
@@ -253,7 +253,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- [#106](https://github.com/scylladb/sphinx-scylladb-theme/issues/106): Disable Scylla Summit banner (#106).
+- [#106](https://github.com/scylladb/sphinx-scylladb-theme/issues/106): Disable ScyllaDB Summit banner (#106).
 - [#108](https://github.com/scylladb/sphinx-scylladb-theme/issues/108): Documentation of the project moved under docs folder.
 
 ## 0.1.19 - 07 Jan 2021
@@ -274,7 +274,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#84](https://github.com/scylladb/sphinx-scylladb-theme/issues/84): Banner for Scylla Summit.
+- [#84](https://github.com/scylladb/sphinx-scylladb-theme/issues/84): Banner for ScyllaDB Summit.
 - [#95](https://github.com/scylladb/sphinx-scylladb-theme/issues/95): Support for custom domain.
 - [#92](https://github.com/scylladb/sphinx-scylladb-theme/issues/92): Command to preview multiversion build.
 - [#89](https://github.com/scylladb/sphinx-scylladb-theme/issues/89): Rename the latest version URL automatically to stable.
@@ -283,7 +283,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#84](https://github.com/scylladb/sphinx-scylladb-theme/issues/84): Banner for Scylla Summit.
+- [#84](https://github.com/scylladb/sphinx-scylladb-theme/issues/84): Banner for ScyllaDB Summit.
 
 ### Changed
 
