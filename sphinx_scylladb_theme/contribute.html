@@ -8,15 +8,7 @@
         </li>
         {% if theme_hide_edit_this_page_button|lower == 'false'%}
             <li class="contribute__item">
-                {% set branch = theme_default_branch %}
-                {% if current_version %}
-                    {% if current_version.name == rename_latest_version %}
-                        {%set branch = latest_version %}
-                    {% else %}
-                        {% set branch = current_version.name %}
-                    {% endif %}
-                {% endif %}
-                <a href="https://github.com/{{ theme_github_repository }}/edit/{{ branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
+                <a href="https://github.com/{{ theme_github_repository }}/edit/{{ theme_default_branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
                     target="_blank">
                     <i class="icon fa fa-edit" aria-hidden="true"></i>Edit this page
                 </a>
