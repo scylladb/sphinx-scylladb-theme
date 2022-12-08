@@ -1,7 +1,7 @@
 Admonitions
 ===========
 
-At Scylla, we limit the admonitions. Although |rst| will allow for more, use the following:
+At ScyllaDB, we limit the admonitions. Although |rst| will allow for more, use the following:
 
 * Note_
 * Caution_

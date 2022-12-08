@@ -1,6 +1,6 @@
 # sphinx-multiversion
 
-Fork of https://github.com/Holzhaus/sphinx-multiversion for the Scylla Project.
+Fork of https://github.com/Holzhaus/sphinx-multiversion for the ScyllaDB Project.
 
 Sphinx extension for building self-hosted versioned docs.
 

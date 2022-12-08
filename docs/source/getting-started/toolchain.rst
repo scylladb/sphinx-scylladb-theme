@@ -20,11 +20,11 @@ Sphinx comes with directives and extensions, which add additional options for fo
 
 `Learn more <https://www.sphinx-doc.org>`__
 
-Scylla Sphinx Theme
--------------------
+ScyllaDB Sphinx Theme
+---------------------
 
-All Scylla documentation projects share a theme to have a common look and feel.
-In addition, Scylla Sphinx Theme preinstalls a set of custom functionalities to make them available for all projects.
+All ScyllaDB documentation projects share a theme to have a common look and feel.
+In addition, ScyllaDB Sphinx Theme preinstalls a set of custom functionalities to make them available for all projects.
 
 `Learn more <https://github.com/scylladb/sphinx-scylladb-theme>`__
 
@@ -38,7 +38,7 @@ We use the third-party extension ``sphinx-multiversion`` to build docs for diffe
 GitHub
 ------
 
-Hosts the code and docs source files of Scylla's projects.
+Hosts the code and docs source files of ScyllaDB projects.
 
 `Learn more <https://github.com>`__
 
@@ -53,7 +53,6 @@ GitHub Actions
 --------------
 
 Builds and deploys the documentation to GitHub Pages whenever new content is in the GitHub repository default branch.
-All the repositories deploy the documentation automatically except the repository ``scylla-docs``, which is deployed manually.
 
 `Learn more <https://docs.github.com/actions>`__
 

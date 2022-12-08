@@ -53,7 +53,7 @@ Amplify enhanced action deletes the Amplify preview message if no documentation 
 
 ## Sponsors
 
-This project is sponsored by Scylla, The Real-Time Big Data Database.
+This project is sponsored by ScyllaDB, The Real-Time Big Data Database.
 
 ## License
 

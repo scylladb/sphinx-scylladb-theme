@@ -2,7 +2,7 @@
 Contribute to the theme
 =======================
 
-If you are reading this guide because you have decided to contribute to the Scylla Sphinx Theme, thank you!
+If you are reading this guide because you have decided to contribute to the ScyllaDB Sphinx Theme, thank you!
 We appreciate your contribution and hope that this handbook will answer any questions you may have.
 
 Configuring a Python environment
