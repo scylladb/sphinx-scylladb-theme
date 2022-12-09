@@ -14,6 +14,7 @@ from sphinx_scylladb_theme.extensions import (
     navigation,
     panel_box,
     topic_box,
+    validations,
 )
 from sphinx_scylladb_theme.lexers import cql, ditaa
 
@@ -110,5 +111,6 @@ def setup(app):
     multiversion.setup(app)
     panel_box.setup(app)
     topic_box.setup(app)
+    validations.setup(app)
 
     return {"version": version, "parallel_read_safe": True}
