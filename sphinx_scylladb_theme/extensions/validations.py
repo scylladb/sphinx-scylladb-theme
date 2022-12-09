@@ -1,9 +1,10 @@
 from sphinx.util import logging
 
+logger = logging.getLogger(__name__)
+
 
 def raise_warning_if_document_has_underscores(app, docname, source):
     if "_" in docname:
-        logger = logging.getLogger(__name__)
         logger.warning("Document name contains underscores: %s" % docname)
 
 

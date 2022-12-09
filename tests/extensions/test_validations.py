@@ -1,5 +1,6 @@
-from pytest import raises
-from sphinx.errors import SphinxWarning
+from sphinx.util import logging
+
+logger = logging.getLogger(__name__)
 
 from sphinx_scylladb_theme.extensions.validations import (
     raise_warning_if_document_has_underscores,
@@ -7,5 +8,5 @@ from sphinx_scylladb_theme.extensions.validations import (
 
 
 def test_raise_warning_if_document_has_underscores():
-    with raises(SphinxWarning):
-        raise_warning_if_document_has_underscores(None, "file_name.rst", None)
+    raise_warning_if_document_has_underscores(None, "file_name.rst", None)
+    assert logger.warning.called
