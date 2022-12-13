@@ -1,7 +1,7 @@
 Examples
 ========
 
-This documentation covers the markup convention used for Scylla Docs.
+This documentation covers the markup convention used for ScyllaDB Docs.
 
 Our official documentation is written in restructuredText.
 If you are not familiar with restructuredText, refer to `this cheat sheet <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_.

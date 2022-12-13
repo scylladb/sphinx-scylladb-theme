@@ -42,9 +42,9 @@ source_suffix = [".rst", ".md"]
 master_doc = "index"
 
 # General information about the project.
-project = "Scylla Sphinx Theme"
+project = "ScyllaDB Sphinx Theme"
 copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
-author = u"Scylla Project Contributors"
+author = u"ScyllaDB Project Contributors"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

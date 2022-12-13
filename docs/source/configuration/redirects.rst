@@ -2,7 +2,7 @@
 Redirects support
 =================
 
-With Scylla Sphinx Theme, you can define 301 redirects when moving or deleting a document.
+With ScyllaDB Sphinx Theme, you can define 301 redirects when moving or deleting a document.
 
 By doing so, you will avoid broken links in other sites pointing to your documentation.
 

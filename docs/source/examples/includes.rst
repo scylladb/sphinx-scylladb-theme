@@ -5,7 +5,7 @@ An include directive allows you to include the entire contents of one restructur
 This is the easiest way to control content re-use.
 
 When given an absolute path, the directive takes it as relative to the root of the source directory.
-It is Scylla practice to place global include files in the *rst_include* directory.
+It is ScyllaDB practice to place global include files in the *rst_include* directory.
 
 For example, here are some very commonly used include statements:
 

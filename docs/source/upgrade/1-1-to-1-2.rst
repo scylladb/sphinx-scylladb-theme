@@ -1,7 +1,7 @@
 Migrating from 1.1 to 1.2
 =========================
 
-This guide explains how to upgrade the version of the Scylla Sphinx Theme.
+This guide explains how to upgrade the version of the ScyllaDB Sphinx Theme.
 
 How to check your current theme version
 ---------------------------------------

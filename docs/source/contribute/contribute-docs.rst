@@ -1,18 +1,18 @@
-===================================
-Scylla docs contributor’s handbook
-===================================
+====================================
+ScyllaDB docs contributor’s handbook
+====================================
 
-If you are reading this guide because you have decided to contribute to Scylla Documentation, thank you!
+If you are reading this guide because you have decided to contribute to ScyllaDB Documentation, thank you!
 We appreciate your contribution and hope that this handbook will answer any questions you may have.
 
-The purpose of this handbook is to explain how to contribute new content to Scylla Docs either as a new topic or by editing an existing topic.
+The purpose of this handbook is to explain how to contribute new content to ScyllaDB Docs either as a new topic or by editing an existing topic.
 
 If you feel something is missing from this document, do not hesitate to let us know. You can use the Feedback button at the bottom to open an issue.
 
-About Scylla Docs
------------------
+About ScyllaDB Docs
+-------------------
 
-Scylla Docs contains all of the user documentation for installing, maintaining, administering, and developing applications for the Scylla Database.
+ScyllaDB Docs contains all of the user documentation for installing, maintaining, administering, and developing applications for the ScyllaDB Database.
 Each project in the ScyllaDB organization is hosted on GitHub.
 For most of the projects, there is a dedicated ``docs`` folder where all of the documentation for that project is stored.
 All projects have a file called ``README``. Consult the README file for more specific information on any individual project.
@@ -66,7 +66,7 @@ If you are providing both documentation and code, it is recommended to name all 
 Write content
 =============
 
-When writing content for Scylla, we use an informal topic-based writing approach.
+When writing content for ScyllaDB, we use an informal topic-based writing approach.
 There are three kinds of topics:
 
 * Informational --- Gives an overview of the subject
@@ -85,12 +85,10 @@ After the introduction, there should be a numbered list of steps. Use the follow
 * If the procedure includes changing a configuration, the next step should include how to verify that the configuration change was successful.
 * Wherever possible, instructions on how to reverse the action should also be included (not part of the original procedure, but included in a separate procedure.
 
-Scylla Style guide
-..................
+ScyllaDB Style guide
+....................
 
-The Scylla Style guide is being developed. You can view the document `here <https://docs.google.com/document/d/1lyHp1MKdyj0Hh3NprNFvEczA4dFSZIFoukGUvFJb9yE/edit>`_. The style guide outlines the way we write documentation. In short, use this handbook, the style guide, and the templates to write content.
-Documentation templates and cheat sheets
-In the Scylla-docs project we will store templates which can be used in every Scylla Project.
+The ScyllaDB Style guide is being developed. You can view the document `here <https://docs.google.com/document/d/1lyHp1MKdyj0Hh3NprNFvEczA4dFSZIFoukGUvFJb9yE/edit>`_. The style guide outlines the way we write documentation. In short, use this handbook, the style guide, and the templates to write content.
 
 Templates
 .........
@@ -107,7 +105,7 @@ Cheatsheets
 
 If you want to use a cheat sheet for Markdown or restructuredText, here are some which are helpful:
 
-* :doc:`Scylla Cheat Sheet <../examples/index>` - samples of |rst| markup.
+* :doc:`ScyllaDB Cheat Sheet <../examples/index>` - samples of |rst| markup.
 * `restructuredText Cheat Sheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_
 * `GitHub Markdown Cheat Sheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_
 
@@ -132,7 +130,7 @@ Every repository handles PRs differently. Some require you to use a template for
 Make sure to speak with the project’s maintainer before submitting the PR to avoid any misunderstanding or issues.
 
 If you are writing new content it is **highly recommended** to set your PR to a draft state.
-For Documentation PRs, the following guidelines should be applicable to all Scylla projects:
+For Documentation PRs, the following guidelines should be applicable to all ScyllaDB projects:
 
 * Test the instructions against the product. For all tests you must use a clean, new install unless otherwise specified in the issue.
 * Make sure the PR renders with no errors and that make preview does not return any errors.
@@ -145,5 +143,5 @@ If you have any questions about the process, ask the maintainer of the project y
 Scylla-docs Slack Channel
 -------------------------
 
-The `Scylla Users Slack <http://slack.scylladb.com/>`_ has a scylla-docs channel. There you will find the docs team and other enthusiasts about docs.
+The `ScyllaDB Users Slack <http://slack.scylladb.com/>`_ has a scylla-docs channel. There you will find the docs team and other enthusiasts about docs.
 This channel is public.

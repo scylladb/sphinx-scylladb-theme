@@ -31,7 +31,7 @@ Configuration options for the banner shown at the top of the page.
     - Relative path to icon for the promotional banner.
   * - ``banner_title_text``
     - string
-    - Scylla University Live | Free Virtual Training Event
+    - ScyllaDB University Live | Free Virtual Training Event
     - Leading text shown in the promotional banner.
   * - ``hide_banner``
     - string
@@ -46,7 +46,7 @@ Example:
       'banner_button_text': 'Learn more',
       'banner_button_url': '#',
       'banner_icon_path': '_static/mascots/scylla-opensource.svg',
-      'banner_title_text': 'Scylla University Live | Free Virtual Training Event',
+      'banner_title_text': 'ScyllaDB University Live | Free Virtual Training Event',
       'hide_banner': 'true',
   }
 
@@ -67,10 +67,6 @@ Configuration options for version dropdown.
     -  string
     -  branch-
     -  Part of the branch name to skip from the multiversion dropdown.
-  * - ``default_branch``
-    - string
-    - master
-    - Name of the default branch where changes are integrated. Used to display the "You are not reading the most current version of the documentation" warning.
   * - ``hide_version_dropdown``
     -  list of strings
     -  []
@@ -78,7 +74,7 @@ Configuration options for version dropdown.
   * - ``hide_versions_dropdown``
     - string
     - true
-    -  Set tp `true` to remove completely the multiversion dropdown.
+    -  Set to `true` to remove completely the multiversion dropdown.
   * - ``tag_substring_removed``
     -  string
     -  -scylla
@@ -127,10 +123,10 @@ Example:
   }
 
 
-Contribute button options
--------------------------
+Edit on this page button options
+--------------------------------
 
-Configuration options for the Contribute button.
+Configuration options for the Edit on this page button.
 
 .. list-table::
   :widths: 20 20 20 40
@@ -144,6 +140,10 @@ Configuration options for the Contribute button.
     - string
     - docs/source
     - Relative path to conf.py file.
+  * - ``default_branch``
+    - string
+    - master
+    - Name of the default branch where changes are integrated. Used to create the URL for the "Edit on this page" button.
   * - ``github_issues_repository``
     - string
     - scylladb/scylla-doc-issues
@@ -213,7 +213,7 @@ Configuration options for Search Engine Optimization.
     - Description
   * - ``site_description``
     - string
-    - Scylla is an Apache Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
+    - ScyllaDB is an Apache Cassandra-compatible NoSQL data store that can handle 1 million transactions per second on a single server.
     - Short summary describing the site.
 
 Example:
@@ -221,5 +221,5 @@ Example:
 .. code:: python
 
   html_theme_options = {
-      'site_description': 'Documentation toolchain for Scylla projects.',
+      'site_description': 'Documentation toolchain for ScyllaDB projects.',
   }

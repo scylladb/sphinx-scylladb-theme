@@ -7,16 +7,16 @@
 :hide-post-content:
 
 
-.. title:: Scylla Sphinx Theme
+.. title:: ScyllaDB Sphinx Theme
 
 .. hero-box::
   :button_icon: fa fa-github
   :button_url: https://github.com/scylladb/sphinx-scylladb-theme
   :button_text: Source code
-  :title: Welcome to Scylla Sphinx Theme documentation
+  :title: Welcome to ScyllaDB Sphinx Theme documentation
   :image: /_static/img/mascots/scylla-docs.svg
 
-  The documentation toolchain for Scylla projects.
+  The documentation toolchain for ScyllaDB projects.
 
 .. raw:: html
 
@@ -71,7 +71,7 @@
   :class: large-6
   :anchor: Learn more
 
-  Explore example pages and components you can use in Scylla docs.
+  Explore example pages and components you can use in ScyllaDB docs.
 
 .. topic-box::
   :title: Contribute
