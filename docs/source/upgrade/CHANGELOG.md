@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.4 - 13 Dec 2022
+
+### Added
+
+- [#646](https://github.com/scylladb/sphinx-scylladb-theme/pull/646): The footer now adds a link to the community forum.
+- [#651](https://github.com/scylladb/sphinx-scylladb-theme/pull/651): The preference to keep the promotional banner closed now expires after 30 days.
+
+### Updated
+
+- [#643](https://github.com/scylladb/sphinx-scylladb-theme/pull/643): The "Edit this page" now opens default branch instead of the current branch of the docs you are viewing.
+- [#647](https://github.com/scylladb/sphinx-scylladb-theme/pull/647): Change "Scylla" occurrences to "ScyllaDB".
+- [#649](https://github.com/scylladb/sphinx-scylladb-theme/pull/649): Remove the Scylla Cloud app from the header. Now the header only points to the Scylla Cloud docs.
+
 ## 1.3.3 - 29 Nov 2022
 
 ### Added

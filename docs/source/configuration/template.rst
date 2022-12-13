@@ -67,10 +67,6 @@ Configuration options for version dropdown.
     -  string
     -  branch-
     -  Part of the branch name to skip from the multiversion dropdown.
-  * - ``default_branch``
-    - string
-    - master
-    - Name of the default branch where changes are integrated. Used to display the "You are not reading the most current version of the documentation" warning.
   * - ``hide_version_dropdown``
     -  list of strings
     -  []
@@ -78,7 +74,7 @@ Configuration options for version dropdown.
   * - ``hide_versions_dropdown``
     - string
     - true
-    -  Set tp `true` to remove completely the multiversion dropdown.
+    -  Set to `true` to remove completely the multiversion dropdown.
   * - ``tag_substring_removed``
     -  string
     -  -scylla
@@ -127,10 +123,10 @@ Example:
   }
 
 
-Contribute button options
--------------------------
+Edit on this page button options
+--------------------------------
 
-Configuration options for the Contribute button.
+Configuration options for the Edit on this page button.
 
 .. list-table::
   :widths: 20 20 20 40
@@ -144,6 +140,10 @@ Configuration options for the Contribute button.
     - string
     - docs/source
     - Relative path to conf.py file.
+  * - ``default_branch``
+    - string
+    - master
+    - Name of the default branch where changes are integrated. Used to create the URL for the "Edit on this page" button.
   * - ``github_issues_repository``
     - string
     - scylladb/scylla-doc-issues
