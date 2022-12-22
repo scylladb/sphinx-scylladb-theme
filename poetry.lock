@@ -18,7 +18,7 @@ python-versions = ">=3.5"
 dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy (>=0.900,!=0.940)", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "sphinx", "sphinx-notfound-page", "zope.interface"]
 docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
+tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "Babel"
@@ -71,7 +71,7 @@ optional = false
 python-versions = ">=3.6.0"
 
 [package.extras]
-unicode_backport = ["unicodedata2"]
+unicode-backport = ["unicodedata2"]
 
 [[package]]
 name = "click"
@@ -384,7 +384,7 @@ urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "setuptools"
@@ -498,7 +498,7 @@ python-versions = ">=3.7"
 sphinx = ">=1.8"
 
 [package.extras]
-code_style = ["pre-commit (==2.12.1)"]
+code-style = ["pre-commit (==2.12.1)"]
 rtd = ["ipython", "myst-nb", "sphinx", "sphinx-book-theme", "sphinx-examples"]
 
 [[package]]
@@ -529,14 +529,13 @@ test = ["tox"]
 
 [[package]]
 name = "sphinx-sitemap"
-version = "2.2.1"
+version = "2.3.0"
 description = "Sitemap generator for Sphinx"
 category = "dev"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-six = "*"
 sphinx = ">=1.2"
 
 [[package]]
@@ -570,7 +569,7 @@ pygments = "*"
 sphinx = ">=2,<6"
 
 [package.extras]
-code_style = ["pre-commit (==2.13.0)"]
+code-style = ["pre-commit (==2.13.0)"]
 testing = ["bs4", "coverage", "pygments", "pytest (>=7.1,<8)", "pytest-cov", "pytest-regressions", "rinohtype", "sphinx-testing"]
 
 [[package]]
@@ -739,7 +738,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "1c460ae51dca62a29d6b8d320106b04538d26abf36be680387a0d146269a739f"
+content-hash = "93671b875a6683feef85035d39dce604c8c8d682c764dfaf8e1ac93d53ba2d67"
 
 [metadata.files]
 alabaster = [
@@ -823,6 +822,7 @@ Jinja2 = [
     {file = "Jinja2-3.0.3.tar.gz", hash = "sha256:611bb273cd68f3b993fabdc4064fc858c5b47a973cb5aa7999ec1ba405c87cd7"},
 ]
 livereload = [
+    {file = "livereload-2.6.3-py2.py3-none-any.whl", hash = "sha256:ad4ac6f53b2d62bb6ce1a5e6e96f1f00976a32348afedcb4b6d68df2a1d346e4"},
     {file = "livereload-2.6.3.tar.gz", hash = "sha256:776f2f865e59fde56490a56bcc6773b6917366bce0c267c60ee8aaf1a0959869"},
 ]
 MarkupSafe = [
@@ -994,7 +994,8 @@ sphinx-notfound-page = [
     {file = "sphinx_notfound_page-0.8.3-py2.py3-none-any.whl", hash = "sha256:c4867b345afccef72de71fb410c412540dfbb5c2de0dc06bde70b331b8f30469"},
 ]
 sphinx-sitemap = [
-    {file = "sphinx-sitemap-2.2.1.tar.gz", hash = "sha256:f1f2149c8013b6d68cc48e6b5bd90f088658cd4584c0220224e72ca85d07b92b"},
+    {file = "sphinx-sitemap-2.3.0.tar.gz", hash = "sha256:7b27b5d9f6ebf75597da7d48c64dcb9271fa269925673d900ee27d6b2c484915"},
+    {file = "sphinx_sitemap-2.3.0-py3-none-any.whl", hash = "sha256:8211ae28413ee529814bd56762873a5e1878fff0f254a7488da762984bdf658c"},
 ]
 Sphinx-Substitution-Extensions = [
     {file = "Sphinx Substitution Extensions-2022.2.16.tar.gz", hash = "sha256:ff7d05bd00e8b2d7eb8a403b9f317d70411d4e9b6812bf91534a50df22190c75"},
