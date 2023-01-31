@@ -782,17 +782,17 @@ test = ["tox"]
 
 [[package]]
 name = "sphinx-sitemap"
-version = "2.2.1"
+version = "2.5.0"
 description = "Sitemap generator for Sphinx"
 category = "dev"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sphinx-sitemap-2.2.1.tar.gz", hash = "sha256:f1f2149c8013b6d68cc48e6b5bd90f088658cd4584c0220224e72ca85d07b92b"},
+    {file = "sphinx-sitemap-2.5.0.tar.gz", hash = "sha256:95101f622d0d594161720cbe92a39d353efae9382f7f3563f06d150b1146fef6"},
+    {file = "sphinx_sitemap-2.5.0-py3-none-any.whl", hash = "sha256:98a7e3bb25acb467037b56f3585fc38d53d5a274542b1497393a66f71b79b125"},
 ]
 
 [package.dependencies]
-six = "*"
 sphinx = ">=1.2"
 
 [[package]]
@@ -1056,4 +1056,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "cbbe34330613743795710e8ca8a84336b2f099de1822636f4aa2bd08308d7f3b"
+content-hash = "75f1e7edb957ddcb1735012cd1ad089fca11f6a016664afa7166eb440ab99d1b"
