@@ -42,6 +42,10 @@ smv_latest_version = 'x.y.z'         # Use the branch/tag name
 smv_rename_latest_version = 'latest' # Use the commit hash
 ```
 
+### Add support for custom tags
+
+See https://github.com/dgarcia360/sphinx-multiversion/pull/4.
+
 ## Maintenance
 
 This fork will be maintained until the following issues are solved:
