@@ -17,6 +17,7 @@ import tempfile
 
 from sphinx import config as sphinx_config
 from sphinx import project as sphinx_project
+from sphinx.util import tags as sphinx_tags
 
 from . import git, sphinx
 
@@ -37,6 +38,7 @@ def load_sphinx_config_worker(q, confpath, confoverrides, add_defaults):
             current_config = sphinx_config.Config.read(
                 confpath,
                 confoverrides,
+                sphinx_tags.Tags()
             )
 
         if add_defaults:
