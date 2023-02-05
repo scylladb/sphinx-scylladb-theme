@@ -90,10 +90,6 @@
 .. raw:: html
 
   </div>
-
-.. only:: theme
-
-  Test only directive with multiversion
   
 .. toctree::
   :hidden:
