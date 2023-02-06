@@ -10,6 +10,7 @@ from distutils.version import LooseVersion
 from sphinx import config as sphinx_config
 from sphinx.locale import _
 from sphinx.util import i18n as sphinx_i18n
+from sphinx.util import tags as sphinx_tags
 
 logger = logging.getLogger(__name__)
 
@@ -174,7 +175,7 @@ def config_inited(app, config):
     app.connect("html-page-context", html_page_context)
 
     # Restore config values
-    old_config = sphinx_config.Config.read(data["confdir"])
+    old_config = sphinx_config.Config.read(data["confdir"], tags=sphinx_tags.Tags())
     old_config.pre_init_values()
     old_config.init_values()
     config.version = data["version"]
