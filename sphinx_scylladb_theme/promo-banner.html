@@ -1,4 +1,4 @@
-<section class="promo-banner">
+<section class="promo-banner {{'promo-banner--hide' if not theme_hide_banner}} {{'promo-banner--hide' if theme_hide_banner|lower == 'true'}}" style="display: none;">
     <div class="promo-banner-wrapper">
         {% if theme_banner_icon_path %}
             <div class="promo-banner__icon">

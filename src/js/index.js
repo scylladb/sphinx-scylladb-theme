@@ -12,7 +12,7 @@ import {
   openExternalLinksNewBrowserTab,
 } from "./body";
 import { onScrollHighlightSecondarySidebar } from "./sidebar";
-import { hideBanner, onCloseBanner, onResizeBanner } from "./promo-banner";
+import { initBanner, onCloseBanner, onResizeBanner } from "./promo-banner";
 import {
   loadCollapsibleNavigation,
   onClickCollapsibleNavigationButton,
@@ -26,7 +26,7 @@ $(document).ready(function () {
   createResponsiveTables();
   openExternalLinksNewBrowserTab();
   /* Banner */
-  hideBanner();
+  initBanner();
   onCloseBanner();
   onResizeBanner();
   /* Collapsible navigation */

@@ -101,7 +101,6 @@ html_theme_path = ["../.."]
 html_theme_options = {
     "conf_py_path": "docs/source/",
     "hide_edit_this_page_button": "false",
-    "hide_banner": "true",
     "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",

@@ -4,6 +4,33 @@ Template options
 
 The following options can be defined in the file ``conf.py`` per project, using ``html_theme_options`` setting.
 
+General options
+---------------
+
+General configuration options.
+
+.. list-table::
+  :widths: 20 20 20 40
+  :header-rows: 1
+
+  * - Option
+    - Type
+    - Default Value
+    - Description
+  * - ``scylladb_scripts``
+    - string
+    - true
+    - Set to ``true`` to load ScyllaDB JS specific scripts, including Google Tag Manager, Expertrec, and Zendesk configuration.
+
+Example:
+
+.. code:: python
+
+  html_theme_options = {
+      'scylladb_scripts': 'true',
+  }
+
+
 Banner options
 --------------
 
