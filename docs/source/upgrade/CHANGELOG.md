@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.5 - 24 Feb 2023
+
+### Updated
+
+- [#694](https://github.com/scylladb/sphinx-scylladb-theme/pull/694): The sidebar highlights the current project you are viewing.
+- [#694](https://github.com/scylladb/sphinx-scylladb-theme/pull/694): The breadcrumbs now add a link to the root site docs.scylladb.com.
+- [#694](https://github.com/scylladb/sphinx-scylladb-theme/pull/694): The navigation bar links to the new enteprise docs site.
+
 ## 1.3.4 - 13 Dec 2022
 
 ### Added
