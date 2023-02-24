@@ -74,6 +74,12 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width:400px) {
+  .footer-links {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (min-width: $large) {
   .footer {
     padding: 30px 0;

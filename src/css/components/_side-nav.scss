@@ -13,6 +13,11 @@
   width: 100%;
   z-index: 100;
 
+  &__title {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
   &__content {
     overflow-wrap: break-word;
     max-width: 90%;
@@ -199,10 +204,6 @@
 
     &__versions {
       max-width: 100%;
-
-      &:empty {
-        padding-top: 30px;
-      }
     }
   }
 
