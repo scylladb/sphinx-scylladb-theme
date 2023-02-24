@@ -60,6 +60,31 @@ export const initBanner = () => {
   }
 };
 
+export const onChangeMetaBanner = () => {
+  // Select the target node
+  var targetNode = document;
+
+  // Create an observer instance
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList') {
+        for (const addedNode of mutation.addedNodes) {
+          if (addedNode.nodeName === 'META' && addedNode.name === 'scylladb-docs-hide_banner') {
+            initBanner();
+            observer.disconnect();
+          }
+        }
+      }
+    });    
+  });
+
+  // Configuration of the observer
+  const config = { childList: true, subtree: true };
+
+  // Start observing the target node for configured mutations
+  observer.observe(targetNode, config);
+}
+
 export const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
     setItemWithExpiry(localStorageKey, "1", 30);

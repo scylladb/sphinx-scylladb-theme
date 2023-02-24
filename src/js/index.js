@@ -12,7 +12,7 @@ import {
   openExternalLinksNewBrowserTab,
 } from "./body";
 import { onScrollHighlightSecondarySidebar } from "./sidebar";
-import { initBanner, onCloseBanner, onResizeBanner } from "./promo-banner";
+import { initBanner, onChangeMetaBanner, onCloseBanner, onResizeBanner } from "./promo-banner";
 import {
   loadCollapsibleNavigation,
   onClickCollapsibleNavigationButton,
@@ -27,6 +27,7 @@ $(document).ready(function () {
   openExternalLinksNewBrowserTab();
   /* Banner */
   initBanner();
+  onChangeMetaBanner();
   onCloseBanner();
   onResizeBanner();
   /* Collapsible navigation */
