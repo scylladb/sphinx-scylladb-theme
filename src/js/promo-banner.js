@@ -25,19 +25,65 @@ function getItemWithExpiry(key) {
   return item.value;
 }
 
-export const hideBanner = () => {
+export const initBanner = () => {
   const promoBanner = $(".promo-banner");
   const promoBannerHeight = promoBanner.outerHeight();
-  if (promoBanner.length && !getItemWithExpiry(localStorageKey)) {
+  let showBanner = false;
+
+  const hideBanner = $('meta[name="scylladb-docs-hide_banner"]').attr('content');
+  if(hideBanner && hideBanner === "false") {
+    // The banner is enabled via the site metadata (e.g. Google Tag Manager)
+    const bannerTitleText = $('meta[name="scylladb-docs-banner_title_text"]').attr('content');
+    const bannerButtonText = $('meta[name="scylladb-docs-banner_button_text"]').attr('content');
+    const bannerButtonUrl= $('meta[name="scylladb-docs-banner_button_url"]').attr('content');
+    $(".promo-banner__title").text(bannerTitleText);
+    $(".promo-banner__button").attr("href", bannerButtonUrl);
+    $(".promo-banner__button").text(bannerButtonText);
+    showBanner = true;
+  }
+  else if (!promoBanner.hasClass("promo-banner--hide")) {
+    // The banner is enabled via conf.py and not hidden
+    showBanner = true;
+  }
+
+  // The banner should be shown, but the user has already closed it
+  if(showBanner && getItemWithExpiry(localStorageKey)) {
+    showBanner = false;
+  }
+
+  if(showBanner) {
     promoBanner.show();
     $("body").css("margin-top", promoBannerHeight);
     $(".side-nav").css("margin-top", promoBannerHeight);
     $(".secondary-side-nav").css("margin-top", promoBannerHeight);
     $(".layout").addClass("layout--has-banner");
-  } else {
-    promoBanner.hide();
   }
 };
+
+export const onChangeMetaBanner = () => {
+  // Select the target node
+  var targetNode = document;
+
+  // Create an observer instance
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList') {
+        for (const addedNode of mutation.addedNodes) {
+          if (addedNode.nodeName === 'META' && addedNode.name === 'scylladb-docs-hide_banner') {
+            initBanner();
+            observer.disconnect();
+          }
+        }
+      }
+    });    
+  });
+
+  // Configuration of the observer
+  const config = { childList: true, subtree: true };
+
+  // Start observing the target node for configured mutations
+  observer.observe(targetNode, config);
+}
 
 export const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {

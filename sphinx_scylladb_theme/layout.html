@@ -78,7 +78,9 @@
         {% endblock %}
         {% block scripts %}
             {{ script() }}
-            {% include 'custom-scripts.html' %}
+            {% if theme_scylladb_scripts|lower == 'true' %}
+                {% include 'custom-scripts.html' %}
+            {% endif %}
         {% endblock %}
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
@@ -86,9 +88,7 @@
     </head>
 
     <body>
-        {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %}
-            {% include 'promo-banner.html' %}
-        {% endif %}
+        {% include 'promo-banner.html' %}
         {% include 'header.html'%}
         <section
             class="layout {{'layout--full-width' if full_width}} {{'layout--sidebar' if not hide_sidebar}} {{'layout--has-secondary-sidebar' if not hide_secondary_sidebar}} {{'landing landing--floating' if landing}}">
