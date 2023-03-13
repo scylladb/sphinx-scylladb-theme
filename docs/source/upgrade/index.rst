@@ -5,6 +5,7 @@ Upgrade guides
    :maxdepth: 2
    :hidden:
 
+   1-3-to-1-4
    1-2-to-1-3
    1-1-to-1-2
    1-0-to-1-1
@@ -13,6 +14,7 @@ Upgrade guides
 
 .. panel-box::
 
+  * :doc:`Migrating from 1.3 to 1.4 <1-3-to-1-4>`
   * :doc:`Migrating from 1.2 to 1.3 <1-2-to-1-3>`
   * :doc:`Migrating from 1.1 to 1.2 <1-1-to-1-2>`
   * :doc:`Migrating from 1.0 to 1.1 <1-0-to-1-1>`
