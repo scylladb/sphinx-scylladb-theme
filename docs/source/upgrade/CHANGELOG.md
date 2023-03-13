@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.4.1 - 13 March 2023
+
+**IMPORTANT**: For more information on how to update, see [Migrating from 1.3 to 1.4](https://sphinx-theme.scylladb.com/stable/upgrade/1-3-to-1-4.html).
+
+### Added
+
+- [#652](https://github.com/scylladb/sphinx-scylladb-theme/pull/652): The docs builds now raises a warning if a RST or MD file has underscores in the filename. 
+- [#696](https://github.com/scylladb/sphinx-scylladb-theme/pull/696): The announcement banner can be managed from Google Tag Manager.
+
+### Fixed
+
+- [#720](https://github.com/scylladb/sphinx-scylladb-theme/pull/720): In 1.3.5, we introduced a bug that caused some breadcrumbs to not have a link. This is now fixed.
+
 ## 1.3.5 - 24 Feb 2023
 
 ### Updated
@@ -53,6 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#556]: Removed the `_utils/deploy.sh` script. Now the logic to deploy the docs is in the GitHub Actions workflow.
 
 ## 1.3.1 - 19 Aug 2022
+
+**IMPORTANT**: For more information on how to update, see [Migrating from 1.2 to 1.3](https://sphinx-theme.scylladb.com/stable/upgrade/1-2-to-1-3.html).
 
 ### Added
 
