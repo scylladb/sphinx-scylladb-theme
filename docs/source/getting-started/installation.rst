@@ -31,7 +31,7 @@ Step 1: Download the sample project
 
    .. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to ``docs/source`` directory.
 
-#. Create the file ``docs/pyproject.toml`` under the new ``docs`` folder. Copy the contents from the `pyproject.toml template <docs/_utils/pyproject_template.toml>`_.
+#. Create the file ``docs/pyproject.toml`` under the new ``docs`` folder. Copy the contents from the `pyproject.toml template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/_utils/pyproject_template.toml>`_.
 
 Step 2: Configure the theme
 ---------------------------
