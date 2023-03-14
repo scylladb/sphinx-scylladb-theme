@@ -23,6 +23,16 @@ Here are the main breaking changes between the 1.3 and 1.4 versions.
 
         sphinx-scylladb-theme = "~1.4.1"
 
+#. Edit the ``docs/Makefile`` file and add the ``rm -f poetry.lock`` to the ``clean`` command:
+
+    .. code-block::
+        
+        # Clean commands
+        .PHONY: clean
+        clean:
+            rm -rf $(BUILDDIR)/*
+            rm -f poetry.lock
+
 #. Build the docs locally:
 
     .. code-block::
