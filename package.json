@@ -25,7 +25,7 @@
     "eslint-webpack-plugin": "^4.0.0",
     "foundation-sites": "^6.7.5",
     "jquery": "^3.6.4",
-    "mini-css-extract-plugin": "^2.7.3",
+    "mini-css-extract-plugin": "^2.7.5",
     "postcss-loader": "^7.1.0",
     "postcss-preset-env": "^8.0.1",
     "sass": "^1.60.0",
