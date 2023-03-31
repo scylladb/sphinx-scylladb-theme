@@ -107,7 +107,6 @@ html_theme_options = {
     "hide_version_dropdown": ["master"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
-    "skip_warnings": 'document_has_underscores'
 }
 
 # Last updated format
