@@ -124,15 +124,9 @@ html_baseurl = "https://sphinx-theme.scylladb.com"
 # Dictionary of values to pass into the template engine’s context for all pages
 html_context = {"html_baseurl": html_baseurl}
 
-
 # -- Initialize Sphinx ----------------------------------------------
-def builder_inited(app):
-    # Add custom flags
-    for flag in FLAGS:
-        app.tags.add(flag)
 
 def setup(sphinx):
-    sphinx.connect('builder-inited', builder_inited)
     warnings.filterwarnings(
         action="ignore",
         category=UserWarning,
