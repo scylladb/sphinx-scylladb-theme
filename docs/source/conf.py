@@ -70,7 +70,7 @@ notfound_urls_prefix = ""
 
 # -- Options for sitemap extension ---------------------------------------
 
-sitemap_url_scheme = "stable/{link}"
+sitemap_url_scheme = "/stable/{link}"
 
 # -- Options for multiversion extension ----------------------------------
 
