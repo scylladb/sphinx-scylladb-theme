@@ -1,0 +1,29 @@
+.feedback-container {
+    text-align: left;
+    font-size: $font-small;
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &__button {
+        cursor: pointer;
+        margin: 4px;
+        padding: 8px;
+        @include floating;
+
+        &.active {
+            border: 1px solid $color-border-feedback-button;
+        }
+    }
+    
+    &__icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    &__message {
+        margin-top: 10px;
+        font-size:  $font-small;
+    }
+}

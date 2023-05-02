@@ -104,6 +104,7 @@
                 {{ body }}
                 {% if not hide_post_content %}
                     <div class="post-content">
+                        {% include 'feedback.html'%}
                         {% include 'content-navigation.html'%}
                         {% include 'notice.html'%}
                     </div>
