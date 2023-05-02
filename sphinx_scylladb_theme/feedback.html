@@ -1,3 +1,4 @@
+{% if theme_hide_feedback_buttons|lower == 'false' %}
 <div class="feedback-container">
     <p class="feedback-container__title">Did this doc help you?</p>
     <span data-tooltip tabindex="1" title="Yes" data-position="top">
@@ -58,3 +59,4 @@
         negativeFeedbackButton.classList.add('active');
     });
 </script>
+{% endif %}
