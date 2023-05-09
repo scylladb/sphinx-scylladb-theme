@@ -1,9 +1,11 @@
 .feedback-container {
     text-align: left;
-    font-size: $font-small;
+    font-size: $font-base;
+    margin-top: 40px;
 
     &__title {
         font-weight: bold;
+        margin-bottom: 5px !important;
     }
 
     &__button {
@@ -24,6 +26,6 @@
 
     &__message {
         margin-top: 10px;
-        font-size:  $font-small;
+        font-size:  $font-base;
     }
 }
