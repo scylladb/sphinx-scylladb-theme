@@ -8,7 +8,7 @@
     </span>
     <span data-tooltip tabindex="1" title="No" data-position="top">
         <button class="feedback-container__button" id="negative-feedback">
-            <i class="feedback-container__icon scylla-icon scylla-icon--thumbs-down" id="positive-feedback"></i>
+            <i class="feedback-container__icon scylla-icon scylla-icon--thumbs-down"></i>
         </button>
     </span>
     <div class="feedback-container__message" id="feedback-message"></div>
@@ -33,13 +33,9 @@
     }
 
     function sendGaEvent(liked) {
-        const url = window.location.href;      
-        // Send the event to Google Analytics
-        gtag('event', 'click', {
-          'event_category': 'Button',
-          'event_label': "feedback_" + url,
-          'value': liked ? "like" : "dislike"
-        });
+        const event_label = liked ? "positive" : "negative";
+        const event = "feedback_" + event_label;  
+        gtag('event', event, {});
     }
 
     const positiveFeebackButton = document.getElementById('positive-feedback');
