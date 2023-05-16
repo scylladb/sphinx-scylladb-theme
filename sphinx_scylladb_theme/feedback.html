@@ -35,7 +35,10 @@
     function sendGaEvent(liked) {
         const event_label = liked ? "positive" : "negative";
         const event = "feedback_" + event_label;  
-        gtag('event', event, {});
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': event,
+        });
     }
 
     const positiveFeebackButton = document.getElementById('positive-feedback');
