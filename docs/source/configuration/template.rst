@@ -254,3 +254,27 @@ Example:
   html_theme_options = {
       'site_description': 'Documentation toolchain for ScyllaDB projects.',
   }
+
+Feedback buttons options
+------------------------
+
+Configuration options for the like and dislike buttons shown at the bottom of the page.
+
+.. list-table::
+  :widths: 20 20 20 40
+  :header-rows: 1
+
+  * - Option
+    - Type
+    - Default Value
+    - Description
+  * - ``hide_feedback_buttons``
+    - string
+    - true
+    - Set to `true` to display the like and dislike buttons at the bottom of the page.
+
+.. code:: python
+
+  html_theme_options = {
+      'hide_feedback_buttons': 'true',
+  }

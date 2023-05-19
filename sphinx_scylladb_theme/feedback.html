@@ -1,0 +1,61 @@
+{% if theme_hide_feedback_buttons|lower == 'false' %}
+<div class="feedback-container">
+    <p class="feedback-container__title">Was this page helpful?</p>
+    <span data-tooltip tabindex="1" title="Yes" data-position="top">
+        <button class="feedback-container__button" id="feedback-positive">
+            <i class="feedback-container__icon scylla-icon scylla-icon--thumbs-up"></i>
+        </button>
+    </span>
+    <span data-tooltip tabindex="1" title="No" data-position="top">
+        <button class="feedback-container__button" id="feedback-negative">
+            <i class="feedback-container__icon scylla-icon scylla-icon--thumbs-down"></i>
+        </button>
+    </span>
+    <div class="feedback-container__message" id="feedback-message"></div>
+</div>
+
+<script>
+    function resetFeedbackButtonActive() {
+        const feedbackButtons = document.getElementsByClassName('feedback-container__button');
+        for (let i = 0; i < feedbackButtons.length; i++) {
+            feedbackButtons[i].classList.remove('active');
+        }   
+    }
+
+    function showMessage(liked) {
+        const feedbackMessage = document.getElementById('feedback-message');
+        const themeGithubRepository = {% if theme_github_repository %}true{% else %}false{% endif %};
+        let message = 'Great! Thanks for your feedback.';
+        if (themeGithubRepository && !liked) {
+            message = "Thanks for your feedback! Please don't hesitate to <a href='https://github.com/{{ theme_github_issues_repository}}/issues/new?title=docs:%20Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation'>create an issue</a> if you have any suggestions on how we can improve.";
+        }
+        feedbackMessage.innerHTML = message;
+    }
+
+    function sendGaEvent(liked) {
+        const event_label = liked ? "positive" : "negative";
+        const event = "feedback_" + event_label;  
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': event,
+        });
+    }
+
+    const positiveFeebackButton = document.getElementById('feedback-positive');
+    const negativeFeedbackButton = document.getElementById('feedback-negative');
+
+    positiveFeebackButton.addEventListener('click', function() {
+        resetFeedbackButtonActive();
+        sendGaEvent(true);
+        showMessage(true);
+        positiveFeebackButton.classList.add('active');
+    });
+
+    negativeFeedbackButton.addEventListener('click', function() {
+        resetFeedbackButtonActive();
+        sendGaEvent(false);
+        showMessage(false);
+        negativeFeedbackButton.classList.add('active');
+    });
+</script>
+{% endif %}
