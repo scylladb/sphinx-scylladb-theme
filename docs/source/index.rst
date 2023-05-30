@@ -31,7 +31,7 @@
 .. topic-box::
   :title: Getting started
   :link: getting-started
-  :icon: scylla-icon scylla-icon--getting-started
+  :icon: scylla-icon scylla-icon--about-us-m
   :class: large-6
   :anchor: Learn more
 
@@ -40,7 +40,7 @@
 .. topic-box::
   :title: Configuration
   :link: configuration
-  :icon: scylla-icon scylla-icon--integrations
+  :icon: scylla-icon scylla-icon--enterprise-m
   :class: large-6
   :anchor: Learn more
 
@@ -49,7 +49,7 @@
 .. topic-box::
   :title: Commands
   :link: commands
-  :icon: scylla-icon scylla-icon--apps
+  :icon: scylla-icon scylla-icon--cloud
   :class: large-6
   :anchor: Learn more
 
