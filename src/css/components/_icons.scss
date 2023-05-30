@@ -5,10 +5,6 @@
   background-size: contain;
   filter: brightness(0);
 
-  &--apps {
-    background-image: url("../img/icons/icon-apps.svg");
-  }
-
   &--about-team {
     background-image: url("../img/icons/icon-about-team.svg");
   }
@@ -16,6 +12,15 @@
   &--about-us {
     background-image: url("../img/icons/icon-about-us.svg");
   }
+
+  &--alternator {
+    background-image: url("../img/icons/icon-alternator.svg");
+  }
+
+  &--apps {
+    background-image: url("../img/icons/icon-apps.svg");
+  }
+
 
   &--architecture {
     background-image: url("../img/icons/icon-architecture.svg");
@@ -79,6 +84,10 @@
 
   &--enterprise {
     background-image: url("../img/icons/icon-enterprise.svg");
+  }
+
+  &--enterprise-m {
+    background-image: url("../img/icons/icon-enterprise-m.svg");
   }
 
   &--events {
@@ -168,6 +177,10 @@
 
   &--open-source {
     background-image: url("../img/icons/icon-open-source.svg");
+  }
+
+  &--open-source-m {
+    background-image: url("../img/icons/icon-open-source-m.svg");
   }
 
   &--operator {
