@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.5.1 - 31 May 2023
+
+### Added
+
+- [#781](https://github.com/scylladb/sphinx-scylladb-theme/pull/781): The footer now includes an option to like or dislike the current page.
+- [#803](https://github.com/scylladb/sphinx-scylladb-theme/pull/803): Promote the use of MyST parser instead of recommonmark for new projects.
+- [#764](https://github.com/scylladb/sphinx-scylladb-theme/pull/764): The footer now links to ScyllaDB University.
+
+### Updated
+
+- [#802](https://github.com/scylladb/sphinx-scylladb-theme/pull/802): Upgraded certain icons to a higher resolution.
+- [#803](https://github.com/scylladb/sphinx-scylladb-theme/pull/803): The deployment process documentation was updated to use GitHub Actions.
+
+### Fixed
+
+- [#775](https://github.com/scylladb/sphinx-scylladb-theme/pull/775): The sitemap links were not working properly.
+
 ## 1.4.3 - 04 April 2023
 
 ### Added
@@ -13,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Updated
 
-- Add specific Google Tag Manager ID for the Scylla Cloud docs.
+- Add specific Google Tag Manager ID for the Scylla docs.
 
 ## 1.4.1 - 13 March 2023
 
