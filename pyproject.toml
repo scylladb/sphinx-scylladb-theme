@@ -26,7 +26,7 @@ setuptools = "^68.0.0"
 sphinx-multiversion-scylla = "^0.2.18"
 sphinx-sitemap = "^2.5.0"
 redirects_cli ="^0.1.3"
-importlib-metadata = "^6.6.0"
+importlib-metadata = "^6.7.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
