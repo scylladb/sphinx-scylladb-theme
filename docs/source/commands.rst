@@ -7,9 +7,15 @@ Use the command-line interface to run the following commands.
 Prerequisites
 -------------
 
-To run the following commands, you will need to have installed **Python +3.7** and **PIP** on your local environment.
+To run the following commands, you will need to have installed:
 
-.. tip:: If you are on Windows, see :ref:`How to use the toolchain in Windows <Windows_Installation>`.
+- A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
+- `Python 3.7 <https://www.python.org/downloads/>`_ or later.
+- `Poetry #.12 <https://python-poetry.org/docs/master/>`_ or later.
+- `Make <https://www.gnu.org/software/make/>`_.
+- `Git <https://git-scm.com/>`_.
+
+.. _Make_Preview:
 
 Preview current branch
 ----------------------
@@ -18,28 +24,28 @@ The preview command builds a local instance of the docs site so you can view the
 
 To preview the docs:
 
-1. Build the docs.
+#. Build the docs.
 
-.. code:: console
+    .. code:: console
 
-    cd docs
-    make preview
+        cd docs
+        make preview
 
-2. Open http://127.0.0.1:5500/ with your preferred browser.
+#. Open http://127.0.0.1:5500/ with your preferred browser.
 
 .. tip:: You can pass custom options to increase or decrease verbosity. For a list with all the available options, refer to the `Sphinx documentation <https://www.sphinx-doc.org/en/master/man/sphinx-build.html>`_.
 
 To increase verbosity, use the option ``-v``:
 
-.. code:: console
+    .. code:: console
 
-    make preview SPHINXOPTS=-v
+        make preview SPHINXOPTS=-v
 
 To decrease verbosity, use the option ``-Q``:
 
-.. code:: console
+    .. code:: console
 
-    make preview SPHINXOPTS=-Q
+        make preview SPHINXOPTS=-Q
 
 
 Preview multiversion
@@ -47,35 +53,31 @@ Preview multiversion
 
 The multiversionpreview command generates a local instance of the docs site with all :doc:`specified versions <../configuration/multiversion>` available for navigation.
 You can view the rendering in a sandbox environment on your local browser.
+
 To preview multiple versions:
 
-1. Build the docs.
+#. Build the docs.
 
-.. code:: console
+    .. code:: console
 
-    cd docs
-    make multiversionpreview
+        cd docs
+        make multiversionpreview
 
-2. Open http://0.0.0.0:5500/ with your preferred browser.
+#. Open http://0.0.0.0:5500/ with your preferred browser.
 
+For further guidance on using the `multiversionpreview command`, see :doc:`Multiversion configuration <../configuration/multiversion>`.
 
 Build HTML for multiple versions
 --------------------------------
 
 .. note:: The command ``make multiversion`` is aimed to be used by GitHub Actions CI. While documenting new features, it is not advised to run ``make multiversion``, but ``make preview`` instead.
 
-To generate multiple versions of the documentation:
-
-1. Build the docs.
-
 .. code:: console
 
     cd docs
     make multiversion
 
-2. The previous command should generate HTML docs under the ``docs/_build/dirhtml`` directory.
-
-.. tip:: If the command raises an error, see :ref:`Troubleshooting <No_Matching_Refs_Found>` for help.
+The previous command generates HTML docs under the ``docs/_build/dirhtml`` directory.
 
 Clean all builds
 ----------------

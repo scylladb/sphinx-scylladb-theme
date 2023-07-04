@@ -11,7 +11,6 @@ Configuration
    markdown
    redirects
    search
-   troubleshooting
 
 .. panel-box::
   :title: Overview
@@ -24,4 +23,3 @@ Configuration
   * :doc:`Markdown support <markdown>` - Extension to write documentation with Markdown.
   * :doc:`Redirects support <redirects>` - Extension to create redirects.
   * :doc:`Search support <search>` - Service to index content that is searchable across all sites.
-  * :doc:`Troubleshooting <multiversion>` - Help to resolve common issues.
