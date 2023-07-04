@@ -128,7 +128,7 @@ To preview production builds locally:
         git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
         git fetch --all
 
-    .. note:: If the repository is a personal fork, you need to synchronize all branches listed in the `conf.py` file with the upstream repository first. For more information, see `Sync Fork <https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_.
+    .. note:: If the repository is a personal fork, you need to synchronize all branches listed in the `conf.py` file with the upstream repository first. For more information, see `Sync Fork <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_.
 
 #. Run the command ``make multiversionpreview``.
 
