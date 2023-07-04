@@ -87,7 +87,7 @@ export const onChangeMetaBanner = () => {
 
 export const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
-    setItemWithExpiry(localStorageKey, "1", 30);
+    setItemWithExpiry(localStorageKey, "1", 15);
     $("body").css("margin-top", 0);
     $(".side-nav").css("margin-top", 0);
     $(".secondary-side-nav").css("margin-top", 0);
