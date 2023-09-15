@@ -22,6 +22,8 @@ GitRef = collections.namedtuple(
 
 logger = logging.getLogger(__name__)
 
+env = os.environ.copy()
+env['GIT_LFS_SKIP_SMUDGE'] = '1'
 
 def get_toplevel_path(cwd=None):
     cmd = (
