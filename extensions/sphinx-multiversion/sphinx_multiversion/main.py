@@ -356,6 +356,8 @@ def main(argv=None):
             current_argv.extend(
                 [
                     *defines,
+                    "-j",
+                    "auto",
                     "-D",
                     "smv_current_version={}".format(version_name),
                     "-c",
