@@ -44,7 +44,12 @@ smv_rename_latest_version = 'latest' # Use the commit hash
 
 ### Add support for custom tags
 
-See https://github.com/dgarcia360/sphinx-multiversion/pull/4.
+See https://github.com/dgarcia360/sphinx-multiversion/pull/4
+
+### Fix Git LFS error
+
+See https://github.com/scylladb/scylla-enterprise/issues/3414
+
 
 ## Maintenance
 
