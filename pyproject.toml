@@ -7,21 +7,20 @@ exclude = [".github", "config", "docs", "extensions", ".postcss.config.js", ".pr
 readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 sphinx-collapse = "^0.1.1"
 sphinx-copybutton = ">=0.4,<0.6"
-sphinx-notfound-page = "^0.8"
 beautifulsoup4 = "^4.10.0"
 sphinx-tabs = "^3.2.0"
-Sphinx = "^4.3.2"
 pyyaml = "^6.0"
 Sphinx-Substitution-Extensions = "^2022.2.16"
+sphinx-notfound-page = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.4.2"
 sphinx-autobuild = "^2021.3.14"
 pre-commit = "^2.21.0"
-myst_parser = "0.18.1"
+myst-parser = "^2.0.0"
 setuptools = "^68.0.0"
 sphinx-multiversion-scylla = "^0.2.20"
 sphinx-sitemap = "^2.5.1"
