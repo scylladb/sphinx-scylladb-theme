@@ -832,12 +832,13 @@ rtd = ["ipython", "myst-nb", "sphinx", "sphinx-book-theme", "sphinx-examples"]
 
 [[package]]
 name = "sphinx-multiversion-scylla"
-version = "0.2.18"
+version = "0.2.19"
 description = "Add support for multiple versions to sphinx"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sphinx-multiversion-scylla-0.2.18.tar.gz", hash = "sha256:4589c06b8f67184d9e4c215bd193a2114cfce53106a3bc99a7e557bbd4e4b8bd"},
+    {file = "sphinx-multiversion-scylla-0.2.19.tar.gz", hash = "sha256:6d66963be7da7a782072fcdbdf5d4b4b992676a4be08cbc45c8235f572bd4f54"},
+    {file = "sphinx_multiversion_scylla-0.2.19-py3-none-any.whl", hash = "sha256:5819fa1c5e2d5e61d4d5084519ea6e27ba9990e12b72f51eb7a0be9834c78a17"},
 ]
 
 [package.dependencies]
@@ -1123,4 +1124,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "c19c92d4f47cd04449a42377850dac39af014e7429ce9e6437e9d8b79c0c6b92"
+content-hash = "f12a4a7d9975b6fbdcf217f63b2b3c769b42351ac1cf856b679ade7c92b695e5"
