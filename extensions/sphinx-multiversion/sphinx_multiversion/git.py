@@ -31,7 +31,7 @@ def get_toplevel_path(cwd=None):
         "rev-parse",
         "--show-toplevel",
     )
-    output = subprocess.check_output(cmd, cwd=cwd).decode()
+    output = subprocess.check_output(cmd, cwd=cwd, env=env).decode()
     return output.rstrip("\n")
 
 
@@ -43,7 +43,7 @@ def get_all_refs(gitroot):
         "%(objectname)\t%(refname)\t%(creatordate:iso)",
         "refs",
     )
-    output = subprocess.check_output(cmd, cwd=gitroot).decode()
+    output = subprocess.check_output(cmd, cwd=gitroot, env=env).decode()
     for line in output.splitlines():
         is_remote = False
         fields = line.strip().split("\t")
@@ -137,7 +137,7 @@ def file_exists(gitroot, refname, filename):
         "{}:{}".format(refname, filename),
     )
     proc = subprocess.run(
-        cmd, cwd=gitroot, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        cmd, cwd=gitroot, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
     )
     return proc.returncode == 0
 
@@ -153,7 +153,7 @@ def copy_tree(gitroot, src, dst, reference, sourcepath="."):
             "--",
             sourcepath,
         )
-        subprocess.check_call(cmd, cwd=gitroot, stdout=fp)
+        subprocess.check_call(cmd, cwd=gitroot, env=env,stdout=fp)
         fp.seek(0)
         with tarfile.TarFile(fileobj=fp) as tarfp:
             tarfp.extractall(dst)
