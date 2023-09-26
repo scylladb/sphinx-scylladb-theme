@@ -10,11 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): We have introduced support for parallel builds to enhance performance and speed up the documentation builds.
+- [#890](https://github.com/scylladb/sphinx-scylladb-theme/pull/890): Support for repositories that use Git Large File Storage (LFS).
 
 ### Updated
 
 - [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): Upgraded Sphinx to version 7.2.4. Additionally, we now require a minimum of Python 3.9 for compatibility.
-- [#834](https://github.com/scylladb/sphinx-scylladb-theme/pull/834): Reduced the announcement banner expiration period, from 30 days to 15 days.
 - [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): Updated the header link to point the latest open-source documentation site.
 - [#827](https://github.com/scylladb/sphinx-scylladb-theme/pull/827): Improved the documentation for building multiversioned docs locally.
 
