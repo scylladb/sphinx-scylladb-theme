@@ -79,10 +79,10 @@ def create_redirect_to_latest_version(app, exception):
     ):
         latest_dir = app.config.smv_rename_latest_version
 
-    out_dir = app.builder.outdir
-    head, tail = os.path.split(out_dir)
+    out_dir = Path(app.builder.outdir)
+    head = out_dir.parent
 
-    with open(os.path.join(head + "/index.html"), "w+") as t_file:
+    with open(head / "index.html", "w+") as t_file:
         t_file.write(build_redirect_body(latest_dir))
 
 
