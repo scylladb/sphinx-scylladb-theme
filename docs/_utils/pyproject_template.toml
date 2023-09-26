@@ -12,7 +12,7 @@ sphinx-scylladb-theme = "~1.6.1"
 myst-parser = "2.0.0"
 sphinx-autobuild = "2021.3.14"
 Sphinx = "7.2.6"
-sphinx-multiversion-scylla = "~0.2.20"
+sphinx-multiversion-scylla = "^0.3.1"
 sphinx-sitemap = "2.5.1"
 redirects_cli ="~0.1.3"
 

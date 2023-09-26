@@ -50,6 +50,9 @@ See https://github.com/dgarcia360/sphinx-multiversion/pull/4
 
 See https://github.com/scylladb/scylla-enterprise/issues/3414
 
+### Enable paralell builds
+
+See https://github.com/scylladb/sphinx-scylladb-theme/pull/891
 
 ## Maintenance
 
