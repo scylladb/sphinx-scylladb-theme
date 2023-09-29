@@ -3,21 +3,30 @@ from sphinx.util import logging
 logger = logging.getLogger(__name__)
 
 
-def raise_warning_if_document_has_underscores(app, docname, source):
-    result = False
+def warn_on_underscores(app, docname, source):
+    if not docname:  # Check if docname is None or empty
+        return False
+
+    excluded_strings = ['rst_include', '_common']
     
     theme_options = app.config.html_theme_options
-    if 'skip_warnings' in theme_options and 'document_has_underscores' in theme_options['skip_warnings']:
-        return result
+    skip_warnings = theme_options.get('skip_warnings', [])
     
-    if "_" in docname:
-        logger.warning("Document name contains underscores: %s" % docname)
-        result = True
-    return result
+    if not skip_warnings:
+        return False
+    
+    if 'document_has_underscores' in skip_warnings:
+        return False
+    
+    if "_" in docname and any(excluded in docname for excluded in excluded_strings):
+        logger.warning(f"Document name contains underscores: {docname}")
+        return True
+
+    return False
 
 
 def setup(app):
-    app.connect("source-read", raise_warning_if_document_has_underscores)
+    app.connect("source-read", warn_on_underscores)
     return {
         "version": "0.1",
         "parallel_read_safe": True,
