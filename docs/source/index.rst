@@ -90,7 +90,7 @@
 .. raw:: html
 
   </div>
-  
+
 .. toctree::
   :hidden:
 

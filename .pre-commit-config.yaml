@@ -1,5 +1,5 @@
 fail_fast: true
-
+exclude: ^(.github|src|sphinx_scylladb_theme/static)
 repos:
   - repo: local
     hooks:
@@ -38,7 +38,6 @@ repos:
     rev: v4.4.0
     hooks:
       - id: end-of-file-fixer
-        exclude: 'sphinx_scylladb_theme/static|\.github/actions|src'
       - id: trailing-whitespace
       - id: check-yaml
       - id: check-json

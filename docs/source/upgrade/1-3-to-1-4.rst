@@ -26,7 +26,7 @@ Here are the main breaking changes between the 1.3 and 1.4 versions.
 #. Edit the ``docs/Makefile`` file and add the ``rm -f poetry.lock`` to the ``clean`` command:
 
     .. code-block::
-        
+
         # Clean commands
         .PHONY: clean
         clean:
