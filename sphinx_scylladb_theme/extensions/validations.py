@@ -4,7 +4,7 @@ logger = logging.getLogger(__name__)
 
 
 def warn_on_underscores(app, docname, source):
-    if not docname:  # Check if docname is None or empty
+    if not docname:
         return False
 
     excluded_strings = ["rst_include", "_common"]
@@ -12,16 +12,12 @@ def warn_on_underscores(app, docname, source):
     theme_options = app.config.html_theme_options
     skip_warnings = theme_options.get("skip_warnings", [])
 
-    if not skip_warnings:
-        return False
-
     if "document_has_underscores" in skip_warnings:
         return False
 
-    if "_" in docname and any(excluded in docname for excluded in excluded_strings):
+    if "_" in docname and not any(excluded in docname for excluded in excluded_strings):
         logger.warning(f"Document name contains underscores: {docname}")
         return True
-
     return False
 
 
