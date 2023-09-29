@@ -5,9 +5,10 @@ Extends sphinx_multiversion:
 - Redirect to latest version
 """
 import os
+from pathlib import Path
 
 from .utils import build_redirect_body, copy
-from pathlib import Path
+
 
 def add_gh_pages_support(app, exception):
     """

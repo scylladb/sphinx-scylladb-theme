@@ -55,7 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#652](https://github.com/scylladb/sphinx-scylladb-theme/pull/652): The docs builds now raises a warning if a RST or MD file has underscores in the filename. 
+- [#652](https://github.com/scylladb/sphinx-scylladb-theme/pull/652): The docs builds now raises a warning if a RST or MD file has underscores in the filename.
 - [#696](https://github.com/scylladb/sphinx-scylladb-theme/pull/696): The announcement banner can be managed from Google Tag Manager.
 
 ### Fixed

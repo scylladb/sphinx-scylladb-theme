@@ -9,7 +9,7 @@ applications:
       artifacts:
         baseDirectory: _build/dirhtml
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths: []
     appRoot: docs

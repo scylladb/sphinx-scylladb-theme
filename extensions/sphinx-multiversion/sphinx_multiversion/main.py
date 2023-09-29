@@ -36,9 +36,7 @@ def load_sphinx_config_worker(q, confpath, confoverrides, add_defaults):
     try:
         with working_dir(confpath):
             current_config = sphinx_config.Config.read(
-                confpath,
-                confoverrides,
-                sphinx_tags.Tags()
+                confpath, confoverrides, sphinx_tags.Tags()
             )
 
         if add_defaults:
