@@ -7,6 +7,7 @@ require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
 
 import {
+  adjustScrollPaddingTop,
   createEnlargeImagesButtons,
   createResponsiveTables,
   openExternalLinksNewBrowserTab,
@@ -26,6 +27,7 @@ import {
 
 $(document).ready(function () {
   /* Body */
+  adjustScrollPaddingTop();
   createEnlargeImagesButtons();
   $(document).foundation();
   createResponsiveTables();
