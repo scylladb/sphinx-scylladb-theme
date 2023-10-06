@@ -7,6 +7,7 @@
   margin-bottom: $gap;
   overflow: auto;
   padding: 20px;
+  padding-left: 52px;
   position: relative;
 
   &:before {
@@ -21,7 +22,8 @@
 
   &-title {
     color: $color-typography-admonition-title;
-    margin-bottom: 0 !important;
+    left: -32px;
+    position: relative;
 
     &:before {
       content: "";
@@ -32,9 +34,8 @@
     }
   }
 
-  p:not(.admonition-title) {
+  p {
     margin-bottom: 0 !important;
-    margin-left: 32px;
   }
 
   &.tip {
