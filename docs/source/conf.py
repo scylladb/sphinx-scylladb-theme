@@ -12,7 +12,15 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # Builds documentation for the following tags and branches.
 TAGS = []
-BRANCHES = ["branch-1.5", "branch-1.4", "branch-1.3", "branch-1.2", "branch-1.1", "branch-1.0", "master"]
+BRANCHES = [
+    "branch-1.5",
+    "branch-1.4",
+    "branch-1.3",
+    "branch-1.2",
+    "branch-1.1",
+    "branch-1.0",
+    "master",
+]
 # Sets the latest version.
 LATEST_VERSION = "branch-1.5"
 # Set which versions are not released yet.
@@ -46,7 +54,7 @@ master_doc = "index"
 # General information about the project.
 project = "ScyllaDB Sphinx Theme"
 copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
-author = u"ScyllaDB Project Contributors"
+author = "ScyllaDB Project Contributors"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -104,7 +112,7 @@ html_theme_path = ["../.."]
 html_theme_options = {
     "conf_py_path": "docs/source/",
     "hide_edit_this_page_button": "false",
-    "hide_feedback_buttons": 'false',
+    "hide_feedback_buttons": "false",
     "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
@@ -129,6 +137,7 @@ html_baseurl = "https://sphinx-theme.scylladb.com"
 html_context = {"html_baseurl": html_baseurl}
 
 # -- Initialize Sphinx ----------------------------------------------
+
 
 def setup(sphinx):
     warnings.filterwarnings(

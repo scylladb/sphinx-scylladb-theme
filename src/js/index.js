@@ -12,7 +12,12 @@ import {
   openExternalLinksNewBrowserTab,
 } from "./body";
 import { onScrollHighlightSecondarySidebar } from "./sidebar";
-import { initBanner, onChangeMetaBanner, onCloseBanner, onResizeBanner } from "./promo-banner";
+import {
+  initBanner,
+  onChangeMetaBanner,
+  onCloseBanner,
+  onResizeBanner,
+} from "./promo-banner";
 import {
   loadCollapsibleNavigation,
   onClickCollapsibleNavigationButton,

@@ -28,7 +28,7 @@ async function main() {
   try {
     const result = await octokit.request(
       `GET /repos/${request.owner}/${request.repo}/pulls/${github.context.issue.number}/files`,
-      request
+      request,
     );
     changedFiles = result.data;
   } catch (err) {
@@ -73,7 +73,7 @@ async function main() {
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         comment_id: github.context.payload.comment.id,
-        body: `${bodyComment}\n\nFiles changed:\n${docFiles.join('')}`,
+        body: `${bodyComment}\n\nFiles changed:\n${docFiles.join("")}`,
       });
     } catch (err) {
       core.setFailed(`Comment failed with error ${err}`);
@@ -83,7 +83,7 @@ async function main() {
 
 const bodyComment = github.context.payload.comment.body;
 const amplifyComment = `${bodyComment}`.includes(
-  "This pull request is automatically being deployed by Amplify Hosting"
+  "This pull request is automatically being deployed by Amplify Hosting",
 );
 if (github.context.payload.issue.pull_request && amplifyComment) {
   main();

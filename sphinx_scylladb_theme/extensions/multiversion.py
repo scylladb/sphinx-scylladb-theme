@@ -5,6 +5,7 @@ Extends sphinx_multiversion:
 - Redirect to latest version
 """
 import os
+from pathlib import Path
 
 from .utils import build_redirect_body, copy
 
@@ -20,11 +21,11 @@ def add_gh_pages_support(app, exception):
     :type exception: sphinx.error.SphinxError
     """
 
-    out_dir = app.builder.outdir
-    head, tail = os.path.split(out_dir)
+    out_dir = Path(app.builder.outdir)
+    head = out_dir.parent
 
-    copy(out_dir + "/CNAME", head + "/CNAME")
-    copy(out_dir + "/.nojekyll", head + "/.nojekyll")
+    copy(str(out_dir / "CNAME"), str(head / "CNAME"))
+    copy(str(out_dir / ".nojekyll"), str(head / ".nojekyll"))
 
 
 def add_notfound_support(app, exception):
@@ -37,11 +38,11 @@ def add_notfound_support(app, exception):
     :param exception: Sphinx Error
     :type exception: sphinx.error.SphinxError
     """
-    out_dir = app.builder.outdir
-    head, tail = os.path.split(out_dir)
+    out_dir = Path(app.builder.outdir)
+    head = out_dir.parent
 
-    copy(out_dir + "/404.html", head + "/404.html")
-    copy(out_dir + "/_static", head + "/_static")
+    copy(str(out_dir / "404.html"), str(head / "404.html"))
+    copy(str(out_dir / "_static"), str(head / "_static"))
 
 
 def add_notfound_support_dirhtml(app, exception):
@@ -54,11 +55,10 @@ def add_notfound_support_dirhtml(app, exception):
     :param exception: Sphinx Error
     :type exception: sphinx.error.SphinxError
     """
-    out_dir = app.builder.outdir
-    head, tail = os.path.split(out_dir)
+    out_dir = Path(app.builder.outdir)
 
-    if app.builder.name == "dirhtml" and os.path.exists(out_dir + "/404"):
-        copy(out_dir + "/404/index.html", out_dir + "/404.html")
+    if app.builder.name == "dirhtml" and (out_dir / "404").exists():
+        copy(str(out_dir / "404" / "index.html"), str(out_dir / "404.html"))
 
 
 def create_redirect_to_latest_version(app, exception):
@@ -80,10 +80,10 @@ def create_redirect_to_latest_version(app, exception):
     ):
         latest_dir = app.config.smv_rename_latest_version
 
-    out_dir = app.builder.outdir
-    head, tail = os.path.split(out_dir)
+    out_dir = Path(app.builder.outdir)
+    head = out_dir.parent
 
-    with open(os.path.join(head + "/index.html"), "w+") as t_file:
+    with open(head / "index.html", "w+") as t_file:
         t_file.write(build_redirect_body(latest_dir))
 
 

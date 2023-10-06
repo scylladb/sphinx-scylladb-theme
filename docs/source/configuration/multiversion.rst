@@ -101,7 +101,7 @@ However, if you still need to preview the latest local changes with the multiver
 #. In the same file, add your current branch's name to the ``BRANCHES`` list and set it as the latest version. For example:
 
     .. code-block:: python
-        
+
         BRANCHES = ["my-local-branch"]
         LATEST_VERSION = "my-local-branch"
 
@@ -115,7 +115,7 @@ To preview production builds locally:
 #. Create a temporal folder and move to it:
 
     .. code-block:: console
-        
+
         mktemp
         cd <PATH_TO_TEMP_FOLDER>
 
