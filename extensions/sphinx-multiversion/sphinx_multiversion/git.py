@@ -23,7 +23,8 @@ GitRef = collections.namedtuple(
 logger = logging.getLogger(__name__)
 
 env = os.environ.copy()
-env['GIT_LFS_SKIP_SMUDGE'] = '1'
+env["GIT_LFS_SKIP_SMUDGE"] = "1"
+
 
 def get_toplevel_path(cwd=None):
     cmd = (
@@ -153,7 +154,7 @@ def copy_tree(gitroot, src, dst, reference, sourcepath="."):
             "--",
             sourcepath,
         )
-        subprocess.check_call(cmd, cwd=gitroot, env=env,stdout=fp)
+        subprocess.check_call(cmd, cwd=gitroot, env=env, stdout=fp)
         fp.seek(0)
         with tarfile.TarFile(fileobj=fp) as tarfp:
             tarfp.extractall(dst)

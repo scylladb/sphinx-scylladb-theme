@@ -36,7 +36,7 @@ export const createEnlargeImagesButtons = () => {
     // Update parent css
     const revealID = (Math.random() + 1).toString(36).substring(7);
     $(this).wrap(
-      `<span class="enlarge-image"  data-open="` + revealID + `"></div>`
+      `<span class="enlarge-image"  data-open="` + revealID + `"></div>`,
     );
     // Add image reveal
     const imageReveal =

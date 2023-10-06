@@ -12,24 +12,23 @@ To install MyST:
 
 1. Install the extension:
 
-    ```console
-    poetry add myst-parser
-    ```
+   ```console
+   poetry add myst-parser
+   ```
 
-2. Load the extension in the  `conf.py` configuration file:
+2. Load the extension in the `conf.py` configuration file:
 
-    ```python
-    extensions = ["myst_parser"]
-    ```
+   ```python
+   extensions = ["myst_parser"]
+   ```
 
-3. Add the following configuration in the  `conf.py` to enable the `colon_fence` extension:
+3. Add the following configuration in the `conf.py` to enable the `colon_fence` extension:
 
-    ```python
-    myst_enable_extensions = ["colon_fence"]
-    ```
+   ```python
+   myst_enable_extensions = ["colon_fence"]
+   ```
 
 For more details, see the [MyST documentation](https://myst-parser.readthedocs.io/en/latest/intro.html#/).
-
 
 ### Usage
 
@@ -44,4 +43,3 @@ This extension is deprecated and will be removed in a future release. If you are
 :::
 
 See [recommonmark docs](https://recommonmark.readthedocs.io/en/latest/) for more details on how to install and use this parser.
-

@@ -23,7 +23,7 @@ General configuration options.
     - Set to ``true`` to load ScyllaDB JS specific scripts, including Google Tag Manager, Expertrec, and Zendesk configuration.
   * - ``skip_warnings``
     - string
-    - 
+    -
     - List of custom warnings implemented by the theme to exclude, separated by commas. Available values are: ``document_has_underscores``.
 
 Example:

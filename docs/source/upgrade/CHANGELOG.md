@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.6.1 - TBD 2023
+
+### Added
+
+- [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): We have introduced support for parallel builds to enhance performance and speed up the documentation builds.
+- [#890](https://github.com/scylladb/sphinx-scylladb-theme/pull/890): Support for repositories that use Git Large File Storage (LFS).
+
+### Updated
+
+- [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): Upgraded Sphinx to version 7.2.4. Additionally, we now require a minimum of Python 3.9 for compatibility.
+- [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): Updated the header link to point the latest open-source documentation site.
+- [#827](https://github.com/scylladb/sphinx-scylladb-theme/pull/827): Improved the documentation for building multiversioned docs locally.
+
+## Removed
+
+- [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): For Windows users: The theme drops Git Bash support in favor of WSL.
+
 ## 1.5.1 - 31 May 2023
 
 ### Added
@@ -38,7 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#652](https://github.com/scylladb/sphinx-scylladb-theme/pull/652): The docs builds now raises a warning if a RST or MD file has underscores in the filename. 
+- [#652](https://github.com/scylladb/sphinx-scylladb-theme/pull/652): The docs builds now raises a warning if a RST or MD file has underscores in the filename.
 - [#696](https://github.com/scylladb/sphinx-scylladb-theme/pull/696): The announcement banner can be managed from Google Tag Manager.
 
 ### Fixed
