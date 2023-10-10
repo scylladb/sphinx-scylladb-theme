@@ -15,11 +15,22 @@ Use a note to point out something to the reader. This action does not have any r
 
 .. code-block:: rst
 
-   .. note:: text follows here
+   .. note:: 
+      
+      text follows here
+
+      * Option a
+      * Option b
 
 Renders as:
 
-.. note:: text follows here
+.. note::
+   
+   text follows here
+
+   * Option a
+   * Option b
+
 
 Caution
 -------
@@ -28,11 +39,22 @@ Use caution if there is any potential risk to data loss or lower performance.
 
 .. code-block:: rst
 
-   .. caution:: look out
+   .. caution::
+      
+      look out
+
+      1. Step a
+      2. Step b
 
 Renders as
 
-.. caution:: look out
+.. caution::
+
+   look out
+
+   1. Step a
+   2. Step b
+
 
 Warning
 -------
