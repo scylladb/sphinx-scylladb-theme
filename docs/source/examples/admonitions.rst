@@ -15,8 +15,8 @@ Use a note to point out something to the reader. This action does not have any r
 
 .. code-block:: rst
 
-   .. note:: 
-      
+   .. note::
+
       text follows here
 
       * Option a
@@ -25,7 +25,7 @@ Use a note to point out something to the reader. This action does not have any r
 Renders as:
 
 .. note::
-   
+
    text follows here
 
    * Option a
@@ -40,7 +40,7 @@ Use caution if there is any potential risk to data loss or lower performance.
 .. code-block:: rst
 
    .. caution::
-      
+
       look out
 
       1. Step a

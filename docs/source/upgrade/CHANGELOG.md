@@ -5,22 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.6.1 - TBD 2023
+## 1.6.1 - 10 Oct 2023
 
 ### Added
 
-- [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): We have introduced support for parallel builds to enhance performance and speed up the documentation builds.
-- [#890](https://github.com/scylladb/sphinx-scylladb-theme/pull/890): Support for repositories that use Git Large File Storage (LFS).
+- [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): Introduced parallel builds for enhanced performance.
+- [#890](https://github.com/scylladb/sphinx-scylladb-theme/pull/890): Implemented support for repositories utilizing Git Large File Storage (LFS).
 
 ### Updated
 
-- [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): Upgraded Sphinx to version 7.2.4. Additionally, we now require a minimum of Python 3.9 for compatibility.
-- [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): Updated the header link to point the latest open-source documentation site.
-- [#827](https://github.com/scylladb/sphinx-scylladb-theme/pull/827): Improved the documentation for building multiversioned docs locally.
+- [#891](https://github.com/scylladb/sphinx-scylladb-theme/pull/891): Upgraded to Sphinx 7.2.4, requiring Python 3.9 or higher for compatibility.
+- [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): Updated the header link to direct users to the most current open-source documentation site.
+- [#827](https://github.com/scylladb/sphinx-scylladb-theme/pull/827): Enhanced the guide on building multiversioned documentation locally.
+
+### Fixed
+
+- [#904](https://github.com/scylladb/sphinx-scylladb-theme/issues/904): Fixed the style of admonitions with bullet points.
+- [#889](https://github.com/scylladb/sphinx-scylladb-theme/issues/889): Optimized top scroll padding, ensuring a similar behaviour across different component types.
 
 ## Removed
 
-- [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): For Windows users: The theme drops Git Bash support in favor of WSL.
+- [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): For Windows users: We have discontinued support for Git Bash, recommending users to transition to Windows Subsystem for Linux (WSL).
+- [#912](https://github.com/scylladb/sphinx-scylladb-theme/pull/912): The Windows-specific variables previously found in the `docs/Makefile` have been removed. Windows users are now advised to ensure that Poetry is added to the system's PATH for seamless command execution and script running.
 
 ## 1.5.1 - 31 May 2023
 

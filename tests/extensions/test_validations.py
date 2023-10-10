@@ -1,8 +1,6 @@
 from unittest.mock import MagicMock
 
-from sphinx_scylladb_theme.extensions.validations import (
-    warn_on_underscores,
-)
+from sphinx_scylladb_theme.extensions.validations import warn_on_underscores
 
 
 def test_warn_on_underscores():
