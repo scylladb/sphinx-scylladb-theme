@@ -1,3 +1,11 @@
+export const adjustScrollPaddingTop= () => {
+  var promoBannerDisplay = $('.promo-banner').css('display');
+  var promoBannerHeight = promoBannerDisplay !== 'none' ? $('.promo-banner').outerHeight(true) : 0;
+  var headerHeight = $('.header').outerHeight(true);
+  var totalHeight = promoBannerHeight + headerHeight + 10;
+  $('html').css('scroll-padding-top', totalHeight + 'px');
+}
+
 export const openExternalLinksNewBrowserTab = () => {
   const isExternal = new RegExp("^(?:[a-z]+:)?//", "i");
   $("a.reference").each(function () {
