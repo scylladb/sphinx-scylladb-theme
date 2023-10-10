@@ -13,11 +13,6 @@ PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
 TESTSPHINXOPTS  = $(ALLSPHINXOPTS) -W --keep-going
 
-# Windows variables
-ifeq ($(OS),Windows_NT)
-    POETRY = $(APPDATA)\Python\Scripts\poetry
-endif
-
 .PHONY: all
 all: dirhtml
 

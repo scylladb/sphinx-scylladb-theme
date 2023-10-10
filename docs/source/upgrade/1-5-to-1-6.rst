@@ -15,7 +15,7 @@ If your project theme's version is **>=1.5**, follow this guide to get the lates
 Upgrade to version 1.6
 ----------------------
 
-Here are the main breaking changes between the 1.4 and 1.5 versions.
+Here are the main breaking changes between the 1.5 and 1.6 versions.
 
 #. Update the following Python dependencies in ``docs/pyproject.toml``:
 
@@ -26,6 +26,20 @@ Here are the main breaking changes between the 1.4 and 1.5 versions.
         Sphinx = "7.2.6"
         sphinx-multiversion-scylla = "~0.3.1"
         sphinx-sitemap = "2.5.1"
+
+#. Open ``docs/Makefile`` file and remove the following lines:
+
+    .. code-block::
+
+        # Windows variables
+        ifeq ($(OS),Windows_NT)
+            POETRY = $(APPDATA)\Python\Scripts\poetry
+        endif
+
+    .. note::
+
+        If you are on Windows, ensure that Poetry is configured in your system's PATH.
+        For guidance on how to add Poetry to your PATH, refer to the `Poetry documentation <https://python-poetry.org/docs/>`_.
 
 #. Build the docs locally:
 
