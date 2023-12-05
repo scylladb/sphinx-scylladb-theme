@@ -17,6 +17,10 @@ General configuration options.
     - Type
     - Default Value
     - Description
+  * - ``local_scripts``
+    - string
+    - true
+    - When set to ``true``, this option enables the loading of the ``local-scripts.html`` file from the template. This file is customizable per project, providing a convenient way to insert project-specific tags and scripts.
   * - ``scylladb_scripts``
     - string
     - true
