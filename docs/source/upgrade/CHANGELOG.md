@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#](https://github.com/scylladb/sphinx-scylladb-theme/pull/): `pkg_resources` is deprecated in favor of  `importlib.metadata`.
+- [#962](https://github.com/scylladb/sphinx-scylladb-theme/pull/962): `pkg_resources` is deprecated in favor of  `importlib.metadata`.
 
 ## 1.6.2 - 6 Dec 2023
 
