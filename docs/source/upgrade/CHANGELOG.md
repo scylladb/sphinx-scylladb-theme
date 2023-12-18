@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.6.3 - 18 Dec 2023
+## 1.6.4 - 18 Dec 2023
 
-### Added
+### Fixed
 
 - [#962](https://github.com/scylladb/sphinx-scylladb-theme/pull/962): `pkg_resources` is deprecated in favor of  `importlib.metadata`.
 
