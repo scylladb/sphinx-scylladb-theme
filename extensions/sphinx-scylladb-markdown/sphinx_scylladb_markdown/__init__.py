@@ -2,7 +2,7 @@
 import os
 from recommonmark.transform import AutoStructify
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 class BaseParser:
     def __init__(self, app):
@@ -30,6 +30,7 @@ class MystParser(BaseParser):
         try:
             self.app.setup_extension('myst_parser')
             self.app.config.myst_enable_extensions = ["colon_fence"]
+            self.app.config.myst_heading_anchors = 6
 
         except ImportError:
             raise RuntimeError("myst-parser is not installed")
