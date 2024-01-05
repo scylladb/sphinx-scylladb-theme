@@ -36,25 +36,33 @@ def copy(src, dest):
             shutil.copy(src, dest)
 
 
-def build_redirect_body(path):
+def build_redirect_body(path, zendesk_tag=''):
     """
     Builds the contents of the redirection file.
 
     :param path: Path to redirect to.
     :type path: str
 
+    :param zendesk_tag: Zendesk tag.
+    :type zendesk_tag: str
+
     :return: HTML body of the redirection.
     :rtype: str
     """
+
+    zendesk_tag_html = f'<meta name="zd-site-verification" content="{zendesk_tag}" />' if zendesk_tag else ''
+
     html = generate_template(
         """
         <html>
         <head>
+        {zendesk_tag_html}
         <meta http-equiv="refresh" content="0; url={path}">
         </head>
         </html>
         """,
         path=path,
+        zendesk_tag_html=zendesk_tag_html
     )
     return html
 
