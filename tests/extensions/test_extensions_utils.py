@@ -22,6 +22,17 @@ def test_build_redirect_body():
     assert "url=/redirect" in build_redirect_body(path)
 
 
+def test_build_redirect_body_with_zendesk_tag():
+    path = "/redirect"
+    zendesk_tag = "test-zendesk-tag"
+        
+    # Call the function with a Zendesk tag
+    result = build_redirect_body(path, zendesk_tag)
+
+    # Check if the Zendesk meta tag is in the result
+    assert expected_zendesk_meta in result
+    assert "url=/redirect" in result
+
 def test_is_url_external():
     path = "https://scylladb.com"
     assert is_url(path)
