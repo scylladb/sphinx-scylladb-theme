@@ -19,7 +19,21 @@ def test_generate_content():
 
 def test_build_redirect_body():
     path = "/redirect"
-    assert "url=/redirect" in build_redirect_body(path)
+    result = build_redirect_body(path)
+    assert "url=/redirect" in result
+    assert "zendesk" not in result
+
+
+def test_build_redirect_body_with_zendesk_tag():
+    path = "/redirect"
+    zendesk_tag = "test-zendesk-tag"
+
+    # Call the function with a Zendesk tag
+    result = build_redirect_body(path, zendesk_tag)
+
+    # Check if the Zendesk meta tag is in the result
+    assert zendesk_tag in result
+    assert "url=/redirect" in result
 
 
 def test_is_url_external():
