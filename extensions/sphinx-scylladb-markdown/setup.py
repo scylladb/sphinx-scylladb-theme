@@ -15,7 +15,7 @@ setup(
     author="David Garcia",
     author_email="hi@davidgarcia.dev",
     url="https://github.com/scylladb/sphinx-scylladb-theme",
-    version="0.1.2",
+    version="0.1.3",
     install_requires=[
         "sphinx >= 2.1",
         "recommonmark == 0.7.1",
