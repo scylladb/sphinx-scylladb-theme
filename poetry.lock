@@ -805,13 +805,13 @@ test = ["pytest (>=6.0)", "pytest-cov"]
 
 [[package]]
 name = "sphinx-collapse"
-version = "0.1.2"
+version = "0.1.3"
 description = "Collapse extension for Sphinx."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "sphinx_collapse-0.1.2-py3-none-any.whl", hash = "sha256:7a2082da3c779916cc4c4d44832db3522a3a8bfbd12598ef01fb9eb523a164d0"},
-    {file = "sphinx_collapse-0.1.2.tar.gz", hash = "sha256:a186000bf3fdac8ac0e8a99979f720ae790de15a5efc1435d4816f79a3d377c2"},
+    {file = "sphinx_collapse-0.1.3-py3-none-any.whl", hash = "sha256:85fadb2ec8769b93fd04276538668fa96239ef60c20c4a9eaa3e480387a6e65b"},
+    {file = "sphinx_collapse-0.1.3.tar.gz", hash = "sha256:cae141e6f03ecd52ed246a305a69e1b0d5d05e6cdf3fe803d40d583ad6ad895a"},
 ]
 
 [package.dependencies]
