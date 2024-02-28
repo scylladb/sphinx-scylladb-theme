@@ -100,7 +100,6 @@ smv_remote_whitelist = r"^origin$"
 smv_released_pattern = r"^tags/.*$"
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = "{ref.name}"
-
 # -- Options for HTML output ----------------------------------------
 
 # The theme to use for pages.
@@ -118,6 +117,7 @@ html_theme_options = {
     "github_repository": "scylladb/sphinx-scylladb-theme",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
     "hide_version_dropdown": ["master"],
+    "zendesk_tag": "gq6ltsh3nfex3cnwfy4aj9",
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
 }

@@ -73,8 +73,11 @@
         {% endblock %}
         {% block scripts %}
             {{ script() }}
+            {% if theme_local_scripts|lower == 'true' %}
+                {% include 'local-scripts.html' %}
+            {% endif %}
             {% if theme_scylladb_scripts|lower == 'true' %}
-                {% include 'custom-scripts.html' %}
+                {% include 'scylladb-scripts.html' %}
             {% endif %}
         {% endblock %}
         <!-- Font Awesome -->

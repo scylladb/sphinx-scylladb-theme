@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.6.6 - 5 Jan 2024
+
+### Updated
+
+- [#949](https://github.com/scylladb/sphinx-scylladb-theme/pull/949): Enhances Zendesk verification tag support.
+
+## 1.6.5 - 18 Dec 2023
+
+### Fixed
+
+- [#962](https://github.com/scylladb/sphinx-scylladb-theme/pull/962): `pkg_resources` is deprecated in favor of  `importlib.metadata`.
+
+## 1.6.2 - 6 Dec 2023
+
+### Added
+
+- [#949](https://github.com/scylladb/sphinx-scylladb-theme/pull/949): Separated global scripts from local scripts, allowing for customization of tags and scripts at the individual project level.
+
 ## 1.6.1 - 10 Oct 2023
 
 ### Added

@@ -27,7 +27,7 @@
             const themeGithubRepository = {% if theme_github_repository %}true{% else %}false{% endif %};
             let message = 'Great! Thanks for your feedback.';
             if (themeGithubRepository && !liked) {
-                message = "Thanks for your feedback! Please don't hesitate to <a href='https://github.com/{{ theme_github_issues_repository}}/issues/new?title=docs:%20Issue in page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20in%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation'>create an issue</a> if you have any suggestions on how we can improve.";
+                message = "Thanks for your feedback! Please don't hesitate to <a href='https://github.com/{{ theme_github_issues_repository}}/issues/new?title=docs:%20Issue on page {{ title|striptags|e }}&&body=I%20would%20like%20to%20report%20an%20issue%20on%20page%20{{html_baseurl}}/{% if versions and current_version %}{{ current_version.name }}/{% endif %}{{ pagename }}%0A%0A%23%23%23%20Problem%0A%0A%23%23%23%20%20Suggest%20a%20fix&labels=documentation'>create an issue</a> if you have any suggestions on how we can improve.";
             }
             feedbackMessage.innerHTML = message;
         }

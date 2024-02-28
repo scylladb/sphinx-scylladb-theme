@@ -1,3 +1,3 @@
-import pkg_resources
+import importlib_metadata
 
-version = pkg_resources.get_distribution("sphinx-scylladb-theme").version
+version = importlib_metadata.version("sphinx-scylladb-theme")
