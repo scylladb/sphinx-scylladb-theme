@@ -1,8 +1,8 @@
 export class PromoBannerHandler {
 
-  constructor() {
-    this.localStorageKey = "scylladb-docs-hide-banner";
-  }
+	constructor() {
+		this.localStorageKey = "scylladb-docs-hide-banner";
+	}
 
 	setItemWithExpiry(key, value, days) {
 		const now = new Date();
@@ -30,16 +30,14 @@ export class PromoBannerHandler {
 	}
 
 
-  adjustScrollPaddingTop() {
-    const element1 = document.querySelector('.header');
-    const element2 = document.querySelector('.promo-banner');
-    const offset = 10;
-    const element1Height = element1 ? element1.offsetHeight : 0;
-    const element2Height = element2 ? element2.offsetHeight : 0;
-    const totalHeight =  element1Height + element2Height  + offset;
-    $('html').css('scroll-padding-top', totalHeight + 'px');
-  }
-  
+	adjustScrollPaddingTop() {
+		const headerHeight = $('.header').outerHeight() || 0;
+		const promoBannerHeight = $('.promo-banner').outerHeight() || 0;
+		const offset = 10;
+		const totalHeight = headerHeight + promoBannerHeight + offset;
+		$('html').css('scroll-padding-top', totalHeight + 'px');
+	}
+
 	initBanner() {
 		const promoBanner = $(".promo-banner");
 		const promoBannerHeight = promoBanner.outerHeight();
@@ -72,14 +70,14 @@ export class PromoBannerHandler {
 			$(".secondary-side-nav").css("margin-top", promoBannerHeight);
 			$(".layout").addClass("layout--has-banner");
 		}
-    this.adjustScrollPaddingTop();
+		this.adjustScrollPaddingTop();
 	}
-  
+
 	onChangeMetaBanner() {
 		var targetNode = document;
 
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
+		const observer = new MutationObserver((mutations) => {
+			mutations.forEach((mutation) => {
 				if (mutation.type === 'childList') {
 					for (const addedNode of mutation.addedNodes) {
 						if (addedNode.nodeName === 'META' && addedNode.name === 'scylladb-docs-hide_banner') {
@@ -100,19 +98,19 @@ export class PromoBannerHandler {
 	}
 
 	onCloseBanner() {
-    $(".promo-banner__close").on("click", () => {
+		$(".promo-banner__close").on("click", () => {
 			this.setItemWithExpiry(this.localStorageKey, "1", 30);
 			$("body").css("margin-top", 0);
 			$(".side-nav").css("margin-top", 0);
 			$(".secondary-side-nav").css("margin-top", 0);
 			$(".promo-banner").hide();
 			$(".layout").removeClass("layout--has-banner");
-      this.adjustScrollPaddingTop();
+			this.adjustScrollPaddingTop();
 		});
 	}
 
 	onResizeBanner() {
-		$(window).resize(function () {
+		$(window).resize(() => {
 			const promoBanner = $(".promo-banner");
 			const promoBannerHeight = promoBanner.outerHeight();
 			if (promoBanner.is(":visible")) {
@@ -120,7 +118,7 @@ export class PromoBannerHandler {
 				$(".side-nav").css("margin-top", promoBannerHeight);
 				$(".secondary-side-nav").css("margin-top", promoBannerHeight);
 			}
-      this.adjustScrollPaddingTop();
+			this.adjustScrollPaddingTop();
 		});
 	}
 
