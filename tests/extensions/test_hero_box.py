@@ -1,5 +1,6 @@
 import pytest
 from bs4 import BeautifulSoup as bs
+from unittest.mock import Mock
 
 from sphinx_scylladb_theme.extensions.hero_box import HeroBox
 
@@ -70,17 +71,21 @@ post_content_data = [
     ],
 ]
 
+mock_state_machine = Mock()
+mock_state_machine.reporter = Mock()
+mock_state = Mock()
+
 
 @pytest.mark.parametrize("arguments, options, content, expected", pre_content_data)
 def test_pre_content(arguments, options, content, expected):
-    directive = HeroBox("component", arguments, options, content, 0, 0, "", None, None)
+    directive = HeroBox("component", arguments, options, content, 0, 0, "", mock_state_machine, mock_state)
     result = directive.run()
     assert bs(result[0].astext(), "html.parser") == bs(expected, "html.parser")
 
 
 @pytest.mark.parametrize("arguments, options, content, expected", post_content_data)
 def test_post_content(arguments, options, content, expected):
-    directive = HeroBox("component", arguments, options, content, 0, 0, "", None, None)
+    directive = HeroBox("component", arguments, options, content, 0, 0, "", mock_state_machine, mock_state)
     result = directive.run()
     assert (
         bs(result[2].astext(), "html.parser").prettify()

@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="side-nav__title">
-            {{ project }}
+            <a href="{% if 'contents' in master_doc %}{{html_baseurl}}{% else %}{{ pathto(master_doc) }}{% endif %}">{{ project }}</a>
         </div>
         <div class="side-nav__versions">{% if versions and not theme_hide_versions_dropdown|tobool %}{% include 'versions.html' %}{% endif %}</div>
         <div class="side-nav__content">

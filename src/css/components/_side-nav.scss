@@ -16,6 +16,14 @@
   &__title {
     font-weight: bold;
     margin-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      color: $color-typography-base;
+      &:hover {
+        font-weight: bold;
+      }
+    }
   }
 
   &__content {
