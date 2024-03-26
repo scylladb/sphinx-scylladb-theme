@@ -91,10 +91,6 @@
     max-height: calc(100vh - #{$header-height-large});
     top: $header-height-large;
     width: $secondary-side-nav-width;
-
-    &__content {
-      padding-bottom: $footer-height;
-    }
   }
 
   .layout--has-banner .secondary-side-nav {
