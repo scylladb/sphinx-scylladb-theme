@@ -10,8 +10,8 @@ Prerequisites
 Before adding the documentation toolchain to a project, you will need to have installed:
 
 - A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
-- `Python 3.7 <https://www.python.org/downloads/>`_ or later.
-- `Poetry 1.12 <https://python-poetry.org/docs/master/>`_ or later.
+- `Python 3.10 <https://www.python.org/downloads/>`_.
+- `Poetry 1.8.1 <https://python-poetry.org/docs/master/>`_.
 - `Make <https://www.gnu.org/software/make/>`_.
 - `Git <https://git-scm.com/>`_.
 

@@ -56,13 +56,6 @@ Builds and deploys the documentation to GitHub Pages whenever new content is in 
 
 `Learn more <https://docs.github.com/actions>`__
 
-AWS Amplify
------------
-
-Builds a preview site for the docs every time someone sends a pull request that updates the docs folder.
-
-`Learn more <https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html>`__
-
 Expertrec
 ---------
 

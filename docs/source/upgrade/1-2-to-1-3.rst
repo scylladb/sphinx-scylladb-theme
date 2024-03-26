@@ -73,15 +73,3 @@ Here are the main breaking changes between the 1.2 and 1.3 versions.
 
 To check if the upgrade completed successfully, run the command :doc:`make preview <../../commands>`.
 Then, check if the site footer displays version 1.3 or greater.
-
-Optional features
-------------------
-
-Build previews only if the docs folder is updated
-.................................................
-
-If the project is deploying docs pull request previews with AWS Ampify, you can update the configuration to improve the build time:
-
-1. Replace the ``amplify.yml`` in your root directory with the `latest version <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/amplify.yml>`_.
-2. Follow the guide :ref:`Build previews only if the docs folder is updated <enable_previews_doc_folder_updated>`.
-3. Set the base image to build the docs to ``python:3.8`` as described in :ref:`Configure build settings <configure_build_settings>`.
