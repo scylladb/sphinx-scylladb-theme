@@ -40,7 +40,6 @@ pre_content_data = [
 
 post_content_data = [
     [
-    [
         # Test search box
         [],
         {"title": "Lorem Ipsum", "search_box": True},
@@ -51,16 +50,12 @@ post_content_data = [
             <ci-search></ci-search>
         </div>
         </div></div></div>
-        """,
+        """
     ],
+    [
         # Test button with icon
         [],
-        {
-            "title": "Lorem Ipsum",
-            "button_icon": "fa",
-            "button_text": "Test",
-            "button_url": "#",
-        },
+        {"title": "Lorem Ipsum", "button_icon": "fa", "button_text": "Test", "button_url": "#"},
         ["Content"],
         """
         </div>
@@ -71,7 +66,7 @@ post_content_data = [
             </button>
         </a>
         </div></div></div>
-        """,
+        """
     ],
     [
         # Test button with icon on the right
