@@ -18,7 +18,7 @@ Syntax
 Options
 -------
 
-The ``topic-box`` directive supports the following options:
+The ``panel-box`` directive supports the following options:
 
 .. list-table::
   :widths: 20 20 10 20 30
