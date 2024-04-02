@@ -40,7 +40,7 @@ class TopicBox(Directive):
                 <div class="cell {class_name} {container_class_name}">
                     <a class="card" href="{link}" {target_attr}>
                 """
-            
+
         html_tag_open = generate_template(
             link_template,
             class_name=class_name,
