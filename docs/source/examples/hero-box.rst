@@ -54,6 +54,11 @@ The ``hero-box`` directive supports the following options:
     -
     - left
     - Position of the icon in relation to the text. Available values: ``left``, ``right``. Defaults to ``left``.
+  * - ``button_icon_link``
+    - flag
+    -
+    -
+    - If set, applies the CTA color to the icon.
   * - ``button text``
     - string
     -
@@ -251,6 +256,31 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+Hero with colored button
+........................
+
+Using:
+
+.. code-block:: rst
+
+  .. hero-box::
+      :title: Lorem ipsum
+      :button_text: Project Name
+      :button_url: #
+      :button_icon_link:
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Results in:
+
+.. hero-box::
+    :title: Lorem ipsum
+    :button_text: Project Name
+    :button_url: #
+    :button_icon_link:
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
 Hero box button with CTA
 ........................
 
@@ -276,6 +306,7 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+
 Hero box with everything
 ........................
 
@@ -289,6 +320,7 @@ Hero box with everything
       :button_style: bold
       :button_icon: fa fa-github
       :button_icon_position: right
+      :button_icon_link:
       :cta: Learn more
       :search_box:
 
@@ -304,6 +336,7 @@ Results in:
     :button_style: bold
     :button_icon: fa fa-arrow-right
     :button_icon_position: right
+    :button_icon_link:
     :cta: Learn more
     :search_box:
 

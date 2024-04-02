@@ -88,7 +88,7 @@ post_content_data = [
         </div>
         <a href="#">
             <button class="hero__button button">
-                Discover<i class="icon icon--right" aria-hidden="true"></i>
+                Discover<i class="icon icon--right fa" aria-hidden="true"></i>
             </button>
         </a>
         </div></div></div>
@@ -110,7 +110,7 @@ post_content_data = [
         </div>
         <a href="#">
             <button class="hero__button button">
-                Discover<i class="icon fa icon--right" aria-hidden="true"></i> <span class='hero__cta'>More info</span>
+                Discover <span class='hero__cta'>More info</span><i class="icon icon--right fa" aria-hidden="true"></i> 
             </button>
         </a>
         </div></div></div>
@@ -131,13 +131,37 @@ post_content_data = [
         </div>
         <a href="#">
             <button class="hero__button button hero__button--bold">
-                <i class="icon fa-check" aria-hidden="true"></i>
+                <i class="icon icon--left fa-check" aria-hidden="true"></i>
                 Submit
             </button>
         </a>
         </div></div></div>
         """,
-    ]
+    ],
+        [
+        # Test button with CTA & icon as link
+        [],
+        {
+            "title": "Learn more",
+            "button_icon": "fa",
+            "button_text": "Discover",
+            "button_icon": "fa",
+            "button_url": "#",
+            "cta": "More info",
+            "button_icon_position": "right",
+            "button_icon_link": True,
+        },
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button">
+                Discover <span class='hero__cta'>More info</span><i class="icon icon--right icon--link fa" aria-hidden="true"></i>
+            </button>
+        </a>
+        </div></div></div>
+        """,
+    ],
 
 ]
 
