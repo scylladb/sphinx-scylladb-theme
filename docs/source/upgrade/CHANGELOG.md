@@ -5,11 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.7.1 - 5 Apr 2024
+
+### Added
+
+- [#1023](https://github.com/scylladb/sphinx-scylladb-theme/pull/1023): Added functionality to trigger documentation publications when updates are made to previous versions.
+- [#1059](https://github.com/scylladb/sphinx-scylladb-theme/pull/1059): Introduced an option to open topic boxes in the same tab.
+- [#1058](https://github.com/scylladb/sphinx-scylladb-theme/pull/1058): Added new button styles to the hero box.
+
+### Updated
+
+- [#972](https://github.com/scylladb/sphinx-scylladb-theme/commit/9dffad3eff41caadec25de0649abcaf5ad811027): Updated configuration to set `myst_heading_anchors` to 6 for compatibility purposes.
+- [#1036](https://github.com/scylladb/sphinx-scylladb-theme/pull/1036): Made the project name in the sidebar clickable, enhancing navigation.
+- [#1051](https://github.com/scylladb/sphinx-scylladb-theme/pull/1051): Improved the sidebar functionality to auto-scroll to the current page.
+
+### Fixed
+
+- [#1051](https://github.com/scylladb/sphinx-scylladb-theme/pull/1051): Adjusted the sidebar height to prevent the footer from overlapping
+
+### Removed
+
+- [#1053](https://github.com/scylladb/sphinx-scylladb-theme/pull/1053): Discontinued Amplify support for page previews in favor of a custom Jenkins pipeline. 
+
 ## 1.6.6 - 5 Jan 2024
 
 ### Updated
 
-- [#949](https://github.com/scylladb/sphinx-scylladb-theme/pull/949): Enhances Zendesk verification tag support.
+- [#949](https://github.com/scylladb/sphinx-scylladb-theme/pull/949): Enhanced Zendesk verification tag support.
 
 ## 1.6.5 - 18 Dec 2023
 
@@ -41,7 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#904](https://github.com/scylladb/sphinx-scylladb-theme/issues/904): Fixed the style of admonitions with bullet points.
 - [#889](https://github.com/scylladb/sphinx-scylladb-theme/issues/889): Optimized top scroll padding, ensuring a similar behaviour across different component types.
 
-## Removed
+### Removed
 
 - [#867](https://github.com/scylladb/sphinx-scylladb-theme/pull/867): For Windows users: We have discontinued support for Git Bash, recommending users to transition to Windows Subsystem for Linux (WSL).
 - [#912](https://github.com/scylladb/sphinx-scylladb-theme/pull/912): The Windows-specific variables previously found in the `docs/Makefile` have been removed. Windows users are now advised to ensure that Poetry is added to the system's PATH for seamless command execution and script running.
