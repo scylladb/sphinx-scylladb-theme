@@ -6,6 +6,7 @@ from sphinx_scylladb_theme.extensions.hero_box import HeroBox
 
 pre_content_data = [
     [
+        # Test hero header
         [],
         {"title": "Lorem Ipsum", "class": "hero_test"},
         ["Content"],
@@ -20,6 +21,7 @@ pre_content_data = [
         """,
     ],
     [
+        # Test hero with image
         [],
         {"title": "Lorem Ipsum", "class": "hero_test", "image": "image.png"},
         ["Content"],
@@ -38,26 +40,7 @@ pre_content_data = [
 
 post_content_data = [
     [
-        [],
-        {
-            "title": "Lorem Ipsum",
-            "button_icon": "fa",
-            "button_text": "Test",
-            "button_url": "#",
-        },
-        ["Content"],
-        """
-        </div>
-        <a href="#">
-            <button class="hero__button button">
-                <i class="icon fa" aria-hidden="true"></i>
-                Test
-            </button>
-        </a>
-        </div></div></div>
-        """,
-    ],
-    [
+        # Test search box
         [],
         {"title": "Lorem Ipsum", "search_box": True},
         ["Content"],
@@ -67,8 +50,114 @@ post_content_data = [
             <ci-search></ci-search>
         </div>
         </div></div></div>
+        """
+    ],
+    [
+        # Test button with icon
+        [],
+        {"title": "Lorem Ipsum", "button_icon": "fa", "button_text": "Test", "button_url": "#"},
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button">
+                <i class="icon icon--left fa" aria-hidden="true"></i>
+                Test
+            </button>
+        </a>
+        </div></div></div>
+        """
+    ],
+    [
+        # Test button with icon on the right
+        [],
+        {
+            "title": "Learn more",
+            "button_icon": "fa",
+            "button_text": "Discover",
+            "button_url": "#",
+            "button_icon_position": "right",
+        },
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button">
+                Discover<i class="icon icon--right fa" aria-hidden="true"></i>
+            </button>
+        </a>
+        </div></div></div>
         """,
     ],
+    [
+        # Test button with CTA
+        [],
+        {
+            "title": "Learn more",
+            "button_icon": "fa",
+            "button_text": "Discover",
+            "button_url": "#",
+            "cta": "More info",
+            "button_icon_position": "right",
+        },
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button">
+                Discover <span class='hero__cta'>More info</span><i class="icon icon--right fa" aria-hidden="true"></i> 
+            </button>
+        </a>
+        </div></div></div>
+        """,
+    ],
+    [
+        # Test button with bold style
+        [],
+        {
+            "title": "Check Now",
+            "button_icon": "fa-check",
+            "button_text": "Submit",
+            "button_url": "#",
+            "button_style": "bold",
+        },
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button hero__button--bold">
+                <i class="icon icon--left fa-check" aria-hidden="true"></i>
+                Submit
+            </button>
+        </a>
+        </div></div></div>
+        """,
+    ],
+        [
+        # Test button with CTA & icon as link
+        [],
+        {
+            "title": "Learn more",
+            "button_icon": "fa",
+            "button_text": "Discover",
+            "button_icon": "fa",
+            "button_url": "#",
+            "cta": "More info",
+            "button_icon_position": "right",
+            "button_icon_link": True,
+        },
+        ["Content"],
+        """
+        </div>
+        <a href="#">
+            <button class="hero__button button">
+                Discover <span class='hero__cta'>More info</span><i class="icon icon--right icon--link fa" aria-hidden="true"></i>
+            </button>
+        </a>
+        </div></div></div>
+        """,
+    ],
+
 ]
 
 mock_state_machine = Mock()

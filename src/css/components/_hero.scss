@@ -42,9 +42,27 @@
     text-transform: uppercase;
     margin-top: 20px;
 
+    &--bold {
+      font-weight: bold;
+      border-width: 2px;
+    }
+
     .icon {
       margin-right: 5px;
-    }
+
+      &--right {
+        margin-right: 0px;
+        margin-left: 5px;
+      }
+
+      &--link {
+        color: $color-typography-hero-cta;
+      }
+    }    
+  }
+
+  &__cta {
+    color: $color-typography-hero-cta;
   }
 
   &__search-box {
