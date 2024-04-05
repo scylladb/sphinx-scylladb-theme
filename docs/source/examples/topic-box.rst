@@ -54,6 +54,11 @@ The ``topic-box`` directive supports the following options:
     -
     - getting-started
     - Relative link or external URL for the call to action. Do not use leading and trailing ("/") symbols to define relative links. (e.g. instead of ``/getting-started/``, use ``getting-started``).
+  * - ``link_target``
+    - string
+    -
+    - auto
+    - Defines if the link should be opened in a new tab or not. Available values: `auto`, `_blank`, `_self`. Defaults to `auto`.
   * - ``anchor``
     - string
     -
@@ -132,6 +137,32 @@ Results in:
 .. topic-box::
     :title: Lorem Ipsum
     :link: https://scylladb.com
+    :anchor: Lorem ipsum
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+Topic with external link (same tab)
+...................................
+
+Using:
+
+.. code-block:: rst
+
+    .. topic-box::
+        :title: Lorem Ipsum
+        :link: https://scylladb.com
+        :link_target: _self
+        :anchor: Lorem ipsum
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Results in:
+
+.. topic-box::
+    :title: Lorem Ipsum
+    :link: https://scylladb.com
+    :link_target: _self
     :anchor: Lorem ipsum
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

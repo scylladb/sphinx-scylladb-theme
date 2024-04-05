@@ -12,6 +12,7 @@ class TopicBox(Directive):
     option_spec = {
         "title": directives.unchanged_required,
         "link": directives.path,
+        "link_target": directives.path,
         "anchor": directives.path,
         "icon": directives.path,
         "icon_color": directives.path,
@@ -24,20 +25,21 @@ class TopicBox(Directive):
         container_class_name = self.options.get("class", "").replace(",", " ")
 
         link = self.options.get("link")
+        link_target = self.options.get("link_target", "auto")  
         link_template = """
             <div class="{class_name} {container_class_name}">
                 <div class="card">
             """
-        if is_url(link):
-            link_template = """
-            <div class="cell {class_name} {container_class_name}">
-                <a class="card" href="{link}" target="_blank">
-            """
-        elif link:
-            link_template = """
-            <div class="cell {class_name} {container_class_name}">
-                <a class="card" href="{link}">
-            """
+        if link:
+            target_attr = ''
+            if link_target == "_blank":
+                target_attr = 'target="_blank"'
+            elif link_target == 'auto' and is_url(link):
+                target_attr = 'target="_blank"'
+            link_template = f"""
+                <div class="cell {class_name} {container_class_name}">
+                    <a class="card" href="{link}" {target_attr}>
+                """
 
         html_tag_open = generate_template(
             link_template,
@@ -84,7 +86,7 @@ class TopicBox(Directive):
                  <i class="fa fa-external-link" aria-hidden="true"></i>
                 </div>
                 """
-                if is_url(link)
+                if target_attr == 'target="_blank"'
                 else """
                 <div class="{class_name}__anchor">{anchor}</div>
                 """,
