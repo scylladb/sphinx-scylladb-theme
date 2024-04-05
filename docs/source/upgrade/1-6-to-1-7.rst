@@ -49,12 +49,3 @@ Here are the main breaking changes between the 1.6 and 1.7 versions.
         (...)
 
 #. The theme no longer supports Amplify. If your project includes the ``.github/actions/amplify-enhanced`` directory, the ``.github/workflows/docs-amplify-enhanced.yml`` workflow, or an ``amplify.yml`` file, consider removing them and move to the new approach. For more information, see :doc:`Pull requests previews <../deployment/previews>`.
-
-
-
-
-
-
-
-
-
