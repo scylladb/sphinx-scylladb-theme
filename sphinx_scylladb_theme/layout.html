@@ -6,7 +6,9 @@
         <script type="text/javascript" src="{{ pathto('_static/js/runtime.bundle.js', 1) }}"></script>
         <script type="text/javascript" src="{{ pathto('_static/js/main.bundle.js', 1) }}"></script>
         {% for js in script_files %}
-            {{ js_tag(js) }}
+            {% if not (exclude_doctools and 'doctools.js' in js_tag(js)) %}
+                {{ js_tag(js) }}
+            {% endif %}
         {% endfor %}
     {% endmacro %}
     {% macro css() %}
