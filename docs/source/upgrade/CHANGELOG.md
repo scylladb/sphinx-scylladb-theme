@@ -5,13 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.7.1 - 5 Apr 2024
+## 1.7.1 - 12 Apr 2024
 
 ### Added
 
 - [#1023](https://github.com/scylladb/sphinx-scylladb-theme/pull/1023): Added functionality to trigger documentation publications when updates are made to previous versions.
-- [#1059](https://github.com/scylladb/sphinx-scylladb-theme/pull/1059): Introduced an option to open topic boxes in the same tab.
 - [#1058](https://github.com/scylladb/sphinx-scylladb-theme/pull/1058): Added new button styles to the hero box.
+- [#1059](https://github.com/scylladb/sphinx-scylladb-theme/pull/1059): Introduced an option to open topic boxes in the same tab.
+- [#1069](https://github.com/scylladb/sphinx-scylladb-theme/pull/1069): Adds the option to exclude ``doctools.js`` per page to make the theme compatible with Swagger UI.
 
 ### Updated
 
