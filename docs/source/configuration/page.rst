@@ -88,3 +88,14 @@ If set, hides the version warning from the page.
 .. code-block:: none
 
    :hide-version-warning:
+
+Exclude doctools
+----------------
+
+Excludes ``doctools.js`` from specific documentation pages.
+
+Required to make the toolchain compatible with Swagger UI.
+
+.. code-block:: none
+
+   :exclude-doctools:
