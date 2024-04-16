@@ -19,33 +19,6 @@ Here are the main breaking changes between the 1.6 and 1.7 versions.
 
 #. To ensure documentation builds when backporting content to previous branches, update the ``.github/workflows/gh-pages.yml`` workflow file as outlined below:
 
-    .. code-block:: yaml
-
-        (...)
-        on:
-        push:
-            branches:
-            - master # Replace with your default branch name
-            - 'branch-**' # Use the versioned branch pattern
-            paths:
-            - "docs/**"
-        workflow_dispatch:
-
-        jobs:
-        build:
-            runs-on: ubuntu-latest
-            steps:
-            - name: Checkout
-                uses: actions/checkout@v4
-                with:
-                ref: ${{ github.event.repository.default_branch }}
-                persist-credentials: false
-                fetch-depth: 0
-            - name: Set up Python
-                uses: actions/setup-python@v5
-                with:
-                python-version: '3.10'
-            - name: Set up env
-        (...)
+    .. literalinclude:: _partials/docs-pages-1.7.yml
 
 #. The theme no longer supports Amplify. If your project includes the ``.github/actions/amplify-enhanced`` directory, the ``.github/workflows/docs-amplify-enhanced.yml`` workflow, or an ``amplify.yml`` file, consider removing them and move to the new approach. For more information, see :doc:`Pull requests previews <../deployment/previews>`.
