@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "1.7.1"
+version = "1.7.2"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = ["David García <hi@davidgarcia.dev>"]
 exclude = [".github", "config", "docs", "extensions", ".postcss.config.js", ".prettierrc.json", "deploy.sh", "src", "package.json", "package-lock.json"]
