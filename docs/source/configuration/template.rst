@@ -187,6 +187,10 @@ Configuration options for the Edit on this page button.
     - string
     -
     - Repository organization name and project slug where docs are hosted, separated by a slash (/).
+  * - ``github_label``
+    - string
+    - documentation
+    - Name of the label to be used when creating an issue on GitHub.
   * - ``hide_edit_this_page_button``
     - string
     - true

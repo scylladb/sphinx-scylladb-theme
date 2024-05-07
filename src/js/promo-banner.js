@@ -32,7 +32,10 @@ export class PromoBannerHandler {
 
 	adjustScrollPaddingTop() {
 		const headerHeight = $('.header').outerHeight() || 0;
-		const promoBannerHeight = $('.promo-banner').outerHeight() || 0;
+		let promoBannerHeight = 0;
+		if ($('.promo-banner').is(':visible')) {
+			promoBannerHeight = $('.promo-banner').outerHeight();
+		}
 		const offset = 10;
 		const totalHeight = headerHeight + promoBannerHeight + offset;
 		$('html').css('scroll-padding-top', totalHeight + 'px');
