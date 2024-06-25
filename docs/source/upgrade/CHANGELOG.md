@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Updated
 
-- [#XYZ](https://github.com/scylladb/sphinx-scylladb-theme/pull/XYZ): Compatibility with Python 3.12.
+- [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/XYZ): Compatibility with Python 3.12.
 
 ## 1.7.2 - 30 Apr 2024
 
