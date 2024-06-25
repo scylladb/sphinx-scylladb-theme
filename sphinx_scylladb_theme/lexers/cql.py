@@ -233,7 +233,7 @@ class CQLLexer(RegexLexer):
             (r"//.*\n?", Comment.Single),
             (r"/\*", Comment.Multiline, "multiline-comments"),
             (
-                r"(" + "|".join(s.replace(" ", "\s+") for s in DATATYPES) + r")\b",
+                r"(" + "|".join(s.replace(" ", r"\s+") for s in DATATYPES) + r")\b",
                 Name.Builtin,
             ),
             (words(KEYWORDS, suffix=r"\b"), Keyword),
