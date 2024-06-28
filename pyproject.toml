@@ -7,7 +7,7 @@ exclude = [".github", "config", "docs", "extensions", ".postcss.config.js", ".pr
 readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 sphinx-collapse = "^0.1.1"
 sphinx-copybutton = "^0.5.2"
 beautifulsoup4 = "^4.12.3"
