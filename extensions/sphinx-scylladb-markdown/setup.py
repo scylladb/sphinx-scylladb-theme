@@ -20,7 +20,7 @@ setup(
         "sphinx >= 2.1",
         "recommonmark == 0.7.1",
         "sphinx-markdown-tables == 0.0.17",
-        "myst-parser >= 2.0.0"
+        "myst-parser >= 2.0.0",
     ],
     packages=["sphinx_scylladb_markdown"],
 )

@@ -1,4 +1,5 @@
 from unittest.mock import Mock
+
 import pytest
 from bs4 import BeautifulSoup as bs
 
@@ -94,7 +95,17 @@ mock_state = Mock()
 
 @pytest.mark.parametrize("arguments, options, content, expected", test_data)
 def test(arguments, options, content, expected):
-    directive = TopicBox("component", arguments, options, content, 0, 0, "", mock_state_machine, mock_state)
+    directive = TopicBox(
+        "component",
+        arguments,
+        options,
+        content,
+        0,
+        0,
+        "",
+        mock_state_machine,
+        mock_state,
+    )
     result = directive.run()
     assert (
         bs(result[0].astext(), "html.parser").prettify()

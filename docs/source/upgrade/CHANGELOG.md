@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/1123): Compatibility with Python 3.12.
+- [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/1123): Replaced Flake8 with Ruff for faster code linting.
+
+### Removed
+
+- [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/1123): Deprecate Prettier for code linting (pre-commit).
 
 ## 1.7.2 - 30 Apr 2024
 
