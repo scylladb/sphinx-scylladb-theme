@@ -1,6 +1,7 @@
+from unittest.mock import Mock
+
 import pytest
 from bs4 import BeautifulSoup as bs
-from unittest.mock import Mock
 
 from sphinx_scylladb_theme.extensions.hero_box import HeroBox
 
@@ -50,12 +51,17 @@ post_content_data = [
             <ci-search></ci-search>
         </div>
         </div></div></div>
-        """
+        """,
     ],
     [
         # Test button with icon
         [],
-        {"title": "Lorem Ipsum", "button_icon": "fa", "button_text": "Test", "button_url": "#"},
+        {
+            "title": "Lorem Ipsum",
+            "button_icon": "fa",
+            "button_text": "Test",
+            "button_url": "#",
+        },
         ["Content"],
         """
         </div>
@@ -66,7 +72,7 @@ post_content_data = [
             </button>
         </a>
         </div></div></div>
-        """
+        """,
     ],
     [
         # Test button with icon on the right
@@ -133,14 +139,13 @@ post_content_data = [
         </div></div></div>
         """,
     ],
-        [
+    [
         # Test button with CTA & icon as link
         [],
         {
             "title": "Learn more",
             "button_icon": "fa",
             "button_text": "Discover",
-            "button_icon": "fa",
             "button_url": "#",
             "cta": "More info",
             "button_icon_position": "right",
@@ -157,7 +162,6 @@ post_content_data = [
         </div></div></div>
         """,
     ],
-
 ]
 
 mock_state_machine = Mock()
@@ -167,14 +171,34 @@ mock_state = Mock()
 
 @pytest.mark.parametrize("arguments, options, content, expected", pre_content_data)
 def test_pre_content(arguments, options, content, expected):
-    directive = HeroBox("component", arguments, options, content, 0, 0, "", mock_state_machine, mock_state)
+    directive = HeroBox(
+        "component",
+        arguments,
+        options,
+        content,
+        0,
+        0,
+        "",
+        mock_state_machine,
+        mock_state,
+    )
     result = directive.run()
     assert bs(result[0].astext(), "html.parser") == bs(expected, "html.parser")
 
 
 @pytest.mark.parametrize("arguments, options, content, expected", post_content_data)
 def test_post_content(arguments, options, content, expected):
-    directive = HeroBox("component", arguments, options, content, 0, 0, "", mock_state_machine, mock_state)
+    directive = HeroBox(
+        "component",
+        arguments,
+        options,
+        content,
+        0,
+        0,
+        "",
+        mock_state_machine,
+        mock_state,
+    )
     result = directive.run()
     assert (
         bs(result[2].astext(), "html.parser").prettify()

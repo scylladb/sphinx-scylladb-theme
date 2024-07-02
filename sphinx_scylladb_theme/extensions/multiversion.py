@@ -4,6 +4,7 @@ Extends sphinx_multiversion:
 - 404 pages support
 - Redirect to latest version
 """
+
 import os
 from pathlib import Path
 
@@ -83,7 +84,7 @@ def create_redirect_to_latest_version(app, exception):
     out_dir = Path(app.builder.outdir)
     head = out_dir.parent
     theme_options = app.config.html_theme_options
-    zendesk_tag = theme_options.get("zendesk_tag", '')
+    zendesk_tag = theme_options.get("zendesk_tag", "")
 
     with open(head / "index.html", "w+") as t_file:
         t_file.write(build_redirect_body(latest_dir, zendesk_tag))

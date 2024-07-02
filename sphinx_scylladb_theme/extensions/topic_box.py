@@ -1,6 +1,7 @@
 """
 Sphinx directive for HTML Topic Box Components.
 """
+
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
@@ -25,16 +26,16 @@ class TopicBox(Directive):
         container_class_name = self.options.get("class", "").replace(",", " ")
 
         link = self.options.get("link")
-        link_target = self.options.get("link_target", "auto")  
+        link_target = self.options.get("link_target", "auto")
         link_template = """
             <div class="{class_name} {container_class_name}">
                 <div class="card">
             """
         if link:
-            target_attr = ''
+            target_attr = ""
             if link_target == "_blank":
                 target_attr = 'target="_blank"'
-            elif link_target == 'auto' and is_url(link):
+            elif link_target == "auto" and is_url(link):
                 target_attr = 'target="_blank"'
             link_template = f"""
                 <div class="cell {class_name} {container_class_name}">
