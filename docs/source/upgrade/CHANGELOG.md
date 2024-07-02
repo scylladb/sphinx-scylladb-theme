@@ -5,15 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.7.3 - 25 Jun 2024
+
+### Updated
+
+- [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/1123): Compatibility with Python 3.12.
+- [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/1123): Replaced Flake8 with Ruff for faster code linting.
+
+### Removed
+
+- [#1123](https://github.com/scylladb/sphinx-scylladb-theme/pull/1123): Deprecate Prettier for code linting (pre-commit).
+
 ## 1.7.2 - 30 Apr 2024
 
 ### Added
 
-- Option to override the "Create an issue" label per project.
+- [#1093](https://github.com/scylladb/sphinx-scylladb-theme/pull/1093): Option to override the "Create an issue" label per project.
 
 ### Fixed
 
-- Right sidebar scroll highlighting.
+- [#1092](https://github.com/scylladb/sphinx-scylladb-theme/pull/1092): Right sidebar scroll highlighting.
 
 
 ## 1.7.1 - 12 Apr 2024

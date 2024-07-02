@@ -1,6 +1,7 @@
 """
 Sphinx role for HTML Label Components.
 """
+
 from docutils import nodes
 from sphinx.util.docutils import SphinxRole
 
