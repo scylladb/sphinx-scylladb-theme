@@ -30,7 +30,7 @@
     "postcss-preset-env": "^9.5.14",
     "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
-    "webpack": "^5.91.0",
+    "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.10.0"
   }
