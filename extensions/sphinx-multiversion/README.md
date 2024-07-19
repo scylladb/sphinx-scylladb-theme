@@ -41,7 +41,6 @@ Here's an example:
 smv_latest_version = 'x.y.z'         # Use the branch/tag name
 smv_rename_latest_version = 'latest' # Use the commit hash
 ```
-
 ### Add support for custom tags
 
 See https://github.com/dgarcia360/sphinx-multiversion/pull/4
@@ -54,12 +53,12 @@ See https://github.com/scylladb/scylla-enterprise/issues/3414
 
 See https://github.com/scylladb/sphinx-scylladb-theme/pull/891
 
-## Maintenance
+### Version specific overrides
 
-This fork will be maintained until the following issues are solved:
+The following properties can be defined on a per-version basis.
 
-- https://github.com/Holzhaus/sphinx-multiversion/issues/45
-- https://github.com/Holzhaus/sphinx-multiversion/issues/65
+* `rst_prolog`
+* `exclude_patterns`: Introduced in 0.3.2
 
 ## License
 
