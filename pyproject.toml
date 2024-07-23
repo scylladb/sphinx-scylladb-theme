@@ -15,7 +15,7 @@ sphinx-tabs = "^3.4.5"
 pyyaml = "^6.0.1"
 Sphinx-Substitution-Extensions = "^2022.2.16"
 sphinx-notfound-page = "^1.0.2"
-setuptools = "^70.1.1"
+setuptools = ">=70.1.1,<72.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.1"
