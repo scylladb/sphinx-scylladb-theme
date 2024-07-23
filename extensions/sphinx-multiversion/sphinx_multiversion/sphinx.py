@@ -181,7 +181,7 @@ def config_inited(app, config):
     config.version = data["version"]
     config.release = data["release"]
     config.rst_prolog = data["rst_prolog"]
-    config.exclude_pattern = data["exclude_pattern"]
+    config.exclude_patterns = data["exclude_patterns"]
     config.today = old_config.today
     if not config.today:
         config.today = sphinx_i18n.format_date(
