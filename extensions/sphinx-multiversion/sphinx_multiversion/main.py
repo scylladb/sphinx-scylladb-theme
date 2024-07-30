@@ -313,6 +313,7 @@ def main(argv=None):
                 "version": current_config.version,
                 "release": current_config.release,
                 "rst_prolog": current_config.rst_prolog,
+                "exclude_patterns": current_config.exclude_patterns,
                 "is_released": bool(
                     re.match(config.smv_released_pattern, gitref.refname)
                 ),
