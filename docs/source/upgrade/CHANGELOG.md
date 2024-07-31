@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.7.4 - 30 Jul 2024
+
+## Fixed
+
+- Set `sphinx-notfound-page` to `0.1.2` to fix the issue raised by the latest version of the extension. More details in https://github.com/readthedocs/sphinx-notfound-page/issues/240
+
 ## 1.7.3 - 25 Jun 2024
 
 ### Updated
