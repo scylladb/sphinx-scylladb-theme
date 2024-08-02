@@ -9,6 +9,7 @@
   }
 }
 
+
 .tooltip:empty {
   display: none !important;
 }
@@ -17,3 +18,13 @@
   border: 0;
   cursor: pointer;
 }
+
+.content .has-tip {
+  font-weight: inherit;
+}
+
+.content .has-tip .scylla-icon {
+  height: 14px;
+  width: 14px;
+}
+
