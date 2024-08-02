@@ -30,6 +30,7 @@ In general, there are main components to the markup of any document:
    tabs
    text
    toc
+   tooltips
    topic-box
    versions
 
