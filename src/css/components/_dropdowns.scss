@@ -1,12 +1,12 @@
 .scylla-dropdown {
-  color: $color-typography-dropdown;
+  color: var(--color-typography-dropdown);
   font-size: $font-small;
   line-height: 20px;
 
   a,
   a:hover,
   a:focus {
-    color: $color-typography-dropdown !important;
+    color: var(--color-typography-dropdown) !important;
     padding: 0 !important;
   }
 
@@ -17,6 +17,7 @@
 
   &__title {
     /* Override Foundation */
+    color: inherit;
     align-items: center;
     display: flex !important;
     position: initial !important;

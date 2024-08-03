@@ -1,6 +1,6 @@
 .side-nav {
   display: none;
-  background: $color-white;
+  background: var(--color-background-sidebar);
   height: 100vh;
   max-height: calc(100vh - #{$header-height});
   line-height: 24px;
@@ -19,7 +19,7 @@
 
     a {
       text-decoration: none;
-      color: $color-typography-base;
+      color: var(--color-typography-base);
       &:hover {
         font-weight: bold;
       }
@@ -77,9 +77,9 @@
     }
 
     a {
-      color: $color-typography-base;
+      color: var(--color-typography-base);
       &:hover {
-        color: $color-typography-base-link;
+        color: var(--color-typography-base-link);
         font-weight: 400;
       }
     }
@@ -104,22 +104,20 @@
         }
 
         &:hover > a {
-          color: $color-typography-base-link;
+          color: var(--color-typography-base-link);
         }
 
         &:hover > .toctree-checkbox ~ label i {
-          filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
-            brightness(90%) contrast(95%);
+          filter: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(4311%) hue-rotate(147deg) brightness(98%) contrast(93%);
         }
       }
 
       &.current-page {
         & > a {
-          color: $color-typography-base-link;
+          color: var(--color-typography-base-link);
         }
         & > .toctree-checkbox:checked ~ label i {
-          filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg)
-            brightness(90%) contrast(95%);
+          filter: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(4311%) hue-rotate(147deg) brightness(98%) contrast(93%);
         }
       }
 
@@ -128,7 +126,7 @@
         margin-top: 18px;
 
         li {
-          border-left: 1px solid $color-border-sidebar-item;
+          border-left: 1px solid var(--color-border-sidebar-item);
           padding: 4px 0 4px 13px;
         }
 
@@ -158,7 +156,7 @@
 
 .collapsible-button {
   @include floating;
-  background-color: $color-white;
+  background-color: var(--color-white);
   border-radius: 50%;
   bottom: 10px;
   display: none;
@@ -170,6 +168,7 @@
 
   i {
     @extend .scylla-icon--expand;
+
     height: 16px;
     width: 16px;
     margin: 0;
@@ -191,7 +190,7 @@
 @media screen and (min-width: $large) {
   .side-nav {
     display: block;
-    background-color: $color-background-sidebar;
+    background-color: var(--color-background-sidebar);
     height: 100%;
     max-height: 100vh;
     max-height: calc(100vh - #{$header-height-large});

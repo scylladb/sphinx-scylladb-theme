@@ -1,13 +1,12 @@
 .admonition {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
-  color: $color-typography-admonition-text;
+  color: var(--color-typography-admonition-text);
   font-size: $font-small;
   line-height: 20px;
   margin-bottom: $gap;
   overflow: auto;
-  padding: 20px;
-  padding-left: 52px;
+  padding: 20px 20px 20px 52px;
   position: relative;
 
   &:before {
@@ -21,7 +20,7 @@
   }
 
   &-title {
-    color: $color-typography-admonition-title;
+    color: var(--color-typography-admonition-title);
     left: -32px;
     position: relative;
 
@@ -39,10 +38,11 @@
   }
 
   &.tip {
-    border: 1px solid $color-border-admonition-tip;
+    border: 1px solid var(--color-border-admonition-tip);
 
     &:before {
-      border-left: 8px solid transparentize($color-border-admonition-tip, 0.6);
+      // TODO: fix transparency
+      border-left: 8px solid rgba(var(--color-border-admonition-tip), 0.6);
     }
 
     .admonition-title:before {
@@ -53,10 +53,10 @@
   }
 
   &.note {
-    border: 1px solid $color-border-admonition-note;
+    border: 1px solid var(--color-border-admonition-note);
 
     &:before {
-      border-left: 8px solid transparentize($color-border-admonition-note, 0.6);
+      border-left: 8px solid rgba(var(--color-border-admonition-note), 0.6);
     }
 
     .admonition-title:before {
@@ -67,11 +67,11 @@
   }
 
   &.caution {
-    border: 1px solid $color-border-admonition-caution;
+    border: 1px solid var(--color-border-admonition-caution);
 
     &:before {
       border-left: 8px solid
-        transparentize($color-border-admonition-caution, 0.6);
+        rgba(var(--color-border-admonition-caution), 0.6);
     }
 
     .admonition-title:before {
@@ -82,11 +82,11 @@
   }
 
   &.warning {
-    border: 1px solid $color-border-admonition-warning;
+    border: 1px solid var(--color-border-admonition-warning);
 
     &:before {
       border-left: 8px solid
-        transparentize($color-border-admonition-warning, 0.6);
+        rgba(var(--color-border-admonition-warning), 0.6);
     }
 
     .admonition-title:before {

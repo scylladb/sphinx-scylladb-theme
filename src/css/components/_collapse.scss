@@ -8,18 +8,21 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   margin-left: 0 !important;
+  color: var(--color-ebony-clay);
 }
 
 .sphinx_collapse__icon {
   margin-left: 5px;
   margin-right: 0;
+
+  border-top-color: var(--color-ebony-clay) !important;
 }
 
 .sphinx_collapse__input:checked ~ .sphinx_collapse__label,
 .sphinx_collapse__label:hover {
-  color: $color-typography-base-link;
+  color: var(--color-typography-base-link);
   .sphinx_collapse__icon {
-    border-top-color: $color-typography-base-link;
+    border-top-color: var(--color-typography-base-link) !important;
   }
 }
 
