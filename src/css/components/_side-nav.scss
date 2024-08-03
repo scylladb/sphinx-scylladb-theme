@@ -108,7 +108,7 @@
         }
 
         &:hover > .toctree-checkbox ~ label i {
-          filter: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(4311%) hue-rotate(147deg) brightness(98%) contrast(93%);
+          filter: var(--color-filter-sidenav-toctree)
         }
       }
 
@@ -117,7 +117,7 @@
           color: var(--color-typography-base-link);
         }
         & > .toctree-checkbox:checked ~ label i {
-          filter: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(4311%) hue-rotate(147deg) brightness(98%) contrast(93%);
+          filter: var(--color-filter-sidenav-toctree)
         }
       }
 

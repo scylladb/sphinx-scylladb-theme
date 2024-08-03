@@ -13,11 +13,13 @@ import { PromoBannerHandler } from "./promo-banner";
 import { SecondarySidebarHandler } from "./secondary-sidebar";
 import { SidebarHandler } from "./sidebar";
 import { TablesHandler } from "./tables";
+import {DarkTheme} from "./dark-theme";
 
 $(document).ready(function () {
   new ImagesHandler().init();
   $(document).foundation();
   new TablesHandler().init();
+  new DarkTheme().init();
   new LinksHandler().init();
   new PromoBannerHandler().init();
   new CollapseHandler().init();
