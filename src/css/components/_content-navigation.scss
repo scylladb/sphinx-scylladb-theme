@@ -14,7 +14,7 @@
   }
 
   &__title {
-    color: $color-typography-content-navigation-text;
+    color: var(--color-typography-content-navigation-text);
     font-weight: 500;
     font-size: $font-smallest;
     letter-spacing: 1.5px;
@@ -23,13 +23,13 @@
     word-wrap: break-word;
 
     .colored {
-      color: $color-typography-content-navigation-title-colored;
+      color: var(--color-typography-content-navigation-title-colored);
     }
   }
 
   &__button {
     @include floating;
-    background-color: $color-white;
+    background-color: var(--color-white);
     display: none;
     height: fit-content;
     font-size: 0px;

@@ -4,7 +4,7 @@
     margin-left: 0;
 
     > li {
-      border-bottom: 1px solid $color-border-toc-local-li;
+      border-bottom: 1px solid var(--color-border-toc-local-li);
       padding: 10px 0;
       word-break: break-word;
 
@@ -52,9 +52,11 @@
 }
 
 .topic-title {
-  color: $color-typography-on-this-page;
+  color: var(--color-typography-on-this-page);
   font-size: 10px;
   margin-bottom: 0;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
+
+

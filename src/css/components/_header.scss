@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  background-color: $color-background-header;
+  background-color: var(--color-background-header);
   box-shadow: 0 2px 22px rgba(74, 93, 166, 0.15);
   display: flex;
   justify-content: space-between;
@@ -21,15 +21,15 @@
   }
 
   &__bar {
-    background-color: $color-typography-logo;
-    border-left: 1px solid $color-typography-logo;
+    background-color: var(--color-typography-logo);
+    border-left: 1px solid var(--color-typography-logo);
     height: 11.56px;
     margin: 0 7.5px;
     width: 0px;
   }
 
   &__text {
-    color: $color-typography-logo;
+    color: var(--color-typography-logo);
     font-size: 10.11px;
     letter-spacing: 0.722408px;
     line-height: 12px;
@@ -51,6 +51,11 @@
   display: none;
   margin-right: 20px;
   width: 200px;
+}
+
+.scylla-dropdown__content {
+    background-color: var(--color-background-dropdown-contribute);
+
 }
 
 .scylla-dropdown--header {
