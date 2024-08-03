@@ -23,6 +23,7 @@
     color: var(--color-typography-admonition-title);
     left: -32px;
     position: relative;
+    font-weight: bold;
 
     &:before {
       content: "";
@@ -38,10 +39,10 @@
   }
 
   &.tip {
+    background-color: var(--color-background-admonition-tip);
     border: 1px solid var(--color-border-admonition-tip);
 
     &:before {
-      // TODO: fix transparency
       border-left: 8px solid rgba(var(--color-border-admonition-tip), 0.6);
     }
 
@@ -50,9 +51,14 @@
       filter: invert(47%) sepia(11%) saturate(2286%) hue-rotate(73deg)
         brightness(109%) contrast(88%);
     }
+
+    .admonition-title {
+      color: var(--color-typography-admonition-tip) !important;
+    }
   }
 
   &.note {
+    background-color: var(--color-background-admonition-note);
     border: 1px solid var(--color-border-admonition-note);
 
     &:before {
@@ -64,9 +70,13 @@
       filter: invert(44%) sepia(55%) saturate(2310%) hue-rotate(191deg)
         brightness(81%) contrast(103%);
     }
+    .admonition-title {
+      color: var(--color-typography-admonition-note) !important;
+    }
   }
 
   &.caution {
+    background-color: var(--color-background-admonition-caution);
     border: 1px solid var(--color-border-admonition-caution);
 
     &:before {
@@ -79,9 +89,14 @@
       filter: invert(77%) sepia(56%) saturate(3332%) hue-rotate(357deg)
         brightness(98%) contrast(108%);
     }
+
+    .admonition-title {
+      color: var(--color-typography-admonition-caution) !important;
+    }
   }
 
   &.warning {
+    background-color: var(--color-background-admonition-warning);
     border: 1px solid var(--color-border-admonition-warning);
 
     &:before {
@@ -93,6 +108,9 @@
       @extend .scylla-icon--warning;
       filter: invert(41%) sepia(42%) saturate(6427%) hue-rotate(343deg)
         brightness(99%) contrast(83%);
+    }
+    .admonition-title {
+      color: var(--color-typography-admonition-warning) !important;
     }
   }
 }

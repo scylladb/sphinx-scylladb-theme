@@ -31,8 +31,7 @@
           content: "";
           @extend .scylla-icon;
           @extend .scylla-icon--chevron-right;
-          filter: invert(40%) sepia(11%) saturate(2157%) hue-rotate(198deg)
-            brightness(89%) contrast(87%) !important;
+          filter: var(--color-filter-sidenav-toctree) !important;
           opacity: 0.5;
           min-height: 10px;
           width: 10px;
