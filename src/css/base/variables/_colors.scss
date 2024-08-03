@@ -44,7 +44,7 @@
   --color-background-scrollbar: var(--color-cadet-blue);
   --color-background-sidebar: var(--color-zircon);
   --color-background-table: var(--color-zircon);
-  --color-background-topic-box: block;
+  --color-background-topic-box: var(--color-white);
   --color-background-table-body: var(--color-white);
   --color-background-tooltip: var(--color-black-soft);
   --color-background-feedback-container: var(--color-white);
@@ -105,6 +105,9 @@
   --color-typography-topic-title: var(--color-ebony-clay);
   --color-typography-search-box-input: rgba(80, 80, 80, 0.5);
   --color-typography-search-box-input-placeholder: rgba(80, 80, 80, 0.5) !important;
+
+  /* Color Filter */
+  --color-filter-sidenav-toctree: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg) brightness(90%) contrast(95%);
 }
 
 
@@ -196,4 +199,6 @@
   --color-background-search-item-hover: rgba(14, 70, 78, 0.97);
   --color-border-feedback-button: var(--dark-typography-title-link);
   --color-background-feedback-container: var(--dark-navigation-solid);
+
+  --color-filter-sidenav-toctree: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(4311%) hue-rotate(147deg) brightness(98%) contrast(93%);
 }

@@ -105,7 +105,10 @@
   }
 
   .header-search-box {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
 }
 
