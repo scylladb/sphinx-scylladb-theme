@@ -1,8 +1,71 @@
 /* This stylesheet uses the !important operator
    to overwrite expertrec custom CSS rules.
 */
+
+.dark {
+  .search-box {
+    &:before {
+      filter: brightness(0) saturate(100%) invert(69%) sepia(7%) saturate(114%) hue-rotate(7deg) brightness(88%) contrast(85%);
+    }
+  }
+
+  .er_search_suggestions {
+    background: var(--dark-navigation-solid) !important;
+  }
+  .er-cse-suggest-query {
+    border: 1px solid var(--dark-navigation-base-solid) !important;
+  }
+
+  .er_more_result_btn {
+    color: var(--dark-typography-title-link) !important;
+  }
+
+  .er-search-result-box {
+    border: 1px solid var(--dark-navigation-base-solid) !important;
+    .er-title {
+        color: var(--dark-typography-title) !important;
+    }
+    .er-text {
+        color: var(--dark-typography-paragraph) !important;
+    }
+    .er-url {
+      color: var(--dark-typography-paragraph) !important;
+    }
+  }
+  ci-suggest {
+    background: var(--dark-navigation-solid) !important;
+
+    .er-dummy-search-box {
+      border-bottom: #146263 !important;
+    }
+    .er_search_button_back {
+      background: var(--dark-navigation-solid) !important;
+      color: var(--dark-typography-paragraph) !important;;
+    }
+
+    .er_search_input_dummy {
+        background: var(--dark-navigation-solid) !important;
+      color: var(--dark-typography-paragraph) !important;;
+    }
+
+    .er_search_button_dummy {
+      background: var(--dark-navigation-solid) !important;
+    }
+
+    .er-search-result-box {
+      background: var(--dark-navigation-solid) !important;
+      border: 1px solid var(--dark-navigation-base-solid) !important;
+    }
+
+    .er-search-result-box:hover {
+      background: var(--color-background-search-item-hover) !important;
+    }
+  }
+
+}
+
 .search-box {
-  background: $color-background-search-box;
+  background: var(--color-background-search-box);
   border-radius: 4px;
   display: flex;
   padding: 10px 15px;
@@ -36,14 +99,14 @@
 
   input {
     background: transparent !important;
-    color: rgba(80, 80, 80, 0.5) !important;
+    color: var(--color-typography-search-box-input) !important;
     font-size: $font-small !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
 
     &::placeholder {
-      color: rgba(80, 80, 80, 0.5) !important;
+      color: var(--color-typography-search-box-input-placeholder) !important;
       opacity: 1 !important;
     }
   }
@@ -63,7 +126,7 @@
     border-width: 1px !important;
 
     &:hover {
-      background: $color-background-search-item-hover !important;
+      background: var(--color-background-search-item-hover) !important;
     }
   }
 

@@ -4,7 +4,7 @@
   margin-bottom: $gap;
 
   &__title {
-    color: $color-typography-topic-grid-title;
+    color: var(--color-typography-topic-grid-title);
     font-size: 24px;
     margin-bottom: 6px;
     line-height: 32px;
@@ -14,7 +14,7 @@
   &__text {
     font-size: 18px;
     line-height: 24px;
-    color: $color-typography-topic-grid-text;
+    color: var(--color-typography-topic-grid-text);
   }
 
   &--scrollable .hs {
@@ -50,17 +50,18 @@
     position: relative;
     padding: 20px;
     font-size: 18px;
+    background-color: var(--color-background-topic-box);
 
     &:hover {
-      color: $color-typography-base;
-      border: 1px solid $color-border-topic-box-hover;
+      color: var(--color-border-topic-box-hover);
+      border: 1px solid var(--color-border-topic-box-hover) !important;
       font-weight: 400;
     }
   }
 
   &__title {
     font-weight: 700;
-    color: $color-typography-topic-title;
+    color: var(--color-typography-topic-title);
     font-size: $font-base;
     line-height: 24px;
     margin-bottom: 0;
@@ -76,7 +77,7 @@
   }
 
   &__body {
-    color: $color-typography-topic-text;
+    color: var(--color-typography-topic-text);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -97,7 +98,7 @@
   }
 
   &__anchor {
-    color: $color-typography-topic-link;
+    color: var(--color-typography-topic-link);
     font-size: $font-small;
     font-weight: 700;
     line-height: 24px;
@@ -131,7 +132,7 @@
     text-align: center;
 
     .topic-box__title {
-      color: $color-typography-topic-title;
+      color: var(--color-typography-topic-title);
       font-size: $font-small;
     }
 
@@ -155,6 +156,8 @@
 
     &:hover {
       @include floating;
+      background-color: var(--color-background-topic-box-hover);
+      border: 1px solid var(--color-background-topic-box-hover) !important;
     }
   }
 }

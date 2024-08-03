@@ -1,7 +1,8 @@
 .side-nav-toggle {
   cursor: pointer;
-  display: block;
+  display: flex;
   margin-right: 20px;
+  gap: 10px;
   position: relative;
   z-index: 300;
 }
