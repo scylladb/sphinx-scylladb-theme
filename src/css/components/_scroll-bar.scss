@@ -4,7 +4,7 @@
     background-color: transparent;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $color-background-scrollbar;
+    background-color: var(--color-background-scrollbar);
     -webkit-border-radius: 8px;
     border-radius: 8px;
   }
