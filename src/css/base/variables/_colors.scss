@@ -37,6 +37,10 @@
   --color-background-label-note: var(--color-denim);
   --color-background-label-tip: var(--color-apple);
   --color-background-label-warning: var(--color-cinnabar);
+  --color-background-admonition-caution: var(--color-white);
+  --color-background-admonition-note: var(--color-white);
+  --color-background-admonition-tip: var(--color-white);
+  --color-background-admonition-warning: var(--color-white);
   --color-background-not-found: var(--color-zircon);
   --color-background-panel: var(--color-porcelain);
   --color-background-search-box: var(--color-porcelain);
@@ -105,9 +109,14 @@
   --color-typography-topic-title: var(--color-ebony-clay);
   --color-typography-search-box-input: rgba(80, 80, 80, 0.5);
   --color-typography-search-box-input-placeholder: rgba(80, 80, 80, 0.5) !important;
+  --color-typography-admonition-caution: var(--color-web-orange);
+  --color-typography-admonition-note: var(--color-denim);
+  --color-typography-admonition-tip: var(--color-apple);
+  --color-typography-admonition-warning: var(--color-cinnabar);
 
   /* Color Filter */
   --color-filter-sidenav-toctree: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg) brightness(90%) contrast(95%);
+
 }
 
 
@@ -126,34 +135,20 @@
   --dark-surface-four: #1F1F20;
   --dark-surface-five: #242425;
 
-  --color-alto: #e0e0e0;
-  --color-apple: #43a047;
-  --color-black: #000;
-  --color-black-soft: rgba(255, 255, 255, 0.56); /* Equivalent of transparentize($color-black, 0.44) */
-  --color-blue-bayoux: #5a7184;
+
+  --color-black-soft: rgba(255, 255, 255, 0.56);
   --color-cadet-blue: var(--dark-typography-title-link);
-  --color-cinnabar: #e74c3c;
-  --color-denim: #1976d2;
   --color-dodger-blue: var(--dark-typography-title-link);
-  --color-dusty-gray: #979797;
   --color-ebony-clay: var(--dark-typography-title);
-  --color-lavender-gray: #b6b7d5;
   --color-martinique: var(--dark-typography-title-link);;
-  --color-mine-shaft: ;
-  --color-porcelain: #f7f8f9;
-  --color-piction-blue: #42c4e6;
   --color-royal-blue: var(--dark-typography-title-link);
   --color-san-marino: var(--dark-typography-title-link);
-  --color-selago: #f2f7fe;
-  --color-waikawa-gray: #5a5e9a;
-  --color-web-orange: #ffab00;
-  --color-white: #fff;
-  --color-zircon: #f6f8ff;
 
   /** Base */
   --color-background-base: var(--dark-typography-title);
   --color-typography-base-link: var(--dark-typography-title-link);
   --color-typography-base: var(--dark-typography-title);
+  --color-typography-on-this-page: var(--dark-typography-title-link);
 
   /* Footer */
   --color-typography-footer-link: var(--dark-typography-title);
@@ -191,6 +186,16 @@
   --color-typography-dropdown: var(--dark-typography-title);
   --color-background-dropdown-contribute: var(--dark-navigation-solid);;
 
+  /* Admonitions */
+  --color-background-admonition-caution: rgba(255, 171, 0, 0.1);
+  --color-border-admonition-caution: rgba(255, 171, 0, 0.8);
+  --color-typography-admonition-caution: rgb(255, 171, 0);
+
+  --color-background-admonition-warning: rgba(231, 76, 60, 0.1);
+  --color-background-admonition-note: rgba(25, 118, 210, 0.1);
+  --color-background-admonition-tip: rgba(67, 160, 71, 0.1);
+
+
   /* Search Box */
   --color-background-search-box: var(--dark-navigation-base);
   --color-typography-search-box-input: var(--dark-typography-paragraph);
@@ -200,5 +205,5 @@
   --color-border-feedback-button: var(--dark-typography-title-link);
   --color-background-feedback-container: var(--dark-navigation-solid);
 
-  --color-filter-sidenav-toctree: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(4311%) hue-rotate(147deg) brightness(98%) contrast(93%);
+  --color-filter-sidenav-toctree: brightness(0) saturate(100%) invert(78%) sepia(13%) saturate(5778%) hue-rotate(147deg) brightness(99%) contrast(91%);
 }

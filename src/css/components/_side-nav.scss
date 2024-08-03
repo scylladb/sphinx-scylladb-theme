@@ -20,6 +20,7 @@
     a {
       text-decoration: none;
       color: var(--color-typography-base);
+
       &:hover {
         font-weight: bold;
       }
@@ -65,6 +66,7 @@
         ~ ul {
           display: block;
         }
+
         ~ label .scylla-icon--expand {
           @extend .scylla-icon--triangle-down;
         }
@@ -78,6 +80,7 @@
 
     a {
       color: var(--color-typography-base);
+
       &:hover {
         color: var(--color-typography-base-link);
         font-weight: 400;
@@ -108,7 +111,7 @@
         }
 
         &:hover > .toctree-checkbox ~ label i {
-          filter: var(--color-filter-sidenav-toctree)
+          filter: var(--color-filter-sidenav-toctree);
         }
       }
 
@@ -178,6 +181,7 @@
 .side-nav--collapsed .collapsible-button {
   left: -10px;
   border-radius: 0 20px 20px 0;
+
   i {
     transform: rotate(180deg);
   }
@@ -192,7 +196,6 @@
     display: block;
     background-color: var(--color-background-sidebar);
     height: 100%;
-    max-height: 100vh;
     max-height: calc(100vh - #{$header-height-large});
     padding: 30px 40px;
     top: $header-height-large;
@@ -231,6 +234,7 @@
       padding-left: 0;
       padding-right: 0;
       width: $side-nav-width-collapsed;
+
       .side-nav-content {
         display: none;
       }
