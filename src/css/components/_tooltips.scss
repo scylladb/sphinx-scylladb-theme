@@ -3,12 +3,24 @@
   border-radius: 4px;
   font-size: $font-smallest;
   padding: 6px;
-
-  &:before {
-    display: none !important;
-  }
+  border: 0;
 }
 
+.tooltip.top:before {
+  border-color: $color-background-tooltip transparent transparent;
+}
+
+.tooltip.bottom:before {
+  border-color: transparent transparent $color-background-tooltip;
+}
+
+.tooltip-left:before {
+  border-color: transparent transparent transparent $color-background-tooltip;
+}
+
+.tooltip-right:before {
+  border-color: transparent $color-background-tooltip transparent transparent;
+}
 
 .tooltip:empty {
   display: none !important;
@@ -21,6 +33,8 @@
 
 .content .has-tip {
   font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 .content .has-tip .scylla-icon {

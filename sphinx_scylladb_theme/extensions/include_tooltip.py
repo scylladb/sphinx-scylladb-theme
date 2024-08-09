@@ -19,7 +19,7 @@ def visit_include_tooltip_node_html(self, node):
     )
 
 def depart_include_tooltip_node_html(self, node):
-    self.body.append(' <i class="scylla-icon scylla-icon--help"></i></span>')
+    self.body.append('</span>')
 
 def get_tooltip_from_glossary(tooltip_source, inliner):
     try:
@@ -28,7 +28,7 @@ def get_tooltip_from_glossary(tooltip_source, inliner):
         if tooltip_source in glossary:
             return ''.join([term.astext() for term in glossary[tooltip_source]])
     except KeyError:
-        LOGGER.warning(f"Glossary term '{tooltip_source}' not found.")
+        pass
     return None
 
 def get_tooltip_from_text(tooltip_source):
