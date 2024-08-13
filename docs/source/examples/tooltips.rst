@@ -28,19 +28,6 @@ Results in:
 
 Here is a :include_tooltip:`word <This is the tooltip text>`.
 
-Tooltip with long description
------------------------------
-
-Using:
-
-.. code-block:: rst
-
-   Here is a :include_tooltip:`term <Long description>`.
-
-Results in:
-
-Here is a :include_tooltip:`term <Long description>`.
-
 Tooltip from a glossary entry
 .............................
 

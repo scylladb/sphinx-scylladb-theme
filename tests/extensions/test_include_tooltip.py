@@ -41,5 +41,5 @@ def test_include_tooltip_role(role_name, input_text, expected_output, glossary, 
     node = result[0]
     assert isinstance(node, include_tooltip_node)
 
-    output_html = f'<span data-tooltip data-tooltip-height="2" tabindex="1" title="{node["tooltip"]}" class="top">{node.astext()}</span>'
+    output_html = f'<span data-tooltip data-tooltip-height="0" tabindex="1" title="{node["tooltip"]}" class="top">{node.astext()}</span>'
     assert bs(output_html, "html.parser").prettify() == bs(expected_output, "html.parser").prettify()

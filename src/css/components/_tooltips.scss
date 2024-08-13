@@ -22,12 +22,7 @@
 
 .content .has-tip {
   font-weight: inherit;
+  cursor: help;
   text-decoration: underline;
   text-decoration-style: dotted;
 }
-
-.content .has-tip .scylla-icon {
-  height: 14px;
-  width: 14px;
-}
-

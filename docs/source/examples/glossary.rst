@@ -32,6 +32,7 @@ This will result in:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lorem quis dui mattis suscipit sit amet id dui. Suspendisse elementum rutrum vulputate. Cras in velit sapien. Etiam egestas turpis eget arcu feugiat semper. Ut blandit sagittis cursus. Maecenas at varius ex, et porttitor mi. Nullam tortor elit, tincidunt et nulla id, porta vestibulum nibh. Quisque tellus elit, maximus at congue quis, molestie eget urna. Donec odio lorem, semper sed pharetra eu, sodales eget velit. Donec dignissim quam mi, nec vehicula magna gravida in. Vestibulum consectetur, sem a tristique porta, risus est laoreet nibh, sed cursus nibh est vel massa. Vestibulum aliquet varius tellus eu pulvinar. Integer a lorem sollicitudin, placerat orci eu, lobortis velit. Pellentesque sit amet magna porta augue iaculis egestas dapibus sed dui.
 
 
+
 The terms in the glossary are automatically organized in alphabetical order.
 
 Citing a glossary term
