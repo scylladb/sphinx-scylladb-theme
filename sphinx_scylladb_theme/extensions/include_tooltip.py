@@ -15,20 +15,34 @@ class include_tooltip_node(nodes.inline, nodes.Element):
 def visit_include_tooltip_node_html(self, node):
     tooltip_text = node['tooltip']
     self.body.append(
-        f'<span data-tooltip tabindex="1" title="{tooltip_text}">'
+        f'<span data-tooltip data-tooltip-height="0" tabindex="1" title="{tooltip_text}" class="top">'
     )
 
 def depart_include_tooltip_node_html(self, node):
     self.body.append('</span>')
 
 def get_tooltip_from_glossary(tooltip_source, inliner):
-    try:
-        env = inliner.document.settings.env
-        glossary = env.domains['std'].data['terms']
-        if tooltip_source in glossary:
-            return ''.join([term.astext() for term in glossary[tooltip_source]])
-    except KeyError:
-        pass
+    env = inliner.document.settings.env
+    std_domain = env.get_domain('std')
+    glossary_terms = std_domain._terms
+    term_info = glossary_terms.get(tooltip_source.lower(), None)
+    if term_info:
+        docname, labelid = term_info
+        try:
+            doctree = env.get_doctree(docname)
+            term_node = doctree.ids.get(labelid)
+
+            if term_node and term_node.parent:
+                definition_node = None
+                for sibling in term_node.parent:
+                    if isinstance(sibling, nodes.definition):
+                        definition_node = sibling
+                        break
+
+                if definition_node:
+                    return definition_node.astext()
+        except Exception as e:
+            pass
     return None
 
 def get_tooltip_from_text(tooltip_source):
@@ -52,7 +66,6 @@ def include_tooltip_role(name, rawtext, text, lineno, inliner, options={}, conte
         get_tooltip_from_text(tooltip_source)
     )
 
-    tooltip_text = tooltip_text.replace('\n', '<br>')
     
     node = include_tooltip_node(main_text, main_text)
     node['tooltip'] = tooltip_text
@@ -68,3 +81,4 @@ def setup(app):
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
+

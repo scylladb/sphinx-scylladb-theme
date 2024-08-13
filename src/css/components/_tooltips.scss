@@ -4,22 +4,11 @@
   font-size: $font-smallest;
   padding: 6px;
   border: 0;
+  max-width: 50%;
 }
 
-.tooltip.top:before {
-  border-color: $color-background-tooltip transparent transparent;
-}
-
-.tooltip.bottom:before {
-  border-color: transparent transparent $color-background-tooltip;
-}
-
-.tooltip-left:before {
-  border-color: transparent transparent transparent $color-background-tooltip;
-}
-
-.tooltip-right:before {
-  border-color: transparent $color-background-tooltip transparent transparent;
+.tooltip:before {
+  display: none !important;
 }
 
 .tooltip:empty {
