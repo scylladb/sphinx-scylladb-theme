@@ -15,15 +15,15 @@ sphinx-tabs = "^3.4.5"
 pyyaml = "^6.0.1"
 Sphinx-Substitution-Extensions = "^2022.2.16"
 # See https://github.com/readthedocs/sphinx-notfound-page/issues/240
-sphinx-notfound-page = "1.0.2"
-setuptools = ">=70.1.1,<72.0.0"
+sphinx-notfound-page = "1.0.4"
+setuptools = ">=70.1.1,<73.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.2"
 sphinx-autobuild = "^2024.4.16"
 pre-commit = "^3.7.1"
 myst-parser = "^3.0.1"
-sphinx-multiversion-scylla = "^0.3.1"
+sphinx-multiversion-scylla = "^0.3.2"
 sphinx-sitemap = "^2.6.0"
 redirects_cli ="^0.1.3"
 
