@@ -3,10 +3,12 @@
   border-radius: 4px;
   font-size: $font-smallest;
   padding: 6px;
+  border: 0;
+  max-width: 50%;
+}
 
-  &:before {
-    display: none !important;
-  }
+.tooltip:before {
+  display: none !important;
 }
 
 .tooltip:empty {
@@ -16,4 +18,11 @@
 .has-tip {
   border: 0;
   cursor: pointer;
+}
+
+.content .has-tip {
+  font-weight: inherit;
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
