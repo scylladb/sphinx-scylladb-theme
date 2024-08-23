@@ -10,7 +10,7 @@ Prerequisites
 Before adding the documentation toolchain to a project, you will need to have installed:
 
 - A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
-- `Python 3.10 <https://www.python.org/downloads/>`_.
+- `Python 3.10 or 3.12 <https://www.python.org/downloads/>`_.
 - `Poetry 1.8.1 <https://python-poetry.org/docs/master/>`_.
 - `Make <https://www.gnu.org/software/make/>`_.
 - `Git <https://git-scm.com/>`_.
@@ -34,7 +34,9 @@ Step 1: Download the sample project
 
    .. note:: If you already have docs in the project under an existing ``docs`` directory, move the doc files to ``docs/source`` directory.
 
-#. Create the file ``docs/pyproject.toml`` under the new ``docs`` folder. Copy the contents from the `pyproject.toml template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/_utils/pyproject_template.toml>`_.
+#. In the newly created ``docs`` folder, create a ``pyproject.toml`` file and copy the contents from the `pyproject.toml template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/_utils/pyproject_template.toml>`_.
+
+#. Create the file ``.github/dependabot.yml``. Copy the contents from the `dependabot.yml template <https://github.com/scylladb/sphinx-scylladb-theme/blob/master/docs/_utils/dependabot_template.yml>`_.
 
 Step 2: Configure the theme
 ---------------------------

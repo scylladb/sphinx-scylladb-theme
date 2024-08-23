@@ -10,7 +10,7 @@ Prerequisites
 You must have a project cloned locally with the :doc:`documentation toolchain <installation>`. Additionally, you will need to have installed:
 
 - A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
-- `Python 3.10 <https://www.python.org/downloads/>`_.
+- `Python 3.10 or 3.12 <https://www.python.org/downloads/>`_.
 - `Poetry 1.8.1 <https://python-poetry.org/docs/master/>`_.
 - `Make <https://www.gnu.org/software/make/>`_.
 - `Git <https://git-scm.com/>`_.

@@ -1,21 +1,20 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "1.7.4"
+version = "1.8.1"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = ["David García <hi@davidgarcia.dev>"]
 exclude = [".github", "config", "docs", "extensions", ".postcss.config.js", ".prettierrc.json", "deploy.sh", "src", "package.json", "package-lock.json"]
 readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 sphinx-collapse = "^0.1.1"
 sphinx-copybutton = "^0.5.2"
 beautifulsoup4 = "^4.12.3"
 sphinx-tabs = "^3.4.5"
 pyyaml = "^6.0.1"
 Sphinx-Substitution-Extensions = "^2022.2.16"
-# See https://github.com/readthedocs/sphinx-notfound-page/issues/240
-sphinx-notfound-page = "1.0.4"
+sphinx-notfound-page = "^1.0.4"
 setuptools = ">=70.1.1,<73.0.0"
 
 [tool.poetry.dev-dependencies]
