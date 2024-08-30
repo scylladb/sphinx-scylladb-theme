@@ -24,6 +24,7 @@ In general, there are main components to the markup of any document:
    labels
    links
    lists
+   mascots
    panel-box
    substitutions
    tables
@@ -50,6 +51,7 @@ In general, there are main components to the markup of any document:
   * :doc:`Labels <labels>`
   * :doc:`Links <links>`
   * :doc:`Lists <lists>`
+  * :doc:`Mascots <mascots>`
   * :doc:`Panel box <panel-box>`
   * :doc:`Substitutions <substitutions>`
   * :doc:`Tables <tables>`

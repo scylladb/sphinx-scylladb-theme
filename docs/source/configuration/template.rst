@@ -80,7 +80,7 @@ Example:
   html_theme_options = {
       'banner_button_text': 'Learn more',
       'banner_button_url': '#',
-      'banner_icon_path': '_static/mascots/scylla-opensource.svg',
+      'banner_icon_path': '_static/mascots-2/default.svg',
       'banner_title_text': 'ScyllaDB University Live | Free Virtual Training Event',
       'hide_banner': 'true',
   }
