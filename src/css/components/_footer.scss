@@ -49,7 +49,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 90px;
+  width: 70px;
   &__link {
     color: $color-typography-footer-icon;
 
@@ -108,7 +108,6 @@
   }
 
   .footer-actions {
-    width: 110px;
     &__link img {
       height: 28px;
     }
