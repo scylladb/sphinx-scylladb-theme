@@ -21,31 +21,43 @@ For more information, see `Committing your poetry.lock file to version control <
 
 Steps to apply this change:
 
-1. Remove the ``poetry.lock`` file from the ``.gitignore`` file. This file could be either in the root of the repository or in the ``docs`` directory.
+#. Remove the ``poetry.lock`` file from the ``.gitignore`` file. This file could be either in the root of the repository or in the ``docs`` directory.
 
-2. Update the ``docs/Makefile`` and remove the ``rm -f poetry.lock`` command from the ``clean`` command:
+#. Update the ``docs/Makefile`` and remove the ``rm -f poetry.lock`` command from the ``clean`` command:
 
-.. code-block::
+    .. code-block::
 
-    # Clean commands
-    .PHONY: clean
-    clean:
-        rm -rf $(BUILDDIR)/*
-        # rm -f poetry.lock
+        # Clean commands
+        .PHONY: clean
+        clean:
+            rm -rf $(BUILDDIR)/*
+            # rm -f poetry.lock
 
 
-3. Set all the dependencies to install the latest minor version in your ``docs/pyproject.toml`` file. 
-   Each dependency under ``tool.poetry.dependencies`` should have the ``^`` symbol followed by the major and minor version. This will allow Poetry to install the latest minor version of the dependency.
+#. Add the following ``dependabot.yml`` configuration file in the ``.github`` directory:
+
+    .. literalinclude:: _partials/dependabot_template.yml
+
+   This configuration helps keep your project up-to-date with the latest theme versions automatically.
+
+#. In the ``docs/pyproject.toml`` file, set Poetry to use the non-package mode:
+
+    .. code-block::
+
+        [tool.poetry]
+        name = "scylla"
+        description = "Scylla Documentation"
+        version = "4.3.0"
+        authors = ["ScyllaDB Contributors"]
+        package-mode = false
+
+#. Ensure all dependencies in the ``docs/pyproject.toml`` file are configured to install the latest minor versions by using the ``^`` symbol followed by the major and minor version number:
 
     Example:
 
     .. code-block::
 
-        [tool.poetry]
-        name = "sphinx-docs"
-        description = "ScyllaDB Documentation"
-        version = "0.1.0"
-        authors = ["ScyllaDB Documentation Contributors"]
+        (...)
 
         [tool.poetry.dependencies]
         python = "^3.10"
@@ -58,15 +70,15 @@ Steps to apply this change:
         sphinx-sitemap = "^2.6.0"
         redirects_cli ="^0.1.3"
 
+        (...)
+
+#. In the same ``docs/pyproject.toml`` file, update the poetry dependency to version 1.8.0:
+
+    .. code-block:: python
+
+        (...)
         [build-system]
-        requires = ["poetry>=0.12"]
-        build-backend = "poetry.masonry.api"
+        requires = ["poetry>=1.8.0"]
+        build-backend = "poetry.masonry.api" 
 
-
-4. Add the following ``dependabot.yml`` configuration file in the ``.github`` directory:
-
-    .. literalinclude:: _partials/dependabot_template.yml
-
-   This configuration helps keep your project up-to-date with the latest theme versions automatically.
-
-5. Commit the changes to the repository, including the ``poetry.lock`` file.
+#. Commit the changes to the repository, including the ``poetry.lock`` file.
