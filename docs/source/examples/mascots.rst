@@ -88,6 +88,18 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
+    :title: laptop
+    :link: #
+    :image: /_static/img/mascots-2/laptop.svg
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: magnifying-glass
+    :link: #
+    :image: /_static/img/mascots-2/magnifying-glass.svg
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
     :title: monitor
     :link: #
     :image: /_static/img/mascots-2/monitor.svg
@@ -174,6 +186,8 @@ Available mascot images:
 -  ``/_static/img/mascots-2/forward-2.svg``
 -  ``/_static/img/mascots-2/headphones.svg``
 -  ``/_static/img/mascots-2/heart.svg``
+-  ``/_static/img/mascots-2/laptop.svg``
+-  ``/_static/img/mascots-2/magnifying-glass.svg``
 -  ``/_static/img/mascots-2/monitor.svg``
 -  ``/_static/img/mascots-2/open-mouth.svg``
 -  ``/_static/img/mascots-2/operator.svg``
