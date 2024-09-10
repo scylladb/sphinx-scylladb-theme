@@ -14,7 +14,7 @@
   :button_url: https://github.com/scylladb/sphinx-scylladb-theme
   :button_text: Source code
   :title: Welcome to ScyllaDB Sphinx Theme documentation
-  :image: /_static/img/mascots/scylla-docs.svg
+  :image: /_static/img/mascots-2/docs.svg
 
   The documentation toolchain for ScyllaDB projects.
 
