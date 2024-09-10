@@ -111,16 +111,23 @@ To get the specific error message:
 
 You should see the error messages highlighted.
 
-Re-running a workflow
----------------------
+Publishing the docs manually
+----------------------------
 
-Re-running workflows is useful when:
+If you need to manually trigger a documentation build and publish the latest changes, follow the steps below. This might be necessary if automatic triggers fail.
 
-- The theme received an update. By re-running the last build manually, the documentation project will receive the latest version. Otherwise, the theme will be automatically updated when the default branch gets an update.
+To manually rerun the last build, follow these steps:
 
-- A previous version (branch or a tag) received a patch. Otherwise, the changes will not be reflected in production until the master branch gets an update.
+1. Navigate to your repository's **Actions** tab on GitHub.
 
-To re-run a workflow see, `Re-running a workflow <https://docs.github.com/en/actions/managing-workflow-runs/re-running-a-workflow>`_.
+2. In the list of workflows, locate and select the ``docs-pages.yaml`` workflow.
+
+3. On the workflow's page, click the **Run workflow** button. For more details, see `Manually running a workflow <https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow>`_.
+
+4. **IMPORTANT:** When prompted, ensure you select the default branch (usually `master` or `main`). This ensures the workflow runs using the latest version of the configuration file, which contains information about which branches to build.
+
+5. Confirm the action and wait for the workflow to complete.
+
 
 Disabling GitHub Pages
 ----------------------

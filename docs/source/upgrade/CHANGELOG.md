@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.8.1 - 23 Aug 2024
+
+## Added
+
+- [#1163](https://github.com/scylladb/sphinx-scylladb-theme/pull/1163): Introduced a new component to display tooltips in the documentation. This feature supports both glossary entries and custom text.
+
+## Updated
+
+- [#1186](https://github.com/scylladb/sphinx-scylladb-theme/pull/1186): We recommend to include the poetry lock file in the repository. This ensures consistent dependencies are installed in the CI/CD pipeline.
+- [#1175](https://github.com/scylladb/sphinx-scylladb-theme/pull/1175): Adjusted script loading order so that Google Tag Manager documentation scripts are loaded before generic scripts.
+
 ## 1.7.4 - 30 Jul 2024
 
 ## Fixed
