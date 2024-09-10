@@ -34,6 +34,12 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
+    :title: care-pet
+    :link: #
+    :image: /_static/img/mascots-2/care-pet.svg
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
     :title: cdc
     :link: #
     :image: /_static/img/mascots-2/cdc.svg
@@ -55,6 +61,12 @@ Preview
     :title: default
     :link: #
     :image: /_static/img/mascots-2/default.svg
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: docs
+    :link: #
+    :image: /_static/img/mascots-2/docs.svg
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
@@ -97,6 +109,12 @@ Preview
     :title: magnifying-glass
     :link: #
     :image: /_static/img/mascots-2/magnifying-glass.svg
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: manager
+    :link: #
+    :image: /_static/img/mascots-2/manager.svg
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
@@ -177,10 +195,12 @@ Available mascot images:
 -  ``/_static/img/mascots-2/2-monster-laptop.svg``
 -  ``/_static/img/mascots-2/alternator.svg``
 -  ``/_static/img/mascots-2/award.svg``
+-  ``/_static/img/mascots-2/care-pet.svg``
 -  ``/_static/img/mascots-2/cdc.svg``
 -  ``/_static/img/mascots-2/chef.svg``
 -  ``/_static/img/mascots-2/cloud.svg``
 -  ``/_static/img/mascots-2/default.svg``
+-  ``/_static/img/mascots-2/docs.svg``
 -  ``/_static/img/mascots-2/driver.svg``
 -  ``/_static/img/mascots-2/forward.svg``
 -  ``/_static/img/mascots-2/forward-2.svg``
@@ -188,6 +208,7 @@ Available mascot images:
 -  ``/_static/img/mascots-2/heart.svg``
 -  ``/_static/img/mascots-2/laptop.svg``
 -  ``/_static/img/mascots-2/magnifying-glass.svg``
+-  ``/_static/img/mascots-2/manager.svg``
 -  ``/_static/img/mascots-2/monitor.svg``
 -  ``/_static/img/mascots-2/open-mouth.svg``
 -  ``/_static/img/mascots-2/operator.svg``
