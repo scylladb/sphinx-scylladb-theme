@@ -47,6 +47,13 @@ To decrease verbosity, use the option ``-Q``:
 
         make preview SPHINXOPTS=-Q
 
+To fix the error `pyproject.toml changed significantly since poetry.lock was last generated.`, run the following command:
+
+    .. code:: console
+
+        poetry lock --no-update
+
+    Then, run the preview command again.
 
 Preview multiversion
 --------------------
