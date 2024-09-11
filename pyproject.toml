@@ -18,7 +18,7 @@ sphinx-notfound-page = "^1.0.4"
 setuptools = ">=70.1.1,<75.0.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^8.3.2"
+pytest = "^8.3.3"
 sphinx-autobuild = "^2024.9.3"
 pre-commit = "^3.7.1"
 myst-parser = "^3.0.1"
