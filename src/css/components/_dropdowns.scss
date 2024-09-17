@@ -1,12 +1,12 @@
 .scylla-dropdown {
-  color: var(--color-typography-dropdown);
+  color: var(--text-color);
   font-size: $font-small;
   line-height: 20px;
 
   a,
   a:hover,
   a:focus {
-    color: var(--color-typography-dropdown) !important;
+    color: var(--text-emphasis) !important;
     padding: 0 !important;
   }
 
@@ -41,7 +41,14 @@
 
     li {
       padding: 7px 16px;
-      .scylla-icon {
+      
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      i {
+        font-size: 24px;
         margin-right: 10px;
       }
     }

@@ -1,0 +1,120 @@
+$white: #FFFFFF;
+$gray-50: #F7FCFC;
+$gray-100: #EDF5F7;
+$gray-200: #D8E5EB;
+$gray-300: #C3D5DE;
+$gray-400: #AEC0CF;
+$gray-500: #95A7BA;
+$gray-600: #7B8BA2;
+$gray-700: #616D87;
+$gray-800: #4B546F;
+$gray-900: #383D57;
+$gray-950: #2F324B;
+$black: #23263B;
+
+$brand-teal: #57D1E5;
+$brand-blue: #326DE6;
+
+$primary: #42C4E6;
+$secondary: #3A2D55;
+$success: #43A047;
+$warning: #FFAB00;
+$info: #1976D2;
+$danger: #CE291F;
+
+
+$link-color: #3C4FE0;
+$text-muted: $gray-500;
+$text-color: $black;
+$border-color: #F1F1F1;
+$header-border: #4458A3;
+$bg-color: #FEFEFE;
+$well-bg: #F7F8F9;
+$navigation-bg: #F6F8FF;
+$card-bg: $white;
+$admonition: #6F7071;
+
+// Sizes Variables
+$spacer-0: 0;
+$spacer-3xs: 5px;
+$spacer-xxs: 8px;
+$spacer-xs: 12px;
+$spacer-sm: 20px;
+$spacer: 32px;
+$spacer-md: 52px;
+$spacer-lg: 83px;
+$spacer-xl: 134px;
+$border-width: 1px;
+$border-radius: $spacer-3xs; 
+$border-radius-md: $spacer-xxs; 
+
+:root {
+    --white: #{$white};
+    --gray-50: #{$gray-50};
+    --gray-100: #{$gray-100};
+    --gray-200: #{$gray-200};
+    --gray-300: #{$gray-300};
+    --gray-400: #{$gray-400};
+    --gray-500: #{$gray-500};
+    --gray-600: #{$gray-600};
+    --gray-700: #{$gray-700};
+    --gray-800: #{$gray-800};
+    --gray-900: #{$gray-900};
+    --gray-950: #{$gray-950};
+    --black: #{$black};
+  
+    --primary: #42C4E6;
+    --secondary: #{$secondary};
+    --success: #{$success};
+    --info: #{$info};
+    --warning: #{$warning};
+    --danger: #{$danger};
+  
+    --link-color: #3C4FE0;
+    --link-color-hover: #3C4FE0;
+    --text-color: #{$black};
+    --code-color: #{$black};
+    --text-emphasis: #{$black};
+    --text-muted: #{$text-muted};
+    --border-color: #F1F1F1;
+    --header-border: #4458A3;
+    --bg-color: #FEFEFE;
+    --well-bg: #F7F8F9;
+    --navigation-bg: #F6F8FF;
+    --card-bg: var(--white);
+    --admonition: #6F7071;
+
+    --shadow-lg: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    --border-width: #{$border-width};
+    --border-radius: #{$border-radius};
+    --border-radius-md: #{$border-radius-md};
+
+    --logo-url: "../img/logo-scylla-horizontal-color.svg";
+  }
+
+  .dark {
+    
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --success: #{$success};
+    --info: #{$info};
+    --warning: #{$warning};
+    --danger: #{$danger};
+    
+  
+    --link-color: #{$primary};
+    --link-color-hover: #{$primary};
+    --text-color: var(--gray-200);
+    --code-color: var(--gray-200);
+    --text-emphasis: var(--white);
+    --text-muted: var(--gray-300);
+    --border-color: var(--gray-800);
+    --header-border: #4458A3;
+    --bg-color: var(--black);
+    --well-bg: #1E2031;
+    --navigation-bg: #1E2031;
+    --card-bg: var(--gray-950);
+    --admonition: var(--gray-400);
+
+    --logo-url: "../img/logo-scylla-horizontal-light.svg";
+  }

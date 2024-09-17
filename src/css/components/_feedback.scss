@@ -13,17 +13,18 @@
     cursor: pointer;
     margin: 4px;
     padding: 8px;
+    border: 1px solid var(--card-bg);
+    color: var(--text-color);
     @include floating;
 
-    background-color: var(--color-background-feedback-container) !important;
+    background-color: var(--card-bg) !important;
     &.active {
-      border: 1px solid var(--color-border-feedback-button);
+      border-color: var(--primary);
     }
   }
 
   &__icon {
-    height: 20px;
-    width: 20px;
+    font-size: 22px;
   }
 
   &__message {

@@ -3,8 +3,8 @@
 }
 
 .sphinx-tabs-tab {
-  border-bottom: 1px solid var(--color-border-tabs);
-  color: var(--color-typography-tabs-title);
+  border-bottom: 1px solid var(--text-muted);
+  color: var(--text-muted);
   cursor: pointer;
   font-size: $font-small;
   font-weight: 500;
@@ -13,8 +13,8 @@
   padding: 20px 25px;
 
   &[aria-selected="true"] {
-    color: var(--color-typography-tabs-title-active);
-    border-bottom: 2px solid var(--color-border-tabs-active);
+    color: var(--link-color);
+    border-bottom: 2px solid var(--link-color);
     padding-bottom: 19px;
   }
 }

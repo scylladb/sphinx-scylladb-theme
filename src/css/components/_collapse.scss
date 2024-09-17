@@ -8,21 +8,21 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   margin-left: 0 !important;
-  color: var(--color-ebony-clay);
+  color: var(--text-color);
 }
 
 .sphinx_collapse__icon {
   margin-left: 5px;
   margin-right: 0;
 
-  border-top-color: var(--color-ebony-clay) !important;
+  border-top-color: var(--text-color) !important;
 }
 
 .sphinx_collapse__input:checked ~ .sphinx_collapse__label,
 .sphinx_collapse__label:hover {
-  color: var(--color-typography-base-link);
+  color: var(--link-color);
   .sphinx_collapse__icon {
-    border-top-color: var(--color-typography-base-link) !important;
+    border-top-color: var(--link-color) !important;
   }
 }
 

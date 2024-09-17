@@ -46,7 +46,7 @@ def get_navigation_tree(toctree_html: str, collapse: bool) -> str:
         # Add the "label" for the checkbox which will get filled.
         label = soup.new_tag("label", attrs={"for": checkbox_name})
         label.append(
-            soup.new_tag("i", attrs={"class": "scylla-icon scylla-icon--expand"})
+            soup.new_tag("i", attrs={"class": "icon-arrow-dropdown"})
         )
         element.insert(1, label)
         space = soup.new_tag("div", attrs={"class": "break"})

@@ -1,13 +1,16 @@
+@use "sass:map";
+
 .admonition {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
-  color: var(--color-typography-admonition-text);
+  color: var(--text-muted);
   font-size: $font-small;
   line-height: 20px;
   margin-bottom: $gap;
   overflow: auto;
   padding: 20px 20px 20px 52px;
   position: relative;
+  background-color: var(--body-bg);
 
   &:before {
     content: " ";
@@ -20,17 +23,19 @@
   }
 
   &-title {
-    color: var(--color-typography-admonition-title);
+    color: var(--primary);
     left: -32px;
     position: relative;
     font-weight: bold;
+    display: flex;
 
     &:before {
-      content: "";
-      @extend .scylla-icon;
+      @extend .icon;
+      content: map.get($icons, "docs-info");
       margin-right: 8px;
-      min-height: 24px;
+      font-size: 24px;
       width: 24px;
+      background-image: none !important;
     }
   }
 
@@ -39,78 +44,60 @@
   }
 
   &.tip {
-    background-color: var(--color-background-admonition-tip);
-    border: 1px solid var(--color-border-admonition-tip);
+    border: 1px solid var(--success);
 
     &:before {
-      border-left: 8px solid rgba(var(--color-border-admonition-tip), 0.6);
-    }
-
-    .admonition-title:before {
-      @extend .scylla-icon--exclamation;
-      filter: invert(47%) sepia(11%) saturate(2286%) hue-rotate(73deg)
-        brightness(109%) contrast(88%);
+      border-left: 8px solid var(--success);
     }
 
     .admonition-title {
-      color: var(--color-typography-admonition-tip) !important;
+      color: var(--success) !important;
     }
   }
 
   &.note {
-    background-color: var(--color-background-admonition-note);
-    border: 1px solid var(--color-border-admonition-note);
+    border: 1px solid var(--info);
 
     &:before {
-      border-left: 8px solid rgba(var(--color-border-admonition-note), 0.6);
+      border-left: 8px solid var(--info);
     }
 
     .admonition-title:before {
-      @extend .scylla-icon--exclamation;
-      filter: invert(44%) sepia(55%) saturate(2310%) hue-rotate(191deg)
-        brightness(81%) contrast(103%);
+     
     }
     .admonition-title {
-      color: var(--color-typography-admonition-note) !important;
+      color: var(--info) !important;
     }
   }
 
   &.caution {
-    background-color: var(--color-background-admonition-caution);
-    border: 1px solid var(--color-border-admonition-caution);
+    border: 1px solid var(--warning);
 
     &:before {
-      border-left: 8px solid
-        rgba(var(--color-border-admonition-caution), 0.6);
+      border-left: 8px solid var(--warning);
     }
 
     .admonition-title:before {
-      @extend .scylla-icon--warning;
-      filter: invert(77%) sepia(56%) saturate(3332%) hue-rotate(357deg)
-        brightness(98%) contrast(108%);
+      content: map.get($icons, "docs-warning");
     }
 
     .admonition-title {
-      color: var(--color-typography-admonition-caution) !important;
+      color: var(--warning) !important;
     }
   }
 
   &.warning {
-    background-color: var(--color-background-admonition-warning);
-    border: 1px solid var(--color-border-admonition-warning);
+    border: 1px solid var(--danger);
 
     &:before {
-      border-left: 8px solid
-        rgba(var(--color-border-admonition-warning), 0.6);
+      border-left: 8px solid var(--danger);
     }
 
     .admonition-title:before {
-      @extend .scylla-icon--warning;
-      filter: invert(41%) sepia(42%) saturate(6427%) hue-rotate(343deg)
-        brightness(99%) contrast(83%);
+      content: map.get($icons, "docs-warning");
     }
     .admonition-title {
-      color: var(--color-typography-admonition-warning) !important;
+      color: var(--danger) !important;
     }
   }
 }

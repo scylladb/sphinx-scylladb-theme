@@ -6,7 +6,7 @@
   .bread__item,
   a,
   .bread__item:not(.bread__item--last)::after {
-    color: var(--color-typography-breadcrumbs);
+    color: var(--text-color);
     font-size: $font-smallest;
     font-weight: 400;
     letter-spacing: 1.5px;
@@ -29,7 +29,7 @@
   }
 
   .bread__highlight {
-    color: var(--color-typography-breadcrumbs-highlight);
+    color: var(--link-color);
 
     &:hover {
       text-decoration: none;

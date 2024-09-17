@@ -1,6 +1,8 @@
+@use "sass:map";
+
 .side-nav {
   display: none;
-  background: var(--color-background-sidebar);
+  background: var(--navigation-bg);
   height: 100vh;
   max-height: calc(100vh - #{$header-height});
   line-height: 24px;
@@ -19,7 +21,7 @@
 
     a {
       text-decoration: none;
-      color: var(--color-typography-base);
+      color: var(--text-color);
 
       &:hover {
         font-weight: bold;
@@ -36,20 +38,23 @@
     label i {
       padding: 0;
       margin: 0;
+      display: flex;
+      align-items: center;
     }
 
     label {
-      font-size: inherit;
+      font-size: 22px;
       line-height: 1;
-      margin-left: 5px;
-      max-height: 5px;
+      width: 12px;
+      color: inherit;
     }
 
     .scylla-icon--expand {
       height: 5px;
       width: 10px;
       vertical-align: top;
-      @extend .scylla-icon--triangle-down;
+      @extend .icon;
+      content: map.get($icons, "docs-dropdown");
     }
 
     .toctree-checkbox {
@@ -66,10 +71,6 @@
         ~ ul {
           display: block;
         }
-
-        ~ label .scylla-icon--expand {
-          @extend .scylla-icon--triangle-down;
-        }
       }
     }
 
@@ -78,11 +79,11 @@
       margin: 0;
     }
 
-    a {
-      color: var(--color-typography-base);
+    a:not(.current) {
+      color: var(--text-color);
 
       &:hover {
-        color: var(--color-typography-base-link);
+        color: var(--link-color-hover);
         font-weight: 400;
       }
     }
@@ -106,22 +107,13 @@
           padding-bottom: 20px;
         }
 
-        &:hover > a {
-          color: var(--color-typography-base-link);
-        }
-
-        &:hover > .toctree-checkbox ~ label i {
-          filter: var(--color-filter-sidenav-toctree);
+        &:hover {
+          color: var(--link-color-hover);
         }
       }
 
       &.current-page {
-        & > a {
-          color: var(--color-typography-base-link);
-        }
-        & > .toctree-checkbox:checked ~ label i {
-          filter: var(--color-filter-sidenav-toctree)
-        }
+          color: var(--link-color);
       }
 
       ul {
@@ -129,7 +121,7 @@
         margin-top: 18px;
 
         li {
-          border-left: 1px solid var(--color-border-sidebar-item);
+          border-left: 1px solid var(--link-color);
           padding: 4px 0 4px 13px;
         }
 
@@ -159,7 +151,8 @@
 
 .collapsible-button {
   @include floating;
-  background-color: var(--color-white);
+  background-color: var(--card-bg);
+  color: var(--text-color);
   border-radius: 50%;
   bottom: 10px;
   display: none;
@@ -170,17 +163,14 @@
   cursor: pointer;
 
   i {
-    @extend .scylla-icon--expand;
-
-    height: 16px;
-    width: 16px;
-    margin: 0;
+    font-size: 20px;
+    display: block;
   }
 }
 
 .side-nav--collapsed .collapsible-button {
   left: -10px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 30px 30px 0;
 
   i {
     transform: rotate(180deg);
@@ -194,7 +184,7 @@
 @media screen and (min-width: $large) {
   .side-nav {
     display: block;
-    background-color: var(--color-background-sidebar);
+    background-color: var(--navigation-bg);
     height: 100%;
     max-height: calc(100vh - #{$header-height-large});
     padding: 30px 40px;
@@ -248,4 +238,5 @@
 
 .dark-theme-toggler {
   cursor: pointer;
+  font-size: 22px;
 }

@@ -7,7 +7,8 @@ body {
   font-size: $font-base;
   font-family: $font-base-family;
   line-height: 1;
-  background-color: var(--color-background-base);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 *,
@@ -17,7 +18,7 @@ body {
 }
 
 a {
-  color: var(--color-typography-base-link);
+  color: var(--link-color);
 }
 
 a.reference:after {
@@ -35,7 +36,7 @@ a.reference.download:after {
 }
 
 a:hover {
-  color: var(--color-typography-base-link);
+  color: var(--link-color-hover);
   font-weight: 500;
 }
 
@@ -147,35 +148,6 @@ cite {
 }
 
 .dark {
-  body {
-    background-color: var(--dark-surface-base);
-    background-image: linear-gradient(to top left, rgba(32, 139, 238, 0.06), rgba(32, 139, 238, 0.12));
-    color: var(--dark-typography-paragraph);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--dark-typography-title);
-  }
-
-  p {
-    color: var(--dark-typography-paragraph);
-  }
-
-  code {
-    color: var(--dark-typography-title-link);
-    background-color: var(--dark-navigation-base) !important;
-    padding: 4px 8px;
-  }
-
-  .highlight pre {
-    background-color: var(--dark-navigation-base) !important;
-    color: var(--dark-typography-title) !important;
-  }
 
   .highlight .c { color: #6272a4;} /* Comment */
   .highlight .err { color: #f8f8f2;} /* Error */

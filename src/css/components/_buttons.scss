@@ -1,8 +1,8 @@
 .button {
   background: transparent;
-  border: 1px solid var(--color-border-button);
+  border: 1px solid var(--text-color);
   border-radius: 4px;
-  color: var(--color-typography-button);
+  color: var(--text-color);
   display: inline;
   font-size: $font-small;
   letter-spacing: 1px;
@@ -13,17 +13,17 @@
   &:hover,
   &:focus {
     background: transparent;
-    color: var(--color-typography-button);
+    color: var(--link-color);
     text-decoration: none;
   }
 
   &--reverse {
     border: 0;
-    background: var(--color-white);
+    background: var(--bg-color);
 
     &:hover,
     &:focus {
-      background: var(--color-white);
+      background: var(--bg-color);
     }
   }
 }

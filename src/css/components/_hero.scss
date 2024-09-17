@@ -1,5 +1,5 @@
 .hero {
-  background: var(--color-background-hero);
+  background: var(--navigation-bg);
   margin-bottom: $gap;
   overflow: hidden;
   padding: 30px 16px;
@@ -19,8 +19,8 @@
     line-height: 26px;
 
     a {
-      border-bottom: 1px var(--color-typography-topic-grid-title) dotted;
-      color: var(--color-typography-topic-grid-title);
+      border-bottom: 1px var(--text-color) dotted;
+      color: var(--text-color);
     }
 
     p {
@@ -56,13 +56,13 @@
       }
 
       &--link {
-        color: var(--color-typography-hero-cta);
+        color: var(--link-color);
       }
     }    
   }
 
   &__cta {
-    color: var(--color-typography-hero-cta);
+    color: var(--link-color);
   }
 
   &__search-box {

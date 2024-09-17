@@ -1,13 +1,13 @@
 code {
-  color: var(--color-typography-code);
-  background-color: var(--color-background-code);
+  color: var(--code-color);
+  background-color: var(--well-bg);
   border: none;
   border-radius: 4px;
   font-size: $font-small;
 
   &.download {
     background: none;
-    color: var(--color-typography-code);
+    color: var(--code-color);
   }
 }
 
@@ -15,9 +15,9 @@ code {
   background: transparent !important;
 
   pre {
-    background-color: var(--color-background-code);
+    background-color: var(--well-bg);
     border-radius: $round;
-    color: var(--color-typography-code);
+    color: var(--code-color);
     font-size: $font-small;
     line-height: 26px;
     margin-bottom: $gap;
@@ -32,7 +32,7 @@ code {
 }
 
 .highlighttable {
-  background-color: var(--color-background-code);
+  background-color: var(--well-bg);
   border-radius: 16px;
   box-shadow: none;
 
@@ -70,6 +70,10 @@ code {
       top: 0.2em;
     }
   }
+}
+
+.copybtn {
+  background-color: var(--card-bg) !important;
 }
 
 .hide-copy-button .copybtn {

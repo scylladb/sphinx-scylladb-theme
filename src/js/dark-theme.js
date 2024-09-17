@@ -10,10 +10,8 @@ export class DarkTheme {
         const toggler = (state) => {
             if (state) {
                 rootDocumentEl.addClass('dark')
-                darkThemeTogglerEl.removeClass('fa-moon').addClass('fa-sun');
             } else {
                 rootDocumentEl.removeClass('dark')
-                darkThemeTogglerEl.removeClass('fa-sun').addClass('fa-moon');
             }
         }
 

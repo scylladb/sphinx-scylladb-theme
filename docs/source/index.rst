@@ -10,7 +10,7 @@
 .. title:: ScyllaDB Sphinx Theme
 
 .. hero-box::
-  :button_icon: fa fa-github
+  :button_icon: icon-github
   :button_url: https://github.com/scylladb/sphinx-scylladb-theme
   :button_text: Source code
   :title: Welcome to ScyllaDB Sphinx Theme documentation
@@ -58,7 +58,7 @@
 .. topic-box::
   :title: Deployment
   :link: deployment
-  :icon: fa fa-github
+  :icon: icon-github
   :class: large-6
   :anchor: Learn more
 

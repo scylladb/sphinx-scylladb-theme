@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--color-background-footer);
-  box-shadow: 0 -4px 10px rgba(208, 208, 208, 0.25);
+  background-color: var(--card-bg);
+  box-shadow: 0 -4px 10px rgba(0,0,0, 0.1);
   position: relative;
   padding: 30px 0;
   width: 100%;
@@ -15,7 +15,7 @@
 
 .footer-top {
   align-items: center;
-  border-bottom: 1px solid var(--color-border-footer-top);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,12 +23,16 @@
   text-align: center;
 }
 
-.footer-logo {
-  width: 100%;
+.footer-logo {  
   margin-bottom: $gap;
-  img {
-    float: left;
-    height: 36px;
+  background-image: url("../img/logo-scylla-horizontal-color.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 156px !important;
+  height: 36px;
+
+  @at-root .dark #{&} {
+    background-image: url("../img/logo-scylla-horizontal-light.svg");
   }
 }
 
@@ -36,7 +40,7 @@
   text-align: left;
 
   &__link {
-    color: var(--color-typography-footer-link);
+    color: var(--text-color);
     font-weight: 500;
     font-size: $font-smallest;
     letter-spacing: 2.4px;
@@ -50,17 +54,15 @@
   display: flex;
   justify-content: space-between;
   width: 70px;
-  &__link {
-    color: var(--color-typography-footer-icon);
 
-    img {
-      height: 23px;
-    }
+  &__link {
+    color: var(--text-color);
+    font-size: 26px;
   }
 }
 
 .footer-bottom {
-  color: var(--color-typography-footer-copyright);
+  color: var(--text-muted);
   display: flex;
   flex-wrap: wrap;
   font-style: normal;
