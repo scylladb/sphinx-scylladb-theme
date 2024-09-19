@@ -53,7 +53,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 70px;
+  gap: $spacer-xs;
 
   &__link {
     color: var(--text-color);

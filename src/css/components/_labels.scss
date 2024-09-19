@@ -5,6 +5,10 @@
   color: var(--white);
   font-size: inherit;
 
+  &--default {
+    color: var(--text-color);
+  }
+
   &--note {
     background-color: var(--info);
   }

@@ -26,7 +26,8 @@
   }
 
   &__button {
-    background: var(--color-white);
+    background: var(--white);
+    color: var(--black);
     border-radius: 4px;
     font-size: $font-smallest;
     min-width: max-content;

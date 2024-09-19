@@ -38,6 +38,7 @@ url("#{$fonticon-url}.woff") format("woff");
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal !important;
+    vertical-align: middle;
 }
 
 $icons: (
@@ -162,7 +163,15 @@ $icons: (
 "reset": "\ea77",
 "eye": "\ea78",
 "stack-overflow": "\ea79",
-"docs-nsql-guides": "\ea7a"
+"docs-nsql-guides": "\ea7a",
+"docs-cloud": "\ea7b",
+"docs-getting-started": "\ea7c",
+"docs-blog": "\ea7d",
+"docs-contribute": "\ea7e",
+"docs-training": "\ea7f",
+"docs-commands": "\ea80",
+"docs-configuration": "\ea81",
+"docs-enterprise-m": "\ea82"
 );
 
 @each $name, $glyph in $icons {
