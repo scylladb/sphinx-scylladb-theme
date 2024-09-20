@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#1189](https://github.com/scylladb/sphinx-scylladb-theme/pull/1189): Removed the newsletter from the footer.
 
-- [#XYZ](https://github.com/scylladb/sphinx-scylladb-theme/pull/1189): Dropped Font Awesome libary support for icons.
+- [#1217](https://github.com/scylladb/sphinx-scylladb-theme/pull/1217): Dropped Font Awesome libary support for icons.
 
 ## 1.7.4 - 30 Jul 2024
 
