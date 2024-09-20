@@ -15,6 +15,11 @@ If your project theme's version is **>=1.7**, follow this guide to get the lates
 Upgrade to version 1.8
 ----------------------
 
+Here are the main breaking changes between the 1.6 and 1.7 versions.
+
+Commit the poetry.lock file to the repository
+.............................................
+
 We recommend that teams commit the ``poetry.lock`` file to the repository. 
 Doing so ensures that dependencies are locked, leading to consistent documentation builds across different environments.
 For more information, see `Committing your poetry.lock file to version control <https://python-poetry.org/docs/basic-usage/#committing-your-poetrylock-file-to-version-control>`_.
