@@ -56,7 +56,7 @@ table {
 
   &:not(.highlighttable) {
     tbody tr:first-child {
-      border-top: 1px solid var(--secondary);
+      border-top: 1px solid var(--header-border);
     }
   }
 

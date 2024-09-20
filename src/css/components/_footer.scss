@@ -21,10 +21,11 @@
   justify-content: space-between;
   padding-bottom: 8px;
   text-align: center;
+  padding-bottom: $spacer-sm;
 }
 
 .footer-logo {  
-  margin-bottom: $gap;
+  margin-bottom: 0;
   background-image: url("../img/logo-scylla-horizontal-color.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -38,6 +39,7 @@
 
 .footer-links {
   text-align: left;
+  margin-bottom: 0 !important;
 
   &__link {
     color: var(--text-color);

@@ -63,26 +63,27 @@ $border-radius-md: $spacer-xxs;
     --gray-950: #{$gray-950};
     --black: #{$black};
   
-    --primary: #42C4E6;
+    --primary: #{$primary};
     --secondary: #{$secondary};
     --success: #{$success};
     --info: #{$info};
     --warning: #{$warning};
     --danger: #{$danger};
   
-    --link-color: #3C4FE0;
-    --link-color-hover: #3C4FE0;
+    --link-color: #{$link-color};
+    --link-color-hover: #{$link-color};
     --text-color: #{$black};
     --code-color: #{$black};
     --text-emphasis: #{$black};
     --text-muted: #{$text-muted};
-    --border-color: #F1F1F1;
-    --header-border: #4458A3;
-    --bg-color: #FEFEFE;
-    --well-bg: #F7F8F9;
-    --navigation-bg: #F6F8FF;
+    --border-color: #{$border-color};
+    --header-border: #{$header-border};
+    
+    --bg-color: #{$bg-color};
+    --well-bg: #{$well-bg};
+    --navigation-bg: #{$navigation-bg};
     --card-bg: var(--white);
-    --admonition: #6F7071;
+    --admonition: #{$admonition};
 
     --shadow-lg: 0px 4px 25px rgba(0, 0, 0, 0.15);
     --border-width: #{$border-width};

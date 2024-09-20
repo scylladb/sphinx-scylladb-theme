@@ -40,10 +40,11 @@
     right: 16px;
     top: 16px;
 
-    .scylla-icon {
+    i {
       height: 34px;
       width: 34px;
-      filter: brightness(100%);
+      font-size: 34px;
+      color: var(--white);
     }
 
     &:hover {

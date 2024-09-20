@@ -122,7 +122,7 @@ post_content_data = [
         [],
         {
             "title": "Check Now",
-            "button_icon": "fa-check",
+            "button_icon": "icon-check",
             "button_text": "Submit",
             "button_url": "#",
             "button_style": "bold",
@@ -132,7 +132,7 @@ post_content_data = [
         </div>
         <a href="#">
             <button class="hero__button button hero__button--bold">
-                <i class="icon icon--left fa-check" aria-hidden="true"></i>
+                <i class="icon icon--left icon-check" aria-hidden="true"></i>
                 Submit
             </button>
         </a>

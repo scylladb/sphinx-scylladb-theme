@@ -1,6 +1,6 @@
 .layout {
   display: flex;
-  background-color: var(--color--background-base);
+  background-color: var(--bg-color);
 }
 
 .pre-content {
@@ -28,7 +28,7 @@
 
     li::before {
       content: "\2022";
-      color: var(--color-typography-bullet);
+      color: var(--text-muted);
       font-family: $font-icons-family;
       float: left;
       font-size: 20px;
@@ -54,8 +54,12 @@
     margin-bottom: $gap;
   }
 
-  .inline-icon.fa-check {
-    color: var(--color-typography-icon-checkmark);
+  .inline-icon {
+    font-size: 22px;
+
+    &.icon-check {
+      color: var(--primary);
+    }
   }
 }
 
