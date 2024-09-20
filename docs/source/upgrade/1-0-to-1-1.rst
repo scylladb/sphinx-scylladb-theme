@@ -1,4 +1,4 @@
-Migrating from 1.0 to 1.1
+Upgrading from 1.0 to 1.1
 =========================
 
 This guide explains how to upgrade the version of the ScyllaDB Sphinx Theme.

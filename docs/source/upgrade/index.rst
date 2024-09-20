@@ -18,13 +18,13 @@ Upgrade guides
 
 .. panel-box::
 
-  * :doc:`Migrating from 1.7 to 1.8 <1-7-to-1-8>`
-  * :doc:`Migrating from 1.6 to 1.7 <1-6-to-1-7>`
-  * :doc:`Migrating from 1.5 to 1.6 <1-5-to-1-6>`
-  * :doc:`Migrating from 1.4 to 1.5 <1-4-to-1-5>`
-  * :doc:`Migrating from 1.3 to 1.4 <1-3-to-1-4>`
-  * :doc:`Migrating from 1.2 to 1.3 <1-2-to-1-3>`
-  * :doc:`Migrating from 1.1 to 1.2 <1-1-to-1-2>`
-  * :doc:`Migrating from 1.0 to 1.1 <1-0-to-1-1>`
-  * :doc:`Migrating from 0.x to 1.0 <0-x-to-1-0>`
+  * :doc:`Upgrading from 1.7 to 1.8 <1-7-to-1-8>`
+  * :doc:`Upgrading from 1.6 to 1.7 <1-6-to-1-7>`
+  * :doc:`Upgrading from 1.5 to 1.6 <1-5-to-1-6>`
+  * :doc:`Upgrading from 1.4 to 1.5 <1-4-to-1-5>`
+  * :doc:`Upgrading from 1.3 to 1.4 <1-3-to-1-4>`
+  * :doc:`Upgrading from 1.2 to 1.3 <1-2-to-1-3>`
+  * :doc:`Upgrading from 1.1 to 1.2 <1-1-to-1-2>`
+  * :doc:`Upgrading from 1.0 to 1.1 <1-0-to-1-1>`
+  * :doc:`Upgrading from 0.x to 1.0 <0-x-to-1-0>`
   * :doc:`CHANGELOG <CHANGELOG>`

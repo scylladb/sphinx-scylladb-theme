@@ -66,7 +66,9 @@ In this case, you can mark the version as unstable in the ``conf.py`` file.
 
 By doing so, the warning message that appears at the top of the page will change to:
 
-.. image:: images/unstable.png
+.. code-block:: rst
+
+    You are viewing documentation for an unstable version of <PROJECT_NAME>. Switch to the latest stable version.
 
 Defining deprecated versions
 ----------------------------
@@ -81,7 +83,10 @@ In this case, you can mark the version as deprecated in the ``conf.py`` file.
 
 By doing so, the warning message that appears at the top of the page will change to:
 
-.. image:: images/deprecated.png
+.. code-block:: rst
+
+    You are viewing documentation for a deprecated version of <PROJECT_NAME>. Switch to the latest stable version.
+
 
 Previewing local changes with multiversion
 ------------------------------------------
