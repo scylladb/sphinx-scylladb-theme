@@ -1,5 +1,5 @@
 .promo-banner {
-  background-color: $color-background-banner;
+  background-color: var(--color-background-banner);
   background-image: url("../img/banner-background.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,14 +19,15 @@
   }
 
   &__title {
-    color: $color-typography-banner-title;
+    color: var(--color-typography-banner-title);
     font-size: $font-smallest;
     line-height: 16px;
     margin-right: 15px;
   }
 
   &__button {
-    background: $color-white;
+    background: var(--white);
+    color: var(--black);
     border-radius: 4px;
     font-size: $font-smallest;
     min-width: max-content;
@@ -39,10 +40,11 @@
     right: 16px;
     top: 16px;
 
-    .scylla-icon {
+    i {
       height: 34px;
       width: 34px;
-      filter: brightness(100%);
+      font-size: 34px;
+      color: var(--white);
     }
 
     &:hover {

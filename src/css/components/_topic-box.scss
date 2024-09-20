@@ -4,7 +4,7 @@
   margin-bottom: $gap;
 
   &__title {
-    color: $color-typography-topic-grid-title;
+    color: var(--text-emphasis);
     font-size: 24px;
     margin-bottom: 6px;
     line-height: 32px;
@@ -14,7 +14,7 @@
   &__text {
     font-size: 18px;
     line-height: 24px;
-    color: $color-typography-topic-grid-text;
+    color: var(--text-color);
   }
 
   &--scrollable .hs {
@@ -50,17 +50,20 @@
     position: relative;
     padding: 20px;
     font-size: 18px;
+    border: 1px solid var(--card-bg);
+    background-color: var(--card-bg) !important;
+    color: var(--text-color);
 
     &:hover {
-      color: $color-typography-base;
-      border: 1px solid $color-border-topic-box-hover;
+      color: var(--text-color);
+      border: 1px solid var(--text-color) !important;
       font-weight: 400;
     }
   }
 
   &__title {
     font-weight: 700;
-    color: $color-typography-topic-title;
+    color: var(--text-emphasis);
     font-size: $font-base;
     line-height: 24px;
     margin-bottom: 0;
@@ -76,7 +79,7 @@
   }
 
   &__body {
-    color: $color-typography-topic-text;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -97,7 +100,7 @@
   }
 
   &__anchor {
-    color: $color-typography-topic-link;
+    color: var(--link-color);
     font-size: $font-small;
     font-weight: 700;
     line-height: 24px;
@@ -109,7 +112,7 @@
     margin-bottom: 20px;
 
     i {
-      filter: brightness(0);
+      //filter: brightness(0);
       min-height: 50px;
       width: 100%;
     }
@@ -131,7 +134,7 @@
     text-align: center;
 
     .topic-box__title {
-      color: $color-typography-topic-title;
+      color: var(--text-color);
       font-size: $font-small;
     }
 
@@ -155,6 +158,8 @@
 
     &:hover {
       @include floating;
+      background-color: var(--card-bg);
+      border: 1px solid var(--text-color) !important;
     }
   }
 }

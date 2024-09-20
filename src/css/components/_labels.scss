@@ -1,23 +1,27 @@
 .label {
   border: 0;
   border-radius: 4px;
-  background-color: $color-background-label;
-  color: $color-typography-label;
+  background-color: var(--navigation-bg);
+  color: var(--white);
   font-size: inherit;
 
+  &--default {
+    color: var(--text-color);
+  }
+
   &--note {
-    background-color: $color-background-label-note;
+    background-color: var(--info);
   }
 
   &--tip {
-    background-color: $color-background-label-tip;
+    background-color: var(--success);
   }
 
   &--caution {
-    background-color: $color-background-label-caution;
+    background-color: var(--warning);
   }
 
   &--warning {
-    background-color: $color-background-label-warning;
+    background-color: var(--danger);
   }
 }

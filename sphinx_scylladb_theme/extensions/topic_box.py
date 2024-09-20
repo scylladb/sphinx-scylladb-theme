@@ -58,7 +58,7 @@ class TopicBox(Directive):
             generate_template(
                 """
             <div class="{class_name}__icon">
-                <i class="{icon}" style="color:{icon_color} !important;"></i>
+                <i class="{icon}"></i>
             </div>
             """,
                 class_name=class_name,
