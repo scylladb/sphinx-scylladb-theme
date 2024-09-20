@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Fixed
 
-- Set `sphinx-notfound-page` to `0.1.2` to fix the issue raised by the latest version of the extension. More details in https://github.com/readthedocs/sphinx-notfound-page/issues/240
+- [#1157](https://github.com/scylladb/sphinx-scylladb-theme/pull/1157) Set `sphinx-notfound-page` to `0.1.2` to fix the issue raised by the latest version of the extension. More details in https://github.com/readthedocs/sphinx-notfound-page/issues/240
 
 ## 1.7.3 - 25 Jun 2024
 
