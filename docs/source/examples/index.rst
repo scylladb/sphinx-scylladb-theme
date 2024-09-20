@@ -19,8 +19,9 @@ In general, there are main components to the markup of any document:
    glossary
    headings
    hero-box
-   includes
+   icons
    images
+   includes
    labels
    links
    lists
@@ -46,6 +47,7 @@ In general, there are main components to the markup of any document:
   * :doc:`Glossary <glossary>`
   * :doc:`Headings <headings>`
   * :doc:`Hero box <hero-box>`
+  * :doc:`Icons <icons>`
   * :doc:`Images <images>`
   * :doc:`Includes <includes>`
   * :doc:`Labels <labels>`
