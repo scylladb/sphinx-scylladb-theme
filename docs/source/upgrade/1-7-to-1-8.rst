@@ -87,3 +87,13 @@ Steps to apply this change:
         build-backend = "poetry.masonry.api" 
 
 #. Commit the changes to the repository, including the ``poetry.lock`` file.
+
+Update mascots and icons
+........................
+
+If your homepage was using mascots or icons, update them to the new ones.
+
+For more information, see:
+
+* :doc:`Mascots </examples/mascots>`
+* :doc:`Icons </examples/icons>`
