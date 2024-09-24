@@ -1,4 +1,4 @@
-Migrating from 1.7 to 1.8
+Upgrading from 1.7 to 1.8
 =========================
 
 This guide explains how to upgrade the version of the ScyllaDB Sphinx Theme.
@@ -14,6 +14,11 @@ If your project theme's version is **>=1.7**, follow this guide to get the lates
 
 Upgrade to version 1.8
 ----------------------
+
+Here are the main breaking changes between the 1.6 and 1.7 versions.
+
+Commit the poetry.lock file to the repository
+.............................................
 
 We recommend that teams commit the ``poetry.lock`` file to the repository. 
 Doing so ensures that dependencies are locked, leading to consistent documentation builds across different environments.
@@ -82,3 +87,13 @@ Steps to apply this change:
         build-backend = "poetry.masonry.api" 
 
 #. Commit the changes to the repository, including the ``poetry.lock`` file.
+
+Update mascots and icons
+........................
+
+If your homepage was using mascots or icons, update them to the new ones.
+
+For more information, see:
+
+* :doc:`Mascots </examples/mascots>`
+* :doc:`Icons </examples/icons>`

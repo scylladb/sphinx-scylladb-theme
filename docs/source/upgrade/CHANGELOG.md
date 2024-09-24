@@ -5,22 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.8.1 - 23 Aug 2024
+## 1.8.1 - 24 Sept 2024
 
 ## Added
 
 - [#1163](https://github.com/scylladb/sphinx-scylladb-theme/pull/1163): Introduced a new component to display tooltips in the documentation. This feature supports both glossary entries and custom text.
+- [#1180](https://github.com/scylladb/sphinx-scylladb-theme/pull/1180): Documented how to create links to configuration parameters.
+- [#1210](https://github.com/scylladb/sphinx-scylladb-theme/pull/1210): Added dark theme support.
+- [#1210](https://github.com/scylladb/sphinx-scylladb-theme/pull/1210): Introduced a new custom library for icons.
 
 ## Updated
 
-- [#1186](https://github.com/scylladb/sphinx-scylladb-theme/pull/1186): We recommend to include the poetry lock file in the repository. This ensures consistent dependencies are installed in the CI/CD pipeline.
-- [#1175](https://github.com/scylladb/sphinx-scylladb-theme/pull/1175): Adjusted script loading order so that Google Tag Manager documentation scripts are loaded before generic scripts.
+- [#1175](https://github.com/scylladb/sphinx-scylladb-theme/pull/1175): Adjusted script loading order so that Google Tag Manager scripts load before generic scripts.
+- [#1186](https://github.com/scylladb/sphinx-scylladb-theme/pull/1186): Recommend including the poetry lock file in the repository to ensure consistent dependencies are installed in the CI/CD pipeline.
+- [#1190](https://github.com/scylladb/sphinx-scylladb-theme/pull/1190): Updated the ScyllaDB logo and mascots.
+
+## Fixed
+
+- [#1206](https://github.com/scylladb/sphinx-scylladb-theme/pull/1206): Pinned `sphinx-autobuild` version to avoid a known issue.
+
+## Removed
+
+- [#1189](https://github.com/scylladb/sphinx-scylladb-theme/pull/1189): Removed the newsletter from the footer.
+
+- [#1217](https://github.com/scylladb/sphinx-scylladb-theme/pull/1217): Dropped Font Awesome libary support for icons.
 
 ## 1.7.4 - 30 Jul 2024
 
 ## Fixed
 
-- Set `sphinx-notfound-page` to `0.1.2` to fix the issue raised by the latest version of the extension. More details in https://github.com/readthedocs/sphinx-notfound-page/issues/240
+- [#1157](https://github.com/scylladb/sphinx-scylladb-theme/pull/1157) Set `sphinx-notfound-page` to `0.1.2` to fix the issue raised by the latest version of the extension. More details in https://github.com/readthedocs/sphinx-notfound-page/issues/240
 
 ## 1.7.3 - 25 Jun 2024
 

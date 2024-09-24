@@ -185,7 +185,7 @@ Using:
         :title: Lorem Ipsum
         :image: /_static/img/mascots-2/enterprise.svg
         :button_url: #
-        :button_icon: fa fa-github
+        :button_icon: icon-github
         :button_text: Project Name
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -195,7 +195,7 @@ Results in:
 .. hero-box::
     :title: Lorem Ipsum
     :image: /_static/img/mascots-2/enterprise.svg
-    :button_icon: fa fa-github
+    :button_icon: icon-github
     :button_url: #
     :button_text: Project Name
 
@@ -212,7 +212,7 @@ Using:
         :title: Lorem Ipsum
         :image: /_static/img/mascots-2/enterprise.svg
         :button_url: #
-        :button_icon: fa fa-github
+        :button_icon: icon-github
         :button_icon_position: right
         :button_text: Project Name
 
@@ -223,7 +223,7 @@ Results in:
 .. hero-box::
     :title: Lorem Ipsum
     :image: /_static/img/mascots-2/enterprise.svg
-    :button_icon: fa fa-github
+    :button_icon: icon-github
     :button_icon_position: right
     :button_url: #
     :button_text: Project Name
@@ -318,7 +318,7 @@ Hero box with everything
       :button_text: Project Name
       :button_url: #
       :button_style: bold
-      :button_icon: fa fa-github
+      :button_icon: icon-arrow-right
       :button_icon_position: right
       :button_icon_link:
       :cta: Learn more
@@ -334,7 +334,7 @@ Results in:
     :button_text: Project Name
     :button_url: #
     :button_style: bold
-    :button_icon: fa fa-arrow-right
+    :button_icon: icon-arrow-right
     :button_icon_position: right
     :button_icon_link:
     :cta: Learn more
