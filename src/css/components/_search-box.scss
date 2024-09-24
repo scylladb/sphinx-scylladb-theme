@@ -41,7 +41,7 @@
   input {
     background: transparent !important;
     color: var(--text-color) !important;
-    font-size: $font-small !important;
+    font-size: $font-sm !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
@@ -109,7 +109,7 @@
   }
 
   h3 {
-    font-size: $font-base !important;
+    font-size: $font-md !important;
     
   }
 }
@@ -205,7 +205,7 @@
       background-color: transparent;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: var(--color-background-scrollbar);
+      background-color: var(--scollbar-bg);
       -webkit-border-radius: 8px;
       border-radius: 8px;
     }

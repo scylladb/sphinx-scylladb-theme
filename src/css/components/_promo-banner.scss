@@ -1,5 +1,5 @@
 .promo-banner {
-  background-color: var(--color-background-banner);
+  background-color: var(--header-border);
   background-image: url("../img/banner-background.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,8 +19,8 @@
   }
 
   &__title {
-    color: var(--color-typography-banner-title);
-    font-size: $font-smallest;
+    color: var(--white);
+    font-size: $font-xs;
     line-height: 16px;
     margin-right: 15px;
   }
@@ -29,7 +29,7 @@
     background: var(--white);
     color: var(--black);
     border-radius: 4px;
-    font-size: $font-smallest;
+    font-size: $font-xs;
     min-width: max-content;
     padding: 5px;
   }
@@ -69,7 +69,7 @@
     }
 
     &__button {
-      font-size: $font-small;
+      font-size: $font-sm;
       padding: 8.5px;
     }
     &__close {

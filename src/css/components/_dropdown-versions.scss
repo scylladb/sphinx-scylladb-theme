@@ -1,7 +1,7 @@
 .scylla-dropdown--versions {
   .scylla-dropdown__item {
     background: var(--card-bg);
-    border-radius: $round;
+    border-radius: $border-radius-md;
     box-shadow: 0 28px 32px rgba(0, 0, 0, 0.06);
     width: 100%;
   }

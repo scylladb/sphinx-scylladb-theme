@@ -7,7 +7,7 @@
   a,
   .bread__item:not(.bread__item--last)::after {
     color: var(--text-color);
-    font-size: $font-smallest;
+    font-size: $font-xs;
     font-weight: 400;
     letter-spacing: 1.5px;
     line-height: 2;

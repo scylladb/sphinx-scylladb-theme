@@ -1,7 +1,7 @@
 .tooltip {
-  background-color: var(--color-background-tooltip);
+  background-color: var(--tooltip-bg);
   border-radius: 4px;
-  font-size: $font-smallest;
+  font-size: $font-xs;
   padding: 6px;
   border: 0;
   max-width: 50%;

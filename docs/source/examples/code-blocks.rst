@@ -36,6 +36,29 @@ You can create code-blocks in any of the following `languages <https://pygments.
 
 If you are including a large example (an entire file) as a code-block, refer to :doc:`Literal Include <includes>`.
 
+Show line number
+----------------
+
+To show the line number, add the option `:linenos:` to the code-block directive.
+
+For example:
+
+.. code-block:: rst
+
+   .. code-block:: rst
+      :linenos:
+
+      Line 1
+      Line 2
+
+Renders:
+
+.. code-block:: rst
+   :linenos:
+   
+   Line 1
+   Line 2
+
 Hide copy button
 ----------------
 
