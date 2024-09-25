@@ -19,7 +19,7 @@ setuptools = ">=70.1.1,<75.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.2"
-sphinx-autobuild = "^2024.4.16"
+sphinx-autobuild = "^2024.4.19"
 pre-commit = "^3.7.1"
 myst-parser = "^3.0.1"
 sphinx-multiversion-scylla = "^0.3.2"
