@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-size: $font-base;
+  font-size: $font-md;
   font-family: $font-base-family;
   line-height: 1;
   background-color: var(--bg-color);
@@ -22,8 +22,8 @@ a {
 }
 
 a.reference:after {
+  font-size: $font-xs;
   font-family: $font-icons-family;
-  font-size: $font-smallest;
   padding: 0 4px;
 }
 
@@ -46,7 +46,7 @@ a:hover {
 }
 
 .toc-backref:hover {
-  color: var(--color-typography-base);
+  color: var(--black);
 }
 
 h1,
