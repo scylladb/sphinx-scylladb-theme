@@ -1,6 +1,6 @@
 .feedback-container {
   text-align: left;
-  font-size: $font-base;
+  font-size: $font-md;
   margin-top: 40px;
 
 
@@ -29,6 +29,6 @@
 
   &__message {
     margin-top: 10px;
-    font-size: $font-base;
+    font-size: $font-md;
   }
 }

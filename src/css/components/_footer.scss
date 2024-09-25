@@ -44,7 +44,7 @@
   &__link {
     color: var(--text-color);
     font-weight: 500;
-    font-size: $font-smallest;
+    font-size: $font-xs;
     letter-spacing: 2.4px;
     margin-right: 16px;
     text-transform: uppercase;
@@ -106,7 +106,7 @@
     padding: 0 40px;
 
     &__link {
-      font-size: $font-small;
+      font-size: $font-sm;
       margin-right: 28px;
     }
   }

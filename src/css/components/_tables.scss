@@ -11,7 +11,7 @@
 
 table {
   color: var(--text-color);
-  font-size: $font-small;
+  font-size: $font-sm;
   line-height: 24px;
   margin: 0;
   overflow: hidden;
@@ -34,7 +34,7 @@ table {
 
     th {
       color: var(--text-emphasis);
-      font-size: $font-small;
+      font-size: $font-sm;
       font-weight: bold;
     }
   }

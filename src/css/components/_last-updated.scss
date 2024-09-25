@@ -1,12 +1,12 @@
 .last-updated {
   margin: 10px 0;
-  color: var(--color-typography-last-updated);
-  font-size: $font-smallest;
+  color: var(--link);
+  font-size: $font-xs;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 
   &__icon {
-    font-size: $font-small;
+    font-size: $font-sm;
   }
 }
 

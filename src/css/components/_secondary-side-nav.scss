@@ -34,7 +34,7 @@
         align-items: baseline;
         color: var(--text-muted);
         display: flex;
-        font-size: $font-small;
+        font-size: $font-sm;
 
         &:before {
           content: map.get($icons, "docs-chevron-right");

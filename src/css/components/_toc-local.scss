@@ -4,7 +4,7 @@
     margin-left: 0;
 
     > li {
-      border-bottom: 1px solid var(--color-border-toc-local-li);
+      border-bottom: 1px solid rgba(90, 94, 154, 0.1);
       padding: 10px 0;
       word-break: break-word;
 
@@ -25,13 +25,13 @@
       }
 
       a {
-        font-size: $font-small;
+        font-size: $font-sm;
 
         &:before {
           content: "";
           @extend .scylla-icon;
           @extend .scylla-icon--chevron-right;
-          filter: var(--color-filter-sidenav-toctree) !important;
+          filter: invert(38%) sepia(71%) saturate(6789%) hue-rotate(231deg) brightness(90%) contrast(95%) !important;
           opacity: 0.5;
           min-height: 10px;
           width: 10px;

@@ -48,6 +48,38 @@ $border-width: 1px;
 $border-radius: $spacer-3xs; 
 $border-radius-md: $spacer-xxs; 
 
+$gap: 30px;
+$footer-height: 180px;
+$header-height: 50px;
+$promo-banner-height: 42.5px;
+$promo-banner-height-large: 70px;
+$header-height-large: 80px;
+$max-content-width: 1440px;
+$max-footer-width: 1030px;
+$max-full-width: 1190px;
+$promo-banner-header-height: $promo-banner-height + $header-height;
+$promo-banner-header-height-large: $promo-banner-height-large + $header-height-large;
+$search-box-width: 318px;
+$secondary-side-nav-width: 286px;
+$side-nav-width: 357px;
+$side-nav-width-collapsed: 126px;
+
+
+// Breakpoint variables
+$small: 0px;
+$medium: 640px;
+$large: 1024px;
+$xlarge: 1200px;
+$xxlarge: 1440px;
+
+// Font variables
+$font-base-family: "Roboto", sans-serif;
+$font-icons-family: "FontAwesome";
+
+$font-md: 16px;
+$font-sm: 14px;
+$font-xs: 12px;
+
 :root {
     --white: #{$white};
     --gray-50: #{$gray-50};
@@ -84,13 +116,16 @@ $border-radius-md: $spacer-xxs;
     --navigation-bg: #{$navigation-bg};
     --card-bg: var(--white);
     --admonition: #{$admonition};
+    --scollbar-bg: #b3bac5;
+    --tooltip-bg : #{$gray-900};
 
     --shadow-lg: 0px 4px 25px rgba(0, 0, 0, 0.15);
     --border-width: #{$border-width};
     --border-radius: #{$border-radius};
     --border-radius-md: #{$border-radius-md};
-
+    --line-number: #5a7184;
     --logo-url: "../img/logo-scylla-horizontal-color.svg";
+
   }
 
   .dark {

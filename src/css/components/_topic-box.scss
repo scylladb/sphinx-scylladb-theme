@@ -64,7 +64,7 @@
   &__title {
     font-weight: 700;
     color: var(--text-emphasis);
-    font-size: $font-base;
+    font-size: $font-md;
     line-height: 24px;
     margin-bottom: 0;
 
@@ -93,7 +93,7 @@
 
     p,
     .line-block {
-      font-size: $font-base;
+      font-size: $font-md;
       line-height: 19px;
       margin-top: 10px;
     }
@@ -101,7 +101,7 @@
 
   &__anchor {
     color: var(--link-color);
-    font-size: $font-small;
+    font-size: $font-sm;
     font-weight: 700;
     line-height: 24px;
   }
@@ -135,7 +135,7 @@
 
     .topic-box__title {
       color: var(--text-color);
-      font-size: $font-small;
+      font-size: $font-sm;
     }
 
     .topic-box__body {
@@ -145,7 +145,7 @@
 
       p,
       .line-block {
-        font-size: $font-smallest;
+        font-size: $font-xs;
       }
     }
 
@@ -180,7 +180,7 @@
     margin-bottom: 10px;
 
     &__text {
-      font-size: $font-base;
+      font-size: $font-md;
     }
 
     &--scrollable .hs {
@@ -229,7 +229,7 @@
     .topic-box__body {
       p,
       .line-block {
-        font-size: $font-small;
+        font-size: $font-sm;
       }
     }
 

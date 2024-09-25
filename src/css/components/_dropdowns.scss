@@ -1,6 +1,6 @@
 .scylla-dropdown {
   color: var(--text-color);
-  font-size: $font-small;
+  font-size: $font-sm;
   line-height: 20px;
 
   a,
@@ -11,7 +11,7 @@
   }
 
   &__item {
-    font-size: $font-base;
+    font-size: $font-md;
     padding: 15px;
   }
 
@@ -33,7 +33,7 @@
 
   &__content {
     @include floating;
-    font-size: $font-base;
+    font-size: $font-md;
     list-style: none;
     margin-top: 15px;
     padding: 16px 0;
