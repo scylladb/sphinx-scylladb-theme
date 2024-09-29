@@ -27,16 +27,16 @@ Installs system dependencies required to build the docs such as Poetry.
 
     make setupenv
 
-install
-=======
+setup
+=====
 
 Installs the required Python dependencies to build the documentation.
 
 .. code:: console
 
-    make install
+    make setup
 
-.. note:: The command ``make install`` is called automatically when running build commands.
+.. note:: ``make setup`` is called automatically before running build commands.
 
 update
 ======
