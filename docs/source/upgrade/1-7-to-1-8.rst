@@ -38,18 +38,16 @@ Steps to apply this change:
             rm -rf $(BUILDDIR)/*
             # rm -f poetry.lock
 
-#. In the same file, remove the line ``$(POETRY) update`` fro the ``setup`` command:
+#. In the same file, remove the line ``$(POETRY) update`` from the ``setup`` command:
 
     .. code-block::
 
-        # Clean commands
-        .PHONY: clean
-        clean:
-            rm -rf $(BUILDDIR)/*
-            # rm -f poetry.lock
+        .PHONY: setup
+        setup:
+            $(POETRY) install
+            # $(POETRY) update
 
-
-#. In the same file, add a new separate command to update Python dependencies:
+#. In the same file, add a new command to update Python dependencies:
 
     .. code-block::
 
