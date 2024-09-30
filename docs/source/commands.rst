@@ -4,16 +4,7 @@ Commands
 
 Use the command-line interface to run the following commands.
 
-Prerequisites
--------------
-
-To run the following commands, you will need to have installed:
-
-- A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
-- `Python 3.10 or 3.12 <https://www.python.org/downloads/>`_.
-- `Poetry 1.8.1 <https://python-poetry.org/docs/master/>`_.
-- `Make <https://www.gnu.org/software/make/>`_.
-- `Git <https://git-scm.com/>`_.
+.. note:: Make sure you meet the necessary prerequisites before running these commands. For details, see :ref:`Prerequisites <prerequisites>`.
 
 Setup commands
 --------------
@@ -21,7 +12,7 @@ Setup commands
 setupenv
 ========
 
-Installs system dependencies required to build the docs such as Poetry.
+Installs system dependencies required to build the docs, such as Poetry.
 
 .. code:: console
 
@@ -116,7 +107,7 @@ For further guidance on using the ``multiversionpreview command``, see :doc:`Mul
 dirhtml
 =======
 
-Generates the documentation in HTML version.
+Generates the documentation in HTML format.
 
 .. note:: The command ``make dirhtml`` is aimed to be used by GitHub Actions CI. While documenting new features, it is not advised to run ``make dirhtml``, but ``make preview`` instead.
 
@@ -161,7 +152,8 @@ Clean commands
 clean
 =====
 
-When making changes to the docs, it is helpful to delete the contents of this directory before running ``make preview``.
+Before making changes to the docs, it's helpful to clear the previous build by deleting the contents of the ``build`` directory.
+This ensures that the changes you make are reflected correctly.
 
 .. code:: console
 
@@ -174,7 +166,7 @@ Test commands
 linkcheck
 =========
 
-Checks for broken links on the documentation site.
+Checks the documentation site for broken links.
 
 .. code:: console
 
