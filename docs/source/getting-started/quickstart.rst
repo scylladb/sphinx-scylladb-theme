@@ -4,6 +4,8 @@ Quickstart
 
 This guide will show you how to create your first documentation page, list it in the table of contents, and preview the site locally.
 
+.. _prerequisites:
+
 Prerequisites
 -------------
 

@@ -4,23 +4,52 @@ Commands
 
 Use the command-line interface to run the following commands.
 
-Prerequisites
--------------
+.. note:: Make sure you meet the necessary prerequisites before running these commands. For details, see :ref:`Prerequisites <prerequisites>`.
 
-To run the following commands, you will need to have installed:
+Setup commands
+--------------
 
-- A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
-- `Python 3.7 <https://www.python.org/downloads/>`_ or later.
-- `Poetry #.12 <https://python-poetry.org/docs/master/>`_ or later.
-- `Make <https://www.gnu.org/software/make/>`_.
-- `Git <https://git-scm.com/>`_.
+setupenv
+========
+
+Installs system dependencies required to build the docs, such as Poetry.
+
+.. code:: console
+
+    make setupenv
+
+setup
+=====
+
+Installs the required Python dependencies to build the documentation.
+
+.. code:: console
+
+    make setup
+
+.. note:: ``make setup`` is called automatically before running build commands.
+
+update
+======
+
+Updates Python dependencies to the latest version.
+
+.. code:: console
+
+    make update
+
+As a result, updates the ``poetry.lock`` file.
+
+
+Build commands
+--------------
 
 .. _Make_Preview:
 
-Preview current branch
-----------------------
+preview
+=======
 
-The preview command builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser.
+Builds a local instance of the docs site so you can view the rendering in a sandbox environment on your local browser.
 
 To preview the docs:
 
@@ -47,7 +76,7 @@ To decrease verbosity, use the option ``-Q``:
 
         make preview SPHINXOPTS=-Q
 
-To fix the error `pyproject.toml changed significantly since poetry.lock was last generated.`, run the following command:
+To fix the error ``pyproject.toml changed significantly since poetry.lock was last generated.``, run the following command:
 
     .. code:: console
 
@@ -55,10 +84,11 @@ To fix the error `pyproject.toml changed significantly since poetry.lock was las
 
     Then, run the preview command again.
 
-Preview multiversion
---------------------
 
-The multiversionpreview command generates a local instance of the docs site with all :doc:`specified versions <../configuration/multiversion>` available for navigation.
+multiversionpreview
+===================
+
+Generates a local instance of the docs site with all :doc:`specified versions <../configuration/multiversion>` available for navigation.
 You can view the rendering in a sandbox environment on your local browser.
 
 To preview multiple versions:
@@ -72,10 +102,26 @@ To preview multiple versions:
 
 #. Open http://0.0.0.0:5500/ with your preferred browser.
 
-For further guidance on using the `multiversionpreview command`, see :doc:`Multiversion configuration <../configuration/multiversion>`.
+For further guidance on using the ``multiversionpreview command``, see :doc:`Multiversion configuration <../configuration/multiversion>`.
 
-Build HTML for multiple versions
---------------------------------
+dirhtml
+=======
+
+Generates the documentation in HTML format.
+
+.. note:: The command ``make dirhtml`` is aimed to be used by GitHub Actions CI. While documenting new features, it is not advised to run ``make dirhtml``, but ``make preview`` instead.
+
+.. code:: console
+
+    cd docs
+    make multiversion
+
+Docs are generated under the ``docs/_build/dirhtml`` directory.
+
+multiversion
+============
+
+Generates multiple versions of the docs with all :doc:`specified versions <../configuration/multiversion>` available for navigation.
 
 .. note:: The command ``make multiversion`` is aimed to be used by GitHub Actions CI. While documenting new features, it is not advised to run ``make multiversion``, but ``make preview`` instead.
 
@@ -84,22 +130,43 @@ Build HTML for multiple versions
     cd docs
     make multiversion
 
-The previous command generates HTML docs under the ``docs/_build/dirhtml`` directory.
+Docs are generated under the ``docs/_build/dirhtml`` directory.
 
-Clean all builds
-----------------
+redirects
+=========
 
-The ``make preview`` operation creates content in the ``_build`` directory. When making changes to the docs, it is helpful to delete the contents of this directory before running ``make preview``.
+Generates HTML redirects from the ``_utils/redirects.yaml`` file.
+
+.. note:: The command ``make multiversion`` is aimed to be used by GitHub Actions CI.
+
+.. code:: console
+
+    cd docs
+    make multiversion
+
+Redirects are generated under the ``docs/_build/dirhtml`` directory.
+
+Clean commands
+--------------
+
+clean
+=====
+
+Before making changes to the docs, it's helpful to clear the previous build by deleting the contents of the ``build`` directory.
+This ensures that the changes you make are reflected correctly.
 
 .. code:: console
 
     cd docs
     make clean
 
-Check for broken links
-----------------------
+Test commands
+-------------
 
-Check for broken links on the documentation site.
+linkcheck
+=========
+
+Checks the documentation site for broken links.
 
 .. code:: console
 

@@ -38,6 +38,22 @@ Steps to apply this change:
             rm -rf $(BUILDDIR)/*
             # rm -f poetry.lock
 
+#. In the same file, remove the line ``$(POETRY) update`` from the ``setup`` command:
+
+    .. code-block::
+
+        .PHONY: setup
+        setup:
+            $(POETRY) install
+            # $(POETRY) update
+
+#. In the same file, add a new command to update Python dependencies:
+
+    .. code-block::
+
+        .PHONY: update
+        update:
+            $(POETRY) update
 
 #. Add the following ``dependabot.yml`` configuration file in the ``.github`` directory:
 
@@ -67,7 +83,7 @@ Steps to apply this change:
         [tool.poetry.dependencies]
         python = "^3.10"
         pygments = "^2.18.0"
-        sphinx-scylladb-theme = "^1.6.1"
+        sphinx-scylladb-theme = "^1.8.1"
         myst-parser = "^3.0.1"
         sphinx-autobuild = "^2024.4.19"
         Sphinx = "^7.3.7"
@@ -85,6 +101,18 @@ Steps to apply this change:
         [build-system]
         requires = ["poetry>=1.8.0"]
         build-backend = "poetry.masonry.api" 
+
+#. Run the following command in the ``docs``folder to update the ``poetry.lock`` file:
+
+    .. code-block:: python
+
+        poetry lock --no-update
+
+#. Preview the docs. Ensure sure they render without errors:
+
+    .. code-block:: python
+
+        make preview
 
 #. Commit the changes to the repository, including the ``poetry.lock`` file.
 
