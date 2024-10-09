@@ -18,6 +18,12 @@ The glossary has the following format:
       Term 2
          Definition
 
+      Long description
+         Lorem ipsum dolor sit amet, ``consectetur`` adipiscing elit. Ut tincidunt orci non pellentesque hendrerit. Sed vitae sem convallis, porta felis ut, varius libero. Suspendisse eget auctor felis. Sed sit amet sapien posuere, eleifend urna ut, interdum nisi.
+         Donec porta nibh leo, vitae convallis risus ornare sit amet. Mauris porttitor ipsum in mi dignissim, vel volutpat massa placerat.
+         
+         Vivamus et cursus turpis, id luctus lectus.
+
 This will result in:
 
 .. glossary::
@@ -29,7 +35,10 @@ This will result in:
       Definition
    
    Long description
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lorem quis dui mattis suscipit sit amet id dui. Suspendisse elementum rutrum vulputate. Cras in velit sapien. Etiam egestas turpis eget arcu feugiat semper. Ut blandit sagittis cursus. Maecenas at varius ex, et porttitor mi. Nullam tortor elit, tincidunt et nulla id, porta vestibulum nibh. Quisque tellus elit, maximus at congue quis, molestie eget urna. Donec odio lorem, semper sed pharetra eu, sodales eget velit. Donec dignissim quam mi, nec vehicula magna gravida in. Vestibulum consectetur, sem a tristique porta, risus est laoreet nibh, sed cursus nibh est vel massa. Vestibulum aliquet varius tellus eu pulvinar. Integer a lorem sollicitudin, placerat orci eu, lobortis velit. Pellentesque sit amet magna porta augue iaculis egestas dapibus sed dui.
+      Lorem ipsum dolor sit amet, ``consectetur`` adipiscing elit. Ut tincidunt orci non pellentesque hendrerit. Sed vitae sem convallis, porta felis ut, varius libero. Suspendisse eget auctor felis. Sed sit amet sapien posuere, eleifend urna ut, interdum nisi.
+      Donec porta nibh leo, vitae convallis risus ornare sit amet. Mauris porttitor ipsum in mi dignissim, vel volutpat massa placerat.
+      
+      Vivamus et cursus turpis, id luctus lectus.
 
 
 
