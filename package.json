@@ -10,7 +10,7 @@
     "lint": "eslint . src config || true"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.7",
     "babel-loader": "^9.2.1",
     "clean-webpack-plugin": "^4.0.0",
