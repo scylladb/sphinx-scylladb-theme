@@ -6,7 +6,6 @@ export class DarkTheme {
         let rootDocumentEl = $("html");
         let darkThemeTogglerEl = $(".dark-theme-toggler");
 
-
         const toggler = (state) => {
             if (state) {
                 rootDocumentEl.addClass('dark')
@@ -17,6 +16,7 @@ export class DarkTheme {
 
         toggler(state);
 
+        rootDocumentEl.css("visibility","");
 
         darkThemeTogglerEl.on('click', () => {
             state = !state;
