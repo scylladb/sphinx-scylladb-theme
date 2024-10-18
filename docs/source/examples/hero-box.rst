@@ -47,7 +47,7 @@ The ``hero-box`` directive supports the following options:
   * - ``button_icon``
     - string
     -
-    - fa fa-home
+    - icon-home
     - A list of CSS classes to render an icon, separated by comma or space.
   * - ``button_icon_position``
     - string

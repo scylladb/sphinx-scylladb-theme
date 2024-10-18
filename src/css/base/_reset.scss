@@ -1,3 +1,5 @@
+@use "sass:map";
+
 html {
   box-sizing: border-box;
   scroll-padding-top: 100px;
@@ -23,16 +25,17 @@ a {
 
 a.reference:after {
   font-size: $font-xs;
-  font-family: $font-icons-family;
   padding: 0 4px;
 }
 
 a.reference.external:after {
-  content: "\f08e";
+  @extend .icon;
+  content: map.get($icons, "newtab");
 }
 
 a.reference.download:after {
-  content: "\f019";
+  @extend .icon;
+  content: map.get($icons, "download");
 }
 
 a:hover {

@@ -29,7 +29,6 @@
     li::before {
       content: "\2022";
       color: var(--text-muted);
-      font-family: $font-icons-family;
       float: left;
       font-size: 20px;
       font-weight: bold;
