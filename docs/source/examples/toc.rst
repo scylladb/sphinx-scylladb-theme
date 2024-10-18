@@ -3,6 +3,10 @@ TOC
 
 These directives create TOCs automatically
 
+.. contents::
+   :depth: 2
+   :local:
+
 TOC
 ---
 

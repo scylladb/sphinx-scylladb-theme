@@ -6,7 +6,7 @@
             {% else %}
                 {{ current_version.name | replace(theme_tag_substring_removed, '') }}
             {% endif %}
-            <i class="chevron scylla-icon scylla-icon--chevron-right"></i>
+            <i class="chevron icon-docs-chevron-right"></i>
         </a>
         <ul class="menu scylla-dropdown__content">
             {% for item in versions.branches|reverse %}
