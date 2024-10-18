@@ -1,7 +1,7 @@
 export class SidebarHandler {
 
   constructor() {
-    this.localStorageKey = "scylla-sidebar-scroll-position";
+    this.localStorageKey = "scylladb-docs-sidebar-scroll-position";
   }
   
   initScrollEvent() {
