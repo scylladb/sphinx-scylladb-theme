@@ -48,13 +48,48 @@ For example, using:
 .. code-block:: rst
 
    .. panel-box::
-      :title: Admin
+      :title: Title
 
-      Test
+      Body
 
 Results in:
 
 .. panel-box::
-    :title: Admin
+    :title: Title
 
-    Test
+    Body
+
+Compatibility with previous versions
+------------------------------------
+
+Some panel boxes in the open-source project where defined with raw html as follows:
+
+.. code-block:: rst
+
+  .. raw:: html
+
+    <div class="panel callout radius animated">
+        <div class="row">
+          <div class="medium-3 columns">
+            <h5 id="getting-started">Title</h5>
+          </div>
+          <div class="medium-9 columns">
+            Body
+          </div>
+        </div>
+    </div>
+
+This example tests how the previous panel box is rendered:
+
+.. raw:: html
+
+  <div class="panel callout radius animated">
+      <div class="row">
+        <div class="medium-3 columns">
+          <h5 id="getting-started">Title</h5>
+        </div>
+        <div class="medium-9 columns">
+          Body
+        </div>
+      </div>
+  </div>
