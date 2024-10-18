@@ -1059,13 +1059,13 @@ test = ["pytest"]
 
 [[package]]
 name = "starlette"
-version = "0.39.0"
+version = "0.40.0"
 description = "The little ASGI library that shines."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "starlette-0.39.0-py3-none-any.whl", hash = "sha256:57164a38948018134537d31367fb46ef9be6050a8e955fb4990235960ed03f92"},
-    {file = "starlette-0.39.0.tar.gz", hash = "sha256:b35acedae74e95967dd9c0a47b45f5803dcd8973d0d95c18c1abb184845ba42c"},
+    {file = "starlette-0.40.0-py3-none-any.whl", hash = "sha256:c494a22fae73805376ea6bf88439783ecfba9aac88a43911b48c653437e784c4"},
+    {file = "starlette-0.40.0.tar.gz", hash = "sha256:1a3139688fb298ce5e2d661d37046a66ad996ce94be4d4983be019a23a04ea35"},
 ]
 
 [package.dependencies]
