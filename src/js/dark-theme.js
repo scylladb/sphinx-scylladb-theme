@@ -28,6 +28,7 @@ export class DarkTheme {
         } else {
             this.rootDocumentEl.removeClass(this.darkThemeClass);
         }
+        this.rootDocumentEl.css("visibility","");
     }
 
     saveThemeState(state) {
