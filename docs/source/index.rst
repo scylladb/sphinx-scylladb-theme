@@ -1,24 +1,26 @@
 :full-width:
+:landing:
+:hide-sidebar:
+:hide-secondary-sidebar:
 :hide-version-warning:
 :hide-pre-content:
 :hide-post-content:
-:landing:
 
-.. title:: Scylla Sphinx Theme
+
+.. title:: ScyllaDB Sphinx Theme
 
 .. hero-box::
-  :button_icon: fa fa-github
+  :button_icon: icon-github
   :button_url: https://github.com/scylladb/sphinx-scylladb-theme
   :button_text: Source code
-  :title: Welcome to Scylla Sphinx Theme documentation
-  :image: /_static/img/mascots/scylla-docs.svg
+  :title: Welcome to ScyllaDB Sphinx Theme documentation
+  :image: /_static/img/mascots-2/docs.svg
 
-
-  The documentation toolchain for Scylla projects.
+  The documentation toolchain for ScyllaDB projects.
 
 .. raw:: html
 
-  <div class="landing__content landing__content">
+  <div class="landing__content">
 
 .. raw:: html
 
@@ -27,18 +29,18 @@
   <div class="grid-x grid-margin-x">
 
 .. topic-box::
-  :title: Installation
+  :title: Getting started
   :link: getting-started
-  :icon: scylla-icon scylla-icon--getting-started
+  :icon: icon-docs-getting-started
   :class: large-6
   :anchor: Learn more
 
-  Create a new documentation project with the Sphinx theme.
+  Create a new documentation project with the Sphinx theme and preview the documentation in your browser.
 
 .. topic-box::
   :title: Configuration
   :link: configuration
-  :icon: scylla-icon scylla-icon--integrations
+  :icon: icon-docs-configuration
   :class: large-6
   :anchor: Learn more
 
@@ -47,7 +49,7 @@
 .. topic-box::
   :title: Commands
   :link: commands
-  :icon: scylla-icon scylla-icon--apps
+  :icon: icon-docs-commands
   :class: large-6
   :anchor: Learn more
 
@@ -55,8 +57,8 @@
 
 .. topic-box::
   :title: Deployment
-  :link: github-pages
-  :icon: fa fa-github
+  :link: deployment
+  :icon: icon-github
   :class: large-6
   :anchor: Learn more
 
@@ -65,16 +67,16 @@
 .. topic-box::
   :title: Demos and Examples
   :link: examples
-  :icon: scylla-icon scylla-icon--tech-talks
+  :icon: icon-docs-training
   :class: large-6
   :anchor: Learn more
 
-  Explore example pages and components you can use in Scylla docs.
+  Explore example pages and components you can use in ScyllaDB docs.
 
 .. topic-box::
   :title: Contribute
   :link: contribute
-  :icon: scylla-icon scylla-icon--about-team
+  :icon: icon-docs-contribute
   :class: large-6
   :anchor: Learn more
 
@@ -95,7 +97,7 @@
   getting-started/index
   configuration/index
   commands
-  Deployment <github-pages>
+  deployment/index
   examples/index
   upgrade/index
   contribute/index
