@@ -84,7 +84,7 @@ class TopicBox(Directive):
             generate_template(
                 """
                 <div class="{class_name}__anchor">{anchor}
-                 <i class="fa fa-external-link" aria-hidden="true"></i>
+                 <i class="icon-newtab" aria-hidden="true"></i>
                 </div>
                 """
                 if target_attr == 'target="_blank"'

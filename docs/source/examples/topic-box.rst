@@ -42,7 +42,7 @@ The ``topic-box`` directive supports the following options:
   * - ``icon``
     - string
     -
-    - fa fa-home
+    - icon-home
     - A list of CSS classes to render icons, separated by comma or space.
   * - ``image``
     - string
@@ -77,7 +77,7 @@ Using:
 
     .. topic-box::
         :title: Lorem Ipsum
-        :icon: fa fa-github
+        :icon: icon-github
         :link: #
         :anchor: Lorem ipsum
 
@@ -87,7 +87,7 @@ Results in:
 
 .. topic-box::
     :title: Lorem Ipsum
-    :icon: fa fa-github
+    :icon: icon-github
     :link: #
     :anchor: Lorem ipsum
 
