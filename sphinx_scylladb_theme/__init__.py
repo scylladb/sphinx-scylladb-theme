@@ -75,8 +75,8 @@ def override_rst_epilog(config):
 .. role:: raw-html(raw)
    :format: html
 
-.. |v| replace:: :raw-html:`<i class="inline-icon fa fa-check" aria-hidden="true"></i>`
-.. |x| replace:: :raw-html:`<i class="inline-icon fa fa-times" aria-hidden="true"></i>`
+.. |v| replace:: :raw-html:`<i class="inline-icon icon-check" aria-hidden="true"></i>`
+.. |x| replace:: :raw-html:`<i class="inline-icon icon-cancel" aria-hidden="true"></i>`
 """
 
     epilog = config.rst_epilog or ""
