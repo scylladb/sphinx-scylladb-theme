@@ -49,14 +49,6 @@
       color: inherit;
     }
 
-    .scylla-icon--expand {
-      height: 5px;
-      width: 10px;
-      vertical-align: top;
-      @extend .icon;
-      content: map.get($icons, "docs-dropdown");
-    }
-
     .toctree-checkbox {
       position: absolute;
       right: 20px;
