@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.8.3 - 25 Oct 2024
+
+### Added
+
+- Documentation on Dependabot support, explaining configuration, update frequency, and handling vulnerability alerts.
+
+### Fixed 
+
+- Updated cookie configuration to ensure cookies are available across all `.scylladb.com` subdomains.
+- Corrected Dependabot ignore property that was unintentionally excluding all dependencies, now allowing only specified dependencies to receive updates.
+
 ## 1.8.2 - 22 Oct 2024
 
 ### Added
@@ -25,7 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#1267](https://github.com/scylladb/sphinx-scylladb-theme/pull/1267): Removed the previous icon library.
 - [#1266](https://github.com/scylladb/sphinx-scylladb-theme/pull/1266): Completely dropped Font Awesome support, removed the latest icons, and cleaned up the dependency.
-
 
 
 ## 1.8.1 - 24 Sept 2024

@@ -11,6 +11,7 @@ Configuration
    markdown
    redirects
    search
+   dependabot
 
 .. panel-box::
   :title: Overview
