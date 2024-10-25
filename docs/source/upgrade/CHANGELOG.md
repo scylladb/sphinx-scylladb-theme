@@ -9,12 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Documentation on Dependabot support, explaining configuration, update frequency, and handling vulnerability alerts.
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Documentation on Dependabot support, explaining configuration, update frequency, and handling vulnerability alerts.
 
 ### Fixed 
 
-- Updated cookie configuration to ensure cookies are available across all `.scylladb.com` subdomains.
-- Corrected Dependabot ignore property that was unintentionally excluding all dependencies, now allowing only specified dependencies to receive updates.
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Updated cookie configuration to ensure cookies are available across all `.scylladb.com` subdomains.
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Corrected Dependabot ignore property that was unintentionally excluding all dependencies, now allowing only specified dependencies to receive updates.
 
 ## 1.8.2 - 22 Oct 2024
 
