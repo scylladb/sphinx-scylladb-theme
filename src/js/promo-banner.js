@@ -4,10 +4,13 @@ export class PromoBannerHandler {
 
     constructor() {
         this.cookieKey = "scylladb-docs-hide-banner";
+        const isLocalHost = ['localhost', '127.0.0.1', '0.0.0.0'].includes(window.location.hostname);
         this.cookieOptions = {
             expires: 30,
-            path: '/'
+            path: '/',
+            ...(isLocalHost ? {} : { domain: '.scylladb.com' })
         };
+
     }
 
     setCookieWithExpiry(key, value, days) {

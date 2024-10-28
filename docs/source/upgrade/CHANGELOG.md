@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.8.3 - 25 Oct 2024
+
+### Added
+
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Documentation on Dependabot support, explaining configuration, update frequency, and handling vulnerability alerts.
+
+### Fixed 
+
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Updated cookie configuration to ensure cookies are available across all `.scylladb.com` subdomains.
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Corrected Dependabot ignore property that was unintentionally excluding all dependencies, now allowing only specified dependencies to receive updates.
+
+## 1.8.2 - 22 Oct 2024
+
+### Added
+
+- [#1257](https://github.com/scylladb/sphinx-scylladb-theme/pull/1257): The theme now respects browser and system preferences for dark mode by default.
+
+### Updated
+
+- [#1257](https://github.com/scylladb/sphinx-scylladb-theme/pull/1257): Switched from localStorage to cache for storing settings such as dark mode and announcement preferences. This allows for shared preferences across projects.
+
+### Fixed
+
+- [#1246](https://github.com/scylladb/sphinx-scylladb-theme/pull/1246): Tooltips now correctly render glossary entries without relying on whether the glossary file was pre-loaded by Sphinx.
+- [#1260](https://github.com/scylladb/sphinx-scylladb-theme/pull/1260): Fixed a brief flash of light mode when navigating between pages in dark mode.
+- [#1258](https://github.com/scylladb/sphinx-scylladb-theme/pull/1258): Styled legacy panel boxes defined inside raw HTML directives to display correctly in dark mode.
+
+### Removed
+
+- [#1267](https://github.com/scylladb/sphinx-scylladb-theme/pull/1267): Removed the previous icon library.
+- [#1266](https://github.com/scylladb/sphinx-scylladb-theme/pull/1266): Completely dropped Font Awesome support, removed the latest icons, and cleaned up the dependency.
+
+
 ## 1.8.1 - 24 Sept 2024
 
 ## Added

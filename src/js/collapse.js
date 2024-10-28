@@ -4,9 +4,11 @@ export class CollapseHandler {
 
     constructor() {
         this.cookieKey = "scylladb-docs-collapse-side-nav";
+        const isLocalHost = ['localhost', '127.0.0.1', '0.0.0.0'].includes(window.location.hostname);
         this.cookieOptions = {
             expires: 365,
-            path: '/'
+            path: '/',
+            ...(isLocalHost ? {} : { domain: '.scylladb.com' })
         };
     }
 
