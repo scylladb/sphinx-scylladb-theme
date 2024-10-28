@@ -3,18 +3,20 @@ import Cookies from 'js-cookie';
 export class DarkTheme {
 
     constructor() {
-        this.cacheKey = "scylladb-docs-dark-theme";
+        this.cookieKey = "scylladb-docs-dark-theme";
         this.darkThemeClass = "dark";
+        const isLocalHost = ['localhost', '127.0.0.1', '0.0.0.0'].includes(window.location.hostname);
         this.cookieOptions = {
             expires: 365,
-            path: '/'
+            path: '/',
+            ...(isLocalHost ? {} : { domain: '.scylladb.com' })
         };
         this.rootDocumentEl = $("html");
         this.darkThemeTogglerEl = $(".dark-theme-toggler");
     }
 
     getInitialState() {
-        let state = Cookies.get(this.cacheKey);
+        let state = Cookies.get(this.cookieKey);
 
         if (state === undefined) {
             return window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -32,7 +34,7 @@ export class DarkTheme {
     }
 
     saveThemeState(state) {
-        Cookies.set(this.cacheKey, state, this.cookieOptions);
+        Cookies.set(this.cookieKey, state, this.cookieOptions);
     }
 
     init() {
