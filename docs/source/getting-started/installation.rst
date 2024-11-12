@@ -52,7 +52,16 @@ Step 3: Preview the site locally
 
 #. Delete or adapt the sample documentation files under ``docs/source``.
 
-#. From the command line, run ``make preview`` within the ``docs`` folder. Fix any warnings raised by Sphinx.
+#. From the command line, run ``make preview`` within the ``docs`` folder:
+
+    .. code-block:: console
+
+        cd docs
+        make preview
+
+    .. tip:: For troubleshooting, refer to the :ref:`preview command <Make_Preview>` documentation.
+
+#. Fix any warnings raised by Sphinx.
 
 #. Once the docs build without errors, open ``http://127.0.0.1:5500/`` to preview the generated site.
 
