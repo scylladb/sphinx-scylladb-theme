@@ -96,7 +96,7 @@ Issue: pyproject.toml changed significantly since poetry.lock was last generated
 Issue: Keyring asks for a password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This issue is due to a known problem with Poetry that primarily affects GNOME users. For more details, see `poetry/poetry#8761 <https://github.com/python-poetry/poetry/issues/8761>`.
+This issue is due to a known problem with Poetry that primarily affects GNOME users. For more details, see `poetry/poetry#8761 <https://github.com/python-poetry/poetry/issues/8761>`_.
 
 **Solution:**
 
