@@ -76,14 +76,37 @@ To decrease verbosity, use the option ``-Q``:
 
         make preview SPHINXOPTS=-Q
 
-To fix the error ``pyproject.toml changed significantly since poetry.lock was last generated.``, run the following command:
+
+Troubleshooting
+...............
+
+Issue: pyproject.toml changed significantly since poetry.lock was last generated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Solution:**
+
+#. Run the following command:
 
     .. code:: console
 
         poetry lock --no-update
 
-    Then, run the preview command again.
+#. Run the `make preview` command again.
 
+Issue: Keyring asks for a password
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This issue is due to a known problem with Poetry that primarily affects GNOME users. For more details, see `poetry/poetry#8761 <https://github.com/python-poetry/poetry/issues/8761>`_.
+
+**Solution:**
+
+#. Edit `docs/Makefile` to add the `POETRY` variable as follows:
+
+    .. code::
+
+        POETRY = PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring poetry
+
+#. Run the `make preview` command again.
 
 multiversionpreview
 ===================
