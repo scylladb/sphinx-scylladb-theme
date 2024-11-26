@@ -3,6 +3,7 @@ from os import getenv, path
 import sphinx_collapse
 import sphinx_copybutton
 import sphinx_substitution_extensions
+from sphinxcontrib import mermaid
 from notfound import extension as not_found
 from sphinx_tabs import tabs
 
@@ -102,6 +103,7 @@ def setup(app):
 
     """Setup thid-party extensions"""
     not_found.setup(app)
+    mermaid.setup(app)
     sphinx_collapse.setup(app)
     sphinx_copybutton.setup(app)
     sphinx_substitution_extensions.setup(app)
