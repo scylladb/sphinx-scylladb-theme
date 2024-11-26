@@ -22,6 +22,16 @@ To use Mermaid with your documentation:
 
 3. In your documentation files, Include graphs using the `.. mermaid ::` directive:
 
+   .. code-block:: python
+
+      .. mermaid ::
+
+         graph TD
+         A --> B
+         B -- Label --> C
+
+   The previous code example renders the following graph:
+   
    .. mermaid ::
 
       graph TD
