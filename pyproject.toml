@@ -16,6 +16,7 @@ pyyaml = "^6.0.1"
 Sphinx-Substitution-Extensions = "^2022.2.16"
 sphinx-notfound-page = "^1.0.4"
 setuptools = ">=70.1.1,<76.0.0"
+sphinxcontrib-mermaid = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.2"
