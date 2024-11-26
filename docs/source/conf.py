@@ -44,6 +44,7 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx_sitemap",
     "sphinx_scylladb_theme",
+    "sphinxcontrib.mermaid", #optional
     "sphinx_multiversion",  # optional
     "myst_parser",  # optional
 ]
