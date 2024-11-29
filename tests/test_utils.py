@@ -1,3 +1,4 @@
+import requests
 from sphinx_scylladb_theme.utils import multiversion_regex_builder, fetch_multiversion_configuration
 from unittest.mock import patch, MagicMock
 
