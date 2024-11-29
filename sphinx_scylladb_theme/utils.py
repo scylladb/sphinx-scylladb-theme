@@ -1,3 +1,6 @@
+import requests
+import json
+
 def multiversion_regex_builder(versions):
     """Generates a regex string from a list of versions.
 
@@ -20,3 +23,21 @@ def multiversion_regex_builder(versions):
     else:
         versions = [f"^{version}$" for version in versions]
         return r"\b(" + "|".join(versions) + r")\b"
+
+
+def fetch_multiversion_configuration(url):
+    """Fetches JSON content from the specified URL and parses it into a Python object
+    for defining ScyllaDB multiversion data from a remote source.
+
+    :param url: The URL to fetch the JSON data from.
+    :type url: str
+
+    :return: A dictionary representing the JSON content.
+    :rtype: dict
+    """
+    try:
+        response = requests.get(url)
+        return response.json()
+    except Exception as e:
+        print(f"Error fetching data from {url}: {e}")
+        return None
