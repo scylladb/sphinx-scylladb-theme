@@ -235,11 +235,8 @@
   }
 
   &__versions {
-    max-width: 90%;
-
-    .dropdown {
-      margin-bottom: 20px;
-    }
+    padding: $spacer-xs;
+    padding-bottom: 0;
   }
 
   &__search {
