@@ -3,11 +3,12 @@
   border: 1px solid var(--text-color);
   border-radius: 4px;
   color: var(--text-color);
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   font-size: $font-sm;
   letter-spacing: 1px;
   line-height: 21px;
-  padding: 12px 14px;
+  padding: $spacer-xs $spacer-sm;
   margin: 0;
 
   &:hover,
@@ -25,5 +26,9 @@
     &:focus {
       background: var(--bg-color);
     }
+  }
+
+  &.button-sm {
+    padding: $spacer-xxs $spacer-xs;
   }
 }

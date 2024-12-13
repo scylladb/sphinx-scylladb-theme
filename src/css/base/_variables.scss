@@ -50,7 +50,19 @@ $border-width: 1px;
 $border-radius: $spacer-3xs; 
 $border-radius-md: $spacer-xxs; 
 
-$gap: 30px;
+$spacer-map: (
+  0: $spacer-0,
+  1: $spacer-3xs,
+  2: $spacer-xxs,
+  3: $spacer-xs,
+  4: $spacer-sm,
+  5: $spacer,
+  6: $spacer-md,
+  7: $spacer-lg,
+  8: $spacer-xl
+);
+
+$gap: $spacer;
 $footer-height: 180px;
 $header-height: 50px;
 $promo-banner-height: 42.5px;
@@ -84,7 +96,26 @@ $font-xs: 12px;
 $brand-open-source: #4676DF;
 $brand-cloud: #57D1E5;
 $brand-enterprise: #3A2D55;
+$brand-self-hosted: #3A2D55;
 
+$brand-colors: (
+  open-source: (
+    bg: $brand-open-source,
+    text: $white
+  ),
+  cloud: (
+    bg: $brand-cloud,
+    text: $black
+  ),
+  enterprise: (
+    bg: $brand-enterprise,
+    text: $white
+  ),
+  self-hosted: (
+    bg: $brand-self-hosted,
+    text: $white
+  )
+);
 
 $product-title-height: $spacer-md;
 
@@ -137,7 +168,8 @@ $product-title-height: $spacer-md;
     --brand-open-source: #{$brand-open-source};
     --brand-cloud: #{$brand-cloud};
     --brand-enterprise: #{$brand-enterprise};
-    --brand-product: #{$gray-400};
+    --brand-self-hosted: #{$brand-self-hosted};
+    --brand-product: #{$gray-300};
     --brand-text: #{$gray-900};
   }
 
@@ -168,3 +200,17 @@ $product-title-height: $spacer-md;
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
   }
   
+  @each $key, $styles in $brand-colors {
+    .brand-#{$key} {
+      --brand-product: var(--brand-#{$key});
+      --brand-text: #{map-get($styles, text)};
+    }
+  
+    .text-brand-#{$key} {
+      color: map-get($styles, text);
+    }
+  
+    .bg-brand-#{$key} {
+      background-color: map-get($styles, bg);
+    }
+  }
