@@ -15,6 +15,8 @@ $black: #23263B;
 $brand-teal: #57D1E5;
 $brand-blue: #326DE6;
 
+
+
 $primary: #42C4E6;
 $secondary: #3A2D55;
 $success: #43A047;
@@ -79,6 +81,13 @@ $font-md: 16px;
 $font-sm: 14px;
 $font-xs: 12px;
 
+$brand-open-source: #4676DF;
+$brand-cloud: #57D1E5;
+$brand-enterprise: #3A2D55;
+
+
+$product-title-height: $spacer-md;
+
 :root {
     --white: #{$white};
     --gray-50: #{$gray-50};
@@ -125,6 +134,11 @@ $font-xs: 12px;
     --line-number: #5a7184;
     --logo-url: "../img/logo-scylla-horizontal-color.svg";
 
+    --brand-open-source: #{$brand-open-source};
+    --brand-cloud: #{$brand-cloud};
+    --brand-enterprise: #{$brand-enterprise};
+    --brand-product: #{$gray-400};
+    --brand-text: #{$gray-900};
   }
 
   .dark {
@@ -153,3 +167,4 @@ $font-xs: 12px;
 
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
   }
+  
