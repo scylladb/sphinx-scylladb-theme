@@ -2,18 +2,24 @@
   align-items: center;
   background-color: var(--card-bg);
   box-shadow: 0 2px 22px rgba(0,0,0, 0.1);
-  display: flex;
+  display: flex;  
+  flex-wrap: wrap;
+  gap: $spacer-xs 0;
   justify-content: space-between;
-  position: fixed;
-  padding: 12.75px 0;
+  position: sticky;
+  top: 0;
+  padding: $spacer-xs $spacer-sm;
   width: 100%;
   z-index: 99;
+  
+  @media screen and (min-width: $large) {
+    padding: $spacer-sm $spacer;
+  }
 }
 
 .header-logo {
   display: flex;
   align-items: center;
-  margin-left: 20px;
   width: initial;
 
   &__img {
@@ -60,7 +66,6 @@
 
 .header-search-box {
   display: none;
-  margin-right: 20px;
   width: 200px;
 }
 
@@ -84,10 +89,6 @@
 }
 
 @media screen and (min-width: $large) {
-  .header {
-    padding: 18px 0;
-  }
-
   .header-logo {
     &__img {
       width: 152px;
@@ -122,12 +123,10 @@
 
 @media screen and (min-width: $xlarge) {
   .header-logo {
-    margin-left: 30px;
     width: $side-nav-width;
   }
 
   .header-search-box {
-    margin-right: 30px;
     max-width: 20%;
     width: $search-box-width;
   }

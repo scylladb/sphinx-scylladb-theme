@@ -7,7 +7,7 @@
   max-height: calc(100vh - #{$header-height});
   line-height: 24px;
   overflow-y: auto;
-  position: fixed;
+  position: sticky;
   padding: 0;
   top: $header-height;
   left: 0;
@@ -38,7 +38,7 @@
   &__content {
     overflow-wrap: break-word;
     max-width: 90%;
-    padding: $spacer-sm;
+    padding: $spacer-sm $spacer-xs;
 
     a {
       display: block;
@@ -65,6 +65,23 @@
         font-size: 14px;
         font-weight: 400;
       }
+
+      label {
+        width: $spacer-sm;
+        height: $spacer-sm;
+        font-size: 14px;
+        
+      }
+
+      ul {
+        margin-left: $spacer-sm / 2;
+        padding-left: $spacer-sm / 2;
+        border-left-color: var(--border-color);
+      }
+    }
+
+    .toctree-l3 {
+
     }
 
     .toctree-l1, .toctree-l2 {
@@ -110,8 +127,8 @@
         &::after {
           content: "";
           position: absolute;
-          width: $spacer;
-          height: $spacer;
+          width: 100%;
+          height: 100%;
           position: absolute;
           top: 50%;
           left: 50%;
