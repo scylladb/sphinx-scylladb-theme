@@ -8,7 +8,7 @@
   font-size: $font-sm;
   letter-spacing: 1px;
   line-height: 21px;
-  padding: $spacer-xs $spacer-sm;
+  padding: $spacer-xxs $spacer-sm;
   margin: 0;
 
   &:hover,
@@ -29,6 +29,6 @@
   }
 
   &.button-sm {
-    padding: $spacer-xxs $spacer-xs;
+    padding: $spacer-3xs $spacer-xs;
   }
 }

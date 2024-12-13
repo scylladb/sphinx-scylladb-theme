@@ -82,7 +82,7 @@
   .secondary-side-nav {
     display: block;
     overflow-y: auto;
-    padding: $spacer-md;
+    padding: $spacer-md $spacer;
     padding-left: 0;
     position: sticky;
     max-height: 100vh;

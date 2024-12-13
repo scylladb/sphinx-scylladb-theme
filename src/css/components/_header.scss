@@ -11,7 +11,7 @@
   padding: $spacer-xs $spacer-sm;
   width: 100%;
   z-index: 99;
-  
+
   @media screen and (min-width: $large) {
     padding: $spacer-sm $spacer;
   }
@@ -123,7 +123,7 @@
 
 @media screen and (min-width: $xlarge) {
   .header-logo {
-    width: $side-nav-width;
+    width: $side-nav-width - $spacer;
   }
 
   .header-search-box {
