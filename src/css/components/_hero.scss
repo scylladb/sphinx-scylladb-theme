@@ -2,8 +2,19 @@
   background: var(--navigation-bg);
   margin-bottom: $gap;
   overflow: hidden;
-  padding: 30px 16px;
   text-align: left;
+  margin: -$spacer-sm;
+  padding: $spacer-sm;
+
+  @media screen and (min-width: $large) {
+    margin: -$spacer;
+    padding: $spacer;
+  }
+  
+  @media screen and (min-width: $xlarge) {
+    margin: -$spacer-md;
+    padding: $spacer-md;
+  }
 
   &__title {
     font-size: 28px;
@@ -81,7 +92,7 @@
 
 @media screen and (min-width: $medium) {
   .hero {
-    padding: 60px 16px;
+
 
     &__title {
       font-size: 32px;

@@ -3,14 +3,14 @@
         <i class="icon-docs-menu-collapse"></i>
     </button>
     <div class="side-nav-content" style="visibility: hidden;">
+        <div class="side-nav__title">
+            <a href="{% if 'contents' in master_doc %}{{html_baseurl}}{% else %}{{ pathto(master_doc) }}{% endif %}">{{
+                project }}</a>
+        </div>
         <div class="side-nav__search">
             <div class="search-box">
                 <ci-search></ci-search>
             </div>
-        </div>
-        <div class="side-nav__title">
-            <a href="{% if 'contents' in master_doc %}{{html_baseurl}}{% else %}{{ pathto(master_doc) }}{% endif %}">{{
-                project }}</a>
         </div>
         <div class="side-nav__versions">{% if versions and not theme_hide_versions_dropdown|tobool %}{% include
             'versions.html' %}{% endif %}</div>
