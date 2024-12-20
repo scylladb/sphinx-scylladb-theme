@@ -13,7 +13,8 @@
   z-index: 99;
 
   @media screen and (min-width: $large) {
-    padding: $spacer-sm $spacer;
+    min-height: $header-height-large;
+    padding: $spacer-xs $spacer;
   }
 }
 

@@ -1,10 +1,15 @@
 @use "sass:map";
 @use "sass:math";
 
+.sidebar-left {
+  background: var(--navigation-bg);
+  display: flex;
+  flex-direction: column;
+}
+
 .side-nav {
   display: none;
   background: var(--navigation-bg);
-  height: 100vh;
   max-height: calc(100vh - #{$header-height});
   line-height: 24px;
   overflow-y: auto;
@@ -17,10 +22,13 @@
 
   @media screen and (min-width: $large) {
     position: sticky;
+    flex-grow: 1;
   }
 
   &__title {
     box-shadow: 0 0 $spacer-md 0 var(--brand-product);
+    position: sticky;
+    top: 0;
 
     a {
       background-color: var(--brand-product);
@@ -79,8 +87,8 @@
       }
 
       ul {
-        margin-left: $spacer-sm / 2;
-        padding-left: $spacer-sm / 2;
+        margin-left: math.div($spacer-sm, 2);
+        padding-left: math.div($spacer-sm, 2);
         border-left-color: var(--border-color);
       }
     }
@@ -254,12 +262,12 @@
   background-color: var(--card-bg);
   color: var(--text-color);
   border-radius: 50%;
-  bottom: 10px;
   display: none;
   font-size: 0px;
-  left: 300px;
+  bottom: $spacer-sm;
+  right: $spacer-sm;
   padding: 13.5px;
-  position: fixed;
+  position: absolute;
   cursor: pointer;
 
   i {
@@ -270,6 +278,7 @@
 
 .side-nav--collapsed .collapsible-button {
   left: -10px;
+  right: auto;
   border-radius: 0 30px 30px 0;
 
   i {
@@ -283,9 +292,9 @@
 
 @media screen and (min-width: $large) {
   .side-nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: var(--navigation-bg);
-    height: 100%;
     max-height: calc(100vh - #{$header-height-large});
     top: $header-height-large;
     left: initial;
@@ -317,12 +326,19 @@
 @media screen and (min-width: $xlarge) {
   .side-nav {
     width: $side-nav-width;
+    
+    .side-nav-content {
+      height: 0;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
 
     &--collapsed {
       background-color: transparent;
       padding-left: 0;
       padding-right: 0;
       width: $side-nav-width-collapsed;
+      overflow: visible;
 
       .side-nav-content {
         display: none;

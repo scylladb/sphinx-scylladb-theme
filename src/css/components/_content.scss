@@ -1,6 +1,7 @@
 .layout {
   display: flex;
   background-color: var(--bg-color);
+  flex-grow: 1;
 }
 
 .content {

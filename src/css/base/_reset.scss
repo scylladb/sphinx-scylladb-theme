@@ -2,7 +2,6 @@
 
 html {
   box-sizing: border-box;
-  scroll-padding-top: 100px;
 }
 
 body {
@@ -11,6 +10,9 @@ body {
   line-height: 1;
   background-color: var(--bg-color);
   color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
