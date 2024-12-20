@@ -25,6 +25,10 @@
 .. raw:: html
 
   <div class="topics-grid grid-container full">
+  <div class="alert">
+    <div><i class="icon-logs"></i> We’re updating our license & versioning policy</div>
+    <div><a href="#">Learn more about the change <i class="icon-arrow-right"></i></a></div>
+  </div>
 
   <div class="grid-x grid-margin-x">
 

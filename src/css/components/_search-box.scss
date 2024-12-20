@@ -13,7 +13,9 @@
 
   &--hero {
     background-color: var(--well-bg);
-    padding: 12px 14px;
+    padding: $spacer-xs $spacer-sm;
+    border: 1px solid var(--primary);
+    box-shadow: 0 $spacer-3xs $spacer-sm rgba(var(--primary-rgb), 0.4);
   }
 
   &:before {
