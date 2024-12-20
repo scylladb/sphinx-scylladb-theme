@@ -44,9 +44,15 @@ a:hover {
 }
 
 .headerlink {
+  position: relative;
   margin-left: 5px;
   visibility: hidden;
   color: var(--text-muted);
+}
+
+.headerlink .tooltip {
+  position: static;
+  margin-left: 5px;
 }
 
 .toc-backref:hover {
