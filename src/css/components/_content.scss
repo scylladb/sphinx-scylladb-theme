@@ -43,9 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: $spacer-xxs;
-    padding-bottom: $spacer-xxs;
-    height: $product-title-height;
+    min-height: $product-title-height;
     background: var(--navigation-bg);
     margin-bottom: 0;
   }
@@ -56,6 +54,7 @@
     .body-container {
       max-width: $max-content-width;
       flex-grow: 1;
+      width: 0;
     }
   }
 

@@ -2,6 +2,11 @@
   /* Reset Foundation */
   margin-bottom: 0;
   text-transform: uppercase;
+  padding-top: $spacer-xs;
+  padding-bottom: $spacer-xs;
+  gap: $spacer-xxs 0;
+  display: flex;
+  flex-wrap: wrap;
 
   .bread__item,
   a,
@@ -10,7 +15,6 @@
     font-size: $font-xs;
     font-weight: 400;
     letter-spacing: 1.5px;
-    line-height: 2;
     margin: 0;
     padding: 0;
   }
