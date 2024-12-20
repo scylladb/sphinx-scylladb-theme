@@ -1,0 +1,66 @@
+
+@each $key, $value in $spacer-map {
+    // Margin Top
+    .mt-#{$key} {
+      margin-top: $value;
+    }
+  
+    // Margin Bottom
+    .mb-#{$key} {
+      margin-bottom: $value;
+    }
+  
+    // Margin Left / Start
+    .ms-#{$key} {
+      margin-left: $value;
+    }
+  
+    // Margin Right / End
+    .me-#{$key} {
+      margin-right: $value;
+    }
+  
+    // Margin X (Horizontal)
+    .mx-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  
+    // Margin Y (Vertical)
+    .my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  
+    // Padding Top
+    .pt-#{$key} {
+      padding-top: $value;
+    }
+  
+    // Padding Bottom
+    .pb-#{$key} {
+      padding-bottom: $value;
+    }
+  
+    // Padding Left / Start
+    .ps-#{$key} {
+      padding-left: $value;
+    }
+  
+    // Padding Right / End
+    .pe-#{$key} {
+      padding-right: $value;
+    }
+  
+    // Padding X (Horizontal)
+    .px-#{$key} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  
+    // Padding Y (Vertical)
+    .py-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }

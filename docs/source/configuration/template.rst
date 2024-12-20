@@ -227,6 +227,10 @@ Configuration options for the left sidebar.
     - number
     - -1
     - The maximum depth of the sidebar nested entries. Set to `-1` to allow unlimited depth.
+  * - ``theme``
+    - string
+    - product
+    - The theme to use. Available values: `open-source`, `enterprise`, `cloud`, `self-hosted`, `product`.
 
 Example:
 
@@ -234,7 +238,8 @@ Example:
 
   html_theme_options = {
       'collapse_navigation': 'false',
-      'navigation_depth': '-1'
+      'navigation_depth': '-1',
+      'theme': 'product',
   }
 
 SEO options

@@ -84,9 +84,10 @@
         {% endblock %}
     </head>
 
-    <body>
+    <body class="brand-{{ theme_brand }}">
         {% include 'promo-banner.html' %}
         {% include 'header.html'%}
+        <div class="title"></div>
         <section
             class="layout {{'layout--full-width' if full_width}} {{'layout--sidebar' if not hide_sidebar}} {{'layout--has-secondary-sidebar' if not hide_secondary_sidebar}} {{'landing landing--floating' if landing}}">
             <div class="content large-order-2">
@@ -98,12 +99,26 @@
                         {% include 'breadcrumbs.html'%}
                     </div>
                 {% endif %}
-                {{ body }}
-                {% if not hide_post_content %}
-                    <div class="post-content">
-                        {% include 'feedback.html'%}
-                        {% include 'content-navigation.html'%}
-                        {% include 'notice.html'%}
+                {% if not hide_secondary_sidebar %}
+                <div class="sidebar-right-layout">
+                    <div class="body-container">
+                {% endif %}
+                    <div class="content-body">
+                        {{ body }}
+                    </div>
+                    {% if not hide_post_content %}
+                        <div class="post-content">
+                            {% include 'feedback.html'%}
+                            {% include 'content-navigation.html'%}
+                            {% include 'notice.html'%}
+                        </div>
+                    {% endif %}
+                
+                {% if not hide_secondary_sidebar %}
+                    </div>
+                        <div class="sidebar-right large-order-3">
+                            {% include 'secondary-side-nav.html' %}
+                        </div>
                     </div>
                 {% endif %}
             </div>
@@ -114,11 +129,7 @@
                     {% endfor %}
                 {% endif %}
             </div>
-            {% if not hide_secondary_sidebar %}
-                <div class="sidebar-right large-order-3">
-                    {% include 'secondary-side-nav.html' %}
-                </div>
-            {% endif %}
+            
         </section>
 
         {% include 'footer.html' %}

@@ -288,9 +288,9 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
-    :title: icon-FormatAlignLeftFilled
+    :title: icon-format-align-left-filled
     :link: #
-    :icon: icon-FormatAlignLeftFilled
+    :icon: icon-format-align-left-filled
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
@@ -462,9 +462,9 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
-    :title: icon-dashboard-filled
+    :title: icon-dashboard
     :link: #
-    :icon: icon-dashboard-filled
+    :icon: icon-dashboard
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
@@ -516,9 +516,9 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
-    :title: icon-ViewHeadlineFilled
+    :title: icon-list
     :link: #
-    :icon: icon-ViewHeadlineFilled
+    :icon: icon-list
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
@@ -588,9 +588,9 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
-    :title: icon-upload
+    :title: icon-upload-file
     :link: #
-    :icon: icon-upload
+    :icon: icon-upload-file
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
@@ -610,6 +610,199 @@ Preview
     :link: #
     :icon: icon-slack
     :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-github
+    :link: #
+    :icon: icon-github
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-instance
+    :link: #
+    :icon: icon-instance
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-pause
+    :link: #
+    :icon: icon-pause
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-stop
+    :link: #
+    :icon: icon-stop
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-reset
+    :link: #
+    :icon: icon-reset
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-eye
+    :link: #
+    :icon: icon-eye
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-stack-overflow
+    :link: #
+    :icon: icon-stack-overflow
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-key
+    :link: #
+    :icon: icon-key
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-vpc-peering-circle
+    :link: #
+    :icon: icon-vpc-peering-circle
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-vpc-peering
+    :link: #
+    :icon: icon-vpc-peering
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-server
+    :link: #
+    :icon: icon-server
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-download-file
+    :link: #
+    :icon: icon-download-file
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-scale-up
+    :link: #
+    :icon: icon-scale-up
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-scale-down
+    :link: #
+    :icon: icon-scale-down
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-resize
+    :link: #
+    :icon: icon-resize
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-grid
+    :link: #
+    :icon: icon-grid
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-upload
+    :link: #
+    :icon: icon-upload
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-cloud-error
+    :link: #
+    :icon: icon-cloud-error
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-terminal
+    :link: #
+    :icon: icon-terminal
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-sample-data
+    :link: #
+    :icon: icon-sample-data
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-add-circle-outline
+    :link: #
+    :icon: icon-add-circle-outline
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-play-circle-filled
+    :link: #
+    :icon: icon-play-circle-filled
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-play-circle-outline-filled
+    :link: #
+    :icon: icon-play-circle-outline-filled
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-stop-circle-filled
+    :link: #
+    :icon: icon-stop-circle-filled
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-add-circle-filled
+    :link: #
+    :icon: icon-add-circle-filled
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-scale-in
+    :link: #
+    :icon: icon-scale-in
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-scale-out
+    :link: #
+    :icon: icon-scale-out
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-rocket
+    :link: #
+    :icon: icon-rocket
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-link
+    :link: #
+    :icon: icon-link
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-facebook
+    :link: #
+    :icon: icon-facebook
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-linkedin
+    :link: #
+    :icon: icon-linkedin
+    :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-x-logo
+    :link: #
+    :icon: icon-x-logo
+    :class: topic-box--product,large-3,small-6
+
 
 .. topic-box::
     :title: icon-docs-mail
@@ -702,48 +895,6 @@ Preview
     :class: topic-box--product,large-3,small-6
 
 .. topic-box::
-    :title: icon-github
-    :link: #
-    :icon: icon-github
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
-    :title: icon-instance
-    :link: #
-    :icon: icon-instance
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
-    :title: icon-pause
-    :link: #
-    :icon: icon-pause
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
-    :title: icon-stop
-    :link: #
-    :icon: icon-stop
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
-    :title: icon-reset
-    :link: #
-    :icon: icon-reset
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
-    :title: icon-eye
-    :link: #
-    :icon: icon-eye
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
-    :title: icon-stack-overflow
-    :link: #
-    :icon: icon-stack-overflow
-    :class: topic-box--product,large-3,small-6
-
-.. topic-box::
     :title: icon-docs-nsql-guides
     :link: #
     :icon: icon-docs-nsql-guides
@@ -796,6 +947,13 @@ Preview
     :link: #
     :icon: icon-docs-enterprise-m
     :class: topic-box--product,large-3,small-6
+
+.. topic-box::
+    :title: icon-docs-download
+    :link: #
+    :icon: icon-docs-download
+    :class: topic-box--product,large-3,small-6
+
 
 .. raw:: html
 

@@ -23,20 +23,15 @@ export class PromoBannerHandler {
 
     adjustScrollPaddingTop() {
         const headerHeight = $('.header').outerHeight() || 0;
-        let promoBannerHeight = 0;
-
-        if ($('.promo-banner').is(':visible')) {
-            promoBannerHeight = $('.promo-banner').outerHeight();
-        }
 
         const offset = 10;
-        const totalHeight = headerHeight + promoBannerHeight + offset;
+        const totalHeight = headerHeight + offset;
         $('html').css('scroll-padding-top', totalHeight + 'px');
     }
 
     initBanner() {
         const promoBanner = $(".promo-banner");
-        const promoBannerHeight = promoBanner.outerHeight();
+        
         let showBanner = false;
 
             // The banner is enabled via the site metadata (e.g. Google Tag Manager)
@@ -55,7 +50,7 @@ export class PromoBannerHandler {
         }
 
         if (showBanner) {
-            this.showBanner(promoBannerHeight);
+            this.showBanner();
         }
 
         this.adjustScrollPaddingTop();
@@ -70,11 +65,10 @@ export class PromoBannerHandler {
         $(".promo-banner__button").attr("href", bannerButtonUrl).text(bannerButtonText);
     }
 
-    showBanner(promoBannerHeight) {
+    showBanner() {
         const promoBanner = $(".promo-banner");
         promoBanner.show();
-        $("body").css("margin-top", promoBannerHeight);
-        $(".side-nav, .secondary-side-nav").css("margin-top", promoBannerHeight);
+        console.log('showing banner');
         $(".layout").addClass("layout--has-banner");
     }
 
@@ -110,11 +104,6 @@ export class PromoBannerHandler {
 
     onResizeBanner() {
         $(window).resize(() => {
-            const promoBanner = $(".promo-banner");
-            const promoBannerHeight = promoBanner.outerHeight();
-            if (promoBanner.is(":visible")) {
-                $("body, .side-nav, .secondary-side-nav").css("margin-top", promoBannerHeight);
-            }
             this.adjustScrollPaddingTop();
         });
     }
