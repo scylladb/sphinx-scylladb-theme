@@ -169,6 +169,10 @@ $product-title-height: $spacer-md;
 
     --brand-product: #{$gray-200};
     --brand-text: #{$gray-900};
+    --brand-open-source: #{$brand-open-source};
+    --brand-cloud: #{$brand-cloud};
+    --brand-enterprise: #{$brand-enterprise};
+    --brand-self-hosted: #{$brand-self-hosted};
   }
 
   .dark {
