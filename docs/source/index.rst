@@ -31,7 +31,7 @@
 .. topic-box::
   :title: Getting started
   :link: getting-started
-  :icon: icon-docs-getting-started
+  :icon: icon-rocket
   :class: large-6
   :anchor: Learn more
 
@@ -40,7 +40,7 @@
 .. topic-box::
   :title: Configuration
   :link: configuration
-  :icon: icon-docs-configuration
+  :icon: icon-settings
   :class: large-6
   :anchor: Learn more
 
@@ -49,7 +49,7 @@
 .. topic-box::
   :title: Commands
   :link: commands
-  :icon: icon-docs-commands
+  :icon: icon-terminal
   :class: large-6
   :anchor: Learn more
 
@@ -67,7 +67,7 @@
 .. topic-box::
   :title: Demos and Examples
   :link: examples
-  :icon: icon-docs-training
+  :icon: icon-dashboard
   :class: large-6
   :anchor: Learn more
 
@@ -76,7 +76,7 @@
 .. topic-box::
   :title: Contribute
   :link: contribute
-  :icon: icon-docs-contribute
+  :icon: icon-users
   :class: large-6
   :anchor: Learn more
 
