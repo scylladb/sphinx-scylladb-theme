@@ -7,6 +7,7 @@ require("../css/main.scss");
 require("foundation-sites/dist/js/foundation");
 
 import { CollapseHandler} from "./collapse";
+import { ContentHandler} from "./content";
 import { ImagesHandler } from "./images";
 import { LinksHandler } from "./links";
 import { PromoBannerHandler } from "./promo-banner";
@@ -18,6 +19,7 @@ import {DarkTheme} from "./dark-theme";
 $(document).ready(function () {
   new ImagesHandler().init();
   $(document).foundation();
+  new ContentHandler().init();
   new TablesHandler().init();
   new DarkTheme().init();
   new LinksHandler().init();
