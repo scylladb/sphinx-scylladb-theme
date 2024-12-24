@@ -2,7 +2,7 @@ from unittest.mock import Mock
 import pytest
 from bs4 import BeautifulSoup as bs
 
-from sphinx_scylladb_theme.extensions.alert import Alert
+from sphinx_scylladb_theme.extensions.alerts import Alert
 
 test_data = [
     [
