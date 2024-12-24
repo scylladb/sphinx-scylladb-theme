@@ -92,6 +92,9 @@
             class="layout {{'layout--full-width' if full_width}} {{'layout--sidebar' if not hide_sidebar}} {{'layout--has-secondary-sidebar' if not hide_secondary_sidebar}} {{'landing landing--floating' if landing}}">
             <div class="content large-order-2">
                 {% if not hide_version_warning %}
+                    {% if 'opensource' in html_baseurl or 'enterprise' in html_baseurl %}
+                        {% include 'alert.html'%}
+                    {% endif %}
                     {% include 'version-warning.html'%}
                 {% endif %}
                 {% if not hide_pre_content %}
