@@ -19,7 +19,7 @@ class Alert(Directive):
 
     def run(self):
         class_name = "alert"
-        icon_class = self.options.get("icon", "icon-logs")
+        icon_class = self.options.get("icon", "logs")
         link = self.options.get("link", "")
         link_text = self.options.get("link_text", "")
         target = self.options.get("target", "_self")

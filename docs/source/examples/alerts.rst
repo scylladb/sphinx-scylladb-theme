@@ -1,7 +1,7 @@
 Alert
 =====
 
-A custom admonition with short text and a link to learn more.
+A custom admonition to highlight important updates or announcements. It includes an icon, a short description, and an optional link that can direct users to additional information or external resources.
 
 Using:
 
