@@ -26,6 +26,16 @@
 
   <div class="topics-grid grid-container full">
 
+.. alert::
+  :link: #
+  :target: _blank
+  :link_text: Learn more about the change
+  :icon: logs
+
+   We’re updating our license & versioning policy
+
+.. raw:: html
+
   <div class="grid-x grid-margin-x">
 
 .. topic-box::
