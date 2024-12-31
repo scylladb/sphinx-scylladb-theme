@@ -9,6 +9,7 @@ from sphinx_tabs import tabs
 
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
+    alerts,
     hero_box,
     include_tooltip,
     labels,
@@ -51,6 +52,7 @@ def update_context(app, pagename, templatename, context, doctree):
     context["hide_pre_content"] = "hide-pre-content" in file_meta
     context["hide_post_content"] = "hide-post-content" in file_meta
     context["hide_version_warning"] = "hide-version-warning" in file_meta
+    context["hide_alert"] = "hide-alert" in file_meta
     context["hide_sidebar"] = "hide-sidebar" in file_meta
     context["hide_secondary_sidebar"] = "hide-secondary-sidebar" in file_meta
     context["exclude_doctools"] = "exclude-doctools" in file_meta
@@ -110,6 +112,7 @@ def setup(app):
     tabs.setup(app)
 
     """Setup custom extensions"""
+    alerts.setup(app)
     hero_box.setup(app)
     include_tooltip.setup(app)
     labels.setup(app)
