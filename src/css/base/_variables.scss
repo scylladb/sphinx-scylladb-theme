@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $white: #FFFFFF;
 $gray-50: #F7FCFC;
 $gray-100: #EDF5F7;
@@ -14,6 +16,8 @@ $black: #23263B;
 
 $brand-teal: #57D1E5;
 $brand-blue: #326DE6;
+
+
 
 $primary: #42C4E6;
 $secondary: #3A2D55;
@@ -48,7 +52,19 @@ $border-width: 1px;
 $border-radius: $spacer-3xs; 
 $border-radius-md: $spacer-xxs; 
 
-$gap: 30px;
+$spacer-map: (
+  0: $spacer-0,
+  1: $spacer-3xs,
+  2: $spacer-xxs,
+  3: $spacer-xs,
+  4: $spacer-sm,
+  5: $spacer,
+  6: $spacer-md,
+  7: $spacer-lg,
+  8: $spacer-xl
+);
+
+$gap: $spacer;
 $footer-height: 180px;
 $header-height: 50px;
 $promo-banner-height: 42.5px;
@@ -62,7 +78,7 @@ $promo-banner-header-height-large: $promo-banner-height-large + $header-height-l
 $search-box-width: 318px;
 $secondary-side-nav-width: 286px;
 $side-nav-width: 357px;
-$side-nav-width-collapsed: 126px;
+$side-nav-width-collapsed: 0;
 
 
 // Breakpoint variables
@@ -78,6 +94,32 @@ $font-base-family: "Roboto", sans-serif;
 $font-md: 16px;
 $font-sm: 14px;
 $font-xs: 12px;
+
+$brand-open-source: #4676DF;
+$brand-cloud: #57D1E5;
+$brand-enterprise: #3A2D55;
+$brand-self-hosted: #3A2D55;
+
+$brand-colors: (
+  open-source: (
+    bg: $brand-open-source,
+    text: $white
+  ),
+  cloud: (
+    bg: $brand-cloud,
+    text: $black
+  ),
+  enterprise: (
+    bg: $brand-enterprise,
+    text: $white
+  ),
+  self-hosted: (
+    bg: $brand-self-hosted,
+    text: $white
+  )
+);
+
+$product-title-height: $spacer-md;
 
 :root {
     --white: #{$white};
@@ -125,6 +167,12 @@ $font-xs: 12px;
     --line-number: #5a7184;
     --logo-url: "../img/logo-scylla-horizontal-color.svg";
 
+    --brand-product: #{$gray-200};
+    --brand-text: #{$gray-900};
+    --brand-open-source: #{$brand-open-source};
+    --brand-cloud: #{$brand-cloud};
+    --brand-enterprise: #{$brand-enterprise};
+    --brand-self-hosted: #{$brand-self-hosted};
   }
 
   .dark {
@@ -142,7 +190,7 @@ $font-xs: 12px;
     --text-color: var(--gray-200);
     --code-color: var(--gray-200);
     --text-emphasis: var(--white);
-    --text-muted: var(--gray-300);
+    --text-muted: var(--gray-400);
     --border-color: var(--gray-800);
     --header-border: #4458A3;
     --bg-color: var(--black);
@@ -150,6 +198,24 @@ $font-xs: 12px;
     --navigation-bg: #1E2031;
     --card-bg: var(--gray-950);
     --admonition: var(--gray-400);
-
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
+
+        
+    --brand-product: #{$gray-800};
+    --brand-text: #{$gray-100};
+  }
+  
+  @each $key, $styles in $brand-colors {
+    .brand-#{$key} {
+      --brand-product: var(--brand-#{$key});
+      --brand-text: #{map.get($styles, text)};
+    }
+  
+    .text-brand-#{$key} {
+      color: map.get($styles, text);
+    }
+  
+    .bg-brand-#{$key} {
+      background-color: map.get($styles, bg);
+    }
   }

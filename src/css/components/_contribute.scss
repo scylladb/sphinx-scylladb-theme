@@ -1,6 +1,7 @@
 .contribute {
   margin: 0;
   margin-bottom: 20px;
+  list-style: none;
 
   &__item {
     font-size: $font-sm;
@@ -8,7 +9,7 @@
     list-style: none;
 
     a {
-      display: flex;
+      display: inline-flex;
       align-items: center;
     }
 

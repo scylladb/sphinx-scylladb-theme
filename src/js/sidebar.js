@@ -54,14 +54,14 @@ export class SidebarHandler {
   }
   
   init() {
-    this.initScrollEvent();
-    this.onLoadRestoreScrollPosition();
+    // this.initScrollEvent();
+    // this.onLoadRestoreScrollPosition();
 
-    const adjustForDesktopView = () => {
-      this.adjustSidebarHeightFooter();
-    };
+    // const adjustForDesktopView = () => {
+    //   this.adjustSidebarHeightFooter();
+    // };
 
-    $(window).scroll(adjustForDesktopView);
-    $(window).resize(adjustForDesktopView);
+    // $(window).scroll(adjustForDesktopView);
+    // $(window).resize(adjustForDesktopView);
   }
 }
