@@ -27,7 +27,7 @@
   <div class="topics-grid grid-container full">
 
 .. alert::
-  :link: #
+  :link: https://www.scylladb.com/2024/12/18/why-were-moving-to-a-source-available-license/
   :target: _blank
   :link_text: Learn more about the change
   :icon: logs
