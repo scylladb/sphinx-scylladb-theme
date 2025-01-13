@@ -98,3 +98,25 @@
     }
   }
 }
+
+.alert {
+  padding: $spacer-xs $spacer-sm;
+  background-color: var(--info);
+  color: var(--alert-color);
+  border-radius: $border-radius;
+  margin-bottom: $spacer;
+  display: flex;
+  gap: $spacer-xs;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $large) {
+    padding: $spacer-sm $spacer;
+    gap: $spacer-sm;
+  }
+
+  a {
+    color: var(--primary);
+  }
+}

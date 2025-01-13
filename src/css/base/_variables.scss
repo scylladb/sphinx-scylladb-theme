@@ -1,5 +1,14 @@
 @use "sass:map";
 
+@mixin hex-to-rgb($hex, $property-name) {
+  $r: red($hex);
+  $g: green($hex);
+  $b: blue($hex);
+
+  // Set CSS custom property for the RGB value
+  #{$property-name}: #{$r}, #{$g}, #{$b};
+}
+
 $white: #FFFFFF;
 $gray-50: #F7FCFC;
 $gray-100: #EDF5F7;
@@ -13,7 +22,6 @@ $gray-800: #4B546F;
 $gray-900: #383D57;
 $gray-950: #2F324B;
 $black: #23263B;
-
 $brand-teal: #57D1E5;
 $brand-blue: #326DE6;
 
@@ -21,11 +29,10 @@ $brand-blue: #326DE6;
 
 $primary: #42C4E6;
 $secondary: #3A2D55;
-$success: #43A047;
+$success: #77D464;
 $warning: #FFAB00;
 $info: #1976D2;
 $danger: #CE291F;
-
 
 $link-color: #3C4FE0;
 $text-muted: $gray-500;
@@ -37,6 +44,7 @@ $well-bg: #F7F8F9;
 $navigation-bg: #F6F8FF;
 $card-bg: $white;
 $admonition: #6F7071;
+$alert-color: $gray-100;
 
 // Sizes Variables
 $spacer-0: 0;
@@ -137,6 +145,7 @@ $product-title-height: $spacer-md;
     --black: #{$black};
   
     --primary: #{$primary};
+      @include hex-to-rgb($primary, --primary-rgb);
     --secondary: #{$secondary};
     --success: #{$success};
     --info: #{$info};
@@ -151,6 +160,7 @@ $product-title-height: $spacer-md;
     --text-muted: #{$text-muted};
     --border-color: #{$border-color};
     --header-border: #{$header-border};
+    --alert-color: #{$alert-color};
     
     --bg-color: #{$bg-color};
     --well-bg: #{$well-bg};
@@ -193,6 +203,8 @@ $product-title-height: $spacer-md;
     --text-muted: var(--gray-400);
     --border-color: var(--gray-800);
     --header-border: #4458A3;
+    --alert-color: #{$alert-color};
+    
     --bg-color: var(--black);
     --well-bg: #1E2031;
     --navigation-bg: #1E2031;
