@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.8.4 - 14 Jan 2024
+
+### Added
+
+- [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1289): Added a troubleshooting note for users encountering issues with keyring and Poetry.
+- [#1302](https://github.com/scylladb/sphinx-scylladb-theme/pull/1302): Introduced Mermaid.js support for rendering diagrams from text.
+- [#1303](https://github.com/scylladb/sphinx-scylladb-theme/pull/1303): Implemented a helper to fetch multiversion data from a remote URL.
+- [#1314](https://github.com/scylladb/sphinx-scylladb-theme/pull/1314): Updated the user interface, including the homepage, sidebars, and breadcrumbs.
+- [#1316](https://github.com/scylladb/sphinx-scylladb-theme/pull/1316): Added a license banner to announce changes to ScyllaDB’s licensing and versioning policy.
+- [#1330](https://github.com/scylladb/sphinx-scylladb-theme/pull/1329): Added an option to override the multiversion redirect for the main domain, enabling redirection of `docs.scylladb.com/manual` to `docs.scylladb.com/manual/stable` instead of `docs.scylladb.com/stable`.
+
+### Fixed
+
+- [#1330](https://github.com/scylladb/sphinx-scylladb-theme/pull/1330): Resolved an issue with the alert banner position.
+
 ## 1.8.3 - 25 Oct 2024
 
 ### Added
