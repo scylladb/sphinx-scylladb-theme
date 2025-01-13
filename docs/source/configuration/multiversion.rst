@@ -39,12 +39,11 @@ For example, if you want to build docs for the tags ``3.22.0`` and ``3.21.0``, `
 The extension allows configuring additional settings.
 To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
 
-
 Listing new versions from an external URL
 -----------------------------------------
 
 Multiversion configuration can be loaded from an external URL. 
-Below is an example of how to load and use the multiversion configuration:
+The following example shows how to load the multiversion configuration in the ``conf.py`` file:
 
 .. code-block:: python
 
@@ -68,7 +67,7 @@ Below is an example of how to load and use the multiversion configuration:
     # Sets custom build flags
     FLAGS = ["theme"]
 
-The JSON file used for the configuration should have the following structure:
+The JSON file used for configuration must follow this structure:
 
 .. code-block:: json
 
@@ -85,6 +84,7 @@ The JSON file used for the configuration should have the following structure:
 - **latest:** The version considered as the latest, used as the default version.
 - **unstable:** List of versions marked as unstable (e.g., under development).
 - **deprecated:** List of versions marked as deprecated.
+
 
 Defining a stable URL
 ---------------------
