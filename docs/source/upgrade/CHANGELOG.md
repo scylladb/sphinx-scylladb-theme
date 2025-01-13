@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#1303](https://github.com/scylladb/sphinx-scylladb-theme/pull/1303): Implemented a helper to fetch multiversion data from a remote URL.
 - [#1314](https://github.com/scylladb/sphinx-scylladb-theme/pull/1314): Updated the user interface, including the homepage, sidebars, and breadcrumbs.
 - [#1316](https://github.com/scylladb/sphinx-scylladb-theme/pull/1316): Added a license banner to announce changes to ScyllaDB’s licensing and versioning policy.
+- [#1316](https://github.com/scylladb/sphinx-scylladb-theme/pull/1316): Added an option to copy the anchor link when hovering over a heading.
 - [#1330](https://github.com/scylladb/sphinx-scylladb-theme/pull/1329): Added an option to override the multiversion redirect for the main domain, enabling redirection of `docs.scylladb.com/manual` to `docs.scylladb.com/manual/stable` instead of `docs.scylladb.com/stable`.
 
 ### Fixed

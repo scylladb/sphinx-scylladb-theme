@@ -39,6 +39,53 @@ For example, if you want to build docs for the tags ``3.22.0`` and ``3.21.0``, `
 The extension allows configuring additional settings.
 To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
 
+
+Listing new versions from an external URL
+-----------------------------------------
+
+Multiversion configuration can be loaded from an external URL. 
+Below is an example of how to load and use the multiversion configuration:
+
+.. code-block:: python
+
+    # Load the multiversion configuration from an external URL
+    VERSIONS_URL = "https://<URL>/versions.json"
+    MULTIVERSION_CONFIG = fetch_multiversion_configuration(VERSIONS_URL)
+
+    # Builds documentation for the following tags and branches
+    TAGS = MULTIVERSION_CONFIG.get("tags", [])
+    BRANCHES = MULTIVERSION_CONFIG.get("branches", [])
+
+    # Sets the latest version
+    LATEST_VERSION = MULTIVERSION_CONFIG.get("latest", "master")
+
+    # Defines unstable versions
+    UNSTABLE_VERSIONS = MULTIVERSION_CONFIG.get("unstable", [])
+
+    # Defines deprecated versions
+    DEPRECATED_VERSIONS = MULTIVERSION_CONFIG.get("deprecated", [])
+
+    # Sets custom build flags
+    FLAGS = ["theme"]
+
+The JSON file used for the configuration should have the following structure:
+
+.. code-block:: json
+
+    {
+        "tags": [],
+        "branches": ["master", "branch-1.8"],
+        "latest": "branch-1.8",
+        "unstable": ["master"],
+        "deprecated": []
+    }
+
+- **tags:** List of Git tags to build documentation for.
+- **branches:** List of Git branches to build documentation for.
+- **latest:** The version considered as the latest, used as the default version.
+- **unstable:** List of versions marked as unstable (e.g., under development).
+- **deprecated:** List of versions marked as deprecated.
+
 Defining a stable URL
 ---------------------
 
@@ -86,7 +133,6 @@ By doing so, the warning message that appears at the top of the page will change
 .. code-block:: rst
 
     You are viewing documentation for a deprecated version of <PROJECT_NAME>. Switch to the latest stable version.
-
 
 Previewing local changes with multiversion
 ------------------------------------------
