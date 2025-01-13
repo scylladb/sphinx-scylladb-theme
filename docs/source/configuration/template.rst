@@ -38,7 +38,6 @@ Example:
       'scylladb_scripts': 'true',
   }
 
-
 Banner options
 --------------
 
@@ -315,3 +314,21 @@ Configuration options for enabling zendesk.
   html_theme_options = {
       'zendesk_tag': 'gq6ltsh3nfex3cnwfy4aj9',
   }
+
+
+Multiversion options
+--------------------
+
+.. list-table::
+  :widths: 20 20 20 40
+  :header-rows: 1
+
+  * - Option
+    - Type
+    - Default Value
+    - Description
+  * - ``redirect``
+    - string
+    - 
+    - Overrides the default redirection of the main domain when using multiversion. By default, it redirects to ``<DOMAIN>/stable/``. Overriding setting this can be useful if the main domain page publishes multiple documentation sets. Example: ``/manual/stable/``.
+
