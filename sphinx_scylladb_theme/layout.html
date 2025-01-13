@@ -91,15 +91,6 @@
         <section
             class="layout {{'layout--full-width' if full_width}} {{'layout--sidebar' if not hide_sidebar}} {{'layout--has-secondary-sidebar' if not hide_secondary_sidebar}} {{'landing landing--floating' if landing}}">
             <div class="content large-order-2">
-                {% if not hide_alert %}
-                    {% if 'opensource' in html_baseurl or 'enterprise' in html_baseurl %}
-                    {% include 'alert.html'%}
-                    {% endif %}
-                {% endif %}
-
-                {% if not hide_version_warning %}
-                    {% include 'version-warning.html'%}
-                {% endif %}
                 {% if not hide_pre_content %}
                     <div class="pre-content">
                         {% include 'breadcrumbs.html'%}
@@ -109,7 +100,18 @@
                 <div class="sidebar-right-layout">
                     <div class="body-container">
                 {% endif %}
+
                     <div class="content-body">
+                        {% if not hide_alert %}
+                        {% if 'opensource' in html_baseurl or 'enterprise' in html_baseurl %}
+                        {% include 'alert.html'%}
+                        {% endif %}
+                        {% endif %}
+    
+                        {% if not hide_version_warning %}
+                            {% include 'version-warning.html'%}
+                        {% endif %}
+                        
                         {{ body }}
                     </div>
                     {% if not hide_post_content %}
