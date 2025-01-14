@@ -102,12 +102,6 @@
                 {% endif %}
 
                     <div class="content-body">
-                        {% if not hide_alert %}
-                        {% if 'opensource' in html_baseurl or 'enterprise' in html_baseurl %}
-                        {% include 'alert.html'%}
-                        {% endif %}
-                        {% endif %}
-    
                         {% if not hide_version_warning %}
                             {% include 'version-warning.html'%}
                         {% endif %}
