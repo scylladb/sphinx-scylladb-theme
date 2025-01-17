@@ -26,12 +26,22 @@
 
   <div class="topics-grid grid-container full">
 
+.. alert::
+  :link: https://www.scylladb.com/2024/12/18/why-were-moving-to-a-source-available-license/
+  :target: _blank
+  :link_text: Learn more about the change
+  :icon: logs
+
+   We’re updating our license & versioning policy
+
+.. raw:: html
+
   <div class="grid-x grid-margin-x">
 
 .. topic-box::
   :title: Getting started
   :link: getting-started
-  :icon: icon-docs-getting-started
+  :icon: icon-rocket
   :class: large-6
   :anchor: Learn more
 
@@ -40,7 +50,7 @@
 .. topic-box::
   :title: Configuration
   :link: configuration
-  :icon: icon-docs-configuration
+  :icon: icon-settings
   :class: large-6
   :anchor: Learn more
 
@@ -49,7 +59,7 @@
 .. topic-box::
   :title: Commands
   :link: commands
-  :icon: icon-docs-commands
+  :icon: icon-terminal
   :class: large-6
   :anchor: Learn more
 
@@ -67,7 +77,7 @@
 .. topic-box::
   :title: Demos and Examples
   :link: examples
-  :icon: icon-docs-training
+  :icon: icon-dashboard
   :class: large-6
   :anchor: Learn more
 
@@ -76,7 +86,7 @@
 .. topic-box::
   :title: Contribute
   :link: contribute
-  :icon: icon-docs-contribute
+  :icon: icon-users
   :class: large-6
   :anchor: Learn more
 

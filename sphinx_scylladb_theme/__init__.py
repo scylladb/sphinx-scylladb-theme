@@ -3,11 +3,13 @@ from os import getenv, path
 import sphinx_collapse
 import sphinx_copybutton
 import sphinx_substitution_extensions
+from sphinxcontrib import mermaid
 from notfound import extension as not_found
 from sphinx_tabs import tabs
 
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
+    alerts,
     hero_box,
     include_tooltip,
     labels,
@@ -50,6 +52,7 @@ def update_context(app, pagename, templatename, context, doctree):
     context["hide_pre_content"] = "hide-pre-content" in file_meta
     context["hide_post_content"] = "hide-post-content" in file_meta
     context["hide_version_warning"] = "hide-version-warning" in file_meta
+    context["hide_alert"] = "hide-alert" in file_meta
     context["hide_sidebar"] = "hide-sidebar" in file_meta
     context["hide_secondary_sidebar"] = "hide-secondary-sidebar" in file_meta
     context["exclude_doctools"] = "exclude-doctools" in file_meta
@@ -102,12 +105,14 @@ def setup(app):
 
     """Setup thid-party extensions"""
     not_found.setup(app)
+    mermaid.setup(app)
     sphinx_collapse.setup(app)
     sphinx_copybutton.setup(app)
     sphinx_substitution_extensions.setup(app)
     tabs.setup(app)
 
     """Setup custom extensions"""
+    alerts.setup(app)
     hero_box.setup(app)
     include_tooltip.setup(app)
     labels.setup(app)

@@ -63,7 +63,14 @@ This file contains scripts that you can run to create a testing environment, com
 
 To preview the docs locally:
 
-#. From the command line, run ``make preview`` within the ``docs`` folder.
+#. From the command line, run ``make preview`` within the ``docs`` folder:
+
+    .. code-block:: console
+
+        cd docs
+        make preview
+
+    .. tip:: For troubleshooting, refer to the :ref:`preview command <Make_Preview>` documentation.
 
 #. Open ``http://127.0.0.1:5500/`` to preview the generated site with you changes.
 

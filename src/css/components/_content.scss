@@ -1,63 +1,110 @@
 .layout {
   display: flex;
   background-color: var(--bg-color);
-}
-
-.pre-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .content {
   overflow-wrap: break-word;
-  padding: 20px;
-  margin-top: $header-height;
-  max-width: $max-content-width;
   width: 100%;
 
-  p,
-  .line-block {
-    line-height: 28px;
-    margin-bottom: 20px;
+  .pre-content, .content-body, .post-content {
+      padding-left: $spacer-sm;
+      padding-right: $spacer-sm;
+
+      @media screen and (min-width: $large) {
+        padding-left: $spacer;
+        padding-right: $spacer;
+      }
+      
+      @media screen and (min-width: $xlarge) {
+        padding-left: $spacer-md;
+        padding-right: $spacer-md;
+      }
   }
 
-  ul {
-    list-style: none;
+  .content-body {
+      padding-top: $spacer-sm;
+      padding-bottom: $spacer-sm;
 
-    li::before {
-      content: "\2022";
-      color: var(--text-muted);
-      float: left;
-      font-size: 20px;
-      font-weight: bold;
-      margin-left: -1em;
-      margin-top: -2px;
-      width: 1em;
+      @media screen and (min-width: $large) {
+        padding-top: $spacer;
+        padding-bottom: $spacer;
+      }
+      
+      @media screen and (min-width: $xlarge) {
+        padding-top: $spacer-md;
+        padding-bottom: $spacer-md;
+      }
+  }
+
+  .pre-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: $product-title-height;
+    background: var(--navigation-bg);
+    margin-bottom: 0;
+  }
+
+  .sidebar-right-layout {
+    display: flex;
+
+    .body-container {
+      max-width: $max-content-width;
+      flex-grow: 1;
+      width: 0;
+    }
+  }
+
+  
+
+  .post-content {
+    padding-bottom: $spacer-md;
+  }
+  .content-body {
+    p,
+    .line-block {
+      line-height: 28px;
+      margin-bottom: 20px;
     }
 
     ul {
-      list-style: circle;
+      list-style: none;
+
       li::before {
-        content: "";
+        content: "\2022";
+        color: var(--text-muted);
+        float: left;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: -1em;
+        margin-top: -2px;
+        width: 1em;
+      }
+
+      ul {
+        list-style: circle;
+        li::before {
+          content: "";
+        }
       }
     }
-  }
 
-  ol ol {
-    list-style: lower-latin;
-  }
+    ol ol {
+      list-style: lower-latin;
+    }
 
-  img {
-    margin-bottom: $gap;
-  }
+    img {
+      margin-bottom: $gap;
+    }
 
-  .inline-icon {
-    font-size: 22px;
+    .inline-icon {
+      font-size: 22px;
 
-    &.icon-check {
-      color: var(--primary);
+      &.icon-check {
+        color: var(--primary);
+      }
     }
   }
 }
@@ -89,44 +136,27 @@
 }
 
 @media screen and (min-width: $large) {
-  .content {
-    min-height: calc(100vh - (#{$footer-height} + #{$header-height-large}));
-    padding-bottom: 100px;
-    margin-left: $secondary-side-nav-width;
-    margin-top: $header-height-large;
-    width: calc(100% - #{$secondary-side-nav-width});
-  }
+  // .content {
+  //   min-height: calc(100vh - (#{$footer-height} + #{$header-height-large}));
+  //   padding-bottom: 100px;
+  //   width: calc(100% - #{$secondary-side-nav-width});
+  // }
 }
 
 @media screen and (min-width: $xlarge) {
-  .content {
-    padding: 40px;
-    padding-top: 60px;
-    margin-left: $side-nav-width;
-    width: calc(100% - (#{$side-nav-width} + #{$secondary-side-nav-width}));
+  // .content {
+  //   width: calc(100% - (#{$side-nav-width} + #{$secondary-side-nav-width}));
 
-    &--collapsed {
-      margin-left: $side-nav-width-collapsed;
-      width: calc(
-        100% - (#{$side-nav-width-collapsed} + #{$secondary-side-nav-width})
-      );
-    }
-  }
-
-  .pre-content {
-    margin-bottom: 10px;
-  }
+  //   &--collapsed {
+  //     width: calc(
+  //       100% - (#{$side-nav-width-collapsed} + #{$secondary-side-nav-width})
+  //     );
+  //   }
+  // }
 
   .landing {
     &__content {
       padding: 0 60px;
-    }
-
-    &--floating {
-      .landing__content {
-        position: relative;
-        top: -70px;
-      }
     }
   }
 }

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-scylladb-theme"
-version = "1.8.2"
+version = "1.8.4"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = ["David García <hi@davidgarcia.dev>"]
 exclude = [".github", "config", "docs", "extensions", ".postcss.config.js", ".prettierrc.json", "deploy.sh", "src", "package.json", "package-lock.json"]
@@ -13,12 +13,13 @@ sphinx-copybutton = "^0.5.2"
 beautifulsoup4 = "^4.12.3"
 sphinx-tabs = "^3.4.5"
 pyyaml = "^6.0.1"
-Sphinx-Substitution-Extensions = "^2022.2.16"
+Sphinx-Substitution-Extensions = ">=2022.2.16,<2026.0.0"
 sphinx-notfound-page = "^1.0.4"
 setuptools = ">=70.1.1,<76.0.0"
+sphinxcontrib-mermaid = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^8.3.2"
+pytest = "^8.3.4"
 sphinx-autobuild = "^2024.10.3"
 pre-commit = "^4.0.1"
 myst-parser = "^3.0.1"

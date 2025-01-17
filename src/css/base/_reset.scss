@@ -2,7 +2,6 @@
 
 html {
   box-sizing: border-box;
-  scroll-padding-top: 100px;
 }
 
 body {
@@ -11,6 +10,9 @@ body {
   line-height: 1;
   background-color: var(--bg-color);
   color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -44,8 +46,15 @@ a:hover {
 }
 
 .headerlink {
+  position: relative;
   margin-left: 5px;
   visibility: hidden;
+  color: var(--text-muted);
+}
+
+.headerlink .tooltip {
+  position: static;
+  margin-left: 5px;
 }
 
 .toc-backref:hover {
