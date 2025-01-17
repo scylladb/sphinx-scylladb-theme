@@ -9,8 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- [ ] Fixed an issue where the sidebar menu overlapped the project title.
-
+- [#1336](https://github.com/scylladb/sphinx-scylladb-theme/pull/1336): Fixed an issue where the sidebar menu overlapped the project title.
 
 ## 1.8.4 - 17 Jan 2024
 
