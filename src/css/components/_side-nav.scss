@@ -29,6 +29,7 @@
     box-shadow: 0 0 $spacer-md 0 var(--brand-product);
     position: sticky;
     top: 0;
+    z-index: 100;
 
     a {
       background-color: var(--brand-product);
