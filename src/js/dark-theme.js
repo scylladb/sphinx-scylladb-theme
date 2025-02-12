@@ -30,6 +30,7 @@ export class DarkTheme {
         } else {
             this.rootDocumentEl.removeClass(this.darkThemeClass);
         }
+        this.rootDocumentEl.attr("data-theme", state ? "dark" : "light");
         this.rootDocumentEl.css("visibility","");
     }
 

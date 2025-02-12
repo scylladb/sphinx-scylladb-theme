@@ -183,6 +183,8 @@ $product-title-height: $spacer-md;
     --brand-cloud: #{$brand-cloud};
     --brand-enterprise: #{$brand-enterprise};
     --brand-self-hosted: #{$brand-self-hosted};
+
+    --biel-primary-color: #{$link-color};
   }
 
   .dark {
@@ -212,9 +214,10 @@ $product-title-height: $spacer-md;
     --admonition: var(--gray-400);
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
 
-        
     --brand-product: #{$gray-800};
     --brand-text: #{$gray-100};
+
+    --biel-primary-color: #{$primary};
   }
   
   @each $key, $styles in $brand-colors {
