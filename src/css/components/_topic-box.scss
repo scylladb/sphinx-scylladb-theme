@@ -169,10 +169,6 @@
     /* Overwrite Foundation */
     width: 280px !important;
   }
-
-  .topic-box--product:nth-last-child(-n + 2) .card {
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (min-width: $large) {
