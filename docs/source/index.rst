@@ -11,6 +11,7 @@
 
 .. hero-box::
   :button_icon: icon-github
+  :button_style: bold
   :button_url: https://github.com/scylladb/sphinx-scylladb-theme
   :button_text: Source code
   :title: Welcome to ScyllaDB Sphinx Theme documentation
@@ -25,14 +26,6 @@
 .. raw:: html
 
   <div class="topics-grid grid-container full">
-
-.. alert::
-  :link: https://www.scylladb.com/2024/12/18/why-were-moving-to-a-source-available-license/
-  :target: _blank
-  :link_text: Learn more about the change
-  :icon: logs
-
-   We’re updating our license & versioning policy
 
 .. raw:: html
 

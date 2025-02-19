@@ -133,14 +133,13 @@
 
 .landing__content {
   padding: 0 16px;
+  margin-top: 60px;
 }
 
 @media screen and (min-width: $large) {
-  // .content {
-  //   min-height: calc(100vh - (#{$footer-height} + #{$header-height-large}));
-  //   padding-bottom: 100px;
-  //   width: calc(100% - #{$secondary-side-nav-width});
-  // }
+  .landing__content {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: $xlarge) {

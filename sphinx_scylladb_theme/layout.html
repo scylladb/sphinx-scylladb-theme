@@ -29,6 +29,12 @@
             <link rel="stylesheet"
                   href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
         </noscript>
+
+        {% if theme_hide_ai_chatbot|lower != 'true' %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/biel-search@latest/dist/biel-search/biel-search.css">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/biel-search@latest/dist/biel-search/biel-search.esm.js"></script>
+        {% endif %}
+        
         {% for css in css_files %}
             {% if css|attr("filename") %}
                 {{ css_tag(css) }}
