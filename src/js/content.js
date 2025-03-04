@@ -19,16 +19,10 @@ export class ContentHandler {
         });
     }
 
-    getFormattedURL(href) {
-        const url = new URL(href);
-        const formattedURL = `${url.origin}${url.pathname.split('/').slice(0, -1).join('/')}${url.hash}`;
-        return formattedURL;
-    }
-
     addClickEvent(link) {
         const tooltip = link.querySelector('.tooltip');
         link.addEventListener('click', () => {
-            navigator.clipboard.writeText(this.getFormattedURL(link.href))
+            navigator.clipboard.writeText(link.href)
                 .then(() => {
                     tooltip.textContent = 'Copied!';
                     setTimeout(() => {
