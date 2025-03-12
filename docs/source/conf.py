@@ -56,7 +56,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "ScyllaDB Sphinx Theme"
-copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
+copyright = str(date.today().year) + " ScyllaDB"
 author = "ScyllaDB Project Contributors"
 
 # List of patterns, relative to source directory, that match files and
