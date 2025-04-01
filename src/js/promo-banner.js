@@ -68,7 +68,6 @@ export class PromoBannerHandler {
     showBanner() {
         const promoBanner = $(".promo-banner");
         promoBanner.show();
-        console.log('showing banner');
         $(".layout").addClass("layout--has-banner");
     }
 

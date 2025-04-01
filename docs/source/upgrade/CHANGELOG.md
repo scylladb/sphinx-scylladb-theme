@@ -5,13 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.8.5 - 17 Jan 2024
+## 1.8.6 - 1 Apr 2025
+
+### Added
+
+- [#1354](https://github.com/scylladb/sphinx-scylladb-theme/pull/1354): Integrated an AI-powered chatbot to assist users with documentation queries.
+
+### Updated
+
+- [#1379](https://github.com/scylladb/sphinx-scylladb-theme/pull/1379): Updated server link in the header to point to `docs.scylladb.com/manual`.
+- [#1368](https://github.com/scylladb/sphinx-scylladb-theme/pull/1368): Added a link to tutorials in the footer and updated the privacy policy disclaimer.
+
+### Fixed
+
+- [#1361](https://github.com/scylladb/sphinx-scylladb-theme/pull/1361): Adjusted hero box spacing on mobile for projects using a landing page.
+- [#1369](https://github.com/scylladb/sphinx-scylladb-theme/pull/1369): Fixed an issue with copying anchor links on nested pages.
+
+## 1.8.5 - 17 Jan 2025
 
 ### Fixed
 
 - [#1336](https://github.com/scylladb/sphinx-scylladb-theme/pull/1336): Fixed an issue where the sidebar menu overlapped the project title.
 
-## 1.8.4 - 17 Jan 2024
+## 1.8.4 - 17 Jan 2025
 
 ### Added
 
