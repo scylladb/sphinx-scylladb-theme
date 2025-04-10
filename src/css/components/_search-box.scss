@@ -202,6 +202,8 @@
   color: var(--text-color) !important;
 }
 .er_gcs_facet_ul {
+    max-height: 100% !important;
+
     &::-webkit-scrollbar {
       width: 5px;
       background-color: transparent;
