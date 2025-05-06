@@ -229,6 +229,10 @@ $product-title-height: $spacer-md;
     .text-brand-#{$key} {
       color: map.get($styles, text);
     }
+
+    .highlight .hll {
+      color: var(--black);
+    }
   
     .bg-brand-#{$key} {
       background-color: map.get($styles, bg);

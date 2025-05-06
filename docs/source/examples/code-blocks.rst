@@ -79,3 +79,29 @@ Renders:
    :class: hide-copy-button
 
    .. tip:: here's a tip
+
+
+Highlight lines
+---------------
+
+To highlight lines, add the option `:emphasize-lines: <number>` to the code-block directive.
+
+For example:
+
+.. code-block:: rst
+
+   .. code-block:: rst
+      :emphasize-lines: 1,3
+
+      Line 1
+      Line 2
+      Line 3
+
+Renders:
+
+.. code-block:: rst
+   :emphasize-lines: 1,3
+
+   Line 1
+   Line 2
+   Line 3
