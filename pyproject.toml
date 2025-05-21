@@ -15,7 +15,7 @@ sphinx-tabs = "^3.4.5"
 pyyaml = "^6.0.1"
 Sphinx-Substitution-Extensions = ">=2022.2.16,<2026.0.0"
 sphinx-notfound-page = "^1.0.4"
-setuptools = ">=70.1.1,<80.0.0"
+setuptools = ">=70.1.1,<81.0.0"
 sphinxcontrib-mermaid = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
