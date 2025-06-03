@@ -19,7 +19,7 @@ setuptools = ">=70.1.1,<80.0.0"
 sphinxcontrib-mermaid = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^8.3.5"
+pytest = "^8.4.0"
 sphinx-autobuild = "^2024.10.3"
 pre-commit = "^4.2.0"
 myst-parser = "^3.0.1"
