@@ -115,6 +115,40 @@ Examples:
         :link: index
         :anchor: Learn more
 
+
+Renders:
+
+
+.. topic-box::
+    :title: ScyllaDB
+    :link: https://scylladb.com
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Getting Started
+    :link: /getting-started/installation
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Code Blocks
+    :link: code-blocks
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Subdirectory Example
+    :link: subdir/example
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Parent Section
+    :link: ../getting-started/installation
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Examples
+    :link: index
+    :anchor: Learn more
+
 Grid support
 ------------
 
