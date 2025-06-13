@@ -82,3 +82,48 @@ def is_url(path):
     :rtype: bool
     """
     return bool(urlparse(path).netloc)
+
+
+def resolve_link(link, env):
+    """
+    Resolves internal Sphinx links to proper URLs.
+    
+    :param link: The link to resolve (absolute or relative path).
+    :type link: str
+    
+    :param env: The Sphinx environment object.
+    :type env: sphinx.environment.BuildEnvironment
+    
+    :return: The resolved link URL.
+    :rtype: str
+    """
+    if not link or is_url(link):
+        return link
+    
+    # Handle anchor links
+    if link.startswith('#'):
+        return link
+    
+    if link.startswith('/'):
+        # Absolute path: resolve from project root
+        target_docname = link[1:]  # Remove leading slash
+    else:
+        # Relative path: resolve from current document's directory
+        current_dir = os.path.dirname(env.docname)
+        if current_dir:
+            target_docname = os.path.normpath(os.path.join(current_dir, link)).replace(os.sep, '/')
+        else:
+            target_docname = link
+    
+    # Remove .html extension if present
+    if target_docname.endswith('.html'):
+        target_docname = target_docname[:-5]
+    
+    # Try to resolve the link
+    if target_docname in env.found_docs:
+        return env.app.builder.get_relative_uri(env.docname, target_docname)
+    elif target_docname + '/index' in env.found_docs:
+        return env.app.builder.get_relative_uri(env.docname, target_docname + '/index')
+    else:
+        # Fallback: add .html extension
+        return target_docname + '.html'

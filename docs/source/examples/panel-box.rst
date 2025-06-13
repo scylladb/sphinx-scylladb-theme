@@ -3,8 +3,6 @@ Panel box
 
 A custom directive to creates boxes on subordinate ``index.rst`` files.
 
-.. warning:: Do not use the panel-box on the root ``index.rst``.
-
 Syntax
 ------
 
