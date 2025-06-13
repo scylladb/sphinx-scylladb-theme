@@ -97,12 +97,6 @@ Examples:
         :link: code-blocks
         :anchor: Learn more
 
-    # Relative path (subdirectory)
-    .. topic-box::
-        :title: Subdirectory Example
-        :link: subdir/example
-        :anchor: Learn more
-
     # Parent directory
     .. topic-box::
         :title: Parent Section
@@ -132,11 +126,6 @@ Renders:
 .. topic-box::
     :title: Code Blocks
     :link: code-blocks
-    :anchor: Learn more
-
-.. topic-box::
-    :title: Subdirectory Example
-    :link: subdir/example
     :anchor: Learn more
 
 .. topic-box::
