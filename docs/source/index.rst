@@ -23,72 +23,63 @@
 
   <div class="landing__content">
 
-.. raw:: html
+.. grid::
+  :type: default
 
-  <div class="topics-grid grid-container full">
+  .. topic-box::
+    :title: Getting started
+    :link: getting-started
+    :icon: icon-rocket
+    :class: large-6
+    :anchor: Learn more
 
-.. raw:: html
+    Create a new documentation project with the Sphinx theme and preview the documentation in your browser.
 
-  <div class="grid-x grid-margin-x">
+  .. topic-box::
+    :title: Configuration
+    :link: configuration
+    :icon: icon-settings
+    :class: large-6
+    :anchor: Learn more
 
-.. topic-box::
-  :title: Getting started
-  :link: getting-started
-  :icon: icon-rocket
-  :class: large-6
-  :anchor: Learn more
+    Learn to configure the documentation look and feel and extensions.
 
-  Create a new documentation project with the Sphinx theme and preview the documentation in your browser.
+  .. topic-box::
+    :title: Commands
+    :link: commands
+    :icon: icon-terminal
+    :class: large-6
+    :anchor: Learn more
 
-.. topic-box::
-  :title: Configuration
-  :link: configuration
-  :icon: icon-settings
-  :class: large-6
-  :anchor: Learn more
+    Run commands to build and preview the documentation.
 
-  Learn to configure the documentation look and feel and extensions.
+  .. topic-box::
+    :title: Deployment
+    :link: deployment
+    :icon: icon-github
+    :class: large-6
+    :anchor: Learn more
 
-.. topic-box::
-  :title: Commands
-  :link: commands
-  :icon: icon-terminal
-  :class: large-6
-  :anchor: Learn more
+    Publish documentation sites using GitHub Actions & Pages.
 
-  Run commands to build and preview the documentation.
+  .. topic-box::
+    :title: Demos and Examples
+    :link: examples
+    :icon: icon-dashboard
+    :class: large-6
+    :anchor: Learn more
 
-.. topic-box::
-  :title: Deployment
-  :link: deployment
-  :icon: icon-github
-  :class: large-6
-  :anchor: Learn more
+    Explore example pages and components you can use in ScyllaDB docs.
 
-  Publish documentation sites using GitHub Actions & Pages.
+  .. topic-box::
+    :title: Contribute
+    :link: contribute
+    :icon: icon-users
+    :class: large-6
+    :anchor: Learn more
 
-.. topic-box::
-  :title: Demos and Examples
-  :link: examples
-  :icon: icon-dashboard
-  :class: large-6
-  :anchor: Learn more
-
-  Explore example pages and components you can use in ScyllaDB docs.
-
-.. topic-box::
-  :title: Contribute
-  :link: contribute
-  :icon: icon-users
-  :class: large-6
-  :anchor: Learn more
-
-  Notes to set up the developer environment,
-  update the static assets, and distribute the theme.
-
-.. raw:: html
-
-  </div></div>
+    Notes to set up the developer environment,
+    update the static assets, and distribute the theme.
 
 .. raw:: html
 

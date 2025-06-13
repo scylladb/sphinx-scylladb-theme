@@ -1,9 +1,7 @@
 Topic box
 =========
 
-A custom directive that creates graphical boxes (cards) on the root ``index.rst`` file.
-
-.. warning:: Do not use the ``topic-box`` on subordinate ``index.rst`` files.
+A custom directive that creates graphical boxes (cards) for navigation and content organization. 
 
 Syntax
 ------
@@ -58,12 +56,92 @@ The ``topic-box`` directive supports the following options:
     - string
     -
     - auto
-    - Defines if the link should be opened in a new tab or not. Available values: `auto`, `_blank`, `_self`. Defaults to `auto`.
+    - Defines if the link should be opened in a new tab or not. Available values: `auto`, `_blank`, `_self`. Defaults to `auto`. When set to `auto`, external links will open in a new tab while internal links will open in the same tab.
   * - ``anchor``
     - string
     -
     - Getting Started >
     - Text for the call to action.
+
+Link resolution
+---------------
+
+The topic-box directive handles different types of links:
+
+1. External links (e.g. https://example.com)
+2. Internal links with different path formats:
+   * Absolute paths (e.g. /getting-started/installation)
+   * Relative paths (e.g. code-blocks)
+   * Parent directory references (e.g. ../getting-started)
+   * Index files (e.g. index)
+
+Examples:
+
+.. code-block:: rst
+
+    # External link
+    .. topic-box::
+        :title: ScyllaDB
+        :link: https://scylladb.com
+        :anchor: Learn more
+
+    # Absolute path (from project root)
+    .. topic-box::
+        :title: Getting Started
+        :link: /getting-started/installation
+        :anchor: Learn more
+
+    # Relative path (same directory)
+    .. topic-box::
+        :title: Code Blocks
+        :link: code-blocks
+        :anchor: Learn more
+
+    # Parent directory
+    .. topic-box::
+        :title: Parent Section
+        :link: ../getting-started/installation
+        :anchor: Learn more
+
+    # Index file
+    .. topic-box::
+        :title: Examples
+        :link: index
+        :anchor: Learn more
+
+
+Renders:
+
+
+.. topic-box::
+    :title: ScyllaDB
+    :link: https://scylladb.com
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Getting Started
+    :link: /getting-started/installation
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Code Blocks
+    :link: code-blocks
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Parent Section
+    :link: ../getting-started/installation
+    :anchor: Learn more
+
+.. topic-box::
+    :title: Examples
+    :link: index
+    :anchor: Learn more
+
+Grid support
+------------
+
+To display topic boxes in responsive grid layouts, use the :doc:`grid` directive. The grid directive is specifically designed to work with topic boxes and supports Foundation's grid system for responsive layouts.
 
 Usage
 -----
@@ -167,85 +245,6 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-
-Topic with horizontal scroll (mobile)
-.....................................
-
-Using:
-
-.. code-block::
-
-    .. raw:: html
-
-        <div class="topics-grid topics-grid--scrollable grid-container full">
-
-        <div class="grid-x grid-margin-x hs">
-
-    .. topic-box::
-        :title: Lorem ipsum
-        :link: scylla-cloud
-        :class: large-4
-        :anchor: Lorem ipsum
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem ipsum
-        :link: scylla-cloud
-        :class: large-4
-        :anchor: Lorem ipsum
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem ipsum
-        :link: scylla-cloud
-        :class: large-4
-        :anchor: Lorem ipsum
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. raw:: html
-
-        </div></div>
-
-
-Results in:
-
-.. raw:: html
-
-    <div class="topics-grid topics-grid--scrollable grid-container full">
-
-    <div class="grid-x grid-margin-x hs">
-
-.. topic-box::
-    :title: Lorem ipsum
-    :link: scylla-cloud
-    :class: large-4
-    :anchor: Lorem ipsum
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem ipsum
-    :link: scylla-cloud
-    :class: large-4
-    :anchor: Lorem ipsum
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem ipsum
-    :link: scylla-cloud
-    :class: large-4
-    :anchor: Lorem ipsum
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. raw:: html
-
-    </div></div>
-
 Product topic
 .............
 
@@ -271,175 +270,3 @@ Results in:
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-
-Topic grid
-..........
-
-Create powerful, multi-device, topic box grids using Foundation's 12-column grid system.
-To make the columns wider or smaller, you can use the option ``:class:``.
-For example, ``:class: large-3`` means that the topic box will take 3 out of 12 columns in desktop devices.
-
-For more information, see `The Grid System <https://get.foundation/sites/docs/grid.html>`_.
-
-Using:
-
-.. code-block:: rst
-
-    .. raw:: html
-
-        <div class="topics-grid topics-grid--products">
-
-            <h2 class="topics-grid__title">Lorem Ipsum</h2>
-            <p class="topics-grid__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-            <div class="grid-container full">
-                <div class="grid-x grid-margin-x">
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. topic-box::
-        :title: Lorem Ipsum
-        :link: #
-        :image: /_static/img/mascots-2/enterprise.svg
-        :class: topic-box--product,large-3,small-6
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    .. raw:: html
-
-        </div></div></div>
-
-
-Results in:
-
-.. raw:: html
-
-    <div class="topics-grid topics-grid--products">
-
-        <h2 class="topics-grid__title">Lorem Ipsum</h2>
-        <p class="topics-grid__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <div class="grid-container full">
-            <div class="grid-x grid-margin-x">
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. topic-box::
-    :title: Lorem Ipsum
-    :link: #
-    :image: /_static/img/mascots-2/enterprise.svg
-    :class: topic-box--product,large-3,small-6
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-.. raw:: html
-
-    </div></div></div>

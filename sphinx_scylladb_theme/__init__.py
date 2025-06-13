@@ -11,6 +11,7 @@ from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     alerts,
     hero_box,
+    grid,
     include_tooltip,
     labels,
     multiversion,
@@ -114,6 +115,7 @@ def setup(app):
     """Setup custom extensions"""
     alerts.setup(app)
     hero_box.setup(app)
+    grid.setup(app)
     include_tooltip.setup(app)
     labels.setup(app)
     multiversion.setup(app)
