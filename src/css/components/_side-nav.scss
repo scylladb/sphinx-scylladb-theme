@@ -26,7 +26,6 @@
   }
 
   &__title {
-    box-shadow: 0 0 $spacer-md 0 var(--brand-product);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -110,6 +109,10 @@
 
       ul {
         order: 3;
+      }
+
+      &:not(.has-children) {
+        padding-left: $spacer-sm;
       }
     }
 
@@ -322,6 +325,10 @@
   .layout--has-banner .side-nav {
     max-height: calc(100vh - #{$promo-banner-header-height-large});
   }
+}
+
+.side-nav-content {
+  background: radial-gradient(100% 100px at top center, var(--brand-product) 0px, transparent 100%);
 }
 
 @media screen and (min-width: $xlarge) {
