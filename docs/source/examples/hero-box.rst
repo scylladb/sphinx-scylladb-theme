@@ -1,9 +1,7 @@
 Hero box
 ========
 
-A custom directive to create a header on the root ``index.rst`` file.
-
-.. warning:: Do not use the ``hero-box`` on the subordinate ``index.rst`` files.
+A custom directive that creates prominent header sections at the top of landing.
 
 Syntax
 ------
@@ -41,55 +39,112 @@ The ``hero-box`` directive supports the following options:
     - Custom CSS class.
   * - ``cta``
     - string
-    -
+    - 
     - Learn more
-    - Call to action text next to the button.
-  * - ``button_icon``
-    - string
-    -
-    - icon-home
-    - A list of CSS classes to render an icon, separated by comma or space.
-  * - ``button_icon_position``
-    - string
-    -
-    - left
-    - Position of the icon in relation to the text. Available values: ``left``, ``right``. Defaults to ``left``.
-  * - ``button_icon_link``
-    - flag
-    -
-    -
-    - If set, applies the CTA color to the icon.
-  * - ``button text``
-    - string
-    -
-    - Lorem ipsum
-    - Text for the call to action.
-  * - ``button_style``
-    - string
-    -
-    - bold
-    - Apply specific style to the button. Available values: ``default``, ``bold``. Defaults to ``default``.
-  * - ``button_url``
-    - string
-    -
-    -
-    - Relative link or external URL for the call to action. Do not use leading and trailing ("/") symbols to define relative links. (e.g. instead of ``/getting-started/``, use ``getting-started``).
+    - Call to action text.
   * - ``image``
     - string
     -
     - /_static/img/mascots-2/enterprise.svg
     - Path to the image. The image should be located in the project's ``_static`` folder.
+  * - ``button_style``
+    - string
+    -
+    - bold
+    - Button style. Available values: `bold`.
+  * - ``button_icon``
+    - string
+    -
+    - icon-github
+    - A list of CSS classes to render icons, separated by comma or space.
+  * - ``button_icon_position``
+    - string
+    -
+    - right
+    - Icon position. Available values: `left`, `right`.
+  * - ``button_icon_link``
+    - flag
+    -
+    -
+    - If present, the icon will be rendered as a link.
+  * - ``button_url``
+    - string
+    -
+    - getting-started
+    - Relative link or external URL for the call to action.
+  * - ``button_text``
+    - string
+    -
+    - Learn more
+    - Button text.
   * - ``search_box``
     - flag
     -
     -
-    - If set, displays the site's search box.
+    - If present, a search box will be rendered.
+  * - ``content_page``
+    - flag
+    -
+    -
+    - If present, adds vertical padding suitable for content pages. By default (without this flag), the hero box is optimized for landing pages.
+
+Link resolution
+---------------
+
+The hero-box directive handles different types of links:
+
+1. External links (e.g. https://example.com)
+2. Internal links with different path formats:
+   * Absolute paths (e.g. /getting-started/installation)
+   * Relative paths (e.g. code-blocks)
+   * Parent directory references (e.g. ../getting-started)
+   * Index files (e.g. index)
+
+Examples:
+
+.. code-block:: rst
+
+    # External link
+    .. hero-box::
+        :title: External Resources
+        :text: Visit our website for more information
+        :button_text: Learn more
+        :button_url: https://scylladb.com
+        :button_icon: icon-external-link
+        :button_icon_position: right
+
+    # Internal link (absolute)
+    .. hero-box::
+        :title: Getting Started
+        :text: Learn how to install and configure ScyllaDB
+        :button_text: Learn more
+        :button_url: /getting-started/installation
+        :button_icon: icon-arrow-right
+        :button_icon_position: right
+
+    # Internal link (relative)
+    .. hero-box::
+        :title: Code blocks
+        :text: Learn how to install and configure ScyllaDB
+        :button_text: Learn more
+        :button_url:code-blocks
+        :button_icon: icon-arrow-right
+        :button_icon_position: right
+
+    # Internal link (relative)
+    .. hero-box::
+        :title: Related Topics
+        :text: Check out these related guides
+        :button_text: Learn more
+        :button_url: ../getting-started/installation
+        :button_icon: icon-folder
+        :button_icon_position: left
 
 Usage
 -----
 
-Default
-.......
+Basic usage
+...........
 
 Using:
 
@@ -97,247 +152,128 @@ Using:
 
     .. hero-box::
         :title: Lorem Ipsum
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem Ipsum
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero box with image
-...................
-
-Using:
-
-.. code-block:: rst
-
-    .. hero-box::
-        :title: Lorem Ipsum
-        :image: /_static/img/mascots-2/enterprise.svg
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem Ipsum
-    :image: /_static/img/mascots-2/enterprise.svg
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero box with search box
-........................
-
-Using:
-
-.. code-block:: rst
-
-  .. hero-box::
-      :title: Lorem Ipsum
-      :search_box:
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem Ipsum
-    :search_box:
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero box with button
-....................
-
-Using:
-
-.. code-block:: rst
-
-    .. hero-box::
-        :title: Lorem Ipsum
-        :image: /_static/img/mascots-2/enterprise.svg
+        :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :button_text: Learn more
         :button_url: #
-        :button_text: Project Name
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem Ipsum
-    :image: /_static/img/mascots-2/enterprise.svg
-    :button_url: #
-    :button_text: Project Name
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero box with button & icon
-...........................
-
-Using:
-
-.. code-block:: rst
-
-    .. hero-box::
-        :title: Lorem Ipsum
-        :image: /_static/img/mascots-2/enterprise.svg
-        :button_url: #
-        :button_icon: icon-github
-        :button_text: Project Name
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem Ipsum
-    :image: /_static/img/mascots-2/enterprise.svg
-    :button_icon: icon-github
-    :button_url: #
-    :button_text: Project Name
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero box with button & icon (position right)
-............................................
-
-Using:
-
-.. code-block:: rst
-
-    .. hero-box::
-        :title: Lorem Ipsum
-        :image: /_static/img/mascots-2/enterprise.svg
-        :button_url: #
-        :button_icon: icon-github
+        :button_icon: icon-arrow-right
         :button_icon_position: right
-        :button_text: Project Name
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :content_page:
 
 Results in:
 
 .. hero-box::
     :title: Lorem Ipsum
-    :image: /_static/img/mascots-2/enterprise.svg
-    :button_icon: icon-github
+    :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    :button_text: Learn more
+    :button_url: #
+    :button_icon: icon-arrow-right
     :button_icon_position: right
-    :button_url: #
-    :button_text: Project Name
+    :content_page:
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-
-Hero box with bold button
-.........................
+With image
+..........
 
 Using:
 
 .. code-block:: rst
 
-  .. hero-box::
-      :title: Lorem ipsum
-      :button_text: Project Name
-      :button_url: #
-      :button_style: bold
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem ipsum
-    :button_text: Project Name
-    :button_url: #
-    :button_style: bold
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero with colored button
-........................
-
-Using:
-
-.. code-block:: rst
-
-  .. hero-box::
-      :title: Lorem ipsum
-      :button_text: Project Name
-      :button_url: #
-      :button_icon_link:
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .. hero-box::
+        :title: Lorem Ipsum
+        :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :image: /_static/img/mascots-2/enterprise.svg
+        :button_text: Learn more
+        :button_url: #
+        :button_icon: icon-arrow-right
+        :button_icon_position: right
+        :content_page:
 
 Results in:
 
 .. hero-box::
-    :title: Lorem ipsum
-    :button_text: Project Name
-    :button_url: #
-    :button_icon_link:
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Hero box button with CTA
-........................
-
-Using:
-
-.. code-block:: rst
-
-  .. hero-box::
-      :title: Lorem ipsum
-      :button_text: Project Name
-      :button_url: #
-      :cta: Learn more
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem ipsum
-    :button_text: Project Name
-    :button_url: #
-    :cta: Learn more
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-
-Hero box with everything
-........................
-
-.. code-block:: rst
-
-  .. hero-box::
-      :title: Lorem ipsum
-      :image: /_static/img/mascots-2/enterprise.svg
-      :button_text: Project Name
-      :button_url: #
-      :button_style: bold
-      :button_icon: icon-arrow-right
-      :button_icon_position: right
-      :button_icon_link:
-      :cta: Learn more
-      :search_box:
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Results in:
-
-.. hero-box::
-    :title: Lorem ipsum
+    :title: Lorem Ipsum
+    :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     :image: /_static/img/mascots-2/enterprise.svg
-    :button_text: Project Name
+    :button_text: Learn more
     :button_url: #
+    :button_icon: icon-arrow-right
+    :button_icon_position: right
+    :content_page:
+
+With search box
+...............
+
+Using:
+
+.. code-block:: rst
+
+    .. hero-box::
+        :title: Lorem Ipsum
+        :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :search_box:
+        :content_page:
+
+Results in:
+
+.. hero-box::
+    :title: Lorem Ipsum
+    :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    :search_box:
+    :content_page:
+
+With bold button
+.................
+
+Using:
+
+.. code-block:: rst
+
+    .. hero-box::
+        :title: Lorem Ipsum
+        :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :button_text: Learn more
+        :button_url: #
+        :button_icon: icon-arrow-right
+        :button_icon_position: right
+        :button_style: bold
+        :content_page:
+
+Results in:
+
+.. hero-box::
+    :title: Lorem Ipsum
+    :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    :button_text: Learn more
+    :button_url: #
+    :button_icon: icon-arrow-right
+    :button_icon_position: right
     :button_style: bold
+    :content_page:
+
+With icon as link
+.................
+
+Using:
+
+.. code-block:: rst
+
+    .. hero-box::
+        :title: Lorem Ipsum
+        :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :button_text: Learn more
+        :button_url: #
+        :button_icon: icon-arrow-right
+        :button_icon_position: right
+        :button_icon_link:
+        :content_page:
+
+Results in:
+
+.. hero-box::
+    :title: Lorem Ipsum
+    :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    :button_text: Learn more
+    :button_url: #
     :button_icon: icon-arrow-right
     :button_icon_position: right
     :button_icon_link:
-    :cta: Learn more
-    :search_box:
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    :content_page:

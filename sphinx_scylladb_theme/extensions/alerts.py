@@ -1,11 +1,11 @@
 """
-Sphinx directive for HTML Alert Components with target option.
+Sphinx directive for HTML alert components with target option.
 """
 
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-from .utils import generate_template
+from .utils import generate_template, resolve_link
 
 
 class Alert(Directive):
@@ -23,6 +23,10 @@ class Alert(Directive):
         link = self.options.get("link", "")
         link_text = self.options.get("link_text", "")
         target = self.options.get("target", "_self")
+
+        if link:
+            env = self.state.document.settings.env
+            link = resolve_link(link, env)
 
         if target == "_blank":
             target_attr = 'target="_blank"'
