@@ -26,7 +26,6 @@
   }
 
   &__title {
-    box-shadow: 0 0 $spacer-md 0 var(--brand-product);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -63,8 +62,14 @@
     .toctree-l1 {
  
         &:not(.has-children) {
-          &>a{
-            margin-left: $spacer;
+          display: flex;
+          
+          &::before {
+            content: '•';
+            width: $spacer;
+            text-align: center;
+            align-self: center;
+            opacity: .4;
           }
         }
         
@@ -92,6 +97,17 @@
         padding-left: math.div($spacer-sm, 2);
         border-left-color: var(--border-color);
       }
+
+      &:not(.has-children) {
+        display: flex;
+        &::before {
+          content: '•';
+          width: $spacer-sm;
+          text-align: center;
+          align-self: center;
+          opacity: .3;
+        }
+      }
     }
 
     .toctree-l3 {
@@ -111,6 +127,8 @@
       ul {
         order: 3;
       }
+
+     
     }
 
     /* Override icons extension */
@@ -225,7 +243,7 @@
         width: 100%;
         border-left: 1px solid var(--link-color);
         margin-left: math.div($spacer, 2);
-        padding-left: math.div($spacer, 2);
+        padding-left: math.div($spacer-sm, 2);
         gap: $spacer-3xs;
 
         li {
@@ -322,6 +340,10 @@
   .layout--has-banner .side-nav {
     max-height: calc(100vh - #{$promo-banner-header-height-large});
   }
+}
+
+.side-nav-content {
+  background: radial-gradient(100% 100px at top center, var(--brand-product) 0px, transparent 100%);
 }
 
 @media screen and (min-width: $xlarge) {
