@@ -5,7 +5,7 @@ Sphinx directive for HTML Hero Components.
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-from .utils import generate_template
+from .utils import generate_template, resolve_link
 
 
 class HeroBox(Directive):
@@ -13,7 +13,7 @@ class HeroBox(Directive):
     option_spec = {
         "title": directives.unchanged_required,
         "class": directives.path,
-        "text": directives.unchanged_required,
+        "text": directives.unchanged_required, # unused, left for compatibility
         "cta": directives.unchanged_required,
         "image": directives.path,
         "button_style": directives.path,
@@ -23,11 +23,14 @@ class HeroBox(Directive):
         "button_url": directives.path,
         "button_text": directives.path,
         "search_box": directives.flag,
+        "content_page": directives.flag,
     }
 
     def run(self):
         class_name = "hero"
         container_class_name = self.options.get("class", "")
+        
+        content_page_style = ' style="margin-top: 2em; margin-bottom: 2em;"' if "content_page" in self.options else ""
 
         image = self.options.get("image")
         image = (
@@ -48,6 +51,10 @@ class HeroBox(Directive):
         button_icon_link = "button_icon_link" in self.options
         button_url = self.options.get("button_url")
         button_text = self.options.get("button_text")
+
+        if button_url:
+            env = self.state.document.settings.env
+            button_url = resolve_link(button_url, env)
 
         button_content = f"{button_text}"
         if cta:
@@ -96,7 +103,7 @@ class HeroBox(Directive):
 
         html_tag_open = generate_template(
             """
-            <div class="{class_name} {container_class_name}">
+            <div class="{class_name} {container_class_name}"{content_page_style}>
                 <div class="{class_name}-wrapper">
                     <div class="{class_name}__img">
                     {image}
@@ -109,6 +116,7 @@ class HeroBox(Directive):
             image=image,
             class_name=class_name,
             container_class_name=container_class_name,
+            content_page_style=content_page_style,
         )
         html_tag_close = generate_template(
             """</div>{button}{search_box}</div></div></div>""",

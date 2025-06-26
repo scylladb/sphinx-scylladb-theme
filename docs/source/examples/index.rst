@@ -18,6 +18,7 @@ In general, there are main components to the markup of any document:
    collapse
    code-blocks
    diagrams
+   grid
    glossary
    headings
    hero-box
@@ -48,6 +49,7 @@ In general, there are main components to the markup of any document:
   * :doc:`Collapse <collapse>`
   * :doc:`Code blocks <code-blocks>`
   * :doc:`Diagrams <diagrams>`
+  * :doc:`Grid <grid>`
   * :doc:`Glossary <glossary>`
   * :doc:`Headings <headings>`
   * :doc:`Hero box <hero-box>`

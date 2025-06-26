@@ -4,8 +4,9 @@ Sphinx directive for HTML Topic Box Components.
 
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
+import os
 
-from .utils import generate_template, is_url
+from .utils import generate_template, is_url, resolve_link
 
 
 class TopicBox(Directive):
@@ -16,7 +17,7 @@ class TopicBox(Directive):
         "link_target": directives.path,
         "anchor": directives.path,
         "icon": directives.path,
-        "icon_color": directives.path,
+        "icon_color": directives.path, # unused, left for compatibility
         "image": directives.path,
         "class": directives.unchanged,
     }
@@ -27,16 +28,21 @@ class TopicBox(Directive):
 
         link = self.options.get("link")
         link_target = self.options.get("link_target", "auto")
+        target_attr = ""
+        
+        if link:
+            env = self.state.document.settings.env
+            link = resolve_link(link, env)
+            if link_target == "_blank":
+                target_attr = 'target="_blank"'
+            elif link_target == "auto" and is_url(link):
+                target_attr = 'target="_blank"'
+
         link_template = """
             <div class="{class_name} {container_class_name}">
                 <div class="card">
             """
         if link:
-            target_attr = ""
-            if link_target == "_blank":
-                target_attr = 'target="_blank"'
-            elif link_target == "auto" and is_url(link):
-                target_attr = 'target="_blank"'
             link_template = f"""
                 <div class="cell {class_name} {container_class_name}">
                     <a class="card" href="{link}" {target_attr}>
