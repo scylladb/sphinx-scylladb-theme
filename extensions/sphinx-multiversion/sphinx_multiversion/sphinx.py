@@ -5,7 +5,7 @@ import json
 import logging
 import os
 import posixpath
-from distutils.version import LooseVersion
+from looseversion import LooseVersion
 
 from sphinx import config as sphinx_config
 from sphinx.locale import _
