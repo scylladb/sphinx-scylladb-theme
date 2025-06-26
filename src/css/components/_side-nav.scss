@@ -62,8 +62,14 @@
     .toctree-l1 {
  
         &:not(.has-children) {
-          &>a{
-            margin-left: $spacer;
+          display: flex;
+          
+          &::before {
+            content: '•';
+            width: $spacer;
+            text-align: center;
+            align-self: center;
+            opacity: .4;
           }
         }
         
@@ -91,6 +97,17 @@
         padding-left: math.div($spacer-sm, 2);
         border-left-color: var(--border-color);
       }
+
+      &:not(.has-children) {
+        display: flex;
+        &::before {
+          content: '•';
+          width: $spacer-sm;
+          text-align: center;
+          align-self: center;
+          opacity: .3;
+        }
+      }
     }
 
     .toctree-l3 {
@@ -111,9 +128,7 @@
         order: 3;
       }
 
-      &:not(.has-children) {
-        padding-left: $spacer-sm;
-      }
+     
     }
 
     /* Override icons extension */
@@ -228,7 +243,7 @@
         width: 100%;
         border-left: 1px solid var(--link-color);
         margin-left: math.div($spacer, 2);
-        padding-left: math.div($spacer, 2);
+        padding-left: math.div($spacer-sm, 2);
         gap: $spacer-3xs;
 
         li {
