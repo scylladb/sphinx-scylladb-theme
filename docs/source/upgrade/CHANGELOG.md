@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [89315d4](https://github.com/scylladb/sphinx-scylladb-theme/commit/89315d4483559a1423d8fb33ad75b885a1df1bad): Introduced a new `grid` directive for flexible page layouts.
 - [#1443](https://github.com/scylladb/sphinx-scylladb-theme/pull/1443): Added support for additional icons.
-- [ ](): Enabled the Ask AI bot by default across all documentation projects.
+- [#1452](https://github.com/scylladb/sphinx-scylladb-theme/pull/1452): Enabled the Ask AI bot by default across all documentation projects.
 
 ### Updated
 
