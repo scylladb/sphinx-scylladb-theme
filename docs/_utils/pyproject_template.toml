@@ -3,6 +3,7 @@ name = "sphinx-docs"
 description = "ScyllaDB Documentation"
 version = "0.1.0"
 authors = ["ScyllaDB Documentation Contributors"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
