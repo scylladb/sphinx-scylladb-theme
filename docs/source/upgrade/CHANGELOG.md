@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.8.7 - 1 July 2025
+
+### Added
+
+- [89315d4](https://github.com/scylladb/sphinx-scylladb-theme/commit/89315d4483559a1423d8fb33ad75b885a1df1bad): Introduced a new `grid` directive for flexible page layouts.
+- [#1443](https://github.com/scylladb/sphinx-scylladb-theme/pull/1443): Added support for additional icons.
+- [#1452](https://github.com/scylladb/sphinx-scylladb-theme/pull/1452): Enabled the Ask AI bot by default across all documentation projects.
+
+### Updated
+
+- [89315](https://github.com/scylladb/sphinx-scylladb-theme/commit/89315d4483559a1423d8fb33ad75b885a1df1bad): Improved support for cards, making them available on inner pages.
+- [#1442](https://github.com/scylladb/sphinx-scylladb-theme/pull/1442): Updated navbar links to direct users to the latest manual documentation.
+- [#1441](https://github.com/scylladb/sphinx-scylladb-theme/pull/1441): Restyled the left sidebar to better identify nested elements.
+
+### Fixed
+
+- [#1428](https://github.com/scylladb/sphinx-scylladb-theme/pull/1428): Restored the ability to retain scroll position when reloading or navigating between pages.
+- [#1417](https://github.com/scylladb/sphinx-scylladb-theme/pull/1417): Fixed code line highlighting in dark mode.
+- [cd88d37](https://github.com/scylladb/sphinx-scylladb-theme/commit/cd88d37ef43bb657ce32d5020eeb3df69919ec0c): Removed unnecessary scroll behavior from search results.
+ 
 ## 1.8.6 - 1 Apr 2025
 
 ### Added
