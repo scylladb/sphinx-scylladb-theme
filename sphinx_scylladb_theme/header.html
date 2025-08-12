@@ -81,9 +81,20 @@
     </div>
     <div class="header-search-box">
         <i class="dark-theme-toggler icon-theme"></i>
-        <div class="search-box">
-            <ci-search></ci-search>
-        </div>
+        {% if theme_search_engine|lower == 'expertrec' %}
+            <div class="search-box">
+                <ci-search></ci-search>
+            </div>
+        {% else %}
+            <biel-search-button
+                project="{{theme_ai_chatbot_id}}"
+                button-style="rounded"
+                hide-filters="false"
+                header-title="ScyllaDB chatbot (beta)"
+                modal-position="top-center">
+                Search
+            </biel-search-button>
+        {% endif %}
     </div>
     {% include 'side-nav-toggle.html' %}
 </header>
