@@ -246,3 +246,9 @@ $product-title-height: $spacer-md;
       background-color: map.get($styles, bg);
     }
   }
+
+  @media (min-width: 1024px) {
+    :root {
+      --biel-search-button-max-width: 100%;
+    }
+  }
