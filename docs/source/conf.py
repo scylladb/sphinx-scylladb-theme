@@ -118,6 +118,7 @@ html_theme_options = {
     "hide_feedback_buttons": "false",
     "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
+    "search_engine": "bielai",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
     "hide_version_dropdown": ["master"],
     "zendesk_tag": "gq6ltsh3nfex3cnwfy4aj9",

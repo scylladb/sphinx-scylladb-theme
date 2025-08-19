@@ -88,18 +88,51 @@ class HeroBox(Directive):
         )
 
         has_search_box = "search_box" in self.options
-        search_box = (
-            generate_template(
-                """
-                <div class="{class_name}__search-box search-box search-box--hero">
-                <ci-search></ci-search>
-                </div>
-                """,
-                class_name=class_name,
+        if has_search_box:
+            env = self.state.document.settings.env
+            raw_theme_options = getattr(env.config, "html_theme_options", {}) or {}
+            theme_options = (
+                raw_theme_options if isinstance(raw_theme_options, dict) else {}
             )
-            if has_search_box
-            else ""
-        )
+            search_engine_raw = theme_options.get("search_engine", "expertrec")
+            search_engine = (
+                search_engine_raw.lower()
+                if isinstance(search_engine_raw, str)
+                else "expertrec"
+            )
+
+            if search_engine == "expertrec":
+                search_box = generate_template(
+                    """
+                    <div class="{class_name}__search-box search-box search-box--hero">
+                    <ci-search></ci-search>
+                    </div>
+                    """,
+                    class_name=class_name,
+                )
+            else:
+                ai_chatbot_id_raw = theme_options.get("ai_chatbot_id", "")
+                ai_chatbot_id = (
+                    ai_chatbot_id_raw if isinstance(ai_chatbot_id_raw, str) else ""
+                )
+                search_box = generate_template(
+                    """
+                    <div class="{class_name}__search-box">
+                    <biel-search-button
+                        project="{ai_chatbot_id}"
+                        header-title="ScyllaDB chatbot (beta)"
+                        button-position="bottom-right"
+                        modal-position="bottom-right"
+                        button-style="rounded">
+                            Search
+                    </biel-search-button>
+                    </div>
+                    """,
+                    class_name=class_name,
+                    ai_chatbot_id=ai_chatbot_id,
+                )
+        else:
+            search_box = ""
 
         html_tag_open = generate_template(
             """

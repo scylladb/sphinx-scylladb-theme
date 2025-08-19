@@ -48,6 +48,10 @@ Configuration options
     - string
     - ddfdo8m94k
     - Biel.ai project ID.
+  * - ``search_engine``
+    - string
+    - expertrec
+    - Set to ``bielai`` to use the Biel.ai chatbot.
 
 Troubleshooting
 ---------------

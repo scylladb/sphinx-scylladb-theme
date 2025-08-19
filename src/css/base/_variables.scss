@@ -185,6 +185,14 @@ $product-title-height: $spacer-md;
     --brand-self-hosted: #{$brand-self-hosted};
 
     --biel-primary-color: #{$link-color};
+    --biel-search-filter-selected-bg-color: #{$link-color};
+    --biel-search-button-border-radius: #{$border-radius} !important;
+    --biel-search-button-padding: 8px 20px;
+    --biel-search-button-text-display: block !important;
+    --biel-search-button-icon-margin-right: 5px !important;
+    --biel-search-body-max-height: 400px;
+    --biel-search-content-max-height: 90vh;
+    --biel-search-button-max-width: -webkit-fill-available;
   }
 
   .dark {
@@ -218,6 +226,8 @@ $product-title-height: $spacer-md;
     --brand-text: #{$gray-100};
 
     --biel-primary-color: #{$primary};
+    --biel-search-filter-selected-bg-color: #{$primary};
+    --biel-search-result-mark-color: #{$primary};
   }
   
   @each $key, $styles in $brand-colors {
@@ -236,5 +246,11 @@ $product-title-height: $spacer-md;
   
     .bg-brand-#{$key} {
       background-color: map.get($styles, bg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --biel-search-button-max-width: 100%;
     }
   }
