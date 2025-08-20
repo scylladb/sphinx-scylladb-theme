@@ -308,11 +308,15 @@ def main(argv=None):
 
             current_sourcedir = os.path.join(repopath, sourcedir)
             project = sphinx_project.Project(current_sourcedir, source_suffixes)
+            
+            myst_substitutions = getattr(current_config, 'myst_substitutions', {})
+            
             metadata[gitref.name] = {
                 "name": gitref.name,
                 "version": current_config.version,
                 "release": current_config.release,
                 "rst_prolog": current_config.rst_prolog,
+                "myst_substitutions": myst_substitutions,
                 "exclude_patterns": current_config.exclude_patterns,
                 "is_released": bool(
                     re.match(config.smv_released_pattern, gitref.refname)
