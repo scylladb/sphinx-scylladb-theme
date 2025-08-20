@@ -79,6 +79,24 @@
   &__search-box {
     margin-top: 20px;
     box-shadow: 0 4px 25px rgb(0 0 0 / 2%);
+    flex: 0 1 320px;
+  }
+
+  &__search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: $spacer-xs;
+    max-width: 600px;
+  }
+
+  &__ask-ai {
+    margin-top: 20px;
+    flex: 0 0 auto;
+    
+    biel-button {
+      white-space: nowrap !important;
+      display: inline-block !important;
+    }
   }
 }
 
@@ -93,7 +111,6 @@
 @media screen and (min-width: $medium) {
   .hero {
 
-
     &__title {
       font-size: 32px;
       line-height: 42px;
@@ -104,6 +121,10 @@
       font-size: 18px;
       max-width: 482px;
       line-height: 26px;
+    }
+
+    &__search-box {
+      flex-basis: 360px;
     }
 
     &__img {
@@ -129,5 +150,9 @@
 @media screen and (min-width: $large) {
   .hero {
     padding: 60px 60px;
+    
+    &__search-box {
+      flex-basis: 420px;
+    }
   }
 }

@@ -13,7 +13,7 @@
 
   &--hero {
     background-color: var(--well-bg);
-    padding: $spacer-xs $spacer-sm;
+    padding: 9px $spacer-sm;
     border: 1px solid var(--primary);
     box-shadow: 0 $spacer-3xs $spacer-sm rgba(var(--primary-rgb), 0.4);
   }
@@ -112,8 +112,11 @@
 
   h3 {
     font-size: $font-md !important;
-    
   }
+}
+
+.dark .er_search_suggestions h3 {
+  color: var(--text-color) !important;
 }
 
 /* Results page*/
@@ -246,6 +249,31 @@
       font-weight: bold;
     }
   }
+}
+
+/* Fix for search input scroll issue */
+.er_search_input_dummy {
+  margin: 0 !important;
+  scroll-margin: 0 !important;
+  scroll-padding: 0 !important;
+  scroll-behavior: auto !important;
+}
+
+/* Prevent scroll on search containers */
+.search-box, .header-search-box {
+  scroll-margin: 0 !important;
+  scroll-padding: 0 !important;
+}
+
+/* Override any smooth scrolling that might cause the issue */
+ci-search *, 
+ci-search,
+.er-dummy-search,
+.er-dummy-search-box,
+.er-search-form {
+  scroll-behavior: auto !important;
+  scroll-margin: 0 !important;
+  scroll-padding: 0 !important;
 }
 
 /* Mobile */

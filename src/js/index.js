@@ -11,6 +11,7 @@ import { ContentHandler} from "./content";
 import { ImagesHandler } from "./images";
 import { LinksHandler } from "./links";
 import { PromoBannerHandler } from "./promo-banner";
+import { SearchScrollPrevention } from "./search-scroll-prevention";
 import { SecondarySidebarHandler } from "./secondary-sidebar";
 import { SidebarHandler } from "./sidebar";
 import { TablesHandler } from "./tables";
@@ -27,4 +28,5 @@ $(document).ready(function () {
   new CollapseHandler().init();
   new SidebarHandler().init();
   new SecondarySidebarHandler().init();
+  new SearchScrollPrevention().init();
 });

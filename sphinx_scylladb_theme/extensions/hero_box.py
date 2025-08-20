@@ -24,6 +24,7 @@ class HeroBox(Directive):
         "button_text": directives.path,
         "search_box": directives.flag,
         "content_page": directives.flag,
+        "ai_chatbot_id": directives.unchanged,
     }
 
     def run(self):
@@ -88,18 +89,34 @@ class HeroBox(Directive):
         )
 
         has_search_box = "search_box" in self.options
-        search_box = (
-            generate_template(
+        
+        ai_chatbot_id = self.options.get("ai_chatbot_id")
+        
+        ask_ai_section = ""
+        if ai_chatbot_id:
+            ask_ai_section = """
+                <div class="{class_name}__ask-ai">
+                    <biel-button project="{ai_chatbot_id}"
+                        header-title="ScyllaDB chatbot (beta)"
+                        button-position="default"
+                        modal-position="bottom-right"
+                        button-style="dark">Ask AI</biel-button>
+                </div>""".format(class_name=class_name, ai_chatbot_id=ai_chatbot_id)
+
+        if has_search_box:
+            search_box = generate_template(
                 """
-                <div class="{class_name}__search-box search-box search-box--hero">
-                <ci-search></ci-search>
+                <div class="{class_name}__search-wrapper">
+                    <div class="{class_name}__search-box search-box search-box--hero">
+                        <ci-search></ci-search>
+                    </div>{ask_ai_section}
                 </div>
                 """,
                 class_name=class_name,
+                ask_ai_section=ask_ai_section,
             )
-            if has_search_box
-            else ""
-        )
+        else:
+            search_box = ""
 
         html_tag_open = generate_template(
             """
