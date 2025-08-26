@@ -12,6 +12,7 @@ import { ImagesHandler } from "./images";
 import { LinksHandler } from "./links";
 import { PromoBannerHandler } from "./promo-banner";
 import { SearchScrollPrevention } from "./search-scroll-prevention";
+import { SearchToChatHandler } from "./search-to-chat";
 import { SecondarySidebarHandler } from "./secondary-sidebar";
 import { SidebarHandler } from "./sidebar";
 import { TablesHandler } from "./tables";
@@ -29,4 +30,5 @@ $(document).ready(function () {
   new SidebarHandler().init();
   new SecondarySidebarHandler().init();
   new SearchScrollPrevention().init();
+  new SearchToChatHandler().init();
 });
