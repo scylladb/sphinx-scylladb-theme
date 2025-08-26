@@ -47,8 +47,32 @@ post_content_data = [
         ["Content"],
         """
         </div>
-        <div class="hero__search-box search-box search-box--hero">
-            <ci-search></ci-search>
+        <div class="hero__search-wrapper">
+            <div class="hero__search-box search-box search-box--hero">
+                <ci-search></ci-search>
+            </div>
+        </div>
+        </div></div></div>
+        """,
+    ],
+    [
+        # Test search box with AI chatbot
+        [],
+        {"title": "Lorem Ipsum", "search_box": True, "ai_chatbot_id": "test-chatbot-id"},
+        ["Content"],
+        """
+        </div>
+        <div class="hero__search-wrapper">
+            <div class="hero__search-box search-box search-box--hero">
+                <ci-search></ci-search>
+            </div>
+                <div class="hero__ask-ai">
+                    <biel-button project="test-chatbot-id"
+                        header-title="ScyllaDB chatbot (beta)"
+                        button-position="default"
+                        modal-position="bottom-right"
+                        button-style="dark">Ask AI</biel-button>
+                </div>
         </div>
         </div></div></div>
         """,
