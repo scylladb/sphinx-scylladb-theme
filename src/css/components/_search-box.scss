@@ -113,6 +113,10 @@
   h3 {
     font-size: $font-md !important;
   }
+
+  &.er-no-results {
+    padding: 10px !important;
+  }
 }
 
 .dark .er_search_suggestions h3 {
