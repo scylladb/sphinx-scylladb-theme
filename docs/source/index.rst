@@ -12,10 +12,10 @@
 .. hero-box::
   :button_icon: icon-github
   :button_style: bold
-  :button_url: https://github.com/scylladb/sphinx-scylladb-theme
-  :button_text: Source code
   :title: Welcome to ScyllaDB Sphinx Theme documentation
   :image: /_static/img/mascots-2/docs.svg
+  :search_box:
+  :ai_chatbot_id: ddfdo8m94k
 
   The documentation toolchain for ScyllaDB projects.
 

@@ -185,6 +185,11 @@ $product-title-height: $spacer-md;
     --brand-self-hosted: #{$brand-self-hosted};
 
     --biel-primary-color: #{$link-color};
+    --biel-button-dark-bg-color: #{$link-color};
+    --biel-input-button-bg-color: #{$link-color};
+    --biel-button-border-radius: 4px;
+    --biel-button-padding: 12px 15px;
+    --biel-font-family: "Roboto", sans-serif;
   }
 
   .dark {
@@ -218,6 +223,8 @@ $product-title-height: $spacer-md;
     --brand-text: #{$gray-100};
 
     --biel-primary-color: #{$primary};
+    --biel-button-dark-bg-color: #{$primary};
+    --biel-input-button-bg-color: #{$primary};
   }
   
   @each $key, $styles in $brand-colors {

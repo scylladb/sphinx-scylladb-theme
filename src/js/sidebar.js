@@ -16,7 +16,6 @@ export class SidebarHandler {
   onLoadRestoreScrollPosition() {
     const sideNavContent = $('#side-nav .side-nav-content');
     const savedPosition = localStorage.getItem(this.localStorageKey);
-    console.log('savedPosition', savedPosition);
     if (savedPosition) {
       sideNavContent.scrollTop(savedPosition);
     }

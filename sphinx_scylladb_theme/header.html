@@ -11,10 +11,17 @@
     <div class="header-navigation">
         <ul class="dropdown menu scylla-dropdown scylla-dropdown--header" data-dropdown-menu>
             <li class="scylla-dropdown__item">
-                <a href="https://docs.scylladb.com/manual/" class="scylla-dropdown__title">Server</a>
-            </li>
-            <li class="scylla-dropdown__item">
-                <a href="https://docs.scylladb.com/scylla-cloud/" class="scylla-dropdown__title">Cloud</a>
+                <a href="#" class="scylla-dropdown__title">Deployments <i class="chevron icon-arrow-dropdown"></i></a>
+                <ul class="menu scylla-dropdown__content">
+                    <li>
+                        <a href="https://docs.scylladb.com/scylla-cloud/">
+                            <i class="icon-docs-cloud"></i>Cloud</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.scylladb.com/manual/">
+                            <i class="icon-server"></i>Server</a>
+                    </li>
+                </ul>
             </li>
             <li class="scylla-dropdown__item">
                 <a href="#" class="scylla-dropdown__title">Tools <i class="chevron icon-arrow-dropdown"></i></a>
@@ -84,6 +91,15 @@
         <div class="search-box">
             <ci-search></ci-search>
         </div>
+        {% if theme_hide_ai_chatbot|lower != 'true' %}
+            <biel-button class="header-ask-ai" project="{{theme_ai_chatbot_id}}" 
+                header-title="ScyllaDB chatbot (beta)"
+                button-position="default"
+                modal-position="bottom-right"
+                button-style="dark">
+                Ask AI
+            </biel-button>
+        {% endif %}
     </div>
     {% include 'side-nav-toggle.html' %}
 </header>
