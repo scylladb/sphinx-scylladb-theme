@@ -87,6 +87,11 @@ The ``hero-box`` directive supports the following options:
     -
     -
     - If present, adds vertical padding suitable for content pages. By default (without this flag), the hero box is optimized for landing pages.
+  * - ``ai_chatbot_id``
+    - string
+    -
+    - my-chatbot-id
+    - AI chatbot ID to use for the Ask AI button. Requires the ``search_box`` option to be present.
 
 Link resolution
 ---------------
@@ -218,6 +223,29 @@ Results in:
     :title: Lorem Ipsum
     :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     :search_box:
+    :content_page:
+
+With custom AI chatbot ID
+..........................
+
+Using:
+
+.. code-block:: rst
+
+    .. hero-box::
+        :title: Lorem Ipsum
+        :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        :search_box:
+        :ai_chatbot_id: my-custom-chatbot-id
+        :content_page:
+
+Results in:
+
+.. hero-box::
+    :title: Lorem Ipsum
+    :text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    :search_box:
+    :ai_chatbot_id: ddfdo8m94k
     :content_page:
 
 With bold button

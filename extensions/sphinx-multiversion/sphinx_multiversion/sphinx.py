@@ -181,6 +181,7 @@ def config_inited(app, config):
     config.version = data["version"]
     config.release = data["release"]
     config.rst_prolog = data["rst_prolog"]
+    config.myst_substitutions = data["myst_substitutions"]
     config.exclude_patterns = data["exclude_patterns"]
     config.today = old_config.today
     if not config.today:

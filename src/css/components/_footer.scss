@@ -104,6 +104,9 @@
   }
 }
 
+.footer-ask-ai {
+  display: block;
+}
 
 @media screen and (min-width: $large) {
   .footer {
@@ -143,5 +146,11 @@
     .footer-bottom__version {
       padding: 0 10px;
     }
+  }
+}
+
+@media screen and (min-width: $xlarge) {
+  .footer-ask-ai {
+    display: none;
   }
 }

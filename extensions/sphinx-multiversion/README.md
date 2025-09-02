@@ -58,6 +58,7 @@ See https://github.com/scylladb/sphinx-scylladb-theme/pull/891
 The following properties can be defined on a per-version basis.
 
 * `rst_prolog`
+* `myst_substitutions`: Introduced in 0.3.3
 * `exclude_patterns`: Introduced in 0.3.2
 
 ## License
