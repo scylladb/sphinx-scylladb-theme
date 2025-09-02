@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## 1.8.8 - 2 September 2025
+
+### Added
+
+- [#1485](https://github.com/scylladb/sphinx-scylladb-theme/pull/1485): Added Ask AI button in the header and hero box component for easier access to AI-powered documentation assistance.
+- [#1476](https://github.com/scylladb/sphinx-scylladb-theme/pull/1476): Introduced support for defining MyST substitutions per version in multiversion builds.
+
+### Updated
+
+- [#1463](https://github.com/scylladb/sphinx-scylladb-theme/pull/1463): Updated download link in the header navigation.
+
+### Fixed
+
+- [#1458](https://github.com/scylladb/sphinx-scylladb-theme/pull/1458): Fixed highlight color rendering issues in dark mode.
+
+
 ## 1.8.7 - 1 July 2025
 
 ### Added
