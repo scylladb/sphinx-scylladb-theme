@@ -22,7 +22,7 @@
     "eslint-formatter-table": "^7.32.1",
     "eslint-import-resolver-webpack": "^0.13.10",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-webpack-plugin": "^4.2.0",
+    "eslint-webpack-plugin": "^5.0.2",
     "foundation-sites": "^6.9.0",
     "jquery": "^3.7.1",
     "mini-css-extract-plugin": "^2.9.4",
