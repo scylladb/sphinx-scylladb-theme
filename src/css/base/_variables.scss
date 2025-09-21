@@ -225,6 +225,7 @@ $product-title-height: $spacer-md;
     --biel-primary-color: #{$primary};
     --biel-button-dark-bg-color: #{$primary};
     --biel-input-button-bg-color: #{$primary};
+    --biel-bot-content-z-index: 900;
   }
   
   @each $key, $styles in $brand-colors {
