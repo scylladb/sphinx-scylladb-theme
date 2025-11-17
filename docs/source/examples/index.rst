@@ -15,6 +15,7 @@ In general, there are main components to the markup of any document:
 
    admonitions
    alerts
+   api-documentation/index
    collapse
    code-blocks
    diagrams
@@ -47,6 +48,7 @@ In general, there are main components to the markup of any document:
 
   * :doc:`Admonitions <admonitions>`
   * :doc:`Alerts <alerts>`
+  * :doc:`API Documentation <api-documentation/index>`
   * :doc:`Collapse <collapse>`
   * :doc:`Code blocks <code-blocks>`
   * :doc:`Diagrams <diagrams>`

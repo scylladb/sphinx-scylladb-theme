@@ -80,6 +80,17 @@ If set, hides the secondary sidebar from the page.
 
    :hide-secondary-sidebar:
 
+TOC depth
+---------
+
+Sets the depth of the table of contents in the secondary sidebar ("On This Page").
+
+Valid values are 2, 3, or 4. Default is 2.
+
+.. code-block:: none
+
+   :toc-depth: 3
+
 Hide version warning
 --------------------
 

@@ -1,3 +1,5 @@
+:toc-depth: 4
+
 Headings
 ========
 
@@ -47,3 +49,38 @@ Use the following convention for headings:
           Heading 4
           ^^^^^^^^^
      - Has carats below the text. Use for a fourth level heading. If you need more levels, re-arrange the text.
+
+Example with multiple heading levels
+-------------------------------------
+
+This section demonstrates how nested headings appear in the "On This Page" sidebar.
+
+Installation
+............
+
+This is an H3 section with multiple nested subsections.
+
+Prerequisites
+^^^^^^^^^^^^^
+
+This is an H4 section describing prerequisites.
+
+System requirements
+^^^^^^^^^^^^^^^^^^^^^
+
+This is another H4 section describing system requirements.
+
+Configuration
+.............
+
+This is another H3 section.
+
+Basic configuration
+^^^^^^^^^^^^^^^^^^^
+
+This is an H4 section for basic configuration.
+
+Advanced settings
+^^^^^^^^^^^^^^^^^
+
+This is another H4 section for advanced settings.

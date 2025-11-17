@@ -55,7 +55,7 @@
     }
   }
 
-  &.note {
+  &.note, &.seealso {
     border: 1px solid var(--info);
 
     &:before {

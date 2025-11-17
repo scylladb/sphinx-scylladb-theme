@@ -59,6 +59,12 @@ def update_context(app, pagename, templatename, context, doctree):
     context["exclude_doctools"] = "exclude-doctools" in file_meta
     context["landing"] = "landing" in file_meta
 
+    # TOC depth configuration (min: 2, max: 4)
+    default_toc_depth = getattr(app.config, "html_theme_options", {}).get("secondary_sidebar_toc_depth", 2)
+    page_toc_depth = file_meta.get("toc-depth", default_toc_depth)
+    # Clamp between 2 and 4
+    context["toc_depth"] = max(2, min(4, int(page_toc_depth)))
+
     if (
         hasattr(app.config, "smv_rename_latest_version")
         and app.config.smv_rename_latest_version

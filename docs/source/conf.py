@@ -7,6 +7,7 @@ from datetime import date
 from sphinx_scylladb_theme.utils import multiversion_regex_builder
 
 sys.path.insert(0, os.path.abspath(".."))
+sys.path.insert(0, os.path.abspath("."))
 
 # -- Global variables
 
@@ -46,6 +47,7 @@ extensions = [
     "sphinx_scylladb_theme",
     "sphinx_multiversion",  # optional
     "myst_parser",  # optional
+    "breathe",  # optional
 ]
 
 # The suffix(es) of source filenames.
@@ -70,6 +72,21 @@ pygments_style = "sphinx"
 rst_prolog = """
 .. |rst| replace:: restructuredText
 """
+
+# -- Options for autodoc extension ----------------------------------
+
+# Configure autodoc to show better signatures
+autodoc_typehints = 'description'
+autodoc_member_order = 'bysource'
+add_module_names = False  # Don't prepend module names to class/function names
+
+# -- Options for breathe extension ----------------------------------
+
+breathe_projects = {
+    "SampleModule": os.path.join(os.path.dirname(__file__), "examples/doxygen_output/xml")
+}
+breathe_default_project = "SampleModule"
+breathe_default_members = ('members', 'undoc-members')
 
 # -- Options for myst parser ----------------------------------------
 myst_enable_extensions = ["colon_fence"]
