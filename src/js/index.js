@@ -14,6 +14,7 @@ import { PromoBannerHandler } from "./promo-banner";
 import { SearchScrollPrevention } from "./search-scroll-prevention";
 import { SearchToChatHandler } from "./search-to-chat";
 import { SecondarySidebarHandler } from "./secondary-sidebar";
+import { SecondarySidebarTOC } from "./secondary-sidebar-toc";
 import { SidebarHandler } from "./sidebar";
 import { TablesHandler } from "./tables";
 import {DarkTheme} from "./dark-theme";
@@ -29,6 +30,7 @@ $(document).ready(function () {
   new CollapseHandler().init();
   new SidebarHandler().init();
   new SecondarySidebarHandler().init();
+  new SecondarySidebarTOC().init();
   new SearchScrollPrevention().init();
   new SearchToChatHandler().init();
 });

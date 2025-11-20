@@ -1,0 +1,284 @@
+.py.class,
+.py.function,
+.py.method,
+.py.data,
+.py.attribute,
+.py.exception,
+.cpp.class,
+.cpp.function,
+.cpp.member,
+.c.function,
+.c.struct {
+  margin-top: $spacer-md;
+  margin-bottom: $spacer-md;
+  border-radius: 8px;
+  scroll-margin-top: 80px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  > dt {
+    position: relative;
+  }
+}
+
+// Signature styling (Python and C++)
+.sig.sig-object.py,
+.sig.sig-object.cpp,
+.sig.sig-object.c {
+  background-color: transparent;
+  border: none;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-x: auto;
+  display: block;
+  position: relative;
+
+  .w {
+    &:empty,
+    &:not(:has(:not(:empty))) {
+      display: none;
+    }
+  }
+
+  .headerlink {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-left: 8px;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-weight: 400;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &:hover .headerlink,
+  &:focus-within .headerlink {
+    visibility: visible;
+  }
+
+  .sig-prename.descclassname {
+    color: var(--text-emphasis);
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 2px;
+  }
+
+  .sig-name.descname {
+    color: var(--text-emphasis);
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .sig-paren {
+    color: var(--text-emphasis);
+    font-weight: 600;
+  }
+
+  .sig-param {
+    color: var(--text-muted);
+    font-weight: 500;
+
+    .n {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .o {
+      color: var(--text-muted);
+    }
+
+    .default_value {
+      color: var(--text-muted);
+    }
+
+    .pre {
+      color: var(--text-muted);
+    }
+  }
+
+  em.property {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-right: 4px;
+    font-size: 12px;
+  }
+
+  .k, .kt {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-right: 4px;
+    font-size: 12px;
+  }
+
+  .sig-param .n {
+    color: var(--primary);
+  }
+
+  .sig-name .n {
+    color: var(--text-emphasis);
+  }
+}
+
+.field-list {
+  margin: 20px 0 24px 0;
+
+  &.simple {
+    display: block;
+  }
+
+  dt {
+    font-weight: 700;
+    color: var(--text-emphasis);
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: 16px;
+    padding-left: 0;
+
+    p {
+      margin-bottom: 8px;
+      line-height: 1.6;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      margin-top: 8px;
+      margin-bottom: 0;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 6px;
+      }
+    }
+
+    strong {
+      color: var(--text-emphasis);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    em {
+      font-family: "Roboto Mono", monospace;
+      background-color: var(--well-bg);
+      border: none;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: $font-sm;
+      font-weight: 400;
+      color: var(--code-color);
+    }
+  }
+}
+
+.field-odd,
+.field-even {
+  margin-bottom: 16px;
+}
+
+.rubric {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-emphasis);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.py.class > dd,
+.py.function > dd,
+.py.exception > dd,
+.cpp.class > dd,
+.cpp.function > dd,
+.c.function > dd,
+.c.struct > dd {
+  margin-left: 0;
+  padding-left: 20px;
+
+  > p:first-child {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+}
+
+.py.method > dd,
+.py.data > dd,
+.py.attribute > dd,
+.cpp.var > dd,
+.cpp.member > dd,
+.cpp.struct > dd {
+  margin-left: 0;
+  padding-left: 20px;
+
+  > p:first-child {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+}
+
+.py.class .py.method,
+.py.class .py.attribute,
+.py.exception .py.attribute,
+.cpp.class .cpp.member,
+.cpp.class .cpp.function,
+.c.struct .c.member {
+  margin-left: 0;
+  margin-top: 40px;
+  padding-left: 0;
+
+  .sig.sig-object.py,
+  .sig.sig-object.cpp,
+  .sig.sig-object.c {
+    background: transparent;
+  }
+
+  > dd {
+    padding-left: 20px;
+  }
+}
+
+.py.module > dd > p:first-child {
+  font-size: 15px;
+  color: var(--text-color);
+  padding: 0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.py dd .highlight {
+  margin: $spacer-xs 0;
+}
+
+.genindex-jumpbox,
+.modindex-jumpbox {
+  margin-bottom: $spacer-sm;
+}

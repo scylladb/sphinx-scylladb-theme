@@ -1,0 +1,28 @@
+# Doxyfile for generating XML documentation
+
+# Project settings
+PROJECT_NAME           = "Sample Module"
+OUTPUT_DIRECTORY       = doxygen_output
+CREATE_SUBDIRS         = NO
+
+# Input settings
+INPUT                  = _sample_module.h
+FILE_PATTERNS          = *.h *.hpp *.cpp
+RECURSIVE              = NO
+
+# Output settings
+GENERATE_HTML          = NO
+GENERATE_LATEX         = NO
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = YES
+
+# Extraction settings
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Other settings
+QUIET                  = YES
+WARNINGS               = NO
+
