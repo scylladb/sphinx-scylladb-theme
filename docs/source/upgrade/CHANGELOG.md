@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - [#1516](https://github.com/scylladb/sphinx-scylladb-theme/pull/1516): Added support for API reference documentation, including support for Python autodoc, Doxygen/Breathe, and REST API documentation.
-- Added documentation example for embedding videos in documentation pages.
+- [#1507](https://github.com/scylladb/sphinx-scylladb-theme/pull/1507):Added documentation example for embedding videos in documentation pages.
 
 ### Updated
 
