@@ -4,7 +4,6 @@ Sphinx directive for HTML Topic Box Components.
 
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
-import os
 
 from .utils import generate_template, is_url, resolve_link
 
@@ -17,7 +16,7 @@ class TopicBox(Directive):
         "link_target": directives.path,
         "anchor": directives.path,
         "icon": directives.path,
-        "icon_color": directives.path, # unused, left for compatibility
+        "icon_color": directives.path,  # unused, left for compatibility
         "image": directives.path,
         "class": directives.unchanged,
     }
@@ -29,7 +28,7 @@ class TopicBox(Directive):
         link = self.options.get("link")
         link_target = self.options.get("link_target", "auto")
         target_attr = ""
-        
+
         if link:
             env = self.state.document.settings.env
             link = resolve_link(link, env)

@@ -311,7 +311,7 @@ Configuration options for enabling zendesk.
     - Description
   * - ``zendesk_tag``
     - string
-    - 
+    -
     - Zendesk verification tag. Example: ``gq6ltsh3nfex3cnwfy4aj9``.
 
 .. code:: python
@@ -334,6 +334,5 @@ Multiversion options
     - Description
   * - ``redirect``
     - string
-    - 
+    -
     - Overrides the default redirection of the main domain when using multiversion. By default, it redirects to ``<DOMAIN>/stable/``. Overriding setting this can be useful if the main domain page publishes multiple documentation sets. Example: ``/manual/stable/``.
-

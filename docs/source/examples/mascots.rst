@@ -211,4 +211,3 @@ Available mascot images:
 -  ``/_static/img/mascots-2/stretched-up.svg``
 -  ``/_static/img/mascots-2/toolbox.svg``
 -  ``/_static/img/mascots-2/university.svg``
-

@@ -26,7 +26,7 @@ public:
      * @param port The database port number (default: 9042)
      * @param username Optional username for authentication
      */
-    DatabaseConnection(const std::string& host, int port = 9042, 
+    DatabaseConnection(const std::string& host, int port = 9042,
                       const std::string& username = "");
 
     /**
@@ -79,4 +79,3 @@ std::string format_query(const std::string& query, int indent = 4);
 bool validate_connection_params(const std::string& host, int port);
 
 #endif // SAMPLE_MODULE_H
-

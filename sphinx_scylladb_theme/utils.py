@@ -1,5 +1,5 @@
 import requests
-import json
+
 
 def multiversion_regex_builder(versions):
     """Generates a regex string from a list of versions.

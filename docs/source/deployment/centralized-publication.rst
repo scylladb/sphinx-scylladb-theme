@@ -2,8 +2,8 @@
 Centralized publication
 =======================
 
-Certain core ScyllaDB projects are configured or published from the repository `scylladb/scylladb-docs-homepage <https://github.com/scylladb/scylladb-docs-homepage>`_ 
-instead of the project repository itself. 
+Certain core ScyllaDB projects are configured or published from the repository `scylladb/scylladb-docs-homepage <https://github.com/scylladb/scylladb-docs-homepage>`_
+instead of the project repository itself.
 
 This allows us to:
 
@@ -44,8 +44,8 @@ To add a new release to the centralized publication, submit a pull request to th
         {
             "tags": [],
             "branches": [
-                "master", 
-                "branch-2025.1", 
+                "master",
+                "branch-2025.1",
                 "branch-2025.2"
             ],
             "latest": "branch-2025.1",
@@ -63,8 +63,8 @@ To add a new release to the centralized publication, submit a pull request to th
         {
             "tags": [],
             "branches": [
-                "master", 
-                "branch-2025.1", 
+                "master",
+                "branch-2025.1",
                 "branch-2025.2"
             ],
             "latest": "branch-2025.2",
@@ -98,4 +98,3 @@ You can trigger a manual publication by following these steps:
 6. Click the green **Run workflow** button.
 
 For more details, see `Manually running a workflow <https://docs.github.com/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow>`_.
-

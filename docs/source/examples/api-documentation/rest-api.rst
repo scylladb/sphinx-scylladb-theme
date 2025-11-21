@@ -99,7 +99,7 @@ Create ``_ext/scylladb_openapi.py``:
        cmd = f"snippet-enricher-cli --targets='shell_curl' --input={output_file}"
 
        process = subprocess.Popen(cmd, shell=True,
-                           stdout=subprocess.PIPE, 
+                           stdout=subprocess.PIPE,
                            stderr=subprocess.PIPE)
 
        out, err = process.communicate()
@@ -251,4 +251,3 @@ Create ``_static/custom.css`` to style Redocly:
        color: inherit;
        background: transparent;
    }
-

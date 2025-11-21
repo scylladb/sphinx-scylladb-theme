@@ -1,7 +1,12 @@
+from unittest.mock import MagicMock, patch
+
 import requests
-from sphinx_scylladb_theme.utils import multiversion_regex_builder, fetch_multiversion_configuration
+
 from sphinx_scylladb_theme.extensions.utils import resolve_link
-from unittest.mock import patch, MagicMock
+from sphinx_scylladb_theme.utils import (
+    fetch_multiversion_configuration,
+    multiversion_regex_builder,
+)
 
 
 def test_multiversion_regex_builder_empty():
@@ -22,6 +27,7 @@ def test_multiversion_regex_builder_one_version():
 def test_multiversion_regex_builder_many_version():
     versions = ["1.0", "2.0"]
     assert multiversion_regex_builder(versions) == r"\b(^1.0$|^2.0$)\b"
+
 
 def test_fetch_multiversion_configuration_success():
     url = "https://example.com/success"
@@ -83,7 +89,7 @@ def test_resolve_link_empty():
     env = MagicMock()
     result = resolve_link("", env)
     assert result == ""
-    
+
     result = resolve_link(None, env)
     assert result is None
 
@@ -94,10 +100,12 @@ def test_resolve_link_absolute_path():
     env.docname = "examples/topic-box"
     env.found_docs = {"getting-started/installation"}
     env.app.builder.get_relative_uri.return_value = "getting-started/installation.html"
-    
+
     result = resolve_link("/getting-started/installation", env)
     assert result == "getting-started/installation.html"
-    env.app.builder.get_relative_uri.assert_called_with("examples/topic-box", "getting-started/installation")
+    env.app.builder.get_relative_uri.assert_called_with(
+        "examples/topic-box", "getting-started/installation"
+    )
 
 
 def test_resolve_link_relative_path():
@@ -106,10 +114,12 @@ def test_resolve_link_relative_path():
     env.docname = "examples/topic-box"
     env.found_docs = {"examples/code-blocks"}
     env.app.builder.get_relative_uri.return_value = "code-blocks.html"
-    
+
     result = resolve_link("code-blocks", env)
     assert result == "code-blocks.html"
-    env.app.builder.get_relative_uri.assert_called_with("examples/topic-box", "examples/code-blocks")
+    env.app.builder.get_relative_uri.assert_called_with(
+        "examples/topic-box", "examples/code-blocks"
+    )
 
 
 def test_resolve_link_parent_directory():
@@ -118,10 +128,12 @@ def test_resolve_link_parent_directory():
     env.docname = "examples/topic-box"
     env.found_docs = {"getting-started/installation"}
     env.app.builder.get_relative_uri.return_value = "getting-started/installation.html"
-    
+
     result = resolve_link("../getting-started/installation", env)
     assert result == "getting-started/installation.html"
-    env.app.builder.get_relative_uri.assert_called_with("examples/topic-box", "getting-started/installation")
+    env.app.builder.get_relative_uri.assert_called_with(
+        "examples/topic-box", "getting-started/installation"
+    )
 
 
 def test_resolve_link_index_fallback():
@@ -130,10 +142,12 @@ def test_resolve_link_index_fallback():
     env.docname = "examples/topic-box"
     env.found_docs = {"getting-started/index"}
     env.app.builder.get_relative_uri.return_value = "getting-started/index.html"
-    
+
     result = resolve_link("/getting-started", env)
     assert result == "getting-started/index.html"
-    env.app.builder.get_relative_uri.assert_called_with("examples/topic-box", "getting-started/index")
+    env.app.builder.get_relative_uri.assert_called_with(
+        "examples/topic-box", "getting-started/index"
+    )
 
 
 def test_resolve_link_html_fallback():
@@ -141,7 +155,7 @@ def test_resolve_link_html_fallback():
     env = MagicMock()
     env.docname = "examples/topic-box"
     env.found_docs = set()  # Empty set, no documents found
-    
+
     result = resolve_link("/nonexistent", env)
     assert result == "nonexistent.html"
 
@@ -151,6 +165,6 @@ def test_resolve_link_anchor():
     env = MagicMock()
     result = resolve_link("#section-name", env)
     assert result == "#section-name"
-    
+
     result = resolve_link("#", env)
     assert result == "#"

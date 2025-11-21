@@ -1,4 +1,4 @@
-Diagrams 
+Diagrams
 ========
 
 The documentation toolchain supports rendering diagrams and charts using `Mermaid <https://mermaid.js.org/intro/>`_, a library designed for creating sequence diagrams, flowcharts, and other visualizations.

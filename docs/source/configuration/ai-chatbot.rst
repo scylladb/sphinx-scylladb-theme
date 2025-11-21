@@ -7,7 +7,7 @@ ScyllaDB Docs integrates with `Biel.ai <https://biel.ai/>`_ to offer a conversat
 The chatbot can answer documentation-related questions and provide relevant links to help users find the information they need quickly.
 
 .. note::
-    This feature is in beta and disabled by default. It will be gradually enabled for all documentation sites in a future release.  
+    This feature is in beta and disabled by default. It will be gradually enabled for all documentation sites in a future release.
     If you want to enable it now, please contact us in Slack (``#scylla-docs`` channel).
 
 Installation
@@ -24,7 +24,7 @@ To enable the AI chatbot, update your ``conf.py`` file by setting ``hide_ai_chat
 Usage
 -----
 
-Once enabled, the Ask AI button will appear in the documentation interface. 
+Once enabled, the Ask AI button will appear in the documentation interface.
 Users can click the button to start a conversation, ask questions, and receive responses with relevant documentation links.
 
 .. figure:: images/ai-chatbot.png
@@ -61,4 +61,3 @@ If the chatbot does not appear:
 * Check for errors in the browser console that may indicate issues with the integration.
 
 For more details, refer to the `Biel.ai documentation <https://docs.biel.ai/>`_.
-
