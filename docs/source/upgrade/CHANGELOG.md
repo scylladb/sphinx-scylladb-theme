@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## 1.8.9 - 21 November 2025
+
+### Added
+
+- [#1516](https://github.com/scylladb/sphinx-scylladb-theme/pull/1516): Added styling for API reference documentation, including Python autodoc, Doxygen/Breathe, and REST API documentation.
+- [#1516](https://github.com/scylladb/sphinx-scylladb-theme/pull/1516): Added support for three navigation levels in the right sidebar with options to control depth per page and project.
+- [#1507](https://github.com/scylladb/sphinx-scylladb-theme/pull/1507): Added documentation example for embedding videos in documentation pages.
+
+### Updated
+
+- [#1513](https://github.com/scylladb/sphinx-scylladb-theme/issues/1513): Updated driver links in the header navigation.
+
+### Fixed
+
+- [#1498](https://github.com/scylladb/sphinx-scylladb-theme/pull/1498): Fixed announcement banner display issues on mobile devices.
+
 ## 1.8.8 - 2 September 2025
 
 ### Added

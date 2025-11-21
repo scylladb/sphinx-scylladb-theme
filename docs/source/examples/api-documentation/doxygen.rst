@@ -152,7 +152,7 @@ Configure in ``conf.py``:
 .. code-block:: python
 
    extensions = ['breathe', 'exhale']
-   
+
    exhale_args = {
        'containmentFolder': './api',
        'rootFileName': 'library_root.rst',
@@ -161,4 +161,3 @@ Configure in ``conf.py``:
    }
 
 Exhale will automatically create a page for each class, function, and file in your project.
-

@@ -108,4 +108,4 @@ def test(arguments, options, content, expected):
     assert (
         bs(result[0].astext(), "html.parser").prettify()
         == bs(expected, "html.parser").prettify()
-    ) 
+    )

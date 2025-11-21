@@ -13,7 +13,7 @@ class HeroBox(Directive):
     option_spec = {
         "title": directives.unchanged_required,
         "class": directives.path,
-        "text": directives.unchanged_required, # unused, left for compatibility
+        "text": directives.unchanged_required,  # unused, left for compatibility
         "cta": directives.unchanged_required,
         "image": directives.path,
         "button_style": directives.path,
@@ -30,8 +30,12 @@ class HeroBox(Directive):
     def run(self):
         class_name = "hero"
         container_class_name = self.options.get("class", "")
-        
-        content_page_style = ' style="margin-top: 2em; margin-bottom: 2em;"' if "content_page" in self.options else ""
+
+        content_page_style = (
+            ' style="margin-top: 2em; margin-bottom: 2em;"'
+            if "content_page" in self.options
+            else ""
+        )
 
         image = self.options.get("image")
         image = (
@@ -89,9 +93,9 @@ class HeroBox(Directive):
         )
 
         has_search_box = "search_box" in self.options
-        
+
         ai_chatbot_id = self.options.get("ai_chatbot_id")
-        
+
         ask_ai_section = ""
         if ai_chatbot_id:
             ask_ai_section = """

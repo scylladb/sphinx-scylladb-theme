@@ -31,10 +31,10 @@
         </noscript>
 
         {% if theme_hide_ai_chatbot|lower != 'true' %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/biel-search@latest/dist/biel-search/biel-search.css">
-        <script type="module" src="https://cdn.jsdelivr.net/npm/biel-search@latest/dist/biel-search/biel-search.esm.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/biel-search@latest/dist/biel-search/biel-search.css">
+            <script type="module" src="https://cdn.jsdelivr.net/npm/biel-search@latest/dist/biel-search/biel-search.esm.js"></script>
         {% endif %}
-        
+
         {% for css in css_files %}
             {% if css|attr("filename") %}
                 {{ css_tag(css) }}
@@ -103,30 +103,30 @@
                     </div>
                 {% endif %}
                 {% if not hide_secondary_sidebar %}
-                <div class="sidebar-right-layout">
-                    <div class="body-container">
+                    <div class="sidebar-right-layout">
+                        <div class="body-container">
                 {% endif %}
 
-                    <div class="content-body">
-                        {% if not hide_version_warning %}
-                            {% include 'version-warning.html'%}
-                        {% endif %}
-                        
-                        {{ body }}
-                    </div>
-                    {% if not hide_post_content %}
-                        <div class="post-content">
-                            {% include 'feedback.html'%}
-                            {% include 'content-navigation.html'%}
-                            {% include 'notice.html'%}
-                        </div>
+                <div class="content-body">
+                    {% if not hide_version_warning %}
+                        {% include 'version-warning.html'%}
                     {% endif %}
-                
+
+                    {{ body }}
+                </div>
+                {% if not hide_post_content %}
+                    <div class="post-content">
+                        {% include 'feedback.html'%}
+                        {% include 'content-navigation.html'%}
+                        {% include 'notice.html'%}
+                    </div>
+                {% endif %}
+
                 {% if not hide_secondary_sidebar %}
                     </div>
-                        <div class="sidebar-right large-order-3">
-                            {% include 'secondary-side-nav.html' %}
-                        </div>
+                    <div class="sidebar-right large-order-3">
+                        {% include 'secondary-side-nav.html' %}
+                    </div>
                     </div>
                 {% endif %}
             </div>
@@ -137,7 +137,7 @@
                     {% endfor %}
                 {% endif %}
             </div>
-            
+
         </section>
 
         {% include 'footer.html' %}

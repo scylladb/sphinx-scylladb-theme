@@ -3,15 +3,15 @@ from os import getenv, path
 import sphinx_collapse
 import sphinx_copybutton
 import sphinx_substitution_extensions
-from sphinxcontrib import mermaid
 from notfound import extension as not_found
 from sphinx_tabs import tabs
+from sphinxcontrib import mermaid
 
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     alerts,
-    hero_box,
     grid,
+    hero_box,
     include_tooltip,
     labels,
     multiversion,
@@ -60,7 +60,9 @@ def update_context(app, pagename, templatename, context, doctree):
     context["landing"] = "landing" in file_meta
 
     # TOC depth configuration (min: 2, max: 4)
-    default_toc_depth = getattr(app.config, "html_theme_options", {}).get("secondary_sidebar_toc_depth", 2)
+    default_toc_depth = getattr(app.config, "html_theme_options", {}).get(
+        "secondary_sidebar_toc_depth", 2
+    )
     page_toc_depth = file_meta.get("toc-depth", default_toc_depth)
     # Clamp between 2 and 4
     context["toc_depth"] = max(2, min(4, int(page_toc_depth)))

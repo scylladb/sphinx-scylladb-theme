@@ -1,4 +1,5 @@
 from unittest.mock import Mock
+
 import pytest
 from bs4 import BeautifulSoup as bs
 
@@ -7,7 +8,12 @@ from sphinx_scylladb_theme.extensions.alerts import Alert
 test_data = [
     [
         [],
-        {"link": "https://scylladb.com", "link_text": "Learn more", "icon": "logs", "target": "_blank"},
+        {
+            "link": "https://scylladb.com",
+            "link_text": "Learn more",
+            "icon": "logs",
+            "target": "_blank",
+        },
         ["We’re updating our license & versioning policy."],
         """
         <div class="alert">
@@ -18,7 +24,11 @@ test_data = [
     ],
     [
         [],
-        {"link": "https://scylladb.com", "link_text": "Learn more about the change", "icon": "logs"},
+        {
+            "link": "https://scylladb.com",
+            "link_text": "Learn more about the change",
+            "icon": "logs",
+        },
         ["We’re updating our license & versioning policy."],
         """
         <div class="alert">

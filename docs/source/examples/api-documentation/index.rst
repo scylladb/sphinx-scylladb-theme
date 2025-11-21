@@ -20,4 +20,3 @@ This approach keeps your API reference in sync with your codebase.
   * :doc:`Python <python>`
   * :doc:`Doxygen <doxygen>`
   * :doc:`REST API (Redocly) <rest-api>`
-

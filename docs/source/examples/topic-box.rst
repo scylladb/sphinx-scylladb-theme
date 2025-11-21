@@ -1,7 +1,7 @@
 Topic box
 =========
 
-A custom directive that creates graphical boxes (cards) for navigation and content organization. 
+A custom directive that creates graphical boxes (cards) for navigation and content organization.
 
 Syntax
 ------
@@ -269,4 +269,3 @@ Results in:
     :class: topic-box--product
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-

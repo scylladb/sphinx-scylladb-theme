@@ -58,7 +58,11 @@ post_content_data = [
     [
         # Test search box with AI chatbot
         [],
-        {"title": "Lorem Ipsum", "search_box": True, "ai_chatbot_id": "test-chatbot-id"},
+        {
+            "title": "Lorem Ipsum",
+            "search_box": True,
+            "ai_chatbot_id": "test-chatbot-id",
+        },
         ["Content"],
         """
         </div>
@@ -135,7 +139,7 @@ post_content_data = [
         </div>
         <a href="#">
             <button class="hero__button button">
-                Discover <span class='hero__cta'>More info</span><i class="icon icon--right fa" aria-hidden="true"></i> 
+                Discover <span class='hero__cta'>More info</span><i class="icon icon--right fa" aria-hidden="true"></i>
             </button>
         </a>
         </div></div></div>

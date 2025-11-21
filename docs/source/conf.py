@@ -76,17 +76,19 @@ rst_prolog = """
 # -- Options for autodoc extension ----------------------------------
 
 # Configure autodoc to show better signatures
-autodoc_typehints = 'description'
-autodoc_member_order = 'bysource'
+autodoc_typehints = "description"
+autodoc_member_order = "bysource"
 add_module_names = False  # Don't prepend module names to class/function names
 
 # -- Options for breathe extension ----------------------------------
 
 breathe_projects = {
-    "SampleModule": os.path.join(os.path.dirname(__file__), "examples/doxygen_output/xml")
+    "SampleModule": os.path.join(
+        os.path.dirname(__file__), "examples/doxygen_output/xml"
+    )
 }
 breathe_default_project = "SampleModule"
-breathe_default_members = ('members', 'undoc-members')
+breathe_default_members = ("members", "undoc-members")
 
 # -- Options for myst parser ----------------------------------------
 myst_enable_extensions = ["colon_fence"]

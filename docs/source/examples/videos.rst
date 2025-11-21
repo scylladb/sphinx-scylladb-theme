@@ -12,9 +12,9 @@ To embed a video using an iframe, use the ``raw`` directive with HTML content.
 
    .. raw:: html
 
-      <iframe width="560" height="315" style="max-width: 100%; margin-bottom: 1rem;" src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU" 
+      <iframe width="560" height="315" style="max-width: 100%; margin-bottom: 1rem;" src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU"
               title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
       </iframe>
 
@@ -22,9 +22,9 @@ Renders as:
 
 .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU" 
-           title="YouTube video player" frameborder="0" 
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU"
+           title="YouTube video player" frameborder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
    </iframe>
 
@@ -38,11 +38,11 @@ To make the iframe responsive and take the full width of the container while mai
    .. raw:: html
 
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 1rem;">
-         <iframe src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU" 
-                 title="YouTube video player" 
-                 frameborder="0" 
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                 referrerpolicy="strict-origin-when-cross-origin" 
+         <iframe src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU"
+                 title="YouTube video player"
+                 frameborder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                 referrerpolicy="strict-origin-when-cross-origin"
                  allowfullscreen
                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
          </iframe>
@@ -53,11 +53,11 @@ Renders as:
 .. raw:: html
 
    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 1rem;">
-      <iframe src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
+      <iframe src="https://www.youtube.com/embed/-nPO9KeNydM?si=nE0Tpy7wM8D6fFYU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
       </iframe>
@@ -70,4 +70,3 @@ Tips
 
 * **Aspect ratio**: Adjust ``padding-bottom`` to change the aspect ratio. For 16:9 use 56.25%, for 4:3 use 75%.
 * **Start time**: Add ``?start=60`` to start the video at a specific time (60 seconds in this example).
-

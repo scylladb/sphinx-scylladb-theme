@@ -1,7 +1,7 @@
 Grid
 ====
 
-A custom directive that creates responsive grid layouts using Foundation's grid system. 
+A custom directive that creates responsive grid layouts using Foundation's grid system.
 Perfect for organizing topic boxes in rows and columns.
 
 .. note::
@@ -62,7 +62,7 @@ Supported Content
 The grid directive works exclusively with **topic-box** directives. Each topic-box within a grid should include Foundation grid classes in its ``:class:`` option to control layout:
 
 - ``large-3`` - 4 columns per row on desktop
-- ``large-4`` - 3 columns per row on desktop  
+- ``large-4`` - 3 columns per row on desktop
 - ``large-6`` - 2 columns per row on desktop
 - ``large-12`` - 1 column per row (full width)
 - ``small-6`` - 2 columns per row on mobile
@@ -264,4 +264,3 @@ Results in:
         :class: topic-box--product,large-4,small-6
 
         Documentation for ScyllaDB.
-

@@ -7,7 +7,7 @@
                 <a class="footer-links__link" href="https://docs.scylladb.com/stable/get-started/develop-with-scylladb/tutorials-example-projects.html" target="_blank">Tutorials</a>
                 <a class="footer-links__link" href="https://university.scylladb.com/" target="_blank">University</a>
                 <a class="footer-links__link" href="https://www.scylladb.com/company/contact-us/"
-                    target="_blank">Contact Us</a>
+                   target="_blank">Contact Us</a>
                 <a class="footer-links__link" href="https://www.scylladb.com/company/" target="_blank">About Us</a>
             </div>
             <div class="footer-actions">
@@ -25,21 +25,21 @@
         </div>
 
         {% if show_copyright %}
-        <div class="footer-copyright">
-            {% if hasdoc('copyright') %}
-                {% trans path=pathto('copyright'),copyright=copyright|e %}  
-                    &#169; <a href="{{ path }}">Copyright</a> {{copyright }}
-                {% endtrans %}
-            {% else %}
-                {% trans copyright=copyright|e%}
-                    &#169; {{ copyright }}
-                {% endtrans %}
-                | <a class="footer-copyright__link" href="https://www.scylladb.com/tos/" target="_blank">Terms of Service</a>
-                | <a class="footer-copyright__link" href="https://www.scylladb.com/privacy/" target="_blank">Privacy Policy</a>
-                | ScyllaDB, and ScyllaDB Cloud, are registered trademarks of ScyllaDB, Inc.
-            {% endif %}
-        </div>
-    {% endif %}
+            <div class="footer-copyright">
+                {% if hasdoc('copyright') %}
+                    {% trans path=pathto('copyright'),copyright=copyright|e %}
+                        &#169; <a href="{{ path }}">Copyright</a> {{copyright }}
+                    {% endtrans %}
+                {% else %}
+                    {% trans copyright=copyright|e%}
+                        &#169; {{ copyright }}
+                    {% endtrans %}
+                    | <a class="footer-copyright__link" href="https://www.scylladb.com/tos/" target="_blank">Terms of Service</a>
+                    | <a class="footer-copyright__link" href="https://www.scylladb.com/privacy/" target="_blank">Privacy Policy</a>
+                    | ScyllaDB, and ScyllaDB Cloud, are registered trademarks of ScyllaDB, Inc.
+                {% endif %}
+            </div>
+        {% endif %}
 
 
         <div class="footer-bottom">
@@ -58,11 +58,11 @@
         </div>
     </div>
     {% if theme_hide_ai_chatbot|lower != 'true' %}
-        <biel-button class="footer-ask-ai" project="{{theme_ai_chatbot_id}}" 
-            header-title="ScyllaDB chatbot (beta)"
-            button-position="bottom-right"
-            modal-position="bottom-right"
-            button-style="dark">
+        <biel-button class="footer-ask-ai" project="{{theme_ai_chatbot_id}}"
+                     header-title="ScyllaDB chatbot (beta)"
+                     button-position="bottom-right"
+                     modal-position="bottom-right"
+                     button-style="dark">
             Ask AI
         </biel-button>
     {% endif %}
