@@ -21,7 +21,7 @@ setup(
     author="Jan Holthuis",
     author_email="holthuis.jan@googlemail.com",
     url="https://holzhaus.github.io/sphinx-multiversion/",
-    version="0.3.3",
+    version="0.3.4",
     install_requires=["sphinx >= 2.1"],
     license="BSD",
     packages=["sphinx_multiversion"],
