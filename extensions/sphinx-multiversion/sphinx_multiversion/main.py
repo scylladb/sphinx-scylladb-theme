@@ -32,6 +32,86 @@ def working_dir(path):
         os.chdir(prev_cwd)
 
 
+def extract_custom_config_vars(confpath, var_names):
+    """
+    Extract custom config variables from conf.py for each branch/tag.
+
+    Needed because some variables (like myst_substitutions) aren't registered
+    with Sphinx's config system and won't be available via Config.read().
+
+    This ensures each version gets its own values by executing that version's conf.py.
+
+    Args:
+        confpath: Path to directory containing conf.py
+        var_names: List of variable names to extract (e.g., ["myst_substitutions"])
+
+    Returns:
+        dict: {var_name: value} for requested variables (None if not found)
+    """
+    conf_file = os.path.join(confpath, "conf.py")
+    if not os.path.exists(conf_file):
+        return {var_name: None for var_name in var_names}
+
+    logger = logging.getLogger(__name__)
+
+    try:
+        with open(conf_file, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Execute conf.py in a minimal namespace
+        namespace = {
+            "__file__": conf_file,
+            "__name__": "__main__",
+            "__builtins__": __builtins__,
+        }
+
+        # Change to confpath directory so relative imports work
+        old_cwd = os.getcwd()
+        old_path = sys.path.copy()
+        try:
+            os.chdir(confpath)
+            sys.path.insert(0, confpath)
+
+            # Try to execute the whole file
+            try:
+                exec(content, namespace)
+            except (ImportError, ModuleNotFoundError) as import_err:
+                # If imports fail, try partial execution by skipping import lines
+                logger.debug(
+                    "Import failed in %s: %s, trying partial execution",
+                    conf_file,
+                    import_err,
+                )
+
+                lines = content.split("\n")
+                partial_namespace = namespace.copy()
+                for i, line in enumerate(lines):
+                    try:
+                        # Skip import lines that might fail
+                        if line.strip().startswith(("import ", "from ")):
+                            continue
+                        exec("\n".join(lines[: i + 1]), partial_namespace)
+                        # Stop early if we've found all requested variables
+                        if all(var in partial_namespace for var in var_names):
+                            namespace = partial_namespace
+                            break
+                    except Exception as _e:
+                        continue
+
+            # Extract requested variables
+            return {var_name: namespace.get(var_name) for var_name in var_names}
+
+        finally:
+            os.chdir(old_cwd)
+            sys.path = old_path
+
+    except Exception as err:
+        logger.warning(
+            "Failed to extract custom config variables from %s: %s", conf_file, err
+        )
+        return {var_name: None for var_name in var_names}
+
+
 def load_sphinx_config_worker(q, confpath, confoverrides, add_defaults):
     try:
         with working_dir(confpath):
@@ -309,7 +389,8 @@ def main(argv=None):
             current_sourcedir = os.path.join(repopath, sourcedir)
             project = sphinx_project.Project(current_sourcedir, source_suffixes)
 
-            myst_substitutions = getattr(current_config, "myst_substitutions", {})
+            custom_vars = extract_custom_config_vars(confpath, ["myst_substitutions"])
+            myst_substitutions = custom_vars.get("myst_substitutions") or {}
 
             metadata[gitref.name] = {
                 "name": gitref.name,
