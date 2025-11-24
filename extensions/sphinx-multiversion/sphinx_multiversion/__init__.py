@@ -2,7 +2,7 @@
 from .main import main
 from .sphinx import setup
 
-__version__ = "0.3.3"
+__version__ = "0.3.4"
 
 __all__ = [
     "setup",
