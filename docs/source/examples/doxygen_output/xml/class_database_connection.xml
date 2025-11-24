@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_database_connection" kind="class" language="C++" prot="public">
+    <compoundname>DatabaseConnection</compoundname>
+    <includes refid="__sample__module_8h" local="no">_sample_module.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_database_connection_1a840f1cc1a4facd83ca0fab9e58f8b265" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DatabaseConnection::host_</definition>
+        <argsstring></argsstring>
+        <name>host_</name>
+        <qualifiedname>DatabaseConnection::host_</qualifiedname>
+        <briefdescription>
+<para>Database host address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="56" column="17" bodyfile="_sample_module.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_database_connection_1a96449004eeed814087b7b65fd69f0883" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DatabaseConnection::port_</definition>
+        <argsstring></argsstring>
+        <name>port_</name>
+        <qualifiedname>DatabaseConnection::port_</qualifiedname>
+        <briefdescription>
+<para>Database port number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="57" column="9" bodyfile="_sample_module.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_database_connection_1aa2043e7d2602096a2fca8ef7ca274f85" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DatabaseConnection::username_</definition>
+        <argsstring></argsstring>
+        <name>username_</name>
+        <qualifiedname>DatabaseConnection::username_</qualifiedname>
+        <briefdescription>
+<para>Optional username. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="58" column="17" bodyfile="_sample_module.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_database_connection_1a4cd8e0759dc3ca041dc281a06b238802" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DatabaseConnection::connected_</definition>
+        <argsstring></argsstring>
+        <name>connected_</name>
+        <qualifiedname>DatabaseConnection::connected_</qualifiedname>
+        <briefdescription>
+<para>Connection status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="59" column="10" bodyfile="_sample_module.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_database_connection_1a665128072a1a37404880f0b71a79e803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DatabaseConnection::DatabaseConnection</definition>
+        <argsstring>(const std::string &amp;host, int port=9042, const std::string &amp;username=&quot;&quot;)</argsstring>
+        <name>DatabaseConnection</name>
+        <qualifiedname>DatabaseConnection::DatabaseConnection</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+          <defval>9042</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>username</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Database Connection object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>host</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The database host address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The database port number (default: 9042) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional username for authentication </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_connection_1a78d05d946a2fe916826140dd7bd5a4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DatabaseConnection::connect</definition>
+        <argsstring>()</argsstring>
+        <name>connect</name>
+        <qualifiedname>DatabaseConnection::connect</qualifiedname>
+        <briefdescription>
+<para>Establish a connection to the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if connection was successful </para>
+</simplesect>
+<simplesect kind="return"><para>false if connection failed </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ConnectionError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if connection fails after retries </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_connection_1a5e53247f68f116ef208745338e655ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string DatabaseConnection::execute</definition>
+        <argsstring>(const std::string &amp;query)</argsstring>
+        <name>execute</name>
+        <qualifiedname>DatabaseConnection::execute</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+<para>Execute a query on the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL query string to execute </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Query results as a string </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>RuntimeError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if not connected to database </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="48" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_connection_1a0722d2ce742a882eaabc3eb7ed518b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DatabaseConnection::disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>disconnect</name>
+        <qualifiedname>DatabaseConnection::disconnect</qualifiedname>
+        <briefdescription>
+<para>Close the database connection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sample_module.h" line="53" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Manages database connections. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides methods for connecting to, querying, and disconnecting from a database. </para>
+    </detaileddescription>
+    <location file="_sample_module.h" line="20" column="1" bodyfile="_sample_module.h" bodystart="20" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_database_connection_1a78d05d946a2fe916826140dd7bd5a4e8" prot="public" virt="non-virtual"><scope>DatabaseConnection</scope><name>connect</name></member>
+      <member refid="class_database_connection_1a4cd8e0759dc3ca041dc281a06b238802" prot="private" virt="non-virtual"><scope>DatabaseConnection</scope><name>connected_</name></member>
+      <member refid="class_database_connection_1a665128072a1a37404880f0b71a79e803" prot="public" virt="non-virtual"><scope>DatabaseConnection</scope><name>DatabaseConnection</name></member>
+      <member refid="class_database_connection_1a0722d2ce742a882eaabc3eb7ed518b64" prot="public" virt="non-virtual"><scope>DatabaseConnection</scope><name>disconnect</name></member>
+      <member refid="class_database_connection_1a5e53247f68f116ef208745338e655ead" prot="public" virt="non-virtual"><scope>DatabaseConnection</scope><name>execute</name></member>
+      <member refid="class_database_connection_1a840f1cc1a4facd83ca0fab9e58f8b265" prot="private" virt="non-virtual"><scope>DatabaseConnection</scope><name>host_</name></member>
+      <member refid="class_database_connection_1a96449004eeed814087b7b65fd69f0883" prot="private" virt="non-virtual"><scope>DatabaseConnection</scope><name>port_</name></member>
+      <member refid="class_database_connection_1aa2043e7d2602096a2fca8ef7ca274f85" prot="private" virt="non-virtual"><scope>DatabaseConnection</scope><name>username_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

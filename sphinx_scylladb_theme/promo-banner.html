@@ -1,13 +1,15 @@
 <section class="promo-banner {{'promo-banner--hide' if not theme_hide_banner}} {{'promo-banner--hide' if theme_hide_banner|lower == 'true'}}" style="display: none;">
     <div class="promo-banner-wrapper">
-        {% if theme_banner_icon_path %}
-            <div class="promo-banner__icon">
-                <img src="{{ pathto(theme_banner_icon_path, 1) }}" />
-            </div>
-        {% endif %}
-        <div class="promo-banner__title">{{theme_banner_title_text}}</div>
-        <a class="promo-banner__button button button--reverse" href="{{theme_banner_button_url}}"
-           target="_blank" rel="noopener noreferrer">{{theme_banner_button_text}}</a>
+        <div class="promo-banner__content">
+            {% if theme_banner_icon_path %}
+                <div class="promo-banner__icon">
+                    <img src="{{ pathto(theme_banner_icon_path, 1) }}" />
+                </div>
+            {% endif %}
+            <div class="promo-banner__title">{{theme_banner_title_text}}</div>
+            <a class="promo-banner__button button button--reverse" href="{{theme_banner_button_url}}"
+               target="_blank" rel="noopener noreferrer">{{theme_banner_button_text}}</a>
+        </div>
         <button class="promo-banner__close">
             <i class="icon-cancel"></i>
         </button>

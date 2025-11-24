@@ -24,12 +24,14 @@ class Grid(Directive):
         # Add type modifier
         grid_type = self.options.get("type", "default")
         if grid_type in ["scrollable", "products"]:
-            container_class_name = f"{container_class_name} topics-grid--{grid_type}".strip()
+            container_class_name = (
+                f"{container_class_name} topics-grid--{grid_type}".strip()
+            )
 
         # Generate title and text if provided
         title = self.options.get("title", "")
         text = self.options.get("text", "")
-        
+
         header = ""
         if title or text:
             header = generate_template(
@@ -74,4 +76,4 @@ def setup(app):
         "version": "0.1",
         "parallel_read_safe": True,
         "parallel_write_safe": True,
-    } 
+    }

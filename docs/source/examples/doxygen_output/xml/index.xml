@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="class_database_connection" kind="class"><name>DatabaseConnection</name>
+    <member refid="class_database_connection_1a840f1cc1a4facd83ca0fab9e58f8b265" kind="variable"><name>host_</name></member>
+    <member refid="class_database_connection_1a96449004eeed814087b7b65fd69f0883" kind="variable"><name>port_</name></member>
+    <member refid="class_database_connection_1aa2043e7d2602096a2fca8ef7ca274f85" kind="variable"><name>username_</name></member>
+    <member refid="class_database_connection_1a4cd8e0759dc3ca041dc281a06b238802" kind="variable"><name>connected_</name></member>
+    <member refid="class_database_connection_1a665128072a1a37404880f0b71a79e803" kind="function"><name>DatabaseConnection</name></member>
+    <member refid="class_database_connection_1a78d05d946a2fe916826140dd7bd5a4e8" kind="function"><name>connect</name></member>
+    <member refid="class_database_connection_1a5e53247f68f116ef208745338e655ead" kind="function"><name>execute</name></member>
+    <member refid="class_database_connection_1a0722d2ce742a882eaabc3eb7ed518b64" kind="function"><name>disconnect</name></member>
+  </compound>
+  <compound refid="__sample__module_8h" kind="file"><name>_sample_module.h</name>
+    <member refid="__sample__module_8h_1a7c9a65473cb4c149495f482dd4eddc42" kind="function"><name>format_query</name></member>
+    <member refid="__sample__module_8h_1a2bd869eb7cb872b5a111242a2e75c22a" kind="function"><name>validate_connection_params</name></member>
+  </compound>
+</doxygenindex>

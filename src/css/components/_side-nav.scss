@@ -18,9 +18,16 @@
   top: $header-height;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 950;
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media screen and (min-width: $large) {
+    display: flex;
+    flex-direction: column;
     position: sticky;
     flex-grow: 1;
   }
@@ -43,7 +50,7 @@
 
       &:hover {
         filter: brightness(105%);
-        
+
       }
     }
   }
@@ -60,20 +67,21 @@
     }
 
     .toctree-l1 {
- 
+
         &:not(.has-children) {
           display: flex;
-          
+
           &::before {
             content: '•';
             width: $spacer;
             text-align: center;
             align-self: center;
             opacity: .4;
+            flex-shrink: 0;
           }
         }
-        
-      a { 
+
+      a {
         font-size: 16px;
         font-weight: 500;
       }
@@ -89,7 +97,7 @@
         width: $spacer-sm;
         height: $spacer-sm;
         font-size: 14px;
-        
+
       }
 
       ul {
@@ -106,6 +114,7 @@
           text-align: center;
           align-self: center;
           opacity: .3;
+          flex-shrink: 0;
         }
       }
     }
@@ -128,7 +137,7 @@
         order: 3;
       }
 
-     
+
     }
 
     /* Override icons extension */
@@ -214,7 +223,7 @@
     li {
       list-style: none;
       padding: 0;
-      
+
 
       &.has-children {
         display: flex;
@@ -349,7 +358,7 @@
 @media screen and (min-width: $xlarge) {
   .side-nav {
     width: $side-nav-width;
-    
+
     .side-nav-content {
       height: 0;
       flex-grow: 1;

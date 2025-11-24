@@ -55,7 +55,7 @@ Renders:
 
 .. code-block:: rst
    :linenos:
-   
+
    Line 1
    Line 2
 

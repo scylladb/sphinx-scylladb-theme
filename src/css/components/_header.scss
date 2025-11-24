@@ -2,17 +2,18 @@
   align-items: center;
   background-color: var(--card-bg);
   box-shadow: 0 2px 22px rgba(0,0,0, 0.1);
-  display: flex;  
+  display: flex;
   flex-wrap: wrap;
   gap: $spacer-xs 0;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: $spacer-xs $spacer-sm;
   width: 100%;
   z-index: 99;
 
   @media screen and (min-width: $large) {
+    position: sticky;
     min-height: $header-height-large;
     padding: $spacer-xs $spacer;
   }
@@ -164,7 +165,7 @@
     width: auto;
     min-width: 300px;
     gap: 20px;
-    
+
     .header-ask-ai {
       display: block;
     }

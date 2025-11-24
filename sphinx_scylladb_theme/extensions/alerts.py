@@ -31,7 +31,7 @@ class Alert(Directive):
         if target == "_blank":
             target_attr = 'target="_blank"'
         else:
-            target_attr = ''
+            target_attr = ""
 
         html0 = generate_template(
             """
@@ -49,7 +49,7 @@ class Alert(Directive):
         )
 
         alert_node = nodes.raw(text=html0, format="html")
-        
+
         return [alert_node]
 
 

@@ -80,12 +80,12 @@ def create_redirect_to_latest_version(app, exception):
         and app.config.smv_rename_latest_version
     ):
         latest_dir = app.config.smv_rename_latest_version
-    
+
     theme_options = app.config.html_theme_options
     custom_redirect = theme_options.get("redirect", "")
     if custom_redirect:
         latest_dir = custom_redirect
-    
+
     out_dir = Path(app.builder.outdir)
     head = out_dir.parent
     zendesk_tag = theme_options.get("zendesk_tag", "")

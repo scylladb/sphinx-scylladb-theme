@@ -35,15 +35,15 @@
   }
 
   &__close {
-    display: none;
-    position: absolute;
-    right: 16px;
-    top: 16px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 16px;
 
     i {
-      height: 34px;
-      width: 34px;
-      font-size: 34px;
+      height: 20px;
+      width: 20px;
+      font-size: 20px;
       color: var(--white);
     }
 
@@ -57,8 +57,15 @@
 .promo-banner-wrapper {
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 5.85px 20px;
+}
+
+.promo-banner__content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 @media (min-width: $large) {
@@ -72,8 +79,15 @@
       font-size: $font-sm;
       padding: 8.5px;
     }
+
     &__close {
-      display: block;
+      margin: 0;
+
+      i {
+        height: 34px;
+        width: 34px;
+        font-size: 34px;
+      }
     }
   }
   .promo-banner-wrapper {

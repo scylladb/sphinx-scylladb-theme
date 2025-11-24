@@ -15,6 +15,7 @@ In general, there are main components to the markup of any document:
 
    admonitions
    alerts
+   api-documentation/index
    collapse
    code-blocks
    diagrams
@@ -38,6 +39,7 @@ In general, there are main components to the markup of any document:
    tooltips
    topic-box
    versions
+   videos
 
 .. panel-box::
   :title: Components
@@ -46,6 +48,7 @@ In general, there are main components to the markup of any document:
 
   * :doc:`Admonitions <admonitions>`
   * :doc:`Alerts <alerts>`
+  * :doc:`API Documentation <api-documentation/index>`
   * :doc:`Collapse <collapse>`
   * :doc:`Code blocks <code-blocks>`
   * :doc:`Diagrams <diagrams>`
@@ -68,3 +71,4 @@ In general, there are main components to the markup of any document:
   * :doc:`Toc <toc>`
   * :doc:`Topic box <topic-box>`
   * :doc:`Versions <versions>`
+  * :doc:`Videos <videos>`
