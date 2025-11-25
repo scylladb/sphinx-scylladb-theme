@@ -1209,14 +1209,14 @@ test = ["flake8", "mypy", "pytest"]
 
 [[package]]
 name = "sphinxcontrib-mermaid"
-version = "1.2.1"
+version = "1.2.2"
 description = "Mermaid diagrams in yours Sphinx powered docs"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "sphinxcontrib_mermaid-1.2.1-py3-none-any.whl", hash = "sha256:1b9b57c5d00f43cdf111f0b1cadadce4fe8d6434dadd53abf42b6286f4301211"},
-    {file = "sphinxcontrib_mermaid-1.2.1.tar.gz", hash = "sha256:9def2637d7ad9524171df84009d368694c5d4284adf28eade4ced9f456a0b651"},
+    {file = "sphinxcontrib_mermaid-1.2.2-py3-none-any.whl", hash = "sha256:51655f592300fc70e73b3ef2007cfc44fac11da5ff1f15c4725c83bf4a5b517c"},
+    {file = "sphinxcontrib_mermaid-1.2.2.tar.gz", hash = "sha256:35423c13e565abb839b13f955f9722f0769e77e5d607ca07877ce93e1636c196"},
 ]
 
 [package.dependencies]
