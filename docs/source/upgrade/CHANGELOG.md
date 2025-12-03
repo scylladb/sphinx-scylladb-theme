@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- TODO: Fixed breadcrumbs and hero content being hidden behind the fixed header on mobile when the promo banner is disabled.
+- [#1541](https://github.com/scylladb/sphinx-scylladb-theme/pull/1541): Fixed breadcrumbs and hero content being hidden behind the fixed header on mobile when the promo banner is disabled.
 
 
 ## 1.8.9 - 21 November 2025
