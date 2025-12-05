@@ -2,6 +2,17 @@
   display: flex;
   background-color: var(--bg-color);
   flex-grow: 1;
+  padding-top: $header-height;
+}
+
+.layout.layout--has-banner {
+  padding-top: 0;
+}
+
+@media screen and (min-width: $large) {
+  .layout {
+    padding-top: 0;
+  }
 }
 
 .content {

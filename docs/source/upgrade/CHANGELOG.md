@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## 1.8.10 - 3 December 2025
+
+### Fixed
+
+- [#1541](https://github.com/scylladb/sphinx-scylladb-theme/pull/1541): Fixed breadcrumbs and hero content being hidden behind the fixed header on mobile when the promo banner is disabled.
+
+
 ## 1.8.9 - 21 November 2025
 
 ### Added
@@ -57,7 +64,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#1428](https://github.com/scylladb/sphinx-scylladb-theme/pull/1428): Restored the ability to retain scroll position when reloading or navigating between pages.
 - [#1417](https://github.com/scylladb/sphinx-scylladb-theme/pull/1417): Fixed code line highlighting in dark mode.
 - [cd88d37](https://github.com/scylladb/sphinx-scylladb-theme/commit/cd88d37ef43bb657ce32d5020eeb3df69919ec0c): Removed unnecessary scroll behavior from search results.
- 
+
 ## 1.8.6 - 1 Apr 2025
 
 ### Added
@@ -102,7 +109,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Documentation on Dependabot support, explaining configuration, update frequency, and handling vulnerability alerts.
 
-### Fixed 
+### Fixed
 
 - [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Updated cookie configuration to ensure cookies are available across all `.scylladb.com` subdomains.
 - [#1277](https://github.com/scylladb/sphinx-scylladb-theme/pull/1277): Corrected Dependabot ignore property that was unintentionally excluding all dependencies, now allowing only specified dependencies to receive updates.
@@ -203,7 +210,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- [#1053](https://github.com/scylladb/sphinx-scylladb-theme/pull/1053): Discontinued Amplify support for page previews in favor of a custom Jenkins pipeline. 
+- [#1053](https://github.com/scylladb/sphinx-scylladb-theme/pull/1053): Discontinued Amplify support for page previews in favor of a custom Jenkins pipeline.
 
 ## 1.6.6 - 5 Jan 2024
 
