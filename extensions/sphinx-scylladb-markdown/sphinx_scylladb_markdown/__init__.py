@@ -3,7 +3,7 @@ import os
 
 from recommonmark.transform import AutoStructify
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 
 class BaseParser:
@@ -29,6 +29,17 @@ class RecommonmarkParser(BaseParser):
                 True,
             )
             self.app.add_transform(AutoStructify)
+
+            # FIX: Register Myst config values even when using Recommonmark.
+            # This is required because sphinx-substitution-extensions
+            # now unconditionally expect these values to exist.
+            self.app.add_config_value(
+                "myst_enable_extensions", ["colon_fence"], "env", [list]
+            )
+            self.app.add_config_value("myst_heading_anchors", 6, "env", [int])
+            self.app.add_config_value("myst_substitutions", {}, "env", [dict])
+            self.app.add_config_value("myst_sub_delimiters", ["{", "}"], "env", [list])
+
         except ImportError:
             raise RuntimeError(
                 "recommonmark and sphinx_markdown_tables are not installed!"
