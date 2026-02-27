@@ -6,12 +6,13 @@ import logging
 import os
 import posixpath
 
-from packaging.version import InvalidVersion, Version
+from packaging.version import InvalidVersion
+from packaging.version import Version as PkgVersion
 
 
 def _version_key(v):
     try:
-        return (0, Version(v.name))
+        return (0, PkgVersion(v.name))
     except InvalidVersion:
         return (1, v.name)
 

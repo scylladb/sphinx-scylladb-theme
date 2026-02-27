@@ -86,7 +86,7 @@ New format (uv / PEP 621):
         "myst-parser>=5.0.1",
         "sphinx-autobuild>=2025.08.25",
         "sphinx>=9.0",
-        "sphinx-multiversion-scylla>=0.3.6",
+        "sphinx-multiversion-scylla>=0.3.7",
         "sphinx-sitemap>=2.9.0",
         "redirects_cli>=0.1.3",
     ]
