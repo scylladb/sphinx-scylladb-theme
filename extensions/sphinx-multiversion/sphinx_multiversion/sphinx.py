@@ -5,7 +5,15 @@ import json
 import logging
 import os
 import posixpath
-from distutils.version import LooseVersion
+
+from packaging.version import InvalidVersion, Version
+
+
+def _version_key(v):
+    try:
+        return (0, Version(v.name))
+    except InvalidVersion:
+        return (1, v.name)
 
 from sphinx import config as sphinx_config
 from sphinx.locale import _
@@ -56,7 +64,7 @@ class VersionInfo:
             for v in self.metadata.values()
             if v["source"] == "tags"
         ]
-        return sorted(result, key=lambda v: LooseVersion(v.name))
+        return sorted(result, key=_version_key)
 
     @property
     def branches(self):
@@ -65,7 +73,7 @@ class VersionInfo:
             for v in self.metadata.values()
             if v["source"] != "tags"
         ]
-        return sorted(result, key=lambda v: LooseVersion(v.name))
+        return sorted(result, key=_version_key)
 
     @property
     def releases(self):
@@ -74,7 +82,7 @@ class VersionInfo:
             for v in self.metadata.values()
             if v["is_released"]
         ]
-        return sorted(result, key=lambda v: LooseVersion(v.name))
+        return sorted(result, key=_version_key)
 
     @property
     def in_development(self):
@@ -83,7 +91,7 @@ class VersionInfo:
             for v in self.metadata.values()
             if not v["is_released"]
         ]
-        return sorted(result, key=lambda v: LooseVersion(v.name))
+        return sorted(result, key=_version_key)
 
     def __iter__(self):
         for item in self.tags:
