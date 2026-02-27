@@ -8,7 +8,7 @@ We appreciate your contribution and hope that this handbook will answer any ques
 Configuring a Python environment
 --------------------------------
 
-This project's Python side is managed with `Poetry <https://python-poetry.org/docs/>`_.
+This project's Python side is managed with `uv <https://docs.astral.sh/uv/>`_.
 It combines several things in one tool:
 
 *   Keeping track of Python dependencies, including ones required only for development and tests.
@@ -18,8 +18,8 @@ It combines several things in one tool:
 
 To initialize a Python development environment for this project:
 
-#.  Make sure you have Python 3.7 or later installed.
-#.  `Install Poetry <https://python-poetry.org/docs/>`_.
+#.  Make sure you have Python 3.11 or later installed (Python 3.12+ recommended).
+#.  `Install uv <https://docs.astral.sh/uv/getting-started/installation/>`_.
 
 Previewing the theme locally
 ----------------------------
@@ -57,7 +57,7 @@ The original static files are located under the folder ``src``.
 
 To build the minimized static files for this project:
 
-#.  Make sure you have Node.js LTS installed.
+#.  Make sure you have Node.js 18 or later installed.
 #.  Build the static files with:
 
 .. code:: console
@@ -74,7 +74,7 @@ Run:
 
 .. code:: console
 
-    poetry run pytest tests
+    uv run pytest tests
 
 Publishing the theme to PyPi
 ----------------------------
@@ -87,16 +87,16 @@ To publish a new version of the theme to PyPi, run the following script:
 
     ./deploy.sh
 
-To increase the **minor version**, run ``poetry version minor`` before  ``./deploy``.
+To increase the **minor version**, run ``uv version --bump minor`` before  ``./deploy``.
 
-To increase the **major version**, run ``poetry version major`` before  ``./deploy``.
+To increase the **major version**, run ``uv version --bump major`` before  ``./deploy``.
 
 Behind the scenes, ``deploy.sh`` executes the following logic:
 
 1. Checks if the local git URL matches the original repository to prevent you from releasing from a personal fork.
 2. Checks if the local contents differ from the remote master branch.
-3. Increases the package's version **patch** with the command ``poetry version patch``.
-4. Builds the package with the command ``poetry build``.
-5. Asks for your PyPI username and password and publishes the package to PyPI with ``poetry publish``.
+3. Increases the package's version **patch** with the command ``uv version --bump patch``.
+4. Builds the package with the command ``uv build``.
+5. Publishes the package to PyPI with ``uv publish``.
 
 After publishing the package, you should see the new release listed on `PyPI <https://pypi.org/project/sphinx-scylladb-theme/#history>`_.

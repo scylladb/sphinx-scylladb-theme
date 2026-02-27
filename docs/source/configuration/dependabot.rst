@@ -39,4 +39,4 @@ To update all dependencies to the latest versions, use:
    cd docs
    make update
 
-Then, commit the updated ``poetry.lock`` file and push the changes to the repository.
+Then, commit the updated ``uv.lock`` file and push the changes to the repository.

@@ -1,0 +1,45 @@
+name: "Theme / Frontend build"
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "src/**"
+      - "config/**"
+      - "package.json"
+      - "package-lock.json"
+  push:
+    branches:
+      - master
+    paths:
+      - "src/**"
+      - "config/**"
+      - "package.json"
+      - "package-lock.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build frontend
+        run: npm run build

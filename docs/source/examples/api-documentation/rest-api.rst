@@ -28,7 +28,7 @@ Install the required dependencies:
 
 .. code-block:: bash
 
-   poetry add requests
+   uv add requests
    npm install -g snippet-enricher-cli
 
 Configuration

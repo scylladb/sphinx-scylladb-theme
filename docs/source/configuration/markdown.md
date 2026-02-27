@@ -13,7 +13,7 @@ To install MyST:
 1. Install the extension:
 
    ```console
-   poetry add myst-parser
+   uv add myst-parser
    ```
 
 2. Load the extension in the `conf.py` configuration file:

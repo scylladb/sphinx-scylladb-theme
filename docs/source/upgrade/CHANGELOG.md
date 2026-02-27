@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## 1.9.0 - 26 February 2026
+
+### Changed
+
+- Upgraded Sphinx to 9.x. Projects must use Sphinx 9 or later.
+- Replaced Poetry with [uv](https://docs.astral.sh/uv/) for dependency management. The `pyproject.toml` format has been updated to PEP 621, and `poetry.lock` is replaced by `uv.lock`.
+- Raised minimum Python requirement to 3.11 (from 3.10). Python 3.11, 3.12, and 3.13 are supported.
+- Updated Node.js requirement to 22.
+- Updated `myst-parser` to 5.x for Sphinx 9 compatibility.
+- Updated the bundled `sphinx-multiversion` extension for Sphinx 9 compatibility.
+
+For detailed migration steps, see :doc:`Upgrading from 1.8 to 1.9 <1-8-to-1-9>`.
+
 ## 1.8.10 - 3 December 2025
 
 ### Fixed
