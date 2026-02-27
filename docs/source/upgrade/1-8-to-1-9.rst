@@ -12,6 +12,11 @@ The theme version is displayed in the footer of the project's documentation site
 
 If your project theme's version is **>=1.8**, follow this guide to get the latest version.
 
+Known issues
+------------
+
+- **sphinx-tabs incompatible with docutils 0.22+**: ``sphinx-tabs`` 3.4.7 (latest) raises a ``KeyError: 'backrefs'`` when building with docutils 0.22 or later (`executablebooks/sphinx-tabs#212 <https://github.com/executablebooks/sphinx-tabs/issues/212>`_). As a workaround, pin ``docutils<0.22`` in your project's dependencies until a new ``sphinx-tabs`` release is available.
+
 What's new in 1.9
 ------------------
 
