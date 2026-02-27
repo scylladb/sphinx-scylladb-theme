@@ -227,6 +227,23 @@ Update all GitHub Actions workflows that reference Python 3.10:
    - ``poetry install`` → ``uv sync``
    - ``poetry run <cmd>`` → ``uv run <cmd>``
 
+#. Add ``permissions: contents: read`` at the top level of ``docs-pr.yaml``:
+
+   .. code-block:: yaml
+
+       permissions:
+         contents: read
+
+#. In ``docs-pages.yaml``, update the ``release`` job permissions to use ``contents: write``:
+
+   .. code-block:: yaml
+
+       release:
+         permissions:
+           pages: write
+           id-token: write
+           contents: write
+
 Upgrade Node.js to 22
 .....................
 
