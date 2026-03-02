@@ -33,10 +33,6 @@
   }
 
   &__title {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
     a {
       background-color: var(--brand-product);
       height: $product-title-height;
@@ -273,6 +269,10 @@
   &__versions {
     padding: $spacer-xs;
     padding-bottom: 0;
+
+    &:empty {
+      padding: 0;
+    }
   }
 
   &__search {
@@ -328,9 +328,18 @@
     left: initial;
     width: $secondary-side-nav-width;
     z-index: 25;
+    overflow: hidden;
+
+    .side-nav-content {
+      flex-grow: 1;
+      height: 0;
+    }
 
     &__content {
       max-width: 100%;
+      overflow-y: auto;
+      flex-grow: 1;
+      height: 0;
     }
 
     &__search {
@@ -353,6 +362,8 @@
 
 .side-nav-content {
   background: radial-gradient(100% 100px at top center, var(--brand-product) 0px, transparent 100%);
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: $xlarge) {
@@ -362,7 +373,6 @@
     .side-nav-content {
       height: 0;
       flex-grow: 1;
-      overflow-y: auto;
     }
 
     &--collapsed {
