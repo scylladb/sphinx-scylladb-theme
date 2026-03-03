@@ -53,6 +53,10 @@ See https://github.com/scylladb/scylla-enterprise/issues/3414
 
 See https://github.com/scylladb/sphinx-scylladb-theme/pull/891
 
+### Sphinx 9 compatibility
+
+Updated `Config.read()` calls to use keyword-only arguments (`overrides=`, `tags=`) as required by Sphinx 9.
+
 ### Version specific overrides
 
 The following properties can be defined on a per-version basis.

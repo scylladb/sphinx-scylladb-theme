@@ -15,9 +15,12 @@ import subprocess
 import sys
 import tempfile
 
+import sphinx as _sphinx
 from sphinx import config as sphinx_config
 from sphinx import project as sphinx_project
 from sphinx.util import tags as sphinx_tags
+
+_SPHINX_VERSION = tuple(int(x) for x in _sphinx.__version__.split(".")[:2])
 
 from . import git, sphinx
 
@@ -115,9 +118,16 @@ def extract_custom_config_vars(confpath, var_names):
 def load_sphinx_config_worker(q, confpath, confoverrides, add_defaults):
     try:
         with working_dir(confpath):
-            current_config = sphinx_config.Config.read(
-                confpath, confoverrides, sphinx_tags.Tags()
-            )
+            if _SPHINX_VERSION >= (9, 0):
+                # Sphinx 9+: overrides and tags are keyword-only arguments
+                current_config = sphinx_config.Config.read(
+                    confpath, overrides=confoverrides, tags=sphinx_tags.Tags()
+                )
+            else:
+                # Sphinx 7/8: positional arguments
+                current_config = sphinx_config.Config.read(
+                    confpath, confoverrides, sphinx_tags.Tags()
+                )
 
         if add_defaults:
             current_config.add(

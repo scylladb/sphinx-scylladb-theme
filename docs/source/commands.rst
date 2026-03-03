@@ -12,7 +12,7 @@ Setup commands
 setupenv
 ========
 
-Installs system dependencies required to build the docs, such as Poetry.
+Installs system dependencies required to build the docs, such as uv.
 
 .. code:: console
 
@@ -38,7 +38,7 @@ Updates Python dependencies to the latest version.
 
     make update
 
-As a result, updates the ``poetry.lock`` file.
+As a result, updates the ``uv.lock`` file.
 
 
 Build commands
@@ -80,8 +80,8 @@ To decrease verbosity, use the option ``-Q``:
 Troubleshooting
 ...............
 
-Issue: pyproject.toml changed significantly since poetry.lock was last generated
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Issue: pyproject.toml changed significantly since uv.lock was last generated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Solution:**
 
@@ -89,22 +89,7 @@ Issue: pyproject.toml changed significantly since poetry.lock was last generated
 
     .. code:: console
 
-        poetry lock --no-update
-
-#. Run the `make preview` command again.
-
-Issue: Keyring asks for a password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This issue is due to a known problem with Poetry that primarily affects GNOME users. For more details, see `poetry/poetry#8761 <https://github.com/python-poetry/poetry/issues/8761>`_.
-
-**Solution:**
-
-#. Edit `docs/Makefile` to add the `POETRY` variable as follows:
-
-    .. code::
-
-        POETRY = PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring poetry
+        uv lock
 
 #. Run the `make preview` command again.
 

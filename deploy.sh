@@ -17,9 +17,9 @@ if git checkout master &&
     [ `git rev-list HEAD...origin/master --count` == 0 ] &&
     git merge origin/master
 then
-    poetry version patch
-    poetry build
-    poetry publish
+    uv version --bump patch
+    uv build
+    uv publish
 else
     echo "Error: Your local repository has some changes not pushed or"\
          "someone has updated the repository while you where editing code."\

@@ -18,12 +18,13 @@
     "cross-env": "^10.1.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.4",
-    "eslint": "^10.0.2",
+    "eslint": "^9.0.0",
     "eslint-formatter-table": "^7.32.1",
     "eslint-import-resolver-webpack": "^0.13.10",
     "eslint-plugin-import": "^2.32.0",
     "eslint-webpack-plugin": "^5.0.2",
     "foundation-sites": "^6.9.0",
+    "globals": "^17.3.0",
     "jquery": "^3.7.1",
     "mini-css-extract-plugin": "^2.9.4",
     "postcss-loader": "^8.2.0",
@@ -36,5 +37,8 @@
   },
   "dependencies": {
     "js-cookie": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
