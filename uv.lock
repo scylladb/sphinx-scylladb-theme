@@ -754,15 +754,15 @@ wheels = [
 
 [[package]]
 name = "sphinx-multiversion-scylla"
-version = "0.3.5"
+version = "0.3.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/05/3a/0da33ac50c8201097df2439f768d6e91b096985781ae2693688ff543f2c6/sphinx_multiversion_scylla-0.3.5.tar.gz", hash = "sha256:babae99a8a01201c87ef649cc58485da9910e5e8ca245f97e81281b3eee94db8", size = 12651, upload-time = "2026-02-27T17:13:16.575Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/55/b1/83fb37f6c9038469b3bd01453875bb2127b3c03f9f41247394ad2063645c/sphinx_multiversion_scylla-0.3.7.tar.gz", hash = "sha256:fc1ddd58e82cfd8810c1be6db8717a244043c04c1c632e9bd1436415d1db0d3b", size = 12665, upload-time = "2026-02-27T18:43:17.849Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/35/d3/fbdd846188299460b3f1f69671b4e25b126587f512103e8bf56f9467a16a/sphinx_multiversion_scylla-0.3.5-py3-none-any.whl", hash = "sha256:ef2ea652632698a3d1e228b8f1f0dae6c13c0e34f54d46bb2b2d5a1cde9e6e95", size = 12518, upload-time = "2026-02-27T17:13:15.168Z" },
+    { url = "https://files.pythonhosted.org/packages/a1/94/f5b6219ca1136dc0305aaf3fb6c96aa2dfe65224d6dc147e00a6485a1a22/sphinx_multiversion_scylla-0.3.7-py3-none-any.whl", hash = "sha256:6205d261a77c90b7ea3105311d1d56014736a5148966133c34344512bb8c4e4f", size = 12558, upload-time = "2026-02-27T18:43:16.988Z" },
 ]
 
 [[package]]
