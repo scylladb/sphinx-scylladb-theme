@@ -1,6 +1,6 @@
 [project]
 name = "sphinx-scylladb-theme"
-version = "1.9.0"
+version = "1.9.1"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = [{name = "David García", email = "david@techdocs.studio"}]
 readme = "PYPI.rst"
@@ -54,7 +54,7 @@ exclude = [
     ".github/",
     "config/",
     "docs/",
-    "extensions/",
+    "/extensions/",
     ".postcss.config.js",
     ".prettierrc.json",
     "deploy.sh",
