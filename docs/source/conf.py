@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath("."))
 # Builds documentation for the following tags and branches.
 TAGS = []
 BRANCHES = [
-    "branch-1.9"
+    "branch-1.9",
     "branch-1.8",
     "branch-1.7",
     "branch-1.6",
