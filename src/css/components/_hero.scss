@@ -80,6 +80,21 @@
     margin-top: 20px;
     box-shadow: 0 4px 25px rgb(0 0 0 / 2%);
     flex: 0 1 320px;
+
+    biel-search-button {
+      max-width: 280px;
+      display: block;
+      min-height: 48px;
+
+      &::part(button) {
+        background-color: var(--well-bg);
+        border: 1px solid var(--primary);
+        border-radius: #{$border-radius};
+        box-shadow: 0 5px 20px rgba(var(--primary-rgb), .4);
+        padding: 12px 24px;
+        max-width: 280px;
+      }
+    }
   }
 
   &__search-wrapper {

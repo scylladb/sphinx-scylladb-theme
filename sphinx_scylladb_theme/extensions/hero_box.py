@@ -93,12 +93,23 @@ class HeroBox(Directive):
         )
 
         has_search_box = "search_box" in self.options
+        if has_search_box:
+            env = self.state.document.settings.env
+            theme_options = getattr(env.config, "html_theme_options", {}) or {}
+            try:
+                merged_options = env.app.builder.theme.get_options(theme_options)
+            except (AttributeError, TypeError):
+                merged_options = theme_options
+            search_engine = str(
+                merged_options.get("search_engine", "expertrec")
+            ).lower()
 
-        ai_chatbot_id = self.options.get("ai_chatbot_id")
+            if search_engine == "expertrec":
+                ai_chatbot_id = self.options.get("ai_chatbot_id")
 
-        ask_ai_section = ""
-        if ai_chatbot_id:
-            ask_ai_section = """
+                ask_ai_section = ""
+                if ai_chatbot_id:
+                    ask_ai_section = """
                 <div class="{class_name}__ask-ai">
                     <biel-button project="{ai_chatbot_id}"
                         header-title="ScyllaDB chatbot (beta)"
@@ -107,18 +118,35 @@ class HeroBox(Directive):
                         button-style="dark">Ask AI</biel-button>
                 </div>""".format(class_name=class_name, ai_chatbot_id=ai_chatbot_id)
 
-        if has_search_box:
-            search_box = generate_template(
-                """
-                <div class="{class_name}__search-wrapper">
-                    <div class="{class_name}__search-box search-box search-box--hero">
-                        <ci-search></ci-search>
-                    </div>{ask_ai_section}
-                </div>
-                """,
-                class_name=class_name,
-                ask_ai_section=ask_ai_section,
-            )
+                search_box = generate_template(
+                    """
+                    <div class="{class_name}__search-wrapper">
+                        <div class="{class_name}__search-box search-box search-box--hero">
+                            <ci-search></ci-search>
+                        </div>{ask_ai_section}
+                    </div>
+                    """,
+                    class_name=class_name,
+                    ask_ai_section=ask_ai_section,
+                )
+            else:
+                ai_chatbot_id = merged_options.get("ai_chatbot_id", "")
+                search_box = generate_template(
+                    """
+                    <div class="{class_name}__search-box">
+                    <biel-search-button
+                        project="{ai_chatbot_id}"
+                        header-title="ScyllaDB chatbot (beta)"
+                        button-position="bottom-right"
+                        modal-position="top-center"
+                        button-style="rounded">
+                            Search or Ask AI
+                    </biel-search-button>
+                    </div>
+                    """,
+                    class_name=class_name,
+                    ai_chatbot_id=ai_chatbot_id,
+                )
         else:
             search_box = ""
 
