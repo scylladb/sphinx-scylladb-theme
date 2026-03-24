@@ -71,18 +71,18 @@
   width: 200px;
   align-items: center;
   gap: 15px;
-  
+
   .search-box {
     flex: 1;
     width: 160px;
     transition: width 0.2s ease;
-    
+
     ci-search {
       width: 100%;
       display: block;
     }
   }
-  
+
   .header-ask-ai {
     white-space: nowrap;
     display: none;

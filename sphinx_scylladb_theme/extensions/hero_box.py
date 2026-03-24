@@ -138,9 +138,10 @@ class HeroBox(Directive):
                         project="{ai_chatbot_id}"
                         header-title="ScyllaDB chatbot (beta)"
                         button-position="bottom-right"
+                        hide-filters="false"
                         modal-position="top-center"
                         button-style="rounded">
-                            Search or Ask AI
+                            Search or ask AI...
                     </biel-search-button>
                     </div>
                     """,

@@ -201,15 +201,14 @@ $product-title-height: $spacer-md;
   }
 
   .dark {
-    
+
     --primary: #{$primary};
     --secondary: #{$secondary};
     --success: #{$success};
     --info: #{$info};
     --warning: #{$warning};
     --danger: #{$danger};
-    
-  
+
     --link-color: #{$primary};
     --link-color-hover: #{$primary};
     --text-color: var(--gray-200);
@@ -219,7 +218,7 @@ $product-title-height: $spacer-md;
     --border-color: var(--gray-800);
     --header-border: #4458A3;
     --alert-color: #{$alert-color};
-    
+
     --bg-color: var(--black);
     --well-bg: #1E2031;
     --navigation-bg: #1E2031;
@@ -234,16 +233,18 @@ $product-title-height: $spacer-md;
     --biel-button-dark-bg-color: #{$primary};
     --biel-input-button-bg-color: #{$primary};
     --biel-bot-content-z-index: 900;
+    --biel-search-button-bg-color: transparent;
     --biel-search-filter-selected-bg-color: #{$primary};
     --biel-search-result-mark-color: #{$primary};
+    --biel-search-button-border-color: #fff;
   }
-  
+
   @each $key, $styles in $brand-colors {
     .brand-#{$key} {
       --brand-product: var(--brand-#{$key});
       --brand-text: #{map.get($styles, text)};
     }
-  
+
     .text-brand-#{$key} {
       color: map.get($styles, text);
     }
@@ -251,7 +252,7 @@ $product-title-height: $spacer-md;
     .highlight .hll {
       color: var(--black);
     }
-  
+
     .bg-brand-#{$key} {
       background-color: map.get($styles, bg);
     }
