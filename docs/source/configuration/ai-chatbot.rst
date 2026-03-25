@@ -50,8 +50,8 @@ Configuration options
     - Biel.ai project ID.
   * - ``search_engine``
     - string
-    - expertrec
-    - Set to ``bielai`` to use the Biel.ai chatbot.
+    - bielai
+    - Specifies the search engine to use. Supported values: ``bielai``, ``expertrec``.
 
 Troubleshooting
 ---------------
