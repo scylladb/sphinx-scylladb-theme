@@ -8,9 +8,21 @@
                 project }}</a>
         </div>
         <div class="side-nav__search">
+            {% if theme_search_engine|lower == 'expertrec' %}
             <div class="search-box">
                 <ci-search></ci-search>
             </div>
+            {% else %}
+            <biel-search-button
+                project="{{theme_ai_chatbot_id}}"
+                button-style="rounded"
+                hide-filters="false"
+                hide-ctrl-k="true"
+                header-title="ScyllaDB chatbot (beta)"
+                modal-position="top-center">
+                Search
+            </biel-search-button>
+            {% endif %}
         </div>
         <div class="side-nav__versions">{% if versions and not theme_hide_versions_dropdown|tobool %}{% include
             'versions.html' %}{% endif %}</div>

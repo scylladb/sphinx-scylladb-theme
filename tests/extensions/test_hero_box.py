@@ -195,6 +195,13 @@ post_content_data = [
 mock_state_machine = Mock()
 mock_state_machine.reporter = Mock()
 mock_state = Mock()
+mock_state_machine.document.settings.env.config.html_theme_options = {
+    "search_engine": "expertrec",
+}
+mock_state_machine.document.settings.env.app.builder.theme.get_options.return_value = {
+    "search_engine": "expertrec",
+    "ai_chatbot_id": "ddfdo8m94k",
+}
 
 
 @pytest.mark.parametrize("arguments, options, content, expected", pre_content_data)
