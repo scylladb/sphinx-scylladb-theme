@@ -5,6 +5,7 @@ import json
 import logging
 import os
 import posixpath
+import re
 
 from packaging.version import InvalidVersion
 from packaging.version import Version as PkgVersion
@@ -14,6 +15,13 @@ def _version_key(v):
     try:
         return (0, PkgVersion(v.name))
     except InvalidVersion:
+        # Try to extract a version number from the name (e.g., "branch-4.9" -> "4.9")
+        match = re.search(r"(\d+(?:\.\d+)+)", v.name)
+        if match:
+            try:
+                return (0, PkgVersion(match.group(1)))
+            except InvalidVersion:
+                pass
         return (1, v.name)
 
 from sphinx import config as sphinx_config
