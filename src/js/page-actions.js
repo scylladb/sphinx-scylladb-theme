@@ -70,19 +70,30 @@ export class PageActionsHandler {
     const contentBody = document.querySelector(".content-body");
     const viewSourceUrl = contentBody?.getAttribute("data-view-source-url");
     if (viewSourceUrl) {
-      const dropdown = group.querySelector(".page-actions__dropdown");
-      const link = document.createElement("a");
-      link.className = "page-actions__item";
-      link.href = viewSourceUrl;
-      link.target = "_blank";
-      link.rel = "noopener";
-      const icon = document.createElement("i");
-      icon.className = "icon-description";
-      const label = document.createElement("span");
-      label.textContent = "View source";
-      link.appendChild(icon);
-      link.appendChild(label);
-      dropdown.insertBefore(link, dropdown.firstChild);
+      let safeViewSourceUrl = null;
+      try {
+        const parsedUrl = new URL(viewSourceUrl, window.location.href);
+        if (parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:") {
+          safeViewSourceUrl = parsedUrl.href;
+        }
+      } catch {
+        // Ignore invalid URLs
+      }
+      if (safeViewSourceUrl) {
+        const dropdown = group.querySelector(".page-actions__dropdown");
+        const link = document.createElement("a");
+        link.className = "page-actions__item";
+        link.href = safeViewSourceUrl;
+        link.target = "_blank";
+        link.rel = "noopener";
+        const icon = document.createElement("i");
+        icon.className = "icon-description";
+        const label = document.createElement("span");
+        label.textContent = "View source";
+        link.appendChild(icon);
+        link.appendChild(label);
+        dropdown.insertBefore(link, dropdown.firstChild);
+      }
     }
 
     return group;
