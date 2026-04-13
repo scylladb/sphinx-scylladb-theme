@@ -131,22 +131,40 @@ class HeroBox(Directive):
                 )
             else:
                 ai_chatbot_id = merged_options.get("ai_chatbot_id", "")
+                hide_ai_chatbot = str(
+                    merged_options.get("hide_ai_chatbot", "true")
+                ).lower()
+
+                ask_ai_section = ""
+                if hide_ai_chatbot != "true":
+                    ask_ai_section = """
+                <div class="{class_name}__ask-ai">
+                    <biel-button project="{ai_chatbot_id}"
+                        header-title="ScyllaDB chatbot (beta)"
+                        button-position="default"
+                        modal-position="bottom-right"
+                        button-style="dark">Ask AI</biel-button>
+                </div>""".format(class_name=class_name, ai_chatbot_id=ai_chatbot_id)
+
                 search_box = generate_template(
                     """
-                    <div class="{class_name}__search-box">
-                    <biel-search-button
-                        project="{ai_chatbot_id}"
-                        header-title="ScyllaDB chatbot (beta)"
-                        button-position="bottom-right"
-                        hide-filters="false"
-                        modal-position="top-center"
-                        button-style="rounded">
-                            Search or ask AI...
-                    </biel-search-button>
+                    <div class="{class_name}__search-wrapper">
+                        <div class="{class_name}__search-box">
+                            <biel-search-button
+                                project="{ai_chatbot_id}"
+                                header-title="ScyllaDB chatbot (beta)"
+                                button-position="bottom-right"
+                                hide-filters="false"
+                                modal-position="top-center"
+                                button-style="rounded">
+                                    Search
+                            </biel-search-button>
+                        </div>{ask_ai_section}
                     </div>
                     """,
                     class_name=class_name,
                     ai_chatbot_id=ai_chatbot_id,
+                    ask_ai_section=ask_ai_section,
                 )
         else:
             search_box = ""

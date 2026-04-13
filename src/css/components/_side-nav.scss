@@ -278,10 +278,29 @@
   &__search {
     padding: $spacer-xs;
     padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: $spacer-xs;
+
+    > biel-search-button {
+      flex: 1;
+      min-width: 0;
+      margin-right: 20px;
+      --biel-search-button-max-width: 100%;
+      --biel-search-button-padding: 8px 12px;
+    }
+
     .search-box {
+      flex: 1;
       background-color: var(--well-bg);
       border: 1px solid var(--primary);
     }
+  }
+
+  &__ask-ai {
+    --biel-button-border-radius: 4px;
+    --biel-button-padding: 9px 15px;
+    flex-shrink: 0;
   }
 }
 

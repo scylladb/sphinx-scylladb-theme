@@ -102,7 +102,7 @@
                 <biel-button class="header-ask-ai" project="{{theme_ai_chatbot_id}}"
                              header-title="ScyllaDB chatbot (beta)"
                              button-position="default"
-                             modal-position="bottom-right"
+                             modal-position="sidebar-right"
                              button-style="dark">
                     Ask AI
                 </biel-button>
@@ -116,6 +116,15 @@
                 modal-position="top-center">
                 Search
             </biel-search-button>
+            {% if theme_hide_ai_chatbot|lower != 'true' %}
+                <biel-button class="header-ask-ai" project="{{theme_ai_chatbot_id}}"
+                             header-title="ScyllaDB chatbot (beta)"
+                             button-position="default"
+                             modal-position="sidebar-right"
+                             button-style="dark">
+                    Ask AI
+                </biel-button>
+            {% endif %}
         {% endif %}
     </div>
     {% include 'side-nav-toggle.html' %}

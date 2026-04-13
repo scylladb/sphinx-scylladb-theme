@@ -13,7 +13,12 @@
 
     .chevron {
       transform: rotate(90deg);
+      transition: transform 0.15s;
     }
+  }
+
+  .scylla-dropdown__item.is-active .scylla-dropdown__title .chevron {
+    transform: rotate(-90deg);
   }
 }
 
