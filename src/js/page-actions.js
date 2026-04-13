@@ -1,4 +1,5 @@
 import TurndownService from "turndown";
+import { gfm } from "turndown-plugin-gfm";
 
 /**
  * Page Actions: "Ask a question" button with dropdown next to the page title.
@@ -33,15 +34,7 @@ export class PageActionsHandler {
     const group = document.createElement("div");
     group.className = "page-actions";
 
-    const contentBody = document.querySelector(".content-body");
-    const viewSourceUrl = contentBody ? contentBody.getAttribute("data-view-source-url") : null;
-
-    const viewSourceItem = viewSourceUrl
-      ? `<a class="page-actions__item" href="${viewSourceUrl}" target="_blank" rel="noopener">
-          <i class="icon-description"></i>
-          <span>View source</span>
-        </a>`
-      : "";
+    const bielProject = document.querySelector("biel-search-button")?.getAttribute("project") || "";
 
     group.innerHTML = `
       <button class="page-actions__main" type="button">
@@ -52,9 +45,8 @@ export class PageActionsHandler {
         <i class="icon-chevron-down"></i>
       </button>
       <div class="page-actions__dropdown" hidden>
-        ${viewSourceItem}
         <biel-button class="page-actions__item page-actions__ask-ai"
-          project="${document.querySelector('biel-search-button')?.getAttribute('project') || ''}"
+          project="${bielProject}"
           header-title="ScyllaDB chatbot (beta)"
           button-position="default"
           modal-position="sidebar-right"
@@ -73,6 +65,26 @@ export class PageActionsHandler {
         </a>
       </div>
     `;
+
+    // Prepend "View source" link via DOM (avoid HTML injection from attribute)
+    const contentBody = document.querySelector(".content-body");
+    const viewSourceUrl = contentBody?.getAttribute("data-view-source-url");
+    if (viewSourceUrl) {
+      const dropdown = group.querySelector(".page-actions__dropdown");
+      const link = document.createElement("a");
+      link.className = "page-actions__item";
+      link.href = viewSourceUrl;
+      link.target = "_blank";
+      link.rel = "noopener";
+      const icon = document.createElement("i");
+      icon.className = "icon-description";
+      const label = document.createElement("span");
+      label.textContent = "View source";
+      link.appendChild(icon);
+      link.appendChild(label);
+      dropdown.insertBefore(link, dropdown.firstChild);
+    }
+
     return group;
   }
 
@@ -161,6 +173,7 @@ export class PageActionsHandler {
     clone.querySelectorAll(".page-actions-wrapper .page-actions, .headerlink").forEach(el => el.remove());
 
     const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
+    turndown.use(gfm);
     return turndown.turndown(clone.innerHTML).trim();
   }
 
