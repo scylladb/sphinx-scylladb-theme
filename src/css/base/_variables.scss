@@ -92,7 +92,7 @@ $side-nav-width-collapsed: 0;
 // Breakpoint variables
 $small: 0px;
 $medium: 640px;
-$large: 1024px;
+$large: 1042px;
 $xlarge: 1200px;
 $xxlarge: 1440px;
 
@@ -185,8 +185,12 @@ $product-title-height: $spacer-md;
     --brand-self-hosted: #{$brand-self-hosted};
 
     --biel-primary-color: #{$link-color};
+    --biel-message-user-bg-color: var(--biel-message-biel-bg-color);
+    --biel-message-user-text-color: var(--biel-message-biel-text-color);
+    --biel-message-link-color: var(--link-color);
     --biel-button-dark-bg-color: #{$link-color};
     --biel-input-button-bg-color: #{$link-color};
+    --biel-input-button-hover-bg-color: var(--biel-input-button-bg-color);
     --biel-button-border-radius: 4px;
     --biel-button-padding: 12px 15px;
     --biel-font-family: "Roboto", sans-serif;
@@ -195,6 +199,8 @@ $product-title-height: $spacer-md;
     --biel-search-button-padding: 8px 20px;
     --biel-search-button-text-display: block !important;
     --biel-search-button-icon-margin-right: 5px !important;
+    --biel-bot-content-z-index: 1001;
+    --biel-search-content-z-index: 1001;
     --biel-search-body-max-height: 400px;
     --biel-search-content-max-height: 90vh;
     --biel-search-button-max-width: -webkit-fill-available;
@@ -232,11 +238,17 @@ $product-title-height: $spacer-md;
     --biel-primary-color: #{$primary};
     --biel-button-dark-bg-color: #{$primary};
     --biel-input-button-bg-color: #{$primary};
-    --biel-bot-content-z-index: 900;
+    --biel-bot-content-z-index: 1001;
+    --biel-search-content-z-index: 1001;
     --biel-search-button-bg-color: transparent;
     --biel-search-filter-selected-bg-color: #{$primary};
     --biel-search-result-mark-color: #{$primary};
     --biel-search-button-border-color: #fff;
+    --biel-message-user-bg-color: var(--biel-message-biel-bg-color);
+    --biel-message-user-text-color: var(--biel-message-biel-text-color);
+    --biel-input-button-hover-bg-color: var(--biel-input-button-bg-color);
+    --biel-message-link-color: var(--link-color);
+    --biel-input-button-hover-border-color: var(--biel-input-button-hover-bg-color);
   }
 
   @each $key, $styles in $brand-colors {

@@ -12,12 +12,12 @@ import { ImagesHandler } from "./images";
 import { LinksHandler } from "./links";
 import { PromoBannerHandler } from "./promo-banner";
 import { SearchScrollPrevention } from "./search-scroll-prevention";
-import { SearchToChatHandler } from "./search-to-chat";
 import { SecondarySidebarHandler } from "./secondary-sidebar";
 import { SecondarySidebarTOC } from "./secondary-sidebar-toc";
 import { SidebarHandler } from "./sidebar";
 import { TablesHandler } from "./tables";
 import {DarkTheme} from "./dark-theme";
+import { PageActionsHandler } from "./page-actions";
 
 $(document).ready(function () {
   new ImagesHandler().init();
@@ -32,5 +32,5 @@ $(document).ready(function () {
   new SecondarySidebarHandler().init();
   new SecondarySidebarTOC().init();
   new SearchScrollPrevention().init();
-  new SearchToChatHandler().init();
+  new PageActionsHandler().init();
 });

@@ -104,10 +104,6 @@
   }
 }
 
-.footer-ask-ai {
-  display: block;
-}
-
 @media screen and (min-width: $large) {
   .footer {
     padding: 30px 0;
@@ -146,11 +142,5 @@
     .footer-bottom__version {
       padding: 0 10px;
     }
-  }
-}
-
-@media screen and (min-width: $xlarge) {
-  .footer-ask-ai {
-    display: none;
   }
 }
