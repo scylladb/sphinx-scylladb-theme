@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath("."))
 # Builds documentation for the following tags and branches.
 TAGS = []
 BRANCHES = [
-    "branch-1.9"
+    "branch-1.9",
     "branch-1.8",
     "branch-1.7",
     "branch-1.6",
@@ -138,6 +138,7 @@ html_theme_options = {
     "hide_feedback_buttons": "false",
     "github_issues_repository": "scylladb/sphinx-scylladb-theme",
     "github_repository": "scylladb/sphinx-scylladb-theme",
+    "search_engine": "bielai",
     "site_description": "Sphinx Theme for ScyllaDB projects.",
     "hide_version_dropdown": ["master"],
     "zendesk_tag": "gq6ltsh3nfex3cnwfy4aj9",

@@ -12,7 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.5",
-    "babel-loader": "^10.0.0",
+    "babel-loader": "^10.1.1",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^13.0.1",
     "cross-env": "^10.1.0",
@@ -29,14 +29,16 @@
     "mini-css-extract-plugin": "^2.9.4",
     "postcss-loader": "^8.2.0",
     "postcss-preset-env": "^11.2.0",
-    "sass": "^1.97.3",
+    "sass": "^1.98.0",
     "sass-loader": "^16.0.7",
-    "webpack": "^5.105.2",
+    "webpack": "^5.105.4",
     "webpack-cli": "^6.0.1",
     "webpack-merge": "^6.0.1"
   },
   "dependencies": {
-    "js-cookie": "^3.0.5"
+    "js-cookie": "^3.0.5",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "engines": {
     "node": ">=18"

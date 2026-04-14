@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.9.2 - 14 April 2026
+
+### Added
+
+- [#1612](https://github.com/scylladb/sphinx-scylladb-theme/pull/1612): Added a page actions dropdown next to the page title with shortcuts to copy the page as Markdown, view source, ask a question via the Biel.ai chatbot, and open the page in ChatGPT.
+- [#1471](https://github.com/scylladb/sphinx-scylladb-theme/pull/1471): Added Biel.ai search integration.
+
+### Fixed
+
+- [#1610](https://github.com/scylladb/sphinx-scylladb-theme/pull/1610): Fixed the sort order of the multiversion dropdown entries. See also the bundled [`sphinx-multiversion-scylla`](https://pypi.org/project/sphinx-multiversion-scylla/) bump to 0.3.8 ([#1613](https://github.com/scylladb/sphinx-scylladb-theme/pull/1613)).
 
 ## 1.9.1 - 9 March 2026
 

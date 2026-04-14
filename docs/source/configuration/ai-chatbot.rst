@@ -48,6 +48,16 @@ Configuration options
     - string
     - ddfdo8m94k
     - Biel.ai project ID.
+  * - ``search_engine``
+    - string
+    - bielai
+    - Selects which search provider powers the documentation search bar.
+      Accepted values:
+
+      * ``bielai`` *(default)* — Uses Biel.ai's unified search-and-chat widget.
+        The search bar in the header opens a combined modal that lets users search the docs and ask the AI chatbot from the same place.
+      * ``expertrec`` — Uses ExpertRec as the search engine.
+        The search bar in the header is a traditional keyword search, and a separate ``Ask AI`` button is rendered next to it when ``hide_ai_chatbot`` is ``false``.
 
 Troubleshooting
 ---------------
@@ -60,4 +70,4 @@ If the chatbot does not appear:
 
 * Check for errors in the browser console that may indicate issues with the integration.
 
-For more details, refer to the `Biel.ai documentation <https://docs.biel.ai/>`_.
+For more details, refer to the `Biel.ai documentation for Sphinx <https://docs.biel.ai/installation/sphinx/>`_.

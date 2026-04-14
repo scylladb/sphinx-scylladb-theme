@@ -71,24 +71,32 @@
   width: 200px;
   align-items: center;
   gap: 15px;
-  
+
   .search-box {
     flex: 1;
     width: 160px;
     transition: width 0.2s ease;
-    
+
     ci-search {
       width: 100%;
       display: block;
     }
   }
-  
+
+  > biel-search-button {
+    --biel-search-button-max-width: 300px;
+    min-height: 38px;
+  }
+
   .header-ask-ai {
     white-space: nowrap;
     display: none;
-    width: 100.56px;
     flex-shrink: 0;
     text-align: center;
+    --biel-button-padding: 9px 15px;
+    --biel-button-border-radius: var(--biel-search-button-border-radius, 4px);
+    min-width: 100px;
+    min-height: 38px;
   }
 }
 
@@ -140,18 +148,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
-    max-width: 180px;
-    width: 180px;
-  }
-}
+    gap: 10px;
+    width: auto;
+    max-width: none;
+    min-height: 38px;
 
-// Intermediate screen sizes - optimize for space efficiency
-@media screen and (min-width: $large) and (max-width: 1199px) {
-  .header-search-box {
-    gap: 15px; // Reduce gap between elements
-    max-width: 160px; // Make even smaller to prevent wrapping
-    width: 160px;
+    > biel-search-button {
+      --biel-search-button-text-display: none !important;
+      --biel-search-button-ctrl-k-display: none !important;
+      --biel-search-button-icon-margin-right: 0px !important;
+      --biel-search-button-padding: 8px;
+      --biel-search-button-max-width: fit-content;
+      min-height: 38px;
+    }
   }
 }
 
@@ -161,18 +170,33 @@
   }
 
   .header-search-box {
-    max-width: 25%;
-    width: auto;
-    min-width: 300px;
-    gap: 20px;
-
     .header-ask-ai {
       display: block;
+      min-width: 100px;
     }
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1235px) {
+  .header-search-box {
+    width: auto;
+    max-width: none;
+    min-width: 320px;
+    gap: 12px;
+
+    > biel-search-button {
+      --biel-search-button-text-display: block !important;
+      --biel-search-button-ctrl-k-display: block !important;
+      --biel-search-button-icon-margin-right: 5px !important;
+      --biel-search-button-padding: 8px 12px;
+      --biel-search-button-max-width: 300px;
+      min-width: 180px;
+      margin-right: 26px;
+    }
+  }
+}
+
+@media screen and (min-width: 1375px) {
   .header-button {
     display: block;
   }

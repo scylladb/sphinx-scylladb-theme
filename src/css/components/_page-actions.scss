@@ -1,0 +1,140 @@
+.page-actions-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $spacer-sm;
+
+  h1 {
+    margin-bottom: 28px;
+  }
+}
+
+.page-actions {
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+
+  @media screen and (min-width: $large) {
+    display: flex;
+  }
+}
+
+.page-actions__main,
+.page-actions__toggle {
+  background: transparent;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  font-family: $font-base-family;
+  font-size: $font-sm;
+  letter-spacing: 1px;
+  line-height: 21px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: $spacer-3xs $spacer-xs;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: var(--text-color);
+    border-color: var(--text-muted);
+    text-decoration: none;
+  }
+}
+
+.page-actions__main {
+  border-radius: $border-radius 0 0 $border-radius;
+  border-right: none;
+  gap: 5px;
+  white-space: nowrap;
+  min-width: 120px;
+  justify-content: center;
+
+  i {
+    font-size: 1.2em;
+    line-height: 1em;
+  }
+}
+
+.page-actions__toggle {
+  border-radius: 0 $border-radius $border-radius 0;
+  padding: $spacer-3xs $spacer-xxs;
+
+  .icon-chevron-down {
+    font-size: $font-xs;
+    transition: transform 0.15s;
+  }
+
+  &[aria-expanded="true"] .icon-chevron-down {
+    transform: rotate(180deg);
+  }
+}
+
+.page-actions__dropdown {
+  @include floating;
+  background: var(--card-bg);
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 10;
+  min-width: 220px;
+  padding: $spacer-xs 0;
+}
+
+.page-actions__item {
+  display: flex;
+  align-items: center;
+  gap: $spacer-xxs;
+  width: 100%;
+  padding: 7px 16px;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  font-family: $font-base-family;
+  font-size: $font-md;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--well-bg);
+    color: var(--text-color);
+  }
+
+  [class*="icon-"] {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 2px;
+    flex-shrink: 0;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+    margin-right: 2px;
+    flex-shrink: 0;
+  }
+
+  &.page-actions__ask-ai {
+    --biel-button-padding: 0;
+    --biel-button-border-radius: 0;
+    --biel-button-box-shadow: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+
+    &::part(button) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: $spacer-xxs;
+      width: 100%;
+      padding: 7px 16px;
+      cursor: pointer;
+      text-align: left;
+    }
+  }
+
+}

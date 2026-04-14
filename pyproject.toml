@@ -1,6 +1,6 @@
 [project]
 name = "sphinx-scylladb-theme"
-version = "1.9.1"
+version = "1.9.2"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = [{name = "David García", email = "david@techdocs.studio"}]
 readme = "PYPI.rst"
