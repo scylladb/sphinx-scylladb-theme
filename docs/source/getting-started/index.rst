@@ -13,6 +13,7 @@ For docs maintainers
   * :doc:`Configure the project <../configuration/template>`
   * :doc:`List new versions  <../configuration/multiversion>`
   * :doc:`Publish to GitHub Pages  <../deployment/production>`
+  * :doc:`Browse projects using this theme <projects>`
 
 For docs contributors
 ---------------------
@@ -42,3 +43,4 @@ For theme maintainers
   toolchain
   installation
   quickstart
+  projects
