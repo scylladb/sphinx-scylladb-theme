@@ -42,7 +42,7 @@ To know more about them, refer to the `sphinx-multiversion documentation <https:
 Listing new versions from an external URL
 -----------------------------------------
 
-Multiversion configuration can be loaded from an external URL. 
+Multiversion configuration can be loaded from an external URL.
 The following example shows how to load the multiversion configuration in the ``conf.py`` file:
 
 .. code-block:: python
