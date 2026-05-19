@@ -37,7 +37,7 @@ For example, if you want to build docs for the tags ``3.22.0`` and ``3.21.0``, `
     LATEST_VERSION = '3.22.0'
 
 The extension allows configuring additional settings.
-To know more about them, refer to `sphinx-multiversion documentation <https://holzhaus.github.io/sphinx-multiversion/master/configuration.html>`_.
+To know more about them, refer to the `sphinx-multiversion documentation <https://github.com/sphinx-contrib/multiversion#readme>`_.
 
 Listing new versions from an external URL
 -----------------------------------------

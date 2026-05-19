@@ -17,7 +17,7 @@ Upgrade to version 1.1
 
 Here are the main breaking changes between the 1.0 and 1.1 versions.
 
-#. Install `Poetry 1.12 <https://python-poetry.org/docs/master/>`_ or later on your computer.
+#. Install `Poetry 1.12 <https://python-poetry.org/docs/>`_ or later on your computer.
 
 #. Update the following Python dependencies in ``docs/pyproject.toml``:
 
