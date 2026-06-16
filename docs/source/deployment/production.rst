@@ -11,6 +11,7 @@ On this page, you will learn:
 - How to read build error messages.
 - How to re-run a workflow.
 - How to disable GitHub Pages.
+- Where link checking is handled.
 
 .. _available-workflows:
 
@@ -29,8 +30,6 @@ The toolchain provides the following workflows under the directory ``.github/wor
       - Builds multi versioned docs every time the default branch (e.g. ``master``)  receives an update. If the build completes successfully, the workflow publishes the HTML version to GitHub Pages.
     * - ``docs-pr.yaml``
       - Builds the docs when the default branch receives a new pull request or when the pull request receives new commits. The purpose of this workflow is to make sure pull requests do not break the default branch after being merged.
-    * - ``docs-links.yaml`` (optional)
-      -  Looks for broken links once a week. If there are broken links, it creates an issue in the same repository with the list of affected links.
 
 .. caution:: If you modify these workflows in your repository, you will need to maintain the changes. So instead, we recommend you to open an issue in the `sphinx-scylladb-theme repository <https://github.com/scylladb/sphinx-scylladb-theme>`_ so that all projects can benefit from the improvements you made.
 
@@ -137,3 +136,19 @@ To disable the docs deployment temporarily:
 #. Delete the :ref:`workflows <available-workflows>` from ``.github/workflows``.
 
 #. Disable GitHub Pages from the repository settings. For more information, see  `Unpublishing a GitHub Pages Site <https://help.github.com/en/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site>`_.
+
+.. _link-checking:
+
+Link checking
+-------------
+
+Link checking is centralized in the `scylladb/scylladb-docs-homepage <https://github.com/scylladb/scylladb-docs-homepage>`_ repository and maintained by the Technical Writing team. Individual project repositories no longer need to run their own link-check workflow.
+
+The centralized workflow:
+
+* Runs every Monday at 08:00 UTC, and can be triggered manually.
+* Crawls each documentation site listed in `scripts/link-check/sites.yml <https://github.com/scylladb/scylladb-docs-homepage/blob/main/scripts/link-check/sites.yml>`_ in parallel.
+* Opens a GitHub issue in ``scylladb-docs-homepage`` for every site that has newly broken links, labelled ``link-check`` and ``link-check:<slug>``.
+* Skips links already tracked in another open issue for the same site, so issues do not duplicate findings.
+
+To request a change (add or remove a site, exclude a URL, run a one-off check for a specific site), open an issue or pull request in `scylladb-docs-homepage <https://github.com/scylladb/scylladb-docs-homepage>`_. See `scripts/link-check/README.md <https://github.com/scylladb/scylladb-docs-homepage/blob/main/scripts/link-check/README.md>`_ for the full reference.

@@ -57,7 +57,7 @@ The original static files are located under the folder ``src``.
 
 To build the minimized static files for this project:
 
-#.  Make sure you have Node.js 18 or later installed.
+#.  Make sure you have Node.js 20 or later installed.
 #.  Build the static files with:
 
 .. code:: console

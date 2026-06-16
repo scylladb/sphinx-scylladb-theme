@@ -113,7 +113,7 @@ Results in:
 
     .. topic-box::
         :title: Architecture
-        :link: /architecture
+        :link: #
         :class: large-6
         :anchor: Learn More
 
@@ -192,7 +192,7 @@ Results in:
 
     .. topic-box::
         :title: Monitoring
-        :link: /monitoring
+        :link: #
         :class: large-3
         :anchor: Monitor
 
