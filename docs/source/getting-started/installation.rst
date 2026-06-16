@@ -12,7 +12,7 @@ Before adding the documentation toolchain to a project, you will need to have in
 - A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
 - `Python 3.11 or later <https://www.python.org/downloads/>`_.
 - `uv <https://docs.astral.sh/uv/getting-started/installation/>`_.
-- `Make <https://www.gnu.org/software/make/>`_.
+- Make
 - `Git <https://git-scm.com/>`_.
 
 Step 1: Download the sample project
