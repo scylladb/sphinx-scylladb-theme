@@ -14,7 +14,7 @@ You must have a project cloned locally with the :doc:`documentation toolchain <i
 - A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
 - `Python 3.11 or later <https://www.python.org/downloads/>`_.
 - `uv <https://docs.astral.sh/uv/getting-started/installation/>`_.
-- `Make <https://www.gnu.org/software/make/>`_.
+- Make
 - `Git <https://git-scm.com/>`_.
 
 Step 1: Create a new doc
