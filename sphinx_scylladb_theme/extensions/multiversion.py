@@ -10,6 +10,17 @@ from pathlib import Path
 
 from .utils import build_redirect_body, copy
 
+# Builders that produce the canonical site output. Other builders (e.g. the
+# ``markdown`` sub-build spawned by sphinx-llm) inherit
+# ``SPHINX_MULTIVERSION_NAME`` from the parent, which would otherwise cause
+# these callbacks to fire from inside the sub-build and clobber the version's
+# real index.html.
+_HTML_BUILDERS = {"html", "dirhtml"}
+
+
+def _is_primary_html_build(app):
+    return app.builder is not None and app.builder.name in _HTML_BUILDERS
+
 
 def add_gh_pages_support(app, exception):
     """
@@ -21,6 +32,9 @@ def add_gh_pages_support(app, exception):
     :param exception: Sphinx Error
     :type exception: sphinx.error.SphinxError
     """
+
+    if not _is_primary_html_build(app):
+        return
 
     out_dir = Path(app.builder.outdir)
     head = out_dir.parent
@@ -39,6 +53,9 @@ def add_notfound_support(app, exception):
     :param exception: Sphinx Error
     :type exception: sphinx.error.SphinxError
     """
+    if not _is_primary_html_build(app):
+        return
+
     out_dir = Path(app.builder.outdir)
     head = out_dir.parent
 
@@ -73,6 +90,9 @@ def create_redirect_to_latest_version(app, exception):
     :param exception: Sphinx Error
     :type exception: sphinx.error.SphinxError
     """
+
+    if not _is_primary_html_build(app):
+        return
 
     latest_dir = app.config.smv_latest_version
     if (
