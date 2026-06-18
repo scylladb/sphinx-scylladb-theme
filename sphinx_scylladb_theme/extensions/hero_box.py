@@ -112,7 +112,7 @@ class HeroBox(Directive):
                     ask_ai_section = """
                 <div class="{class_name}__ask-ai">
                     <biel-button project="{ai_chatbot_id}"
-                        header-title="ScyllaDB chatbot (beta)"
+                        header-title="ScyllaDB chatbot"
                         button-position="default"
                         modal-position="bottom-right"
                         button-style="dark">Ask AI</biel-button>
@@ -140,7 +140,7 @@ class HeroBox(Directive):
                     ask_ai_section = """
                 <div class="{class_name}__ask-ai">
                     <biel-button project="{ai_chatbot_id}"
-                        header-title="ScyllaDB chatbot (beta)"
+                        header-title="ScyllaDB chatbot"
                         button-position="default"
                         modal-position="bottom-right"
                         button-style="dark">Ask AI</biel-button>
@@ -152,7 +152,7 @@ class HeroBox(Directive):
                         <div class="{class_name}__search-box">
                             <biel-search-button
                                 project="{ai_chatbot_id}"
-                                header-title="ScyllaDB chatbot (beta)"
+                                header-title="ScyllaDB chatbot"
                                 button-position="bottom-right"
                                 hide-filters="false"
                                 modal-position="top-center"

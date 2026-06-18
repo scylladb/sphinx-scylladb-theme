@@ -72,7 +72,7 @@ post_content_data = [
             </div>
                 <div class="hero__ask-ai">
                     <biel-button project="test-chatbot-id"
-                        header-title="ScyllaDB chatbot (beta)"
+                        header-title="ScyllaDB chatbot"
                         button-position="default"
                         modal-position="bottom-right"
                         button-style="dark">Ask AI</biel-button>

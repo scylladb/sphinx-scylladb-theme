@@ -48,7 +48,7 @@ export class PageActionsHandler {
       <div class="page-actions__dropdown" hidden>
         <biel-button class="page-actions__item page-actions__ask-ai"
           project="${bielProject}"
-          header-title="ScyllaDB chatbot (beta)"
+          header-title="ScyllaDB chatbot"
           button-position="default"
           modal-position="sidebar-right"
           button-style="default"
