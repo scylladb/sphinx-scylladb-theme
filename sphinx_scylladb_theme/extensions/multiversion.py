@@ -2,6 +2,7 @@
 Extends sphinx_multiversion:
 - GH Pages support
 - 404 pages support
+- Root-level SEO files (llms.txt, llms-full.txt, sitemap.xml) from stable
 - Redirect to latest version
 """
 
@@ -62,6 +63,36 @@ def add_notfound_support_dirhtml(app, exception):
         copy(str(out_dir / "404" / "index.html"), str(out_dir / "404.html"))
 
 
+def add_root_seo_files_support(app, exception):
+    """
+    Copies ``llms.txt``, ``llms-full.txt``, and ``sitemap.xml`` from the
+    stable version's output directory to the root of the multiversion build
+    so they are served at the site root (e.g. ``/llms.txt``, ``/sitemap.xml``)
+    rather than nested under ``/stable/``.
+
+    :param app: Sphinx Application
+    :type app: sphinx.application.Sphinx
+
+    :param exception: Sphinx Error
+    :type exception: sphinx.error.SphinxError
+    """
+
+    latest_dir = app.config.smv_latest_version
+    if (
+        hasattr(app.config, "smv_rename_latest_version")
+        and app.config.smv_rename_latest_version
+    ):
+        latest_dir = app.config.smv_rename_latest_version
+
+    out_dir = Path(app.builder.outdir)
+    if out_dir.name != latest_dir:
+        return
+
+    head = out_dir.parent
+    for filename in ("llms.txt", "llms-full.txt", "sitemap.xml"):
+        copy(str(out_dir / filename), str(head / filename))
+
+
 def create_redirect_to_latest_version(app, exception):
     """
     When multiversion is enabled, creates a redirect to the ``smv_latest_version``
@@ -99,6 +130,7 @@ def setup(app):
     if is_multiversion:
         app.connect("build-finished", add_gh_pages_support)
         app.connect("build-finished", add_notfound_support)
+        app.connect("build-finished", add_root_seo_files_support)
         app.connect("build-finished", create_redirect_to_latest_version)
     else:
         app.connect("build-finished", add_notfound_support_dirhtml)
