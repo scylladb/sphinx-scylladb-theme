@@ -2,6 +2,9 @@
 Getting started
 ===============
 
+.. meta::
+   :description: Add the documentation toolchain to a ScyllaDB project, configure it, contribute to the docs, and browse projects using the theme.
+
 For docs maintainers
 --------------------
 

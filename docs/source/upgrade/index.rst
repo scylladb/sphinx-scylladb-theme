@@ -1,6 +1,9 @@
 Upgrade guides
 ==============
 
+.. meta::
+   :description: Step-by-step guides for upgrading the ScyllaDB Sphinx Theme between major versions.
+
 .. toctree::
    :maxdepth: 2
    :hidden:

@@ -4,6 +4,7 @@ import { gfm } from "turndown-plugin-gfm";
 /**
  * Page Actions: "Ask a question" button with dropdown next to the page title.
  * - Ask a question: opens the biel.ai chatbot
+ * - View llms.txt (links to the site's llms.txt index)
  * - Copy page as Markdown
  * - Open in ChatGPT (passes page URL)
  * - Open in Claude (passes page URL)
@@ -66,8 +67,10 @@ export class PageActionsHandler {
       </div>
     `;
 
-    // Prepend "View source" link via DOM (avoid HTML injection from attribute)
     const contentBody = document.querySelector(".content-body");
+    const dropdown = group.querySelector(".page-actions__dropdown");
+
+    // Prepend "View source" link via DOM (avoid HTML injection from attribute)
     const viewSourceUrl = contentBody?.getAttribute("data-view-source-url");
     if (viewSourceUrl) {
       let safeViewSourceUrl = null;
@@ -80,7 +83,6 @@ export class PageActionsHandler {
         // Ignore invalid URLs
       }
       if (safeViewSourceUrl) {
-        const dropdown = group.querySelector(".page-actions__dropdown");
         const link = document.createElement("a");
         link.className = "page-actions__item";
         link.href = safeViewSourceUrl;
@@ -93,6 +95,35 @@ export class PageActionsHandler {
         link.appendChild(icon);
         link.appendChild(label);
         dropdown.insertBefore(link, dropdown.firstChild);
+      }
+    }
+
+    // Insert "View llms.txt" link before "Ask a question" (styled as a file action)
+    const llmsTxtUrl = contentBody?.getAttribute("data-llms-txt-url");
+    if (llmsTxtUrl) {
+      let safeLlmsTxtUrl = null;
+      try {
+        const parsedUrl = new URL(llmsTxtUrl, window.location.href);
+        if (parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:") {
+          safeLlmsTxtUrl = parsedUrl.href;
+        }
+      } catch {
+        // Ignore invalid URLs
+      }
+      if (safeLlmsTxtUrl) {
+        const link = document.createElement("a");
+        link.className = "page-actions__item";
+        link.href = safeLlmsTxtUrl;
+        link.target = "_blank";
+        link.rel = "noopener";
+        const icon = document.createElement("i");
+        icon.className = "icon-description";
+        const label = document.createElement("span");
+        label.textContent = "View llms.txt";
+        link.appendChild(icon);
+        link.appendChild(label);
+        const askAi = dropdown.querySelector(".page-actions__ask-ai");
+        dropdown.insertBefore(link, askAi);
       }
     }
 
@@ -133,6 +164,13 @@ export class PageActionsHandler {
     const viewSourceBtn = group.querySelector('[href*="/blob/"]');
     if (viewSourceBtn) {
       viewSourceBtn.addEventListener("click", () => {
+        this._closeDropdown(dropdown, toggleBtn);
+      });
+    }
+
+    const llmsTxtBtn = group.querySelector('[href$="llms.txt"]');
+    if (llmsTxtBtn) {
+      llmsTxtBtn.addEventListener("click", () => {
         this._closeDropdown(dropdown, toggleBtn);
       });
     }

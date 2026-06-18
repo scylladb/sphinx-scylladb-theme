@@ -2,6 +2,9 @@
 Deployment
 ==========
 
+.. meta::
+   :description: Publish documentation to GitHub Pages with GitHub Actions, including pull-request previews and centralized publication.
+
 .. toctree::
    :maxdepth: 2
    :hidden:
