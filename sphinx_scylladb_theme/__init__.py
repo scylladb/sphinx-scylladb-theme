@@ -10,6 +10,7 @@ from sphinxcontrib import mermaid
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     alerts,
+    diagram,
     grid,
     hero_box,
     include_tooltip,
@@ -154,6 +155,7 @@ def setup(app):
 
     """Setup custom extensions"""
     alerts.setup(app)
+    diagram.setup(app)
     hero_box.setup(app)
     grid.setup(app)
     include_tooltip.setup(app)

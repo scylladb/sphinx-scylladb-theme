@@ -1,21 +1,26 @@
 Images
 ======
 
-There are two possible directives for images. One is the image directive and the other is the figure directive.
+There are two possible directives for images: the image directive and the figure directive.
 Refer to `DocUtils <https://docutils.sourceforge.io/docs/ref/rst/directives.html#images>`_ for more options.
+
+Image directive
+---------------
 
 .. code-block:: none
 
   .. image:: images/checkmark.png
       :alt: checkmark
 
-renders the image
+Renders the image:
 
 .. image:: images/checkmark.png
    :alt: checkmark
 
+Figure directive
+----------------
 
-Whereas the figure directive allows you to use captions.
+The figure directive allows you to use captions.
 
 .. code-block:: none
 
@@ -57,3 +62,38 @@ Renders the image as:
    :width: 150px
 
 Click on the image to preview it in full size.
+
+Diagrams with metadata
+----------------------
+
+Use the ``diagram`` directive to wrap a figure or image with metadata so external tools can filter and extract diagrams.
+The ``:id:`` option becomes the wrapper's HTML ``id`` attribute.
+The remaining options are exposed as ``data-*`` attributes on the wrapping ``<div class="diagram">``.
+
+.. code-block:: none
+
+   .. diagram::
+      :id: auth-flow
+      :tags: networking, security
+      :categories: security
+      :deployment: core
+      :last-reviewed: 2026-06-01
+
+      .. figure:: images/diagram.svg
+         :alt: Authentication flow
+
+         Authentication flow diagram.
+
+Renders as:
+
+.. diagram::
+   :id: auth-flow
+   :tags: networking, security
+   :categories: security
+   :deployment: core
+   :last-reviewed: 2026-06-01
+
+   .. figure:: images/diagram.svg
+      :alt: Authentication flow
+
+      Authentication flow diagram.
