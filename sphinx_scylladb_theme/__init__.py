@@ -21,6 +21,7 @@ from sphinx_scylladb_theme.extensions import (
     topic_box,
     validations,
 )
+from sphinx_scylladb_theme.extensions.utils import base_url
 from sphinx_scylladb_theme.lexers import cql, ditaa
 
 
@@ -99,18 +100,9 @@ def override_llms_txt_defaults(config):
 
     # Emit absolute URLs in llms.txt sitemaps, including the per-version
     # prefix when sphinx-multiversion is driving the build.
-    base_url = (getattr(config, "html_baseurl", "") or "").rstrip("/")
-    if not base_url:
-        return
-
-    sphinx_mv_outdir = getenv("SPHINX_MULTIVERSION_OUTPUTDIR")
-    if sphinx_mv_outdir:
-        version_slug = path.basename(sphinx_mv_outdir.rstrip("/"))
-        if version_slug:
-            base_url = f"{base_url}/{version_slug}"
-
-    if not getattr(config, "markdown_http_base", ""):
-        config.markdown_http_base = base_url
+    site_base = base_url(config)
+    if site_base and not getattr(config, "markdown_http_base", ""):
+        config.markdown_http_base = site_base
 
 
 def override_rst_epilog(config):
