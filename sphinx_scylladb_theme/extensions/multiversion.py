@@ -9,7 +9,7 @@ Extends sphinx_multiversion:
 import os
 from pathlib import Path
 
-from .utils import build_redirect_body, copy
+from .utils import build_redirect_body, copy, latest_version_slug
 
 # Builders that produce the canonical site output. Other builders (e.g. the
 # ``markdown`` sub-build spawned by sphinx-llm) inherit
@@ -94,12 +94,7 @@ def add_root_seo_files_support(app, exception):
     :type exception: sphinx.error.SphinxError
     """
 
-    latest_dir = app.config.smv_latest_version
-    if (
-        hasattr(app.config, "smv_rename_latest_version")
-        and app.config.smv_rename_latest_version
-    ):
-        latest_dir = app.config.smv_rename_latest_version
+    latest_dir = latest_version_slug(app.config)
 
     out_dir = Path(app.builder.outdir)
     if out_dir.name != latest_dir:
@@ -125,12 +120,7 @@ def create_redirect_to_latest_version(app, exception):
     if not _is_primary_html_build(app):
         return
 
-    latest_dir = app.config.smv_latest_version
-    if (
-        hasattr(app.config, "smv_rename_latest_version")
-        and app.config.smv_rename_latest_version
-    ):
-        latest_dir = app.config.smv_rename_latest_version
+    latest_dir = latest_version_slug(app.config)
 
     theme_options = app.config.html_theme_options
     custom_redirect = theme_options.get("redirect", "")

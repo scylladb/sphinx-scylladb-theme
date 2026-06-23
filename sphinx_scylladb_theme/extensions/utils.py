@@ -71,6 +71,44 @@ def build_redirect_body(path, zendesk_tag=""):
     return html
 
 
+def version_slug():
+    """
+    Returns the sphinx-multiversion path segment for the current build,
+    e.g. ``"stable"`` or ``"branch-1.9"``, or ``""`` outside multiversion.
+    """
+    sphinx_mv_outdir = os.getenv("SPHINX_MULTIVERSION_OUTPUTDIR")
+    if not sphinx_mv_outdir:
+        return ""
+    return os.path.basename(sphinx_mv_outdir.rstrip("/"))
+
+
+def base_url(config):
+    """
+    Returns the project's absolute ``html_baseurl`` with the
+    sphinx-multiversion path segment appended when running under
+    multiversion. Empty string when ``html_baseurl`` is unset.
+    """
+    base = (getattr(config, "html_baseurl", "") or "").rstrip("/")
+    if not base:
+        return ""
+    slug = version_slug()
+    if slug:
+        base = f"{base}/{slug}"
+    return base
+
+
+def latest_version_slug(config):
+    """
+    Returns the directory name of the latest stable version
+    (``smv_rename_latest_version`` if set, falling back to
+    ``smv_latest_version``). Empty string when neither is configured.
+    """
+    rename = getattr(config, "smv_rename_latest_version", None)
+    if rename:
+        return rename
+    return getattr(config, "smv_latest_version", "") or ""
+
+
 def is_url(path):
     """
     Checks if a path is an external url or a relative path.
