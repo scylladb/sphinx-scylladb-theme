@@ -77,7 +77,10 @@
         {% if llms_txt_enabled %}
             {% set llms_version_prefix = (current_version.name + '/') if versions and current_version else '' %}
             {% set llms_txt_absolute_url = html_baseurl + '/' + llms_version_prefix + 'llms.txt' %}
-            <link rel="alternate" type="text/markdown" href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md" />
+            {% set llms_has_markdown = pagename not in ('genindex', 'py-modindex', 'search') %}
+            {% if llms_has_markdown %}
+                <link rel="alternate" type="text/markdown" href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md" />
+            {% endif %}
         {% endif %}
 
         {% block css %}
@@ -120,7 +123,7 @@
                      {% endif %}>
                     {% if llms_txt_enabled %}
                         <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-                            For AI agents: a documentation index is available at <a href="{{ llms_txt_absolute_url }}">{{ llms_txt_absolute_url }}</a>. A Markdown version of this page is at <a href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md">{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md</a>.
+                            For AI agents: a documentation index is available at <a href="{{ llms_txt_absolute_url }}">{{ llms_txt_absolute_url }}</a>.{% if llms_has_markdown %} A Markdown version of this page is at <a href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md">{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md</a>.{% endif %}
                         </div>
                     {% endif %}
                     {% if not hide_version_warning %}

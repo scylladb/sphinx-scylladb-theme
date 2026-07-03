@@ -29,7 +29,7 @@ Core
       - `scylladb/scylladb <https://github.com/scylladb/scylladb>`_
       - https://docs.scylladb.com/manual/stable/
     * - ScyllaDB Enterprise
-      - `scylladb/scylla-enterprise <https://github.com/scylladb/scylla-enterprise>`_
+      - ``scylladb/scylla-enterprise``
       - https://enterprise.docs.scylladb.com/
     * - ScyllaDB Developers
       - `scylladb/scylladb-docs-developers <https://github.com/scylladb/scylladb-docs-developers>`_
