@@ -56,6 +56,17 @@
         <link rel="apple-touch-icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
         <meta name="msapplication-TileImage" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
 
+        <script>
+            (function () {
+                if (window.location.hostname === 'previews.docs.scylladb.com') {
+                    var meta = document.createElement('meta');
+                    meta.name = 'robots';
+                    meta.content = 'noindex, nofollow';
+                    document.head.appendChild(meta);
+                }
+            })();
+        </script>
+
         {% if pagename == "index" %}
             {% set canonical_page = "" %}
         {% elif pagename.endswith("/index") %}
