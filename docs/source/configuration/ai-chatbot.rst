@@ -1,14 +1,10 @@
-=========================
-AI chatbot support (beta)
-=========================
+==================
+AI chatbot support
+==================
 
 ScyllaDB Docs integrates with `Biel.ai <https://biel.ai/>`_ to offer a conversational interface for documentation.
 
 The chatbot can answer documentation-related questions and provide relevant links to help users find the information they need quickly.
-
-.. note::
-    This feature is in beta and disabled by default. It will be gradually enabled for all documentation sites in a future release.
-    If you want to enable it now, please contact us in Slack (``#scylla-docs`` channel).
 
 Installation
 ------------

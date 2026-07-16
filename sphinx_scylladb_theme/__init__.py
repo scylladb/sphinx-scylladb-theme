@@ -10,6 +10,7 @@ from sphinxcontrib import mermaid
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     alerts,
+    diagram,
     grid,
     hero_box,
     include_tooltip,
@@ -20,6 +21,7 @@ from sphinx_scylladb_theme.extensions import (
     topic_box,
     validations,
 )
+from sphinx_scylladb_theme.extensions.utils import base_url
 from sphinx_scylladb_theme.lexers import cql, ditaa
 
 
@@ -58,6 +60,7 @@ def update_context(app, pagename, templatename, context, doctree):
     context["hide_secondary_sidebar"] = "hide-secondary-sidebar" in file_meta
     context["exclude_doctools"] = "exclude-doctools" in file_meta
     context["landing"] = "landing" in file_meta
+    context["llms_txt_enabled"] = getattr(app.config, "llms_txt_enabled", True)
 
     # TOC depth configuration (min: 2, max: 4)
     default_toc_depth = getattr(app.config, "html_theme_options", {}).get(
@@ -82,6 +85,26 @@ def override_smv_latest_version(config):
     return config.smv_latest_version
 
 
+def override_llms_txt_defaults(config):
+    # Use "replace" mode (foo.md) instead of the default "auto" (foo.html.md).
+    if getattr(config, "llms_txt_suffix_mode", "auto") == "auto":
+        config.llms_txt_suffix_mode = "replace"
+
+    # Default the llms.txt header description to the theme's site_description
+    # option so projects don't have to maintain two copies of the same text.
+    if not getattr(config, "llms_txt_description", ""):
+        theme_options = getattr(config, "html_theme_options", {}) or {}
+        site_description = theme_options.get("site_description", "")
+        if site_description:
+            config.llms_txt_description = site_description
+
+    # Emit absolute URLs in llms.txt sitemaps, including the per-version
+    # prefix when sphinx-multiversion is driving the build.
+    site_base = base_url(config)
+    if site_base and not getattr(config, "markdown_http_base", ""):
+        config.markdown_http_base = site_base
+
+
 def override_rst_epilog(config):
     substitutions = """
 .. role:: raw-html(raw)
@@ -99,6 +122,7 @@ def override_rst_epilog(config):
 def update_config(app, config):
     override_smv_latest_version(config)
     override_rst_epilog(config)
+    override_llms_txt_defaults(config)
     config.sphinx_tabs_disable_css_loading = True
 
 
@@ -119,9 +143,11 @@ def setup(app):
     sphinx_copybutton.setup(app)
     sphinx_substitution_extensions.setup(app)
     tabs.setup(app)
+    app.setup_extension("sphinx_llm.txt")
 
     """Setup custom extensions"""
     alerts.setup(app)
+    diagram.setup(app)
     hero_box.setup(app)
     grid.setup(app)
     include_tooltip.setup(app)

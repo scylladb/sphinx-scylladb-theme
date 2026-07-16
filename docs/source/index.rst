@@ -9,6 +9,9 @@
 
 .. title:: ScyllaDB Sphinx Theme
 
+.. meta::
+   :description: The ScyllaDB Sphinx Theme is the documentation toolchain used across ScyllaDB projects, built on Sphinx and ready for GitHub Pages.
+
 .. hero-box::
   :button_icon: icon-github
   :button_style: bold

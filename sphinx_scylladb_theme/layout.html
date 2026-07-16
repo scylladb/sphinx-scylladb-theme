@@ -12,9 +12,7 @@
         {% endfor %}
     {% endmacro %}
     {% macro css() %}
-        {% if theme_search_engine|lower == 'expertrec' %}
-            <link rel="dns-prefetch" href="https://cse.expertrec.com">
-        {% endif %}
+        {% include 'search-engine.html' %}
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preload" as="style"
@@ -58,6 +56,17 @@
         <link rel="apple-touch-icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
         <meta name="msapplication-TileImage" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
 
+        <script>
+            (function () {
+                if (window.location.hostname === 'previews.docs.scylladb.com') {
+                    var meta = document.createElement('meta');
+                    meta.name = 'robots';
+                    meta.content = 'noindex, nofollow';
+                    document.head.appendChild(meta);
+                }
+            })();
+        </script>
+
         {% if pagename == "index" %}
             {% set canonical_page = "" %}
         {% elif pagename.endswith("/index") %}
@@ -75,6 +84,15 @@
         {% endif %}
 
         <link rel="author" href="mailto:info@scylladb.com" />
+
+        {% if llms_txt_enabled %}
+            {% set llms_version_prefix = (current_version.name + '/') if versions and current_version else '' %}
+            {% set llms_txt_absolute_url = html_baseurl + '/' + llms_version_prefix + 'llms.txt' %}
+            {% set llms_has_markdown = pagename not in ('genindex', 'py-modindex', 'search') %}
+            {% if llms_has_markdown %}
+                <link rel="alternate" type="text/markdown" href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md" />
+            {% endif %}
+        {% endif %}
 
         {% block css %}
             {{ css() }}
@@ -108,9 +126,17 @@
                 {% endif %}
 
                 <div class="content-body"
+                     {% if llms_txt_enabled %}
+                         data-llms-txt-url="{{ llms_txt_absolute_url }}"
+                     {% endif %}
                      {% if theme_hide_edit_this_page_button|lower == 'false' and theme_github_repository %}
                          data-view-source-url="https://github.com/{{ theme_github_repository }}/blob/{{ theme_default_branch }}/{{ theme_conf_py_path }}{{ pagename }}{{ page_source_suffix }}"
                      {% endif %}>
+                    {% if llms_txt_enabled %}
+                        <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+                            For AI agents: a documentation index is available at <a href="{{ llms_txt_absolute_url }}">{{ llms_txt_absolute_url }}</a>.{% if llms_has_markdown %} A Markdown version of this page is at <a href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md">{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md</a>.{% endif %}
+                        </div>
+                    {% endif %}
                     {% if not hide_version_warning %}
                         {% include 'version-warning.html'%}
                     {% endif %}
