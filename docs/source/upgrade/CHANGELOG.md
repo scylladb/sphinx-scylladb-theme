@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.9.3 - 15 July 2026
+## 1.9.3 - 16 July 2026
 
 ### Added
 
@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#1646](https://github.com/scylladb/sphinx-scylladb-theme/pull/1646): Published `llms.txt`, `llms-full.txt`, and `sitemap.xml` at the site root.
 - [#1647](https://github.com/scylladb/sphinx-scylladb-theme/pull/1647): Added the `diagram` directive for embedding diagrams in documentation pages.
 - [#1650](https://github.com/scylladb/sphinx-scylladb-theme/pull/1650): Published `diagrams.json` file on every docs site.
-- [#1660](https://github.com/scylladb/sphinx-scylladb-theme/pull/1660): Added a per-page "Last updated on" footer date sourced from each page's last git commit.
 - [#1656](https://github.com/scylladb/sphinx-scylladb-theme/pull/1656): Automatically inject `<meta name="robots" content="noindex, nofollow">` on preview builds hosted at `previews.docs.scylladb.com` to keep them out of search engines.
 - [#1655](https://github.com/scylladb/sphinx-scylladb-theme/pull/1655): Added a build warning when external-link syntax is used for internal documentation references (use `:doc:` or `:ref:` instead).
 
