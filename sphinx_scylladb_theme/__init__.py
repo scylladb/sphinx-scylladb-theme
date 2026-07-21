@@ -15,6 +15,7 @@ from sphinx_scylladb_theme.extensions import (
     hero_box,
     include_tooltip,
     labels,
+    last_updated,
     multiversion,
     navigation,
     panel_box,
@@ -152,6 +153,7 @@ def setup(app):
     grid.setup(app)
     include_tooltip.setup(app)
     labels.setup(app)
+    last_updated.setup(app)
     multiversion.setup(app)
     panel_box.setup(app)
     topic_box.setup(app)
