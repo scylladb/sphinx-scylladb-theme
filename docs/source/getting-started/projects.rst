@@ -23,7 +23,7 @@ Core
       - `scylladb/scylladb-docs-homepage <https://github.com/scylladb/scylladb-docs-homepage>`_
       - https://docs.scylladb.com/
     * - ScyllaDB Cloud
-      - `scylladb/scylla-cloud-doc <https://github.com/scylladb/scylla-cloud-doc>`_
+      - `scylladb/scylla-cloud-doc`
       - https://cloud.docs.scylladb.com/stable/
     * - ScyllaDB Manual
       - `scylladb/scylladb <https://github.com/scylladb/scylladb>`_
