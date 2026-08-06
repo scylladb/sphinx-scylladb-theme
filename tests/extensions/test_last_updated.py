@@ -166,3 +166,11 @@ def test_update_page_context_no_dates_untouched():
     context = {}
     update_page_context(app, "index", None, context, None)
     assert context == {}
+
+
+def test_update_page_context_normalizes_windows_separators():
+    app = make_app({"docs/source/configuration/index.rst": 0})
+    app.env.doc2path.return_value = "configuration\\index.rst"
+    context = {}
+    update_page_context(app, "configuration/index", None, context, None)
+    assert context["last_updated"] == "01 January 1970"

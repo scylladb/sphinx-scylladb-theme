@@ -167,8 +167,9 @@ def update_page_context(app, pagename, templatename, context, doctree):
     if not dates:
         return
 
-    source = app.env.doc2path(pagename, False)
-    repo_path = posixpath.join(app._git_last_updated_prefix, str(source))
+    # On Windows, doc2path uses "\" as separator, git records paths with "/".
+    source = str(app.env.doc2path(pagename, False)).replace("\\", "/")
+    repo_path = posixpath.join(app._git_last_updated_prefix, source)
     timestamp = dates.get(repo_path)
     if timestamp is None:
         return
