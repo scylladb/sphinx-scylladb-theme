@@ -51,7 +51,10 @@ def find_repo_root(*candidates):
             continue
         out = _git(path, "rev-parse", "--show-toplevel")
         if out:
-            return out.strip()
+            # Git returns forward slashes on Windows; normalize to the OS
+            # separator so downstream string comparisons in source_prefix
+            # (against os.path.realpath output) don't miss.
+            return os.path.normpath(out.strip())
     return ""
 
 
