@@ -17,6 +17,7 @@ from sphinx_scylladb_theme.extensions import (
     labels,
     multiversion,
     navigation,
+    page_anchor,
     panel_box,
     topic_box,
     validations,
@@ -153,6 +154,7 @@ def setup(app):
     include_tooltip.setup(app)
     labels.setup(app)
     multiversion.setup(app)
+    page_anchor.setup(app)
     panel_box.setup(app)
     topic_box.setup(app)
     validations.setup(app)
