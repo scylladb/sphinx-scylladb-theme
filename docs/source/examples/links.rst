@@ -36,7 +36,7 @@ There are a few links you can use with different purposes.
      - Renders the parameter name as a hyperlink.
      - This is an internal cross-reference to a parameter on the `Configuration Parameters <https://opensource.docs.scylladb.com/stable/reference/configuration-parameters.html>`_ page.
        It does NOT require a bookmark, as parameter names on that are page implicit bookmarks. Content opens in the same tab.
-       This option only applies to the ``scylladb/sylladb`` and ``scylladb/scylla-enterprise`` projects. 
+       This option only applies to the ``scylladb/sylladb`` and ``scylladb/scylla-enterprise`` projects.
    * - Internal Cross-reference to Parameter Gropus
      - .. code-block:: rst
 
@@ -44,7 +44,7 @@ There are a few links you can use with different purposes.
      - Renders the name of the parameter group as a hyperlink.
      - This is an internal cross-reference to a parameter group on the `Configuration Parameters <https://opensource.docs.scylladb.com/stable/reference/configuration-parameters.html>`_ page.
        It does NOT require a bookmark, as group names on that are page implicit bookmarks. Content opens in the same tab.
-       This option only applies to the ``scylladb/sylladb`` and ``scylladb/scylla-enterprise`` projects. 
+       This option only applies to the ``scylladb/sylladb`` and ``scylladb/scylla-enterprise`` projects.
    * - Internal Doc Reference
      - .. code-block:: rst
 
@@ -58,3 +58,14 @@ There are a few links you can use with different purposes.
 
      - :download:`download <index.rst>`
      - This opens a download window. It is used to help users download software or files.
+   * - Page Anchor Link
+     - .. code-block:: rst
+
+          :page-anchor:`System requirements </examples/headings#system-requirements>`
+
+     - :page-anchor:`System requirements </examples/headings#system-requirements>`
+     - Links to an arbitrary anchor of any page in the project, without validating the anchor.
+       Use it for anchors that Sphinx cannot see at build time because JavaScript generates them,
+       such as endpoint deep links on API reference pages rendered with Redoc or Swagger UI.
+       Whenever possible, prefer built-in Sphinx roles such as ``:ref:`` or ``:doc:``,
+       which validate the target at build time.
