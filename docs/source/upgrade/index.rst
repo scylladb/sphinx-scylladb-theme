@@ -8,6 +8,7 @@ Upgrade guides
    :maxdepth: 2
    :hidden:
 
+   1-9-to-1-10
    1-8-to-1-9
    1-7-to-1-8
    1-6-to-1-7
@@ -22,6 +23,7 @@ Upgrade guides
 
 .. panel-box::
 
+  * :doc:`Upgrading from 1.9 to 1.10 <1-9-to-1-10>`
   * :doc:`Upgrading from 1.8 to 1.9 <1-8-to-1-9>`
   * :doc:`Upgrading from 1.7 to 1.8 <1-7-to-1-8>`
   * :doc:`Upgrading from 1.6 to 1.7 <1-6-to-1-7>`
