@@ -7,6 +7,7 @@ from notfound import extension as not_found
 from sphinx_tabs import tabs
 from sphinxcontrib import mermaid
 
+from sphinx.environment.adapters.toctree import global_toctree_for_doc
 from sphinx_scylladb_theme._version import version
 from sphinx_scylladb_theme.extensions import (
     alerts,
@@ -41,6 +42,63 @@ def compute_toc_tree(toctree, maxdepth, collapse):
     return toctree_html
 
 
+_BASE_TOCTREE_CACHE: dict = {}
+
+# Sphinx has no "no limit" value for toctree depth: 0 means "use the toctree's
+# own :maxdepth:". Render the cached base tree with this large depth so every
+# level is present, then apply the caller's real depth per page via
+# navigation._prune_to_depth.
+_UNPRUNED_MAXDEPTH = 10_000
+
+
+def _get_root_toctree(builder, maxdepth, collapse):
+    """Render the global toctree once, relative to the root document.
+
+    Rendering it per page is O(pages x tree) and dominates build time on large
+    sites: Sphinx resolves and deep-copies the whole tree on every call. The
+    per-page differences are only the relative links and the "current" marker,
+    which ``navigation.relativize_and_mark_current`` applies to this cached
+    HTML instead.
+    """
+    key = (builder, collapse)
+    cached = _BASE_TOCTREE_CACHE.get(key)
+    if cached is None:
+        root_doc = getattr(builder.config, "root_doc", None) or builder.config.master_doc
+        node = global_toctree_for_doc(
+            builder.env,
+            root_doc,
+            builder,
+            tags=builder.tags,
+            collapse=collapse,
+            maxdepth=_UNPRUNED_MAXDEPTH,
+            titles_only=True,
+            includehidden=True,
+        )
+        cached = builder.render_partial(node)["fragment"] if node is not None else ""
+        _BASE_TOCTREE_CACHE[key] = cached
+    return cached
+
+
+def make_navigation_tree(app, pagename):
+    """Return the ``navigation_tree`` callable for one page.
+
+    Keeps the signature the templates call, but serves the cached,
+    per-page-adjusted tree instead of re-rendering the global toctree.
+    """
+
+    def navigation_tree(toctree, maxdepth, collapse):
+        if collapse:
+            return compute_toc_tree(toctree, maxdepth, collapse)
+        base = _get_root_toctree(app.builder, maxdepth, collapse)
+        if not base:
+            return compute_toc_tree(toctree, maxdepth, collapse)
+        return navigation.get_navigation_tree(
+            base, collapse, pagename, app.builder, maxdepth
+        )
+
+    return navigation_tree
+
+
 def compute_hide_toc(context):
     if "toc" not in context:
         return True
@@ -51,7 +109,7 @@ def compute_hide_toc(context):
 def update_context(app, pagename, templatename, context, doctree):
     file_meta = context.get("meta", None) or {}
     context["scylladb_theme_version"] = version
-    context["navigation_tree"] = compute_toc_tree
+    context["navigation_tree"] = make_navigation_tree(app, pagename)
     context["full_width"] = "full-width" in file_meta
     context["hide_toc"] = compute_hide_toc(context)
     context["hide_pre_content"] = "hide-pre-content" in file_meta
@@ -131,6 +189,7 @@ def update_config(app, config):
 def setup(app):
     """Setup theme"""
     app.add_html_theme("sphinx_scylladb_theme", path.abspath(path.dirname(__file__)))
+    app.connect("builder-inited", lambda app: _BASE_TOCTREE_CACHE.clear())
     app.connect("html-page-context", update_context)
     app.connect("config-inited", update_config)
 
