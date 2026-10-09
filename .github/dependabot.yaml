@@ -7,12 +7,20 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      codeql:
+        patterns:
+          - "github/codeql-action/*"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      babel:
+        patterns:
+          - "@babel/*"
 
   # Maintain dependencies for uv
   - package-ecosystem: "uv"
