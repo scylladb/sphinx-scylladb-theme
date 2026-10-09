@@ -1,6 +1,6 @@
 [project]
 name = "sphinx-scylladb-theme"
-version = "1.9.3"
+version = "1.10.0"
 description = "A Sphinx Theme for ScyllaDB documentation projects"
 authors = [{name = "David García", email = "david@techdocs.studio"}]
 readme = "PYPI.rst"
@@ -42,6 +42,9 @@ dev = [
     "redirects_cli>=0.1.3,<0.2",
     "breathe>=4.36.0,<5",
 ]
+
+[project.scripts]
+scylla-check-redirects = "sphinx_scylladb_theme.cli.redirects_check:main"
 
 [build-system]
 requires = ["hatchling"]
