@@ -10,19 +10,18 @@
     "lint": "eslint . src config || true"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.6",
-    "@babel/preset-env": "^7.28.5",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.7",
+    "@eslint/js": "^10.0.1",
     "babel-loader": "^10.1.1",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^14.0.0",
     "cross-env": "^10.1.0",
     "css-loader": "^7.1.4",
     "css-minimizer-webpack-plugin": "^8.0.0",
-    "eslint": "^9.0.0",
+    "eslint": "^10.8.1",
     "eslint-formatter-table": "^7.32.1",
-    "eslint-import-resolver-webpack": "^0.13.10",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-webpack-plugin": "^5.0.3",
+    "eslint-webpack-plugin": "^6.0.0",
     "foundation-sites": "^6.9.0",
     "globals": "^17.4.0",
     "jquery": "^3.7.1",
@@ -41,6 +40,6 @@
     "turndown-plugin-gfm": "^1.0.2"
   },
   "engines": {
-    "node": ">=20"
+    "node": "^22.18.0 || >=24.11.0"
   }
 }

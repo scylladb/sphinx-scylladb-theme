@@ -111,7 +111,7 @@
 
 /*! jquery */
 
-/*! js-cookie v3.0.5 | MIT */
+/*! js-cookie v3.0.7 | MIT */
 
 /*!*******************************!*\
   !*** ./js/foundation.core.js ***!
