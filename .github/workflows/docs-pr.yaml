@@ -43,6 +43,6 @@ jobs:
 
       - name: Summarize docs diagnostics
         if: always()
-        uses: scylladb/sphinx-scylladb-theme/.github/actions/docs-report@1.10.0
+        uses: scylladb/sphinx-scylladb-theme/.github/actions/docs-report@0d821fc4038ee9ad6363362c02035132489bf3f6
         with:
           build-outcome: ${{ steps.docs-build.outcome }}

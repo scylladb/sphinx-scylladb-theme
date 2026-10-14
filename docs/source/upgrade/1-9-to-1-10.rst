@@ -17,7 +17,7 @@ Update GitHub Actions workflows
    ``docs-pr-report.yaml`` to match it.
 #. Commit and push both workflows to your project's default branch.
 
-Both workflows use the shared ``docs-report@1.10.0`` action. You only need to
+Both workflows use the shared ``docs-report`` action. You only need to
 copy the workflow files. The reporting workflow runs separately so builds
 from forks keep read-only permissions.
 

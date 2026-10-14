@@ -21,4 +21,4 @@ jobs:
     steps:
       # Never check out or execute the triggering PR's code here.
       - name: Update docs build comment
-        uses: scylladb/sphinx-scylladb-theme/.github/actions/docs-report@1.10.0
+        uses: scylladb/sphinx-scylladb-theme/.github/actions/docs-report@0d821fc4038ee9ad6363362c02035132489bf3f6
