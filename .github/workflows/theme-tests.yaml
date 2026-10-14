@@ -6,11 +6,19 @@ on:
       - master
     paths:
       - "sphinx_scylladb_theme/**"
+      - ".github/actions/**"
+      - ".github/scripts/docs-build-report.js"
+      - ".github/workflows/docs-pr*.yaml"
+      - "tests/**"
   push:
     branches:
       - master
     paths:
       - "sphinx_scylladb_theme/**"
+      - ".github/actions/**"
+      - ".github/scripts/docs-build-report.js"
+      - ".github/workflows/docs-pr*.yaml"
+      - "tests/**"
 
 jobs:
   build:
@@ -41,3 +49,6 @@ jobs:
 
       - name: Run tests
         run: uv run pytest .
+
+      - name: Test docs build reporting
+        run: node --test tests/workflows/test_docs_build_report.js

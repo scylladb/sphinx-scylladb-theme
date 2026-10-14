@@ -1,0 +1,27 @@
+Upgrading from 1.9 to 1.10
+==========================
+
+Version 1.10 adds documentation build reports to pull requests. Failed builds
+show warnings and errors in a **Docs / Build PR** comment, the Actions summary,
+and the build log. When the build passes, the comment is removed.
+
+Update GitHub Actions workflows
+-------------------------------
+
+#. Replace ``.github/workflows/docs-pr.yaml`` with the updated
+   `docs-pr.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-pr.yaml>`_.
+#. Copy `docs-pr-report.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-pr-report.yaml>`_
+   into your repository's ``.github/workflows/`` directory.
+#. Adjust the default branch and documentation paths if needed. If you use a
+   different workflow name, update ``workflow_run.workflows`` in
+   ``docs-pr-report.yaml`` to match it.
+#. Commit and push both workflows to your project's default branch.
+
+Both workflows use the shared ``docs-report@1.10.0`` action. You only need to
+copy the workflow files. The reporting workflow runs separately so builds
+from forks keep read-only permissions.
+
+These workflows are available with the ``1.10.0`` release. Updating the theme
+package alone does not update your project's workflows.
+
+For details, see :ref:`docs-build-reports`.
