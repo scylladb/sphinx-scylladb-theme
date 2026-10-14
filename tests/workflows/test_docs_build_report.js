@@ -133,9 +133,11 @@ test('PR reports preserve the complete multiline diagnostics repeated by the sum
 });
 
 test('untrusted diagnostic text cannot escape the preformatted block or mention users', () => {
-  const body = renderReport(run, '</pre><script>alert(1)</script> @someone ```');
-  assert.doesNotMatch(body, /<script>|@someone/);
+  const body = renderReport(run,
+    '</pre><script>alert(1)</script> <SCRIPT data-test="upper">alert(2)</SCRIPT> @someone ```');
+  assert.doesNotMatch(body, /<\/?script\b|@someone/i);
   assert.match(body, /&lt;\/pre&gt;/);
+  assert.match(body, /&lt;SCRIPT data-test="upper"&gt;/);
   assert.match(body, /&#64;someone/);
 });
 
