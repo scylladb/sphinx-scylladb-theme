@@ -1,0 +1,24 @@
+name: Report docs build
+description: Summarize documentation diagnostics and update the PR build report
+
+inputs:
+  build-outcome:
+    description: Outcome of the documentation build step (for the Actions summary)
+
+runs:
+  using: composite
+  steps:
+    - name: Report docs build
+      if: always()
+      uses: actions/github-script@373c709c69115d41ff229c7e5df9f8788daa9553 # v9.0.0
+      env:
+        DOCS_BUILD_OUTCOME: ${{ inputs.build-outcome }}
+        REPORT_SCRIPT: ${{ github.action_path }}/../../scripts/docs-build-report.js
+      with:
+        script: |
+          const report = require(process.env.REPORT_SCRIPT);
+          if (context.eventName === 'workflow_run') {
+            await report.reportPullRequest({ github, context, core });
+          } else {
+            await report.writeSummary({ core });
+          }

@@ -29,7 +29,9 @@ The toolchain provides the following workflows under the directory ``.github/wor
     * - ``docs-pages.yaml``
       - Builds multi versioned docs every time the default branch (e.g. ``master``)  receives an update. If the build completes successfully, the workflow publishes the HTML version to GitHub Pages.
     * - ``docs-pr.yaml``
-      - Builds the docs when the default branch receives a new pull request or when the pull request receives new commits. The purpose of this workflow is to make sure pull requests do not break the default branch after being merged.
+      - Builds the docs for pull requests and shows warnings and errors in the Actions summary and at the end of the build log.
+    * - ``docs-pr-report.yaml``
+      - Reports warnings and errors in a pull request comment. Removes the comment when the build passes.
 
 .. caution:: If you modify these workflows in your repository, you will need to maintain the changes. So instead, we recommend you to open an issue in the `sphinx-scylladb-theme repository <https://github.com/scylladb/sphinx-scylladb-theme>`_ so that all projects can benefit from the improvements you made.
 
@@ -47,6 +49,7 @@ To install the workflows:
           |   ├── workflows/
           |   |   ├── docs-pages.yaml
           |   |   ├── docs-pr.yaml
+          |   |   ├── docs-pr-report.yaml
 
 #. If the default branch is not ``master`` or the docs are not located under the ``docs`` folder, modify the workflows to align with the project configuration. For example:
 
@@ -93,12 +96,21 @@ Follow the following steps to set up a custom domain:
 
 #. Once the DNS changes propagate (<24 h), the docs will be accessible from the custom domain name.
 
+.. _docs-build-reports:
+
 Reading error messages
 ----------------------
 
-Docs builds usually fail when there is a critical error or warning in the documenation syntax.
+Docs builds can fail because of documentation errors or warnings.
 
-To get the specific error message:
+``make test`` uses Sphinx's ``-W`` option, which treats warnings as build failures.
+
+For pull requests, the **Docs / Build PR** comment lists warnings and errors and links to the full build log.
+You can also find these messages in the Actions summary and at the end of the build log.
+
+Once the build passes, the comment is removed. Successful builds do not create comments.
+
+To view the full build output:
 
 #. Hover the |x| that you will see next to the commit message, and click on **Details**.
 
