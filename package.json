@@ -23,7 +23,7 @@
     "eslint-formatter-table": "^7.32.1",
     "eslint-webpack-plugin": "^6.0.0",
     "foundation-sites": "^6.9.0",
-    "globals": "^17.4.0",
+    "globals": "^17.13.0",
     "jquery": "^3.7.1",
     "mini-css-extract-plugin": "^2.10.2",
     "postcss-loader": "^8.2.0",
