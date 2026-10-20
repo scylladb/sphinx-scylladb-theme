@@ -220,10 +220,18 @@ export class PageActionsHandler {
 
     const clone = contentBody.cloneNode(true);
     clone.querySelectorAll(".page-actions-wrapper .page-actions, .headerlink").forEach(el => el.remove());
+    // Swagger UI renders row-less <table> elements, which crash turndown-plugin-gfm
+    clone.querySelectorAll("table").forEach(table => {
+      if (!table.rows.length) table.remove();
+    });
 
     const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
     turndown.use(gfm);
-    return turndown.turndown(clone.innerHTML).trim();
+    try {
+      return turndown.turndown(clone.innerHTML).trim();
+    } catch {
+      return clone.textContent.trim();
+    }
   }
 
   _copyPageAsMarkdown(btn) {

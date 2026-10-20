@@ -66,6 +66,7 @@ def extract_custom_config_vars(confpath, var_names):
             "__file__": conf_file,
             "__name__": "__main__",
             "__builtins__": __builtins__,
+            "tags": sphinx_tags.Tags(),
         }
 
         # Change to confpath directory so relative imports work
