@@ -2,7 +2,8 @@
 Search support
 ==============
 
-The toolchain uses the service `Expertrec <https://expertrec.com/>`_ to offer a unified search experience across all sites.
+The toolchain uses the service `Expertrec <https://www.expertrec.com/>`_ to offer a unified search
+experience across all sites.
 
 Installation
 ------------
