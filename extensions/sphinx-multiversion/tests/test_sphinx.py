@@ -2,8 +2,22 @@ import os.path
 import posixpath
 import tempfile
 import unittest
+from pathlib import Path
 
 import sphinx_multiversion
+from sphinx_multiversion.main import extract_custom_config_vars
+
+
+class CustomConfigTestCase(unittest.TestCase):
+    def test_configuration_using_sphinx_tags(self):
+        with tempfile.TemporaryDirectory() as directory:
+            (Path(directory) / "conf.py").write_text(
+                'tags.add("docs")\n'
+                'myst_substitutions = {"edition": "docs" if tags.has("docs") else "other"}\n',
+                encoding="utf-8",
+            )
+            values = extract_custom_config_vars(directory, ["myst_substitutions"])
+        self.assertEqual(values, {"myst_substitutions": {"edition": "docs"}})
 
 
 class VersionInfoTestCase(unittest.TestCase):

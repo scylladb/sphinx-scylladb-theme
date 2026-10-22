@@ -21,7 +21,7 @@ setup(
     author="Jan Holthuis",
     author_email="holthuis.jan@googlemail.com",
     url="https://pypi.org/project/sphinx-multiversion-scylla",
-    version="0.3.8",
+    version="0.3.9",
     install_requires=["sphinx >= 2.1"],
     license="BSD",
     packages=["sphinx_multiversion"],

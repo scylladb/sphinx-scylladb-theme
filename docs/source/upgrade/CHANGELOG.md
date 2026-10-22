@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#1699](https://github.com/scylladb/sphinx-scylladb-theme/pull/1699): Fixed copying Swagger UI pages as Markdown when tables have no rows, with a plain-text fallback if conversion fails. Also excluded `sphinx_highlight.js` when `exclude_doctools` is enabled.
 - [#1745](https://github.com/scylladb/sphinx-scylladb-theme/pull/1745): Kept the Biel.ai chat widget above the Chili Piper widget.
-- [#1734](https://github.com/scylladb/sphinx-scylladb-theme/pull/1734): Provided Sphinx `tags` when extracting multiversion configuration so `conf.py` files that use `tags` can be evaluated.
+- [#1734](https://github.com/scylladb/sphinx-scylladb-theme/pull/1734): Provided Sphinx `tags` when extracting multiversion configuration so `conf.py` files that use `tags` can be evaluated. Requires the separately released `sphinx-multiversion-scylla` 0.3.9 or later.
 - [#1746](https://github.com/scylladb/sphinx-scylladb-theme/pull/1746): Fixed failing Dependabot updates by grouping related Babel and CodeQL dependencies and updating the frontend build configuration.
 - [#1690](https://github.com/scylladb/sphinx-scylladb-theme/pull/1690): Removed the inaccessible ScyllaDB Cloud repository link from the documentation projects list.
 

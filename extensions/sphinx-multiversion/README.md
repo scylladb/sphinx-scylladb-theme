@@ -6,6 +6,11 @@ Sphinx extension for building self-hosted versioned docs.
 
 Original documentation can be found at: https://holzhaus.github.io/sphinx-multiversion/
 
+## 0.3.9
+
+Fixed version-specific configuration extraction when `conf.py` uses Sphinx's
+`tags` object ([#1734](https://github.com/scylladb/sphinx-scylladb-theme/pull/1734)).
+
 ## Fork additions
 
 ### Prebuild and postbuild commands
