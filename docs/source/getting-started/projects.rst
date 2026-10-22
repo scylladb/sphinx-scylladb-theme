@@ -71,6 +71,9 @@ Drivers
     * - Python Driver
       - `scylladb/python-driver <https://github.com/scylladb/python-driver>`_
       - https://python-driver.docs.scylladb.com/stable/
+    * - Python Rust Driver
+      - `scylladb/python-rs-driver <https://github.com/scylladb/python-rs-driver>`_
+      - http://python-rs-driver.docs.scylladb.com/
     * - C++ Driver
       - `scylladb/cpp-driver <https://github.com/scylladb/cpp-driver>`_
       - https://cpp-driver.docs.scylladb.com/master/
