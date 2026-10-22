@@ -11,6 +11,7 @@ on:
       - master
     paths:
       - "docs/**"
+      - "uv.lock"
       - ".github/workflows/docs-pr.yaml"
 
 jobs:

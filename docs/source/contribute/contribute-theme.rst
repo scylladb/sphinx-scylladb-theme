@@ -18,7 +18,7 @@ It combines several things in one tool:
 
 To initialize a Python development environment for this project:
 
-#.  Make sure you have Python 3.11 or later installed (Python 3.12+ recommended).
+#.  Make sure you have Python 3.12 or later installed.
 #.  `Install uv <https://docs.astral.sh/uv/getting-started/installation/>`_.
 
 Previewing the theme locally

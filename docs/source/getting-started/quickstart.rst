@@ -12,7 +12,7 @@ Prerequisites
 You must have a project cloned locally with the :doc:`documentation toolchain <installation>`. Additionally, you will need to have installed:
 
 - A Unix-based terminal. For Windows, use `Windows Subsystem for Linux <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
-- `Python 3.11 or later <https://www.python.org/downloads/>`_.
+- `Python 3.12 or later <https://www.python.org/downloads/>`_.
 - `uv <https://docs.astral.sh/uv/getting-started/installation/>`_.
 - Make
 - `Git <https://git-scm.com/>`_.

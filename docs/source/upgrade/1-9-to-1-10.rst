@@ -1,8 +1,7 @@
 Upgrading from 1.9 to 1.10
 ==========================
 
-This guide explains how to upgrade the version of the ScyllaDB Sphinx Theme
-from 1.9 to 1.10.
+This guide explains how to upgrade the ScyllaDB Sphinx Theme from 1.9.x to 1.10.0.
 
 How to check your current theme version
 ---------------------------------------
@@ -11,8 +10,6 @@ The theme version is displayed in the footer of the project's documentation site
 
 .. image:: version.png
 
-If your project theme's version is **>=1.9**, follow this guide to get the
-latest version.
 
 What's new in 1.10
 ------------------
@@ -23,46 +20,70 @@ release.
 Upgrade to version 1.10
 -----------------------
 
-Enable the redirect validator on pull requests
-..............................................
+#. Use **Python 3.12 or later** locally and in your documentation build workflows.
 
-1. Add a ``check-redirects`` **target to** ``docs/Makefile``.
-    It checks every ``/stable/`` redirect target is reachable on the live site:
+#. Update these values in ``docs/pyproject.toml`` (or the root ``pyproject.toml`` if it manages your docs). Keep your other dependencies:
 
-.. code-block:: makefile
+   .. code-block:: toml
 
-    .PHONY: check-redirects
-    check-redirects: setup
-        $(UV) run scylla-check-redirects --yaml _utils/redirects.yaml --conf $(SOURCEDIR)
+      [project]
+      requires-python = ">=3.12"
+      dependencies = [
+          "sphinx-scylladb-theme>=1.10.0,<1.11",
+          "sphinx>=9.1.1,<10",
+          # Keep your other dependencies here.
+      ]
 
-2. Add a step to** ``.github/workflows/docs-pr.yaml`` before the docs build so bad redirects fail fast:
+   Remove any ``docutils<0.22`` pin. The theme now requires ``sphinx-tabs>=3.5.0``, which supports docutils 0.22.
 
-.. code-block:: yaml
+#. From the directory containing that file, update the lockfile:
 
-    - name: Check redirects
-      run: make -C docs check-redirects
+   .. code-block:: console
 
-Update GitHub Actions workflows
-...............................
+      uv lock --upgrade-package sphinx-scylladb-theme --upgrade-package sphinx==9.1.1 --upgrade-package docutils
+      uv sync
 
-Version 1.10 adds documentation build reports to pull requests. Failed builds
-show warnings and errors in a **Docs / Build PR** comment, the Actions summary,
-and the build log. When the build passes, the comment is removed.
+#. Add the redirect check to ``docs/Makefile``:
 
-#. Replace ``.github/workflows/docs-pr.yaml`` with the updated
-   `docs-pr.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-pr.yaml>`_.
-#. Copy `docs-pr-report.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-pr-report.yaml>`_
-   into your repository's ``.github/workflows/`` directory.
-#. Adjust the default branch and documentation paths if needed. If you use a
-   different workflow name, update ``workflow_run.workflows`` in
-   ``docs-pr-report.yaml`` to match it.
-#. Commit and push both workflows to your project's default branch.
+   .. literalinclude:: ../../Makefile
+      :language: makefile
+      :start-at: .PHONY: check-redirects
+      :end-at: $(UV) run scylla-check-redirects
 
-Both workflows use the shared ``docs-report`` action. You only need to
-copy the workflow files. The reporting workflow runs separately so builds
-from forks keep read-only permissions.
+   The recipe line must start with a tab.
+   Adjust the redirects file path and source directory for your project.
 
-These workflows are available with the ``1.10.0`` release. Updating the theme
-package alone does not update your project's workflows.
+#. Copy these workflows into your repository's ``.github/workflows/`` directory:
 
-For details, see :ref:`docs-build-reports`.
+   - Replace `docs-pr.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-pr.yaml>`_.
+   - Add `docs-pr-report.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-pr-report.yaml>`_.
+
+   Adjust the default branch and docs paths, preserving project-specific build steps.
+
+   Keep the filename ``docs-pr.yaml``.
+   Both workflows must be on the default branch for PR build reports to run.
+
+#. Build and preview the docs, then commit the changes including ``uv.lock``:
+
+   .. code-block:: console
+
+      make -C docs test
+      make -C docs preview
+
+   For multiversion sites, also run ``make -C docs multiversion``.
+
+Per-page update dates
+---------------------
+
+"Last updated" now uses each page's Git history.
+Set ``fetch-depth: 0`` in checkout steps and check that ``html_theme_options["conf_py_path"]`` points
+to your docs source directory.
+
+Weekly dependency updates (optional)
+------------------------------------
+
+#. Copy `docs-dependencies.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-dependencies.yaml>`_
+   into ``.github/workflows/`` and adjust the Python version and docs paths.
+#. Enable **Allow GitHub Actions to create and approve pull requests** in the repository's Actions settings.
+
+The workflow runs ``make -C docs update`` and ``make -C docs test``, then opens a weekly PR with the updated lockfile.
