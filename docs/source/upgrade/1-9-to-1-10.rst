@@ -31,6 +31,7 @@ Upgrade to version 1.10
       dependencies = [
           "sphinx-scylladb-theme>=1.10.0,<1.11",
           "sphinx>=9.1.1,<10",
+          "sphinx-multiversion-scylla>=0.3.9",
           # Keep your other dependencies here.
       ]
 
@@ -40,7 +41,7 @@ Upgrade to version 1.10
 
    .. code-block:: console
 
-      uv lock --upgrade-package sphinx-scylladb-theme --upgrade-package sphinx==9.1.1 --upgrade-package docutils
+      uv lock --upgrade-package sphinx-scylladb-theme --upgrade-package sphinx==9.1.1 --upgrade-package docutils --upgrade-package sphinx-multiversion-scylla
       uv sync
 
 #. Add the redirect check to ``docs/Makefile``:
