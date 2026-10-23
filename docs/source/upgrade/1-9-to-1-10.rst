@@ -61,7 +61,7 @@ Upgrade to version 1.10
 
    Adjust the default branch and docs paths, preserving project-specific build steps.
 
-   Keep the filename ``docs-pr.yaml``.
+   Use ``docs-pr.yaml``, or ``docs-pr.yml`` with a reporting-action revision that supports both extensions.
    Both workflows must be on the default branch for PR build reports to run.
 
 #. Build and preview the docs, then commit the changes including ``uv.lock``:
