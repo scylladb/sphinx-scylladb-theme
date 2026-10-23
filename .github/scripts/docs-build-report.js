@@ -133,7 +133,11 @@ async function readBuildDiagnostics({ github, repository, run, core }) {
 async function reportPullRequest({ github, context, core }) {
   const run = context.payload.workflow_run;
   const repository = context.repo;
-  if (run.event !== 'pull_request' || run.path !== '.github/workflows/docs-pr.yaml') return;
+  const isDocsWorkflow = [
+    '.github/workflows/docs-pr.yaml',
+    '.github/workflows/docs-pr.yml',
+  ].includes(run.path);
+  if (run.event !== 'pull_request' || !isDocsWorkflow) return;
   // Resolve the PR from GitHub metadata, never from PR-controlled files or logs.
   let candidates = run.pull_requests || [];
   if (!candidates.length && run.head_repository) {
