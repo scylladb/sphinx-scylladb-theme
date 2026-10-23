@@ -110,9 +110,6 @@ You can also find these messages in the Actions summary and at the end of the bu
 
 Once the build passes, the comment is removed. Successful builds do not create comments.
 
-The shared reporting action accepts build workflows named ``docs-pr.yaml`` or ``docs-pr.yml``.
-To use ``.yml``, pin the action to a revision that includes support for both extensions.
-
 To view the full build output:
 
 #. Hover the |x| that you will see next to the commit message, and click on **Details**.
