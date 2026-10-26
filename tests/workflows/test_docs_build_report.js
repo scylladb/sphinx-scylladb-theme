@@ -155,6 +155,22 @@ test('failed fork builds create a report using GitHub PR metadata', async () => 
   assert.match(data.calls[0].create.body, /Failed step: Test docs/);
 });
 
+for (const extension of ['yaml', 'yml']) {
+  test(`docs-pr.${extension} builds create, update, and clear PR reports`, async () => {
+    for (const [options, action] of [
+      [{ fork: true }, 'create'],
+      [{ previous: true }, 'update'],
+      [{ previous: true, success: true }, 'delete'],
+    ]) {
+      const data = fixture(options);
+      data.context.payload.workflow_run.path = `.github/workflows/docs-pr.${extension}`;
+      await reportPullRequest(data);
+      assert.equal(data.calls.length, 1);
+      assert.ok(data.calls[0][action]);
+    }
+  });
+}
+
 test('subsequent failures update the existing report', async () => {
   const data = fixture({ previous: true });
   await reportPullRequest(data);
@@ -180,12 +196,29 @@ for (const option of ['stale', 'closed', 'newer', 'attempt']) {
   });
 }
 
-test('another workflow cannot post a report by copying the docs workflow name', async () => {
-  const data = fixture();
-  data.context.payload.workflow_run.path = '.github/workflows/other.yaml';
-  await reportPullRequest(data);
-  assert.equal(data.calls.length, 0);
-});
+for (const path of [
+  '.github/workflows/other.yaml',
+  '.github/workflows/other.yml',
+  '.github/workflows/docs-pr.yaml.bak',
+  '.github/workflows/docs-pr.yml.bak',
+]) {
+  test(`${path} cannot post a report by copying the docs workflow name`, async () => {
+    const data = fixture();
+    data.context.payload.workflow_run.path = path;
+    await reportPullRequest(data);
+    assert.equal(data.calls.length, 0);
+  });
+}
+
+for (const extension of ['yaml', 'yml']) {
+  test(`docs-pr.${extension} non-PR runs cannot post reports`, async () => {
+    const data = fixture();
+    data.context.payload.workflow_run.path = `.github/workflows/docs-pr.${extension}`;
+    data.context.payload.workflow_run.event = 'push';
+    await reportPullRequest(data);
+    assert.equal(data.calls.length, 0);
+  });
+}
 
 test('unavailable logs still produce a report linking to the failed build', async () => {
   const data = fixture({ unavailable: true });
