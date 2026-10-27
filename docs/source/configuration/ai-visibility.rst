@@ -16,7 +16,7 @@ At build time, the theme automatically generates:
 In every HTML page rendered by the theme, the layout also injects:
 
 * A ``<link rel="alternate" type="text/markdown">`` tag in ``<head>`` pointing to the Markdown version of the page.
-* A visually hidden directive near the top of the content area pointing AI agents to ``/llms.txt`` and to the Markdown version of the current page.
+* A visually hidden directive near the top of the content area pointing AI agents to ``/llms.txt``, to the Markdown version of the current page, and to the `ScyllaDB agent skills <https://github.com/scylladb/agent-skills>`_ install command (``npx skills add scylladb/agent-skills --skill scylladb``).
 
 How it works
 ------------
