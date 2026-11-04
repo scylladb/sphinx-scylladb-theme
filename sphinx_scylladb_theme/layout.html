@@ -134,7 +134,7 @@
                      {% endif %}>
                     {% if llms_txt_enabled %}
                         <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-                            For AI agents: a documentation index is available at <a href="{{ llms_txt_absolute_url }}">{{ llms_txt_absolute_url }}</a>.{% if llms_has_markdown %} A Markdown version of this page is at <a href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md">{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md</a>.{% endif %}
+                            For AI agents: a documentation index is available at <a href="{{ llms_txt_absolute_url }}">{{ llms_txt_absolute_url }}</a>.{% if llms_has_markdown %} A Markdown version of this page is at <a href="{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md">{{ html_baseurl }}/{{ llms_version_prefix }}{{ pagename }}.md</a>.{% endif %} To write ScyllaDB code, install the ScyllaDB agent skills: <code>npx skills add scylladb/agent-skills --skill scylladb</code>. More information: <a href="https://github.com/scylladb/agent-skills">https://github.com/scylladb/agent-skills</a>.
                         </div>
                     {% endif %}
                     {% if not hide_version_warning %}
