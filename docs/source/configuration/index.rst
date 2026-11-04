@@ -17,6 +17,7 @@ Configuration
    ai-visibility
    search
    dependabot
+   dependency-updates
 
 .. panel-box::
   :title: Overview
@@ -32,3 +33,4 @@ Configuration
   * :doc:`AI visibility <ai-visibility>` - Defaults that help AI agents discover and consume the docs (llms.txt, Markdown URLs).
   * :doc:`Search support <search>` - Service to index content that is searchable across all sites.
   * :doc:`Dependabot <dependabot>` - Configuration options for the dependabot extension.
+  * :doc:`Dependency updates <dependency-updates>` - Weekly dependency updates and manual overrides.

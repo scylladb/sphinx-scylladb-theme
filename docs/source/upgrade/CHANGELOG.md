@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Changed
+
+- Documentation dependency updates skip PyPI files uploaded less than seven days ago, except for ScyllaDB's own packages. Manual workflow runs can bypass the cooldown. Updates must pass a vulnerability audit before an update PR is opened.
+
 ## 1.10.0 - 22 October 2026
 
 ### Added

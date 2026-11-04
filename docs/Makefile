@@ -1,6 +1,7 @@
 # Global variables
 # You can set these variables from the command line.
 UV            = uv
+UPDATE_EXCLUDE_NEWER ?= 7 days
 SPHINXOPTS    = -j auto
 SPHINXBUILD   = $(UV) run sphinx-build
 PAPER         =
@@ -27,7 +28,15 @@ setup:
 
 .PHONY: update
 update:
-	$(UV) sync --upgrade
+	$(UV) lock --upgrade --exclude-newer "$(UPDATE_EXCLUDE_NEWER)" \
+		--exclude-newer-package sphinx-scylladb-theme=false \
+		--exclude-newer-package sphinx-multiversion-scylla=false
+# Remove the update-only cutoff metadata while preserving the selected versions.
+	$(UV) sync
+
+.PHONY: audit
+audit:
+	$(UV) audit --locked
 
 # Clean commands
 .PHONY: pristine
