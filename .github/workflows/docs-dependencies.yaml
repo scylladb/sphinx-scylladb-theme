@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "00 8 * * 1" # Every Monday at 08:00 UTC.
   workflow_dispatch:
+    inputs:
+      allow_recent_releases:
+        description: "Allow dependency releases uploaded less than seven days ago"
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: docs-update-dependencies
@@ -17,6 +23,8 @@ jobs:
     # Manual runs must use the default branch, just like scheduled runs.
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
+    env:
+      UPDATE_EXCLUDE_NEWER: ${{ inputs.allow_recent_releases && 'false' || '7 days' }}
     outputs:
       changed: ${{ steps.lockfile.outputs.changed }}
       lockfile: ${{ steps.lockfile.outputs.path }}
@@ -38,6 +46,10 @@ jobs:
 
       - name: Update docs dependencies to latest compatible versions
         run: make -C docs update
+
+      # A finding fails the run before an update PR can be opened.
+      - name: Audit dependencies for known vulnerabilities
+        run: make -C docs audit
 
       - name: Test docs
         run: make -C docs test
@@ -150,6 +162,11 @@ jobs:
           PR_BODY: |
             Updates the Python dependencies used to build the docs to the latest
             versions allowed by the project's `pyproject.toml`.
+
+            By default, PyPI files uploaded less than seven days ago are skipped,
+            except for sphinx-scylladb-theme and sphinx-multiversion-scylla.
+            Seven-day minimum age waived for this run: **${{ inputs.allow_recent_releases || false }}**.
+            The lockfile passed a vulnerability audit and the docs build.
 
             Review the updated dependencies in the lockfile before merging, including
             version changes, added or removed packages, and relevant release notes.

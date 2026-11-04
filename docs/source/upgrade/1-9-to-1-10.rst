@@ -83,8 +83,5 @@ to your docs source directory.
 Weekly dependency updates (optional)
 ------------------------------------
 
-#. Copy `docs-dependencies.yaml <https://github.com/scylladb/sphinx-scylladb-theme/blob/1.10.0/.github/workflows/docs-dependencies.yaml>`_
-   into ``.github/workflows/`` and adjust the Python version and docs paths.
-#. Enable **Allow GitHub Actions to create and approve pull requests** in the repository's Actions settings.
-
-The workflow runs ``make -C docs update`` and ``make -C docs test``, then opens a weekly PR with the updated lockfile.
+For projects without Renovate configured, the optional weekly workflow can keep documentation dependencies up to date.
+See :doc:`../configuration/dependency-updates` to enable it, run updates manually, and allow recent releases when needed.

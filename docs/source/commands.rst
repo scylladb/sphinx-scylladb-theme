@@ -32,13 +32,27 @@ Installs the required Python dependencies to build the documentation.
 update
 ======
 
-Updates Python dependencies to the latest version.
+Updates Python dependencies to the latest compatible versions whose distribution
+files were uploaded to PyPI at least seven days ago. The ScyllaDB packages
+``sphinx-scylladb-theme`` and ``sphinx-multiversion-scylla`` are exempt.
+Requires uv 0.13.5 or later.
 
 .. code:: console
 
     make update
 
 As a result, updates the ``uv.lock`` file.
+
+audit
+=====
+
+Checks the locked Python dependencies for known vulnerabilities without changing
+``uv.lock``.
+A finding fails the command.
+
+.. code:: console
+
+    make audit
 
 
 Build commands
