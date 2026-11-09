@@ -149,6 +149,9 @@ $product-title-height: $spacer-md;
     --brand-self-hosted: #{$brand-self-hosted};
 
     --biel-primary-color: var(--text-link);
+    // Biel's dark button hovers with --biel-primary-hover-color (default #005fcc);
+    // follow the design system's link hover instead.
+    --biel-primary-hover-color: var(--text-link-hover);
     --biel-message-user-bg-color: var(--biel-message-biel-bg-color);
     --biel-message-user-text-color: var(--biel-message-biel-text-color);
     --biel-message-link-color: var(--link-color);
