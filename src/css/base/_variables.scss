@@ -187,6 +187,11 @@ $product-title-height: $spacer-md;
     --biel-primary-color: var(--text-link);
     --biel-button-dark-bg-color: var(--text-link);
     --biel-input-button-bg-color: var(--text-link);
+    // The dark link color (primary-400) is light itself, so the filled Biel
+    // buttons take dark text for contrast (as the design system's scylla theme does).
+    --biel-button-dark-text-color: var(--color-primary-900);
+    --biel-input-button-color: var(--color-primary-900);
+    --biel-input-button-hover-color: var(--color-primary-900);
     --biel-search-button-bg-color: transparent;
     --biel-search-filter-selected-bg-color: var(--text-link);
     --biel-search-result-mark-color: var(--text-link);
