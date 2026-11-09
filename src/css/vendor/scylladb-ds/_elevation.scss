@@ -1,0 +1,45 @@
+// ══════════════════════════════════════════════════════════
+// ELEVATION — shadow depth system
+// Auto-generated from scylladb-shadows.json
+// Run: node generate-shadows.js
+//
+// The scale is emitted via a mixin so it can be re-anchored to a
+// different shadow color inside surfaces. Re-declaring the tokens in a
+// scope makes descendants pick up that scope's color.
+// ══════════════════════════════════════════════════════════
+
+@mixin shadow-scale($color) {
+  --shadow-0: none;
+  --shadow-1: 0px 1px 2px -1px color-mix(in oklch, var(#{$color}) 50%, transparent);
+  --shadow-2: 0px 2px 12px -4px color-mix(in oklch, var(#{$color}) 20%, transparent),
+            0px 2px 4px -2px color-mix(in oklch, var(#{$color}) 35%, transparent);
+  --shadow-3: 0px 4px 16px -10px color-mix(in oklch, var(#{$color}) 80%, transparent),
+            0px 2px 6px -3px color-mix(in oklch, var(#{$color}) 40%, transparent);
+  --shadow-4: 0px 8px 30px -12px color-mix(in oklch, var(#{$color}) 25%, transparent),
+            0px 4px 12px -6px color-mix(in oklch, var(#{$color}) 50%, transparent);
+  --shadow-5: 0px 10px 30px -12px color-mix(in oklch, var(#{$color}) 64%, transparent),
+            0px 6px 8px -8px color-mix(in oklch, var(#{$color}) 43%, transparent);
+
+  --shadow-inset: inset 0px 2px 3px -1px color-mix(in oklch, var(#{$color}) 22%, transparent);
+}
+
+// Base scale — driven by the theme's --shadow-color
+:root {
+  @include shadow-scale(--shadow-color);
+}
+
+// Surface scale — re-anchored to --surface-shadow-color so cards, sections
+// and surfaces can carry their own shadow tint per theme.
+.surface, .card, .section, .dropdown, .morph-box {
+  @include shadow-scale(--surface-shadow-color);
+}
+
+// ── Utility classes ──
+
+.shadow-0 { box-shadow: var(--shadow-0); }
+.shadow-1 { box-shadow: var(--shadow-1); }
+.shadow-2 { box-shadow: var(--shadow-2); }
+.shadow-3 { box-shadow: var(--shadow-3); }
+.shadow-4 { box-shadow: var(--shadow-4); }
+.shadow-5 { box-shadow: var(--shadow-5); }
+.shadow-inset { box-shadow: var(--shadow-inset); }

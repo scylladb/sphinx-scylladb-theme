@@ -18,7 +18,11 @@ module.exports = merge(common, {
       {
         test: /\.(scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            // css/main.css references emitted assets (fonts/...) relative to the static root
+            options: { publicPath: "../" },
+          },
           {
             loader: "css-loader",
             options: {

@@ -1,4 +1,7 @@
 @import "~foundation-sites/dist/css/foundation.min.css";
 
+// ScyllaDB Design System tokens (colors, type ramp, fonts, radii, shadows)
+@import "vendor/scylladb-ds/index";
+
 @import "base/index";
 @import "components/index";

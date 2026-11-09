@@ -1,50 +1,13 @@
 @use "sass:map";
 
-@mixin hex-to-rgb($hex, $property-name) {
-  $r: red($hex);
-  $g: green($hex);
-  $b: blue($hex);
-
-  // Set CSS custom property for the RGB value
-  #{$property-name}: #{$r}, #{$g}, #{$b};
-}
-
-$white: #FFFFFF;
-$gray-50: #F7FCFC;
-$gray-100: #EDF5F7;
-$gray-200: #D8E5EB;
-$gray-300: #C3D5DE;
-$gray-400: #AEC0CF;
-$gray-500: #95A7BA;
-$gray-600: #7B8BA2;
-$gray-700: #616D87;
-$gray-800: #4B546F;
-$gray-900: #383D57;
-$gray-950: #2F324B;
-$black: #23263B;
-$brand-teal: #57D1E5;
-$brand-blue: #326DE6;
-
-
-
-$primary: #42C4E6;
-$secondary: #3A2D55;
-$success: #77D464;
-$warning: #FFAB00;
-$info: #1976D2;
-$danger: #CE291F;
-
-$link-color: #3C4FE0;
-$text-muted: $gray-500;
-$text-color: $black;
-$border-color: $gray-300;
-$header-border: #4458A3;
-$bg-color: #FEFEFE;
-$well-bg: #F7F8F9;
-$navigation-bg: #F6F8FF;
-$card-bg: $white;
-$admonition: #6F7071;
-$alert-color: $gray-100;
+// ---------------------------------------------------------------------------
+// Colors come from the ScyllaDB Design System tokens (src/css/vendor/scylladb-ds):
+// --color-*, --bg-*, --text-*, --border-*, --radius-*, --shadow-*, --font-family
+// The `:root` block below only bridges the theme's legacy variable names onto
+// those tokens. Dark mode is handled by the design system through
+// [data-theme="dark"] (set by dark-theme.js), so the `.dark` block only holds
+// theme-specific extras.
+// ---------------------------------------------------------------------------
 
 // Sizes Variables
 $spacer-0: 0;
@@ -57,8 +20,8 @@ $spacer-md: 52px;
 $spacer-lg: 83px;
 $spacer-xl: 134px;
 $border-width: 1px;
-$border-radius: $spacer-3xs; 
-$border-radius-md: $spacer-xxs; 
+$border-radius: var(--radius-md);
+$border-radius-md: var(--radius-lg);
 
 $spacer-map: (
   0: $spacer-0,
@@ -97,12 +60,14 @@ $xlarge: 1200px;
 $xxlarge: 1440px;
 
 // Font variables
-$font-base-family: "Roboto", sans-serif;
+$font-base-family: var(--font-family);
+$font-mono-family: var(--font-mono);
 
 $font-md: 16px;
 $font-sm: 14px;
 $font-xs: 12px;
 
+// Product brand colors (not part of the design system tokens)
 $brand-open-source: #4676DF;
 $brand-cloud: #57D1E5;
 $brand-enterprise: #3A2D55;
@@ -111,90 +76,89 @@ $brand-self-hosted: #3A2D55;
 $brand-colors: (
   open-source: (
     bg: $brand-open-source,
-    text: $white
+    text: var(--color-white)
   ),
   cloud: (
     bg: $brand-cloud,
-    text: $black
+    text: var(--color-black)
   ),
   enterprise: (
     bg: $brand-enterprise,
-    text: $white
+    text: var(--color-white)
   ),
   self-hosted: (
     bg: $brand-self-hosted,
-    text: $white
+    text: var(--color-white)
   )
 );
 
 $product-title-height: $spacer-md;
 
 :root {
-    --white: #{$white};
-    --gray-50: #{$gray-50};
-    --gray-100: #{$gray-100};
-    --gray-200: #{$gray-200};
-    --gray-300: #{$gray-300};
-    --gray-400: #{$gray-400};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-600};
-    --gray-700: #{$gray-700};
-    --gray-800: #{$gray-800};
-    --gray-900: #{$gray-900};
-    --gray-950: #{$gray-950};
-    --black: #{$black};
-  
-    --primary: #{$primary};
-      @include hex-to-rgb($primary, --primary-rgb);
-    --secondary: #{$secondary};
-    --success: #{$success};
-    --info: #{$info};
-    --warning: #{$warning};
-    --danger: #{$danger};
-  
-    --link-color: #{$link-color};
-    --link-color-hover: #{$link-color};
-    --text-color: #{$black};
-    --code-color: #{$black};
-    --text-emphasis: #{$black};
-    --text-muted: #{$text-muted};
-    --border-color: #{$border-color};
-    --header-border: #{$header-border};
-    --alert-color: #{$alert-color};
-    
-    --bg-color: #{$bg-color};
-    --well-bg: #{$well-bg};
-    --navigation-bg: #{$navigation-bg};
-    --card-bg: var(--white);
-    --admonition: #{$admonition};
-    --scollbar-bg: #b3bac5;
-    --tooltip-bg : #{$gray-900};
+    // Palette aliases
+    --white: var(--color-white);
+    --gray-50: var(--color-gray-50);
+    --gray-100: var(--color-gray-100);
+    --gray-200: var(--color-gray-200);
+    --gray-300: var(--color-gray-300);
+    --gray-400: var(--color-gray-400);
+    --gray-500: var(--color-gray-500);
+    --gray-600: var(--color-gray-600);
+    --gray-700: var(--color-gray-700);
+    --gray-800: var(--color-gray-800);
+    --gray-900: var(--color-gray-900);
+    --gray-950: var(--color-gray-950);
+    --black: var(--color-black);
 
-    --shadow-lg: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    --primary: var(--color-primary-400);
+    --secondary: var(--color-secondary-800);
+    --success: var(--color-success-500);
+    --info: var(--color-info-500);
+    --warning: var(--color-warning-500);
+    --danger: var(--color-error-500);
+
+    // Text & links (--text-color, --text-emphasis, --text-muted, --border-color
+    // are defined directly by the design system)
+    --link-color: var(--text-link);
+    --link-color-hover: var(--text-link-hover);
+    --code-color: var(--text-code);
+    --header-border: var(--color-secondary-500);
+    --alert-color: var(--bg-muted);
+
+    // Surfaces (--navigation-bg is overridden: the design system defaults it to transparent)
+    --bg-color: var(--bg-page);
+    --well-bg: var(--bg-surface-alt);
+    --navigation-bg: var(--bg-muted);
+    --card-bg: var(--bg-surface);
+    --admonition: var(--text-muted);
+    --scollbar-bg: var(--color-gray-400);
+    --tooltip-bg: var(--bg-overlay);
+
+    --shadow-lg: var(--shadow-4);
     --border-width: #{$border-width};
     --border-radius: #{$border-radius};
     --border-radius-md: #{$border-radius-md};
-    --line-number: #5a7184;
+    --line-number: var(--text-muted);
     --logo-url: "../img/logo-scylla-horizontal-color.svg";
 
-    --brand-product: #{$gray-200};
-    --brand-text: #{$gray-900};
+    --brand-product: var(--color-gray-200);
+    --brand-text: var(--color-gray-900);
     --brand-open-source: #{$brand-open-source};
     --brand-cloud: #{$brand-cloud};
     --brand-enterprise: #{$brand-enterprise};
     --brand-self-hosted: #{$brand-self-hosted};
 
-    --biel-primary-color: #{$link-color};
+    --biel-primary-color: var(--text-link);
     --biel-message-user-bg-color: var(--biel-message-biel-bg-color);
     --biel-message-user-text-color: var(--biel-message-biel-text-color);
     --biel-message-link-color: var(--link-color);
-    --biel-button-dark-bg-color: #{$link-color};
-    --biel-input-button-bg-color: #{$link-color};
+    --biel-button-dark-bg-color: var(--text-link);
+    --biel-input-button-bg-color: var(--text-link);
     --biel-input-button-hover-bg-color: var(--biel-input-button-bg-color);
-    --biel-button-border-radius: 4px;
+    --biel-button-border-radius: var(--radius-sm);
     --biel-button-padding: 12px 15px;
-    --biel-font-family: "Roboto", sans-serif;
-    --biel-search-filter-selected-bg-color: #{$link-color};
+    --biel-font-family: var(--font-family);
+    --biel-search-filter-selected-bg-color: var(--text-link);
     --biel-search-button-border-radius: #{$border-radius} !important;
     --biel-search-button-padding: 8px 20px;
     --biel-search-button-text-display: block !important;
@@ -207,41 +171,22 @@ $product-title-height: $spacer-md;
     --biel-search-button-max-width: -webkit-fill-available;
   }
 
+  // Dark mode: colors are remapped by the design system under [data-theme="dark"].
+  // Only theme-specific values that have no design-system token live here.
   .dark {
-
-    --primary: #{$primary};
-    --secondary: #{$secondary};
-    --success: #{$success};
-    --info: #{$info};
-    --warning: #{$warning};
-    --danger: #{$danger};
-
-    --link-color: #{$primary};
-    --link-color-hover: #{$primary};
-    --text-color: var(--gray-200);
-    --code-color: var(--gray-200);
-    --text-emphasis: var(--white);
-    --text-muted: var(--gray-400);
-    --border-color: var(--gray-800);
-    --header-border: #4458A3;
-    --alert-color: #{$alert-color};
-
-    --bg-color: var(--black);
-    --well-bg: #1E2031;
-    --navigation-bg: #1E2031;
-    --card-bg: var(--gray-950);
-    --admonition: var(--gray-400);
+    --navigation-bg: var(--bg-surface-alt);
+    --well-bg: var(--bg-surface-alt);
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
 
-    --brand-product: #{$gray-800};
-    --brand-text: #{$gray-100};
+    --brand-product: var(--color-gray-800);
+    --brand-text: var(--color-gray-100);
 
-    --biel-primary-color: #{$primary};
-    --biel-button-dark-bg-color: #{$primary};
-    --biel-input-button-bg-color: #{$primary};
+    --biel-primary-color: var(--text-link);
+    --biel-button-dark-bg-color: var(--text-link);
+    --biel-input-button-bg-color: var(--text-link);
     --biel-search-button-bg-color: transparent;
-    --biel-search-filter-selected-bg-color: #{$primary};
-    --biel-search-result-mark-color: #{$primary};
+    --biel-search-filter-selected-bg-color: var(--text-link);
+    --biel-search-result-mark-color: var(--text-link);
     --biel-search-button-border-color: #fff;
     --biel-message-user-bg-color: var(--biel-message-biel-bg-color);
     --biel-message-user-text-color: var(--biel-message-biel-text-color);

@@ -1,8 +1,15 @@
+code,
+kbd,
+samp,
+pre {
+  font-family: $font-mono-family;
+}
+
 code {
   color: var(--code-color);
-  background-color: var(--well-bg);
+  background-color: var(--bg-code);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: $font-sm;
 
   &.download {
@@ -15,7 +22,7 @@ code {
   background: transparent !important;
 
   pre {
-    background-color: var(--well-bg);
+    background-color: var(--bg-code);
     border-radius: $border-radius-md;
     color: var(--code-color);
     font-size: $font-sm;
@@ -32,7 +39,7 @@ code {
 }
 
 .highlighttable {
-  background-color: var(--well-bg);
+  background-color: var(--bg-code);
   border-radius: 16px;
   box-shadow: none;
 
@@ -51,7 +58,7 @@ code {
 
   .linenos {
     color: var(--line-number);
-    background-color: var(--well-bg);
+    background-color: var(--bg-code);
     width: 50px;
 
     span {

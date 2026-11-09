@@ -1,0 +1,528 @@
+// ══════════════════════════════════════════════════════════
+// TYPOGRAPHY SYSTEM
+// Auto-generated from scylladb-typography.json
+// Run: node generate-typography.js
+// Default ratio: 1.25×, rounding: floor
+// ══════════════════════════════════════════════════════════
+
+@font-face {
+  font-family: 'Roboto Flex';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+  font-display: swap;
+  src: url('../fonts/roboto-flex.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('../fonts/roboto-mono.woff2') format('woff2');
+}
+
+:root {
+  --font-family: 'Roboto Flex', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Roboto Mono', Consolas, 'Liberation Mono', monospace;
+
+  // ── Product UI (base 14px, ratio 1.248×) ──
+  --type-display-size: 52px;
+  --type-display-line-height: 1.04;
+  --type-display-weight: 500;
+  --type-display-fvs: 'opsz' 60, 'wdth' 110, 'GRAD' 40;
+  --type-display-letter-spacing: -0.02em;
+
+  --type-h1-size: 33px;
+  --type-h1-line-height: 1.167;
+  --type-h1-weight: 600;
+  --type-h1-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-h2-size: 27px;
+  --type-h2-line-height: 1.2;
+  --type-h2-weight: 600;
+  --type-h2-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-h3-size: 21px;
+  --type-h3-line-height: 1.167;
+  --type-h3-weight: 600;
+  --type-h3-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-h4-size: 17px;
+  --type-h4-line-height: 1.235;
+  --type-h4-weight: 600;
+  --type-h4-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-h5-size: 14px;
+  --type-h5-line-height: 1.334;
+  --type-h5-weight: 600;
+  --type-h5-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-h6-size: 11px;
+  --type-h6-line-height: 1.6;
+  --type-h6-weight: 600;
+  --type-h6-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-subtitle-size: 17px;
+  --type-subtitle-line-height: 1.65;
+  --type-subtitle-weight: 300;
+  --type-subtitle-fvs: 'wdth' 100, 'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712;
+  --type-subtitle-letter-spacing: 0.02em;
+
+  --type-body-size: 14px;
+  --type-body-line-height: 1.4;
+  --type-body-weight: 400;
+  --type-body-fvs: 'wdth' 80, 'YTLC' 490;
+
+  --type-body-small-size: 11px;
+  --type-body-small-line-height: 1.3;
+  --type-body-small-weight: 400;
+  --type-body-small-fvs: 'wdth' 80, 'YTLC' 490;
+
+  --type-bold-size: 14px;
+  --type-bold-line-height: 1.4;
+  --type-bold-weight: 700;
+  --type-bold-fvs: 'wdth' 100, 'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712;
+
+  --type-small-label-size: 11px;
+  --type-small-label-line-height: 1.23;
+  --type-small-label-weight: 600;
+  --type-small-label-fvs: 'opsz' 50;
+  --type-small-label-letter-spacing: 0.2em;
+  --type-small-label-text-transform: uppercase;
+
+  --type-overline-size: 11px;
+  --type-overline-line-height: 1.4;
+  --type-overline-weight: 600;
+  --type-overline-fvs: 'opsz' 50;
+  --type-overline-letter-spacing: 0.12em;
+  --type-overline-text-transform: uppercase;
+  --type-overline-family: var(--font-mono);
+
+  --type-input-label-size: 14px;
+  --type-input-label-line-height: 1;
+  --type-input-label-weight: 600;
+  --type-input-label-fvs: 'opsz' 50;
+
+  --type-input-value-size: 17px;
+  --type-input-value-line-height: 1.5;
+  --type-input-value-weight: 400;
+  --type-input-value-fvs: 'wdth' 80, 'YTLC' 490;
+
+  --type-code-size: 14px;
+  --type-code-line-height: 1.6;
+  --type-code-family: var(--font-mono);
+
+  --type-btn-lg-size: 17px;
+  --type-btn-lg-line-height: 1.733;
+  --type-btn-lg-weight: 500;
+  --type-btn-lg-fvs: 'wdth' 100;
+
+  --type-btn-md-size: 15px;
+  --type-btn-md-line-height: 1.733;
+  --type-btn-md-weight: 500;
+  --type-btn-md-fvs: 'wdth' 100;
+
+  --type-btn-sm-size: 15px;
+  --type-btn-sm-line-height: 1.2;
+  --type-btn-sm-weight: 500;
+  --type-btn-sm-fvs: 'wdth' 100;
+
+  --type-btn-xs-size: 14px;
+  --type-btn-xs-line-height: 1.2;
+  --type-btn-xs-weight: 500;
+  --type-btn-xs-fvs: 'wdth' 100;
+
+  // ── Website / Marketing (base 16px, ratio 1.33×) ──
+  --type-marketing-display-size: 88px;
+  --type-marketing-display-line-height: 1.04;
+  --type-marketing-display-weight: 500;
+  --type-marketing-display-fvs: 'opsz' 60, 'wdth' 110, 'GRAD' 40;
+  --type-marketing-display-letter-spacing: -0.02em;
+
+  --type-marketing-h1-size: 50px;
+  --type-marketing-h1-line-height: 1.167;
+  --type-marketing-h1-weight: 400;
+  --type-marketing-h1-fvs: 'opsz' 60, 'wdth' 110;
+
+  --type-marketing-h2-size: 37px;
+  --type-marketing-h2-line-height: 1.2;
+  --type-marketing-h2-weight: 600;
+  --type-marketing-h2-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-marketing-h3-size: 28px;
+  --type-marketing-h3-line-height: 1.167;
+  --type-marketing-h3-weight: 600;
+  --type-marketing-h3-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-marketing-h4-size: 21px;
+  --type-marketing-h4-line-height: 1.235;
+  --type-marketing-h4-weight: 600;
+  --type-marketing-h4-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-marketing-h5-size: 16px;
+  --type-marketing-h5-line-height: 1.334;
+  --type-marketing-h5-weight: 600;
+  --type-marketing-h5-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-marketing-h6-size: 12px;
+  --type-marketing-h6-line-height: 1.6;
+  --type-marketing-h6-weight: 600;
+  --type-marketing-h6-fvs: 'GRAD' 30, 'YTLC' 490, 'opsz' 28;
+
+  --type-marketing-subtitle-size: 21px;
+  --type-marketing-subtitle-line-height: 1.65;
+  --type-marketing-subtitle-weight: 300;
+  --type-marketing-subtitle-fvs: 'wdth' 100, 'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712;
+  --type-marketing-subtitle-letter-spacing: 0.02em;
+
+  --type-marketing-body-size: 16px;
+  --type-marketing-body-line-height: 1.4;
+  --type-marketing-body-weight: 400;
+  --type-marketing-body-fvs: 'wdth' 80, 'YTLC' 490;
+
+  --type-marketing-body-small-size: 12px;
+  --type-marketing-body-small-line-height: 1.3;
+  --type-marketing-body-small-weight: 400;
+  --type-marketing-body-small-fvs: 'wdth' 80, 'YTLC' 490;
+
+  --type-marketing-bold-size: 16px;
+  --type-marketing-bold-line-height: 1.4;
+  --type-marketing-bold-weight: 700;
+  --type-marketing-bold-fvs: 'wdth' 100, 'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712;
+
+  --type-marketing-small-label-size: 12px;
+  --type-marketing-small-label-line-height: 1.23;
+  --type-marketing-small-label-weight: 600;
+  --type-marketing-small-label-fvs: 'opsz' 50;
+  --type-marketing-small-label-letter-spacing: 0.2em;
+  --type-marketing-small-label-text-transform: uppercase;
+
+  --type-marketing-overline-size: 12px;
+  --type-marketing-overline-line-height: 1.4;
+  --type-marketing-overline-weight: 600;
+  --type-marketing-overline-fvs: 'opsz' 50;
+  --type-marketing-overline-letter-spacing: 0.12em;
+  --type-marketing-overline-text-transform: uppercase;
+  --type-marketing-overline-family: var(--font-mono);
+
+  --type-marketing-input-label-size: 16px;
+  --type-marketing-input-label-line-height: 1;
+  --type-marketing-input-label-weight: 600;
+  --type-marketing-input-label-fvs: 'opsz' 50;
+
+  --type-marketing-input-value-size: 21px;
+  --type-marketing-input-value-line-height: 1.5;
+  --type-marketing-input-value-weight: 400;
+  --type-marketing-input-value-fvs: 'wdth' 80, 'YTLC' 490;
+
+  --type-marketing-code-size: 16px;
+  --type-marketing-code-line-height: 1.6;
+  --type-marketing-code-family: var(--font-mono);
+
+  --type-marketing-btn-lg-size: 21px;
+  --type-marketing-btn-lg-line-height: 1.733;
+  --type-marketing-btn-lg-weight: 500;
+  --type-marketing-btn-lg-fvs: 'wdth' 100;
+
+  --type-marketing-btn-md-size: 18px;
+  --type-marketing-btn-md-line-height: 1.733;
+  --type-marketing-btn-md-weight: 500;
+  --type-marketing-btn-md-fvs: 'wdth' 100;
+
+  --type-marketing-btn-sm-size: 18px;
+  --type-marketing-btn-sm-line-height: 1.2;
+  --type-marketing-btn-sm-weight: 500;
+  --type-marketing-btn-sm-fvs: 'wdth' 100;
+
+  --type-marketing-btn-xs-size: 16px;
+  --type-marketing-btn-xs-line-height: 1.2;
+  --type-marketing-btn-xs-weight: 500;
+  --type-marketing-btn-xs-fvs: 'wdth' 100;
+
+  // ── Flavors (single-axis, composable) ──
+  --type-strong-weight: 700;
+  --type-strong-fvs: 'wdth' 100, 'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712;
+  --type-heavy-weight: 800;
+  --type-heavy-fvs: 'wdth' 110, 'GRAD' 40, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712;
+
+}
+
+// ── Utility classes ──
+.type-display {
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-line-height);
+  font-weight: var(--type-display-weight);
+  font-variation-settings: var(--type-display-fvs);
+  letter-spacing: var(--type-display-letter-spacing);
+  font-family: var(--font-family);
+}
+
+.type-h1 {
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line-height);
+  font-weight: var(--type-h1-weight);
+  font-variation-settings: var(--type-h1-fvs);
+  font-family: var(--font-family);
+}
+
+.type-h2 {
+  font-size: var(--type-h2-size);
+  line-height: var(--type-h2-line-height);
+  font-weight: var(--type-h2-weight);
+  font-variation-settings: var(--type-h2-fvs);
+  font-family: var(--font-family);
+}
+
+.type-h3 {
+  font-size: var(--type-h3-size);
+  line-height: var(--type-h3-line-height);
+  font-weight: var(--type-h3-weight);
+  font-variation-settings: var(--type-h3-fvs);
+  font-family: var(--font-family);
+}
+
+.type-h4 {
+  font-size: var(--type-h4-size);
+  line-height: var(--type-h4-line-height);
+  font-weight: var(--type-h4-weight);
+  font-variation-settings: var(--type-h4-fvs);
+  font-family: var(--font-family);
+}
+
+.type-h5 {
+  font-size: var(--type-h5-size);
+  line-height: var(--type-h5-line-height);
+  font-weight: var(--type-h5-weight);
+  font-variation-settings: var(--type-h5-fvs);
+  font-family: var(--font-family);
+}
+
+.type-h6 {
+  font-size: var(--type-h6-size);
+  line-height: var(--type-h6-line-height);
+  font-weight: var(--type-h6-weight);
+  font-variation-settings: var(--type-h6-fvs);
+  font-family: var(--font-family);
+}
+
+.type-subtitle {
+  font-size: var(--type-subtitle-size);
+  line-height: var(--type-subtitle-line-height);
+  font-weight: var(--type-subtitle-weight);
+  font-variation-settings: var(--type-subtitle-fvs);
+  letter-spacing: var(--type-subtitle-letter-spacing);
+  font-family: var(--font-family);
+}
+
+.type-body {
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  font-weight: var(--type-body-weight);
+  font-variation-settings: var(--type-body-fvs);
+  font-family: var(--font-family);
+}
+
+// .type-small = the documented alias (skill-usage promises it;
+// the React Typography variant emits .type-body-small).
+.type-body-small,
+.type-small {
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+  font-weight: var(--type-body-small-weight);
+  font-variation-settings: var(--type-body-small-fvs);
+  font-family: var(--font-family);
+}
+
+.type-bold {
+  font-size: var(--type-bold-size);
+  line-height: var(--type-bold-line-height);
+  font-weight: var(--type-bold-weight);
+  font-variation-settings: var(--type-bold-fvs);
+  font-family: var(--font-family);
+}
+
+.type-small-label {
+  font-size: var(--type-small-label-size);
+  line-height: var(--type-small-label-line-height);
+  font-weight: var(--type-small-label-weight);
+  font-variation-settings: var(--type-small-label-fvs);
+  letter-spacing: var(--type-small-label-letter-spacing);
+  text-transform: var(--type-small-label-text-transform);
+  font-family: var(--font-family);
+}
+
+.type-overline {
+  font-size: var(--type-overline-size);
+  line-height: var(--type-overline-line-height);
+  font-weight: var(--type-overline-weight);
+  font-variation-settings: var(--type-overline-fvs);
+  letter-spacing: var(--type-overline-letter-spacing);
+  text-transform: var(--type-overline-text-transform);
+  font-family: var(--type-overline-family);
+}
+
+.type-input-label {
+  font-size: var(--type-input-label-size);
+  line-height: var(--type-input-label-line-height);
+  font-weight: var(--type-input-label-weight);
+  font-variation-settings: var(--type-input-label-fvs);
+  font-family: var(--font-family);
+}
+
+.type-input-value {
+  font-size: var(--type-input-value-size);
+  line-height: var(--type-input-value-line-height);
+  font-weight: var(--type-input-value-weight);
+  font-variation-settings: var(--type-input-value-fvs);
+  font-family: var(--font-family);
+}
+
+.type-code {
+  font-size: var(--type-code-size);
+  line-height: var(--type-code-line-height);
+  font-family: var(--type-code-family);
+}
+
+.type-btn-lg {
+  font-size: var(--type-btn-lg-size);
+  line-height: var(--type-btn-lg-line-height);
+  font-weight: var(--type-btn-lg-weight);
+  font-variation-settings: var(--type-btn-lg-fvs);
+  font-family: var(--font-family);
+}
+
+.type-btn-md {
+  font-size: var(--type-btn-md-size);
+  line-height: var(--type-btn-md-line-height);
+  font-weight: var(--type-btn-md-weight);
+  font-variation-settings: var(--type-btn-md-fvs);
+  font-family: var(--font-family);
+}
+
+.type-btn-sm {
+  font-size: var(--type-btn-sm-size);
+  line-height: var(--type-btn-sm-line-height);
+  font-weight: var(--type-btn-sm-weight);
+  font-variation-settings: var(--type-btn-sm-fvs);
+  font-family: var(--font-family);
+}
+
+.type-btn-xs {
+  font-size: var(--type-btn-xs-size);
+  line-height: var(--type-btn-xs-line-height);
+  font-weight: var(--type-btn-xs-weight);
+  font-variation-settings: var(--type-btn-xs-fvs);
+  font-family: var(--font-family);
+}
+
+// ── Composable flavors ──
+// One axis each, so they stack on any .type-* class above (e.g. a progress
+// "60%" label = .type-small.type-mono, a big bold list row =
+// .sl--lg.type-strong). LAST on purpose: the flavor must win the cascade.
+// Defined in scylladb-typography.json -> flavors.
+// .type-mono — Mono family only — e.g. a progress 60% label = .type-small.type-mono.
+.type-mono {
+  font-family: var(--font-mono);
+}
+
+// .type-strong — Bold weight only (no size), so it adds weight to a component that owns its ramp — e.g. a large list row = .sl--lg.type-strong.
+.type-strong {
+  font-weight: var(--type-strong-weight);
+  font-variation-settings: var(--type-strong-fvs);
+}
+
+// .type-heavy — One step above strong: extra-bold at expanded width, for marketing headlines, hero claims and brand moments. Not for product UI.
+.type-heavy {
+  font-weight: var(--type-heavy-weight);
+  font-variation-settings: var(--type-heavy-fvs);
+}
+
+// ── Marketing scale override ──
+.scale-marketing {
+  --type-display-size: var(--type-marketing-display-size);
+  --type-display-line-height: var(--type-marketing-display-line-height);
+  --type-display-weight: var(--type-marketing-display-weight);
+  --type-display-fvs: var(--type-marketing-display-fvs);
+  --type-display-letter-spacing: var(--type-marketing-display-letter-spacing);
+  --type-h1-size: var(--type-marketing-h1-size);
+  --type-h1-line-height: var(--type-marketing-h1-line-height);
+  --type-h1-weight: var(--type-marketing-h1-weight);
+  --type-h1-fvs: var(--type-marketing-h1-fvs);
+  --type-h2-size: var(--type-marketing-h2-size);
+  --type-h2-line-height: var(--type-marketing-h2-line-height);
+  --type-h2-weight: var(--type-marketing-h2-weight);
+  --type-h2-fvs: var(--type-marketing-h2-fvs);
+  --type-h3-size: var(--type-marketing-h3-size);
+  --type-h3-line-height: var(--type-marketing-h3-line-height);
+  --type-h3-weight: var(--type-marketing-h3-weight);
+  --type-h3-fvs: var(--type-marketing-h3-fvs);
+  --type-h4-size: var(--type-marketing-h4-size);
+  --type-h4-line-height: var(--type-marketing-h4-line-height);
+  --type-h4-weight: var(--type-marketing-h4-weight);
+  --type-h4-fvs: var(--type-marketing-h4-fvs);
+  --type-h5-size: var(--type-marketing-h5-size);
+  --type-h5-line-height: var(--type-marketing-h5-line-height);
+  --type-h5-weight: var(--type-marketing-h5-weight);
+  --type-h5-fvs: var(--type-marketing-h5-fvs);
+  --type-h6-size: var(--type-marketing-h6-size);
+  --type-h6-line-height: var(--type-marketing-h6-line-height);
+  --type-h6-weight: var(--type-marketing-h6-weight);
+  --type-h6-fvs: var(--type-marketing-h6-fvs);
+  --type-subtitle-size: var(--type-marketing-subtitle-size);
+  --type-subtitle-line-height: var(--type-marketing-subtitle-line-height);
+  --type-subtitle-weight: var(--type-marketing-subtitle-weight);
+  --type-subtitle-fvs: var(--type-marketing-subtitle-fvs);
+  --type-subtitle-letter-spacing: var(--type-marketing-subtitle-letter-spacing);
+  --type-body-size: var(--type-marketing-body-size);
+  --type-body-line-height: var(--type-marketing-body-line-height);
+  --type-body-weight: var(--type-marketing-body-weight);
+  --type-body-fvs: var(--type-marketing-body-fvs);
+  --type-body-small-size: var(--type-marketing-body-small-size);
+  --type-body-small-line-height: var(--type-marketing-body-small-line-height);
+  --type-body-small-weight: var(--type-marketing-body-small-weight);
+  --type-body-small-fvs: var(--type-marketing-body-small-fvs);
+  --type-bold-size: var(--type-marketing-bold-size);
+  --type-bold-line-height: var(--type-marketing-bold-line-height);
+  --type-bold-weight: var(--type-marketing-bold-weight);
+  --type-bold-fvs: var(--type-marketing-bold-fvs);
+  --type-small-label-size: var(--type-marketing-small-label-size);
+  --type-small-label-line-height: var(--type-marketing-small-label-line-height);
+  --type-small-label-weight: var(--type-marketing-small-label-weight);
+  --type-small-label-fvs: var(--type-marketing-small-label-fvs);
+  --type-small-label-letter-spacing: var(--type-marketing-small-label-letter-spacing);
+  --type-small-label-text-transform: var(--type-marketing-small-label-text-transform);
+  --type-overline-size: var(--type-marketing-overline-size);
+  --type-overline-line-height: var(--type-marketing-overline-line-height);
+  --type-overline-weight: var(--type-marketing-overline-weight);
+  --type-overline-fvs: var(--type-marketing-overline-fvs);
+  --type-overline-letter-spacing: var(--type-marketing-overline-letter-spacing);
+  --type-overline-text-transform: var(--type-marketing-overline-text-transform);
+  --type-overline-family: var(--type-marketing-overline-family);
+  --type-input-label-size: var(--type-marketing-input-label-size);
+  --type-input-label-line-height: var(--type-marketing-input-label-line-height);
+  --type-input-label-weight: var(--type-marketing-input-label-weight);
+  --type-input-label-fvs: var(--type-marketing-input-label-fvs);
+  --type-input-value-size: var(--type-marketing-input-value-size);
+  --type-input-value-line-height: var(--type-marketing-input-value-line-height);
+  --type-input-value-weight: var(--type-marketing-input-value-weight);
+  --type-input-value-fvs: var(--type-marketing-input-value-fvs);
+  --type-code-size: var(--type-marketing-code-size);
+  --type-code-line-height: var(--type-marketing-code-line-height);
+  --type-code-family: var(--type-marketing-code-family);
+  --type-btn-lg-size: var(--type-marketing-btn-lg-size);
+  --type-btn-lg-line-height: var(--type-marketing-btn-lg-line-height);
+  --type-btn-lg-weight: var(--type-marketing-btn-lg-weight);
+  --type-btn-lg-fvs: var(--type-marketing-btn-lg-fvs);
+  --type-btn-md-size: var(--type-marketing-btn-md-size);
+  --type-btn-md-line-height: var(--type-marketing-btn-md-line-height);
+  --type-btn-md-weight: var(--type-marketing-btn-md-weight);
+  --type-btn-md-fvs: var(--type-marketing-btn-md-fvs);
+  --type-btn-sm-size: var(--type-marketing-btn-sm-size);
+  --type-btn-sm-line-height: var(--type-marketing-btn-sm-line-height);
+  --type-btn-sm-weight: var(--type-marketing-btn-sm-weight);
+  --type-btn-sm-fvs: var(--type-marketing-btn-sm-fvs);
+  --type-btn-xs-size: var(--type-marketing-btn-xs-size);
+  --type-btn-xs-line-height: var(--type-marketing-btn-xs-line-height);
+  --type-btn-xs-weight: var(--type-marketing-btn-xs-weight);
+  --type-btn-xs-fvs: var(--type-marketing-btn-xs-fvs);
+}
