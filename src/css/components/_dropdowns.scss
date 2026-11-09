@@ -3,10 +3,17 @@
   font-size: $font-sm;
   line-height: 20px;
 
-  a,
+  a {
+    color: var(--text-emphasis) !important;
+    padding: 0 !important;
+  }
+
+  // Hover feedback by color, not weight: the global a:hover { font-weight: 500 }
+  // in _reset.scss reflowed the menu items.
   a:hover,
   a:focus {
-    color: var(--text-emphasis) !important;
+    color: var(--link-color) !important;
+    font-weight: inherit;
     padding: 0 !important;
   }
 
