@@ -4,9 +4,14 @@ Icons
 Icons can be used in the :doc:`Topic box <topic-box>` and :doc:`Hero box <hero-box>` components.
 
 The icon font comes from the `ScyllaDB Design System <https://github.com/scylladb/scylladb-design-system>`_
-(``resources/icons/``, rebuilt with ``node generate-iconfont.js``). The docs-specific glyphs
+(``resources/icons/``, rebuilt with ``node generate-iconfont.js``). The drawings are
+`Remix Icon <https://remixicon.com>`_ under the design system's own names, with a few
+hand-drawn glyphs (brand, third-party, and some kept Material shapes). The docs-specific glyphs
 (``icon-docs-*``) live there under ``resources/icons/docs/``. The theme vendors the generated
 ``_iconfont.scss`` and font files; see ``src/css/vendor/scylladb-ds/README.md`` for the sync steps.
+
+Most icons also ship a second drawing (line + fill); adding the ``icon-duo`` class renders them
+two-tone (the fill in ``--icon-tone`` under the line). The theme does not use that mode yet.
 
 Preview
 -------

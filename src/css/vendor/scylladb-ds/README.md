@@ -17,8 +17,12 @@ What is vendored and why:
 
 The icon font is the design system's: the docs-specific glyphs (`icon-docs-*`)
 live in the design-system repo under `resources/icons/docs/`, so the theme no
-longer builds its own font. Codepoints are renumbered whenever an icon is added
-there, so the theme references glyphs by name only (`map.get($icons, "…")`).
+longer builds its own font. The drawings are Remix Icon (4.8.0, Apache-2.0) under
+the design system's names, plus a few hand-drawn / kept glyphs; the design system
+records the source of every icon in `resources/icons/sources.json`. Codepoints are
+stable there (`resources/icons/codepoints.json`), but the theme still references
+glyphs by name only (`map.get($icons, "…")`, `var(--glyph-<name>)`). Most icons
+ship a line + fill pair; `.icon-duo` renders them two-tone (not used by the theme).
 `icon-scylla` was dropped in favour of the design system's `icon-scylla-filled`
 (same drawing).
 
@@ -48,7 +52,13 @@ Then `npm run build`. The only local changes to the generated files are the
 
 ## Current state
 
-`_colors.scss` is ahead of the 0.6.76 bundle: it was copied straight from the
-design-system source (`scss/_colors.scss`, gray ramp update, 2026-11-09) before
-`npm run build:ds` was re-run there. Once the bundle is rebuilt, the sync steps
-above bring the two back in line.
+Two partials are ahead of the 0.6.76 bundle and were copied straight from the
+design-system source instead of `dist-ds/`:
+
+- `_colors.scss`: gray ramp update (2026-11-09), not yet built into a bundle.
+- `_iconfont.scss` + `src/fonts/fonticon.*`: from the design-system branch
+  `remix-icons` (on top of `docs-icons`, 2026-11-10): the Remix Icon redraw, the
+  22 `docs-*` glyphs, stable codepoints, 230 icons / 361 glyphs.
+
+Once both land upstream and `npm run build:ds` is re-run there, the sync steps
+above bring everything back in line.
