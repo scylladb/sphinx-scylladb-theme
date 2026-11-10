@@ -123,7 +123,9 @@ $product-title-height: $spacer-md;
     --link-color-hover: var(--text-link-hover);
     --code-color: var(--text-code);
     --header-border: var(--color-secondary-500);
-    --alert-color: var(--bg-muted);
+    // light text on the --info alert background in both modes (upstream: $gray-100);
+    // a fixed primitive on purpose, a surface token would flip with the theme
+    --alert-color: var(--color-gray-100);
 
     // Surfaces (--navigation-bg is overridden: the design system defaults it to transparent)
     --bg-color: var(--bg-page);

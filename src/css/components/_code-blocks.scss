@@ -70,7 +70,10 @@ code {
 
   .highlight {
     pre {
+      // the table is the framed surface: no second border / radius on the inner pre
       background-color: transparent;
+      border: 0;
+      border-radius: 0;
       margin: 0;
       padding: 0;
     }
