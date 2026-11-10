@@ -25,3 +25,10 @@
   // inline icons take the line height of their text, keep that
   line-height: inherit;
 }
+
+// Compatibility: the theme's old font had `icon-scylla`; the design system ships the
+// same drawing as `scylla-filled`. Keep the old name working for docs projects that
+// still write `:icon: icon-scylla`.
+.icon-scylla::before {
+  content: var(--glyph-scylla-filled);
+}

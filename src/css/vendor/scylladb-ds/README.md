@@ -38,7 +38,7 @@ for f in _colors _semantic _borders _spacing _elevation _typography _iconfont; d
 done
 cp "$DS/VERSION" src/css/vendor/scylladb-ds/VERSION
 cp "$DS/fonts/roboto-flex.woff2" "$DS/fonts/roboto-mono.woff2" src/fonts/
-cp "$DS/fonts/fonticon.ttf" "$DS/fonts/fonticon.woff" "$DS/fonts/fonticon.eot" src/fonts/
+cp "$DS/fonts/fonticon.ttf" "$DS/fonts/fonticon.woff" src/fonts/
 # the bundle references fonts as ../resources/fonts/; the theme keeps them in src/fonts/
 sed -i "s#url('../resources/fonts/#url('../fonts/#g" src/css/vendor/scylladb-ds/_typography.scss
 # same for the icon font (and drop its cache-buster: webpack inlines the files)

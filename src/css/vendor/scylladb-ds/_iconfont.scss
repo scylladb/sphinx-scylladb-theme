@@ -8,9 +8,11 @@
 
 @font-face {
   font-family: 'fonticon';
-  src: url("../fonts/fonticon.ttf") format("truetype"),
-       url("../fonts/fonticon.eot") format("embedded-opentype"),
-       url("../fonts/fonticon.woff") format("woff");
+  // woff first (every current browser takes it), ttf as the fallback; no eot (IE only)
+  src: url("../fonts/fonticon.woff") format("woff"),
+       url("../fonts/fonticon.ttf") format("truetype");
+  // icon glyphs: never flash a fallback character while the font loads
+  font-display: block;
 }
 
 [class*=" icon-"],

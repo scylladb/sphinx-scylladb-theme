@@ -12,6 +12,7 @@ hand-drawn glyphs (brand, third-party, and some kept Material shapes). The docs-
 
 Most icons also ship a second drawing (line + fill); adding the ``icon-duo`` class renders them
 two-tone (the fill in ``--icon-tone`` under the line). The theme does not use that mode yet.
+``icon-scylla`` keeps working as an alias of ``icon-scylla-filled``.
 
 Preview
 -------
