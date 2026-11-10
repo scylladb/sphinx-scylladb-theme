@@ -23,6 +23,7 @@ code {
 
   pre {
     background-color: var(--bg-code);
+    border: var(--border-w, 1px) solid var(--border-color);
     border-radius: $border-radius-md;
     color: var(--code-color);
     font-size: $font-sm;
@@ -40,6 +41,7 @@ code {
 
 .highlighttable {
   background-color: var(--bg-code);
+  border: var(--border-w, 1px) solid var(--border-color);
   border-radius: 16px;
   box-shadow: none;
 
