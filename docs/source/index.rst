@@ -34,7 +34,6 @@
     :link: getting-started
     :icon: icon-rocket
     :class: large-6
-    :anchor: Learn more
 
     Create a new documentation project with the Sphinx theme and preview the documentation in your browser.
 
@@ -43,7 +42,6 @@
     :link: configuration
     :icon: icon-settings
     :class: large-6
-    :anchor: Learn more
 
     Learn to configure the documentation look and feel and extensions.
 
@@ -52,7 +50,6 @@
     :link: commands
     :icon: icon-terminal
     :class: large-6
-    :anchor: Learn more
 
     Run commands to build and preview the documentation.
 
@@ -61,7 +58,6 @@
     :link: deployment
     :icon: icon-github
     :class: large-6
-    :anchor: Learn more
 
     Publish documentation sites using GitHub Actions & Pages.
 
@@ -70,7 +66,6 @@
     :link: examples
     :icon: icon-dashboard
     :class: large-6
-    :anchor: Learn more
 
     Explore example pages and components you can use in ScyllaDB docs.
 
@@ -79,7 +74,6 @@
     :link: contribute
     :icon: icon-users
     :class: large-6
-    :anchor: Learn more
 
     Notes to set up the developer environment,
     update the static assets, and distribute the theme.

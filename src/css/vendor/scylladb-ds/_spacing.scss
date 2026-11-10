@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "sass:meta";
+
+// ── Golden-ratio spacing scale ──
+// Base: 32px = 2rem. Each step scales by φ (1.618).
+
+@function decimal-round($number, $digits: 0, $mode: round) {
+  $n: 1;
+  @if meta.type-of($number) != number { @warn '#{$number} is not a number.'; @return $number; }
+  @if meta.type-of($digits) != number { @warn '#{$digits} is not a number.'; @return $number; }
+  @else if not math.is-unitless($digits) { @warn '#{$digits} has a unit.'; @return $number; }
+  @if $digits > 0 {
+    @for $i from 1 through $digits { $n: $n * 10; }
+  }
+  @if $mode == round { @return math.div(math.round($number * $n), $n); }
+  @else if $mode == ceil { @return math.div(math.ceil($number * $n), $n); }
+  @else if $mode == floor { @return math.div(math.floor($number * $n), $n); }
+  @else { @warn '#{$mode} is undefined keyword.'; @return $number; }
+}
+
+$spacer-base: 32px;
+$spacer-ratio: 1.618;
+
+$spacer-md:  decimal-round(($spacer-base * $spacer-ratio), 1);
+$spacer-lg:  decimal-round(($spacer-md * $spacer-ratio), 1);
+$spacer-xl:  decimal-round(($spacer-lg * $spacer-ratio), 1);
+$spacer-sm:  decimal-round((math.div($spacer-base, $spacer-ratio)), 1);
+$spacer-xs:  decimal-round((math.div($spacer-sm, $spacer-ratio)), 1);
+$spacer-2xs: decimal-round((math.div($spacer-xs, $spacer-ratio)), 1);
+$spacer-3xs: decimal-round((math.div($spacer-2xs, $spacer-ratio)), 1);
+
+$spacers: (
+  3xs: $spacer-3xs,
+  2xs: $spacer-2xs,
+  xs:  $spacer-xs,
+  sm:  $spacer-sm,
+  base: $spacer-base,
+  md:  $spacer-md,
+  lg:  $spacer-lg,
+  xl:  $spacer-xl,
+);
+
+// Numeric aliases (Material-style)
+$spacers-numbered: (
+  0: 0,
+  1: $spacer-2xs,
+  2: $spacer-xs,
+  3: $spacer-sm,
+  4: $spacer-base,
+  5: $spacer-md,
+  6: $spacer-lg,
+  7: $spacer-xl,
+);
+
+// ── CSS custom properties (rem + px) ──
+:root {
+  @each $name, $px in $spacers {
+    --spacer-#{$name}: #{decimal-round(math.div($px, 16px), 4)}rem;
+    --spacer-#{$name}-px: #{$px};
+  }
+}

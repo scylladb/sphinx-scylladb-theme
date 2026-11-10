@@ -1,0 +1,29 @@
+// ══════════════════════════════════════════════════════════
+// BORDERS — radius & width tokens
+// Auto-generated from scylladb-borders.json
+// Run: node generate-borders.js
+// ══════════════════════════════════════════════════════════
+
+:root {
+  // Radius
+  --radius-none: 0;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 7px;
+  --radius-xl: 11px;
+  --radius-2xl: 17px;
+  --radius-full: 9999px;
+
+  // Width
+  --border-w-none: 0;
+  --border-w: 1px;
+  --border-w-thick: 2px;
+}
+
+// HiDPI — bolder borders for high-density screens
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  :root {
+    --border-w: 1.5px;
+    --border-w-thick: 3px;
+  }
+}

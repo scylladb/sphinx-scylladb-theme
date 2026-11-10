@@ -55,8 +55,15 @@ module.exports = {
       // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: "asset/resource" },
 
-      // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: "asset/inline" },
+      // Web fonts (woff2): emitted as files; the design-system fonts are too large to inline
+      {
+        test: /\.woff2$/,
+        type: "asset/resource",
+        generator: { filename: "fonts/[name][ext]" },
+      },
+
+      // Icon font and SVGs: Inline files
+      { test: /\.(woff|eot|ttf|otf|svg|)$/, type: "asset/inline" },
     ],
   },
 };

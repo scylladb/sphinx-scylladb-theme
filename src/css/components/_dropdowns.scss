@@ -3,16 +3,35 @@
   font-size: $font-sm;
   line-height: 20px;
 
-  a,
-  a:hover,
-  a:focus {
+  a {
     color: var(--text-emphasis) !important;
     padding: 0 !important;
   }
 
+  // Hover feedback by color, not weight: the global a:hover { font-weight: 500 }
+  // in _reset.scss reflowed the menu items.
+  a:hover,
+  a:focus {
+    color: var(--link-color) !important;
+    font-weight: inherit;
+  }
+
   &__item {
     font-size: $font-md;
-    padding: 15px;
+    padding: 0;
+
+    // The title link carries the padding and the hover background. The hover
+    // sits on the item (not the link) so the title stays highlighted while
+    // the cursor is in the open list below it. The extra `.scylla-dropdown`
+    // outranks Foundation's `.dropdown.menu > li.is-active > a { background: transparent }`.
+    > .scylla-dropdown__title {
+      padding: 15px !important;
+      border-radius: var(--radius-sm);
+    }
+
+    .scylla-dropdown &:hover > .scylla-dropdown__title {
+      background: var(--menu-hover-bg);
+    }
   }
 
   &__title {
@@ -35,12 +54,22 @@
     padding: $spacer-xs 0;
     width: max-content;
 
+    // The link is the hover target: it carries the padding so the highlight
+    // covers the whole row (Foundation's .menu a padding is reset above, hence
+    // the !important here).
     li {
-      padding: 7px 16px;
-      
+      padding: 0;
+
       a {
         display: flex;
         align-items: center;
+        padding: 7px 16px !important;
+      }
+
+      a:hover,
+      a:focus {
+        background: var(--menu-hover-bg);
+        padding: 7px 16px !important;
       }
 
       i {

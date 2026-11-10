@@ -1,0 +1,17 @@
+// ScyllaDB Design System (Agora) — token layer consumed by the Sphinx theme.
+//
+// Only the "core" partials are vendored (tokens, fonts, type ramp); no element
+// styles or components, so nothing here paints the page by itself. The theme's
+// own variables (base/_variables.scss) bridge its legacy names onto these tokens.
+//
+// Sync instructions + version: see README.md in this folder. Do not hand-edit
+// the partials — they are generated in the design-system repo.
+
+@use "colors";      // --color-* palette (OKLCH)
+@use "semantic";    // --bg-* / --text-* / --border-* … per [data-theme]
+@use "borders";     // --radius-*, --border-w
+@use "spacing";     // --spacer-*
+@use "elevation";   // --shadow-*
+@use "typography";  // @font-face (Roboto Flex, Roboto Mono) + --type-* ramp
+// @forward (not @use): the theme reads $icons by name (map.get) in its partials
+@forward "iconfont"; // @font-face (fonticon) + $icons map + --glyph-* + .icon-<name>::before

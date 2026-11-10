@@ -1,8 +1,15 @@
+code,
+kbd,
+samp,
+pre {
+  font-family: $font-mono-family;
+}
+
 code {
   color: var(--code-color);
-  background-color: var(--well-bg);
+  background-color: var(--bg-code);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: $font-sm;
 
   &.download {
@@ -15,7 +22,8 @@ code {
   background: transparent !important;
 
   pre {
-    background-color: var(--well-bg);
+    background-color: var(--bg-code);
+    border: var(--border-w, 1px) solid var(--border-color);
     border-radius: $border-radius-md;
     color: var(--code-color);
     font-size: $font-sm;
@@ -32,7 +40,8 @@ code {
 }
 
 .highlighttable {
-  background-color: var(--well-bg);
+  background-color: var(--bg-code);
+  border: var(--border-w, 1px) solid var(--border-color);
   border-radius: 16px;
   box-shadow: none;
 
@@ -51,7 +60,7 @@ code {
 
   .linenos {
     color: var(--line-number);
-    background-color: var(--well-bg);
+    background-color: var(--bg-code);
     width: 50px;
 
     span {
@@ -61,7 +70,10 @@ code {
 
   .highlight {
     pre {
+      // the table is the framed surface: no second border / radius on the inner pre
       background-color: transparent;
+      border: 0;
+      border-radius: 0;
       margin: 0;
       padding: 0;
     }
