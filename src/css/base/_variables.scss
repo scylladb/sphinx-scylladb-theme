@@ -130,7 +130,7 @@ $product-title-height: $spacer-md;
     --well-bg: var(--bg-surface-alt);
     --navigation-bg: var(--bg-muted);
     --card-bg: var(--bg-surface);
-    --menu-hover-bg: var(--color-primary-50);
+    --menu-hover-bg: var(--color-gray-50);
     --admonition: var(--text-muted);
     --scollbar-bg: var(--color-gray-400);
     --tooltip-bg: var(--bg-overlay);
@@ -180,7 +180,7 @@ $product-title-height: $spacer-md;
   .dark {
     --navigation-bg: var(--bg-surface-alt);
     --well-bg: var(--bg-surface-alt);
-    --menu-hover-bg: var(--color-primary-950);
+    --menu-hover-bg: var(--color-gray-800);
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
 
     --brand-product: var(--color-gray-800);

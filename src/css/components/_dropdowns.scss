@@ -47,16 +47,22 @@
     padding: $spacer-xs 0;
     width: max-content;
 
+    // The link is the hover target: it carries the padding so the highlight
+    // covers the whole row (Foundation's .menu a padding is reset above, hence
+    // the !important here).
     li {
-      padding: 7px 16px;
-
-      &:hover {
-        background: var(--menu-hover-bg);
-      }
+      padding: 0;
 
       a {
         display: flex;
         align-items: center;
+        padding: 7px 16px !important;
+      }
+
+      a:hover,
+      a:focus {
+        background: var(--menu-hover-bg);
+        padding: 7px 16px !important;
       }
 
       i {
