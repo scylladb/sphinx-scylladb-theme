@@ -14,15 +14,22 @@
   a:focus {
     color: var(--link-color) !important;
     font-weight: inherit;
-    padding: 0 !important;
   }
 
   &__item {
     font-size: $font-md;
-    padding: 15px;
-    border-radius: var(--radius-sm);
+    padding: 0;
 
-    &:hover {
+    // The title link carries the padding and the hover background. The hover
+    // sits on the item (not the link) so the title stays highlighted while
+    // the cursor is in the open list below it. The extra `.scylla-dropdown`
+    // outranks Foundation's `.dropdown.menu > li.is-active > a { background: transparent }`.
+    > .scylla-dropdown__title {
+      padding: 15px !important;
+      border-radius: var(--radius-sm);
+    }
+
+    .scylla-dropdown &:hover > .scylla-dropdown__title {
       background: var(--menu-hover-bg);
     }
   }
