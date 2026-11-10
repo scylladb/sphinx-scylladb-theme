@@ -1,0 +1,27 @@
+// Icon glyphs come from the ScyllaDB Design System icon font
+// (vendor/scylladb-ds/_iconfont.scss: @font-face, $icons map, --glyph-* vars,
+// .icon-<name>::before rules). This file only adds what the theme needs on top:
+//
+// - a bare `.icon` class the theme @extends for pseudo-element icons
+//   (admonitions, external links, TOC chevrons…)
+// - the inline alignment the theme has always used for <i class="icon-…">
+//
+// Reference glyphs by name (map.get($icons, "name") or var(--glyph-name)),
+// never by codepoint: codepoints shift whenever the design system adds an icon.
+
+.icon {
+  font-family: 'fonticon' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon,
+[class*=" icon-"],
+[class^="icon-"] {
+  font-weight: normal !important;
+  vertical-align: middle;
+  // the design system sets line-height: 1 on icons; the theme has always let
+  // inline icons take the line height of their text, keep that
+  line-height: inherit;
+}

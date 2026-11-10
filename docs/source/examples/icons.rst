@@ -3,9 +3,10 @@ Icons
 
 Icons can be used in the :doc:`Topic box <topic-box>` and :doc:`Hero box <hero-box>` components.
 
-The icons are generated from a Figma file using the `icon2font plugin <https://www.figma.com/community/plugin/1163564513630074161/icon2font>`_.
-
-This plugin generates a custom font located at ``src/css/base/_fonticon.scss``.
+The icon font comes from the `ScyllaDB Design System <https://github.com/scylladb/scylladb-design-system>`_
+(``resources/icons/``, rebuilt with ``node generate-iconfont.js``). The docs-specific glyphs
+(``icon-docs-*``) live there under ``resources/icons/docs/``. The theme vendors the generated
+``_iconfont.scss`` and font files; see ``src/css/vendor/scylladb-ds/README.md`` for the sync steps.
 
 Preview
 -------
@@ -1112,9 +1113,9 @@ Preview
         :class: topic-box--product,large-3,small-6
 
     .. topic-box::
-        :title: icon-scylla
+        :title: icon-scylla-filled
         :link: #
-        :icon: icon-scylla
+        :icon: icon-scylla-filled
         :class: topic-box--product,large-3,small-6
 
     .. topic-box::
@@ -1235,4 +1236,178 @@ Preview
         :title: icon-docs-download
         :link: #
         :icon: icon-docs-download
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-ai-chat
+        :link: #
+        :icon: icon-ai-chat
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-bluesky
+        :link: #
+        :icon: icon-bluesky
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-blur-on
+        :link: #
+        :icon: icon-blur-on
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-calculator
+        :link: #
+        :icon: icon-calculator
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-chart
+        :link: #
+        :icon: icon-chart
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-crisis-alert
+        :link: #
+        :icon: icon-crisis-alert
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-docs
+        :link: #
+        :icon: icon-docs
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-fast-forward
+        :link: #
+        :icon: icon-fast-forward
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-fast-rewind
+        :link: #
+        :icon: icon-fast-rewind
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-fold
+        :link: #
+        :icon: icon-fold
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-fold-horizontal
+        :link: #
+        :icon: icon-fold-horizontal
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-grip-vertical
+        :link: #
+        :icon: icon-grip-vertical
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-keep
+        :link: #
+        :icon: icon-keep
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-keep-off
+        :link: #
+        :icon: icon-keep-off
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-memory-new
+        :link: #
+        :icon: icon-memory-new
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-moon
+        :link: #
+        :icon: icon-moon
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-node
+        :link: #
+        :icon: icon-node
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-not-found
+        :link: #
+        :icon: icon-not-found
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-palette
+        :link: #
+        :icon: icon-palette
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-restore
+        :link: #
+        :icon: icon-restore
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-star-circle
+        :link: #
+        :icon: icon-star-circle
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-sun
+        :link: #
+        :icon: icon-sun
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-sun-contrast
+        :link: #
+        :icon: icon-sun-contrast
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-sync-alt
+        :link: #
+        :icon: icon-sync-alt
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-toggle-left
+        :link: #
+        :icon: icon-toggle-left
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-unfold-horizontal
+        :link: #
+        :icon: icon-unfold-horizontal
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-vector
+        :link: #
+        :icon: icon-vector
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-vector-search-brand
+        :link: #
+        :icon: icon-vector-search-brand
+        :class: topic-box--product,large-3,small-6
+
+    .. topic-box::
+        :title: icon-youtube
+        :link: #
+        :icon: icon-youtube
         :class: topic-box--product,large-3,small-6

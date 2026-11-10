@@ -13,3 +13,5 @@
 @use "spacing";     // --spacer-*
 @use "elevation";   // --shadow-*
 @use "typography";  // @font-face (Roboto Flex, Roboto Mono) + --type-* ramp
+// @forward (not @use): the theme reads $icons by name (map.get) in its partials
+@forward "iconfont"; // @font-face (fonticon) + $icons map + --glyph-* + .icon-<name>::before
