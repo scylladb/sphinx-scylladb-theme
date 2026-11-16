@@ -137,6 +137,18 @@ $product-title-height: $spacer-md;
     --scollbar-bg: var(--color-gray-400);
     --tooltip-bg: var(--bg-overlay);
 
+    // Status pairs (text + soft tint) used by labels. The design system generates
+    // them in its recipes layer, which is not among the vendored partials, so the
+    // same mapping is repeated here (and in .dark below).
+    --status-success: var(--color-success-700);
+    --status-success-bg: var(--color-success-50);
+    --status-warning: var(--color-warning-700);
+    --status-warning-bg: var(--color-warning-50);
+    --status-error: var(--color-error-700);
+    --status-error-bg: var(--color-error-50);
+    --status-info: var(--color-info-700);
+    --status-info-bg: var(--color-info-50);
+
     --shadow-lg: var(--shadow-4);
     --border-width: #{$border-width};
     --border-radius: #{$border-radius};
@@ -184,6 +196,15 @@ $product-title-height: $spacer-md;
     --well-bg: var(--bg-surface-alt);
     --menu-hover-bg: var(--color-gray-800);
     --logo-url: "../img/logo-scylla-horizontal-light.svg";
+
+    --status-success: var(--color-success-400);
+    --status-success-bg: var(--color-success-950);
+    --status-warning: var(--color-warning-400);
+    --status-warning-bg: var(--color-warning-950);
+    --status-error: var(--color-error-400);
+    --status-error-bg: var(--color-error-950);
+    --status-info: var(--color-info-400);
+    --status-info-bg: var(--color-info-950);
 
     --brand-product: var(--color-gray-800);
     --brand-text: var(--color-gray-100);
