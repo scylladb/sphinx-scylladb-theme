@@ -8,7 +8,8 @@
                 project }}</a>
         </div>
         <div class="side-nav__search">
-            {% if theme_search_engine|lower == 'expertrec' %}
+            <div class="search-group">
+                {% if theme_search_engine|lower == 'expertrec' %}
                 <div class="search-box">
                     <ci-search></ci-search>
                 </div>
@@ -17,9 +18,10 @@
                                  header-title="ScyllaDB chatbot"
                                  button-position="default"
                                  modal-position="sidebar-right"
-                                 button-style="dark">
-                        Ask AI
-                    </biel-button>
+                                 button-style="dark"
+                             title="Ask AI">
+                    <i class="icon-ai-chat" aria-hidden="true"></i><span class="show-for-sr">Ask AI</span>
+                </biel-button>
                 {% endif %}
             {% else %}
                 <biel-search-button
@@ -36,11 +38,13 @@
                                  header-title="ScyllaDB chatbot"
                                  button-position="default"
                                  modal-position="sidebar-right"
-                                 button-style="dark">
-                        Ask AI
-                    </biel-button>
+                                 button-style="dark"
+                             title="Ask AI">
+                    <i class="icon-ai-chat" aria-hidden="true"></i><span class="show-for-sr">Ask AI</span>
+                </biel-button>
                 {% endif %}
-            {% endif %}
+                {% endif %}
+            </div>
         </div>
         <div class="side-nav__versions">{% if versions and not theme_hide_versions_dropdown|tobool %}{% include
             'versions.html' %}{% endif %}</div>
