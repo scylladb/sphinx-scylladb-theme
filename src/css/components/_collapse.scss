@@ -11,19 +11,32 @@
   color: var(--text-color);
 }
 
+// sphinx_collapse draws a filled CSS triangle with borders; replace it with the
+// chevron glyph the rest of the theme uses (side nav, versions, page actions).
 .sphinx_collapse__icon {
+  @extend .icon;
+  border: 0 !important;
+  width: auto !important;
+  height: auto !important;
   margin-left: 5px;
   margin-right: 0;
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-  border-top-color: var(--text-color) !important;
+  &::before {
+    content: var(--glyph-chevron-right);
+    display: block;
+  }
+}
+
+.sphinx_collapse__input:checked ~ .sphinx_collapse__label .sphinx_collapse__icon {
+  transform: rotate(90deg);
 }
 
 .sphinx_collapse__input:checked ~ .sphinx_collapse__label,
 .sphinx_collapse__label:hover {
   color: var(--link-color);
-  .sphinx_collapse__icon {
-    border-top-color: var(--link-color) !important;
-  }
 }
 
 .sphinx_collapse__content {
