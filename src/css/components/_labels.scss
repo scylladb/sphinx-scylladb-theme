@@ -1,27 +1,43 @@
+// Labels after the design system's .badge: a soft tint with same-hue text,
+// mono uppercase micro-label. Colors come from the --status-* pairs
+// (base/_variables.scss), so they follow the light / dark theme.
 .label {
-  border: 0;
-  border-radius: 4px;
-  background-color: var(--navigation-bg);
-  color: var(--white);
-  font-size: inherit;
+  --label-bg: var(--status-neutral-bg);
+  --label-fg: var(--status-neutral);
 
-  &--default {
-    color: var(--text-color);
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacer-3xs) var(--spacer-2xs);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background-color: var(--label-bg);
+  color: var(--label-fg);
+  font-family: var(--font-mono);
+  font-size: var(--type-overline-size);
+  font-weight: 600;
+  line-height: var(--type-overline-line-height);
+  letter-spacing: var(--type-overline-letter-spacing);
+  text-transform: var(--type-overline-text-transform);
+  vertical-align: middle;
 
   &--note {
-    background-color: var(--info);
+    --label-bg: var(--status-info-bg);
+    --label-fg: var(--status-info);
   }
 
   &--tip {
-    background-color: var(--success);
+    --label-bg: var(--status-success-bg);
+    --label-fg: var(--status-success);
   }
 
   &--caution {
-    background-color: var(--warning);
+    --label-bg: var(--status-warning-bg);
+    --label-fg: var(--status-warning);
   }
 
   &--warning {
-    background-color: var(--danger);
+    --label-bg: var(--status-error-bg);
+    --label-fg: var(--status-error);
   }
 }

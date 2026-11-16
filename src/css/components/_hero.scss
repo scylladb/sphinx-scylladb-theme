@@ -90,7 +90,7 @@
         background-color: var(--well-bg);
         border: 1px solid var(--primary);
         border-radius: #{$border-radius};
-        box-shadow: 0 5px 20px rgba(var(--primary-rgb), .4);
+        box-shadow: 0 5px 20px color-mix(in oklch, var(--primary) 40%, transparent);
         padding: 12px;
       }
     }

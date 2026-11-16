@@ -1,0 +1,408 @@
+// ══════════════════════════════════════════════════════════
+// SEMANTIC THEME TOKENS
+// Auto-generated from scylladb-themes.json
+// Run: node generate-themes.js
+// ══════════════════════════════════════════════════════════
+
+:root {
+  // ── Surfaces ──
+  --bg-page: var(--color-gray-50);
+  --bg-surface: #fff;
+  --bg-surface-alt: var(--color-gray-50);
+  --bg-overlay: var(--color-gray-800);
+  --bg-muted: var(--color-gray-100);
+  --bg-accent: var(--color-primary-50);
+  --bg-code: var(--color-secondary-50);
+  --navigation-bg: transparent;
+  --footer-bg: var(--color-gray-900);
+  --shadow-color: var(--color-primary-700);
+
+  // ── Text ──
+  --text-color: var(--color-gray-600);
+  --text-emphasis: var(--color-gray-800);
+  --text-muted: var(--color-gray-500);
+  --text-disabled: var(--color-gray-400);
+  --text-inverse: #fff;
+  --text-link: var(--color-primary-600);
+  --text-link-hover: var(--color-primary-700);
+  --text-code: var(--color-secondary-600);
+  --text-on-primary: #fff;
+
+  // ── Borders & Dividers ──
+  --border-color: var(--color-gray-200);
+  --border-strong: var(--color-gray-300);
+  --border-faint: var(--color-gray-100);
+  --border-focus: var(--color-primary-400);
+  --ring-color: var(--color-primary-200);
+  --section-outline-border: var(--color-secondary-300);
+  --card-border: var(--color-gray-200);
+
+  // ── Surface Overrides ──
+  --surface-bg-alt: var(--bg-surface-alt);
+  --surface-bg-muted: var(--bg-muted);
+  --surface-bg-code: var(--bg-code);
+  --surface-text-emphasis: var(--text-emphasis);
+  --surface-text-color: var(--text-color);
+  --surface-text-muted: var(--text-muted);
+  --surface-text-disabled: var(--text-disabled);
+  --surface-text-code: var(--text-code);
+  --surface-text-link: var(--text-link);
+  --surface-text-link-hover: var(--text-link-hover);
+  --surface-border-color: var(--border-color);
+  --surface-border-strong: var(--border-strong);
+  --surface-border-faint: var(--border-faint);
+  --surface-section-outline-border: var(--surface-border-color);
+  --surface-card-border: var(--card-border);
+  --surface-shadow-color: var(--shadow-color);
+  --surface-tab-active-indicator: var(--tab-active-indicator);
+  --surface-tab-hover-bg: var(--tab-hover-bg);
+
+  // ── Surface — Light (fixed) ──
+  --surface-light-bg: #fff;
+  --surface-light-bg-alt: var(--color-gray-50);
+  --surface-light-bg-muted: var(--color-gray-100);
+  --surface-light-text-emphasis: var(--color-gray-900);
+  --surface-light-text-color: var(--color-gray-800);
+  --surface-light-text-muted: var(--color-gray-500);
+  --surface-light-text-disabled: var(--color-gray-400);
+  --surface-light-text-code: var(--color-primary-600);
+  --surface-light-border-color: var(--color-gray-300);
+  --surface-light-border-strong: var(--color-gray-400);
+  --surface-light-border-faint: var(--color-gray-200);
+  --surface-light-shadow-color: var(--color-secondary-800);
+
+  // ── Surface — Dark (fixed) ──
+  --surface-dark-bg: var(--color-gray-900);
+  --surface-dark-bg-alt: var(--color-gray-800);
+  --surface-dark-bg-muted: var(--color-gray-800);
+  --surface-dark-text-emphasis: var(--color-gray-50);
+  --surface-dark-text-color: var(--color-gray-200);
+  --surface-dark-text-muted: var(--color-gray-400);
+  --surface-dark-text-disabled: var(--color-gray-600);
+  --surface-dark-text-code: var(--color-secondary-200);
+  --surface-dark-border-color: var(--color-gray-700);
+  --surface-dark-border-strong: var(--color-gray-600);
+  --surface-dark-border-faint: var(--color-gray-800);
+  --surface-dark-shadow-color: var(--color-gray-950);
+
+  // ── Navigation ──
+  --nav-text: var(--color-gray-800);
+  --nav-text-faint: var(--color-gray-600);
+  --nav-text-hover: var(--color-primary-500);
+  --nav-hover-bg: var(--color-gray-50);
+  --nav-active-bg: var(--color-primary-200);
+  --nav-text-active: var(--color-primary-800);
+  --nav-text-has-active: var(--color-primary-600);
+
+  // ── Top Nav (horizontal bar) ──
+  --topnav-bg: #fff;
+  --topnav-border: var(--color-gray-200);
+  --topnav-text: var(--color-gray-800);
+  --topnav-text-hover: var(--color-primary-600);
+  --topnav-hover-bg: var(--color-gray-100);
+
+  // ── Interactive / Controls ──
+  --segmented-track-bg: var(--color-gray-100);
+  --segmented-active-bg: #fff;
+  --btn-primary-bg: var(--color-primary-400);
+  --btn-primary-hover: var(--color-primary-700);
+  --btn-primary-text: #fff;
+  --btn-secondary-bg: var(--color-secondary-500);
+  --btn-secondary-hover: var(--color-secondary-700);
+  --btn-secondary-text: #fff;
+  --btn-default-bg: var(--color-gray-200);
+  --btn-default-hover: var(--color-gray-300);
+  --btn-default-text: var(--color-gray-800);
+  --btn-error-bg: var(--color-error-500);
+  --btn-error-hover: var(--color-error-700);
+  --btn-error-text: #fff;
+  --btn-warning-bg: var(--color-warning-500);
+  --btn-warning-hover: var(--color-warning-700);
+  --btn-warning-text: #fff;
+  --btn-info-bg: var(--color-info-500);
+  --btn-info-hover: var(--color-info-700);
+  --btn-info-text: #fff;
+  --btn-success-bg: var(--color-success-500);
+  --btn-success-hover: var(--color-success-700);
+  --btn-success-text: #fff;
+  --btn-light-bg: var(--color-gray-200);
+  --btn-light-hover: var(--color-gray-300);
+  --btn-light-text: var(--color-gray-800);
+  --btn-dark-bg: var(--color-gray-800);
+  --btn-dark-hover: var(--color-gray-900);
+  --btn-dark-text: #fff;
+  --btn-disabled-bg: var(--color-gray-200);
+  --btn-disabled-text: var(--color-gray-400);
+  --input-bg: #fff;
+  --input-border: var(--color-secondary-200);
+  --choice-checked-bg: var(--color-secondary-400);
+  --choice-checked-mark: var(--btn-primary-text);
+  --toggle-checked-bg: var(--color-secondary-50);
+  --toggle-thumb: var(--color-gray-300);
+  --toggle-thumb-checked: var(--color-secondary-400);
+  --input-text: var(--color-gray-900);
+  --input-placeholder: var(--color-gray-400);
+  --tab-active-indicator: var(--color-primary-300);
+  --tab-hover-bg: var(--color-gray-50);
+
+  // ── Status — neutral (the hues are generated) ──
+  --status-neutral: var(--color-gray-600);
+  --status-neutral-bg: var(--color-gray-100);
+
+  // ── Charts ──
+  --chart-1: var(--color-primary-500);
+  --chart-2: var(--color-secondary-400);
+  --chart-3: var(--color-warning-400);
+  --chart-4: var(--color-success-500);
+  --chart-5: var(--color-info-500);
+  --chart-6: var(--color-error-400);
+  --chart-7: var(--color-secondary-700);
+  --chart-8: var(--color-primary-300);
+  --chart-status-success: var(--color-success-400);
+  --chart-status-warning: var(--color-warning-400);
+  --chart-status-error: var(--color-error-500);
+  --chart-status-info: var(--color-info-500);
+
+  // ── Category Accents ──
+  --category-purple: var(--color-purple-600);
+  --category-purple-bg: var(--color-purple-50);
+  --category-magenta: var(--color-magenta-600);
+  --category-magenta-bg: var(--color-magenta-50);
+  --category-primary: var(--color-primary-600);
+  --category-primary-bg: var(--color-primary-50);
+  --category-secondary: var(--color-secondary-600);
+  --category-secondary-bg: var(--color-secondary-50);
+
+  // ── Pagination ──
+  --pagination-item-text: var(--color-gray-700);
+  --pagination-item-hover-bg: var(--color-gray-100);
+  --pagination-item-active-bg: var(--color-primary-500);
+  --pagination-item-active-text: #fff;
+
+  // ── Mascot (icon-scylla) ──
+  --icon-scylla-base: var(--glyph-scylla-outline);
+  --icon-scylla-surface: var(--glyph-scylla-outline);
+
+  // ── Logo ──
+
+}
+
+[data-theme="dark"] {
+  // ── Surfaces ──
+  --bg-page: var(--color-gray-800);
+  --bg-surface: var(--color-gray-900);
+  --bg-surface-alt: var(--color-gray-950);
+  --bg-overlay: var(--color-accent-950);
+  --bg-muted: var(--color-gray-900);
+  --bg-accent: var(--color-primary-950);
+  --bg-code: var(--color-secondary-900);
+  --navigation-bg: var(--color-gray-950);
+  --shadow-color: var(--color-accent-950);
+
+  // ── Text ──
+  --text-color: var(--color-gray-100);
+  --text-emphasis: var(--color-gray-50);
+  --text-muted: var(--color-gray-200);
+  --text-disabled: var(--color-gray-600);
+  --text-link: var(--color-primary-400);
+  --text-link-hover: var(--color-primary-300);
+  --text-code: var(--color-secondary-200);
+
+  // ── Borders & Dividers ──
+  --border-color: var(--color-gray-600);
+  --border-strong: var(--color-gray-600);
+  --border-faint: var(--color-gray-800);
+  --border-focus: var(--color-primary-500);
+  --ring-color: var(--color-primary-800);
+  --section-outline-border: var(--color-secondary-500);
+  --card-border: var(--color-gray-600);
+
+  // ── Surface Overrides ──
+
+  // ── Surface — Light (fixed) ──
+
+  // ── Surface — Dark (fixed) ──
+
+  // ── Navigation ──
+  --nav-text: var(--color-gray-400);
+  --nav-text-faint: var(--color-gray-500);
+  --nav-text-hover: var(--color-gray-100);
+  --nav-hover-bg: var(--color-gray-800);
+  --nav-active-bg: var(--color-primary-600);
+  --nav-text-active: #fff;
+  --nav-text-has-active: var(--color-primary-400);
+
+  // ── Top Nav (horizontal bar) ──
+  --topnav-bg: var(--color-gray-900);
+  --topnav-border: var(--color-gray-800);
+  --topnav-text: var(--color-gray-200);
+  --topnav-text-hover: #fff;
+  --topnav-hover-bg: var(--color-gray-800);
+
+  // ── Interactive / Controls ──
+  --segmented-track-bg: var(--color-gray-950);
+  --segmented-active-bg: var(--color-gray-700);
+  --btn-primary-bg: var(--color-primary-500);
+  --btn-primary-hover: var(--color-primary-400);
+  --btn-secondary-bg: var(--color-secondary-400);
+  --btn-secondary-hover: var(--color-secondary-300);
+  --btn-default-bg: var(--color-gray-700);
+  --btn-default-hover: var(--color-gray-600);
+  --btn-default-text: var(--color-gray-50);
+  --btn-error-bg: var(--color-error-400);
+  --btn-error-hover: var(--color-error-300);
+  --btn-warning-bg: var(--color-warning-400);
+  --btn-warning-hover: var(--color-warning-300);
+  --btn-warning-text: var(--color-gray-900);
+  --btn-info-bg: var(--color-info-400);
+  --btn-info-hover: var(--color-info-300);
+  --btn-success-bg: var(--color-success-400);
+  --btn-success-hover: var(--color-success-300);
+  --btn-light-hover: var(--color-gray-100);
+  --btn-dark-bg: var(--color-gray-700);
+  --btn-dark-hover: var(--color-gray-600);
+  --btn-disabled-bg: var(--color-gray-700);
+  --btn-disabled-text: var(--color-gray-500);
+  --input-bg: var(--color-gray-950);
+  --input-border: var(--color-secondary-700);
+  --choice-checked-bg: var(--color-secondary-500);
+  --choice-checked-mark: var(--color-secondary-100);
+  --toggle-checked-bg: var(--color-primary-900);
+  --toggle-thumb: var(--color-secondary-800);
+  --toggle-thumb-checked: var(--color-primary-300);
+  --input-text: var(--color-gray-100);
+  --input-placeholder: var(--color-gray-600);
+  --tab-active-indicator: var(--color-secondary-400);
+  --tab-hover-bg: var(--color-gray-900);
+
+  // ── Status — neutral (the hues are generated) ──
+  --status-neutral: var(--color-gray-400);
+  --status-neutral-bg: var(--color-gray-800);
+
+  // ── Charts ──
+  --chart-1: var(--color-primary-600);
+  --chart-2: var(--color-secondary-600);
+  --chart-3: var(--color-warning-600);
+  --chart-4: var(--color-success-600);
+  --chart-5: var(--color-info-600);
+  --chart-6: var(--color-error-500);
+  --chart-7: var(--color-magenta-500);
+  --chart-8: var(--color-purple-500);
+  --chart-status-success: var(--color-success-600);
+  --chart-status-warning: var(--color-warning-600);
+  --chart-status-error: var(--color-error-600);
+  --chart-status-info: var(--color-info-600);
+
+  // ── Category Accents ──
+  --category-purple: var(--color-purple-400);
+  --category-purple-bg: var(--color-purple-950);
+  --category-magenta: var(--color-magenta-400);
+  --category-magenta-bg: var(--color-magenta-950);
+  --category-primary: var(--color-primary-400);
+  --category-primary-bg: var(--color-primary-950);
+  --category-secondary: var(--color-secondary-400);
+  --category-secondary-bg: var(--color-secondary-950);
+
+  // ── Pagination ──
+  --pagination-item-text: var(--color-gray-300);
+  --pagination-item-hover-bg: var(--color-gray-800);
+
+  // ── Mascot (icon-scylla) ──
+  --icon-scylla-base: var(--glyph-scylla-filled);
+  --icon-scylla-surface: var(--glyph-scylla-filled);
+
+  // ── Logo ──
+
+}
+
+[data-theme="scylla"] {
+  // ── Surfaces ──
+  --bg-page: var(--color-gray-900);
+  --bg-surface-alt: var(--color-primary-900);
+  --bg-overlay: var(--color-primary-950);
+  --bg-muted: var(--color-primary-900);
+  --bg-code: var(--color-accent-800);
+  --navigation-bg: var(--color-gray-950);
+  --shadow-color: var(--color-primary-800);
+
+  // ── Text ──
+  --text-color: var(--color-gray-100);
+  --text-emphasis: #fff;
+  --text-muted: var(--color-gray-200);
+  --text-disabled: var(--color-primary-500);
+  --text-link: var(--color-primary-300);
+  --text-code: var(--color-primary-400);
+
+  // ── Borders & Dividers ──
+  --border-color: var(--color-gray-700);
+  --border-strong: var(--color-gray-400);
+  --border-faint: var(--color-gray-800);
+  --card-border: transparent;
+
+  // ── Surface Overrides ──
+  --surface-bg-alt: var(--color-gray-50);
+  --surface-bg-muted: var(--color-gray-100);
+  --surface-bg-code: var(--color-accent-50);
+  --surface-text-emphasis: var(--color-gray-800);
+  --surface-text-color: var(--color-gray-700);
+  --surface-text-muted: var(--color-gray-500);
+  --surface-text-disabled: var(--color-gray-400);
+  --surface-text-code: var(--color-primary-600);
+  --surface-text-link: var(--color-primary-600);
+  --surface-text-link-hover: var(--color-primary-700);
+  --surface-border-color: var(--color-gray-200);
+  --surface-border-strong: var(--color-gray-400);
+  --surface-border-faint: var(--color-gray-200);
+  --surface-shadow-color: var(--color-secondary-800);
+  --surface-tab-hover-bg: var(--color-gray-50);
+
+  // ── Surface — Light (fixed) ──
+
+  // ── Surface — Dark (fixed) ──
+
+  // ── Navigation ──
+  --nav-text: var(--color-gray-200);
+  --nav-text-faint: var(--color-gray-300);
+  --nav-text-hover: var(--color-primary-300);
+  --nav-hover-bg: var(--color-primary-800);
+  --nav-active-bg: var(--color-primary-500);
+  --nav-text-active: #fff;
+  --nav-text-has-active: var(--color-primary-400);
+
+  // ── Top Nav (horizontal bar) ──
+  --topnav-border: transparent;
+  --topnav-text: var(--color-gray-900);
+  --topnav-text-hover: var(--color-accent-700);
+  --topnav-hover-bg: var(--color-accent-100);
+
+  // ── Interactive / Controls ──
+  --segmented-track-bg: var(--color-primary-950);
+  --segmented-active-bg: var(--color-primary-700);
+  --btn-primary-bg: var(--color-primary-300);
+  --btn-primary-hover: var(--color-primary-400);
+  --btn-primary-text: var(--color-primary-900);
+  --input-bg: var(--color-gray-50);
+  --choice-checked-mark: var(--color-secondary-50);
+  --tab-active-indicator: var(--color-primary-500);
+  --tab-hover-bg: var(--color-primary-900);
+
+  // ── Status — neutral (the hues are generated) ──
+
+  // ── Charts ──
+  --chart-2: var(--color-secondary-500);
+  --chart-3: var(--color-warning-500);
+  --chart-6: var(--color-error-500);
+  --chart-7: var(--color-magenta-400);
+  --chart-status-success: var(--color-success-500);
+  --chart-status-warning: var(--color-warning-500);
+
+  // ── Category Accents ──
+
+  // ── Pagination ──
+
+  // ── Mascot (icon-scylla) ──
+  --icon-scylla-base: var(--glyph-scylla-filled);
+
+  // ── Logo ──
+
+}

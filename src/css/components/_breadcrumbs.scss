@@ -7,6 +7,8 @@
   gap: $spacer-xxs 0;
   display: flex;
   flex-wrap: wrap;
+  // items hold text of one size, but the home icon makes the first one taller
+  align-items: baseline;
 
   .bread__item,
   a,
@@ -26,7 +28,8 @@
 
     &:not(.bread__item--last)::after {
       content: "/";
-      margin: 0 5px;
+      // the left side already carries the whitespace between the link and the separator
+      margin: 0 $spacer-xxs 0 $spacer-3xs;
       opacity: 1;
       position: relative;
     }
@@ -35,9 +38,22 @@
   .bread__highlight {
     color: var(--link-color);
 
+    // underline instead of bold: a weight change makes the whole trail shift
     &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    // The trail is uppercase, so center the icon on the cap height rather than
+    // on the x-height (vertical-align: middle leaves it sitting low).
+    // inline-block also keeps the hover underline off the glyph.
+    [class^="icon-"] {
+      display: inline-block;
+      line-height: 1;
+      font-size: 14px;
+      vertical-align: -0.14em;
+      margin-right: $spacer-3xs;
       text-decoration: none;
-      font-weight: bold;
     }
   }
 }

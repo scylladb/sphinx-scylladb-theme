@@ -31,7 +31,7 @@
   border: none;
   padding: 8px 0;
   margin-bottom: 16px;
-  font-family: "Roboto Mono", monospace;
+  font-family: $font-mono-family;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.6;
@@ -183,7 +183,7 @@
     }
 
     em {
-      font-family: "Roboto Mono", monospace;
+      font-family: $font-mono-family;
       background-color: var(--well-bg);
       border: none;
       padding: 2px 6px;

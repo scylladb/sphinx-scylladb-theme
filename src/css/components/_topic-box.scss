@@ -40,32 +40,47 @@
   display: flex;
   align-items: stretch;
 
+  // Mirrors the design system's `.card.card--hoverable` (vendor/scylladb-ds
+  // ships tokens only, so the recipe is restated here): surface + hairline
+  // border, --shadow-2 elevation, --radius-md corners, section padding from
+  // the spacer scale (x one step larger than y), hover frames the card in
+  // --border-focus and lifts it by 2%.
   .card {
-    @include floating;
-    border: 1px solid transparent;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-bottom: $gap;
+    margin-bottom: var(--spacer-base);
     position: relative;
-    padding: 20px;
-    font-size: 18px;
-    border: 1px solid var(--card-bg);
-    background-color: var(--card-bg) !important;
+    padding: var(--spacer-sm) var(--spacer-base);
+    background: var(--card-bg);
+    border: var(--border-w, 1px) solid var(--card-border, transparent);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-2);
     color: var(--text-color);
+    font-weight: var(--type-body-weight);
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow var(--motion-duration-fast, 140ms) var(--motion-ease, cubic-bezier(0.2, 0, 0, 1)),
+                border-color var(--motion-duration-fast, 140ms) var(--motion-ease, cubic-bezier(0.2, 0, 0, 1)),
+                transform var(--motion-duration-fast, 140ms) var(--motion-ease, cubic-bezier(0.2, 0, 0, 1));
 
     &:hover {
       color: var(--text-color);
-      border: 1px solid var(--text-color) !important;
-      font-weight: 400;
+      font-weight: var(--type-body-weight);
+      border-color: var(--border-focus);
+      box-shadow: var(--shadow-2);
+      transform: scale(1.02);
+      z-index: 10;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: var(--shadow-1);
     }
   }
 
   &__title {
-    font-weight: 700;
     color: var(--text-emphasis);
-    font-size: $font-md;
-    line-height: 24px;
     margin-bottom: 0;
 
     img {
@@ -79,7 +94,7 @@
   }
 
   &__body {
-    color: var(--text-color);
+    color: var(--text-muted);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -94,22 +109,24 @@
     p,
     .line-block {
       font-size: $font-md;
-      line-height: 19px;
-      margin-top: 10px;
+      line-height: var(--type-body-line-height);
+      margin-top: var(--spacer-2xs);
     }
   }
 
   &__anchor {
     color: var(--link-color);
-    font-size: $font-sm;
-    font-weight: 700;
-    line-height: 24px;
+    font-size: $font-md;
+    font-weight: 600;
+    line-height: var(--type-body-line-height);
+    margin-top: var(--spacer-xs);
   }
 
   &__icon {
     display: block;
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--text-link);
+    margin-bottom: var(--spacer-xs);
 
     i {
       //filter: brightness(0);
@@ -130,7 +147,7 @@
 
   &--product .card {
     box-shadow: none;
-    padding: 20px;
+    padding: var(--spacer-xs) var(--spacer-sm);
     text-align: center;
 
     .topic-box__title {
@@ -157,9 +174,7 @@
     }
 
     &:hover {
-      @include floating;
-      background-color: var(--card-bg);
-      border: 1px solid var(--text-color) !important;
+      box-shadow: var(--shadow-2);
     }
   }
 }
@@ -192,23 +207,8 @@
 
   .topic-box {
     .card {
-      margin-bottom: 60px;
-      padding: 45px 30px;
-    }
-    &__title {
-      font-size: 20px;
-      line-height: 32px;
-    }
-    &__body {
-      p,
-      .line-block {
-        font-size: 18px;
-        line-height: 26px;
-      }
-    }
-    &__anchor {
-      font-size: 20px;
-      line-height: 26px;
+      margin-bottom: var(--spacer-base);
+      padding: var(--spacer-base) var(--spacer-md);
     }
     .topic-box__icon img {
       display: inline-block;
@@ -216,7 +216,7 @@
   }
 
   .topic-box--product .card {
-    padding: 20px;
+    padding: var(--spacer-sm) var(--spacer-base);
     .topic-box__title {
       font-size: 18px;
       line-height: 24px;
