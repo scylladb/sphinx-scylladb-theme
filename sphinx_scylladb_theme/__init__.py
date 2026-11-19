@@ -27,6 +27,9 @@ from sphinx_scylladb_theme.extensions import (
 from sphinx_scylladb_theme.extensions.utils import base_url
 from sphinx_scylladb_theme.lexers import cql, ditaa
 
+# Index of all ScyllaDB documentation projects (drivers, tools, tutorials).
+LLMS_TXT_HUB_URL = "https://docs.scylladb.com/llms.txt"
+
 
 def compute_toc_tree(toctree, maxdepth, collapse):
     if toctree:
@@ -163,6 +166,27 @@ def override_llms_txt_defaults(config):
     site_base = base_url(config)
     if site_base and not getattr(config, "markdown_http_base", ""):
         config.markdown_http_base = site_base
+
+    add_llms_txt_hub_link(config)
+
+
+def add_llms_txt_hub_link(config):
+    # Point every project's llms.txt to the index of all ScyllaDB documentation
+    # projects. Set the llms_txt_hub_url theme option to "" to disable.
+    theme_options = getattr(config, "html_theme_options", {}) or {}
+    hub_url = theme_options.get("llms_txt_hub_url", LLMS_TXT_HUB_URL)
+    description = (getattr(config, "llms_txt_description", "") or "").strip()
+    if not hub_url:
+        return description
+
+    if not description:
+        description = f"{config.project} documentation"
+    config.llms_txt_description = (
+        f"{description}\n"
+        "Index of all ScyllaDB documentation projects, "
+        f"including drivers, tools, and tutorials: {hub_url}"
+    )
+    return config.llms_txt_description
 
 
 def override_rst_epilog(config):
