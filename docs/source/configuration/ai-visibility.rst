@@ -16,7 +16,28 @@ At build time, the theme automatically generates:
 In every HTML page rendered by the theme, the layout also injects:
 
 * A ``<link rel="alternate" type="text/markdown">`` tag in ``<head>`` pointing to the Markdown version of the page.
-* A visually hidden directive near the top of the content area pointing AI agents to ``/llms.txt``, to the Markdown version of the current page, and to the `ScyllaDB agent skills <https://github.com/scylladb/agent-skills>`_ install command (``npx skills add scylladb/agent-skills --skill scylladb``).
+* A visually hidden directive near the top of the content area pointing AI agents to ``/llms.txt``, to the :ref:`documentation hub <llms-txt-hub>`, to the Markdown version of the current page, and to the `ScyllaDB agent skills <https://github.com/scylladb/agent-skills>`_ install command (``npx skills add scylladb/agent-skills --skill scylladb``).
+
+.. _llms-txt-hub:
+
+Documentation hub
+-----------------
+
+Each project's ``llms.txt`` indexes only the pages of that project. To let AI agents find every ScyllaDB documentation project (drivers, tools, and tutorials) from any page, the theme links to a single hub file at https://docs.scylladb.com/llms.txt:
+
+* The hidden directive on every HTML page includes a link to the hub.
+* The theme appends a link to the hub to the ``llms_txt_description`` of every project, so it appears at the top of each project's ``llms.txt``.
+
+The hub is maintained manually in the `scylladb-docs-homepage <https://github.com/scylladb/scylladb-docs-homepage>`_ repository (``docs/_utils/llms.txt``). When you publish a new documentation project, add it to the hub.
+
+To point to a different hub, or to remove the link, set the ``llms_txt_hub_url`` theme option in ``conf.py``:
+
+.. code-block:: python
+
+    html_theme_options = {
+        # Use "" to remove the link to the hub.
+        "llms_txt_hub_url": "https://docs.scylladb.com/llms.txt",
+    }
 
 How it works
 ------------
