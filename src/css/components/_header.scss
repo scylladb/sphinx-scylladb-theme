@@ -83,20 +83,13 @@
     }
   }
 
-  > biel-search-button {
-    --biel-search-button-max-width: 300px;
-    min-height: 38px;
+  // The Ask AI cap only shows from $xlarge up; until then the field keeps the full pill.
+  .search-group:has(> biel-button) {
+    --search-field-radius: var(--radius-full);
   }
 
   .header-ask-ai {
-    white-space: nowrap;
     display: none;
-    flex-shrink: 0;
-    text-align: center;
-    --biel-button-padding: 9px 15px;
-    --biel-button-border-radius: var(--biel-search-button-border-radius, 4px);
-    min-width: 100px;
-    min-height: 38px;
   }
 }
 
@@ -153,13 +146,22 @@
     max-width: none;
     min-height: 38px;
 
-    > biel-search-button {
-      --biel-search-button-text-display: none !important;
-      --biel-search-button-ctrl-k-display: none !important;
-      --biel-search-button-icon-margin-right: 0px !important;
-      --biel-search-button-padding: 8px;
-      --biel-search-button-max-width: fit-content;
-      min-height: 38px;
+    // compact: an icon-only search button
+    .search-group {
+      flex: 0 0 auto;
+
+      > biel-search-button {
+        --biel-search-button-text-display: none !important;
+        --biel-search-button-ctrl-k-display: none !important;
+        --biel-search-button-icon-margin-right: 0px !important;
+        --biel-search-button-padding: 8px;
+        flex: 0 0 auto;
+
+        &::part(button) {
+          width: 44px;
+          justify-content: center;
+        }
+      }
     }
   }
 }
@@ -170,9 +172,12 @@
   }
 
   .header-search-box {
+    .search-group:has(> biel-button) {
+      --search-field-radius: var(--radius-full) 0 0 var(--radius-full);
+    }
+
     .header-ask-ai {
       display: block;
-      min-width: 100px;
     }
   }
 }
@@ -184,14 +189,22 @@
     min-width: 320px;
     gap: 12px;
 
-    > biel-search-button {
-      --biel-search-button-text-display: block !important;
-      --biel-search-button-ctrl-k-display: block !important;
-      --biel-search-button-icon-margin-right: 5px !important;
-      --biel-search-button-padding: 8px 12px;
-      --biel-search-button-max-width: 300px;
-      min-width: 180px;
-      margin-right: 26px;
+    .search-group {
+      flex: 1 1 auto;
+
+      > biel-search-button {
+        --biel-search-button-text-display: block !important;
+        --biel-search-button-ctrl-k-display: block !important;
+        --biel-search-button-icon-margin-right: 5px !important;
+        --biel-search-button-padding: 8px 16px;
+        flex: 1 1 auto;
+        min-width: 180px;
+
+        &::part(button) {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,122 @@
+// Search field + Ask AI as one control, after the design system's global search
+// (.gs-group): a pill-shaped field, the AI button closing the pill on the right.
+//
+//   <div class="search-group">
+//     <biel-search-button>…</biel-search-button>   or   <div class="search-box"><ci-search></div>
+//     <biel-button>…</biel-button>                 optional (theme option hide_ai_chatbot)
+//   </div>
+//
+// The Biel web components keep their behavior; only their exposed parts
+// (::part(button), ::part(icon)) are restyled.
+
+:root {
+  // "AI" accent = the secondary (purple) palette, as in the design system
+  --search-ai-color: var(--color-secondary-500);
+  --search-ai-color-hover: var(--color-secondary-600);
+  --search-ai-bg: color-mix(in oklch, var(--color-secondary-500) 8%, transparent);
+  --search-ai-bg-hover: color-mix(in oklch, var(--color-secondary-500) 16%, transparent);
+}
+
+.dark {
+  --search-ai-color: var(--color-secondary-300);
+  --search-ai-color-hover: var(--color-secondary-200);
+  --search-ai-bg: color-mix(in oklch, var(--color-secondary-400) 16%, transparent);
+  --search-ai-bg-hover: color-mix(in oklch, var(--color-secondary-400) 28%, transparent);
+}
+
+$search-transition: 0.12s ease;
+
+.search-group {
+  // full pill; squared on the right when the AI button closes it (see below)
+  --search-field-radius: var(--radius-full);
+
+  display: flex;
+  align-items: stretch;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 38px;
+
+  &:has(> biel-button) {
+    --search-field-radius: var(--radius-full) 0 0 var(--radius-full);
+  }
+
+  // ── The field: Biel search button ──
+  > biel-search-button {
+    --biel-search-button-max-width: 100%;
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+
+    &::part(button) {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: var(--border-w) solid var(--border-color);
+      border-radius: var(--search-field-radius);
+      background: transparent;
+      box-shadow: none;
+      color: var(--text-muted);
+      font-size: $font-sm;
+      transition: border-color $search-transition;
+    }
+
+    &::part(button):hover {
+      border-color: var(--border-focus);
+    }
+  }
+
+  // ── The field: Expertrec search box ──
+  > .search-box {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 $spacer-xs;
+    border: var(--border-w) solid var(--border-color);
+    border-radius: var(--search-field-radius);
+    background: transparent;
+    transition: border-color $search-transition, box-shadow $search-transition;
+
+    &:focus-within {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring-color) 55%, transparent);
+    }
+  }
+
+  // ── The AI cap ──
+  > biel-button {
+    flex: 0 0 auto;
+
+    &::part(button) {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-width: 44px;
+      // a touch more room on the rounded side, so the glyph reads centered
+      padding: 0 calc(var(--spacer-xs) + var(--spacer-3xs)) 0 var(--spacer-xs);
+      border: var(--border-w) solid var(--border-color);
+      border-left: 0;
+      border-radius: 0 var(--radius-full) var(--radius-full) 0;
+      background: var(--search-ai-bg);
+      box-shadow: none;
+      color: var(--search-ai-color);
+      transition: background-color $search-transition, color $search-transition;
+    }
+
+    &::part(button):hover {
+      background: var(--search-ai-bg-hover);
+      color: var(--search-ai-color-hover);
+    }
+
+    // Biel's own icon; the slot carries the design system glyph instead
+    &::part(icon) {
+      display: none;
+    }
+
+    [class^="icon-"] {
+      font-size: 18px;
+      line-height: 1;
+    }
+  }
+}
